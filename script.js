@@ -47,36 +47,41 @@ document.addEventListener("DOMContentLoaded", () => {
         cards.forEach((card) => observer.observe(card));
     }
 
-    // Carruseles
-    const carousels = ["services-carousel", "social-carousel"].map((id) =>
-        document.getElementById(id)
-    );
+// Carruseles
+const carousels = ["services-carousel", "social-carousel"].map((id) =>
+    document.getElementById(id)
+);
 
-    const slideCarousel = (carousel) => {
-        if (!carousel) return;
+const slideCarousel = (carousel) => {
+    if (!carousel) return;
 
-        const scrollAmount = 250;
-        const maxScrollLeft = carousel.scrollWidth - carousel.clientWidth;
+    const scrollAmount = 250; // Cantidad de desplazamiento
+    const maxScrollLeft = carousel.scrollWidth - carousel.clientWidth; // Máximo desplazamiento
+    const tolerance = 5; // Tolerancia en píxeles para evitar errores de redondeo
 
-        if (carousel.scrollLeft + carousel.clientWidth >= maxScrollLeft) {
-            setTimeout(() => {
-                carousel.scrollTo({ left: 0, behavior: "auto" });
-            }, 1000); // Pausa en la última tarjeta
-        } else {
-            carousel.scrollBy({ left: scrollAmount, behavior: "smooth" });
-        }
-    };
+    if (carousel.scrollLeft + carousel.clientWidth >= maxScrollLeft - tolerance) {
+        // Pausa en la última tarjeta antes de reiniciar
+        setTimeout(() => {
+            carousel.scrollTo({ left: 0, behavior: "auto" });
+        }, 2000); // Tiempo de pausa en milisegundos
+    } else {
+        // Desplazarse normalmente
+        carousel.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    }
+};
 
-    carousels.forEach((carousel) => {
-        if (carousel) setInterval(() => slideCarousel(carousel), 3000);
-    });
+// Configurar el desplazamiento automático de los carruseles
+carousels.forEach((carousel) => {
+    if (carousel) setInterval(() => slideCarousel(carousel), 2000);
+});
+
 
     // Copiar al portapapeles
     window.copyToClipboard = (elementId) => {
         const textToCopy = document.getElementById(elementId)?.innerText;
         if (textToCopy) {
             navigator.clipboard.writeText(textToCopy)
-                .then(() => alert(`Número copiado: ${textToCopy}`))
+                //.then(() => alert(`Número copiado: ${textToCopy}`))
                 .catch((err) => console.error("Error al copiar:", err));
         }
     };
