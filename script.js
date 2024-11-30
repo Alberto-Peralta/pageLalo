@@ -16,6 +16,33 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+
+// Detectar el scroll
+window.addEventListener('scroll', function() {
+    const imageContainer = document.querySelector('.image-container');
+    const overlayText = document.querySelector('.overlay-text');
+    const image = document.querySelector('.background-image');
+    
+    const scrollPosition = window.scrollY;
+    const fadeThreshold = imageContainer.offsetTop + imageContainer.offsetHeight / 2;
+    
+    if (scrollPosition > fadeThreshold) {
+        // Aplicar la clase fade-out cuando se haya hecho scroll suficiente
+        overlayText.classList.add('fade-out');
+        image.classList.add('fade-out');
+    } else {
+        // Eliminar la clase fade-out cuando el scroll está por encima del umbral
+        overlayText.classList.remove('fade-out');
+        image.classList.remove('fade-out');
+    }
+});
+
+
+
+
+
+
+
 document.addEventListener("DOMContentLoaded", function() {
     const cards = document.querySelectorAll(".card");
 
