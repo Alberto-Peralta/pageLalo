@@ -27,9 +27,23 @@
 </head>
 <body>
     <!-- Header -->
-    <header>
+    <header  id="inicio">
         <img class="logo" src="https://i.imgur.com/8xgrL7C.png" alt="Logo">
         <h1 class="header-title">Lalo Peralta</h1>
+
+            <nav class="dropdown-menu">
+                <button class="menu-toggle">☰</button>
+                <ul class="menu">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#redes">Redes Sociales</a></li>
+                    <li><a href="cotizador/index.html">Cotizador de Viajes</a></li>
+                     <!-- <li><a href="#contacto">Contacto</a></li>-->
+                
+                </ul>
+            </nav>
+    
+        
     </header>
 
 
@@ -39,7 +53,7 @@
         <div class="carousel">
         <!-- Nueva galería horizontal -->
          <div class="concontainer">
-            <h2 class="gallery-title">Servicios</h2>
+            <h2 class="gallery-title" id="servicios">Servicios</h2>
             <div class="horizontal-gallery" id="services-carousel"> <!-- Añadido ID aquí -->
                 <div class="card whatsapp">
                     <img src="https://i.imgur.com/vPDecEt.png" alt="WhatsApp" class="card-image"> 
@@ -116,7 +130,7 @@
                 <!-- Agrega más tarjetas según sea necesario -->
             </div>
          </div>
-         <div class="concontainer">
+         <div class="concontainer" id="redes">
              <h2 class="gallery-title">Mis Redes Sociales</h2>
             <div class="horizontal-gallery" id="social-carousel"> <!-- Añadido ID aquí -->
                   <!-- Font Awesome (Para los íconos de YouTube y campanita) -->

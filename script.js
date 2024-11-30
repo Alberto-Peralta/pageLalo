@@ -1,3 +1,21 @@
+document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.querySelector(".menu-toggle");
+    const menu = document.querySelector(".menu");
+
+    menuToggle.addEventListener("click", () => {
+        menu.classList.toggle("show");
+    });
+
+    // Cierra el menú al hacer clic fuera de él
+    document.addEventListener("click", (event) => {
+        if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
+            menu.classList.remove("show");
+        }
+    });
+});
+
+
+
 document.addEventListener("DOMContentLoaded", function() {
     const cards = document.querySelectorAll(".card");
 
