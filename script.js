@@ -1,80 +1,77 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
     // Menú desplegable
     const menuToggle = document.querySelector(".menu-toggle");
     const menu = document.querySelector(".menu");
 
-    menuToggle.addEventListener("click", () => menu.classList.toggle("show"));
+    if (menuToggle && menu) {
+        menuToggle.addEventListener("click", () => menu.classList.toggle("show"));
 
-    document.addEventListener("click", (event) => {
-        if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
-            menu.classList.remove("show");
-        }
-    });
+        document.addEventListener("click", (event) => {
+            if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
+                menu.classList.remove("show");
+            }
+        });
+    }
 
     // Animación al hacer scroll
-    const imageContainer = document.querySelector('.image-container');
-    const overlayText = document.querySelector('.overlay-text');
-    const image = document.querySelector('.background-image');
+    const imageContainer = document.querySelector(".image-container");
+    const overlayText = document.querySelector(".overlay-text");
+    const image = document.querySelector(".background-image");
 
     if (imageContainer && overlayText && image) {
-        window.addEventListener('scroll', () => {
+        window.addEventListener("scroll", () => {
             const scrollPosition = window.scrollY;
             const fadeThreshold = imageContainer.offsetTop + imageContainer.offsetHeight / 2;
 
-            if (scrollPosition > fadeThreshold) {
-                overlayText.classList.add('fade-out');
-                image.classList.add('fade-out');
-            } else {
-                overlayText.classList.remove('fade-out');
-                image.classList.remove('fade-out');
-            }
+            const action = scrollPosition > fadeThreshold ? "add" : "remove";
+            overlayText.classList[action]("fade-out");
+            image.classList[action]("fade-out");
         });
     }
 
     // Animación de tarjetas
     const cards = document.querySelectorAll(".card");
-    if (cards.length > 0) {
+    if (cards.length) {
         const observer = new IntersectionObserver(
             (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add("fade-in");
-                        observer.unobserve(entry.target); // Dejar de observar para mejorar el rendimiento
+                entries.forEach(({ isIntersecting, target }) => {
+                    if (isIntersecting) {
+                        target.classList.add("fade-in");
+                        observer.unobserve(target);
                     }
                 });
             },
-            { threshold: 0.5 } // Activar cuando esté al 50% visible
+            { threshold: 0.5 }
         );
 
         cards.forEach((card) => observer.observe(card));
     }
 
     // Carruseles
-    const carousels = [
-        document.getElementById("services-carousel"),
-        document.getElementById("social-carousel"),
-    ];
+    const carousels = ["services-carousel", "social-carousel"].map((id) =>
+        document.getElementById(id)
+    );
 
-    function slideCarousel(carousel) {
+    const slideCarousel = (carousel) => {
         if (!carousel) return;
 
         const scrollAmount = 250;
-        carousel.scrollBy({ left: scrollAmount, behavior: "smooth" });
+        const maxScrollLeft = carousel.scrollWidth - carousel.clientWidth;
 
-        setTimeout(() => {
-            if (carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth - 1) {
+        if (carousel.scrollLeft + carousel.clientWidth >= maxScrollLeft) {
+            setTimeout(() => {
                 carousel.scrollTo({ left: 0, behavior: "auto" });
-            }
-        }, 600);
-    }
+            }, 1000); // Pausa en la última tarjeta
+        } else {
+            carousel.scrollBy({ left: scrollAmount, behavior: "smooth" });
+        }
+    };
 
     carousels.forEach((carousel) => {
-        if (carousel) {
-            setInterval(() => slideCarousel(carousel), 3000);
-        }
+        if (carousel) setInterval(() => slideCarousel(carousel), 3000);
     });
 
-    // Función copiar al portapapeles
+    // Copiar al portapapeles
     window.copyToClipboard = (elementId) => {
         const textToCopy = document.getElementById(elementId)?.innerText;
         if (textToCopy) {
