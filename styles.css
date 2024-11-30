@@ -18,21 +18,56 @@ body {
 /* Estilos básicos del header */
 header {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-between; /* Distribuye los elementos con espacio entre ellos */
+    align-items: center;            /* Alinea los elementos verticalmente al centro */
     background-color: #34495e;
     color: #ecf0f1;
     padding: 10px 20px;
-    position: fixed; /* Lo hace fijo en la parte superior */
-    top: 0; /* Alineación al top */
-    left: 0; /* Alineación al left */
-    width: 90%; /* Asegura que ocupe todo el ancho */
-    z-index: 1000; /* Lo pone por encima del contenido */
-    
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;                    /* Asegura que ocupe todo el ancho de la pantalla */
+    z-index: 1000;
 }
 
+.logo {
+    height: 50px;                  /* Ajusta la altura del logo */
+    width: auto;                   /* Mantiene la proporción */
+    max-height: 100%;               /* Evita que el logo se desborde */
+    display: block;
+}
 
+nav {
+    display: flex;
+    align-items: center;           /* Alinea los ítems del menú verticalmente al centro */
+}
 
+nav ul {
+    list-style: none;              /* Elimina los puntos de las listas */
+    display: flex;                 /* Muestra los elementos en línea (horizontalmente) */
+    gap: 20px;                     /* Espacio entre los elementos del menú */
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;         /* Elimina el subrayado */
+    color: #ecf0f1;                /* Color del texto del menú */
+    font-size: 16px;               /* Ajusta el tamaño de la fuente */
+    padding: 10px;
+    transition: background-color 0.3s ease; /* Efecto de transición para el hover */
+}
+
+nav a:hover {
+    background-color: #e67e22;     /* Color de fondo al pasar el cursor */
+    border-radius: 4px;             /* Bordes redondeados para el hover */
+}
+
+  
 
 
 /* Botón del menú */
@@ -40,7 +75,7 @@ header {
     background-color: #34495e;
     color: #ecf0f1;
     border: none;
-    padding: 10px 15px;
+    padding: 10px 35px;
     cursor: pointer;
     font-size: 18px;
     border-radius: 5px;
