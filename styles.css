@@ -11,6 +11,8 @@ body {
     min-height: 100vh; 
     background-color: #2c3e50; /* Color de fondo principal */ 
     color: #ecf0f1; /* Color de texto principal */ 
+    margin-top: 80px; /* Añade un margen superior para evitar que el contenido quede debajo del header fijo */
+
 } 
 /* Header fijo */ 
 /* Estilos básicos del header */
@@ -21,8 +23,17 @@ header {
     background-color: #34495e;
     color: #ecf0f1;
     padding: 10px 20px;
-    position: relative;
+    position: fixed; /* Lo hace fijo en la parte superior */
+    top: 0; /* Alineación al top */
+    left: 0; /* Alineación al left */
+    width: 90%; /* Asegura que ocupe todo el ancho */
+    z-index: 1000; /* Lo pone por encima del contenido */
+    
 }
+
+
+
+
 
 /* Botón del menú */
 .menu-toggle {
