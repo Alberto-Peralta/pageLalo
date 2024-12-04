@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const carousels = ["services-carousel", "social-carousel"].map((id) => document.getElementById(id));
     const slideCarousel = (carousel) => {
         if (!carousel) return;
-        const scrollAmount = 377; // Cantidad de desplazamiento
+        const scrollAmount = 376; // Cantidad de desplazamiento
         const maxScrollLeft = carousel.scrollWidth - carousel.clientWidth; // Máximo desplazamiento
         // Desplazarse normalmente
         carousel.scrollBy({ left: scrollAmount, behavior: "smooth" });
@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (carousel.scrollLeft + scrollAmount >= maxScrollLeft) {
             setTimeout(() => {
                 carousel.scrollTo({ left: 0, behavior: "smooth" });
-            }, 3000); // Tiempo antes de reiniciar el desplazamiento
+            }, 2000); // Tiempo antes de reiniciar el desplazamiento
         }
     };
 
@@ -72,3 +72,45 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 });
+
+
+
+
+
+
+// Carruseles
+const carousels = ["services-carousel", "social-carousel"].map((id) => document.getElementById(id));
+const setupCarousel = (carousel) => {
+    if (!carousel) return;
+
+    // Duplicar el contenido del carrusel
+    const carouselContent = carousel.innerHTML;
+    carousel.innerHTML += carouselContent;
+
+    const scrollSpeed = 1; // Velocidad del desplazamiento (pixeles por frame)
+
+    const startScrolling = () => {
+        if (carousel.scrollLeft >= carousel.scrollWidth / 2) {
+            // Cuando alcanza el final de la primera copia, vuelve al inicio sin interrupción
+            carousel.scrollLeft = 0;
+        }
+        carousel.scrollLeft += scrollSpeed;
+    };
+
+    let interval = setInterval(startScrolling, 15); // Ajusta el intervalo según la suavidad deseada
+
+     // Pausar y reanudar el desplazamiento en dispositivos de escritorio
+     carousel.addEventListener("mouseenter", () => clearInterval(interval));
+     carousel.addEventListener("mouseleave", () => {
+         interval = setInterval(startScrolling, 20);
+     });
+
+     // Pausar y reanudar el desplazamiento en dispositivos móviles
+     carousel.addEventListener("touchstart", () => clearInterval(interval));
+     carousel.addEventListener("touchend", () => {
+         interval = setInterval(startScrolling, 20);
+     });
+};
+
+// Configurar cada carrusel
+carousels.forEach(setupCarousel);
