@@ -43,20 +43,20 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Carruseles
-    const carousels = ["services-carousel", "social-carousel"].map((id) => document.getElementById(id));
-    const slideCarousel = (carousel) => {
-        if (!carousel) return;
-        const scrollAmount = 376; // Cantidad de desplazamiento
-        const maxScrollLeft = carousel.scrollWidth - carousel.clientWidth; // Máximo desplazamiento
+   // const carousels = ["services-carousel", "social-carousel"].map((id) => document.getElementById(id));
+   // const slideCarousel = (carousel) => {
+       // if (!carousel) return;
+       // const scrollAmount = 376; // Cantidad de desplazamiento
+       // const maxScrollLeft = carousel.scrollWidth - carousel.clientWidth; // Máximo desplazamiento
         // Desplazarse normalmente
-        carousel.scrollBy({ left: scrollAmount, behavior: "smooth" });
+       // carousel.scrollBy({ left: scrollAmount, behavior: "smooth" });
         // Si se llega al final, se vuelve a empezar sin pausa
-        if (carousel.scrollLeft + scrollAmount >= maxScrollLeft) {
-            setTimeout(() => {
-                carousel.scrollTo({ left: 0, behavior: "smooth" });
-            }, 2000); // Tiempo antes de reiniciar el desplazamiento
-        }
-    };
+       // if (carousel.scrollLeft + scrollAmount >= maxScrollLeft) {
+         //   setTimeout(() => {
+         //       carousel.scrollTo({ left: 0, behavior: "smooth" });
+         //   }, 2000); // Tiempo antes de reiniciar el desplazamiento
+       // }
+   // };
 
     // Configurar el desplazamiento automático de los carruseles
     carousels.forEach((carousel) => {
