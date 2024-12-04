@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const carousels = ["services-carousel", "social-carousel"].map((id) => document.getElementById(id));
     const slideCarousel = (carousel) => {
         if (!carousel) return;
-        const scrollAmount = 350; // Cantidad de desplazamiento
+        const scrollAmount = 377; // Cantidad de desplazamiento
         const maxScrollLeft = carousel.scrollWidth - carousel.clientWidth; // Máximo desplazamiento
         // Desplazarse normalmente
         carousel.scrollBy({ left: scrollAmount, behavior: "smooth" });
