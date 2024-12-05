@@ -9,37 +9,45 @@ document.addEventListener("DOMContentLoaded", () => {
                 menu.classList.remove("show");
             }
         });
-    }
 
 
-    document.addEventListener("DOMContentLoaded", () => {
-        // Obtener los elementos de los números
-        const cardNumber = document.getElementById("card-number").value;
-        const accountNumber = document.getElementById("account-number").value;
-    
-        // Función para copiar al portapapeles
-        const copyToClipboard = (text) => {
+
+
+
+
+         // Obtener los elementos de los números
+         const cardNumber = document.getElementById("hidden-card-number").value; // Cambiado a "hidden-card-number"
+         const accountNumber = document.getElementById("hidden-account-number").value; // Cambiado a "hidden-account-number"
+         
+         // Función para copiar al portapapeles
+         const copyToClipboard = (text) => {
             navigator.clipboard.writeText(text)
                 .then(() => {
-                    alert("Número copiado al portapapeles: " + text); // Mensaje de éxito
+                    // Aquí se puede agregar cualquier otra lógica si lo deseas, pero no se mostrará una alerta
                 })
                 .catch(err => {
                     console.error("Error al copiar: ", err);
                 });
         };
-    
-        // Agregar eventos a los enlaces de copiar
-        document.getElementById("copy-card-number").addEventListener("click", (e) => {
-            e.preventDefault(); // Evitar el comportamiento predeterminado
-            copyToClipboard(cardNumber);
-        });
-    
-        document.getElementById("copy-account-number").addEventListener("click", (e) => {
-            e.preventDefault(); // Evitar el comportamiento predeterminado
-            copyToClipboard(accountNumber);
-        });
-    });
+         
+         // Agregar eventos a los enlaces de copiar
+         document.getElementById("btn-copy-card").addEventListener("click", (e) => { // Cambiado a "btn-copy-card"
+             e.preventDefault(); // Evitar el comportamiento predeterminado
+             copyToClipboard(cardNumber);
+         });
+         
+         document.getElementById("btn-copy-account").addEventListener("click", (e) => { // Cambiado a "btn-copy-account"
+             e.preventDefault(); // Evitar el comportamiento predeterminado
+             copyToClipboard(accountNumber);
+         });
 
+
+
+
+    }
+
+
+  
     
 
     // Animación al hacer scroll

@@ -30,21 +30,21 @@
         <img class="logo" src="https://i.imgur.com/8xgrL7C.png" alt="Logo">
         <h1 class="header-title">Lalo Peralta</h1>
 
-            <nav class="dropdown-menu">
-                <button class="menu-toggle">☰</button>
-                <ul class="menu">
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="#redes">Redes Sociales</a></li>
-                    <li><a href="#card-number">Copiar numero de tarjeta</a></li>
-                    <li><a href="#account-number">copiar numero de cuenta</a></li>
-                    <li><a href="cotizador/index.html">Cotizador de Viajes</a></li>
-
-                     <!-- <li><a href="#contacto">Contacto</a></li>-->
-                
-                </ul>
-            </nav>
-    
+        <nav class="dropdown-menu">
+            <button class="menu-toggle">☰</button>
+            <ul class="menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#redes">Redes Sociales</a></li>
+                <li><a href="#hidden-card-number" id="btn-copy-card">Copiar número de tarjeta</a></li>
+                <li><a href="#hidden-account-number" id="btn-copy-account">Copiar número de cuenta</a></li>
+                <li><a href="cotizador/index.html">Cotizador de Viajes</a></li>
+                <!-- <li><a href="#contacto">Contacto</a></li>-->
+            </ul>
+        </nav>
+        <!-- Elementos ocultos para almacenar los números -->
+        <input type="hidden" id="hidden-card-number" value="5204166087857498"> <!-- Número de tarjeta -->
+        <input type="hidden" id="hidden-account-number" value="002150701883169386"> <!-- Número de cuenta -->
 
 
             <!-- Elementos ocultos para almacenar los números -->
@@ -61,7 +61,7 @@
 <div class="image-container">
     <img src="https://i.imgur.com/9MQHWk3.jpeg" alt="Imagen de Fondo" class="background-image">
     <div class="overlay-text">
-        <h4>Más Que Un Viaje, Una Experiencia</h4>
+        <h4>Haciendo Tu Camino Más Fácil</h4>
         
     </div>
 </div>
