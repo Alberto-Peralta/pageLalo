@@ -11,6 +11,37 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+
+    document.addEventListener("DOMContentLoaded", () => {
+        // Obtener los elementos de los números
+        const cardNumber = document.getElementById("card-number").value;
+        const accountNumber = document.getElementById("account-number").value;
+    
+        // Función para copiar al portapapeles
+        const copyToClipboard = (text) => {
+            navigator.clipboard.writeText(text)
+                .then(() => {
+                    alert("Número copiado al portapapeles: " + text); // Mensaje de éxito
+                })
+                .catch(err => {
+                    console.error("Error al copiar: ", err);
+                });
+        };
+    
+        // Agregar eventos a los enlaces de copiar
+        document.getElementById("copy-card-number").addEventListener("click", (e) => {
+            e.preventDefault(); // Evitar el comportamiento predeterminado
+            copyToClipboard(cardNumber);
+        });
+    
+        document.getElementById("copy-account-number").addEventListener("click", (e) => {
+            e.preventDefault(); // Evitar el comportamiento predeterminado
+            copyToClipboard(accountNumber);
+        });
+    });
+
+    
+
     // Animación al hacer scroll
     const imageContainer = document.querySelector(".image-container");
     const overlayText = document.querySelector(".overlay-text");
