@@ -202,50 +202,50 @@ function animateMarker() {
         return;
     }
     let step = 0;
-    const intervalTime = 50;
-    carMarker = new google.maps.Marker({
-        position: route[0],
-        map: map,
-        icon: createCarIcon(0),
-        title: "Vehículo en movimiento",
-    });
-    const animationInterval = setInterval(() => {
-        if (step < route.length - 1) {
-            const currentPoint = route[step];
-            const nextPoint = route[step + 1];
-            const moveLatLng = google.maps.geometry.spherical.interpolate(currentPoint, nextPoint, 0.02);
-            carMarker.setPosition(moveLatLng);
+    locationInterval = setInterval(() => {
+        if (step < route.length) {
+            carMarker.setPosition(route[step]);
             step++;
         } else {
-            clearInterval(animationInterval);
-            alert("El vehículo ha llegado a su destino.");
-            finalizarViaje();
+            clearInterval(locationInterval);
         }
-    }, intervalTime);
-}
-
-function createCarIcon(heading) {
-    return {
-        path: google.maps.SymbolPath.CIRCLE,
-        scale: 10,
-        fillColor: "#00F",
-        fillOpacity: 0.7,
-        strokeColor: "#FFF",
-        strokeWeight: 2,
-        rotation: heading, // Asegura que el icono del automóvil se oriente correctamente
-    };
+    }, 1000);
 }
 
 function finalizarViaje() {
     if (viajeIniciado) {
-        finViaje = new Date();
-        const tiempoViaje = (finViaje - inicioViaje) / 1000; // en segundos
-        const distanciaFinal = carMarker.getPosition().distanceFrom(userLocation) / 1000; // km
-        alert(`Viaje finalizado. Duración: ${Math.round(tiempoViaje / 60)} minutos. Distancia recorrida: ${distanciaFinal.toFixed(2)} km.`);
         viajeIniciado = false;
-        document.getElementById("iniciar-viaje").disabled = false;
+        finViaje = new Date();
+        const totalTime = Math.round((finViaje - inicioViaje) / 60000); // en minutos
+        const totalKm = google.maps.geometry.spherical.computeDistanceBetween(origenMarker.getPosition(), destinoMarker.getPosition()) / 1000;
+        const totalCost = calculateCost(totalKm, totalTime);
+        document.getElementById("detalle-costos").innerText = `
+            Viaje finalizado.
+            Distancia recorrida: ${totalKm.toFixed(2)} km
+            Duración: ${totalTime} minutos
+            Costo total: $${totalCost.toFixed(2)}
+        `;
+        carMarker.setMap(null);  // Elimina el marcador del vehículo
         document.getElementById("finalizar-viaje").disabled = true;
+        document.getElementById("iniciar-viaje").disabled = false;
+        alert("Viaje finalizado.");
     } else {
-        alert("No hay un viaje en curso.");
+        alert("El viaje aún no ha comenzado.");
     }
+}
+
+function calculateCost(distance, duration) {
+    const serviceType = document.getElementById("servicio")?.value || "economico";
+    const baseFare = 35;
+    const costPerKm = serviceType === "economico" ? 5 : serviceType === "estandar" ? 7 : 10;
+    const costPerMinute = serviceType === "economico" ? 2 : serviceType === "estandar" ? 3 : 5;
+    return baseFare + (distance * costPerKm) + (duration * costPerMinute);
+}
+
+function createCarIcon(step) {
+    return {
+        url: carIconUrl,
+        scaledSize: new google.maps.Size(30, 30),
+        anchor: new google.maps.Point(15, 15),
+    };
 }
