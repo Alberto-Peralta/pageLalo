@@ -15,9 +15,9 @@ const COSTS = {
  * Inicializa el mapa y servicios de Google Maps.
  */
 function initMap() {
-    // Crear el mapa centrado en una ubicación inicial
+    // Crear el mapa centrado en una ubicación inicial (valor por defecto)
     map = new google.maps.Map(document.getElementById("map"), {
-        center: { lat: 19.432608, lng: -99.133209 }, // Centro en Ciudad de México (valor por defecto)
+        center: { lat: 19.432608, lng: -99.133209 }, // Centro en Ciudad de México
         zoom: 14,
     });
     directionsService = new google.maps.DirectionsService();
@@ -26,8 +26,8 @@ function initMap() {
     // Autocompletar en los inputs de origen y destino
     const originInput = document.getElementById("origen");
     const destinationInput = document.getElementById("destino");
-    const autocompleteOrigin = new google.maps.places.Autocomplete(originInput);
-    const autocompleteDestination = new google.maps.places.Autocomplete(destinationInput);
+    new google.maps.places.Autocomplete(originInput);
+    new google.maps.places.Autocomplete(destinationInput);
 
     // Obtener la ubicación actual
     if (navigator.geolocation) {
@@ -35,7 +35,7 @@ function initMap() {
             (position) => {
                 const { latitude, longitude } = position.coords;
                 const currentLocation = { lat: latitude, lng: longitude };
-                
+
                 // Centrar el mapa en la ubicación actual
                 map.setCenter(currentLocation);
 
@@ -47,8 +47,22 @@ function initMap() {
                 });
             },
             (error) => {
-                console.error("Error obteniendo la ubicación: ", error);
-                alert("No se pudo obtener la ubicación actual.");
+                switch (error.code) {
+                    case error.PERMISSION_DENIED:
+                        alert("Se denegó el acceso a la ubicación.");
+                        break;
+                    case error.POSITION_UNAVAILABLE:
+                        alert("La ubicación no está disponible.");
+                        break;
+                    case error.TIMEOUT:
+                        alert("La solicitud de geolocalización ha expirado.");
+                        break;
+                    case error.UNKNOWN_ERROR:
+                        alert("Se produjo un error desconocido.");
+                        break;
+                }
+                // Si no se puede obtener la ubicación, centrar en la ubicación predeterminada
+                console.warn("Error obteniendo la ubicación: ", error);
             }
         );
     } else {
