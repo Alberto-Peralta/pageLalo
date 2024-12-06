@@ -17,10 +17,9 @@ const COSTS = {
 function initMap() {
     // Crear el mapa centrado en una ubicación inicial
     map = new google.maps.Map(document.getElementById("map"), {
-        center: { lat: 19.432608, lng: -99.133209 }, // Centro en Ciudad de México
+        center: { lat: 19.432608, lng: -99.133209 }, // Centro en Ciudad de México (valor por defecto)
         zoom: 14,
     });
-
     directionsService = new google.maps.DirectionsService();
     directionsRenderer = new google.maps.DirectionsRenderer({ map });
 
@@ -29,6 +28,32 @@ function initMap() {
     const destinationInput = document.getElementById("destino");
     const autocompleteOrigin = new google.maps.places.Autocomplete(originInput);
     const autocompleteDestination = new google.maps.places.Autocomplete(destinationInput);
+
+    // Obtener la ubicación actual
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+            (position) => {
+                const { latitude, longitude } = position.coords;
+                const currentLocation = { lat: latitude, lng: longitude };
+                
+                // Centrar el mapa en la ubicación actual
+                map.setCenter(currentLocation);
+
+                // Crear un marcador en la ubicación actual
+                originMarker = new google.maps.Marker({
+                    position: currentLocation,
+                    map,
+                    icon: "https://maps.google.com/mapfiles/ms/icons/green-dot.png",
+                });
+            },
+            (error) => {
+                console.error("Error obteniendo la ubicación: ", error);
+                alert("No se pudo obtener la ubicación actual.");
+            }
+        );
+    } else {
+        alert("Geolocalización no soportada por tu navegador.");
+    }
 
     setupEventListeners();
 }
