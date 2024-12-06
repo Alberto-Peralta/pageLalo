@@ -1,219 +1,251 @@
-// script2.js
+let map;
+let origenMarker;
+let destinoMarker;
+let directionsService;
+let directionsRenderer;
+let userLocation;
+let viajeIniciado = false;
+let inicioViaje, finViaje;
+let locationInterval; // Variable para almacenar el intervalo de geolocalización
+let carMarker;  // Marcador para el automóvil
+// URL del ícono del automóvil
+const carIconUrl = '../icons/car.png'; // Reemplaza con la URL del ícono que has descargado o el enlace directo
 
-let map, directionsService, directionsRenderer, routePolyline, currentPath, originMarker, carMarker;
-let startLocation = null;
-let intervalId = null;
-let travelDistance = 0; // Total distance in meters
-
-const COSTS = {
-    economico: 5,
-    estandar: 10,
-    premium: 20,
-};
-
-/**
- * Inicializa el mapa y servicios de Google Maps.
- */
 function initMap() {
-    // Crear el mapa centrado en una ubicación inicial (valor por defecto)
-    map = new google.maps.Map(document.getElementById("map"), {
-        center: { lat: 19.432608, lng: -99.133209 }, // Centro en Ciudad de México
-        zoom: 14,
-    });
-    directionsService = new google.maps.DirectionsService();
-    directionsRenderer = new google.maps.DirectionsRenderer({ map });
-
-    // Autocompletar en los inputs de origen y destino
-    const originInput = document.getElementById("origen");
-    const destinationInput = document.getElementById("destino");
-    new google.maps.places.Autocomplete(originInput);
-    new google.maps.places.Autocomplete(destinationInput);
-
-    // Obtener la ubicación actual
+    const mapElement = document.getElementById("map");
+    if (!mapElement) {
+        alert("No se encontró el contenedor del mapa.");
+        return;
+    }
+    const styledMapType = new google.maps.StyledMapType(
+        [
+            { elementType: "geometry", stylers: [{ color: "#ebe3cd" }] },
+            { elementType: "labels.text.fill", stylers: [{ color: "#523735" }] },
+            { elementType: "labels.text.stroke", stylers: [{ color: "#f5f1e6" }] },
+            { featureType: "road", elementType: "geometry", stylers: [{ color: "#f5f1e6" }] },
+        ],
+        { name: "Styled Map" }
+    );
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(
             (position) => {
-                const { latitude, longitude } = position.coords;
-                const currentLocation = { lat: latitude, lng: longitude };
-
-                // Centrar el mapa en la ubicación actual
-                map.setCenter(currentLocation);
-
-                // Crear un marcador en la ubicación actual
-                originMarker = new google.maps.Marker({
-                    position: currentLocation,
-                    map,
-                    icon: "https://maps.google.com/mapfiles/ms/icons/green-dot.png",
+                userLocation = {
+                    lat: position.coords.latitude,
+                    lng: position.coords.longitude,
+                };
+                map = new google.maps.Map(mapElement, {
+                    center: userLocation,
+                    zoom: 14,
+                    gestureHandling: "auto",
+                    mapTypeControlOptions: {
+                        mapTypeIds: ["roadmap", "satellite", "hybrid", "terrain", "styled_map"],
+                    },
                 });
+                map.mapTypes.set("styled_map", styledMapType);
+                map.setMapTypeId("styled_map");
+                // Inicializa los marcadores
+                origenMarker = new google.maps.Marker({
+                    position: userLocation,
+                    map,
+                    draggable: true,
+                    label: "O",
+                    title: "Origen (arrástrame)",
+                });
+                destinoMarker = new google.maps.Marker({
+                    position: {
+                        lat: userLocation.lat + 0.01,
+                        lng: userLocation.lng + 0.01,
+                    },
+                    map,
+                    draggable: true,
+                    label: "D",
+                    title: "Destino (arrástrame)",
+                });
+                directionsService = new google.maps.DirectionsService();
+                directionsRenderer = new google.maps.DirectionsRenderer({ map });
+                // Actualiza la ruta y centra el mapa
+                const updateRouteAndCenter = () => {
+                    calculateRoute();
+                    const bounds = new google.maps.LatLngBounds();
+                    bounds.extend(origenMarker.getPosition());
+                    bounds.extend(destinoMarker.getPosition());
+                    map.fitBounds(bounds);
+                    updateFormFields();
+                };
+                origenMarker.addListener("dragend", updateRouteAndCenter);
+                destinoMarker.addListener("dragend", updateRouteAndCenter);
+                updateRouteAndCenter();
+                // Autocompletar para origen y destino
+                const autocompleteOptions = {
+                    bounds: new google.maps.LatLngBounds(
+                        new google.maps.LatLng(userLocation.lat - 0.1, userLocation.lng - 0.1),
+                        new google.maps.LatLng(userLocation.lat + 0.1, userLocation.lng + 0.1)
+                    ),
+                    strictBounds: false,
+                };
+                const originInput = document.getElementById("origen");
+                const destinationInput = document.getElementById("destino");
+                const autocompleteOrigen = new google.maps.places.Autocomplete(originInput, autocompleteOptions);
+                const autocompleteDestino = new google.maps.places.Autocomplete(destinationInput, autocompleteOptions);
+                // Listener para actualizar marcadores con Autocompletar
+                autocompleteOrigen.addListener("place_changed", () => {
+                    const place = autocompleteOrigen.getPlace();
+                    if (place.geometry) {
+                        origenMarker.setPosition(place.geometry.location);
+                        map.setCenter(place.geometry.location);
+                        updateFormFields();
+                        calculateRoute();
+                    }
+                });
+                autocompleteDestino.addListener("place_changed", () => {
+                    const place = autocompleteDestino.getPlace();
+                    if (place.geometry) {
+                        destinoMarker.setPosition(place.geometry.location);
+                        map.setCenter(place.geometry.location);
+                        updateFormFields();
+                        calculateRoute();
+                    }
+                });
+                // Añadir eventos a los botones
+                document.getElementById("iniciar-viaje").addEventListener("click", iniciarViaje);
+                document.getElementById("finalizar-viaje").addEventListener("click", finalizarViaje);
             },
-            (error) => {
-                switch (error.code) {
-                    case error.PERMISSION_DENIED:
-                        alert("Se denegó el acceso a la ubicación.");
-                        break;
-                    case error.POSITION_UNAVAILABLE:
-                        alert("La ubicación no está disponible.");
-                        break;
-                    case error.TIMEOUT:
-                        alert("La solicitud de geolocalización ha expirado.");
-                        break;
-                    case error.UNKNOWN_ERROR:
-                        alert("Se produjo un error desconocido.");
-                        break;
-                }
-                // Si no se puede obtener la ubicación, centrar en la ubicación predeterminada
-                console.warn("Error obteniendo la ubicación: ", error);
+            () => {
+                alert("No se pudo obtener tu ubicación.");
             }
         );
     } else {
-        alert("Geolocalización no soportada por tu navegador.");
+        alert("La geolocalización no es soportada por tu navegador.");
     }
-
-    setupEventListeners();
 }
 
-/**
- * Configura los listeners de los botones y lógica de viaje.
- */
-function setupEventListeners() {
-    const startButton = document.getElementById("iniciar-viaje");
-    const endButton = document.getElementById("finalizar-viaje");
-
-    startButton.addEventListener("click", () => {
-        startButton.disabled = true;
-        endButton.disabled = false;
-        startTrip();
+function updateFormFields() {
+    const originInput = document.getElementById("origen");
+    const destinationInput = document.getElementById("destino");
+    const originPosition = origenMarker.getPosition();
+    const destinationPosition = destinoMarker.getPosition();
+    const geocoder = new google.maps.Geocoder();
+    geocoder.geocode({ location: originPosition }, (results, status) => {
+        if (status === "OK" && results[0]) {
+            originInput.value = results[0].formatted_address;
+        }
     });
-
-    endButton.addEventListener("click", () => {
-        endButton.disabled = true;
-        startButton.disabled = false;
-        endTrip();
+    geocoder.geocode({ location: destinationPosition }, (results, status) => {
+        if (status === "OK" && results[0]) {
+            destinationInput.value = results[0].formatted_address;
+        }
     });
 }
 
-/**
- * Inicia el seguimiento del viaje desde la ubicación actual.
- */
-function startTrip() {
-    if (!navigator.geolocation) {
-        alert("Geolocalización no soportada por tu navegador.");
+function calculateRoute() {
+    const origin = origenMarker.getPosition();
+    const destination = destinoMarker.getPosition();
+    const serviceType = document.getElementById("servicio")?.value || "economico";
+    if (!origin || !destination) {
+        alert("Por favor arrastra los marcadores al origen y destino.");
         return;
     }
-
-    navigator.geolocation.getCurrentPosition(
-        (position) => {
-            const { latitude, longitude } = position.coords;
-            startLocation = { lat: latitude, lng: longitude };
-
-            // Marcador inicial
-            originMarker = new google.maps.Marker({
-                position: startLocation,
-                map,
-                icon: "https://maps.google.com/mapfiles/ms/icons/green-dot.png",
-            });
-
-            currentPath = [startLocation];
-            routePolyline = new google.maps.Polyline({
-                path: currentPath,
-                geodesic: true,
-                strokeColor: "#FF0000",
-                strokeOpacity: 1.0,
-                strokeWeight: 3,
-                map,
-            });
-
-            carMarker = new google.maps.Marker({
-                position: startLocation,
-                map,
-                icon: "https://maps.google.com/mapfiles/kml/shapes/cabs.png",
-            });
-
-            map.setCenter(startLocation);
-
-            // Actualizar posición en tiempo real
-            intervalId = setInterval(trackPosition, 3000); // Actualizar cada 3 segundos
-        },
-        (error) => {
-            alert("Error obteniendo la ubicación: " + error.message);
-        }
-    );
-}
-
-/**
- * Rastrear posición en tiempo real y actualizar la ruta.
- */
-function trackPosition() {
-    navigator.geolocation.getCurrentPosition(
-        (position) => {
-            const { latitude, longitude } = position.coords;
-            const currentPosition = { lat: latitude, lng: longitude };
-
-            // Calcular distancia desde la última posición
-            const lastPosition = currentPath[currentPath.length - 1];
-            const segmentDistance = google.maps.geometry.spherical.computeDistanceBetween(
-                new google.maps.LatLng(lastPosition),
-                new google.maps.LatLng(currentPosition)
-            );
-
-            travelDistance += segmentDistance;
-            currentPath.push(currentPosition);
-
-            // Actualizar línea de ruta
-            routePolyline.setPath(currentPath);
-
-            // Mover marcador del auto
-            carMarker.setPosition(currentPosition);
-        },
-        (error) => {
-            console.error("Error obteniendo la ubicación: ", error);
-        }
-    );
-}
-
-/**
- * Finaliza el viaje y calcula los costos.
- */
-function endTrip() {
-    clearInterval(intervalId);
-
-    if (!startLocation || currentPath.length === 0) {
-        alert("No se pudo calcular el viaje.");
-        return;
-    }
-
-    const endLocation = currentPath[currentPath.length - 1];
-
-    // Dibujar la ruta final entre origen y destino
     directionsService.route(
         {
-            origin: startLocation,
-            destination: endLocation,
+            origin,
+            destination,
             travelMode: google.maps.TravelMode.DRIVING,
         },
-        (result, status) => {
-            if (status === google.maps.DirectionsStatus.OK) {
-                directionsRenderer.setDirections(result);
-
-                // Calcular distancia y tiempo final
-                const route = result.routes[0];
-                const totalDistance = route.legs[0].distance.value; // En metros
-                const totalTime = route.legs[0].duration.value; // En segundos
-
-                // Calcular costo final
-                const serviceType = document.getElementById("servicio").value;
-                const costPerKm = COSTS[serviceType];
-                const totalCost = ((totalDistance / 1000) * costPerKm).toFixed(2);
-
-                // Mostrar detalles
-                document.getElementById("detalle-costos").innerHTML = `
-                    Distancia: ${(totalDistance / 1000).toFixed(2)} km<br>
-                    Tiempo: ${(totalTime / 60).toFixed(2)} minutos<br>
-                    Costo: $${totalCost} MXN
+        (response, status) => {
+            if (status === "OK") {
+                directionsRenderer.setDirections(response);
+                const route = response.routes[0];
+                const routeLeg = route.legs[0];
+                const distance = routeLeg.distance.value / 1000; // km
+                const duration = routeLeg.duration.value / 60; // min
+                const baseFare = 35;
+                const costPerKm = serviceType === "economico" ? 5 : serviceType === "estandar" ? 7 : 10;
+                const costPerMinute = serviceType === "economico" ? 2 : serviceType === "estandar" ? 3 : 5;
+                const estimate = baseFare + distance * costPerKm + duration * costPerMinute;
+                document.getElementById("detalle-costos").innerText = `
+                    Tipo de servicio: ${serviceType.charAt(0).toUpperCase() + serviceType.slice(1)}
+                    Distancia: ${distance.toFixed(2)} km
+                    Tiempo estimado: ${duration.toFixed(0)} minutos
+                    Costo estimado: $${estimate.toFixed(2)}
                 `;
             } else {
-                console.error("Error obteniendo la ruta: ", status);
+                alert("No se pudo calcular la ruta. Intenta nuevamente.");
             }
         }
     );
+}
+
+function iniciarViaje() {
+    if (!viajeIniciado) {
+        viajeIniciado = true;
+        inicioViaje = new Date();
+        userLocation = origenMarker.getPosition();
+        carMarker = new google.maps.Marker({
+            position: userLocation,
+            map: map,
+            icon: createCarIcon(0),
+            title: "Vehículo en movimiento",
+        });
+        animateMarker();
+        document.getElementById("iniciar-viaje").disabled = true;
+        document.getElementById("finalizar-viaje").disabled = false;
+        alert("Viaje iniciado.");
+    } else {
+        alert("El viaje ya está en curso.");
+    }
+}
+
+function animateMarker() {
+    const route = directionsRenderer.getDirections().routes[0].overview_path;
+    if (!route || route.length === 0) {
+        alert("No hay ruta disponible para animar.");
+        return;
+    }
+    let step = 0;
+    const intervalTime = 50;
+    carMarker = new google.maps.Marker({
+        position: route[0],
+        map: map,
+        icon: createCarIcon(0),
+        title: "Vehículo en movimiento",
+    });
+    const animationInterval = setInterval(() => {
+        if (step < route.length - 1) {
+            const currentPoint = route[step];
+            const nextPoint = route[step + 1];
+            const moveLatLng = google.maps.geometry.spherical.interpolate(currentPoint, nextPoint, 0.02);
+            carMarker.setPosition(moveLatLng);
+            step++;
+        } else {
+            clearInterval(animationInterval);
+            alert("El vehículo ha llegado a su destino.");
+            finalizarViaje();
+        }
+    }, intervalTime);
+}
+
+function createCarIcon(heading) {
+    return {
+        path: google.maps.SymbolPath.CIRCLE,
+        scale: 10,
+        fillColor: "#00F",
+        fillOpacity: 0.7,
+        strokeColor: "#FFF",
+        strokeWeight: 2,
+        rotation: heading, // Asegura que el icono del automóvil se oriente correctamente
+    };
+}
+
+function finalizarViaje() {
+    if (viajeIniciado) {
+        finViaje = new Date();
+        const tiempoViaje = (finViaje - inicioViaje) / 1000; // en segundos
+        const distanciaFinal = carMarker.getPosition().distanceFrom(userLocation) / 1000; // km
+        alert(`Viaje finalizado. Duración: ${Math.round(tiempoViaje / 60)} minutos. Distancia recorrida: ${distanciaFinal.toFixed(2)} km.`);
+        viajeIniciado = false;
+        document.getElementById("iniciar-viaje").disabled = false;
+        document.getElementById("finalizar-viaje").disabled = true;
+    } else {
+        alert("No hay un viaje en curso.");
+    }
 }
