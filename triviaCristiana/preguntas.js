@@ -1,5 +1,5 @@
 // preguntas.js
-export const preguntas = [
+  const preguntas = [
     { pregunta: "¿Cuál es la capital de Francia?", opciones: ["A) Berlín", "B) Madrid", "C) París", "D) Roma"], respuesta: "C", genero: "Geografía" },
     { pregunta: "¿Cuál es el resultado de 5 + 3?", opciones: ["A) 6", "B) 7", "C) 8", "D) 9"], respuesta: "C", genero: "Matemáticas" },
     { pregunta: "¿Quién escribió 'Don Quijote'?", opciones: ["A) Cervantes", "B) Shakespeare", "C) Garcilaso", "D) Lope de Vega"], respuesta: "A", genero: "Literatura" },

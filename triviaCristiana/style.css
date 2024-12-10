@@ -35,87 +35,44 @@ body {
     text-shadow: 2px 2px 8px rgba(255, 204, 0, 0.8);
 }
 
-/* Estilos del temporizador */
-.timer {
-    background: #003366; /* Azul oscuro para combinar con el esquema general */
-    color: #ffffff;
-    padding: 20px;
+/* Estilos para el temporizador */
+#time-remaining {
+    font-size: 3rem; 
+    font-weight: bold;
+    color: #ffcc00; 
+    padding: 10px 20px;
     border-radius: 10px;
-    width: 100%;
-    max-width: 300px;
-    margin-top: 20px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
-    font-size: 1.2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    transition: background 0.3s ease;
-    position: relative; /* Asegura que esté centrado */
-    height: 100px; /* Ajustar altura para centrar el contenido */
-    
-}
-
-/* El tiempo restante resaltado */
-#time {
-    font-size: 2.5rem; /* Aumenta el tamaño del número */
-    font-weight: bold;
-    color: #ffcc00; /* Amarillo brillante para resaltar el tiempo */
-    padding: 5px 15px;
-    border-radius: 5px;
-    background-color: #2c6f8c; /* Azul medio para el fondo */
+    background-color: #2c6f8c; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    margin-bottom: 20px; 
 }
 
-/* Efecto hover para el temporizador */
-.timer:hover {
-    background-color: #2c6f8c; /* Azul medio cuando el mouse pasa por encima */
-}
-
-/* Estilos para el texto del temporizador en dispositivos pequeños */
-@media (max-width: 480px) {
-    .timer {
-        font-size: 1rem; /* Reducir tamaño de fuente en dispositivos pequeños */
-        padding: 15px;
-        height: 80px; /* Ajustar la altura en pantallas pequeñas */
-    }
-
-    #time {
-        font-size: 2rem; /* Hacer el tiempo un poco más grande */
-    }
-}
-
-/* Contenedor de preguntas */
-.question-container {
-    background: #2c6f8c; /* Azul medio */
-    border-radius: 15px;
-    padding: 15px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
-}
-
+/* Estilos para el texto de la pregunta */
 #question-text {
-    font-size: 1.5rem; /* Destacar la pregunta */
+    font-size: 1.8rem; 
     font-weight: bold;
-    color: #ffffff;
-    margin-bottom: 20px;
+    color: #ffffff; 
+    margin: 20px 0; 
+    padding: 10px; 
+    background: rgba(255, 255, 255, 0.1); 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
 }
 
-/* Contenedor de respuestas */
-.answers {
+/* Estilos para el contenedor de respuestas */
+#answers {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Dos columnas */
-    gap: 15px; /* Espacio entre respuestas */
-    text-align: center;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 15px; 
 }
 
-/* Botones de respuesta */
+/* Estilos para los botones de respuesta */
 .answer-btn {
     padding: 15px;
-    font-size: 1rem;
-    background: #0288d1; /* Azul brillante */
+    font-size: 1.2rem; 
+    background: #0288d1; 
     color: #ffffff;
-    border: 2px solid #00bcd4; /* Cian */
+    border: 2px solid #00bcd4; 
     border-radius: 10px;
     cursor: pointer;
     transition: all 0.3s;
@@ -123,84 +80,84 @@ body {
 }
 
 .answer-btn:hover {
-    background: #00bcd4; /* Cian */
+    background: #00bcd4; 
     color: #003366;
     border-color: #0288d1;
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.5);
 }
 
 .answer-btn:active {
-    background: #03a9f4; /* Azul vibrante */
+    background: #03a9f4; 
     transform: scale(0.98);
 }
 
 /* Respuestas correctas e incorrectas */
 .correct {
-    background-color: #4caf50; /* Verde */
+    background-color: #4caf50; 
     color: white;
 }
 
 .incorrect {
-    background-color: #f44336; /* Rojo */
+    background-color: #f44336; 
     color: white;
 }
 
 /* Respuesta seleccionada */
 .selected {
-    border: 2px solid #ffa500; /* Naranja para la respuesta seleccionada */
-    background-color: rgba(255, 165, 0, 0.3); /* Fondo naranja claro */
+    border: 2px solid #ffa500; 
+    background-color: rgba(255, 165, 0, 0.3); 
 }
 
 /* Botón de Confirmar */
 #confirm-btn {
-    background-color: #4caf50; /* Verde vibrante */
+    background-color: #4caf50; 
     color: white;
     padding: 15px;
     font-size: 1.2rem;
     border-radius: 10px;
-    border: 2px solid #388e3c; /* Verde oscuro */
+    border: 2px solid #388e3c; 
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     transition: all 0.3s;
-    width: 100%; /* Botón ancho para destacar */
+    width: 100%; 
     margin-top: 20px;
 }
 
 #confirm-btn:hover {
-    background-color: #388e3c; /* Verde más oscuro */
+    background-color: #388e3c; 
     border-color: #4caf50;
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.5);
 }
 
 #confirm-btn:active {
-    background-color: #2c6f30; /* Verde aún más oscuro */
+    background-color: #2c6f30; 
     transform: scale(0.98);
 }
 
 /* Botones de Comodines */
-.controls button {
+#fifty-fifty, #pause-time, #next-question {
     padding: 10px 15px;
     font-size: 1rem;
     border-radius: 10px;
-    border: 2px solid #ff6f00; /* Naranja intenso */
-    background: #ffa726; /* Naranja claro */
+    border: 2px solid #ff6f00; 
+    background: #ffa726; 
     color: #ffffff;
     cursor: pointer;
     transition: all 0.3s;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    width: 30%; /* Botones con el mismo tamaño */
-    margin: 5px; /* Espaciado entre botones */
+    width: 30%; 
+    margin: 5px; 
 }
 
-.controls button:hover {
-    background: #ff9800; /* Naranja más oscuro */
-    color: #003366; /* Azul profundo */
-    border-color: #ffcc00; /* Amarillo brillante */
+#fifty-fifty:hover, #pause-time:hover, #next-question:hover {
+    background: #ff9800; 
+    color: #003366; 
+    border-color: #ffcc00; 
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.5);
 }
 
-.controls button:active {
-    background: #ff5722; /* Naranja vibrante */
+#fifty-fifty:active, #pause-time:active, #next-question:active {
+    background: #ff5722; 
     color: #ffffff;
     transform: scale(0.98);
 }
@@ -209,40 +166,55 @@ body {
 .controls {
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap; /* Permitir que los botones se ajusten en pantallas pequeñas */
-    gap: 10px; /* Espacio entre botones */
+    flex-wrap: wrap; 
+    gap: 10px; 
+}
+
+.controls button {
+    width: 100%; 
+    font-size: 0.9rem;
 }
 
 /* Media Queries para dispositivos pequeños */
 @media (max-width: 480px) {
-    .controls button {
-        width: 100%; /* Botones se expanden en dispositivos pequeños */
-        font-size: 0.9rem;
-    }
-
-    /* Ajustar las respuestas a una sola columna en pantallas pequeñas */
-    .answers {
-        grid-template-columns: 1fr; /* Una columna para pantallas pequeñas */
-    }
-
-    .answer-btn {
-        padding: 12px;
-        font-size: 0.9rem;
+    #time-remaining {
+        font-size: 2.5rem; 
     }
 
     #question-text {
-        font-size: 1.2rem; /* Reducir tamaño de la pregunta */
+        font-size: 1.5rem; 
+    }
+
+    .answer-btn {
+        font-size: 1rem; 
+        padding: 10px; 
+    }
+
+    #answers {
+        grid-template-columns: 1fr; 
+    }
+
+    #fifty-fifty, #pause-time, #next-question {
+        width: 100%; 
     }
 }
 
 /* Pantallas medianas (tabletas) */
 @media (max-width: 768px) {
-    .answers {
-        grid-template-columns: 1fr 1fr; /* Mantener dos columnas */
+    #answers {
+        grid-template-columns: 1fr 1fr; 
     }
 
     .answer-btn {
         padding: 15px;
         font-size: 1rem;
     }
+}
+
+/* Estilo de Level y Money */
+#level, #money {
+    font-size: 1.2rem;
+    color: #ffcc00;
+    font-weight: bold;
+    margin: 10px 0;
 }
