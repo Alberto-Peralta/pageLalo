@@ -1,3 +1,7 @@
+
+
+
+
 // Variables del juego
 let time = 30; 
 let timer;
@@ -29,6 +33,10 @@ function startTimer() {
 function mostrarNuevaPregunta() {
   const pregunta = preguntas[currentQuestionIndex];
   document.getElementById("question-text").textContent = pregunta.pregunta;
+
+
+
+  
   
   // Mostrar las opciones de respuesta
   pregunta.opciones.forEach((opcion, index) => {
@@ -111,6 +119,8 @@ function cargarSiguientePregunta() {
   }
 }
 
+
+
 // Función para reiniciar el juego
 function reiniciarJuego() {
   currentQuestionIndex = 0;
@@ -146,5 +156,52 @@ document.getElementById("pause-time").addEventListener("click", () => {
   }
 });
 
+
+
+document.getElementById("next-question").addEventListener("click", () => {
+  // Sumar un punto como si la respuesta fuera correcta
+  score++;
+
+  // Actualizar la puntuación en pantalla
+  document.getElementById("score-display").textContent = `Puntuación: ${score}`;
+
+  // Avanzar a la siguiente pregunta
+  if (currentQuestionIndex < preguntas.length - 1) {
+    currentQuestionIndex++;
+    mostrarNuevaPregunta();  // Mostrar la nueva pregunta
+  } else {
+    alert(`¡Has terminado el juego! Tu puntuación final es: ${score}`);
+    // Aquí podrías reiniciar el juego o redirigir a otra parte
+  }
+});
+
+
+
+// Función para deshabilitar un botón
+function disableButton(buttonId) {
+  const button = document.getElementById(buttonId);
+  button.disabled = true;
+  button.style.backgroundColor = "#b0bec5";  // Cambia el color del botón a un gris para indicar que está deshabilitado
+  button.style.cursor = "not-allowed";  // Cambia el cursor para mostrar que el botón no es clickeable
+  button.classList.add("disabled"); // Puedes agregar una clase si quieres personalizar más el estilo
+}
+
+// Asignar los botones para deshabilitarlos después de usarlos
+document.getElementById("fifty-fifty").addEventListener("click", function() {
+  // Aquí agregarías la lógica para usar el comodín 50/50
+  disableButton("fifty-fifty");
+});
+
+document.getElementById("pause-time").addEventListener("click", function() {
+  // Aquí agregarías la lógica para pausar el tiempo
+  disableButton("pause-time");
+});
+
+document.getElementById("next-question").addEventListener("click", function() {
+  // Aquí agregarías la lógica para pasar a la siguiente pregunta
+  disableButton("next-question");
+});
+
+ 
 // Inicia el juego con la primera pregunta
 mostrarNuevaPregunta();

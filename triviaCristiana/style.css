@@ -218,3 +218,16 @@ body {
     font-weight: bold;
     margin: 10px 0;
 }
+
+
+/* Estilo para los botones deshabilitados */
+button:disabled {
+    background-color: #b0bec5; /* Gris claro */
+    color: #ffffff;
+    cursor: not-allowed;
+    box-shadow: none;
+    border: 2px solid #b0bec5;
+  }
+  
+
+
