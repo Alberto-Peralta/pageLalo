@@ -23,11 +23,37 @@ function startTimer() {
       document.getElementById("time").textContent = time; 
     } else {
       clearInterval(timer);
-      alert("¡Se acabó el tiempo!"); 
-      convertirBotonASiguiente();
+      endGame(); // Llama a endGame cuando el tiempo se acaba
     }
   }, 1000);
 }
+
+// Función para finalizar el juego
+function endGame() {
+  // Muestra el mensaje de fin de juego con la puntuación final
+  alert(`¡Se acabó el tiempo! Tu puntuación final es: ${score}`);
+  
+  // Deshabilitar todos los botones
+  disableButton("fifty-fifty");
+  disableButton("pause-time");
+  disableButton("next-question");
+  disableButton("confirm-btn");  // Deshabilita el botón de "Confirmar"
+  
+  // Aquí puedes agregar más lógica si necesitas hacer algo adicional, como ocultar la pregunta o reiniciar el juego.
+}
+
+// Función para deshabilitar un botón
+function disableButton(buttonId) {
+  const button = document.getElementById(buttonId);
+  button.disabled = true;
+  button.style.backgroundColor = "#b0bec5";  // Cambia el color del botón a un gris para indicar que está deshabilitado
+  button.style.cursor = "not-allowed";  // Cambia el cursor para mostrar que el botón no es clickeable
+  button.classList.add("disabled"); // Puedes agregar una clase si quieres personalizar más el estilo
+}
+
+// Llamar a startTimer() cuando el juego comience
+startTimer();
+
 
 // Muestra una nueva pregunta
 function mostrarNuevaPregunta() {
@@ -108,16 +134,21 @@ function convertirBotonASiguiente() {
   answerConfirmed = true; 
 }
 
+
+
 // Carga la siguiente pregunta
 function cargarSiguientePregunta() {
   if (currentQuestionIndex < preguntas.length - 1) {
+    // Si hay más preguntas, avanza al índice siguiente
     currentQuestionIndex++;
-    mostrarNuevaPregunta();
+    mostrarNuevaPregunta();  // Mostrar la nueva pregunta
   } else {
+    // Si ya no hay más preguntas, termina el juego
     alert(`¡Has terminado el juego! Tu puntuación final es: ${score}`);
-    reiniciarJuego();
+    reiniciarJuego();  // O simplemente reinicia el juego si lo prefieres
   }
 }
+
 
 
 
@@ -202,6 +233,45 @@ document.getElementById("next-question").addEventListener("click", function() {
   disableButton("next-question");
 });
 
- 
+// Función para mezclar el array de preguntas (algoritmo de Fisher-Yates)
+function mezclarPreguntas() {
+  for (let i = preguntas.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));  // Obtiene un índice aleatorio
+    [preguntas[i], preguntas[j]] = [preguntas[j], preguntas[i]];  // Intercambia las posiciones
+  }
+}
+
+// Función para mostrar una nueva pregunta
+function mostrarNuevaPregunta() {
+  // Mezclar las preguntas al inicio del juego
+  if (currentQuestionIndex === 0) {
+    mezclarPreguntas();  // Mezclar las preguntas solo una vez al principio
+  }
+
+  const pregunta = preguntas[currentQuestionIndex];
+  document.getElementById("question-text").textContent = pregunta.pregunta;
+
+  // Mostrar las opciones de respuesta
+  pregunta.opciones.forEach((opcion, index) => {
+    const btn = document.getElementById(`answer${index + 1}`);
+    btn.textContent = opcion;
+    btn.classList.remove("correct", "incorrect", "selected"); 
+    btn.style.display = "inline-block";  
+  });
+
+  correctAnswer = pregunta.respuesta;  
+  selectedAnswer = null;  
+  fiftyFiftyUsed = false; 
+  answerConfirmed = false; 
+
+  // Reiniciar el temporizador
+  startTimer();
+
+  // Restablecer el botón "Confirmar"
+  const confirmButton = document.getElementById("confirm-btn");
+  confirmButton.textContent = "Confirmar";
+  confirmButton.onclick = checkAnswer; // Asigna la función de confirmar respuesta
+}
+
 // Inicia el juego con la primera pregunta
 mostrarNuevaPregunta();
