@@ -11,6 +11,8 @@
   --sombra-suave: 0 4px 8px rgba(0, 0, 0, 0.2);
   --fuente-elegante: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente más elegante */
 }
+
+
 * {
   box-sizing: border-box;
 }
