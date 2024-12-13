@@ -23,13 +23,14 @@ header {
 
 main {
     flex: 1;
-    padding: 2rem;
+    display: flex; /* Cambiado para permitir que el iframe ocupe todo el espacio */
+    padding: 0; /* Eliminar padding para maximizar el uso del espacio */
     text-align: center;
 }
 
 iframe {
     width: 100%;
-    height: 800px; /* Altura fija, se ajustará en pantallas más pequeñas */
+    height: 100%; /* Cambiado para ocupar el 100% de la altura del contenedor */
     border: none;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -38,11 +39,7 @@ iframe {
 /* Estilos para pantallas pequeñas */
 @media (max-width: 768px) {
     main {
-        padding: 1rem; /* Menos padding en pantallas pequeñas */
-    }
-
-    iframe {
-        height: 400px; /* Reduce la altura del iframe en pantallas pequeñas */
+        padding: 0; /* Sin padding para maximizar el uso del espacio */
     }
 }
 
@@ -58,12 +55,7 @@ footer {
     header, footer {
         padding: 0.5rem 0; /* Menos padding en header y footer */
     }
-
     main {
         padding: 0.5rem; /* Menos padding en main */
-    }
-
-    iframe {
-        height: 300px; /* Reduce aún más la altura del iframe */
     }
 }
