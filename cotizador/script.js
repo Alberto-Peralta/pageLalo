@@ -482,3 +482,32 @@ function createCarIcon(rotation) {
 }
 
 document.addEventListener("DOMContentLoaded", initMap);
+
+
+
+// Enviar mensaje a WhatsApp con ubicación en tiempo real
+const enviarMensajeWhatsApp = (numero) => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const lat = position.coords.latitude;
+          const lng = position.coords.longitude;
+          const mensaje = `Hola, necesito un viaje. Mi ubicación actual es: https://www.google.com/maps/search/?api=1&query=${lat},${lng}`;
+          const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+          window.open(url, '_blank');
+        },
+        (error) => {
+          alert('No se pudo obtener la ubicación. Por favor, actívala e inténtalo de nuevo.');
+        }
+      );
+    } else {
+      alert('La geolocalización no es compatible con tu navegador.');
+    }
+  };
+  
+  // Botón para solicitar viaje
+  document.getElementById('solicitarViajeBtn').addEventListener('click', () => {
+    const numero = '5216393992678'; // Reemplaza con tu número de WhatsApp
+    enviarMensajeWhatsApp(numero);
+  });
+  
