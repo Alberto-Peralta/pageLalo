@@ -9,5 +9,5 @@ const recargarIframe = () => {
 // Este código es opcional, pero si quieres añadir un botón para recargar la Biblia
 // const botonRecargar = document.createElement('button');
 // botonRecargar.textContent = 'Recargar la Biblia';
-// botonRecargar.onclick = recargarIframe;
-// document.body.appendChild(botonRecargar);
+botonRecargar.onclick = recargarIframe;
+document.body.appendChild(botonRecargar);
