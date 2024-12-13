@@ -12,6 +12,10 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    flex: 1;
+    display: flex; /* Cambiado para permitir que el iframe ocupe todo el espacio */
+    padding: 0; /* Eliminar padding para maximizar el uso del espacio */
+    text-align: center;
 }
 
 header {
