@@ -60,6 +60,21 @@ function initMap() {
                 });
                 directionsService = new google.maps.DirectionsService();
                 directionsRenderer = new google.maps.DirectionsRenderer({ map });
+
+                // Agregar Autocompletado
+                const originInput = document.getElementById("origen");
+                const destinationInput = document.getElementById("destino");
+                
+                // Crear instancias de Autocomplete
+                const originAutocomplete = new google.maps.places.Autocomplete(originInput);
+                const destinationAutocomplete = new google.maps.places.Autocomplete(destinationInput);
+                
+                // Establecer la ubicación actual como el lugar de referencia para autocompletar
+                const bounds = new google.maps.LatLngBounds();
+                bounds.extend(userLocation);
+                originAutocomplete.setBounds(bounds);
+                destinationAutocomplete.setBounds(bounds);
+
                 const updateRouteAndCenter = () => {
                     calculateRoute();
                     const bounds = new google.maps.LatLngBounds();
