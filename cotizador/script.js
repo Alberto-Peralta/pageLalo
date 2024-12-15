@@ -124,14 +124,13 @@ function calculateRoute() {
                 const costPerMinute = 3;
                 const estimate = baseFare + distance * costPerKm + duration * costPerMinute;
                 const googleMapsUrl = `https://www.google.com/maps/dir/?api=1&origin=${origin.lat()},${origin.lng()}&destination=${destination.lat()},${destination.lng()}`;
-                const origenDestino = <p><a>${googleMapsUrl}</a></p>
                 document.getElementById("detalle-costos").innerHTML = `
                     <p>Tipo de servicio: Estándar</p>
                     <p>Distancia: ${distance.toFixed(2)} km</p>
                     <p>Tiempo estimado: ${duration.toFixed(0)} minutos</p>
                     <p>Costo estimado: $${estimate.toFixed(2)}</p>
     
-                    <p><a href="" target="_blank" class="enlace-maps">${googleMapsUrl}</a></p>
+                    <p><a href="" target="_blank" >${googleMapsUrl}</a></p>
                 `;
             } else {
                 alert("No se pudo calcular la ruta. Intenta nuevamente.");
@@ -145,7 +144,7 @@ document.addEventListener("DOMContentLoaded", initMap);
 function enviarDatosPorWhatsApp() {
     const detalleCostos = document.getElementById("detalle-costos").innerText;
     const mensaje = `Hola, quiero solicitar un viaje con los siguientes detalles:\n${detalleCostos}`;
-    const url = `https://wa.me/5216393992678?text=${encodeURIComponent(mensaje)}${origenDestino}`;    
+    const url = `https://wa.me/5216393992678?text=${encodeURIComponent(mensaje)}`;    
     window.open(url, '_blank');
 }
 

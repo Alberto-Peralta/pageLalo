@@ -100,11 +100,6 @@ input:focus, select:focus {
   font-size: 16px; /* Tamaño de fuente */
 }
 
-.enlace-maps{
-
-  display: none;
-
-}
 
 
 @media (max-width: 768px) {
