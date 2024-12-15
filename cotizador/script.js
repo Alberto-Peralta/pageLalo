@@ -130,7 +130,7 @@ function calculateRoute() {
                     <p>Tiempo estimado: ${duration.toFixed(0)} minutos</p>
                     <p>Costo estimado: $${estimate.toFixed(2)}</p>
     
-                    <p><a href="" target="_blank" class="enlace-mapa>${googleMapsUrl}</a></p>
+                    <p id= enlace-mapa<a target="_blank">${googleMapsUrl}</a></p>
                 `;
             } else {
                 alert("No se pudo calcular la ruta. Intenta nuevamente.");
