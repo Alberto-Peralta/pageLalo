@@ -99,6 +99,14 @@ input:focus, select:focus {
   font-family: var(--fuente-elegante); /* Fuente elegante */
   font-size: 16px; /* Tamaño de fuente */
 }
+
+.enlace-maps{
+
+  display: none;
+
+}
+
+
 @media (max-width: 768px) {
   .container {
       padding: 20px;
