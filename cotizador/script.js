@@ -143,8 +143,7 @@ document.addEventListener("DOMContentLoaded", initMap);
 function enviarDatosPorWhatsApp() {
     const detalleCostos = document.getElementById("detalle-costos").innerText;
     const mensaje = `Hola, quiero solicitar un viaje con los siguientes detalles:\n${detalleCostos}`;
-    const url = `https://wa.me/?${5216393992678}?text=${encodeURIComponent(mensaje)}`;
-    
+    const url = `https://wa.me/5216393992678?text=${encodeURIComponent(mensaje)}`;    
     window.open(url, '_blank');
 }
 
