@@ -5,12 +5,18 @@ let directionsService;
 let directionsRenderer;
 let userLocation;
 
+let map;
+let origenMarker;
+let destinoMarker;
+let userLocation;
+
 function initMap() {
     const mapElement = document.getElementById("map");
     if (!mapElement) {
         alert("No se encontró el contenedor del mapa.");
         return;
     }
+
     const styledMapType = new google.maps.StyledMapType(
         [
             { elementType: "geometry", stylers: [{ color: "#ebe3cd" }] },
@@ -18,8 +24,9 @@ function initMap() {
             { elementType: "labels.text.stroke", stylers: [{ color: "#f5f1e6" }] },
             { featureType: "road", elementType: "geometry", stylers: [{ color: "#f5f1e6" }] },
         ],
-        { name: "Styled Map" }
+        { name: "Lalo Peralta Map" }
     );
+
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(
             (position) => {
@@ -27,6 +34,7 @@ function initMap() {
                     lat: position.coords.latitude,
                     lng: position.coords.longitude,
                 };
+
                 map = new google.maps.Map(mapElement, {
                     center: userLocation,
                     zoom: 14,
@@ -35,17 +43,29 @@ function initMap() {
                         mapTypeIds: ["roadmap", "satellite", "hybrid", "terrain", "styled_map"],
                     },
                 });
+
                 map.mapTypes.set("styled_map", styledMapType);
                 map.setMapTypeId("styled_map");
 
-                // Crear marcadores
+                // Crear marcadores personalizados
+                const origenIcon = {
+                    url: '../icons/origen-icon.png', // Ruta a tu icono de origen
+                    scaledSize: new google.maps.Size(40, 40), // Tamaño del icono
+                };
+
+                const destinoIcon = {
+                    url: '../icons/destino-icon.png', // Ruta a tu icono de destino
+                    scaledSize: new google.maps.Size(40, 40), // Tamaño del icono
+                };
+
                 origenMarker = new google.maps.Marker({
                     position: userLocation,
                     map,
                     draggable: true,
-                    label: "O",
+                    icon: origenIcon, // Usar icono personalizado
                     title: "Origen (arrástrame)",
                 });
+
                 destinoMarker = new google.maps.Marker({
                     position: {
                         lat: userLocation.lat + 0.01,
@@ -53,9 +73,30 @@ function initMap() {
                     },
                     map,
                     draggable: true,
-                    label: "D",
+                    icon: destinoIcon, // Usar icono personalizado
                     title: "Destino (arrástrame)",
                 });
+
+                // Agregar listeners para actualizar la ruta si se arrastran los marcadores
+                origenMarker.addListener("dragend", updateRoute);
+                destinoMarker.addListener("dragend", updateRoute);
+            },
+            () => {
+                alert("No se pudo obtener tu ubicación.");
+            }
+        );
+    } else {
+        alert("La geolocalización no es soportada por tu navegador.");
+    }
+}
+
+function updateRoute() {
+    // Aquí puedes implementar la lógica para calcular la ruta
+    console.log("Ruta actualizada");
+}
+
+// Inicializar el mapa
+document.addEventListener("DOMContentLoaded", initMap);
 
                 directionsService = new google.maps.DirectionsService();
                 directionsRenderer = new google.maps.DirectionsRenderer({ map });
@@ -160,7 +201,7 @@ function calculateRoute() {
                     <p>Distancia: ${distance.toFixed(2)} km</p>
                     <p>Tiempo estimado: ${duration.toFixed(0)} minutos</p>
                     <p>Costo estimado: $${estimate.toFixed(2)}</p>
-                    <p id= enlace-mapa><a target="_blank" href="${googleMapsUrl}">Ver ruta en Google Maps</a></p>
+                    <p id= enlace-mapa><a target="_blank" href="">${googleMapsUrl}</a></p>
                 `;
             } else {
                 alert("No se pudo calcular la ruta. Intenta nuevamente.");
