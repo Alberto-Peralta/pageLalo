@@ -191,19 +191,20 @@ function calculateRoute() {
                 const estimate = baseFare + distance * costPerKm + duration * costPerMinute;
                 const googleMapsUrl = `https://www.google.com/maps/dir/?api=1&origin=${origin.lat()},${origin.lng()}&destination=${destination.lat()},${destination.lng()}`;
 
-
-                const whatsappLink = `https://api.whatsapp.com/send?phone=+521234567890&text=${encodeURIComponent(message)}`;
-
-
-
                 document.getElementById("detalle-costos").innerHTML = `
                     <p>Tipo de servicio: Estándar</p>
                     <p>Distancia: ${distance.toFixed(2)} km</p>
                     <p>Tiempo estimado: ${duration.toFixed(0)} minutos</p>
                     <p>Costo estimado: $${estimate.toFixed(2)}</p>
-                    <p id="enlace-mapa"><a target="_blank" href="${googleMapsUrl}">${googleMapsUrl}</a></p>
-                `;
-            } else {
+                    <p id="enlace-mapa"><a target="_blank" href="${googleMapsUrl}">${googleMapsUrl}</a></p>`;
+
+                    // Crear el enlace para WhatsApp
+                const whatsappLink = `https://api.whatsapp.com/send?phone=+5216393992678&text=${encodeURIComponent(message)}`;
+
+                // Abrir WhatsApp con el mensaje
+                window.open(whatsappLink, '_blank');
+            }
+              else {
                 alert("No se pudo calcular la ruta. Intenta nuevamente.");
             }
         }
