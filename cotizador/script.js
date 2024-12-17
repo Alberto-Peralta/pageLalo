@@ -62,8 +62,11 @@ function initMap() {
                 });
 
                 directionsService = new google.maps.DirectionsService();
-                directionsRenderer = new google.maps.DirectionsRenderer({ map });
-
+                directionsRenderer = new google.maps.DirectionsRenderer({ 
+                    map: map, 
+                    suppressMarkers: true // Evita que se creen los marcadores A y B
+                });
+                
                 const originInput = document.getElementById("origen");
                 const destinationInput = document.getElementById("destino");
 
