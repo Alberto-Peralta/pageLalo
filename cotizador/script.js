@@ -50,6 +50,7 @@ function initMap() {
                     draggable: true,
                     label: "O",
                     title: "Origen (arrástrame)",
+                    animation: google.maps.Animation.DROP, // Animación de caída
                     icon: {
                         url: "../icons/icons8-marcador-50.png", // Reemplaza esta URL con la del ícono personalizado
                         scaledSize: new google.maps.Size(50, 50), // Ajusta el tamaño del ícono
@@ -67,6 +68,8 @@ function initMap() {
                     draggable: true,
                     label: "D",
                     title: "Destino (arrástrame)",
+                    animation: google.maps.Animation.DROP, // Animación de caída
+
                     icon: {
                         url: "../icons/icons8-marcador-50.png", // Reemplaza esta URL con la del ícono personalizado
                         scaledSize: new google.maps.Size(50, 50), // Ajusta el tamaño del ícono
@@ -183,8 +186,8 @@ function calculateRoute() {
                 const duration = routeLeg.duration.value / 60;
 
                 const baseFare = 35;
-                const costPerKm = 7;
-                const costPerMinute = 3;
+                const costPerKm = 5.25;
+                const costPerMinute = 2;
                 const estimate = baseFare + distance * costPerKm + duration * costPerMinute;
                 const googleMapsUrl = `https://www.google.com/maps/dir/?api=1&origin=${origin.lat()},${origin.lng()}&destination=${destination.lat()},${destination.lng()}`;
 
