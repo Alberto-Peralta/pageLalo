@@ -12,34 +12,15 @@ function initMap() {
         return;
     }
 
-    const map = new google.maps.Map(mapElement, {
-        center: userLocation,
-        zoom: 14,
-        gestureHandling: "auto",
-        mapTypeControlOptions: {
-            mapTypeIds: ["roadmap", "satellite", "hybrid", "terrain", "styled_map"],
-        },
-    });
-    
-    // Estilo similar al de Uber
-    const uberStyle = [
-        { elementType: "geometry", stylers: [{ color: "#212121" }] }, // Fondo oscuro
-        { elementType: "labels.icon", stylers: [{ visibility: "off" }] }, // Sin íconos de etiquetas
-        { elementType: "labels.text.fill", stylers: [{ color: "#757575" }] }, // Texto gris
-        { elementType: "labels.text.stroke", stylers: [{ color: "#212121" }] }, // Fondo oscuro para el texto
-        { featureType: "administrative.locality", elementType: "labels.text.fill", stylers: [{ color: "#9e9e9e" }] }, // Localidades en gris claro
-        { featureType: "poi", elementType: "geometry", stylers: [{ color: "#eeeeee" }] }, // Puntos de interés en gris claro
-        { featureType: "road", elementType: "geometry", stylers: [{ color: "#616161" }] }, // Carreteras en gris
-        { featureType: "road.local", elementType: "geometry", stylers: [{ color: "#9e9e9e" }] }, // Carreteras locales en gris claro
-        { featureType: "transit.line", elementType: "geometry", stylers: [{ color: "#757575" }] }, // Líneas de transporte en gris
-        { featureType: "transit.station", elementType: "geometry", stylers: [{ color: "#616161" }] }, // Estaciones en gris
-        { featureType: "water", elementType: "geometry", stylers: [{ color: "#000000" }] }, // Agua en negro
-    ];
-    
-    const styledMapType = new google.maps.StyledMapType(uberStyle, { name: "Uber Style" });
-    map.mapTypes.set("styled_map", styledMapType);
-    map.setMapTypeId("styled_map");
-    
+    const styledMapType = new google.maps.StyledMapType(
+        [
+            { elementType: "geometry", stylers: [{ color: "#ebe3cd" }] },
+            { elementType: "labels.text.fill", stylers: [{ color: "#523735" }] },
+            { elementType: "labels.text.stroke", stylers: [{ color: "#f5f1e6" }] },
+            { featureType: "road", elementType: "geometry", stylers: [{ color: "#f5f1e6" }] },
+        ],
+        { name: "Lalo Peralta Map" }
+    );
 
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(
@@ -67,7 +48,7 @@ function initMap() {
                     position: userLocation,
                     map,
                     draggable: true,
-                   
+                    animation: google.maps.Animation.DROP, // Animación de caída
                     label: "O",
                     title: "Origen (arrástrame)",
                     icon: {
@@ -85,7 +66,7 @@ function initMap() {
                     },
                     map,
                     draggable: true,
-                    
+                    animation: google.maps.Animation.DROP, // Animación de rebote
                     label: "D",
                     title: "Destino (arrástrame)",
                     icon: {
