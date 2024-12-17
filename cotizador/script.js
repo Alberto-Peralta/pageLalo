@@ -67,7 +67,7 @@ function initMap() {
                     position: userLocation,
                     map,
                     draggable: true,
-                    animation: google.maps.Animation.DROP, // Animación de caída
+                   
                     label: "O",
                     title: "Origen (arrástrame)",
                     icon: {
@@ -85,7 +85,7 @@ function initMap() {
                     },
                     map,
                     draggable: true,
-                    animation: google.maps.Animation.DROP, // Animación de rebote
+                    
                     label: "D",
                     title: "Destino (arrástrame)",
                     icon: {
