@@ -11,15 +11,7 @@ function initMap() {
         alert("No se encontró el contenedor del mapa.");
         return;
     }
-    const styledMapType = new google.maps.StyledMapType(
-        [
-            { elementType: "geometry", stylers: [{ color: "#ebe3cd" }] },
-            { elementType: "labels.text.fill", stylers: [{ color: "#523735" }] },
-            { elementType: "labels.text.stroke", stylers: [{ color: "#f5f1e6" }] },
-            { featureType: "road", elementType: "geometry", stylers: [{ color: "#f5f1e6" }] },
-        ],
-        { name: "Styled Map" }
-    );
+
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(
             (position) => {
@@ -27,28 +19,30 @@ function initMap() {
                     lat: position.coords.latitude,
                     lng: position.coords.longitude,
                 };
+
                 map = new google.maps.Map(mapElement, {
                     center: userLocation,
                     zoom: 14,
-                    gestureHandling: "auto",
-                    mapTypeControlOptions: {
-                        mapTypeIds: ["roadmap", "satellite", "hybrid", "terrain", "styled_map"],
-                    },
+                    gestureHandling: "cooperative",
                 });
-                map.mapTypes.set("styled_map", styledMapType);
-                map.setMapTypeId("styled_map");
 
-                // Marcadores con iconos personalizados
+                // Crear iconos personalizados
+                const origenIcon = {
+                    url: '../icons/android-chrome-192x192.png', // Reemplaza con la ruta a tu imagen de origen
+                    scaledSize: new google.maps.Size(40, 40),
+                };
+                const destinoIcon = {
+                    url: 'ruta/a/tu/icono/destino.png', // Reemplaza con la ruta a tu imagen de destino
+                    scaledSize: new google.maps.Size(40, 40),
+                };
+
+                // Crear los marcadores
                 origenMarker = new google.maps.Marker({
                     position: userLocation,
                     map,
-                    draggable: true,
-                    label: "O",
+                    draggable: true, // Marcador de origen movible
+                    icon: origenIcon,
                     title: "Origen (arrástrame)",
-                    icon: {
-                        url: "https://maps.google.com/mapfiles/ms/icons/blue-dot.png", // Icono azul
-                        scaledSize: new google.maps.Size(30, 30),
-                    },
                 });
 
                 destinoMarker = new google.maps.Marker({
@@ -57,42 +51,27 @@ function initMap() {
                         lng: userLocation.lng + 0.01,
                     },
                     map,
-                    draggable: true,
-                    label: "D",
+                    draggable: true, // Marcador de destino movible
+                    icon: destinoIcon,
                     title: "Destino (arrástrame)",
-                    icon: {
-                        url: "https://maps.google.com/mapfiles/ms/icons/red-dot.png", // Icono rojo
-                        scaledSize: new google.maps.Size(30, 30),
-                    },
                 });
 
                 directionsService = new google.maps.DirectionsService();
                 directionsRenderer = new google.maps.DirectionsRenderer({ map });
 
-                // Agregar Autocompletado
-                const originInput = document.getElementById("origen");
-                const destinationInput = document.getElementById("destino");
-
-                // Crear instancias de Autocomplete
-                const originAutocomplete = new google.maps.places.Autocomplete(originInput);
-                const destinationAutocomplete = new google.maps.places.Autocomplete(destinationInput);
-
-                // Establecer la ubicación actual como el lugar de referencia para autocompletar
-                const bounds = new google.maps.LatLngBounds();
-                bounds.extend(userLocation);
-                originAutocomplete.setBounds(bounds);
-                destinationAutocomplete.setBounds(bounds);
-
+                // Actualizar la ruta y centrar el mapa al soltar el marcador
                 const updateRouteAndCenter = () => {
                     calculateRoute();
                     const bounds = new google.maps.LatLngBounds();
                     bounds.extend(origenMarker.getPosition());
                     bounds.extend(destinoMarker.getPosition());
                     map.fitBounds(bounds);
-                    updateFormFields();
                 };
+
                 origenMarker.addListener("dragend", updateRouteAndCenter);
                 destinoMarker.addListener("dragend", updateRouteAndCenter);
+
+                // Inicializar la ruta por defecto
                 updateRouteAndCenter();
             },
             () => {
@@ -103,6 +82,31 @@ function initMap() {
         alert("La geolocalización no es soportada por tu navegador.");
     }
 }
+
+function calculateRoute() {
+    const origin = origenMarker.getPosition();
+    const destination = destinoMarker.getPosition();
+    if (!origin || !destination) {
+        alert("Por favor arrastra los marcadores al origen y destino.");
+        return;
+    }
+    directionsService.route(
+        {
+            origin,
+            destination,
+            travelMode: google.maps.TravelMode.DRIVING,
+        },
+        (response, status) => {
+            if (status === "OK") {
+                directionsRenderer.setDirections(response);
+            } else {
+                alert("No se pudo calcular la ruta. Intenta nuevamente.");
+            }
+        }
+    );
+}
+
+document.addEventListener("DOMContentLoaded", initMap);
 
 function updateFormFields() {
     const originInput = document.getElementById("origen");
