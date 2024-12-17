@@ -49,7 +49,7 @@ function initMap() {
                     label: "",
                     title: "Origen (arrástrame)",
                     icon: {
-                        url: "https://your-icon-url.com/origen-icon.png", // Reemplaza esta URL con la del ícono personalizado
+                        url: "../icons/icons8-árbol-fuente-48.png", // Reemplaza esta URL con la del ícono personalizado
                         scaledSize: new google.maps.Size(50, 50), // Ajusta el tamaño del ícono
                         origin: new google.maps.Point(0, 0),
                         anchor: new google.maps.Point(25, 50), // Centra el ícono
@@ -66,7 +66,7 @@ function initMap() {
                     label: "",
                     title: "Destino (arrástrame)",
                     icon: {
-                        url: "https://your-icon-url.com/destino-icon.png", // Reemplaza esta URL con la del ícono personalizado
+                        url: "../icons/icons8-sourcetree-32.png", // Reemplaza esta URL con la del ícono personalizado
                         scaledSize: new google.maps.Size(50, 50), // Ajusta el tamaño del ícono
                         origin: new google.maps.Point(0, 0),
                         anchor: new google.maps.Point(25, 50), // Centra el ícono
@@ -191,7 +191,7 @@ function calculateRoute() {
                     <p>Distancia: ${distance.toFixed(2)} km</p>
                     <p>Tiempo estimado: ${duration.toFixed(0)} minutos</p>
                     <p>Costo estimado: $${estimate.toFixed(2)}</p>
-                    <p id="enlace-mapa"><a target="_blank" href="${googleMapsUrl}">Ver ruta en Google Maps</a></p>
+                    <p id="enlace-mapa"><a target="_blank" href="${googleMapsUrl}">${googleMapsUrl}</a></p>
                 `;
             } else {
                 alert("No se pudo calcular la ruta. Intenta nuevamente.");
