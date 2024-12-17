@@ -46,10 +46,16 @@ function initMap() {
                     position: userLocation,
                     map,
                     draggable: true,
-                    label: "O",
+                    label: "",
                     title: "Origen (arrástrame)",
+                    icon: {
+                        url: "https://your-icon-url.com/origen-icon.png", // Reemplaza esta URL con la del ícono personalizado
+                        scaledSize: new google.maps.Size(50, 50), // Ajusta el tamaño del ícono
+                        origin: new google.maps.Point(0, 0),
+                        anchor: new google.maps.Point(25, 50), // Centra el ícono
+                    },
                 });
-
+                
                 destinoMarker = new google.maps.Marker({
                     position: {
                         lat: userLocation.lat + 0.01,
@@ -57,9 +63,16 @@ function initMap() {
                     },
                     map,
                     draggable: true,
-                    label: "D",
+                    label: "",
                     title: "Destino (arrástrame)",
-                });
+                    icon: {
+                        url: "https://your-icon-url.com/destino-icon.png", // Reemplaza esta URL con la del ícono personalizado
+                        scaledSize: new google.maps.Size(50, 50), // Ajusta el tamaño del ícono
+                        origin: new google.maps.Point(0, 0),
+                        anchor: new google.maps.Point(25, 50), // Centra el ícono
+                    },
+                });           
+
 
                 directionsService = new google.maps.DirectionsService();
                 directionsRenderer = new google.maps.DirectionsRenderer({ 
