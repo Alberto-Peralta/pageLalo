@@ -4,6 +4,10 @@ let destinoMarker;
 let directionsService;
 let directionsRenderer;
 let userLocation;
+let viajeIniciado = false;
+let inicioViaje, finViaje;
+let locationInterval; // Variable para almacenar el intervalo de geolocalización
+let carMarker;  // Marcador para el automóvil
 
 function initMap() {
     const mapElement = document.getElementById("map");
@@ -11,7 +15,15 @@ function initMap() {
         alert("No se encontró el contenedor del mapa.");
         return;
     }
-
+    const styledMapType = new google.maps.StyledMapType(
+        [
+            { elementType: "geometry", stylers: [{ color: "#ebe3cd" }] },
+            { elementType: "labels.text.fill", stylers: [{ color: "#523735" }] },
+            { elementType: "labels.text.stroke", stylers: [{ color: "#f5f1e6" }] },
+            { featureType: "road", elementType: "geometry", stylers: [{ color: "#f5f1e6" }] },
+        ],
+        { name: "Styled Map" }
+    );
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(
             (position) => {
@@ -19,59 +31,60 @@ function initMap() {
                     lat: position.coords.latitude,
                     lng: position.coords.longitude,
                 };
-
                 map = new google.maps.Map(mapElement, {
                     center: userLocation,
                     zoom: 14,
-                    gestureHandling: "cooperative",
+                    gestureHandling: "auto",
+                    mapTypeControlOptions: {
+                        mapTypeIds: ["roadmap", "satellite", "hybrid", "terrain", "styled_map"],
+                    },
                 });
-
-                // Crear iconos personalizados
-                const origenIcon = {
-                    url: '../icons/android-chrome-192x192.png', // Reemplaza con la ruta a tu imagen de origen
-                    scaledSize: new google.maps.Size(40, 40),
-                };
-                const destinoIcon = {
-                    url: 'ruta/a/tu/icono/destino.png', // Reemplaza con la ruta a tu imagen de destino
-                    scaledSize: new google.maps.Size(40, 40),
-                };
-
-                // Crear los marcadores
+                map.mapTypes.set("styled_map", styledMapType);
+                map.setMapTypeId("styled_map");
                 origenMarker = new google.maps.Marker({
                     position: userLocation,
                     map,
-                    draggable: true, // Marcador de origen movible
-                    icon: origenIcon,
+                    draggable: true,
+                    label: "O",
                     title: "Origen (arrástrame)",
                 });
-
                 destinoMarker = new google.maps.Marker({
                     position: {
                         lat: userLocation.lat + 0.01,
                         lng: userLocation.lng + 0.01,
                     },
                     map,
-                    draggable: true, // Marcador de destino movible
-                    icon: destinoIcon,
+                    draggable: true,
+                    label: "D",
                     title: "Destino (arrástrame)",
                 });
-
                 directionsService = new google.maps.DirectionsService();
                 directionsRenderer = new google.maps.DirectionsRenderer({ map });
 
-                // Actualizar la ruta y centrar el mapa al soltar el marcador
+                // Agregar Autocompletado
+                const originInput = document.getElementById("origen");
+                const destinationInput = document.getElementById("destino");
+                
+                // Crear instancias de Autocomplete
+                const originAutocomplete = new google.maps.places.Autocomplete(originInput);
+                const destinationAutocomplete = new google.maps.places.Autocomplete(destinationInput);
+                
+                // Establecer la ubicación actual como el lugar de referencia para autocompletar
+                const bounds = new google.maps.LatLngBounds();
+                bounds.extend(userLocation);
+                originAutocomplete.setBounds(bounds);
+                destinationAutocomplete.setBounds(bounds);
+
                 const updateRouteAndCenter = () => {
                     calculateRoute();
                     const bounds = new google.maps.LatLngBounds();
                     bounds.extend(origenMarker.getPosition());
                     bounds.extend(destinoMarker.getPosition());
                     map.fitBounds(bounds);
+                    updateFormFields();
                 };
-
                 origenMarker.addListener("dragend", updateRouteAndCenter);
                 destinoMarker.addListener("dragend", updateRouteAndCenter);
-
-                // Inicializar la ruta por defecto
                 updateRouteAndCenter();
             },
             () => {
@@ -82,31 +95,6 @@ function initMap() {
         alert("La geolocalización no es soportada por tu navegador.");
     }
 }
-
-function calculateRoute() {
-    const origin = origenMarker.getPosition();
-    const destination = destinoMarker.getPosition();
-    if (!origin || !destination) {
-        alert("Por favor arrastra los marcadores al origen y destino.");
-        return;
-    }
-    directionsService.route(
-        {
-            origin,
-            destination,
-            travelMode: google.maps.TravelMode.DRIVING,
-        },
-        (response, status) => {
-            if (status === "OK") {
-                directionsRenderer.setDirections(response);
-            } else {
-                alert("No se pudo calcular la ruta. Intenta nuevamente.");
-            }
-        }
-    );
-}
-
-document.addEventListener("DOMContentLoaded", initMap);
 
 function updateFormFields() {
     const originInput = document.getElementById("origen");
@@ -157,7 +145,7 @@ function calculateRoute() {
                     <p>Tiempo estimado: ${duration.toFixed(0)} minutos</p>
                     <p>Costo estimado: $${estimate.toFixed(2)}</p>
     
-                    <p id="enlace-mapa"><a target="_blank" href="${googleMapsUrl}">Ver ruta en Google Maps</a></p>
+                    <p id= enlace-mapa<a target="_blank">${googleMapsUrl}</a></p>
                 `;
             } else {
                 alert("No se pudo calcular la ruta. Intenta nuevamente.");
@@ -171,7 +159,7 @@ document.addEventListener("DOMContentLoaded", initMap);
 function enviarDatosPorWhatsApp() {
     const detalleCostos = document.getElementById("detalle-costos").innerText;
     const mensaje = `Hola, quiero solicitar un viaje con los siguientes detalles:\n${detalleCostos}`;
-    const url = `https://wa.me/5216393992678?text=${encodeURIComponent(mensaje)}`;
+    const url = `https://wa.me/5216393992678?text=${encodeURIComponent(mensaje)}`;    
     window.open(url, '_blank');
 }
 
