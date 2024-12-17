@@ -191,6 +191,11 @@ function calculateRoute() {
                 const estimate = baseFare + distance * costPerKm + duration * costPerMinute;
                 const googleMapsUrl = `https://www.google.com/maps/dir/?api=1&origin=${origin.lat()},${origin.lng()}&destination=${destination.lat()},${destination.lng()}`;
 
+
+                const whatsappLink = `https://api.whatsapp.com/send?phone=+521234567890&text=${encodeURIComponent(message)}`;
+
+
+
                 document.getElementById("detalle-costos").innerHTML = `
                     <p>Tipo de servicio: Estándar</p>
                     <p>Distancia: ${distance.toFixed(2)} km</p>
