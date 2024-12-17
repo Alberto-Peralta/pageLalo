@@ -44,53 +44,38 @@ function initMap() {
 
 
                 
-                // Crear marcador de origen
-origenMarker = new google.maps.Marker({
-    position: userLocation,
-    map,
-    draggable: true,
-    label: "",
-    title: "Origen (arrástrame)",
-    icon: {
-        url: "https://img.icons8.com/ios/50/0000FF/leaf.png", // Nuevo ícono amigable
-        scaledSize: new google.maps.Size(60, 60), // Tamaño ajustado
-        origin: new google.maps.Point(0, 0),
-        anchor: new google.maps.Point(30, 60), // Centrado del ícono
-        // Se agrega sombra para darle un toque más suave
-        shadow: {
-            url: "https://img.icons8.com/ios/50/000000/leaf.png", // Sombra de color más oscuro
-            scaledSize: new google.maps.Size(70, 70), // Sombra un poco más grande
-            origin: new google.maps.Point(0, 0),
-            anchor: new google.maps.Point(35, 70), // Centrado de la sombra
-        },
-    },
-});
-
-// Crear marcador de destino
-destinoMarker = new google.maps.Marker({
-    position: {
-        lat: userLocation.lat + 0.01,
-        lng: userLocation.lng + 0.01,
-    },
-    map,
-    draggable: true,
-    label: "",
-    title: "Destino (arrástrame)",
-    icon: {
-        url: "https://img.icons8.com/ios/50/0000FF/earth.png", // Nuevo ícono amigable
-        scaledSize: new google.maps.Size(60, 60), // Tamaño ajustado
-        origin: new google.maps.Point(0, 0),
-        anchor: new google.maps.Point(30, 60), // Centrado del ícono
-        // Sombra para hacer el marcador más "pachón"
-        shadow: {
-            url: "https://img.icons8.com/ios/50/000000/earth.png", // Sombra más oscura
-            scaledSize: new google.maps.Size(70, 70),
-            origin: new google.maps.Point(0, 0),
-            anchor: new google.maps.Point(35, 70),
-        },
-    },
-});
-           
+                origenMarker = new google.maps.Marker({
+                    position: userLocation,
+                    map,
+                    draggable: true,
+                    animation: google.maps.Animation.BOUNCE, // Animación de rebote
+                    label: "O",
+                    title: "Origen (arrástrame)",
+                    icon: {
+                        url: "../icons/icons8-marcador-50.png", // Reemplaza esta URL con la del ícono personalizado
+                        scaledSize: new google.maps.Size(50, 50), // Ajusta el tamaño del ícono
+                        origin: new google.maps.Point(0, 0),
+                        anchor: new google.maps.Point(25, 50), // Centra el ícono
+                    },
+                });
+                
+                destinoMarker = new google.maps.Marker({
+                    position: {
+                        lat: userLocation.lat + 0.01,
+                        lng: userLocation.lng + 0.01,
+                    },
+                    map,
+                    draggable: true,
+                    animation: google.maps.Animation.BOUNCE, // Animación de rebote
+                    label: "D",
+                    title: "Destino (arrástrame)",
+                    icon: {
+                        url: "../icons/icons8-marcador-50.png", // Reemplaza esta URL con la del ícono personalizado
+                        scaledSize: new google.maps.Size(50, 50), // Ajusta el tamaño del ícono
+                        origin: new google.maps.Point(0, 0),
+                        anchor: new google.maps.Point(25, 50), // Centra el ícono
+                    },
+                });           
 
 
                 directionsService = new google.maps.DirectionsService();
