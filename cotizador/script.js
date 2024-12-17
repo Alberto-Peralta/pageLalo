@@ -38,19 +38,14 @@ function initMap() {
                 map.mapTypes.set("styled_map", styledMapType);
                 map.setMapTypeId("styled_map");
 
-                // Marcadores con iconos personalizados
+                // Crear marcadores
                 origenMarker = new google.maps.Marker({
                     position: userLocation,
                     map,
                     draggable: true,
                     label: "O",
                     title: "Origen (arrástrame)",
-                    icon: {
-                        url: "https://maps.google.com/mapfiles/ms/icons/blue-dot.png", // Icono azul
-                        scaledSize: new google.maps.Size(30, 30),
-                    },
                 });
-
                 destinoMarker = new google.maps.Marker({
                     position: {
                         lat: userLocation.lat + 0.01,
@@ -60,10 +55,6 @@ function initMap() {
                     draggable: true,
                     label: "D",
                     title: "Destino (arrástrame)",
-                    icon: {
-                        url: "https://maps.google.com/mapfiles/ms/icons/red-dot.png", // Icono rojo
-                        scaledSize: new google.maps.Size(30, 30),
-                    },
                 });
 
                 directionsService = new google.maps.DirectionsService();
@@ -72,16 +63,33 @@ function initMap() {
                 // Agregar Autocompletado
                 const originInput = document.getElementById("origen");
                 const destinationInput = document.getElementById("destino");
-
+                
                 // Crear instancias de Autocomplete
                 const originAutocomplete = new google.maps.places.Autocomplete(originInput);
                 const destinationAutocomplete = new google.maps.places.Autocomplete(destinationInput);
-
+                
                 // Establecer la ubicación actual como el lugar de referencia para autocompletar
                 const bounds = new google.maps.LatLngBounds();
                 bounds.extend(userLocation);
                 originAutocomplete.setBounds(bounds);
                 destinationAutocomplete.setBounds(bounds);
+
+                // Actualizar la ruta y los marcadores cuando se selecciona una dirección
+                originAutocomplete.addListener("place_changed", () => {
+                    const place = originAutocomplete.getPlace();
+                    if (place.geometry) {
+                        origenMarker.setPosition(place.geometry.location);
+                        calculateRoute();
+                    }
+                });
+
+                destinationAutocomplete.addListener("place_changed", () => {
+                    const place = destinationAutocomplete.getPlace();
+                    if (place.geometry) {
+                        destinoMarker.setPosition(place.geometry.location);
+                        calculateRoute();
+                    }
+                });
 
                 const updateRouteAndCenter = () => {
                     calculateRoute();
@@ -152,8 +160,7 @@ function calculateRoute() {
                     <p>Distancia: ${distance.toFixed(2)} km</p>
                     <p>Tiempo estimado: ${duration.toFixed(0)} minutos</p>
                     <p>Costo estimado: $${estimate.toFixed(2)}</p>
-    
-                    <p id="enlace-mapa"><a target="_blank" href="${googleMapsUrl}">Ver ruta en Google Maps</a></p>
+                    <p id= enlace-mapa><a target="_blank" href="${googleMapsUrl}">Ver ruta en Google Maps</a></p>
                 `;
             } else {
                 alert("No se pudo calcular la ruta. Intenta nuevamente.");
@@ -167,7 +174,7 @@ document.addEventListener("DOMContentLoaded", initMap);
 function enviarDatosPorWhatsApp() {
     const detalleCostos = document.getElementById("detalle-costos").innerText;
     const mensaje = `Hola, quiero solicitar un viaje con los siguientes detalles:\n${detalleCostos}`;
-    const url = `https://wa.me/5216393992678?text=${encodeURIComponent(mensaje)}`;
+    const url = `https://wa.me/5216393992678?text=${encodeURIComponent(mensaje)}`;    
     window.open(url, '_blank');
 }
 
