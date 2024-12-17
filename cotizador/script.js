@@ -70,8 +70,20 @@ function initMap() {
                 const originInput = document.getElementById("origen");
                 const destinationInput = document.getElementById("destino");
 
-                const originAutocomplete = new google.maps.places.Autocomplete(originInput);
-                const destinationAutocomplete = new google.maps.places.Autocomplete(destinationInput);
+                const originAutocomplete = new google.maps.places.Autocomplete(originInput, {
+                    bounds: new google.maps.LatLngBounds(userLocation), // Limita la búsqueda
+                    strictBounds: true, // Fuerza la búsqueda solo dentro de los límites
+                    fields: ["place_id", "geometry", "name", "formatted_address"], // Obtén información útil del lugar
+                    types: ["establishment", "geocode"], // Puedes ajustar los tipos (por ejemplo, 'address' para solo direcciones)
+                });
+                
+                const destinationAutocomplete = new google.maps.places.Autocomplete(destinationInput, {
+                    bounds: new google.maps.LatLngBounds(userLocation), 
+                    strictBounds: true, 
+                    fields: ["place_id", "geometry", "name", "formatted_address"],
+                    types: ["establishment", "geocode"],
+                });
+                
 
                 originAutocomplete.addListener("place_changed", () => {
                     const place = originAutocomplete.getPlace();
