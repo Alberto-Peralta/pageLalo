@@ -10,22 +10,25 @@
 <body>
     <header>
         <h1>Cotizador de Viajes</h1>
-
-        
     </header>
+
     <div class="container">
         <div id="inputs">
             <label for="origen">Origen:</label>
             <input id="origen" class="autocomplete" type="text" placeholder="Escribe tu origen" />
+            
             <label for="destino">Destino:</label>
             <input id="destino" class="autocomplete" type="text" placeholder="Escribe tu destino" />
-        <label for="servicio">Tipo de Servicio:</label>
+            
+            <label for="servicio">Tipo de Servicio:</label>
             <select id="servicio">
                 <option value="economico">Económico</option>
                 <option value="estandar">Estándar</option>
                 <option value="premium">Premium</option>
             </select>  
+
             <button id="cotizar" class="button">Cotizar</button>
+            
             <div class="button-container">
                 <button id="iniciar-viaje" class="button">Iniciar Viaje</button>
                 <button id="finalizar-viaje" class="button" disabled>Finalizar Viaje</button>
@@ -34,16 +37,18 @@
        
         <!-- Contenedor del mapa -->
         <div id="map"></div>
+        
         <div id="costos">
             <h2>Costo Estimado</h2>
             <p id="detalle-costos"></p>
         </div>
 
-        <div class="container">
-             <a href="../index.html" class="button">Ir a la Página Principal</a>
+        <div class="button-container">
+            <a href="../index.html" class="button">Ir a la Página Principal</a>
+            <button class="button" id="solicitar-viaje">Solicitar Viaje</button>
         </div>
-             <div class="container"><button class="button"  id="solicitarViajeBtn">Solicitar Viaje</button></div>
-        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
