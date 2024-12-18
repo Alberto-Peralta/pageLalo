@@ -14,24 +14,13 @@ function initMap() {
 
     const styledMapType = new google.maps.StyledMapType(
         [
-          { elementType: "geometry", stylers: [{ color: "#212121" }] },
-          { elementType: "labels.icon", stylers: [{ visibility: "off" }] },
-          { elementType: "labels.text.fill", stylers: [{ color: "#757575" }] },
-          { elementType: "labels.text.stroke", stylers: [{ color: "#212121" }] },
-          { featureType: "administrative", elementType: "geometry", stylers: [{ color: "#757575" }] },
-          { featureType: "poi", elementType: "geometry", stylers: [{ color: "#757575" }] },
-          { featureType: "road", elementType: "geometry", stylers: [{ color: "#616161" }] },
-          { featureType: "road", elementType: "geometry.stroke", stylers: [{ color: "#212121" }] },
-          { featureType: "road.highway", elementType: "geometry", stylers: [{ color: "#757575" }] },
-          { featureType: "road.highway", elementType: "geometry.stroke", stylers: [{ color: "#212121" }] },
-          { featureType: "water", elementType: "geometry", stylers: [{ color: "#000000" }] }
+            { elementType: "geometry", stylers: [{ color: "#ebe3cd" }] },
+            { elementType: "labels.text.fill", stylers: [{ color: "#523735" }] },
+            { elementType: "labels.text.stroke", stylers: [{ color: "#f5f1e6" }] },
+            { featureType: "road", elementType: "geometry", stylers: [{ color: "#f5f1e6" }] },
         ],
-        { name: "Uber Styled Map" }
-      );
-      
-      map.mapTypes.set("styled_map", styledMapType);
-      map.setMapTypeId("styled_map");
-      
+        { name: "Lalo Peralta Map" }
+    );
 
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(
