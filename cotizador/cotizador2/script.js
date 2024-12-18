@@ -175,18 +175,4 @@ function finalizarViaje() {
     
     document.getElementById("detalle-costos").innerText = `Distancia: ${totalKm.toFixed(2)} km, Duración: ${totalTime} min, Costo: $${totalCost.toFixed(2)}`;
     carMarker.setMap(null);
-    
-    document.getElementById("finalizar-viaje").disabled = true;
-    document.getElementById("iniciar-viaje").disabled = false;
-}
-
-function calculateCost(distance, duration) {
-    const baseFare = 35;
-    const costPerKm = 5;
-    const costPerMinute = 2;
-    return baseFare + (distance * costPerKm) + (duration * costPerMinute);
-}
-
-function createCarIcon() {
-    return { url: carIconUrl, scaledSize: new google.maps.Size(30, 30) };
-}
+} 
