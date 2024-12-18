@@ -2,46 +2,101 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cotizador de Viajes</title>
+
+    <!-- Archivo de estilos CSS -->
     <link rel="stylesheet" href="styles.css" />
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcrFJEWdAGlktaEVMoPwxXNvzReSSYA3w&libraries=places&callback=initMap" async defer></script>
+
+    <!-- Google Maps API -->
+    <script 
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcrFJEWdAGlktaEVMoPwxXNvzReSSYA3w&libraries=places&callback=initMap" 
+        async 
+        defer
+    ></script>
 </head>
 <body>
+    <!-- Encabezado principal -->
     <header>
         <h1>Cotizador de Viajes</h1>
     </header>
 
+    <!-- Contenedor principal -->
     <div class="container">
+        <!-- Formulario de entrada de origen y destino -->
         <div id="inputs">
             <label for="origen">Origen:</label>
-            <input id="origen" class="autocomplete" type="text" placeholder="Escribe tu origen" />
+            <input 
+                id="origen" 
+                class="autocomplete" 
+                type="text" 
+                placeholder="Escribe tu origen" 
+                aria-label="Campo de entrada para el origen"
+                required 
+            />
             
             <label for="destino">Destino:</label>
-            <input id="destino" class="autocomplete" type="text" placeholder="Escribe tu destino" />
-            
-        
-            
+            <input 
+                id="destino" 
+                class="autocomplete" 
+                type="text" 
+                placeholder="Escribe tu destino" 
+                aria-label="Campo de entrada para el destino"
+                required 
+            />
+
+            <!-- Botones de control de viaje -->
             <div class="button-container">
-                <button id="iniciar-viaje" class="button">Iniciar Viaje</button>
-                <button id="finalizar-viaje" class="button" disabled>Finalizar Viaje</button>
+                <button 
+                    id="iniciar-viaje" 
+                    class="button" 
+                    aria-label="Iniciar viaje"
+                >
+                    Iniciar Viaje
+                </button>
+                
+                <button 
+                    id="finalizar-viaje" 
+                    class="button" 
+                    aria-label="Finalizar viaje"
+                    disabled
+                >
+                    Finalizar Viaje
+                </button>
             </div>
         </div> 
-       
+
         <!-- Contenedor del mapa -->
         <div id="map"></div>
         
+        <!-- Sección de costos -->
         <div id="costos">
             <h2>Costo Estimado</h2>
-            <p id="detalle-costos"></p>
+            <p id="detalle-costos" aria-live="polite"></p>
         </div>
 
+        <!-- Botones de acción -->
         <div class="button-container">
-            <a href="../index.html" class="button">Ir a la Página Principal</a>
-            <button class="button" id="solicitar-viaje">Solicitar Viaje</button>
+            <a 
+                href="../index.html" 
+                class="button" 
+                aria-label="Ir a la página principal"
+            >
+                Ir a la Página Principal
+            </a>
+            
+            <button 
+                class="button" 
+                id="solicitar-viaje" 
+                aria-label="Solicitar un viaje"
+            >
+                Solicitar Viaje
+            </button>
         </div>
     </div>
 
+    <!-- Archivo de scripts JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>

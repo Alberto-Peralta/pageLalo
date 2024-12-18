@@ -29,7 +29,9 @@ function initMap() {
             directionsRenderer = new google.maps.DirectionsRenderer({ map });
             
             startTrackingVehicle();
-        }, () => alert("No se pudo obtener tu ubicación."));
+        }, (error) => {
+            alert("No se pudo obtener tu ubicación. Código de error: " + error.code);
+        });
     } else {
         alert("La geolocalización no es soportada por tu navegador.");
     }
@@ -64,6 +66,11 @@ function updateVehiclePosition(position) {
     }
     
     routePath.push(newPosition);
+    
+    // Limitar la cantidad de puntos en la ruta
+    if (routePath.length > 100) {
+        routePath.shift(); // Elimina el primer punto para evitar acumular demasiados
+    }
 }
 
 function iniciarViaje() {
