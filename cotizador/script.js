@@ -198,12 +198,22 @@ function calculateRoute() {
                     <p>Costo estimado: $${estimate.toFixed(2)}</p>
                     <p id="enlace-mapa"><a target="_blank" href="${googleMapsUrl}">${googleMapsUrl}</a></p>`;
 
-                    // Crear el enlace para WhatsApp
-                const whatsappLink = `https://api.whatsapp.com/send?phone=+5216393992678&text=${encodeURIComponent(message)}`;
 
-                // Abrir WhatsApp con el mensaje
+
+                    // Obtener el contenido de 'detalle-costos'
+                const detalleCostos = document.getElementById("detalle-costos").innerText;
+
+                    // Formatear el texto para WhatsApp (reemplazar saltos de línea por %0A)
+                const mensajeWhatsApp = detalleCostos.replace(/\n/g, '%0A');
+
+                    // Crear el enlace para WhatsApp
+                const whatsappLink = `https://api.whatsapp.com/send?phone=+5216393992678&text=${encodeURIComponent(mensajeWhatsApp)}`;
+
+                    // Abrir WhatsApp con el mensaje
                 window.open(whatsappLink, '_blank');
             }
+
+            
               else {
                 alert("No se pudo calcular la ruta. Intenta nuevamente.");
             }
