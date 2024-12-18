@@ -1,46 +1,30 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cotizador de Viajes</title>
-    <link rel="stylesheet" href="styles.css" />
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcrFJEWdAGlktaEVMoPwxXNvzReSSYA3w&libraries=places&callback=initMap" async defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Big Drivers - Servicio de Transporte</title>
 </head>
 <body>
-    <header>
-        <h1>Cotizador de Viajes</h1>
-
-        
-    </header>
     <div class="container">
-        <div id="inputs">
-            <label for="origen">Origen:</label>
-            <input id="origen" class="autocomplete" type="text" placeholder="Escribe tu origen" />
-            <label for="destino">Destino:</label>
-            <input id="destino" class="autocomplete" type="text" placeholder="Escribe tu destino" />
-            <label for="servicio">Tipo de Servicio:</label>
-            <select id="servicio">
-                <option value="economico">Económico</option>
-                <option value="estandar">Estándar</option>
-                <option value="premium">Premium</option>
-            </select>
-            <button id="cotizar" class="button">Cotizar</button>
-            <div class="button-container">
-                <button id="iniciar-viaje" class="button">Iniciar Viaje</button>
-                <button id="finalizar-viaje" class="button" disabled>Finalizar Viaje</button>
+        <header>
+            <h1>Big Drivers</h1>
+            <p>Tu servicio de transporte confiable</p>
+        </header>
+        <div class="flyer">
+            <h2>¡Solicita tu viaje ahora!</h2>
+            <p>Llama o envía un WhatsApp al siguiente número:</p>
+            <div class="contact">
+                <p class="phone-number">639 148 02 97</p>
+                <button id="callButton"><i class="fas fa-phone"></i> Llamar</button>
+                <button id="whatsappButton"><i class="fab fa-whatsapp"></i> Enviar WhatsApp</button>
+                <button id="facebookButton"><i class="fab fa-facebook"></i> Visítanos en Facebook</button>
             </div>
         </div>
-        <div id="costos">
-            <h2>Costo Estimado</h2>
-            <p id="detalle-costos"></p>
-        </div>
-        <!-- Contenedor del mapa -->
-        <div id="map"></div>
-        <div class="container">
-            <a href="../../index.html" class="button">Ir a la Página Principal</a>
-        </div>
     </div>
-    <script src="script2.js"></script>
+
+    <script src="script.js"></script>
 </body>
 </html>
