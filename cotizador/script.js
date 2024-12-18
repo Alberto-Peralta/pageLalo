@@ -191,34 +191,33 @@ function calculateRoute() {
                 const estimate = baseFare + distance * costPerKm + duration * costPerMinute;
                 const googleMapsUrl = `https://www.google.com/maps/dir/?api=1&origin=${origin.lat()},${origin.lng()}&destination=${destination.lat()},${destination.lng()}`;
 
+
+
+
+
+
                 document.getElementById("detalle-costos").innerHTML = `
                     <p>Tipo de servicio: Estándar</p>
                     <p>Distancia: ${distance.toFixed(2)} km</p>
                     <p>Tiempo estimado: ${duration.toFixed(0)} minutos</p>
                     <p>Costo estimado: $${estimate.toFixed(2)}</p>
-                    <p id="enlace-mapa"><a target="_blank" href="${googleMapsUrl}">${googleMapsUrl}</a></p>`;
-
-
-
-                    // Obtener el contenido de 'detalle-costos'
-                const detalleCostos = document.getElementById("detalle-costos").innerText;
-
-                    // Formatear el texto para WhatsApp (reemplazar saltos de línea por %0A)
-                const mensajeWhatsApp = detalleCostos.replace(/\n/g, '%0A');
-
-                    // Crear el enlace para WhatsApp
-                const whatsappLink = `https://api.whatsapp.com/send?phone=+5216393992678&text=${encodeURIComponent(mensajeWhatsApp)}`;
-
-                    // Abrir WhatsApp con el mensaje
-                window.open(whatsappLink, '_blank');
-            }
-
-            
+                    <p id="enlace-mapa"><a target="_blank" href="${googleMapsUrl}">${googleMapsUrl}</a></p>`;            
               else {
                 alert("No se pudo calcular la ruta. Intenta nuevamente.");
             }
         }
     );
 }
+
+
+function enviarWhatsApp() {
+    const detalleCostos = document.getElementById("detalle-costos").innerText; // Toma el contenido de los detalles de costos
+    const mensaje = `Hola, quiero solicitar un viaje con estos detalles:\n\n${detalleCostos}`;
+    const whatsappLink = `https://api.whatsapp.com/send?phone=+5216393992678&text=${encodeURIComponent(mensaje)}`;
+
+    // Abrir WhatsApp con el mensaje
+    window.open(whatsappLink, '_blank');
+}
+
 
 document.addEventListener("DOMContentLoaded", initMap);
