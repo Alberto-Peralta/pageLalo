@@ -58,7 +58,7 @@ origenMarker = new google.maps.Marker({
     title: "Origen (arrástrame)",
     animation: google.maps.Animation.DROP, // Animación de caída
     icon: {
-        url: "../icons/origen-icon.png", // Usa un ícono diferente para origen
+        url: "../icons/icons8-marcador-50.png", // Usa un ícono diferente para origen
         scaledSize: new google.maps.Size(50, 50), // Tamaño del ícono
         origin: new google.maps.Point(0, 0),
         anchor: new google.maps.Point(25, 50), // Ajuste de anclaje
@@ -82,7 +82,7 @@ destinoMarker = new google.maps.Marker({
     title: "Destino (arrástrame)",
     animation: google.maps.Animation.DROP, // Animación de caída
     icon: {
-        url: "../icons/destino-icon.png", // Usa un ícono diferente para destino
+        url: "../icons/icons8-marcador-50.png", // Usa un ícono diferente para destino
         scaledSize: new google.maps.Size(50, 50), // Tamaño del ícono
         origin: new google.maps.Point(0, 0),
         anchor: new google.maps.Point(25, 50), // Ajuste de anclaje
