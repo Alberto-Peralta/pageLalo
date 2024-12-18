@@ -207,7 +207,7 @@ function calculateRoute() {
 
 
 function enviarWhatsApp() {
-    const detalleCostos = document.getElementById("detalle-costos").innerText; // Obtiene el contenido de los detalles de costos
+    const detalleCostos = document.getElementById("solicitarViajeBtn").innerText; // Obtiene el contenido de los detalles de costos
     const mensaje = `Hola, quiero solicitar un viaje con estos detalles:\n\n${detalleCostos}`;
     const whatsappLink = `https://api.whatsapp.com/send?phone=+5216393992678&text=${encodeURIComponent(mensaje)}`;
 
