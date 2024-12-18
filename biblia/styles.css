@@ -4,9 +4,9 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    height: 100vh; /* Asegura que el body ocupe toda la altura de la ventana */
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Asegura que el contenido abarque toda la altura de la pantalla */
 }
 
 /* Header */
@@ -20,29 +20,20 @@ header {
 
 /* Sección principal */
 section {
-    padding: 20px;
     flex-grow: 1; /* Asegura que el contenido se expanda para llenar el espacio disponible */
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: hidden; /* Asegura que no se desborde el iframe */
+    padding: 0;
+    margin: 0;
 }
 
-/* Estilo del botón */
-button {
-    padding: 10px 20px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem; /* Tamaño de fuente adaptable */
-    transition: background-color 0.3s ease; /* Agregar transiciones suaves */
-}
-
-/* Efecto hover para el botón */
-button:hover {
-    background-color: #218838;
+/* iframe */
+iframe {
+    width: 100vw; /* Asegura que el iframe ocupe todo el ancho de la pantalla */
+    height: 100vh; /* Asegura que el iframe ocupe toda la altura de la pantalla */
+    border: none; /* Elimina el borde predeterminado */
 }
 
 /* Enlaces */
@@ -55,57 +46,8 @@ a {
     text-decoration: none;
     border-radius: 5px;
     font-size: 1rem;
-    transition: background-color 0.3s ease;
 }
 
-/* Efecto hover para los enlaces */
 a:hover {
     background-color: #0056b3;
-}
-
-/* Mensaje de carga */
-#loadingMessage {
-    margin-top: 20px;
-    color: #007bff;
-}
-
-/* Estilos responsivos para pantallas más pequeñas */
-@media (max-width: 768px) {
-    header {
-        padding: 15px;
-    }
-
-    section {
-        padding: 10px;
-    }
-
-    button {
-        padding: 8px 16px;
-        font-size: 0.9rem; /* Ajustar el tamaño del botón para pantallas pequeñas */
-    }
-
-    a {
-        padding: 8px 16px;
-        font-size: 0.9rem; /* Ajustar el tamaño del enlace */
-    }
-
-    #loadingMessage {
-        font-size: 0.9rem; /* Ajustar el tamaño del mensaje de carga */
-    }
-}
-
-@media (max-width: 480px) {
-    header {
-        padding: 10px;
-    }
-
-    button {
-        padding: 6px 12px;
-        font-size: 0.8rem; /* Hacer los botones más pequeños en pantallas muy pequeñas */
-    }
-
-    a {
-        padding: 6px 12px;
-        font-size: 0.8rem; /* Hacer los enlaces más pequeños */
-    }
 }
