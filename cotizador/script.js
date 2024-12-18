@@ -206,14 +206,29 @@ function calculateRoute() {
 
 
 
+// Manejador de clic para el botón
+document.getElementById("solicitarViajeBtn").addEventListener("click", enviarWhatsApp);
+
 function enviarWhatsApp() {
-    const detalleCostos = document.getElementById("solicitarViajeBtn").innerText; // Obtiene el contenido de los detalles de costos
+    // Obtener el contenido de los detalles de costos (asegurarse que estén visibles)
+    const detalleCostos = document.getElementById("detalle-costos").innerText;
+
+    // Validar si los detalles están disponibles
+    if (!detalleCostos) {
+        alert("Por favor, calcula la ruta primero.");
+        return;
+    }
+
+    // Generar el mensaje con los detalles
     const mensaje = `Hola, quiero solicitar un viaje con estos detalles:\n\n${detalleCostos}`;
+    
+    // Crear el enlace para WhatsApp
     const whatsappLink = `https://api.whatsapp.com/send?phone=+5216393992678&text=${encodeURIComponent(mensaje)}`;
 
     // Abrir WhatsApp con el mensaje cuando se presiona el botón
     window.open(whatsappLink, '_blank');
 }
+
 
 
 
