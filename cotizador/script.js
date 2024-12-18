@@ -44,39 +44,51 @@ function initMap() {
 
 
                 
-                origenMarker = new google.maps.Marker({
-                    position: userLocation,
-                    map,
-                    draggable: true,
-                    label: "O",
-                    title: "Origen (arrástrame)",
-                    animation: google.maps.Animation.DROP, // Animación de caída
-                    icon: {
-                        url: "../icons/icons8-marcador-50.png", // Reemplaza esta URL con la del ícono personalizado
-                        scaledSize: new google.maps.Size(50, 50), // Ajusta el tamaño del ícono
-                        origin: new google.maps.Point(0, 0),
-                        anchor: new google.maps.Point(25, 50), // Centra el ícono
-                    },
-                });
-                
-                destinoMarker = new google.maps.Marker({
-                    position: {
-                        lat: userLocation.lat + 0.01,
-                        lng: userLocation.lng + 0.01,
-                    },
-                    map,
-                    draggable: true,
-                    label: "D",
-                    title: "Destino (arrástrame)",
-                    animation: google.maps.Animation.DROP, // Animación de caída
+               // Marcador de Origen
+origenMarker = new google.maps.Marker({
+    position: userLocation,
+    map,
+    draggable: true,
+    label: {
+        text: "Origen",
+        color: "#ffffff", // Color del texto
+        fontSize: "14px",  // Tamaño del texto
+        fontWeight: "bold" // Peso del texto
+    },
+    title: "Origen (arrástrame)",
+    animation: google.maps.Animation.DROP, // Animación de caída
+    icon: {
+        url: "../icons/origen-icon.png", // Usa un ícono diferente para origen
+        scaledSize: new google.maps.Size(50, 50), // Tamaño del ícono
+        origin: new google.maps.Point(0, 0),
+        anchor: new google.maps.Point(25, 50), // Ajuste de anclaje
+    },
+});
 
-                    icon: {
-                        url: "../icons/icons8-marcador-50.png", // Reemplaza esta URL con la del ícono personalizado
-                        scaledSize: new google.maps.Size(50, 50), // Ajusta el tamaño del ícono
-                        origin: new google.maps.Point(0, 0),
-                        anchor: new google.maps.Point(25, 50), // Centra el ícono
-                    },
-                });           
+// Marcador de Destino
+destinoMarker = new google.maps.Marker({
+    position: {
+        lat: userLocation.lat + 0.01,
+        lng: userLocation.lng + 0.01,
+    },
+    map,
+    draggable: true,
+    label: {
+        text: "Destino",
+        color: "#ffffff", // Color del texto
+        fontSize: "14px",  // Tamaño del texto
+        fontWeight: "bold" // Peso del texto
+    },
+    title: "Destino (arrástrame)",
+    animation: google.maps.Animation.DROP, // Animación de caída
+    icon: {
+        url: "../icons/destino-icon.png", // Usa un ícono diferente para destino
+        scaledSize: new google.maps.Size(50, 50), // Tamaño del ícono
+        origin: new google.maps.Point(0, 0),
+        anchor: new google.maps.Point(25, 50), // Ajuste de anclaje
+    },
+});
+           
 
 
                 directionsService = new google.maps.DirectionsService();
