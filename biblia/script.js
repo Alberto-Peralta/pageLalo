@@ -1,57 +1,33 @@
-document.addEventListener('DOMContentLoaded', () => {
-    fetch('bible.txt')
-        .then(response => response.text())
-        .then(text => {
-            const bibleChapters = parseBible(text);
-            generateNav(bibleChapters);
+document.addEventListener('DOMContentLoaded', function() {
+    const iframe = document.getElementById('bibleIframe');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
 
-            if (bibleChapters.length > 0) {
-                displayChapter(bibleChapters[0]);
-            }
-        });
+    let currentChapter = 3; // Valor inicial, el capítulo de Juan 3
 
-    function parseBible(text) {
-        const chapters = [];
-        const chapterLines = text.split(/\n/);
-        let chapter = null;
-
-        chapterLines.forEach(line => {
-            const chapterMatch = line.match(/^Capítulo (\d+)/);
-            const verseMatch = line.match(/^(\d+):(\d+) (.+)/);
-
-            if (chapterMatch) {
-                chapter = { number: parseInt(chapterMatch[1], 10), verses: [] };
-                chapters.push(chapter);
-            } else if (verseMatch) {
-                const verse = { number: parseInt(verseMatch[2], 10), text: verseMatch[3] };
-                chapter.verses.push(verse);
-            }
-        });
-
-        return chapters;
+    // Función para actualizar el iframe
+    function updateIframe() {
+        iframe.src = `https://cem.org.mx/biblia/+${currentChapter}&version=RVR1960`;
+        prevBtn.disabled = currentChapter === 1; // Desactivar el botón de "Anterior" si estamos en el primer capítulo
+        nextBtn.disabled = currentChapter === 21; // Desactivar el botón de "Siguiente" si estamos en el último capítulo
     }
 
-    function generateNav(chapters) {
-        const nav = document.getElementById('nav');
-        chapters.forEach(chapter => {
-            const chapterLink = document.createElement('a');
-            chapterLink.href = `#chapter-${chapter.number}`;
-            chapterLink.textContent = `Capítulo ${chapter.number}`;
-            nav.appendChild(chapterLink);
+    // Evento para el botón "Anterior"
+    prevBtn.addEventListener('click', function() {
+        if (currentChapter > 1) {
+            currentChapter--;
+            updateIframe();
+        }
+    });
 
-            chapterLink.addEventListener('click', () => {
-                displayChapter(chapter);
-            });
-        });
-    }
+    // Evento para el botón "Siguiente"
+    nextBtn.addEventListener('click', function() {
+        if (currentChapter < 21) { // Asumiendo que estamos usando el libro de Juan, con 21 capítulos
+            currentChapter++;
+            updateIframe();
+        }
+    });
 
-    function displayChapter(chapter) {
-        const content = document.getElementById('content');
-        content.innerHTML = `<h2>Capítulo ${chapter.number}</h2>`;
-        chapter.verses.forEach(verse => {
-            const verseElement = document.createElement('p');
-            verseElement.textContent = `${verse.number}: ${verse.text}`;
-            content.appendChild(verseElement);
-        });
-    }
+    // Inicializar el iframe con el capítulo inicial
+    updateIframe();
 });

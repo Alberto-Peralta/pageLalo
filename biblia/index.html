@@ -2,15 +2,21 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Lectura Interactiva de la Biblia</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblia en línea</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="nav">
-        <!-- La navegación interactiva se generará aquí -->
-    </div>
-    <div id="content">
-        <!-- El contenido de los capítulos y versículos se mostrará aquí -->
+    <div class="container">
+        <h1 class="title">Biblia en línea</h1>
+        <p>Explora la Biblia en línea. Puedes navegar entre los versículos y capítulos.</p>
+        <div class="iframe-container">
+            <iframe id="bibleIframe" src="https://cem.org.mx/biblia/" frameborder="0"></iframe>
+        </div>
+        <div class="controls">
+            <button id="prevBtn">Anterior</button>
+            <button id="nextBtn">Siguiente</button>
+        </div>
     </div>
 
     <script src="script.js"></script>
