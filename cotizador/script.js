@@ -51,7 +51,7 @@ origenMarker = new google.maps.Marker({
     draggable: true,
     label: {
         text: "Origen",
-        color: "#ffffff", // Color del texto
+        color: "#194756", // Color del texto
         fontSize: "14px",  // Tamaño del texto
         fontWeight: "bold" // Peso del texto
     },
@@ -75,7 +75,7 @@ destinoMarker = new google.maps.Marker({
     draggable: true,
     label: {
         text: "Destino",
-        color: "#ffffff", // Color del texto
+        color: "#194756", // Color del texto
         fontSize: "14px",  // Tamaño del texto
         fontWeight: "bold" // Peso del texto
     },
