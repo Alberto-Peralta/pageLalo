@@ -29,18 +29,16 @@ function initMap() {
             directionsRenderer = new google.maps.DirectionsRenderer({ map });
             
             startTrackingVehicle();
-        }, (error) => {
-            alert("No se pudo obtener tu ubicación. Código de error: " + error.code);
-        });
+        }, () => alert("No se pudo obtener tu ubicación."));
     } else {
         alert("La geolocalización no es soportada por tu navegador.");
     }
 }
 
 function startTrackingVehicle() {
-    carMarker = new google.maps.Marker({
+    carMarker = new google.maps.marker.AdvancedMarkerElement({
         position: userLocation,
-        map,
+        map: map,
         icon: {
             url: '../icons/car.png',
             scaledSize: new google.maps.Size(50, 50),
@@ -66,11 +64,6 @@ function updateVehiclePosition(position) {
     }
     
     routePath.push(newPosition);
-    
-    // Limitar la cantidad de puntos en la ruta
-    if (routePath.length > 100) {
-        routePath.shift(); // Elimina el primer punto para evitar acumular demasiados
-    }
 }
 
 function iniciarViaje() {
