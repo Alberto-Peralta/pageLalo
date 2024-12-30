@@ -222,12 +222,16 @@ function calculateRoute() {
 
 
 
-     // Tarifa fija si está en una zona especial
-     let tarifaFija = 0;
+    let tarifaFija = 0;
 
-     // Verificar si el origen o el destino están en una zona especial
-     tarifaFija += estaEnZonaEspecial(origin.lat(), origin.lng());
-     tarifaFija += estaEnZonaEspecial(destination.lat(), destination.lng());
+    // Verificar si el origen está en una zona especial
+    const tarifaOrigen = estaEnZonaEspecial(origin.lat(), origin.lng());
+    if (tarifaOrigen) tarifaFija += tarifaOrigen;
+    
+    // Verificar si el destino está en una zona especial
+    const tarifaDestino = estaEnZonaEspecial(destination.lat(), destination.lng());
+    if (tarifaDestino) tarifaFija += tarifaDestino;
+    
 
 
 
