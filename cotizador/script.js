@@ -102,14 +102,14 @@ destinoMarker = new google.maps.Marker({
 
                 const originAutocomplete = new google.maps.places.Autocomplete(originInput, {
                     bounds: new google.maps.LatLngBounds(userLocation), // Limita la búsqueda
-                    strictBounds: true, // Fuerza la búsqueda solo dentro de los límites
+                    strictBounds: false, // Fuerza la búsqueda solo dentro de los límites
                     fields: ["place_id", "geometry", "name", "formatted_address"], // Obtén información útil del lugar
                     types: [], // Puedes ajustar los tipos (por ejemplo, 'address' para solo direcciones)
                 });
                 
                 const destinationAutocomplete = new google.maps.places.Autocomplete(destinationInput, {
                     bounds: new google.maps.LatLngBounds(userLocation), 
-                    strictBounds: true, 
+                    strictBounds: false, 
                     fields: ["place_id", "geometry", "name", "formatted_address"],
                     types: [],
                 });
