@@ -252,7 +252,11 @@ function calculateRoute() {
                 const baseFare = 35;
                 const costPerKm = 5.25;
                 const costPerMinute = 2;
-                const estimate = baseFare + distance * costPerKm + duration * costPerMinute;
+
+                 // Añadir la tarifa fija a la estimación
+                const estimate = baseFare + distance * costPerKm + duration * costPerMinute + tarifaFija;
+
+                
                 const googleMapsUrl = `https://www.google.com/maps/dir/?api=1&origin=${origin.lat()},${origin.lng()}&destination=${destination.lat()},${destination.lng()}`;
 
                 document.getElementById("detalle-costos").innerHTML = `
