@@ -174,6 +174,43 @@ function updateFormFields() {
     });
 }
 
+
+
+// Definir las zonas y tarifas fijas
+const ZONAS_TARIFAS = {
+    aeropuerto: {
+        lat: 19.4361, // Coordenada aproximada del aeropuerto
+        lng: -99.0719,
+        radio: 5000, // Radio en metros
+        tarifa: 150, // Tarifa fija
+    },
+    centro: {
+        lat: 19.4326, // Coordenada aproximada del centro
+        lng: -99.1332,
+        radio: 3000, // Radio en metros
+        tarifa: 100, // Tarifa fija
+    },
+};
+
+// Función para verificar si una ubicación está dentro de una zona con tarifa fija
+function estaEnZonaEspecial(lat, lng) {
+    for (const zona in ZONAS_TARIFAS) {
+        const { lat: zonaLat, lng: zonaLng, radio } = ZONAS_TARIFAS[zona];
+        const distancia = google.maps.geometry.spherical.computeDistanceBetween(
+            new google.maps.LatLng(lat, lng),
+            new google.maps.LatLng(zonaLat, zonaLng)
+        );
+        
+        if (distancia <= radio) {
+            return ZONAS_TARIFAS[zona].tarifa; // Retorna la tarifa si está en la zona
+        }
+    }
+  
+};
+
+
+
+
 function calculateRoute() {
     const origin = origenMarker.getPosition();
     const destination = destinoMarker.getPosition();
@@ -182,6 +219,21 @@ function calculateRoute() {
         alert("Por favor arrastra los marcadores al origen y destino.");
         return;
     }
+
+
+
+     // Tarifa fija si está en una zona especial
+     let tarifaFija = 0;
+
+     // Verificar si el origen o el destino están en una zona especial
+     tarifaFija += estaEnZonaEspecial(origin.lat(), origin.lng());
+     tarifaFija += estaEnZonaEspecial(destination.lat(), destination.lng());
+
+
+
+
+
+
 
     directionsService.route(
         {
