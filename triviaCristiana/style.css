@@ -67,8 +67,7 @@ body {
     color: hsla(0, 0%, 100%, 0.562); 
     margin: 20px 0; 
     padding: 10px; 
-    background: 0288d1; /*rgba(255, 255, 255, 0.1);*/
-    background: 0288d1; 
+    background: #0288d1; 
     border-radius: 10px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
 }
