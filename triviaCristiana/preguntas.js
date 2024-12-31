@@ -1,54 +1,61 @@
-// preguntas.js
 const preguntas = [
-  { pregunta: "¿Quién fue el primer hombre creado por Dios?", opciones: ["A) Adán", "B) Moisés", "C) Noé", "D) Abraham"], respuesta: "A", genero: "Biblia" },
-  { pregunta: "¿Qué significa el nombre 'Jesús'?", opciones: ["A) Salvador", "B) Rey de Reyes", "C) El Ungido", "D) Hijo de Dios"], respuesta: "A", genero: "Biblia" },
-  { pregunta: "¿Cómo se llama la madre de Jesús?", opciones: ["A) Ester", "B) María", "C) Marta", "D) Sara"], respuesta: "B", genero: "Biblia" },
-  { pregunta: "¿Qué río cruzaron los israelitas cuando salieron de Egipto?", opciones: ["A) Jordán", "B) Nilo", "C) Mar Rojo", "D) Éufrates"], respuesta: "C", genero: "Biblia" },
-  { pregunta: "¿Quién traicionó a Jesús?", opciones: ["A) Pedro", "B) Judas", "C) Juan", "D) Santiago"], respuesta: "B", genero: "Biblia" },
-  { pregunta: "¿En qué ciudad nació Jesús?", opciones: ["A) Nazaret", "B) Jerusalén", "C) Belén", "D) Roma"], respuesta: "C", genero: "Biblia" },
-  { pregunta: "¿Cuál es el primer libro del Antiguo Testamento?", opciones: ["A) Génesis", "B) Éxodo", "C) Levítico", "D) Deuteronomio"], respuesta: "A", genero: "Biblia" },
-  { pregunta: "¿Qué alimento descendió del cielo para alimentar al pueblo de Israel en el desierto?", opciones: ["A) Maná", "B) Pan", "C) Carne", "D) Frutas"], respuesta: "A", genero: "Biblia" },
-  { pregunta: "¿Cómo se llama el discípulo amado de Jesús?", opciones: ["A) Pedro", "B) Juan", "C) Santiago", "D) Andrés"], respuesta: "B", genero: "Biblia" },
-  { pregunta: "¿Qué instrumento tocaba el rey David?", opciones: ["A) Flauta", "B) Harpa", "C) Guitarra", "D) Tambor"], respuesta: "B", genero: "Biblia" },
-  { pregunta: "¿En qué se convirtió Saulo después de su encuentro con Jesús?", opciones: ["A) Profeta", "B) Apóstol", "C) Rey", "D) Discípulo"], respuesta: "B", genero: "Biblia" },
-  { pregunta: "¿Cómo se llama el padre de Juan el Bautista?", opciones: ["A) Zacarías", "B) José", "C) Simón", "D) Elías"], respuesta: "A", genero: "Biblia" },
-  { pregunta: "¿Cuál es el último libro del Nuevo Testamento?", opciones: ["A) Judas", "B) Apocalipsis", "C) Hechos", "D) Romanos"], respuesta: "B", genero: "Biblia" },
-  { pregunta: "¿Qué hizo Moisés para liberar al pueblo de Israel?", opciones: ["A) Derribó las murallas de Jericó", "B) Partió el Mar Rojo", "C) Detuvo el sol", "D) Invocó el maná"], respuesta: "B", genero: "Biblia" },
-  { pregunta: "¿Cómo se llamaba el hermano de Moisés?", opciones: ["A) Aarón", "B) Josué", "C) Samuel", "D) Isaac"], respuesta: "A", genero: "Biblia" },
-  { pregunta: "¿Qué rey construyó el Templo de Jerusalén?", opciones: ["A) Salomón", "B) David", "C) Ezequías", "D) Acaz"], respuesta: "A", genero: "Biblia" },
-  { pregunta: "¿Qué milagro hizo Jesús en las bodas de Caná?", opciones: ["A) Sanó a un ciego", "B) Caminó sobre el agua", "C) Multiplicó los panes y los peces", "D) Convirtió el agua en vino"], respuesta: "D", genero: "Biblia" },
-  { pregunta: "¿Quién fue el profeta que desafió a los 450 profetas de Baal?", opciones: ["A) Isaías", "B) Elías", "C) Jeremías", "D) Ezequiel"], respuesta: "B", genero: "Biblia" },
-  { pregunta: "¿Qué hombre vivió en el vientre de un gran pez durante tres días?", opciones: ["A) Noé", "B) Jonás", "C) Elías", "D) Moisés"], respuesta: "B", genero: "Biblia" },
-  { pregunta: "¿Cuál es el versículo más corto de la Biblia?", opciones: ["A) Jesús lloró", "B) Ama a tu prójimo", "C) El Señor es mi pastor", "D) Yo soy el camino"], respuesta: "A", genero: "Biblia" },
-  { pregunta: "¿Qué rey escribió muchos de los Proverbios?", opciones: ["A) David", "B) Salomón", "C) Ezequías", "D) Josías"], respuesta: "B", genero: "Biblia" },
-  { pregunta: "¿Cuál de los apóstoles negó a Jesús tres veces antes del amanecer?", opciones: ["A) Juan", "B) Pedro", "C) Andrés", "D) Tomás"], respuesta: "B", genero: "Biblia" },
-  { pregunta: "¿Qué ciudad fue destruida por fuego y azufre debido a su pecado?", opciones: ["A) Nínive", "B) Babilonia", "C) Sodoma", "D) Jerusalén"], respuesta: "C", genero: "Biblia" },
-  { pregunta: "¿Cuál fue el último milagro de Jesús antes de su crucifixión?", opciones: ["A) Sanó a un ciego", "B) Resucitó a Lázaro", "C) Sanó a un leproso", "D) Curó a un soldado"], respuesta: "A", genero: "Biblia" },
-  { pregunta: "¿Cuántos días estuvo Jesús en el desierto antes de ser tentado?", opciones: ["A) 30", "B) 40", "C) 50", "D) 3"], respuesta: "B", genero: "Biblia" },
-  { pregunta: "¿Cómo se llama el lugar donde Jesús fue crucificado?", opciones: ["A) Gólgota", "B) Getsemaní", "C) Monte Sinaí", "D) Tabor"], respuesta: "A", genero: "Biblia" },
-  { pregunta: "¿Cuántos apóstoles tenía Jesús?", opciones: ["A) 12", "B) 10", "C) 15", "D) 7"], respuesta: "A", genero: "Biblia" },
-  { pregunta: "¿Qué profeta fue tragado por un pez gigante?", opciones: ["A) Jonás", "B) Moisés", "C) Elías", "D) Daniel"], respuesta: "A", genero: "Biblia" },
-  { pregunta: "¿En qué montaña recibió Moisés las tablas de la ley?", opciones: ["A) Monte Sinaí", "B) Monte Ararat", "C) Monte Nebo", "D) Monte Hermón"], respuesta: "A", genero: "Biblia" },
-  { pregunta: "¿Qué mujer dio a luz a Samuel?", opciones: ["A) Ana", "B) Elisabet", "C) Rebeca", "D) Sara"], respuesta: "A", genero: "Biblia" },
-  { pregunta: "¿Qué significa 'Mesías'?", opciones: ["A) Príncipe", "B) Salvador", "C) Rey", "D) Ungido"], respuesta: "D", genero: "Biblia" },
-  { pregunta: "¿Qué mujer se convirtió en estatua de sal?", opciones: ["A) Sara", "B) Rebeca", "C) Lot", "D) La esposa de Lot"], respuesta: "D", genero: "Biblia" },
-  { pregunta: "¿Qué personaje bíblico fue conocido por su gran sabiduría?", opciones: ["A) David", "B) Salomón", "C) Moisés", "D) Job"], respuesta: "B", genero: "Biblia" },
-  { pregunta: "¿Cómo se llamaba la esposa de Abraham?", opciones: ["A) Sara", "B) Rebeca", "C) Lea", "D) Raquel"], respuesta: "A", genero: "Biblia" },
-  { pregunta: "¿Quién fue el primero en ver a Jesús resucitado?", opciones: ["A) Pedro", "B) María Magdalena", "C) Juan", "D) Tomás"], respuesta: "B", genero: "Biblia" },
-  { pregunta: "¿Qué animal habló con el profeta Balaam?", opciones: ["A) Burro", "B) Caballo", "C) Camello", "D) León"], respuesta: "A", genero: "Biblia" },
-  { pregunta: "¿Quién bautizó a Jesús?", opciones: ["A) Pedro", "B) Juan el Bautista", "C) Moisés", "D) Santiago"], respuesta: "B", genero: "Biblia" },
-  { pregunta: "¿Qué hijo de Jacob fue vendido por sus hermanos?", opciones: ["A) José", "B) Benjamín", "C) Rubén", "D) Simeón"], respuesta: "A", genero: "Biblia" },
-  { pregunta: "¿Cuántos años vivió Noé?", opciones: ["A) 100", "B) 500", "C) 600", "D) 800"], respuesta: "C", genero: "Biblia" },
-  { pregunta: "¿Cuál de los discípulos era conocido como el 'Doble'?", opciones: ["A) Tomás", "B) Andrés", "C) Felipe", "D) Mateo"], respuesta: "A", genero: "Biblia" },
-  { pregunta: "¿A quién le habló Dios desde una zarza ardiente?", opciones: ["A) Moisés", "B) David", "C) Samuel", "D) Elías"], respuesta: "A", genero: "Biblia" },
-  { pregunta: "¿Qué rey hizo construir un altar al dios Baal?", opciones: ["A) Acab", "B) David", "C) Salomón", "D) Josías"], respuesta: "A", genero: "Biblia" },
-  { pregunta: "¿Qué hijo de Adán y Eva mató a su hermano?", opciones: ["A) Caín", "B) Abel", "C) Set", "D) Enós"], respuesta: "A", genero: "Biblia" },
-  { pregunta: "¿Qué profeta fue llevado al cielo en un carro de fuego?", opciones: ["A) Elías", "B) Isaías", "C) Jeremías", "D) Ezequiel"], respuesta: "A", genero: "Biblia" },
-  { pregunta: "¿Qué discípulo dudó de la resurrección de Jesús?", opciones: ["A) Juan", "B) Pedro", "C) Tomás", "D) Andrés"], respuesta: "C", genero: "Biblia" },
-  { pregunta: "¿Cuántos días duró el diluvio?", opciones: ["A) 10", "B) 20", "C) 30", "D) 40"], respuesta: "D", genero: "Biblia" },
-  { pregunta: "¿A qué profeta le dijo Dios que fuera a Nínive?", opciones: ["A) Isaías", "B) Jonás", "C) Jeremías", "D) Ezequiel"], respuesta: "B", genero: "Biblia" },
-  { pregunta: "¿Qué mujer fue la madre de Isaac?", opciones: ["A) Sara", "B) Rebeca", "C) Raquel", "D) Lea"], respuesta: "A", genero: "Biblia" },
-  { pregunta: "¿Cuántos mandamientos dio Dios a Moisés?", opciones: ["A) 10", "B) 15", "C) 12", "D) 7"], respuesta: "A", genero: "Biblia" },
-  { pregunta: "¿Qué rey destruyó las murallas de Jericó?", opciones: ["A) Josué", "B) David", "C) Salomón", "D) Ezequías"], respuesta: "A", genero: "Biblia" },
-  { pregunta: "¿Qué significa el nombre 'Emmanuel'?", opciones: ["A) Dios con nosotros", "B) Rey eterno", "C) Libertador", "D) Fuerza de Dios"], respuesta: "A", genero: "Biblia" }
-];
+  // Dificultad 1
+  { pregunta: "¿Quién fue el primer Papa de la Iglesia Católica?", opciones: ["A) San Pedro", "B) San Pablo", "C) San Juan", "D) San Andrés"], respuesta: "A", genero: "Historia de la Iglesia", dificultad: 1 },
+  { pregunta: "¿Qué significa la palabra 'Evangelio'?", opciones: ["A) Palabra de Dios", "B) Buena noticia", "C) Camino de vida", "D) Revelación"], respuesta: "B", genero: "Biblia", dificultad: 1 },
+  
+  // Dificultad 2
+  { pregunta: "¿Qué Papa inició el Concilio Vaticano II?", opciones: ["A) Pablo VI", "B) Juan XXIII", "C) Pío XII", "D) Benedicto XV"], respuesta: "B", genero: "Historia de la Iglesia", dificultad: 2 },
+  { pregunta: "¿Quién recibió los 10 Mandamientos?", opciones: ["A) Abraham", "B) Moisés", "C) Elías", "D) Aarón"], respuesta: "B", genero: "Biblia", dificultad: 2 },
+  
+  // Dificultad 3
+  { pregunta: "¿En qué idioma fue escrito originalmente el Nuevo Testamento?", opciones: ["A) Latín", "B) Griego", "C) Hebreo", "D) Arameo"], respuesta: "B", genero: "Biblia", dificultad: 3 },
+  { pregunta: "¿Qué encíclica habla de la Doctrina Social de la Iglesia?", opciones: ["A) Pacem in Terris", "B) Rerum Novarum", "C) Humanae Vitae", "D) Laudato Si'"], respuesta: "B", genero: "Historia de la Iglesia", dificultad: 3 },
+  
+  // Dificultad 4
+  { pregunta: "¿Qué rey ordenó la construcción del Templo de Jerusalén?", opciones: ["A) David", "B) Salomón", "C) Saúl", "D) Josué"], respuesta: "B", genero: "Biblia", dificultad: 4 },
+  { pregunta: "¿Qué concilio definió el dogma de la Inmaculada Concepción?", opciones: ["A) Concilio de Trento", "B) Vaticano I", "C) Éfeso", "D) No fue definido en un concilio"], respuesta: "D", genero: "Historia de la Iglesia", dificultad: 4 },
+  
+  // Dificultad 5
+  { pregunta: "¿Quién es considerado el 'Doctor de la Iglesia' más influyente?", opciones: ["A) Santo Tomás de Aquino", "B) San Agustín", "C) San Jerónimo", "D) San Gregorio Magno"], respuesta: "A", genero: "Historia de la Iglesia", dificultad: 5 },
+  { pregunta: "¿Cuál es el libro más largo de la Biblia?", opciones: ["A) Salmos", "B) Isaías", "C) Génesis", "D) Apocalipsis"], respuesta: "A", genero: "Biblia", dificultad: 5 },
+
+  // Dificultad 6
+  { pregunta: "¿Qué significa la palabra 'Papa'?", opciones: ["A) Pastor Universal", "B) Padre", "C) Obispo de Roma", "D) Vicario de Cristo"], respuesta: "B", genero: "Historia de la Iglesia", dificultad: 6 },
+  { pregunta: "¿Qué libro de la Biblia narra la salida de los israelitas de Egipto?", opciones: ["A) Génesis", "B) Levítico", "C) Números", "D) Éxodo"], respuesta: "D", genero: "Biblia", dificultad: 6 },
+  
+  // Dificultad 7
+  { pregunta: "¿Qué concilio estableció el Canon de la Biblia?", opciones: ["A) Nicea I", "B) Trento", "C) Cartago", "D) Jerusalén"], respuesta: "C", genero: "Historia de la Iglesia", dificultad: 7 },
+  { pregunta: "¿Qué evangelista era médico de profesión?", opciones: ["A) Mateo", "B) Marcos", "C) Lucas", "D) Juan"], respuesta: "C", genero: "Biblia", dificultad: 7 },
+
+  // Dificultad 8
+  { pregunta: "¿Quién es conocido como el 'Padre de la Teología Occidental'?", opciones: ["A) San Agustín", "B) San Ambrosio", "C) San Jerónimo", "D) Santo Tomás de Aquino"], respuesta: "A", genero: "Historia de la Iglesia", dificultad: 8 },
+  { pregunta: "¿Qué rey tuvo un sueño interpretado por Daniel?", opciones: ["A) Nabucodonosor", "B) Ciro", "C) Darío", "D) Artajerjes"], respuesta: "A", genero: "Biblia", dificultad: 8 },
+  
+  // Dificultad 9
+  { pregunta: "¿Qué Papa definió el dogma de la Asunción?", opciones: ["A) Pío IX", "B) Pío XII", "C) León XIII", "D) Benedicto XV"], respuesta: "B", genero: "Historia de la Iglesia", dificultad: 9 },
+  { pregunta: "¿Qué profeta fue tragado por un pez?", opciones: ["A) Jonás", "B) Elías", "C) Isaías", "D) Amós"], respuesta: "A", genero: "Biblia", dificultad: 9 },
+
+  // Dificultad 10
+  { pregunta: "¿Qué documento de 313 d.C. otorgó libertad de culto a los cristianos?", opciones: ["A) Edicto de Milán", "B) Edicto de Tesalónica", "C) Edicto de Nicea", "D) Edicto de Éfeso"], respuesta: "A", genero: "Historia de la Iglesia", dificultad: 10 },
+  { pregunta: "¿Cuál es el último libro del Antiguo Testamento?", opciones: ["A) Malaquías", "B) Zacarías", "C) Habacuc", "D) Daniel"], respuesta: "A", genero: "Biblia", dificultad: 10 },
+
+   // Dificultad 11
+   { pregunta: "¿Cuál fue el tema principal de la encíclica 'Humanae Vitae' de Pablo VI?", opciones: ["A) La paz mundial", "B) El control de la natalidad", "C) La justicia social", "D) La unidad de los cristianos"], respuesta: "B", genero: "Encíclicas", dificultad: 11 },
+   { pregunta: "¿En qué concilio se definió el dogma de la transubstanciación?", opciones: ["A) Concilio de Éfeso", "B) Concilio de Nicea", "C) Concilio de Trento", "D) Concilio Vaticano II"], respuesta: "C", genero: "Concilios", dificultad: 11 },
+ 
+   // Dificultad 12
+   { pregunta: "¿Qué Papa escribió la encíclica 'Evangelium Vitae'?", opciones: ["A) Juan Pablo II", "B) Benedicto XVI", "C) Pablo VI", "D) Francisco"], respuesta: "A", genero: "Encíclicas", dificultad: 12 },
+   { pregunta: "¿Cuál fue el propósito principal del Concilio Vaticano I?", opciones: ["A) Reformar la liturgia", "B) Definir la infalibilidad papal", "C) Promover el ecumenismo", "D) Abordar la reforma protestante"], respuesta: "B", genero: "Concilios", dificultad: 12 },
+ 
+   // Dificultad 13
+   { pregunta: "¿Qué encíclica se considera un hito en la Doctrina Social de la Iglesia?", opciones: ["A) Laudato Si'", "B) Rerum Novarum", "C) Fides et Ratio", "D) Deus Caritas Est"], respuesta: "B", genero: "Encíclicas", dificultad: 13 },
+   { pregunta: "¿En qué año se llevó a cabo el Concilio Vaticano II?", opciones: ["A) 1958", "B) 1962", "C) 1970", "D) 1980"], respuesta: "B", genero: "Concilios", dificultad: 13 },
+ 
+   // Dificultad 14
+   { pregunta: "¿Qué santo fue llamado 'Doctor de la Gracia'?", opciones: ["A) San Agustín", "B) Santo Tomás de Aquino", "C) San Jerónimo", "D) San Gregorio Magno"], respuesta: "A", genero: "Historia de la Iglesia", dificultad: 14 },
+   { pregunta: "¿Qué documento conciliar trató sobre la libertad religiosa?", opciones: ["A) Gaudium et Spes", "B) Dignitatis Humanae", "C) Lumen Gentium", "D) Sacrosanctum Concilium"], respuesta: "B", genero: "Concilios", dificultad: 14 },
+ 
+   // Dificultad 15
+   { pregunta: "¿Qué Papa llamó al Concilio de Trento?", opciones: ["A) Pablo III", "B) Julio II", "C) Clemente VII", "D) Pío IV"], respuesta: "A", genero: "Historia de la Iglesia", dificultad: 15 },
+   { pregunta: "¿Qué encíclica de León XIII aborda la relación entre la fe y la ciencia?", opciones: ["A) Providentissimus Deus", "B) Aeterni Patris", "C) Rerum Novarum", "D) Humanae Vitae"], respuesta: "A", genero: "Encíclicas", dificultad: 15 }
+ ];

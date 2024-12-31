@@ -15,8 +15,8 @@
     <div id="score-display">Puntuación: 0</div>
     
     <div id="time">30</div>
-<div id="question-text"></div>
-<div id="answers">
+    <div id="question-text"></div>
+    <div id="answers">
     <button class="answer-btn" id="answer1"></button>
     <button class="answer-btn" id="answer2"></button>
     <button class="answer-btn" id="answer3"></button>
@@ -38,6 +38,18 @@
       <p id="level">Nivel: 1</p>
       <p id="money">Dinero: $100</p>
     </div> -->
+
+
+
+    <div id="end-screen" style="display: none;">
+      <h2>¡Fin del Juego!</h2>
+      <p id="final-score"></p>
+      <p id="questions-answered"></p>
+      <p id="time-remaining"></p>
+      <button onclick="reiniciarJuego()">Reiniciar Juego</button>
+    </div>
+    
+    
     
     
     <script src="preguntas.js"></script>

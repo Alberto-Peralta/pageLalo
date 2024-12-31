@@ -64,7 +64,7 @@ body {
 #question-text {
     font-size: 1.8rem; 
     font-weight: bold;
-    color: hsla(0, 0%, 100%, 0.562); 
+    color: #ffffff;
     margin: 20px 0; 
     padding: 10px; 
     background: #0288d1; 
@@ -187,6 +187,39 @@ body {
     width: 100%; 
     font-size: 0.9rem;
 }
+
+
+
+
+#end-screen {
+    text-align: center;
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    width: 80%;
+  }
+  
+  #end-screen h2 {
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  #end-screen button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #end-screen button:hover {
+    background-color: #45a049;
+  }
+  
 
 /* Media Queries para dispositivos pequeños */
 @media (max-width: 480px) {
