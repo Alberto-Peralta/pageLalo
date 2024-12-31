@@ -11,6 +11,11 @@ body {
     height: 100vh;
 }
 
+
+
+
+
+
 /* Contenedor del juego */
 .game-container {
     width: 90%;
@@ -21,6 +26,14 @@ body {
     padding: 20px;
     text-align: center;
     transition: transform 0.2s;
+
+
+    background-image: url('./fondo\ de\ pantalla\ para\ una\ app\ de\ trivia\ al\ estilo\ de\ quien\ quiere\ ser\ millonario\ con\ temática\ cristiana.png');
+    background-size: cover; /* Esto hará que la imagen cubra todo el fondo */
+    background-position: center; /* Centra la imagen en el fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita si es más pequeña que el área */
+    height: 100vh; /* Asegura que el fondo cubra toda la pantalla */
+    margin: 0; /* Elimina el margen por defecto del body */
 }
 
 .game-container:hover {
@@ -51,7 +64,7 @@ body {
 #question-text {
     font-size: 1.8rem; 
     font-weight: bold;
-    color: #ffffff; 
+    color: hsla(0, 0%, 100%, 0.562); 
     margin: 20px 0; 
     padding: 10px; 
     background: rgba(255, 255, 255, 0.1); 
