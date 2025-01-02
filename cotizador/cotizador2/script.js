@@ -16,39 +16,11 @@ let quote = 0; // Costo final
 function initMap() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function(position) {
-            const userLocation = {
-                lat: position.coords.latitude,
-                lng: position.coords.longitude
-            };
-
-            map = new google.maps.Map(document.getElementById('map'), {
-                center: userLocation,
-                zoom: 15
-            });
-
-            const carIcon = {
-                url: '../../icons/car.png',
-                scaledSize: new google.maps.Size(40, 40),
-                anchor: new google.maps.Point(20, 20),
-                origin: new google.maps.Point(0, 0),
-                rotation: 0
-            };
-
-            marker = new google.maps.Marker({
-                position: userLocation,
-                map: map,
-                icon: carIcon
-            });
-        }, function(error) {
+            const userLocation = { lat: position.coords.latitude, lng: position.coords.longitude };
+            createMap(userLocation);
+        }, function() {
             const defaultLocation = { lat: -34.397, lng: 150.644 };
-            map = new google.maps.Map(document.getElementById('map'), {
-                center: defaultLocation,
-                zoom: 15
-            });
-            marker = new google.maps.Marker({
-                position: defaultLocation,
-                map: map
-            });
+            createMap(defaultLocation);
             console.warn("No se pudo obtener la ubicación del usuario. Mostrando ubicación predeterminada.");
         });
     } else {
@@ -56,38 +28,51 @@ function initMap() {
     }
 }
 
+// Crear el mapa
+function createMap(location) {
+    map = new google.maps.Map(document.getElementById('map'), { center: location, zoom: 15 });
+
+    const carIcon = {
+        url: '../../icons/car.png',
+        scaledSize: new google.maps.Size(40, 40),
+        anchor: new google.maps.Point(20, 20),
+        origin: new google.maps.Point(0, 0),
+        rotation: 0
+    };
+
+    marker = new google.maps.Marker({
+        position: location,
+        map: map,
+        icon: carIcon
+    });
+}
+
 // Inicia el seguimiento de ubicación
 function startTracking() {
-    // Deshabilitar botón de inicio y habilitar el de parada
     document.getElementById('startButton').disabled = true;
     document.getElementById('stopButton').disabled = false;
 
     if (navigator.geolocation) {
         watchID = navigator.geolocation.watchPosition(updatePosition, handleError);
-        startTimer(); // Iniciar cronómetro
+        startTimer();
     }
 }
 
 // Detiene el seguimiento de ubicación
 function stopTracking() {
-    // Deshabilitar botón de parada y habilitar el de inicio
     document.getElementById('startButton').disabled = false;
     document.getElementById('stopButton').disabled = true;
 
     navigator.geolocation.clearWatch(watchID);
     displayResults();
-    clearInterval(timerInterval); // Detener cronómetro
+    clearInterval(timerInterval);
 }
 
 // Actualiza la posición del usuario
 function updatePosition(position) {
-    const currentPosition = {
-        lat: position.coords.latitude,
-        lng: position.coords.longitude
-    };
+    const currentPosition = { lat: position.coords.latitude, lng: position.coords.longitude };
 
     path.push(currentPosition);
-
     if (previousPosition) {
         const distance = calculateDistance(previousPosition, currentPosition);
         totalDistance += distance;
@@ -95,8 +80,7 @@ function updatePosition(position) {
     }
 
     marker.setPosition(currentPosition);
-    const heading = calculateHeading(previousPosition, currentPosition);
-    marker.setRotation(heading);
+    marker.setRotation(calculateHeading(previousPosition, currentPosition));
     map.setCenter(currentPosition);
 
     previousPosition = currentPosition;
@@ -122,7 +106,7 @@ function drawPath() {
 
 // Calcula la distancia entre dos puntos
 function calculateDistance(prevPos, currentPos) {
-    const R = 6371e3;
+    const R = 6371e3; // Radio de la Tierra en metros
     const lat1 = prevPos.lat * Math.PI / 180;
     const lat2 = currentPos.lat * Math.PI / 180;
     const deltaLat = (currentPos.lat - prevPos.lat) * Math.PI / 180;
@@ -131,7 +115,7 @@ function calculateDistance(prevPos, currentPos) {
               Math.cos(lat1) * Math.cos(lat2) *
               Math.sin(deltaLng / 2) * Math.sin(deltaLng / 2);
     const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-    return R * c; 
+    return R * c; // Devuelve la distancia en metros
 }
 
 // Calcula el rumbo entre dos puntos
@@ -155,6 +139,7 @@ function updateCost() {
     const distanceInKm = (totalDistance / 1000).toFixed(2);
     const timeInMinutes = (totalTime / 60).toFixed(2);
     quote = calculateQuote(distanceInKm, timeInMinutes);
+
     document.getElementById('info').innerHTML = `
         <p>Total Distance: ${distanceInKm} km</p>
         <p>Total Time: ${timeInMinutes} minutes</p>
@@ -195,7 +180,7 @@ document.getElementById('increaseCostButton').addEventListener('click', () => {
     isCostIncreased = !isCostIncreased;
     const buttonText = isCostIncreased ? 'Desactivar Aumento de Costo' : 'Aumentar Costo 25%';
     document.getElementById('increaseCostButton').textContent = buttonText;
-    updateCost(); // Actualizar el costo cuando el botón cambie
+    updateCost();
 });
 
 // Muestra los resultados finales al detener el viaje
