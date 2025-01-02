@@ -1,6 +1,6 @@
 let map, directionsService, directionsRenderer, watchId;
 const destination = { lat: 19.432608, lng: -99.133209 }; // Cambiar por tu destino
-const pricePerKm = 5; // Precio por kilómetro (ajusta según sea necesario)
+const pricePerKm = 5; // Precio por kilómetro
 
 function initMap() {
     map = new google.maps.Map(document.getElementById("map"), {
@@ -9,8 +9,7 @@ function initMap() {
     });
     directionsService = new google.maps.DirectionsService();
     directionsRenderer = new google.maps.DirectionsRenderer({ map });
-
-    const marker = new google.maps.Marker({
+    new google.maps.Marker({
         position: destination,
         map,
         title: "Destino",
@@ -18,45 +17,43 @@ function initMap() {
 }
 
 function trackRoute() {
-    if (navigator.geolocation) {
-        watchId = navigator.geolocation.watchPosition(
-            position => {
-                const origin = {
-                    lat: position.coords.latitude,
-                    lng: position.coords.longitude,
-                };
-
-                directionsService.route(
-                    {
-                        origin,
-                        destination,
-                        travelMode: google.maps.TravelMode.DRIVING,
-                    },
-                    (result, status) => {
-                        if (status === google.maps.DirectionsStatus.OK) {
-                            directionsRenderer.setDirections(result);
-                            calculateDetails(result);
-                        } else {
-                            console.error("Error al calcular la ruta", status);
-                        }
-                    }
-                );
-            },
-            error => {
-                console.error("Error al obtener la posición", error);
-            },
-            { enableHighAccuracy: true }
-        );
-    } else {
-        alert("Geolocalización no soportada en este navegador");
+    if (!navigator.geolocation) {
+        return alert("Geolocalización no soportada en este navegador");
     }
+
+    watchId = navigator.geolocation.watchPosition(
+        ({ coords }) => {
+            const origin = { lat: coords.latitude, lng: coords.longitude };
+            calculateRoute(origin);
+        },
+        error => console.error("Error al obtener la posición", error),
+        { enableHighAccuracy: true }
+    );
 }
 
-function calculateDetails(result) {
-    const route = result.routes[0].legs[0];
-    const distanceKm = route.distance.value / 1000; // Convertir a kilómetros
-    const timeMinutes = route.duration.value / 60; // Convertir a minutos
-    const stops = route.steps.filter(step => step.maneuver === "pause").length;
+function calculateRoute(origin) {
+    directionsService.route(
+        {
+            origin,
+            destination,
+            travelMode: google.maps.TravelMode.DRIVING,
+        },
+        (result, status) => {
+            if (status === google.maps.DirectionsStatus.OK) {
+                directionsRenderer.setDirections(result);
+                updateDetails(result);
+            } else {
+                console.error("Error al calcular la ruta", status);
+            }
+        }
+    );
+}
+
+function updateDetails(result) {
+    const { distance, duration } = result.routes[0].legs[0];
+    const distanceKm = distance.value / 1000; // Convertir a kilómetros
+    const timeMinutes = duration.value / 60; // Convertir a minutos
+    const stops = result.routes[0].legs[0].steps.filter(step => step.maneuver === "pause").length;
     const quote = (distanceKm * pricePerKm).toFixed(2);
 
     document.getElementById("details").innerHTML = `
@@ -68,6 +65,4 @@ function calculateDetails(result) {
 }
 
 document.getElementById("start-tracking").addEventListener("click", trackRoute);
-
-// Inicializar el mapa
 window.initMap = initMap;
