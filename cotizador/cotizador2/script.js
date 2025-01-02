@@ -32,12 +32,17 @@ function createMap(location) {
 }
 
 function startTracking() {
-    toggleButtons(true);
+    console.log("Inicio del seguimiento.");
+    document.getElementById('startButton').disabled = true;
+    document.getElementById('stopButton').disabled = false;
+
     if (navigator.geolocation) {
         watchID = navigator.geolocation.watchPosition(updatePosition, handleError);
         startTimer();
+        console.log("Cronómetro iniciado.");
     }
 }
+
 
 function stopTracking() {
     toggleButtons(false);
