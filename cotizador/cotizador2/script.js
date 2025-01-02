@@ -12,6 +12,7 @@ let isCostIncreased = false; // Controlar si el costo ha aumentado
 // Variables para el cronómetro
 let seconds = 0;
 let minutes = 0;
+let quote = 0; // Variable para el costo final
 
 // Inicializar el mapa
 function initMap() {
@@ -92,6 +93,7 @@ function updatePosition(position) {
 
     previousPosition = currentPosition;
     drawPath();
+    updateCost();
 }
 
 function drawPath() {
@@ -137,10 +139,10 @@ function calculateHeading(prevPos, currentPos) {
     return (heading * 180 / Math.PI);
 }
 
-function displayResults() {
+function updateCost() {
     const distanceInKm = (totalDistance / 1000).toFixed(2);
     const timeInMinutes = (totalTime / 60).toFixed(2);
-    const quote = calculateQuote(distanceInKm, timeInMinutes);
+    quote = calculateQuote(distanceInKm, timeInMinutes);
     document.getElementById('info').innerHTML = `
         <p>Total Distance: ${distanceInKm} km</p>
         <p>Total Time: ${timeInMinutes} minutes</p>
@@ -180,6 +182,7 @@ document.getElementById('increaseCostButton').addEventListener('click', () => {
     isCostIncreased = !isCostIncreased;
     const buttonText = isCostIncreased ? 'Desactivar Aumento de Costo' : 'Aumentar Costo 25%';
     document.getElementById('increaseCostButton').textContent = buttonText;
+    updateCost(); // Actualizar el costo cuando el botón cambie
 });
 
 function handleError(error) {
