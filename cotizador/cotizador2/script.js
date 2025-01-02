@@ -45,6 +45,7 @@ function startTracking() {
         startTimer();
         console.log("Cronómetro iniciado.");
     }
+    updateCost();
 }
 
 function updatePosition({ coords }) {
@@ -97,6 +98,7 @@ function stopTracking() {
     if (watchID) navigator.geolocation.clearWatch(watchID); // Detiene el seguimiento de posición
     if (timerInterval) clearInterval(timerInterval); // Detiene el cronómetro
     displayResults(); // Muestra los resultados
+    updateCost();
 }
 
 // Actualiza la distancia, tiempo y costo
