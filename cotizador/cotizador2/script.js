@@ -150,10 +150,13 @@ function displayResults() {
 }
 
 function calculateQuote(distance, time) {
-    const ratePerKm = 2; // Tarifa por km
-    const ratePerMinute = 0.5; // Tarifa por minuto
-    return (distance * ratePerKm + time * ratePerMinute).toFixed(2);
+    const ratePerKm = 5.25; // Tarifa por km
+    const ratePerMinute = 2; // Tarifa por minuto
+    const base = 35; // tarifa base
+    // Calcular la cotización agregando la tarifa base
+    return (distance * ratePerKm + time * ratePerMinute + base).toFixed(2);
 }
+
 
 function handleError(error) {
     console.warn(`ERROR(${error.code}): ${error.message}`);
