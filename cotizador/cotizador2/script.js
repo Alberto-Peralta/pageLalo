@@ -46,27 +46,31 @@ function startTracking() {
 
 function stopTracking() {
     toggleButtons(false);
-    navigator.geolocation.clearWatch(watchID);
-    clearInterval(timerInterval);
+    if (watchID) navigator.geolocation.clearWatch(watchID);
+    if (timerInterval) clearInterval(timerInterval);
     displayResults();
 }
 
-function updatePosition({ coords }) {
-    const currentPosition = { lat: coords.latitude, lng: coords.longitude };
-    path.push(currentPosition);
+function updateCost() {
+    const distanceKm = (totalDistance / 1000).toFixed(2);
+    const timeMinutes = (totalTime / 60).toFixed(2);
+    quote = calculateQuote(distanceKm, timeMinutes);
 
-    if (previousPosition) {
-        totalDistance += calculateDistance(previousPosition, currentPosition);
-        totalTime++;
-    }
-
-    marker.setPosition(currentPosition);
-    map.setCenter(currentPosition);
-    drawPath();
-    updateCost();
-
-    previousPosition = currentPosition;
+    document.getElementById('info').innerHTML = `
+        <p><strong>Total Distance:</strong> ${distanceKm} km</p>
+        <p><strong>Total Time:</strong> ${timeMinutes} minutes</p>
+        <p><strong>Quote:</strong> $${quote}</p>
+    `;
 }
+
+function calculateQuote(distance, time) {
+    const base = 35; // Base fare
+    const ratePerKm = 5.25; // Cost per kilometer
+    const ratePerMinute = 2; // Cost per minute
+    let cost = (distance * ratePerKm + time * ratePerMinute + base);
+    return (isCostIncreased ? cost * 1.25 : cost).toFixed(2);
+}
+
 
 function drawPath() {
     if (!polyline) {
