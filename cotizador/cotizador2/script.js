@@ -23,7 +23,7 @@ function initMap() {
 
             // Usar un ícono de coche para el marcador
             const carIcon = {
-                url: 'https://upload.wikimedia.org/wikipedia/commons/3/3e/Red_car_icon.svg', // URL del ícono
+                url: '../../icons/car.png', // URL del ícono
                 scaledSize: new google.maps.Size(40, 40), // Tamaño ajustado del ícono
                 anchor: new google.maps.Point(20, 20), // Centrar el ícono
                 origin: new google.maps.Point(0, 0), // Origen del ícono

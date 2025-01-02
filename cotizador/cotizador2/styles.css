@@ -1,139 +1,107 @@
-/* Estilos generales del cuerpo */
-body {
-  font-family: 'Arial', sans-serif;
+/* styles.css */
+
+/* Reset some default styles */
+body, h1, button {
   margin: 0;
   padding: 0;
-  background-color: #f7f7f7;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  overflow: hidden;
-}
-
-/* Contenedor principal */
-.container {
-  width: 100%;
-  max-width: 900px;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
 }
 
-/* Título */
-h1 {
-  text-align: center;
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
   color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  text-align: center;
+}
+
+#map {
+  width: 100%;
+  height: 400px;
+  border: 2px solid #2980b9;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
 }
 
-/* Estilos del mapa */
-#map {
-  height: 500px;
-  width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Contenedor de información */
-.info {
-  margin-top: 20px;
-  background-color: #f0f0f0;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.info p {
-  margin: 10px 0;
-  font-size: 16px;
-  color: #555;
-}
-
-/* Botones */
-.buttons {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-  flex-wrap: wrap;
-}
-
-.btn {
-  background-color: #007bff;
+button {
+  background-color: #2980b9;
   color: white;
-  padding: 10px 20px;
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
   cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
-  margin: 5px 0;
-  width: 48%;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin: 0 10px;
+}
+
+button:hover {
+  background-color: #3498db;
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+#info {
+  background-color: #ecf0f1;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  padding: 15px;
+  width: 80%;
+  max-width: 600px;
   text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.btn:hover {
-  background-color: #0056b3;
-}
-
-.btn:active {
-  background-color: #004085;
-}
-
-/* Estilos del temporizador */
-.timer {
-  font-size: 18px;
-  font-weight: bold;
-  color: #333;
-  margin-top: 20px;
-}
-
-/* Media Queries para dispositivos móviles y tabletas */
+/* Responsive styles */
 @media (max-width: 768px) {
-  /* Ajustes en el contenedor principal */
-  .container {
-    padding: 15px;
+  h1 {
+      font-size: 2rem;
   }
 
-  /* Ajustar el tamaño del mapa */
+  button {
+      padding: 8px 16px;
+      font-size: 0.9rem;
+  }
+
   #map {
-    height: 400px;
+      height: 300px;
   }
 
-  /* Botones más grandes y ajustados */
-  .btn {
-    font-size: 14px;
-    padding: 12px;
-    width: 100%;
-  }
-
-  /* Estilos de la información */
-  .info {
-    padding: 12px;
+  #info {
+      width: 90%;
   }
 }
 
-/* Media Queries para dispositivos pequeños (móviles) */
 @media (max-width: 480px) {
-  /* Ajustar el mapa */
-  #map {
-    height: 300px;
-  }
-
-  /* Ajustar botones y textos */
-  .btn {
-    font-size: 12px;
-    padding: 10px;
-  }
-
-  .info p {
-    font-size: 14px;
-  }
-
-  /* Ajustes de título */
   h1 {
-    font-size: 22px;
+      font-size: 1.5rem;
+  }
+
+  button {
+      width: 100%;
+      margin: 10px 0;
+  }
+
+  #map {
+      height: 200px;
+  }
+
+  #info {
+      width: 95%;
   }
 }
