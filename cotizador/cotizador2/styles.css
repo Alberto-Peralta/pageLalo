@@ -19,6 +19,7 @@ body {
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
 }
 
 /* Título */
@@ -56,6 +57,7 @@ h1 {
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
+  flex-wrap: wrap;
 }
 
 .btn {
@@ -67,6 +69,9 @@ h1 {
   cursor: pointer;
   font-size: 16px;
   transition: background-color 0.3s ease;
+  margin: 5px 0;
+  width: 48%;
+  text-align: center;
 }
 
 .btn:hover {
@@ -83,4 +88,52 @@ h1 {
   font-weight: bold;
   color: #333;
   margin-top: 20px;
+}
+
+/* Media Queries para dispositivos móviles y tabletas */
+@media (max-width: 768px) {
+  /* Ajustes en el contenedor principal */
+  .container {
+    padding: 15px;
+  }
+
+  /* Ajustar el tamaño del mapa */
+  #map {
+    height: 400px;
+  }
+
+  /* Botones más grandes y ajustados */
+  .btn {
+    font-size: 14px;
+    padding: 12px;
+    width: 100%;
+  }
+
+  /* Estilos de la información */
+  .info {
+    padding: 12px;
+  }
+}
+
+/* Media Queries para dispositivos pequeños (móviles) */
+@media (max-width: 480px) {
+  /* Ajustar el mapa */
+  #map {
+    height: 300px;
+  }
+
+  /* Ajustar botones y textos */
+  .btn {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .info p {
+    font-size: 14px;
+  }
+
+  /* Ajustes de título */
+  h1 {
+    font-size: 22px;
+  }
 }
