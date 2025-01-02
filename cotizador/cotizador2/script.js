@@ -7,14 +7,12 @@ let previousPosition = null;
 let path = [];
 let polyline;
 let timerInterval;
-let isCostIncreased = false; // Controlar si el costo ha aumentado
-
-// Variables para el cronómetro
+let isCostIncreased = false; // Controla si el costo está aumentado
 let seconds = 0;
 let minutes = 0;
-let quote = 0; // Variable para el costo final
+let quote = 0; // Costo final
 
-// Inicializar el mapa
+// Inicializa el mapa
 function initMap() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function(position) {
@@ -41,7 +39,6 @@ function initMap() {
                 map: map,
                 icon: carIcon
             });
-
         }, function(error) {
             const defaultLocation = { lat: -34.397, lng: 150.644 };
             map = new google.maps.Map(document.getElementById('map'), {
@@ -59,19 +56,30 @@ function initMap() {
     }
 }
 
+// Inicia el seguimiento de ubicación
 function startTracking() {
+    // Deshabilitar botón de inicio y habilitar el de parada
+    document.getElementById('startButton').disabled = true;
+    document.getElementById('stopButton').disabled = false;
+
     if (navigator.geolocation) {
         watchID = navigator.geolocation.watchPosition(updatePosition, handleError);
-        startTimer(); // Iniciar el cronómetro
+        startTimer(); // Iniciar cronómetro
     }
 }
 
+// Detiene el seguimiento de ubicación
 function stopTracking() {
+    // Deshabilitar botón de parada y habilitar el de inicio
+    document.getElementById('startButton').disabled = false;
+    document.getElementById('stopButton').disabled = true;
+
     navigator.geolocation.clearWatch(watchID);
     displayResults();
-    clearInterval(timerInterval); // Detener el cronómetro
+    clearInterval(timerInterval); // Detener cronómetro
 }
 
+// Actualiza la posición del usuario
 function updatePosition(position) {
     const currentPosition = {
         lat: position.coords.latitude,
@@ -96,6 +104,7 @@ function updatePosition(position) {
     updateCost();
 }
 
+// Dibuja el camino recorrido
 function drawPath() {
     if (!polyline) {
         polyline = new google.maps.Polyline({
@@ -111,6 +120,7 @@ function drawPath() {
     }
 }
 
+// Calcula la distancia entre dos puntos
 function calculateDistance(prevPos, currentPos) {
     const R = 6371e3;
     const lat1 = prevPos.lat * Math.PI / 180;
@@ -124,6 +134,7 @@ function calculateDistance(prevPos, currentPos) {
     return R * c; 
 }
 
+// Calcula el rumbo entre dos puntos
 function calculateHeading(prevPos, currentPos) {
     const lat1 = prevPos.lat * Math.PI / 180;
     const lat2 = currentPos.lat * Math.PI / 180;
@@ -139,6 +150,7 @@ function calculateHeading(prevPos, currentPos) {
     return (heading * 180 / Math.PI);
 }
 
+// Actualiza el costo
 function updateCost() {
     const distanceInKm = (totalDistance / 1000).toFixed(2);
     const timeInMinutes = (totalTime / 60).toFixed(2);
@@ -150,6 +162,7 @@ function updateCost() {
     `;
 }
 
+// Calcula el costo basado en la distancia y el tiempo
 function calculateQuote(distance, time) {
     const ratePerKm = 5.25;
     const ratePerMinute = 2;
@@ -164,7 +177,7 @@ function calculateQuote(distance, time) {
     return finalCost;
 }
 
-// Cronómetro
+// Inicia el cronómetro
 function startTimer() {
     timerInterval = setInterval(() => {
         seconds++;
@@ -185,6 +198,16 @@ document.getElementById('increaseCostButton').addEventListener('click', () => {
     updateCost(); // Actualizar el costo cuando el botón cambie
 });
 
+// Muestra los resultados finales al detener el viaje
+function displayResults() {
+    const distanceInKm = (totalDistance / 1000).toFixed(2);
+    const timeInMinutes = (totalTime / 60).toFixed(2);
+    const finalCost = calculateQuote(distanceInKm, timeInMinutes);
+
+    alert(`Viaje Finalizado! \n Distancia: ${distanceInKm} km \n Tiempo: ${timeInMinutes} minutos \n Costo Final: $${finalCost}`);
+}
+
+// Manejo de errores de geolocalización
 function handleError(error) {
     console.warn(`ERROR(${error.code}): ${error.message}`);
 }
