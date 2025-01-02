@@ -111,14 +111,19 @@ function calculateQuote(distance, time) {
 }
 
 function startTimer() {
+    console.log("Iniciando cronómetro...");
     timerInterval = setInterval(() => {
-        if (++seconds === 60) {
+        seconds++;
+        if (seconds >= 60) {
             seconds = 0;
             minutes++;
         }
-        document.getElementById('timer').textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+
+        document.getElementById('timer').textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+        console.log(`Cronómetro: ${minutes}:${seconds}`);
     }, 1000);
 }
+
 
 function displayResults() {
     const distanceKm = (totalDistance / 1000).toFixed(2);
