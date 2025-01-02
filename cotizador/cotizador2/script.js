@@ -1,68 +1,101 @@
-let map, directionsService, directionsRenderer, watchId;
-const destination = { lat: 19.432608, lng: -99.133209 }; // Cambiar por tu destino
-const pricePerKm = 5; // Precio por kilómetro
+let map;
+let marker;
+let polyline;
+let isTracking = false;
+let path = [];
+let stopTimes = [];
+let lastStopTime = null;
+let totalDistance = 0;
+let totalTime = 0;
+const pricePerKm = 1; // Set your price per kilometer
+const pricePerMinute = 0.5; // Set your price per minute
+const stopThreshold = 3 * 60 * 1000; // 3 minutes in milliseconds
 
 function initMap() {
     map = new google.maps.Map(document.getElementById("map"), {
-        center: destination,
-        zoom: 14,
+        center: { lat: -34.397, lng: 150.644 },
+        zoom: 15,
     });
-    directionsService = new google.maps.DirectionsService();
-    directionsRenderer = new google.maps.DirectionsRenderer({ map });
-    new google.maps.Marker({
-        position: destination,
-        map,
-        title: "Destino",
+
+    polyline = new google.maps.Polyline({
+        path: [],
+        geodesic: true,
+        strokeColor: '#FF0000',
+        strokeOpacity: 1.0,
+        strokeWeight: 2,
     });
+    polyline.setMap(map);
 }
 
-function trackRoute() {
-    if (!navigator.geolocation) {
-        return alert("Geolocalización no soportada en este navegador");
-    }
+function startTracking() {
+    if (isTracking) return;
 
-    watchId = navigator.geolocation.watchPosition(
-        ({ coords }) => {
-            const origin = { lat: coords.latitude, lng: coords.longitude };
-            calculateRoute(origin);
-        },
-        error => console.error("Error al obtener la posición", error),
-        { enableHighAccuracy: true }
-    );
-}
+    isTracking = true;
+    path = [];
+    stopTimes = [];
+    totalDistance = 0;
+    totalTime = 0;
+    lastStopTime = null;
 
-function calculateRoute(origin) {
-    directionsService.route(
-        {
-            origin,
-            destination,
-            travelMode: google.maps.TravelMode.DRIVING,
-        },
-        (result, status) => {
-            if (status === google.maps.DirectionsStatus.OK) {
-                directionsRenderer.setDirections(result);
-                updateDetails(result);
-            } else {
-                console.error("Error al calcular la ruta", status);
+    if (navigator.geolocation) {
+        navigator.geolocation.watchPosition(position => {
+            const currentPos = {
+                lat: position.coords.latitude,
+                lng: position.coords.longitude,
+            };
+
+            path.push(currentPos);
+            polyline.setPath(path);
+            map.setCenter(currentPos);
+
+            // Calculate distance
+            if (path.length > 1) {
+                const prevPos = path[path.length - 2];
+                totalDistance += google.maps.geometry.spherical.computeDistanceBetween(
+                    new google.maps.LatLng(prevPos.lat, prevPos.lng),
+                    new google.maps.LatLng(currentPos.lat, currentPos.lng)
+                );
             }
-        }
-    );
+
+            // Check for stops
+            if (lastStopTime) {
+                const stopDuration = new Date() - lastStopTime;
+                if (stopDuration >= stopThreshold) {
+                    stopTimes.push(stopDuration);
+                    lastStopTime = null;
+                }
+            } else {
+                lastStopTime = new Date();
+            }
+        });
+    }
 }
 
-function updateDetails(result) {
-    const { distance, duration } = result.routes[0].legs[0];
-    const distanceKm = distance.value / 1000; // Convertir a kilómetros
-    const timeMinutes = duration.value / 60; // Convertir a minutos
-    const stops = result.routes[0].legs[0].steps.filter(step => step.maneuver === "pause").length;
-    const quote = (distanceKm * pricePerKm).toFixed(2);
+function stopTracking() {
+    if (!isTracking) return;
 
-    document.getElementById("details").innerHTML = `
-        Distancia: ${distanceKm.toFixed(2)} km<br>
-        Tiempo estimado: ${timeMinutes.toFixed(2)} minutos<br>
-        Puntos de espera: ${stops} 
+    isTracking = false;
+
+    // Calculate total time
+    totalTime = (new Date() - lastStopTime) / 1000 / 60; // in minutes
+
+    // Calculate costs
+    const distanceCost = (totalDistance / 1000) * pricePerKm; // in km
+    const timeCost = totalTime * pricePerMinute; // in minutes
+    const stopCost = stopTimes.filter(t => t >= stopThreshold).length * 2; // $2 for each stop over 3 minutes
+
+    // Display results
+    const details = `
+        <h3>Route Details</h3>
+        <p>Total Distance: ${(totalDistance / 1000).toFixed(2)} km</p>
+        <p>Total Time: ${totalTime.toFixed(2)} minutes</p>
+        <p>Total Stops: ${stopTimes.length}</p>
+        <p>Total Cost: $${(distanceCost + timeCost + stopCost).toFixed(2)}</p>
     `;
-    document.getElementById("quote").innerHTML = `Cotización: $${quote}`;
+    document.getElementById("routeDetails").innerHTML = details;
 }
 
-document.getElementById("start-tracking").addEventListener("click", trackRoute);
-window.initMap = initMap;
+document.getElementById("startTracking").addEventListener("click", startTracking);
+document.getElementById("stopTracking").addEventListener("click", stopTracking);
+
+window.onload = initMap;

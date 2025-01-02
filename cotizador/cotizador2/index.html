@@ -3,22 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seguimiento de Ruta</title>
-        <link rel="stylesheet" href="styles.css" />
-
-    
+    <title>Real-Time Map Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcrFJEWdAGlktaEVMoPwxXNvzReSSYA3w&libraries=places"></script>
 </head>
 <body>
-    <h1>Seguimiento de Ruta en Tiempo Real</h1>
     <div id="map"></div>
-    <button id="start-tracking">Iniciar Seguimiento</button>
-    <div class="info">
-        <h3>Detalles del Viaje</h3>
-        <p id="details"></p>
-        <p id="quote"></p>
-    </div>
-
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcrFJEWdAGlktaEVMoPwxXNvzReSSYA3w&libraries=places"></script>
+    <button id="startTracking">Start Tracking</button>
+    <button id="stopTracking">Stop Tracking</button>
+    <div id="routeDetails"></div>
     <script src="script.js"></script>
 </body>
 </html>
