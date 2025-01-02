@@ -4,22 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Real-Time Tracking App</title>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcrFJEWdAGlktaEVMoPwxXNvzReSSYA3w&libraries=places"
-    onerror="alert('Error loading Google Maps API. Please check your internet connection or API key.');">
-  </script>
+    <script async defer 
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcrFJEWdAGlktaEVMoPwxXNvzReSSYA3w&libraries=places" 
+        onload="initMap()" 
+        onerror="alert('Error loading Google Maps API. Please check your internet connection or API key.');">
+</script>
+
       <link rel="stylesheet" href="styles.css">
     
 </head>
 <body>
     <h3>Monitoreo de Viaje</h3>
     <div id="map"></div>
-    <div id="info"></div>
     <div>
     <p>Tiempo: <span id="timer">0:00</span></p>
     </div>
     <button id="increaseCostButton">Aumentar Costo 25%</button>
-    <button onclick="startTracking()">Iniciar Viaje</button>
-    <button onclick="stopTracking()">Finalizar Viaje</button>
+    <button id="startButton">Iniciar Viaje</button>
+    <button id="stopButton">Finalizar Viaje</button>
+
     <div id="info"></div>
 
     <script src="script.js"></script>
