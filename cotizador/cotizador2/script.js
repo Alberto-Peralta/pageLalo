@@ -1,101 +1,163 @@
 let map;
 let marker;
-let polyline;
-let isTracking = false;
-let path = [];
-let stopTimes = [];
-let lastStopTime = null;
+let watchID;
 let totalDistance = 0;
 let totalTime = 0;
-const pricePerKm = 1; // Set your price per kilometer
-const pricePerMinute = 0.5; // Set your price per minute
-const stopThreshold = 3 * 60 * 1000; // 3 minutes in milliseconds
+let previousPosition = null;
+let path = []; // Array para almacenar las posiciones
+let polyline;
 
 function initMap() {
-    map = new google.maps.Map(document.getElementById("map"), {
-        center: { lat: -34.397, lng: 150.644 },
-        zoom: 15,
-    });
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+            const userLocation = {
+                lat: position.coords.latitude,
+                lng: position.coords.longitude
+            };
 
-    polyline = new google.maps.Polyline({
-        path: [],
-        geodesic: true,
-        strokeColor: '#FF0000',
-        strokeOpacity: 1.0,
-        strokeWeight: 2,
-    });
-    polyline.setMap(map);
+            // Inicializar el mapa centrado en la ubicación del usuario
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: userLocation,
+                zoom: 15
+            });
+
+            // Usar un ícono de coche para el marcador
+            const carIcon = {
+                url: 'https://upload.wikimedia.org/wikipedia/commons/3/3e/Red_car_icon.svg', // URL del ícono
+                scaledSize: new google.maps.Size(40, 40), // Tamaño ajustado del ícono
+                anchor: new google.maps.Point(20, 20), // Centrar el ícono
+                origin: new google.maps.Point(0, 0), // Origen del ícono
+                rotation: 0 // Rotación inicial
+            };
+
+            // Colocar el marcador en la ubicación actual con el ícono de coche
+            marker = new google.maps.Marker({
+                position: userLocation,
+                map: map,
+                icon: carIcon // Establecer el ícono del marcador
+            });
+
+        }, function(error) {
+            const defaultLocation = { lat: -34.397, lng: 150.644 };
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: defaultLocation,
+                zoom: 15
+            });
+            marker = new google.maps.Marker({
+                position: defaultLocation,
+                map: map
+            });
+            console.warn("No se pudo obtener la ubicación del usuario. Mostrando ubicación predeterminada.");
+        });
+    } else {
+        alert("Geolocalización no es compatible con este navegador.");
+    }
 }
 
 function startTracking() {
-    if (isTracking) return;
-
-    isTracking = true;
-    path = [];
-    stopTimes = [];
-    totalDistance = 0;
-    totalTime = 0;
-    lastStopTime = null;
-
     if (navigator.geolocation) {
-        navigator.geolocation.watchPosition(position => {
-            const currentPos = {
-                lat: position.coords.latitude,
-                lng: position.coords.longitude,
-            };
-
-            path.push(currentPos);
-            polyline.setPath(path);
-            map.setCenter(currentPos);
-
-            // Calculate distance
-            if (path.length > 1) {
-                const prevPos = path[path.length - 2];
-                totalDistance += google.maps.geometry.spherical.computeDistanceBetween(
-                    new google.maps.LatLng(prevPos.lat, prevPos.lng),
-                    new google.maps.LatLng(currentPos.lat, currentPos.lng)
-                );
-            }
-
-            // Check for stops
-            if (lastStopTime) {
-                const stopDuration = new Date() - lastStopTime;
-                if (stopDuration >= stopThreshold) {
-                    stopTimes.push(stopDuration);
-                    lastStopTime = null;
-                }
-            } else {
-                lastStopTime = new Date();
-            }
-        });
+        watchID = navigator.geolocation.watchPosition(updatePosition, handleError);
     }
 }
 
 function stopTracking() {
-    if (!isTracking) return;
-
-    isTracking = false;
-
-    // Calculate total time
-    totalTime = (new Date() - lastStopTime) / 1000 / 60; // in minutes
-
-    // Calculate costs
-    const distanceCost = (totalDistance / 1000) * pricePerKm; // in km
-    const timeCost = totalTime * pricePerMinute; // in minutes
-    const stopCost = stopTimes.filter(t => t >= stopThreshold).length * 2; // $2 for each stop over 3 minutes
-
-    // Display results
-    const details = `
-        <h3>Route Details</h3>
-        <p>Total Distance: ${(totalDistance / 1000).toFixed(2)} km</p>
-        <p>Total Time: ${totalTime.toFixed(2)} minutes</p>
-        <p>Total Stops: ${stopTimes.length}</p>
-        <p>Total Cost: $${(distanceCost + timeCost + stopCost).toFixed(2)}</p>
-    `;
-    document.getElementById("routeDetails").innerHTML = details;
+    navigator.geolocation.clearWatch(watchID);
+    displayResults();
 }
 
-document.getElementById("startTracking").addEventListener("click", startTracking);
-document.getElementById("stopTracking").addEventListener("click", stopTracking);
+function updatePosition(position) {
+    const currentPosition = {
+        lat: position.coords.latitude,
+        lng: position.coords.longitude
+    };
 
+    // Agregar la posición actual al array de path
+    path.push(currentPosition);
+
+    if (previousPosition) {
+        const distance = calculateDistance(previousPosition, currentPosition);
+        totalDistance += distance;
+        totalTime += 1; // Asumiendo intervalos de 1 segundo para simplicidad
+    }
+
+    // Actualizar la posición del marcador
+    marker.setPosition(currentPosition);
+
+    // Girar el marcador para que apunte en la dirección del movimiento
+    const heading = calculateHeading(previousPosition, currentPosition);
+    marker.setRotation(heading); // Rotar el marcador según la dirección
+
+    // Centrar el mapa en la nueva posición
+    map.setCenter(currentPosition);
+
+    previousPosition = currentPosition;
+
+    drawPath(); // Llamar a la función para dibujar la línea
+}
+
+function drawPath() {
+    if (!polyline) {
+        polyline = new google.maps.Polyline({
+            path: path,
+            geodesic: true,
+            strokeColor: '#FF0000',
+            strokeOpacity: 1.0,
+            strokeWeight: 2
+        });
+        polyline.setMap(map);
+    } else {
+        polyline.setPath(path); // Actualiza el path de la polilínea
+    }
+}
+
+function calculateDistance(prevPos, currentPos) {
+    const R = 6371e3; // Radio de la Tierra en metros
+    const lat1 = prevPos.lat * Math.PI / 180;
+    const lat2 = currentPos.lat * Math.PI / 180;
+    const deltaLat = (currentPos.lat - prevPos.lat) * Math.PI / 180;
+    const deltaLng = (currentPos.lng - prevPos.lng) * Math.PI / 180;
+    const a = Math.sin(deltaLat / 2) * Math.sin(deltaLat / 2) +
+              Math.cos(lat1) * Math.cos(lat2) *
+              Math.sin(deltaLng / 2) * Math.sin(deltaLng / 2);
+    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+    return R * c; // Distancia en metros
+}
+
+function calculateHeading(prevPos, currentPos) {
+    const lat1 = prevPos.lat * Math.PI / 180;
+    const lat2 = currentPos.lat * Math.PI / 180;
+    const lng1 = prevPos.lng * Math.PI / 180;
+    const lng2 = currentPos.lng * Math.PI / 180;
+
+    const dLng = lng2 - lng1;
+
+    const y = Math.sin(dLng) * Math.cos(lat2);
+    const x = Math.cos(lat1) * Math.sin(lat2) - Math.sin(lat1) * Math.cos(lat2) * Math.cos(dLng);
+    const heading = Math.atan2(y, x);
+
+    return (heading * 180 / Math.PI); // Convertir radianes a grados
+}
+
+function displayResults() {
+    const distanceInKm = (totalDistance / 1000).toFixed(2);
+    const timeInMinutes = (totalTime / 60).toFixed(2);
+    const quote = calculateQuote(distanceInKm, timeInMinutes);
+    document.getElementById('info').innerHTML = `
+        <p>Total Distance: ${distanceInKm} km</p>
+        <p>Total Time: ${timeInMinutes} minutes</p>
+        <p>Quote: $${quote}</p>
+    `;
+}
+
+function calculateQuote(distance, time) {
+    const ratePerKm = 2; // Tarifa por km
+    const ratePerMinute = 0.5; // Tarifa por minuto
+    return (distance * ratePerKm + time * ratePerMinute).toFixed(2);
+}
+
+function handleError(error) {
+    console.warn(`ERROR(${error.code}): ${error.message}`);
+}
+
+// Inicializar el mapa cuando la ventana se carga
 window.onload = initMap;
