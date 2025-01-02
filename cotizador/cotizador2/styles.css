@@ -1,135 +1,93 @@
-:root {
-  --color-fondo-principal: #2c3e50;
-  --color-fondo-secundario: #34495e;
-  --color-texto-principal: #ecf0f1;
-  --color-boton: #e67e22;
-  --color-boton-hover: #d35400;
-  --color-borde: #7f8c8d;
-  --color-header: #1c2833;
-  --color-cotizacion-fondo: #ffffff; /* Fondo blanco para la cotización */
-  --color-cotizacion-texto: #2980b9; /* Color azul para el texto de la cotización */
-  --sombra-suave: 0 4px 8px rgba(0, 0, 0, 0.2);
-  --fuente-elegante: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente más elegante */
-}
-* {
-  box-sizing: border-box;
-}
+/* General styles */
 body {
-  font-family: var(--fuente-elegante);
+  font-family: 'Roboto', Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: var(--color-fondo-principal);
-  color: var(--color-texto-principal);
-}
-header {
-  background-color: var(--color-header);
-  color: #fff;
-  padding: 30px 0;
-  text-align: center;
-  box-shadow: var(--sombra-suave);
+  background-color: #f7f9fc;
+  color: #333;
 }
 
-.container {
-  padding: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
-  background-color: var(--color-fondo-secundario);
-  border-radius: 15px; /* Bordes más redondeados */
-  box-shadow: var(--sombra-suave);
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-top: 20px;
 }
-label {
-  font-weight: bold;
+
+button {
   display: block;
-  margin-bottom: 10px;
-  color: #bdc3c7;
-}
-input, select {
-  width: 100%;
-  padding: 15px;
-  margin-bottom: 15px;
-  border: 1px solid var(--color-borde);
-  border-radius: 10px; /* Bordes redondeados */
-  background-color: #34495e;
-  color: #ecf0f1;
-  box-shadow: var(--sombra-suave);
+  margin: 20px auto;
+  padding: 12px 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
 }
-input:focus, select:focus {
-  border-color: var(--color-boton);
-  box-shadow: 0 0 8px rgba(230, 126, 34, 0.5), 0 0 0 4px rgba(0, 0, 0, 0.1);
-}
-.button-container {
-  display: flex;
-  justify-content: space-between; /* Espacio uniforme entre los botones */
-  margin-top: 15px; /* Espacio superior para separar de los elementos anteriores */
-}
-.button {
-  background-color: var(--color-boton);
-  color: #fff;
-  padding: 14px 28px;
-  font-size: 18px;
-  font-weight: bold;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease-in-out;
-  box-shadow: var(--sombra-suave);
-  flex: 1; /* Hacer que los botones ocupen el mismo espacio */
-  margin: 0 10px; /* Espacio horizontal entre los botones */
-}
-.button:hover {
-  background-color: var(--color-boton-hover);
+
+button:hover {
+  background-color: #2980b9;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
   transform: translateY(-2px);
 }
+
 #map {
-  flex-direction: centered;
-  width: 100%;
   height: 500px;
-  margin-top: 20px;
+  width: 90%;
+  margin: 20px auto;
   border-radius: 10px;
-}
-#costos {
-  margin-top: 20px;
-  padding: 25px;
-  background-color: var(--color-cotizacion-fondo); /* Fondo blanco */
-  border: 1px solid var(--color-borde);
-  border-radius: 15px; /* Bordes redondeados */
-  box-shadow: var(--sombra-suave);
-  color: var(--color-cotizacion-texto); /* Color azul para el texto */
-  font-family: var(--fuente-elegante); /* Fuente elegante */
-  font-size: 16px; /* Tamaño de fuente */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }
 
-#enlace-mapa{
-  white-space: normal
+.info {
+  width: 90%;
+  margin: 0 auto 20px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.info h3 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  color: #34495e;
+}
 
-@media (max-width: 768px) {
-  .container {
-      padding: 20px;
+.info p {
+  margin: 5px 0;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+  h1 {
+      font-size: 2rem;
   }
+
+  button {
+      padding: 10px 15px;
+      font-size: 0.9rem;
+  }
+
   #map {
       height: 400px;
   }
-  input, select {
-      padding: 12px;
+
+  .info {
+      padding: 15px;
   }
-  .button {
-      width: 100%;
-      padding: 12px 0;
-      font-size: 16px;
+
+  .info h3 {
+      font-size: 1.3rem;
   }
-}
-@media (max-width: 480px) {
-  header h1 {
-      font-size: 1.6rem;
-  }
-  .button {
-      font-size: 16px;
-      padding: 12px;
-  }
-  #costos {
-      padding: 20px;
+
+  .info p {
+      font-size: 0.9rem;
   }
 }

@@ -1,93 +1,30 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cotizador de Viajes</title>
-
-    <!-- Archivo de estilos CSS -->
-    <link rel="stylesheet" href="styles.css" />
-
-    <!-- Google Maps API -->
-    <script 
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcrFJEWdAGlktaEVMoPwxXNvzReSSYA3w&libraries=places&callback=initMap" 
-        async 
-        defer
-    ></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seguimiento de Ruta</title>
+    <style>
+        #map {
+            height: 500px;
+            width: 100%;
+        }
+        .info {
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-    <!-- Encabezado principal -->
-    <header>
-        <h1>Cotizador de Viajes</h1>
-    </header>
-
-    <!-- Contenedor principal -->
-    <div class="container">
-        <!-- Formulario de entrada de origen y destino -->
-        <div id="inputs">
-            <label for="origen">Origen:</label>
-            <input 
-                id="origen" 
-                class="autocomplete" 
-                type="text" 
-                placeholder="Escribe tu origen" 
-                aria-label="Campo de entrada para el origen"
-                required 
-            />
-            
-            <label for="destino">Destino:</label>
-            <input 
-                id="destino" 
-                class="autocomplete" 
-                type="text" 
-                placeholder="Escribe tu destino" 
-                aria-label="Campo de entrada para el destino"
-                required 
-            />
-
-            <!-- Botones de control de viaje -->
-            <div class="button-container">
-                <button 
-                    id="iniciar-viaje" 
-                    class="button" 
-                    aria-label="Iniciar viaje"
-                >
-                    Iniciar Viaje
-                </button>
-                
-                <button 
-                    id="finalizar-viaje" 
-                    class="button" 
-                    aria-label="Finalizar viaje"
-                    disabled
-                >
-                    Finalizar Viaje
-                </button>
-            </div>
-        </div> 
-
-        <!-- Contenedor del mapa -->
-        <div id="map"></div>
-        
-        <!-- Sección de costos -->
-        <div id="costos">
-            <h2>Costo Estimado</h2>
-            <p id="detalle-costos" aria-live="polite"></p>
-        </div>
-
-        <!-- Botones de acción -->
-        <div class="button-container">
-            <a 
-                href="../index.html" 
-                class="button" 
-                aria-label="Ir a la página principal"
-            >
-                Ir a la Página Principal
-            </a>
+    <h1>Seguimiento de Ruta en Tiempo Real</h1>
+    <div id="map"></div>
+    <button id="start-tracking">Iniciar Seguimiento</button>
+    <div class="info">
+        <h3>Detalles del Viaje</h3>
+        <p id="details"></p>
+        <p id="quote"></p>
     </div>
 
-    <!-- Archivo de scripts JavaScript -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script>
     <script src="script.js"></script>
 </body>
 </html>
