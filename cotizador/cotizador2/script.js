@@ -1,111 +1,88 @@
-let map, marker, path, polyline;
-let watchID = null;
-let startTime = null;
-let timerInterval = null;
-let distanceTravelled = 0;
-const markerIcon = {
-  url: 'https://example.com/car-icon.png', // Cambia esta URL por la de tu icono de auto.
-  scaledSize: new google.maps.Size(50, 50), // Tamaño del icono.
-};
+let map;
+let marker;
+let watchId;
+let startTime;
+let distance = 0; // Distancia en metros
+let timerInterval;
 
 function initMap() {
-  const mapOptions = {
-    zoom: 15,
-    mapTypeId: 'roadmap',
-  };
+    const initialLocation = { lat: -34.397, lng: 150.644 }; // Ubicación inicial
+    map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 15,
+        center: initialLocation,
+    });
 
-  map = new google.maps.Map(document.getElementById('map'), mapOptions);
-  polyline = new google.maps.Polyline({
-    map: map,
-    path: [],
-    geodesic: true,
-    strokeColor: '#FF0000',
-    strokeOpacity: 1.0,
-    strokeWeight: 2,
-  });
+    marker = new google.maps.Marker({
+        position: initialLocation,
+        map: map,
+        title: "Tu ubicación",
+        icon: {
+            url: "../../icons/car.png", // Cambia esto a la URL de tu marcador personalizado
+            scaledSize: new google.maps.Size(30, 30), // Tamaño del marcador
+        },
+    });
 
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(
-      (position) => {
-        const { latitude, longitude } = position.coords;
-        const currentLocation = new google.maps.LatLng(latitude, longitude);
+    document.getElementById("startButton").addEventListener("click", startTrip);
+    document.getElementById("stopButton").addEventListener("click", stopTrip);
+}
 
-        map.setCenter(currentLocation);
-        marker = new google.maps.Marker({
-          position: currentLocation,
-          map: map,
-          icon: markerIcon,
+function startTrip() {
+    if (navigator.geolocation) {
+        watchId = navigator.geolocation.watchPosition(updatePosition, handleError, {
+            enableHighAccuracy: true,
         });
-
-        path = polyline.getPath();
-        path.push(currentLocation);
-      },
-      () => alert('No se pudo obtener tu ubicación.'),
-      { enableHighAccuracy: true }
-    );
-  } else {
-    alert('Geolocalización no soportada en este navegador.');
-  }
-
-  document.getElementById('startButton').addEventListener('click', startTracking);
-  document.getElementById('stopButton').addEventListener('click', stopTracking);
+        startTime = Date.now();
+        startTimer();
+    } else {
+        alert("Geolocalización no soportada por este navegador.");
+    }
 }
 
-function startTracking() {
-  if (navigator.geolocation && !watchID) {
-    startTime = Date.now();
-    updateTimer();
-
-    watchID = navigator.geolocation.watchPosition(
-      (position) => {
-        const { latitude, longitude } = position.coords;
-        const newPosition = new google.maps.LatLng(latitude, longitude);
-
-        marker.setPosition(newPosition);
-        path.push(newPosition);
-        map.setCenter(newPosition);
-
-        if (path.getLength() > 1) {
-          const previousPosition = path.getAt(path.getLength() - 2);
-          const segmentDistance = google.maps.geometry.spherical.computeDistanceBetween(
-            previousPosition,
-            newPosition
-          );
-          distanceTravelled += segmentDistance;
-        }
-      },
-      () => alert('Error obteniendo ubicación en tiempo real.'),
-      { enableHighAccuracy: true }
-    );
-  }
+function stopTrip() {
+    if (watchId) {
+        navigator.geolocation.clearWatch(watchId);
+        clearInterval(timerInterval);
+        showTripDetails();
+    }
 }
 
-function stopTracking() {
-  if (watchID) {
-    navigator.geolocation.clearWatch(watchID);
-    watchID = null;
+function updatePosition(position) {
+    const newPos = {
+        lat: position.coords.latitude,
+        lng: position.coords.longitude,
+    };
 
-    clearInterval(timerInterval);
-    const timeElapsed = ((Date.now() - startTime) / 1000).toFixed(1); // Segundos
-    const distanceInKm = (distanceTravelled / 1000).toFixed(2); // Kilómetros
+    marker.setPosition(newPos);
+    map.setCenter(newPos);
 
-    document.getElementById('info').innerHTML = `
-      <p>Distancia recorrida: ${distanceInKm} km</p>
-      <p>Tiempo transcurrido: ${formatTime(timeElapsed)}</p>
-    `;
-  }
+    // Calcular la distancia recorrida
+    if (marker.getPosition()) {
+        distance += google.maps.geometry.spherical.computeDistanceBetween(marker.getPosition(), newPos);
+    }
 }
 
-function updateTimer() {
-  const timerElement = document.getElementById('timer');
-  timerInterval = setInterval(() => {
-    const elapsedSeconds = Math.floor((Date.now() - startTime) / 1000);
-    timerElement.textContent = formatTime(elapsedSeconds);
-  }, 1000);
+function handleError(error) {
+    console.warn(`ERROR(${error.code}): ${error.message}`);
 }
 
-function formatTime(seconds) {
-  const minutes = Math.floor(seconds / 60);
-  const remainingSeconds = seconds % 60;
-  return `${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
+function startTimer() {
+    const timerDisplay = document.getElementById("timer");
+    let seconds = 0;
+
+    timerInterval = setInterval(() => {
+        seconds++;
+        const minutes = Math.floor(seconds / 60);
+        const displaySeconds = seconds % 60;
+        timerDisplay.textContent = `${minutes}:${displaySeconds < 10 ? '0' : ''}${displaySeconds}`;
+    }, 1000);
+}
+
+function showTripDetails() {
+    const infoDiv = document.getElementById("info");
+    const totalDistanceKm = (distance / 1000).toFixed(2); // Convertir a kilómetros
+    const totalTime = Math.floor((Date.now() - startTime) / 1000); // Tiempo total en segundos
+    const totalMinutes = Math.floor(totalTime / 60);
+    const totalSeconds = totalTime % 60;
+
+    infoDiv.innerHTML = `Distancia recorrida: ${totalDistanceKm} km<br>Tiempo total: ${totalMinutes}:${totalSeconds < 10 ? '0' : ''}${totalSeconds}`;
 }
