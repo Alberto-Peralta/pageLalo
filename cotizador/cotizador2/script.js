@@ -6,22 +6,73 @@ let distance = 0; // Distancia en metros
 let timerInterval;
 
 function initMap() {
-    const initialLocation = { lat: -34.397, lng: 150.644 }; // Ubicación inicial
+    // Intentar obtener la ubicación actual del usuario
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+            (position) => {
+                const userLocation = {
+                    lat: position.coords.latitude,
+                    lng: position.coords.longitude,
+                };
+
+                // Inicializar el mapa centrado en la ubicación actual
+                map = new google.maps.Map(document.getElementById("map"), {
+                    zoom: 15, // Nivel de zoom similar a Uber
+                    center: userLocation,
+                });
+
+                // Crear el marcador en la ubicación actual
+                marker = new google.maps.Marker({
+                    position: userLocation,
+                    map: map,
+                    title: "Tu ubicación actual",
+                    icon: {
+                        url: "../../icons/car.png", // Cambia esto a la URL de tu marcador personalizado
+                        scaledSize: new google.maps.Size(30, 30), // Tamaño del marcador
+                    },
+                });
+
+                // Agregar listeners para botones
+                document.getElementById("startButton").addEventListener("click", startTrip);
+                document.getElementById("stopButton").addEventListener("click", stopTrip);
+            },
+            (error) => {
+                console.warn(`ERROR(${error.code}): ${error.message}`);
+                // Si no se puede obtener la ubicación, usar una ubicación por defecto
+                const defaultLocation = { lat: -34.397, lng: 150.644 };
+                initDefaultMap(defaultLocation);
+            },
+            {
+                enableHighAccuracy: true,
+            }
+        );
+    } else {
+        alert("Geolocalización no soportada por este navegador.");
+        // Usar una ubicación por defecto
+        const defaultLocation = { lat: -34.397, lng: 150.644 };
+        initDefaultMap(defaultLocation);
+    }
+}
+
+function initDefaultMap(defaultLocation) {
+    // Inicializar el mapa con una ubicación por defecto
     map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 50,
-        center: initialLocation,
+        zoom: 15,
+        center: defaultLocation,
     });
 
+    // Crear un marcador en la ubicación por defecto
     marker = new google.maps.Marker({
-        position: initialLocation,
+        position: defaultLocation,
         map: map,
-        title: "Tu ubicación",
+        title: "Ubicación por defecto",
         icon: {
-            url: "../../icons/car.png", // Cambia esto a la URL de tu marcador personalizado
-            scaledSize: new google.maps.Size(30, 30), // Tamaño del marcador
+            url: "../../icons/car.png",
+            scaledSize: new google.maps.Size(30, 30),
         },
     });
 
+    // Agregar listeners para botones
     document.getElementById("startButton").addEventListener("click", startTrip);
     document.getElementById("stopButton").addEventListener("click", stopTrip);
 }
