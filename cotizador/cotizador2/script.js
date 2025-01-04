@@ -47,18 +47,17 @@ function stopTrip() {
 }
 
 function updatePosition(position) {
-    const newPos = {
-        lat: position.coords.latitude,
-        lng: position.coords.longitude,
-    };
+    const newPos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
 
+    if (marker.getPosition()) {
+        const lastPos = marker.getPosition();
+        const segmentDistance = google.maps.geometry.spherical.computeDistanceBetween(lastPos, newPos);
+        distance += segmentDistance; // Sumar al total
+    }
+
+    // Actualizar la posición del marcador y centrar el mapa
     marker.setPosition(newPos);
     map.setCenter(newPos);
-
-    // Calcular la distancia recorrida
-    if (marker.getPosition()) {
-        distance += google.maps.geometry.spherical.computeDistanceBetween(marker.getPosition(), newPos);
-    }
 }
 
 function handleError(error) {
@@ -67,13 +66,21 @@ function handleError(error) {
 
 function startTimer() {
     const timerDisplay = document.getElementById("timer");
+    const distanceDisplay = document.getElementById("distance"); // Elemento para mostrar la distancia
     let seconds = 0;
 
     timerInterval = setInterval(() => {
         seconds++;
         const minutes = Math.floor(seconds / 60);
         const displaySeconds = seconds % 60;
+
+        // Actualizar el tiempo transcurrido
         timerDisplay.textContent = `${minutes}:${displaySeconds < 10 ? '0' : ''}${displaySeconds}`;
+
+        // Actualizar la distancia recorrida
+        const totalDistanceKm = (distance / 1000).toFixed(2); // Convertir a kilómetros con 2 decimales
+        const totalDistanceMeters = distance.toFixed(1); // Distancia en metros con un decimal
+        distanceDisplay.textContent = `Distancia: ${totalDistanceKm} km (${totalDistanceMeters} m)`;
     }, 1000);
 }
 
