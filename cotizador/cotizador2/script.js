@@ -38,22 +38,30 @@ function startTrip() {
         distance = 0;
 
         timerInterval = setInterval(updateTimer, 1000);
+
+        // Mostrar los datos en tiempo real
+        document.getElementById("liveStats").style.display = "block";
     } else {
         alert("La geolocalización no es compatible con este navegador.");
     }
 }
+
 
 function stopTrip() {
     if (watchID) {
         navigator.geolocation.clearWatch(watchID);
         clearInterval(timerInterval);
 
-        // Actualizar los detalles del viaje en la interfaz
+        // Ocultar los datos en tiempo real
+        document.getElementById("liveStats").style.display = "none";
+
+        // Mostrar los detalles finales del viaje
         document.getElementById("finalDistance").innerText = `Distancia total: ${(distance / 1000).toFixed(2)} km.`;
         document.getElementById("finalTime").innerText = `Tiempo total: ${getTimeElapsed()}.`;
         document.getElementById("tripDetails").style.display = "block";
     }
 }
+
 
 
 function updatePosition(position) {
@@ -70,14 +78,16 @@ function updatePosition(position) {
         distance += google.maps.geometry.spherical.computeDistanceBetween(prevPosition, newPosition);
     }
 
-    // Actualiza la distancia en la interfaz
-    document.getElementById("distance").innerText = `Distancia: ${(distance / 1000).toFixed(2)} km (${distance.toFixed(1)} m)`;
+    // Actualiza la distancia en tiempo real
+    document.getElementById("liveDistance").innerText = `Distancia: ${(distance / 1000).toFixed(2)} km`;
 }
+
 
 function updateTimer() {
     const elapsedTime = Date.now() - startTime;
-    document.getElementById("timer").innerText = `Tiempo: ${formatTime(elapsedTime)}`;
+    document.getElementById("liveTime").innerText = `Tiempo: ${formatTime(elapsedTime)}`;
 }
+
 
 function formatTime(ms) {
     const totalSeconds = Math.floor(ms / 1000);
