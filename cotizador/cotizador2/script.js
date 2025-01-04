@@ -9,7 +9,7 @@ function initMap() {
     // Inicializa el mapa en una ubicación predeterminada (por ejemplo, Ciudad de México)
     const defaultLocation = { lat: 19.4326, lng: -99.1332 };
     map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 15,
+        zoom: 50,
         center: defaultLocation,
     });
 
@@ -19,9 +19,11 @@ function initMap() {
         map: map,
         title: "Tu ubicación",
         icon: {
-            url: "https://maps.google.com/mapfiles/ms/icons/red-dot.png" // Cambia la URL por la de tu marcador personalizado
+            url: "../../icons/car.png", // Usa una URL absoluta para probar
+            scaledSize: new google.maps.Size(50, 50) // Ajusta el tamaño del icono si es necesario
         }
     });
+    
 
     document.getElementById("startButton").onclick = startTrip;
     document.getElementById("stopButton").onclick = stopTrip;
@@ -45,9 +47,14 @@ function stopTrip() {
     if (watchID) {
         navigator.geolocation.clearWatch(watchID);
         clearInterval(timerInterval);
-        alert(`Viaje finalizado. Distancia total: ${(distance / 1000).toFixed(2)} km. Tiempo total: ${getTimeElapsed()}`);
+
+        // Actualizar los detalles del viaje en la interfaz
+        document.getElementById("finalDistance").innerText = `Distancia total: ${(distance / 1000).toFixed(2)} km.`;
+        document.getElementById("finalTime").innerText = `Tiempo total: ${getTimeElapsed()}.`;
+        document.getElementById("tripDetails").style.display = "block";
     }
 }
+
 
 function updatePosition(position) {
     const { latitude, longitude } = position.coords;
