@@ -8,7 +8,7 @@ let timerInterval;
 function initMap() {
     const initialLocation = { lat: -34.397, lng: 150.644 }; // Ubicación inicial
     map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 15,
+        zoom: 50,
         center: initialLocation,
     });
 
