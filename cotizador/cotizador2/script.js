@@ -13,7 +13,7 @@ function initMap() {
             startCoords = { lat: latitude, lng: longitude };
             map = new google.maps.Map(document.getElementById('map'), {
                 center: startCoords,
-                zoom: 15
+                zoom: 20
             });
             marker = new google.maps.Marker({
                 position: startCoords,
@@ -124,10 +124,10 @@ function showSummary() {
     const summaryDiv = document.getElementById('summary');
     
     summaryDiv.innerHTML = `
-        <h3>Trip Summary</h3>
-        <p><strong>Distance:</strong> ${distanceKm} km</p>
-        <p><strong>Time:</strong> ${timeElapsed}</p>
-        <p><strong>Total Cost:</strong> $${totalCost.toFixed(2)}</p>
+        <h3>Resumen del viaje</h3>
+        <p><strong>Distancia:</strong> ${distanceKm} km</p>
+        <p><strong>Tiempo:</strong> ${timeElapsed}</p>
+        <p><strong>Costo Total:</strong> $${totalCost.toFixed(2)}</p>
     `;
     
     summaryDiv.classList.remove('hidden');
