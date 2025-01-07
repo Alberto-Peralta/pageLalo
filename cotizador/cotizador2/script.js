@@ -84,16 +84,27 @@ function updateTime() {
 function showSummary() {
     const distanceKm = (distanceTravelled / 1000).toFixed(2);
     const timeElapsed = document.getElementById('time').innerText;
+    const timeParts = timeElapsed.split(':');
+    const minutesElapsed = parseInt(timeParts[0], 10) + parseInt(timeParts[1], 10) / 60;
+    
+    const costPerKm = 5.25;
+    const costPerMinute = 2.00;
+    const totalCost = (distanceKm * costPerKm) + (minutesElapsed * costPerMinute);
+
     const summaryDiv = document.getElementById('summary');
     
     summaryDiv.innerHTML = `
         <h3>Trip Summary</h3>
         <p><strong>Distance:</strong> ${distanceKm} km</p>
         <p><strong>Time:</strong> ${timeElapsed}</p>
+        <p><strong>Total Cost:</strong> $${totalCost.toFixed(2)}</p>
     `;
     
     summaryDiv.classList.remove('hidden');
+    document.querySelector('.controls').classList.add('hidden');
 }
+
+
 
 
 document.getElementById('startBtn').addEventListener('click', startTrip);
