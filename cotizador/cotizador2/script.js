@@ -102,7 +102,7 @@ function updateTimeAndDistance() {
     const costPerKm = 5.25;
     const costPerMinute = 2.00;
     const totalCost = (distanceKm * costPerKm) + (minutes * costPerMinute);
-    document.getElementById('realTimeCost').innerText = `Cost: $${totalCost.toFixed(2)}`;
+    document.getElementById('realTimeCost').innerText = `Cost: $ ${totalCost.toFixed(2)}`;
 
     // Actualizar la posición del marcador
     currentCoords = currentPosition;
@@ -131,7 +131,7 @@ function showSummary() {
     `;
     
     summaryDiv.classList.remove('hidden');
-    document.querySelector('.controls').classList.add('hidden');
+    document.querySelector('.info').classList.add('hidden');
 }
 
 
