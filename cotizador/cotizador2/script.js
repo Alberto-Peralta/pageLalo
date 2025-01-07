@@ -82,8 +82,19 @@ function updateTime() {
 }
 
 function showSummary() {
-    alert(`Trip summary:\nDistance: ${(distanceTravelled / 1000).toFixed(2)} km\nTime: ${document.getElementById('time').innerText}`);
+    const distanceKm = (distanceTravelled / 1000).toFixed(2);
+    const timeElapsed = document.getElementById('time').innerText;
+    const summaryDiv = document.getElementById('summary');
+    
+    summaryDiv.innerHTML = `
+        <h3>Trip Summary</h3>
+        <p><strong>Distance:</strong> ${distanceKm} km</p>
+        <p><strong>Time:</strong> ${timeElapsed}</p>
+    `;
+    
+    summaryDiv.classList.remove('hidden');
 }
+
 
 document.getElementById('startBtn').addEventListener('click', startTrip);
 document.getElementById('stopBtn').addEventListener('click', stopTrip);

@@ -47,6 +47,21 @@ button:disabled {
   text-align: center;
 }
 
+.hidden {
+  display: none;
+}
+
+#summary {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  max-width: 400px;
+  text-align: center;
+}
+
+
 @media (max-width: 768px) {
   #map {
       height: 50vh;
