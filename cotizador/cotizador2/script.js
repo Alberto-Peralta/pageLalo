@@ -13,7 +13,7 @@ function initMap() {
             startCoords = { lat: latitude, lng: longitude };
             map = new google.maps.Map(document.getElementById('map'), {
                 center: startCoords,
-                zoom: 50
+                zoom: 30
             });
             marker = new google.maps.Marker({
                 position: startCoords,
@@ -80,6 +80,36 @@ function updateTime() {
     const seconds = elapsedTime.getUTCSeconds();
     document.getElementById('time').innerText = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
 }
+
+
+function updateTimeAndDistance() {
+    const currentPosition = { lat: currentCoords.lat, lng: currentCoords.lng };
+    const distance = google.maps.geometry.spherical.computeDistanceBetween(
+        new google.maps.LatLng(currentCoords.lat, currentCoords.lng),
+        new google.maps.LatLng(map.getCenter().lat(), map.getCenter().lng())
+    );
+    distanceTravelled += distance;
+
+    const distanceKm = (distanceTravelled / 1000).toFixed(2);
+    document.getElementById('distance').innerText = `${distanceKm} km`;
+
+    const timeElapsed = Math.floor((Date.now() - startTime) / 1000);
+    const minutes = Math.floor(timeElapsed / 60);
+    const seconds = timeElapsed % 60;
+    document.getElementById('time').innerText = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+
+    // Calcular el costo en tiempo real
+    const costPerKm = 5.25;
+    const costPerMinute = 2.00;
+    const totalCost = (distanceKm * costPerKm) + (minutes * costPerMinute);
+    document.getElementById('realTimeCost').innerText = `Cost: $${totalCost.toFixed(2)}`;
+
+    // Actualizar la posición del marcador
+    currentCoords = currentPosition;
+    marker.setPosition(currentPosition);
+    map.setCenter(currentPosition);
+}
+
 
 function showSummary() {
     const distanceKm = (distanceTravelled / 1000).toFixed(2);
