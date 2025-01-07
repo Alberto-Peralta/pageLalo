@@ -1,107 +1,90 @@
 let map;
 let marker;
-let watchID;
+let watchId;
 let startTime;
-let distance = 0; // en metros
-let timerInterval;
+let distanceCovered = 0;
+let totalTime = 0;
+let costMultiplier = 1.0;
+
+document.getElementById('startBtn').addEventListener('click', startJourney);
+document.getElementById('endBtn').addEventListener('click', endJourney);
+document.getElementById('costAdjustBtn').addEventListener('click', adjustCost);
 
 function initMap() {
-    // Inicializa el mapa en una ubicación predeterminada (por ejemplo, Ciudad de México)
-    const defaultLocation = { lat: 19.4326, lng: -99.1332 };
-    map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 50,
-        center: defaultLocation,
+    map = new google.maps.Map(document.getElementById('map'), {
+        center: { lat: 0, lng: 0 },
+        zoom: 15,
     });
-
-    // Crea un marcador personalizado
     marker = new google.maps.Marker({
-        position: defaultLocation,
+        position: { lat: 0, lng: 0 },
         map: map,
-        title: "Tu ubicación",
-        icon: {
-            url: "../../icons/car.png", // Usa una URL absoluta para probar
-            scaledSize: new google.maps.Size(50, 50) // Ajusta el tamaño del icono si es necesario
-        }
     });
-    
-
-    document.getElementById("startButton").onclick = startTrip;
-    document.getElementById("stopButton").onclick = stopTrip;
 }
 
-function startTrip() {
+function startJourney() {
     if (navigator.geolocation) {
-        watchID = navigator.geolocation.watchPosition(updatePosition, handleError, {
-            enableHighAccuracy: true,
-        });
+        watchId = navigator.geolocation.watchPosition(updatePosition, handleError);
         startTime = Date.now();
-        distance = 0;
-
-        timerInterval = setInterval(updateTimer, 1000);
-
-        // Mostrar los datos en tiempo real
-        document.getElementById("liveStats").style.display = "block";
+        document.getElementById('startBtn').disabled = true;
+        document.getElementById('endBtn').disabled = false;
+        updateTime();
     } else {
-        alert("La geolocalización no es compatible con este navegador.");
+        alert('Geolocation is not supported by this browser.');
     }
 }
-
-
-function stopTrip() {
-    if (watchID) {
-        navigator.geolocation.clearWatch(watchID);
-        clearInterval(timerInterval);
-
-        // Ocultar los datos en tiempo real
-        document.getElementById("liveStats").style.display = "none";
-
-        // Mostrar los detalles finales del viaje
-        document.getElementById("finalDistance").innerText = `Distancia total: ${(distance / 1000).toFixed(2)} km.`;
-        document.getElementById("finalTime").innerText = `Tiempo total: ${getTimeElapsed()}.`;
-        document.getElementById("tripDetails").style.display = "block";
-    }
-}
-
-
 
 function updatePosition(position) {
-    const { latitude, longitude } = position.coords;
-
-    // Actualiza la posición del marcador
-    const newPosition = { lat: latitude, lng: longitude };
-    marker.setPosition(newPosition);
-    map.setCenter(newPosition);
-
-    // Calcula la distancia recorrida
-    if (marker.getPosition()) {
-        const prevPosition = marker.getPosition();
-        distance += google.maps.geometry.spherical.computeDistanceBetween(prevPosition, newPosition);
+    const lat = position.coords.latitude;
+    const lng = position.coords.longitude;
+    const currentPosition = new google.maps.LatLng(lat, lng);
+    
+    if (marker) {
+        marker.setPosition(currentPosition);
+        map.setCenter(currentPosition);
     }
 
-    // Actualiza la distancia en tiempo real
-    document.getElementById("liveDistance").innerText = `Distancia: ${(distance / 1000).toFixed(2)} km`;
+    // Calculate distance
+    if (marker.getPosition().lat() !== 0 && marker.getPosition().lng() !== 0) {
+        const prevPosition = marker.getPosition();
+        const distance = google.maps.geometry.spherical.computeDistanceBetween(prevPosition, currentPosition);
+        distanceCovered += distance;
+    }
+    
+    // Update distance in km
+    document.getElementById('distance').innerText = `Distancia: ${(distanceCovered / 1000).toFixed(2)} km`;
 }
 
-
-function updateTimer() {
-    const elapsedTime = Date.now() - startTime;
-    document.getElementById("liveTime").innerText = `Tiempo: ${formatTime(elapsedTime)}`;
+function updateTime() {
+    totalTime = Math.floor((Date.now() - startTime) / 1000);
+    const minutes = Math.floor(totalTime / 60);
+    const seconds = totalTime % 60;
+    document.getElementById('time').innerText = `Tiempo: ${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+    setTimeout(updateTime, 1000);
 }
 
+function endJourney() {
+    navigator.geolocation.clearWatch(watchId);
+    document.getElementById('startBtn').disabled = false;
+    document.getElementById('endBtn').disabled = true;
 
-function formatTime(ms) {
-    const totalSeconds = Math.floor(ms / 1000);
-    const minutes = Math.floor(totalSeconds / 60);
-    const seconds = totalSeconds % 60;
-    return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+    const totalDistanceKm = (distanceCovered / 1000).toFixed(2);
+    const totalMinutes = Math.floor(totalTime / 60);
+    const totalSeconds = totalTime % 60;
+    const cost = (totalDistanceKm * 5.25 + totalMinutes * 2.00) * costMultiplier;
+
+    document.getElementById('summary').innerHTML = `
+        <h3>Resumen del Viaje</h3>
+        <p>Distancia Total: ${totalDistanceKm} km</p>
+        <p>Tiempo Total: ${totalMinutes}:${totalSeconds < 10 ? '0' : ''}${totalSeconds}</p>
+        <p>Costo Total: $${cost.toFixed(2)}</p>
+    `;
+    document.getElementById('summary').style.display = 'block';
 }
 
-function getTimeElapsed() {
-    const elapsedTime = Date.now() - startTime;
-    return formatTime(elapsedTime);
+function adjustCost() {
+    costMultiplier = 1.25;
+    document.getElementById('costAdjustBtn').style.backgroundColor = 'red';
 }
 
-function handleError(error) {
-    console.error("Error al obtener la ubicación: ", error);
-    alert("No se pudo obtener la ubicación. Asegúrate de que la geolocalización esté habilitada.");
-}
+// Initialize the map when the window loads
+window.onload = initMap;

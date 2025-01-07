@@ -1,115 +1,63 @@
-/* styles.css */
-
-/* Reset some default styles */
-body, h1, button {
+body {
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 100vh;
-  padding: 2%;
-}
-
-h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #2c3e50;
-  text-align: center;
-  letter-spacing: 1px; /* Agregar espaciado entre letras */
 }
 
 #map {
-  width: 100%;
-  height: 100%; /* Asegura que tome todo el espacio disponible */
-  min-height: 400px; /* Altura mínima para el mapa */
-  border: 2px solid #2980b9;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  margin-bottom: 10px;
+  height: 50vh; /* Ajusta la altura del mapa al 50% de la altura de la ventana */
+  width: 100%; /* El mapa ocupa el 100% del ancho */
+}
+
+#controls {
+  padding: 20px;
+  background: #f4f4f4;
+  width: 100%; /* Asegura que los controles ocupen el ancho completo */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 button {
-  background-color: #2980b9;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  font-size: 1rem;
+  margin: 5px;
+  padding: 10px 15px; /* Aumenta el tamaño del botón para facilitar su uso en móviles */
+  font-size: 16px; /* Aumenta el tamaño de la fuente */
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
-  margin: 0 10px;
+  width: 100%; /* Botones ocupan el ancho completo */
+  border: none;
+  background-color: #007BFF; /* Color de fondo del botón */
+  color: white; /* Color del texto */
+  border-radius: 5px; /* Bordes redondeados */
 }
 
 button:hover {
-  background-color: #3498db;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* Agregar sombra al hacer hover */
+  background-color: #0056b3; /* Color de fondo al pasar el mouse */
 }
 
-button:active {
-  transform: translateY(0);
-  box-shadow: none; /* Eliminar sombra al hacer clic */
-}
-
-/* Estilo del área de información */
 #info {
-  background-color: #ecf0f1;
-  border: 1px solid #bdc3c7;
-  border-radius: 5px;
-  padding: 15px;
-  width: 80%;
-  max-width: 600px;
-  text-align: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  font-size: 1.1rem;
-  color: #2c3e50;
+  text-align: center; /* Centrar el texto de información */
+  margin: 10px 0;
+}
+
+#summary {
   margin-top: 20px;
+  background: #e0e0e0;
+  padding: 10px;
+  border-radius: 5px; /* Bordes redondeados para el resumen */
+  width: 90%; /* Ancho del resumen */
 }
 
-/* Responsive styles */
-@media (max-width: 768px) {
-  h1 {
-    font-size: 2rem;
+@media (max-width: 600px) {
+  #map {
+      height: 40vh; /* Ajusta la altura del mapa en pantallas más pequeñas */
   }
 
   button {
-    padding: 8px 16px;
-    font-size: 0.9rem;
+      font-size: 14px; /* Disminuye el tamaño de la fuente en móviles */
   }
 
-  #map {
-    height: 50vh; /* Ajusta la altura del mapa a la mitad de la pantalla */
-  }
-
-  #info {
-    width: 90%;
-  }
-}
-
-@media (max-width: 480px) {
-  h1 {
-    font-size: 1.5rem;
-  }
-
-  button {
-    width: 100%;
-    margin: 10px 0;
-  }
-
-  #map {
-    height: 50vh; /* Mapa ocupa la mitad de la pantalla en pantallas pequeñas */
-  }
-
-  #info {
-    width: 95%;
+  #summary {
+      width: 95%; /* Aumenta el ancho del resumen en móviles */
   }
 }

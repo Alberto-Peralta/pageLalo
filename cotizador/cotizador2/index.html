@@ -1,36 +1,24 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Real-Time Tracking App</title>
-    <script async defer 
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcrFJEWdAGlktaEVMoPwxXNvzReSSYA3w&libraries=places" 
-        onload="initMap()" 
-        onerror="alert('Error loading Google Maps API. Please check your internet connection or API key.');">
-</script>
-
-      <link rel="stylesheet" href="styles.css">
-    
+    <title>Travel Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY" async defer></script>
 </head>
 <body>
-    <h3>Monitoreo de Viaje</h3>
     <div id="map"></div>
-    <div id="tripDetails" style="display: none;">
-        <p id="finalDistance"></p>
-        <p id="finalTime"></p>
+    <div id="controls">
+        <button id="startBtn">Iniciar Viaje</button>
+        <button id="endBtn" disabled>Finalizar Viaje</button>
+        <div id="info">
+            <p id="distance">Distancia: 0 km</p>
+            <p id="time">Tiempo: 0:00</p>
+        </div>
+        <button id="costAdjustBtn">Ajustar Costos</button>
+        <div id="summary" style="display: none;"></div>
     </div>
-    <div id="liveStats">
-        <p id="liveDistance">Distancia: 0 km</p>
-        <p id="liveTime">Tiempo: 0:00</p>
-    </div>
-    
-    <button id="increaseCostButton">Ajuste por parametros extendidos</button>
-    <button id="startButton">Iniciar Viaje</button>
-    <button id="stopButton">Finalizar Viaje</button>
-
-    <div id="info"></div>
-
     <script src="script.js"></script>
 </body>
 </html>
