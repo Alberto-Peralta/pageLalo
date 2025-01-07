@@ -1,23 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travel Tracker</title>
+    <title>Real-Time Travel Tracker</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcrFJEWdAGlktaEVMoPwxXNvzReSSYA3w" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcrFJEWdAGlktaEVMoPwxXNvzReSSYA3w"></script>
 </head>
 <body>
+    <h1>Real-Time Travel Tracker</h1>
     <div id="map"></div>
-    <div id="controls">
-        <button id="startBtn">Iniciar Viaje</button>
-        <button id="endBtn" disabled>Finalizar Viaje</button>
-        <div id="info">
-            <p id="distance">Distancia: 0 km</p>
-            <p id="time">Tiempo: 0:00</p>
-        </div>
-        <button id="costAdjustBtn">Ajustar Costos</button>
-        <div id="summary" style="display: none;"></div>
+    <div class="controls">
+        <button id="startBtn">Start Trip</button>
+        <button id="stopBtn" disabled>Stop Trip</button>
+    </div>
+    <div id="info">
+        <p>Distance: <span id="distance">0 km</span></p>
+        <p>Time: <span id="time">0:00</span></p>
     </div>
     <script src="script.js"></script>
 </body>
