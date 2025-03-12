@@ -13,6 +13,9 @@ body {
     color: #ecf0f1; /* Color de texto principal */ 
     margin-top: 80px; /* Añade un margen superior para evitar que el contenido quede debajo del header fijo */
 
+
+        background-color: #d4a017; /* Color mostaza principal */ 
+
 } 
 /* Header fijo */ 
 /* Estilos básicos del header */
@@ -20,7 +23,7 @@ header {
     display: flex;
     justify-content: space-between; /* Distribuye los elementos con espacio entre ellos */
     align-items: center;            /* Alinea los elementos verticalmente al centro */
-    background-color: #34495e;
+    background-color: #b8860b; /* Mostaza oscuro para header */
     color: #ecf0f1;
     padding: 10px 20px;
     position: fixed;
@@ -28,6 +31,9 @@ header {
     left: 0;
     width: 100%;                    /* Asegura que ocupe todo el ancho de la pantalla */
     z-index: 1000;
+
+
+
 }
 
 .logo {
@@ -63,8 +69,9 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #e67e22;     /* Color de fondo al pasar el cursor */
+    background-color: #daa520; /* Tonos dorados para hover */
     border-radius: 4px;             /* Bordes redondeados para el hover */
+
 }
 
   
@@ -92,7 +99,7 @@ nav a:hover {
     position: absolute;
     top: 50px;
     right: 20px;
-    background-color: #34495e;
+    background-color: #b8860b; /* Coherencia con header */
     border-radius: 5px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
     list-style: none;
@@ -123,7 +130,10 @@ nav a:hover {
     display: block;
 }
 
+.menu-toggle{
+    background-color: #b8860b; /* Coherencia con header */
 
+}
 
 
 
@@ -325,7 +335,7 @@ nav a:hover {
 } 
 /* Tarjetas de YouTube */ 
 .card.youtube { 
-    background: #34495e; /* Color de fondo de las tarjetas de YouTube */ 
+    background: #d35400; /* Color de fondo al pasar el cursor */ 
     border: 1px solid #2c3e50; 
     border-radius: 15px; /* Bordes más redondeados */ 
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */ 
@@ -335,7 +345,7 @@ nav a:hover {
     transition: background-color 0.3s ease, transform 0.2s ease; 
 } 
 .card.youtube:hover { 
-    background-color: #2c3e50; /* Color de fondo al pasar el cursor */ 
+    background-color: #d35400; /* Color de fondo al pasar el cursor */ 
     transform: translateY(-5px); 
 } 
 .card.youtube iframe { 
@@ -410,7 +420,7 @@ nav a:hover {
     transition: background-color 0.3s ease, transform 0.2s ease; 
 } 
 .card.tiktok:hover { 
-    background-color: #2c3e50; /* Color de fondo al pasar el cursor */ 
+    background-color: #d35400; /* Color de fondo al pasar el cursor */ 
     transform: translateY(-5px); 
 } 
 .card.tiktok img { 
@@ -455,6 +465,9 @@ nav a:hover {
     height: auto; /* Altura automática para mantener la proporción */ 
     perspective: 1000px; /* Perspectiva para el efecto 3D */ 
     margin: 20px auto; /* Centra la tarjeta en la pantalla */ 
+
+    background: #cd853f; /* Mostaza terroso para tarjetas */ 
+
 } 
 .card-inner { 
     position: relative; 
@@ -490,6 +503,7 @@ nav a:hover {
     height: auto; /* Mantiene la proporción de la imagen */ 
     object-fit: cover; /* Asegura que la imagen cubra el div */ 
 } 
+
 .button-container .button { 
     display: inline-block; /* Asegura que se comporte como un botón */ 
     background-color: #e67e22; /* Naranja principal */ 
@@ -524,6 +538,8 @@ footer {
     position: fixed; 
     bottom: 0; 
     width: 100%; 
+    background-color: #b8860b; /* Mostaza oscuro para header */
+
 } 
 footer .footer-links a { 
     color: #ecf0f1; /* Color de texto de los enlaces del footer */ 
@@ -565,3 +581,8 @@ footer .footer-links a:hover {
         padding: 0.5em; 
     } 
 }
+
+
+
+
+
