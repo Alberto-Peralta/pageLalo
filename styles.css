@@ -20,7 +20,7 @@ body {
 }
 
 .navbar {
-    background-color: #ffed5d; /* Amarillo suave y alegre */
+    background-color: #ffc938; /* Amarillo intenso principal */
     padding: 1rem;
     display: flex;
     justify-content: space-between;
@@ -28,7 +28,6 @@ body {
     position: relative;
 }
 
-/* El menú de navegación */
 .menu {
     list-style: none;
     display: flex;
@@ -51,7 +50,6 @@ body {
     cursor: pointer;
 }
 
-/* Hero section */
 .hero {
     width: 100%;
     height: 100vh;
@@ -79,7 +77,6 @@ body {
     margin-bottom: 1rem;
 }
 
-/* Cards section */
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -97,7 +94,7 @@ body {
 }
 
 .cards .card:hover {
-    background-color: #e6ffe0; /* Verde menta MUY suave al pasar mouse */
+    background-color: #fff2cc; /* Amarillo pastel clarito derivado de #ffc938 */
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
@@ -105,8 +102,8 @@ body {
     margin-top: 1rem;
     padding: 0.5rem 1rem;
     border: none;
-    background-color: #ff7b6b; /* Coral vibrante */
-    color: #ffffff;
+    background-color: #ffc938; /* Botón amarillo principal */
+    color: #2e2e2e;
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
@@ -114,11 +111,10 @@ body {
 }
 
 .card button:hover {
-    background-color: #e06b5c; /* Coral más oscuro al hover */
+    background-color: #e6b400; /* Versión más intensa para hover */
     transform: scale(1.05);
 }
 
-/* Donate section */
 .donate {
     text-align: center;
     padding: 2rem;
@@ -144,7 +140,7 @@ body {
     .menu {
         display: none;
         flex-direction: column;
-        background-color: #ffed5d;
+        background-color: #ffc938;
         width: 100%;
         position: absolute;
         top: 60px;
