@@ -4,133 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lalo Peralta</title>
-
-    <!-- Estilos e iconos -->
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="icon" href="icons/favicon.ico" type="image/x-icon">
-
-    <!-- Iconos para dispositivos -->
-    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="icons/android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="icons/android-chrome-512x512.png">
-
-    <!-- Configuración adicional -->
-<link rel="icon" type="image/png" sizes="512x512" href="icons/android-chrome-512x512.png">
-    <meta name="theme-color" content="#ffffff">
 </head>
-
 <body>
-    <!-- Header -->
-    <header>
-        <img class="logo" src="https://i.imgur.com/8xgrL7C.png" alt="Logo">
-        <h1 class="header-title">Lalo Peralta</h1>
 
-        <nav class="dropdown-menu">
-            <button class="menu-toggle">☰</button>
-            <ul class="menu">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#redes">Redes Sociales</a></li>
-                <li><a href="#hidden-account-number" id="btn-copy-account">Copiar número de cuenta</a></li>
-                <li><a href="./triviaCristiana/index.html">Quien quiere ser Cristiano</a></li>
-                <li><a href="./biblia/index.html">Biblia</a></li>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Lalo Peralta</div>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <ul class="menu" id="menu">
+                <li><a href="#rosario">Rosario</a></li>
+                <li><a href="#cristiano">¿Cristiano?</a></li>
+                <li><a href="#biblia">Biblia y Misal</a></li>
+                <li><a href="#misioneros">Misioneros</a></li>
+                <li><a href="#donar">Donar</a></li>
             </ul>
         </nav>
-
-        <!-- Inputs ocultos -->
-        <input type="hidden" id="hidden-account-number" value="002150701883169386">
     </header>
 
-    <!-- Imagen de bienvenida -->
-    <div class="image-container welcome-message">
-        <img src="./images/507c4aa7-b312-451d-9308-53c6a4ec5448.jpg" alt="Imagen de Fondo" class="background-image">
-        <div class="overlay-text">
-            <h4>Lalo Peralta</h4>
-        </div>
-    </div>
+    <main>
+        <section class="hero">
+            <img src="./images/507c4aa7-b312-451d-9308-53c6a4ec5448.jpg" alt="Virgen de Guadalupe" class="hero-image">
+            <h1>Bienvenido a un espacio para acercarte a Dios.</h1>
+        </section>
 
-    <!-- Redes sociales -->
-    <div class="concontainer" id="redes">
-        <h2 class="gallery-title">Mis Redes Sociales</h2>
-
-        <div class="card tiktok">
-            <h2>TikTok</h2><br>
-            <img src="https://i.imgur.com/OOSum35.jpeg" alt="TikTok Logo">
-            <button onclick="window.location.href='https://www.tiktok.com/@laloperalta77'">
-                <i class="fab fa-tiktok"></i> Ver mi TikTok
-            </button>
-        </div>
-
-        <div class="card misioneros">
-            <h2>Misioneros de Guadalupe</h2><br>
-            <img src="https://notirasa.com/uploads/noticias/17253-8116976716.jpg" alt="Misioneros de Guadalupe" class="card-image">
-            <p>Los Misioneros de Guadalupe ayudan a los más necesitados. ¡Únete a nuestra causa!</p>
-            <button onclick="window.location.href='https://wa.me/5216393992678?text=Quiero%20saber%20más%20sobre%20Misioneros%20de%20Guadalupe'">
-                <i class="fab fa-whatsapp"></i> Quiero saber más
-            </button>
-            <button class="youtube-button" onclick="window.location.href='https://www.misionerosdeguadalupe.org/'">
-                Visita el sitio
-            </button>
-        </div>
-
-        <div class="horizontal-gallery" id="social-carousel">
-            <div class="card facebook">
-                <h2>Facebook</h2><br>
-                <img src="https://i.imgur.com/OOSum35.jpeg" alt="Facebook" class="card-image facebook-image">
-                <button onclick="window.location.href='https://web.facebook.com/EduardoLaloPeralta'">
-                    <i class="fab fa-facebook-f"></i> Visita mi Facebook
-                </button>
+        <section class="cards">
+            <div class="card" id="rosario">
+                <h2>Rezo del Rosario</h2>
+                <p>Únete al rezo del Rosario</p>
+                <button>Pon aquí tus intenciones</button>
             </div>
-
-            <div class="card instagram">
-                <h2>Instagram</h2><br>
-                <img src="https://i.imgur.com/OOSum35.jpeg" alt="Instagram" class="card-image instagram-image">
-                <button onclick="window.location.href='https://www.instagram.com/laloperaltah/'">
-                    <i class="fab fa-instagram"></i> Visita mi Instagram
-                </button>
+            <div class="card" id="cristiano">
+                <h2>¿Quién Quiere Ser Cristiano?</h2>
+                <p>Un divertido reto para aprender más de nuestra fe.</p>
             </div>
-        </div>
-
-        <div class="card youtube">
-            <h2>Explora mi Canal</h2><br>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/VoyPNetPz6I?si=Yn7_OhQo9gKQhFp-" 
-                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-            </iframe>
-            <p>Hola amig@!!! Gracias por visitar mi canal. Aquí encontrarás videos de la iglesia, curiosidades, rosarios, entrevistas y un noticiero de ¡¡¡puras buenas noticias!!! 👏 Soy tu amigo, Lalo Peralta.</p>
-            <div class="button-container">
-                <button class="youtube-button" onclick="window.location.href='https://www.youtube.com/@laloperalta'">
-                    <i class="fab fa-youtube"></i> Visita mi Canal
-                </button>
-                <button class="youtube-button" onclick="window.location.href='https://www.youtube.com/@laloperalta?sub_confirmation=1'">
-                    <i class="fas fa-bell"></i> Suscríbete
-                </button>
+            <div class="card" id="biblia">
+                <h2>Biblia y Misal</h2>
+                <p>Enlaces a las lecturas diarias</p>
             </div>
-        </div>
-
-        <!-- Tarjeta de copiar números -->
-        <div class="card tiktok">
-            <div class="card-inner" onclick="this.classList.toggle('flipped')">
-                <div class="card-front">
-                    <img src="https://imgur.com/pFYjt6k" alt="Front" class="card-image">
-                </div>
-                <div class="card-back">
-                    <button onclick="copyToClipboard('hidden-account-number')">Copiar número de cuenta</button>
-                </div>
+            <div class="card" id="misioneros">
+                <h2>Misioneros de Guadalupe</h2>
+                <p>Conoce y apoya a los misioneros</p>
             </div>
-        </div>
+        </section>
 
-    </div>
+        <section class="donate" id="donar">
+            <h2>Apoya nuestra misión</h2>
+            <p>Haz click en la tarjeta para copiar el número de cuenta:</p>
+            <img src="b56df756-75f1-4cd8-91aa-19677179a4f2.jpg" alt="Tarjeta de donación" class="card-image" onclick="copyAccount()">
+            <p id="account-number">1234 5678 9012 3456</p>
+            <small id="copied-message" style="display:none;">¡Número copiado!</small>
+        </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Lalo Peralta - Redes Sociales. Todos los derechos reservados.</p>
-        <div class="footer-links">
-            <a href="tel:+5216393992678">Contáctanos</a>
-        </div>
-    </footer>
+    </main>
 
-    <!-- Scripts -->
     <script src="script.js"></script>
 </body>
 </html>

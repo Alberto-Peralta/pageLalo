@@ -1,598 +1,142 @@
-Reset y estilos base */ 
-* { 
-    margin: 0; 
-    padding: 0; 
-    box-sizing: border-box; 
-} 
-body { 
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    display: flex; 
-    flex-direction: column; 
-    min-height: 100vh; 
-    background-color: #d4a017; /* Color mostaza principal */
-    color: #ecf0f1; /* Color de texto principal */
-    margin: 0; /* Elimina el margen por completo */
-    padding-top: 80px; /* Añadido para asegurar que el contenido no quede detrás del header */
-}  
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fff8e1; /* fondo crema */
+    color: #5c4200; /* texto marrón oscuro */
+}
 
-
-
-
-
-/* Header fijo */ 
-/* Estilos básicos del header */
-header {
+.navbar {
+    background-color: #d4af37; /* dorado mostaza */
+    padding: 1rem;
     display: flex;
-    justify-content: space-between; /* Distribuye los elementos con espacio entre ellos */
-    align-items: center;            /* Alinea los elementos verticalmente al centro */
-    background-color: #b8860b; /* Mostaza oscuro para header */
-    color: #ecf0f1;
-    padding: 10px 20px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;                    /* Asegura que ocupe todo el ancho de la pantalla */
-    z-index: 1000;
-
-
-
+    justify-content: space-between;
+    align-items: center;
 }
 
 .logo {
-    height: 50px;                  /* Ajusta la altura del logo */
-    width: auto;                   /* Mantiene la proporción */
-    max-height: 100%;               /* Evita que el logo se desborde */
-    display: block;
+    color: #5c4200; /* marrón oscuro */
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
-nav {
-    display: flex;
-    align-items: center;           /* Alinea los ítems del menú verticalmente al centro */
-}
-
-nav ul {
-    list-style: none;              /* Elimina los puntos de las listas */
-    display: flex;                 /* Muestra los elementos en línea (horizontalmente) */
-    gap: 20px;                     /* Espacio entre los elementos del menú */
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    padding: 0;
-}
-
-nav a {
-    text-decoration: none;         /* Elimina el subrayado */
-    color: #ecf0f1;                /* Color del texto del menú */
-    font-size: 16px;               /* Ajusta el tamaño de la fuente */
-    padding: 10px;
-    transition: background-color 0.3s ease; /* Efecto de transición para el hover */
-}
-
-nav a:hover {
-    background-color: #daa520; /* Tonos dorados para hover */
-    border-radius: 4px;             /* Bordes redondeados para el hover */
-
-}
-
-  
-
-
-/* Botón del menú */
-.menu-toggle {
-    background-color: #34495e;
-    color: #ecf0f1;
-    border: none;
-    padding: 10px 35px;
-    cursor: pointer;
-    font-size: 18px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.menu-toggle:hover {
-    background-color: #34495e;
-}
-
-/* Menú desplegable */
 .menu {
-    display: none; /* Oculta el menú por defecto */
-    position: absolute;
-    top: 50px;
-    right: 20px;
-    background-color: #b8860b; /* Coherencia con header */
-    border-radius: 5px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
     list-style: none;
-    padding: 10px 0;
-    margin: 0;
-    width: 200px;
-}
-
-.menu li {
-    text-align: left;
-    padding: 10px 20px;
+    display: flex;
+    gap: 1rem;
 }
 
 .menu li a {
+    color: #5c4200; /* enlaces marrón */
     text-decoration: none;
-    color: #ecf0f1;
-    font-size: 16px;
-    display: block;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #5c4200;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.hero {
+    width: 100%;
+    height: 100vh; /* altura de toda la pantalla */
+    background-color: #fff8e1; /* tu fondo crema */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    position: relative;
+    overflow: hidden;
+}
+
+
+.hero-image {
+    width: 300px;
+    max-width: 80%;
+    margin-bottom: 1rem;
+    transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.card {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.card button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #d4af37; /* botón dorado */
+    color: #5c4200; /* texto del botón */
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
     transition: background-color 0.3s ease;
 }
 
-.menu li a:hover {
-    background-color: #2c3e50;
+.card button:hover {
+    background-color: #c29b2e; /* dorado más oscuro al pasar el mouse */
 }
 
-/* Mostrar el menú cuando se activa */
-.menu.show {
-    display: block;
-}
-
-.menu-toggle{
-    background-color: #b8860b; /* Coherencia con header */
-
-}
-
-
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-.welcome-message {
-    animation: fadeIn 3s ease-in-out;
-}
-
-
-
-/* Estilo para el contenedor de la imagen y el texto */
-.image-text-container {
-    position: relative;
-    width: 100%;
-    height: 400px; /* Altura ajustable según el diseño */
-    overflow: hidden;
-}
-
-.image-text-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Asegura que la imagen cubra el contenedor sin deformarse */
-    filter: brightness(70%); /* Reduce el brillo para que el texto resalte más */
-}
-
-/* Estilo del texto sobre la imagen */
-.image-text-container h4 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-family: 'Lora', serif; /* Elegante y profesional */
-    font-size: 3rem; /* Tamaño grande para el texto */
-    font-weight: 600; /* Ligera negrita */
-    color: #ecf0f1; /* Texto claro para resaltar sobre el fondo oscuro */
-    text-transform: uppercase; /* Mayúsculas para un toque de sofisticación */
-    letter-spacing: 4px; /* Espaciado entre letras para dar elegancia */
+.donate {
     text-align: center;
-    opacity: 0.9; /* Transparencia ligera */
-    transition: opacity 0.3s ease; /* Transición suave en hover */
-    width: 100%; /* Asegura que el texto ocupe todo el ancho del contenedor */
-    box-sizing: border-box; /* Asegura que el padding se incluya dentro del ancho total */
-    padding: 0 20px; /* Agrega espacio alrededor del texto */
+    padding: 2rem;
 }
 
-/* Efecto al hacer hover sobre el contenedor */
-.image-text-container:hover h2 {
-    opacity: 1; /* Aumenta la visibilidad del texto al hacer hover */
+.card-image {
+    width: 250px;
+    max-width: 80%;
+    margin-top: 1rem;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-
-
-
-/* Contenedor de la imagen y texto */
-.image-container {
-    position: relative;
-    width: 100%;
-    height: 400px; /* Ajusta el tamaño según necesites */
-    overflow: hidden;
-}
-
-.background-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: opacity 1s ease-out;
-}
-
-.overlay-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 3rem;
-    color: white;
+#account-number {
+    margin-top: 1rem;
     font-weight: bold;
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
-    z-index: 2;
-    transition: opacity 1s ease-out;
+    color: #5c4200;
 }
 
-/* Estilo para el efecto de difuminado */
-.fade-out {
-    opacity: 0;
+/* Responsive */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        background-color: #d4af37;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+
+    .menu.show {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
 }
-
-
-
-
-
-/* Estilo para el contenedor de la imagen y el texto */
-.image-text-container {
-    position: relative;
-    width: 100%;
-    height: 400px; /* Altura ajustable según el diseño */
-    overflow: hidden;
-}
-
-.image-text-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Asegura que la imagen cubra el contenedor sin deformarse */
-    filter: brightness(70%); /* Reduce el brillo para que el texto resalte más */
-}
-
-/* Estilo del texto sobre la imagen */
-.image-text-container h2 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-family: 'Lora', serif; /* Elegante y profesional */
-    font-size: 3rem; /* Tamaño grande para el texto */
-    font-weight: 600; /* Ligera negrita */
-    color: #ecf0f1; /* Texto claro para resaltar sobre el fondo oscuro */
-    text-transform: uppercase; /* Mayúsculas para un toque de sofisticación */
-    letter-spacing: 4px; /* Espaciado entre letras para dar elegancia */
-    text-align: center;
-    opacity: 0.9; /* Transparencia ligera */
-    transition: opacity 0.3s ease; /* Transición suave en hover */
-}
-
-/* Efecto al hacer hover sobre el contenedor */
-.image-text-container:hover h2 {
-    opacity: 1; /* Aumenta la visibilidad del texto al hacer hover */
-}
-
-
-
-
-
-/* Ajuste en el contenedor principal */
-.container { 
-    flex: 1; 
-    padding-top: 80px; /* Asegúrate que no haya conflicto con el header fijo */
-}
-/* Cuadrícula de tarjetas */ 
-.carousel { 
-    display: grid; 
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
-    gap: 20px; 
-    padding: 20px; 
-    margin: 80px 0 120px; 
-} 
-/* Estilo para los títulos de las galerías */ 
-.gallery-title { 
-    font-size: 24px; /* Ajusta el tamaño según lo necesites */ 
-    margin: 20px 0; /* Espaciado alrededor del título */ 
-    text-align: center; /* Centra el texto */ 
-} 
-/* Tarjetas */ 
-.card { 
-    background: #34495e; /* Color de fondo de las tarjetas */ 
-    border-radius: 15px; /* Bordes más redondeados */ 
-    padding: 20px; 
-    text-align: center; 
-    opacity: 0; 
-    transform: translateY(20px); 
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out; 
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */ 
-} 
-.card.fade-in { 
-    opacity: 1; 
-    transform: translateY(0); 
-} 
-.card .card-image { 
-    width: 100%; 
-    border-radius: 15px; /* Bordes redondeados para la imagen */ 
-    margin-bottom: 10px; 
-} 
-.card .description { 
-    font-size: 16px; /* Aumentar tamaño de fuente para mejor legibilidad */ 
-    line-height: 1.5; 
-    margin: 10px 0; 
-} 
-/* Botones */ 
-.card button { 
-    margin-top: 10px; 
-    padding: 12px 24px; /* Espaciado interno aumentado */ 
-    border: none; 
-    background: #e67e22; /* Color de fondo del botón */ 
-    color: #ecf0f1; /* Color de texto del botón */ 
-    border-radius: 15px; /* Bordes más redondeados */ 
-    cursor: pointer; 
-    transition: background-color 0.3s ease, transform 0.2s ease; 
-    font-size: 16px; /* Tamaño de fuente más grande */ 
-} 
-.card button:hover { 
-    background: #d35400; /* Color de fondo al pasar el cursor */ 
-    transform: translateY(-2px); /* Efecto de elevación */ 
-} 
-/* Tarjetas de YouTube */ 
-.card.youtube { 
-    background: #cd853f; /* Mostaza terroso para tarjetas */ 
-    border: 1px solid #2c3e50; 
-    border-radius: 15px; /* Bordes más redondeados */ 
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */ 
-    text-align: center; 
-    padding: 20px; 
-    color: #ecf0f1; /* Color de texto de las tarjetas de YouTube */ 
-    transition: background-color 0.3s ease, transform 0.2s ease; 
-} 
-.card.youtube:hover { 
-    background-color: #d35400; /* Color de fondo al pasar el cursor */ 
-    transform: translateY(-5px); 
-} 
-.card.youtube iframe { 
-    width: 100%; 
-    aspect-ratio: 16 / 9; 
-    border-radius: 15px; /* Bordes redondeados para el iframe */ 
-    margin-bottom: 15px; 
-    border: none; 
-} 
-.card.youtube h2 { 
-    margin-top: 20px; 
-    font-size: 24px; 
-    font-weight: bold; 
-    color: #ecf0f1; /* Color de texto del título */ 
-} 
-.card.youtube p { 
-    font-size: 16px; /* Aumentar tamaño de fuente para mejor legibilidad */ 
-    line-height: 1.6; 
-    margin: 10px 0; 
-    color: #ecf0f1; /* Color de texto del párrafo */ 
-} 
-.button-container { 
-    display: flex; 
-    flex-direction: column; 
-    gap: 10px; 
-    margin-top: 15px; 
-} 
-/* Estilos comunes para ambos botones */ 
-.youtube-button { 
-    display: inline-flex; 
-    align-items: center; 
-    padding: 12px 24px; /* Espaciado interno aumentado */ 
-    background-color: #FF0000; /* Color de fondo del botón de YouTube */ 
-    color: white; /* Color de texto del botón de YouTube */ 
-    font-size: 16px; /* Tamaño de fuente */ 
-    font-weight: bold; 
-    border: none; 
-    border-radius: 15px; /* Bordes más redondeados */ 
-    cursor: pointer; 
-    text-decoration: none; 
-    transition: background-color 0.3s ease, transform 0.2s ease; 
-} 
-.youtube-button i { 
-    margin-right: 8px; 
-    font-size: 20px; 
-} 
-.youtube-button:hover { 
-    background-color: #cc0000; /* Color de fondo al pasar el cursor */ 
-    transform: translateY(-2px); /* Efecto de elevación */ 
-} 
-.card.facebook .facebook-image { 
-    width: 80px; 
-    height: 80px; 
-    border-radius: 50%; 
-    object-fit: cover; 
-    margin-bottom: 10px; 
-} 
-.card.instagram .card-image { 
-    width: 100px; /* Ajusta el tamaño de la imagen */ 
-    height: 100px; /* Asegúrate de que la imagen sea cuadrada */ 
-    border-radius: 50%; /* Hace que la imagen sea circular */ 
-    margin-bottom: 15px; 
-    object-fit: cover; /* Mantiene la imagen centrada y bien ajustada */ 
-} 
-/* Tarjetas de TikTok */ 
-.card.tiktok { 
-    border-radius: 15px; /* Bordes más redondeados */ 
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */ 
-    text-align: center; 
-    padding: 20px; 
-    color: #ecf0f1; /* Color de texto de las tarjetas de TikTok */ 
-    transition: background-color 0.3s ease, transform 0.2s ease; 
-} 
-.card.tiktok:hover { 
-    background-color: #d35400; /* Color de fondo al pasar el cursor */ 
-    transform: translateY(-5px); 
-} 
-.card.tiktok img { 
-    width: 150px; 
-    height: 150px; 
-    border-radius: 50%; /* Hace que la imagen sea circular */ 
-    margin-bottom: 15px; 
-    object-fit: cover; 
-} 
-.card.tiktok h2 { 
-    margin-top: 20px; 
-    font-size: 24px; 
-    font-weight: bold; 
-    color: #ecf0f1; /* Color de texto del título */ 
-} 
-.card.tiktok button { 
-    margin-top: 15px; 
-    padding: 12px 24px; /* Espaciado interno aumentado */ 
-    color: white; /* Color de texto del botón de TikTok */ 
-    border: none; 
-    border-radius: 15px; /* Bordes más redondeados */ 
-    cursor: pointer; 
-    transition: background-color 0.3s ease, transform 0.2s ease; 
-} 
-.card.tiktok button:hover { 
-    background: #d35400; /* Color de fondo al pasar el cursor */ 
-    transform: translateY(-2px); /* Efecto de elevación */ 
-} 
-/* Galería horizontal */ 
-.horizontal-gallery { 
-    display: flex; 
-    overflow-x: auto; 
-    padding: 20px; 
-    gap: 20px; 
-} 
-.horizontal-gallery .card { 
-    min-width: 250px; 
-} 
-.card { 
-    width: 90%; /* Ajusta el tamaño según sea necesario, 90% para que se adapte al móvil */ 
-    max-width: 300px; /* Tamaño máximo para pantallas más grandes */ 
-    height: auto; /* Altura automática para mantener la proporción */ 
-    perspective: 1000px; /* Perspectiva para el efecto 3D */ 
-    margin: 20px auto; /* Centra la tarjeta en la pantalla */ 
-
-    background: #cd853f; /* Mostaza terroso para tarjetas */ 
-
-} 
-.card-inner { 
-    position: relative; 
-    width: 100%; 
-    height: 100%; 
-    transition: transform 0.6s; 
-    transform-style: preserve-3d; /* Mantiene el 3D al girar */ 
-} 
-.card.flipped .card-inner { 
-    transform: rotateY(180deg); /* Gira la tarjeta */ 
-} 
-.card-front, 
-.card-back { 
-    position: absolute; 
-    width: 100%; 
-    height: 100%; 
-    backface-visibility: hidden; /* Oculta la parte de atrás al girar */ 
-} 
-.card-front { 
-    background-color: #fff; /* Color de fondo de la parte delantera */ 
-    border-radius: 15px; /* Bordes más redondeados */ 
-} 
-.card-back { 
-    background-color: #f0f0f0; /* Color de fondo de la parte trasera */ 
-    transform: rotateY(180deg); /* Gira la parte trasera */ 
-    display: flex; /* Para centrar el contenido */ 
-    justify-content: center; /* Centra horizontalmente */ 
-    align-items: center; /* Centra verticalmente */ 
-    text-align: center; /* Centra el texto */ 
-} 
-.card-image { 
-    width: 100%; 
-    height: auto; /* Mantiene la proporción de la imagen */ 
-    object-fit: cover; /* Asegura que la imagen cubra el div */ 
-} 
-
-.button-container .button { 
-    display: inline-block; /* Asegura que se comporte como un botón */ 
-    background-color: #e67e22; /* Naranja principal */ 
-    color: #ecf0f1; /* Texto claro */ 
-    text-decoration: none; /* Elimina el subrayado del enlace */ 
-    font-size: 16px; /* Tamaño del texto */ 
-    font-weight: bold; /* Texto en negrita */ 
-    padding: 12px 24px; /* Espaciado interno */ 
-    border-radius: 15px; /* Bordes más redondeados */ 
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */ 
-    text-align: center; /* Centra el texto */ 
-    transition: all 0.3s ease; /* Transiciones suaves */ 
-    cursor: pointer; /* Indica que es clicable */ 
-} 
-.button-container .button:hover { 
-    background-color: #d35400; /* Naranja más oscuro al pasar el cursor */ 
-    color: #ffffff; /* Texto completamente blanco */ 
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */ 
-    transform: translateY(-2px); /* Efecto de elevación */ 
-} 
-.button-container .button:active { 
-    background-color: #e74c3c; /* Rojo suave al hacer clic */ 
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15); /* Sombra más pequeña */ 
-    transform: translateY(0); /* Vuelve al nivel original */ 
-} 
-/* Footer */ 
-footer { 
-    background: #2c3e50; /* Color de fondo del footer */ 
-    color: #ecf0f1; /* Color de texto del footer */ 
-    padding: 1em; 
-    text-align: center; 
-    position: fixed; 
-    bottom: 0; 
-    width: 100%; 
-    background-color: #b8860b; /* Mostaza oscuro para header */
-    position: relative; /* Cambia a 'relative' si es fijo o sin posición */
-    margin-top: 20px; /* Espaciado adecuado con el contenido */
-
-} 
-
-
-
-
-footer .footer-links a { 
-    color: #ecf0f1; /* Color de texto de los enlaces del footer */ 
-    text-decoration: none; 
-    margin: 0 10px; 
-} 
-footer .footer-links a:hover { 
-    text-decoration: underline; /* Subrayar al pasar el cursor */ 
-} 
-/* Responsivo */ 
-@media (max-width: 768px) { 
-    header .logo { 
-        max-width: 50px; 
-    } 
-    .carousel .concontainer { 
-        grid-template-columns: 1fr; /* Ajuste a una columna */ 
-    } 
-    .gallery-title { 
-        font-size: 24px; /* Ajusta el tamaño de la fuente en pantallas más pequeñas */ 
-        letter-spacing: 1px; 
-    } 
-    /* Ajuste de tamaños y márgenes para dispositivos pequeños */ 
-    .card { 
-        padding: 15px; 
-    } 
-    .container .concontainer { 
-        padding-top: 100px; 
-    } 
-    .concontainer { 
-        transition: transform 0.5s ease; /* Agregar transición para el desplazamiento */ 
-    } 
-    header .header-title { 
-        font-size: 18px; 
-    } 
-    .button-container { 
-        gap: 8px; 
-    } 
-    footer { 
-        padding: 0.5em; 
-    } 
-}
-
-
-
-
-
