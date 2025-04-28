@@ -7,20 +7,8 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #fffbe6; /* Fondo crema más cálido */
+    background-color: #FFF8E1; /* Fondo muy claro */
     color: #5a4100; /* Texto marrón oscuro */
-}
-
-.logo {
-    color: #5a4100; /* Color del logo */
-}
-
-.navbar {
-    background-color: #ffcc00; /* Dorado más intenso */
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .logo {
@@ -31,6 +19,14 @@ body {
     flex: 1;
 }
 
+.navbar {
+    background-color: #f7d547; /* Amarillo mostaza dorado */
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .menu {
     list-style: none;
     display: flex;
@@ -38,7 +34,7 @@ body {
 }
 
 .menu li a {
-    color: #5a4100;
+    color: #5a4100; /* Marrón oscuro para links */
     text-decoration: none;
     font-size: 1rem;
     font-weight: bold;
@@ -53,10 +49,76 @@ body {
     cursor: pointer;
 }
 
+
+/* Estilos para la barra de navegación */
+.navbar {
+    background-color: #f7d547;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /* Para que el menú se posicione relativo al navbar */
+}
+
+/* El botón de hamburguesa (☰) */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #5a4100;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* El menú de navegación */
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+/* Links dentro del menú */
+.menu li a {
+    color: #5a4100;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .menu {
+        display: none; /* Ocultar menú en móviles inicialmente */
+        flex-direction: column;
+        background-color: #f7d547;
+        position: absolute;
+        top: 100%; /* Justo debajo del navbar */
+        right: 1rem; /* Pegado al borde derecho */
+        width: auto;
+        min-width: 150px;
+        border-radius: 8px;
+        padding: 0.5rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .menu.show {
+        display: flex; /* Mostrar el menú al hacer clic en ☰ */
+    }
+
+    .menu li {
+        margin-bottom: 0.5rem;
+    }
+
+    .menu-toggle {
+        display: block; /* Mostrar el botón en móviles */
+    }
+}
+
+
 .hero {
     width: 100%;
     height: 100vh;
-    background-color: #fffbe6; /* Fondo más amigable */
+    background-color: #FFF8E1; /* Fondo claro */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -81,7 +143,7 @@ body {
 }
 
 .card {
-    background-color: #ffffff; /* Fondo blanco para tarjetas */
+    background-color: #ffffff; /* Blanco para tarjetas */
     padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -92,8 +154,8 @@ body {
     margin-top: 1rem;
     padding: 0.5rem 1rem;
     border: none;
-    background-color: #ffcc00; /* Botón dorado brillante */
-    color: #5a4100;
+    background-color: #f7d547; /* Amarillo mostaza para botones */
+    color: #5a4100; /* Texto marrón en botón */
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
@@ -101,8 +163,8 @@ body {
 }
 
 .card button:hover {
-    background-color: #e6b800; /* Dorado cálido al pasar mouse */
-    transform: scale(1.05); /* Efecto de crecimiento */
+    background-color: #e6c23d; /* Mostaza más oscuro al pasar mouse */
+    transform: scale(1.05);
 }
 
 .donate {
@@ -122,7 +184,7 @@ body {
 #account-number {
     margin-top: 1rem;
     font-weight: bold;
-    color: #5a4100; /* Color del número de cuenta */
+    color: #5a4100;
 }
 
 /* Responsive */
@@ -130,7 +192,7 @@ body {
     .menu {
         display: none;
         flex-direction: column;
-        background-color: #ffcc00; /* Color dorado para menú desplegable */
+        background-color: #f7d547; /* Amarillo mostaza para menú desplegable */
         width: 100%;
         position: absolute;
         top: 60px;
@@ -147,26 +209,14 @@ body {
 }
 
 /* Acentos adicionales */
-.hero {
-    background-color: #fffbe6; /* Fondo suave y cálido */
-}
-
 .hero h1 {
-    color: #5a4100; /* Título en marrón oscuro */
+    color: #5a4100; /* Marrón oscuro para título */
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 1rem;
 }
 
 .cards .card:hover {
-    background-color: #ffef99; /* Fondo suave cuando se pasa el mouse */
+    background-color: #FFF2B2; /* Fondo suave al pasar mouse */
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
-}
-
-.card button {
-    background-color: #ff9e72; /* Botón con un toque cálido */
-}
-
-.card button:hover {
-    background-color: #ff7a00; /* Un naranja más cálido para hover */
 }
