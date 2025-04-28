@@ -52,7 +52,7 @@ body {
 
 .hero {
     width: 100%;
-    min-height: calc(100vh - 80px); /* Resta la altura aproximada del header */
+    min-height: calc(100vh - 100px); /* Resta la altura aproximada del header */
     background-color: #ffffff;
     display: flex;
     flex-direction: column;

@@ -53,8 +53,9 @@
             <h2>Apoya nuestra misión</h2>
             <p>Haz click en la tarjeta para copiar el número de cuenta:</p>
             <img src="./images/card.jpeg" alt="Tarjeta de donación" class="card-image" onclick="copyAccount()">
-            <p id="account-number">1234 5678 9012 3456</p>
-            <small id="copied-message" style="display:none;">¡Número copiado!</small>
+            <!-- El número de cuenta estará oculto -->
+            <input type="text" id="account-number" value="1234567890123456" readonly style="position: absolute; left: -9999px;">
+            <small id="copied-message" style="display:none; color: green; font-weight: bold;">¡Número copiado!</small>
         </section>
 
     </main>

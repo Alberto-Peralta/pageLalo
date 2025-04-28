@@ -4,16 +4,20 @@ function toggleMenu() {
     menu.classList.toggle('show');
 }
 
+
+
 // Copiar el número de cuenta
 function copyAccount() {
-    var accountNumber = document.getElementById('account-number').innerText;
-    navigator.clipboard.writeText(accountNumber).then(function() {
-        var message = document.getElementById('copied-message');
-        message.style.display = 'block';
-        setTimeout(function() {
-            message.style.display = 'none';
-        }, 2000);
-    }, function(err) {
-        console.error('Error al copiar el texto: ', err);
-    });
+    const accountInput = document.getElementById("account-number");
+    accountInput.select();
+    accountInput.setSelectionRange(0, 99999); // Para móviles también
+    document.execCommand("copy");
+
+    const copiedMessage = document.getElementById("copied-message");
+    copiedMessage.style.display = "inline";
+
+    // Opcional: esconder el mensaje después de 2 segundos
+    setTimeout(() => {
+        copiedMessage.style.display = "none";
+    }, 2000);
 }
