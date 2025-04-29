@@ -1,8 +1,11 @@
 // Mostrar u ocultar el menú en dispositivos móviles
 function toggleMenu() {
-    var menu = document.getElementById('menu');
-    menu.classList.toggle('show');
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('show'); // Agrega o elimina la clase 'show'
 }
+
+
+
 
 
 
