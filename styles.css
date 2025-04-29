@@ -264,3 +264,109 @@ body {
         transform: translateY(0);
     }
 }
+/* Estilos generales para el footer */
+.footer {
+    background-color: #d4a017; /* Mostaza claro */
+    color: #ecf0f1; /* Blanco humo */
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
+}
+
+.footer-logo h2 {
+    font-family: 'Georgia', serif; /* Elegante */
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.footer-links ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    padding: 0;
+    flex-wrap: wrap; /* Los elementos se ajustan cuando la pantalla es pequeña */
+    justify-content: center;
+}
+
+.footer-links ul li {
+    font-family: 'Arial', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.footer-links ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: #f1d07a; /* Dorado pastel */
+}
+
+.footer-social {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.social-icon {
+    color: #ecf0f1;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #f1d07a; /* Dorado pastel */
+}
+
+.footer-bottom {
+    background-color: #b8860b; /* Mostaza oscuro */
+    padding: 1rem 0;
+    font-size: 0.9rem;
+    color: #ecf0f1;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+/* Media Query para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-logo h2 {
+        font-size: 1.8rem;
+    }
+
+    .footer-links ul {
+        justify-content: center;
+    }
+
+    .footer-links ul li {
+        margin-bottom: 0.5rem;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+
+    .footer-bottom p {
+        font-size: 0.8rem;
+    }
+}
