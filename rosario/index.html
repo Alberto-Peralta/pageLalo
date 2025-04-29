@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reza el Rosario Online</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <h1>Bienvenido al Rosario Online</h1>
+  </header>
+
+  <main>
+    <button id="openModal">Rezar el Rosario</button>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Rosario en línea</h2>
+        <iframe 
+          src="https://www.santisimavirgen.com.ar/elsantisimorosario/rosario_on_line.htm" 
+          width="100%" 
+          height="500" 
+          frameborder="0" 
+          allowfullscreen
+          style="border: none; border-radius: 12px;">
+        </iframe>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Rosario Online. Con amor y fe.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
