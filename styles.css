@@ -31,49 +31,95 @@ body {
 }
 
 /* Menú */
+/* Menú desplegable elegante */
 .menu {
     display: none;
     list-style: none;
-    gap: 1rem;
+    flex-direction: column;
     padding: 1rem;
     position: absolute;
-    top: 0;
+    top: 60px;
     left: 0;
     width: 100%;
-    background-color: rgba(212, 160, 23, 0.95); /* Mostaza claro semi-transparente */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 10;
-    flex-direction: column;
+    background: rgba(212, 160, 23, 0.95); /* Mostaza suave con transparencia */
+    backdrop-filter: blur(5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    animation: slideDown 0.4s ease-out;
+    z-index: 999;
+    transition: all 0.3s ease;
+    font-family: 'Arial', sans-serif;
+    color: #ecf0f1; /* Blanco humo */
 }
+
 
 .menu.show {
     display: flex;
 }
 
 .menu li {
-    padding: 1rem;
+    padding: 0.8rem 1.2rem;
     text-align: center;
-    width: 100%;
-    background-color: #8b5e00; /* Caramelo oscuro */
-    transition: background-color 0.3s ease;
+    color: #5c3a00; /* Marrón elegante */
+    font-weight: 600;
+    font-size: 1.1rem; /* Un poco más grande para elegancia */
+    font-family: 'Georgia', serif; /* Fuente elegante */
+    text-transform: uppercase; /* Hace las letras más formales */
+    letter-spacing: 1px; /* Espaciado entre letras */
+    border-bottom: 1px solid rgba(92, 58, 0, 0.1);
+    transition: background 0.3s ease, transform 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Sombra sutil en las letras */
+}
+
+.menu li:last-child {
+    border-bottom: none;
 }
 
 .menu li:hover {
-    background-color: #5c3a00; /* Café profundo */
+    background-color: #f1d07a; /* Dorado pastel */
+    transform: scale(1.05); /* Suaviza el escalado */
+    border-radius: 8px;
+    color: #3e2b00; /* Color más oscuro en el hover */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3); /* Sombra más fuerte en hover */
 }
 
+
+/* Botón para desplegar menú */
 .menu-toggle {
     display: block;
-    background: none;
+    background-color: #b8860b; /* Mostaza oscuro */
     border: none;
-    font-size: 2rem;
-    color: #ecf0f1;
+    font-size: 1.8rem;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.menu-toggle:hover {
+    background-color: #daa520; /* Dorado claro */
+    transform: scale(1.05);
 }
 
 .menu-toggle:focus {
     outline: none;
 }
+
+/* Animación para el menú */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
 
 /* Hero section */
 .hero {
