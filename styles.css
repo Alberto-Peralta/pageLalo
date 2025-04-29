@@ -72,7 +72,7 @@ body {
 /* Hero section */
 .hero {
     width: 100%;
-    min-height: calc(100vh - 120px); /* Resta la altura del header */
+    min-height: calc(100vh - 180px); /* Resta la altura del header */
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
