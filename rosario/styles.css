@@ -1,36 +1,94 @@
-/* General */
+/* Estilos generales */
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #fef9f0;
-  color: #4a3200;
-  text-align: center;
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  background-color: #fef9f1;
+  color: #5c3a00;
 }
 
-header {
+/* Header */
+.header {
   background-color: #d4a017;
-  padding: 1.5rem;
-  color: white;
-  border-bottom: 3px solid #c49b0e;
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; /* Para que el botón baje en pantallas pequeñas */
+  position: relative;
+  text-align: center;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+.header h1 {
+  flex: 1 1 100%;
+  margin: 0;
+  font-size: 2rem;
+  color: white;
+}
+
+/* Botón en el header */
+.boton-volver {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #f1d07a;
+  color: #5c3a00;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.boton-volver:hover {
+  background-color: #c49b0e;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Main */
 main {
   padding: 2rem;
+  text-align: center;
 }
 
 iframe {
   width: 100%;
-  max-width: 1000px;
-  height: 600px;
-  border: none;
+  max-width: 100%;
   border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* Footer */
 footer {
-  margin-top: 2rem;
   background-color: #d4a017;
   color: white;
+  text-align: center;
   padding: 1rem;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+/* RESPONSIVE - PANTALLAS PEQUEÑAS */
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .header h1 {
+    font-size: 1.5rem;
+  }
+
+  .boton-volver {
+    width: 100%;
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+
+  iframe {
+    height: 400px;
+  }
 }
