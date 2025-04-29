@@ -7,13 +7,13 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #ffffff; /* Fondo blanco puro */
-    color: #2e2e2e; /* Gris carbón */
+    background-color: #d4a017; /* Mostaza claro */
+    color: #ecf0f1; /* Blanco humo */
 }
 
 /* Logo */
 .logo {
-    color: #2e2e2e;
+    color: #ecf0f1;
     font-size: 1.5rem;
     font-weight: bold;
     text-align: center;
@@ -22,7 +22,7 @@ body {
 
 /* Navbar */
 .navbar {
-    background-color: #c5aa0e; /* Dorado serio principal */
+    background-color: #b8860b; /* Mostaza oscuro */
     padding: 1rem;
     display: flex;
     justify-content: space-between;
@@ -30,30 +30,36 @@ body {
     position: relative;
 }
 
-/* Menu oculto por defecto */
+/* Menú */
 .menu {
     display: none;
     list-style: none;
     gap: 1rem;
     padding: 1rem;
     position: absolute;
-    top: 0; /* Menú sobre la imagen */
+    top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
+    background-color: rgba(212, 160, 23, 0.95); /* Mostaza claro semi-transparente */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 10; /* Asegura que se muestre por encima de la imagen */
-    flex-direction: column; /* Menú vertical */
+    z-index: 10;
+    flex-direction: column;
 }
 
 .menu.show {
-    display: flex; /* Mostramos el menú cuando está activo */
+    display: flex;
 }
 
 .menu li {
     padding: 1rem;
     text-align: center;
     width: 100%;
+    background-color: #8b5e00; /* Caramelo oscuro */
+    transition: background-color 0.3s ease;
+}
+
+.menu li:hover {
+    background-color: #5c3a00; /* Café profundo */
 }
 
 .menu-toggle {
@@ -61,7 +67,7 @@ body {
     background: none;
     border: none;
     font-size: 2rem;
-    color: #2e2e2e;
+    color: #ecf0f1;
     cursor: pointer;
 }
 
@@ -72,8 +78,8 @@ body {
 /* Hero section */
 .hero {
     width: 100%;
-    min-height: calc(100vh - 180px); /* Resta la altura del header */
-    background-color: #ffffff;
+    min-height: calc(100vh - 180px);
+    background-color: #d4a017; /* Mostaza claro */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -88,13 +94,16 @@ body {
     max-width: 100%;
     margin-bottom: 1rem;
     transition: opacity 1.5s ease, transform 1.5s ease;
+    animation: fadeInDown 1.5s ease forwards;
 }
 
 .hero h1 {
-    color: #2e2e2e;
+    color: #ecf0f1;
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 1rem;
+    animation: fadeInUp 1.5s ease forwards;
+    animation-delay: 0.5s;
 }
 
 /* Cards */
@@ -106,16 +115,17 @@ body {
 }
 
 .card {
-    background-color: #ffffff;
+    background-color: #8b5e00; /* Caramelo oscuro */
     padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    color: #ecf0f1;
 }
 
 .cards .card:hover {
-    background-color: #f4e7c1; /* Tono claro derivado de #cca329 */
+    background-color: #5c3a00; /* Café profundo */
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
@@ -123,8 +133,8 @@ body {
     margin-top: 1rem;
     padding: 0.5rem 1rem;
     border: none;
-    background-color: #cca329; /* Botón con dorado maduro */
-    color: #2e2e2e;
+    background-color: #b8860b; /* Mostaza oscuro botón */
+    color: #ecf0f1;
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
@@ -132,7 +142,7 @@ body {
 }
 
 .card button:hover {
-    background-color: #a48221; /* Dorado más oscuro en hover */
+    background-color: #daa520; /* Dorado claro hover botón */
     transform: scale(1.05);
 }
 
@@ -140,6 +150,8 @@ body {
 .donate {
     text-align: center;
     padding: 2rem;
+    background-color: #fef6e4; /* Fondo suave cálido */
+    color: #5c3a00; /* Texto café profundo */
 }
 
 .card-image {
@@ -154,23 +166,17 @@ body {
 #account-number {
     margin-top: 1rem;
     font-weight: bold;
-    color: #2e2e2e;
+    color: #c1440e; /* Terracota para destacar */
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    /* Navbar */
     .menu {
-        background-color: rgba(204, 163, 41, 0.9); /* Fondo dorado semi-transparente */
+        background-color: rgba(184, 134, 11, 0.95); /* Mostaza oscuro semi-transparente */
         padding: 1rem;
-        top: 60px; /* Asegura que el menú no se solape con la navbar */
+        top: 60px;
         border-radius: 8px;
         position: absolute;
-    }
-
-    /* Menú */
-    .menu.show {
-        display: flex; /* Muestra el menú cuando está activo */
     }
 
     .menu li {
@@ -178,15 +184,37 @@ body {
     }
 
     .menu-toggle {
-        display: block; /* Visible solo en pantallas pequeñas */
+        display: block;
     }
 
-    /* Ajustes Hero */
     .hero h1 {
         font-size: 2rem;
     }
 
     .hero {
-        min-height: calc(100vh - 80px); /* Ajuste el tamaño de la hero */
+        min-height: calc(100vh - 80px);
+    }
+}
+
+/* Animaciones */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
