@@ -1,81 +1,36 @@
 /* General */
 body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #fef9f0;
-    color: #4a3200;
-    text-align: center;
-  }
-  
-  header {
-    background-color: #d4a017;
-    padding: 1.5rem;
-    color: white;
-    border-bottom: 3px solid #c49b0e;
-  }
-  
-  main {
-    padding: 2rem;
-  }
-  
-  button#openModal {
-    background-color: #d4a017;
-    color: white;
-    padding: 1rem 2rem;
-    border: none;
-    border-radius: 8px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: background 0.3s ease;
-  }
-  
-  button#openModal:hover {
-    background-color: #c49b0e;
-  }
-  
-  /* Modal Styles */
-  .modal {
-    display: none; /* Oculto por defecto */
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.6); /* Fondo oscuro semi-transparente */
-  }
-  
-  .modal-content {
-    background-color: #fff8e1;
-    margin: 5% auto;
-    padding: 2rem;
-    border: 1px solid #888;
-    width: 90%;
-    max-width: 800px;
-    border-radius: 12px;
-    position: relative;
-  }
-  
-  .close {
-    color: #aaa;
-    position: absolute;
-    top: 10px;
-    right: 25px;
-    font-size: 2rem;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: #000;
-  }
-  
-  footer {
-    margin-top: 2rem;
-    background-color: #d4a017;
-    color: white;
-    padding: 1rem;
-  }
-  
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fef9f0;
+  color: #4a3200;
+  text-align: center;
+}
+
+header {
+  background-color: #d4a017;
+  padding: 1.5rem;
+  color: white;
+  border-bottom: 3px solid #c49b0e;
+}
+
+main {
+  padding: 2rem;
+}
+
+iframe {
+  width: 100%;
+  max-width: 1000px;
+  height: 600px;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+  margin-top: 2rem;
+  background-color: #d4a017;
+  color: white;
+  padding: 1rem;
+}
