@@ -1,0 +1,359 @@
+body {
+    font-family: 'Merriweather', serif;
+    background-color: #E0F7FA; /* Azul pastel muy claro */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #4A4A4A; /* Gris oscuro para el texto */
+    background-image: url('https://source.unsplash.com/random/1920x1080/?pastel-sky,clouds,spiritual,minimalist'); /* Fondo sutil y cambiante, con "minimalist" */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.95); /* Más opaco para un look más limpio */
+    border-radius: 15px; /* Bordes más suaves */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); /* Sombra más sutil */
+    padding: 25px; /* Menos padding para un aspecto más compacto */
+    max-width: 500px; /* Ancho máximo un poco menor */
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espacio entre secciones un poco menor */
+    box-sizing: border-box;
+    position: relative;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Menos espacio */
+    align-items: center;
+}
+
+.language-selector button {
+    background-color: #B2EBF2; /* Azul cian pastel */
+    color: #4A4A4A;
+    border: none;
+    padding: 8px 15px; /* Botones más pequeños */
+    border-radius: 20px; /* Más redondeados */
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    margin: 0 5px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08); /* Sombra más sutil */
+}
+
+.language-selector button:hover {
+    background-color: #80DEEA; /* Azul cian más intenso */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.language-selector button.active {
+    background-color: #FFCDD2; /* Rosa pastel activo */
+    color: #4A4A4A;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.mystery-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#mystery-image {
+    width: 120px; /* Imagen más pequeña */
+    height: 120px;
+    border-radius: 10px; /* Bordes más suaves para la imagen */
+    object-fit: cover;
+    margin-bottom: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombra más sutil */
+    border: 2px solid #FFCDD2; /* Borde rosa pastel */
+}
+
+#mystery-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6em; /* Título un poco más pequeño */
+    margin: 0 0 6px 0;
+    color: #880E4F; /* Rosa oscuro profundo */
+}
+
+#mystery-day {
+    font-size: 0.9em; /* Texto más pequeño */
+    color: #757575; /* Gris medio */
+}
+
+.mystery-selection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px; /* Espacio entre botones de misterio más pequeño */
+}
+
+.mystery-selection button {
+    background-color: #F8BBD0; /* Rosa pastel suave */
+    color: #4A4A4A;
+    border: none;
+    padding: 10px 18px; /* Botones más pequeños */
+    border-radius: 25px; /* Más redondeados */
+    cursor: pointer;
+    font-size: 0.95em;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08); /* Sombra más sutil */
+}
+
+.mystery-selection button:hover {
+    background-color: #F48FB1; /* Rosa pastel más intenso */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mystery-selection button.active {
+    background-color: #B2EBF2; /* Azul pastel activo */
+    color: #4A4A4A;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.rosary-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30px, 1fr)); /* Cuentas más pequeñas */
+    gap: 8px; /* Menos espacio entre cuentas */
+    justify-items: center;
+    padding: 10px 0; /* Menos padding */
+    margin-top: 15px;
+    position: relative;
+}
+
+.bead {
+    width: 30px; /* Cuentas más pequeñas */
+    height: 30px;
+    border-radius: 50%; /* Completamente redondas */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra más sutil */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    position: relative;
+    background-color: #FFCDD2; /* Rosa pastel para Avemarías */
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Borde blanco sutil */
+}
+
+.bead.large {
+    width: 38px; /* Cuentas de Padre Nuestro un poco más grandes */
+    height: 38px;
+    background-color: #BBDEFB; /* Azul pastel para Padres Nuestros */
+    border-radius: 50%; /* Mantenerlas redondas */
+    /* Eliminar clip-path si queremos que sean solo redondas y no cruces/corazones */
+    /* Si quieres las cruces/corazones, mantén los clip-path aquí */
+    /* clip-path: polygon(
+        calc(50% - 10%) 0%,
+        calc(50% + 10%) 0%,
+        calc(50% + 10%) calc(50% - 10%),
+        100% calc(50% - 10%),
+        100% calc(50% + 10%),
+        calc(50% + 10%) calc(50% + 10%),
+        calc(50% + 10%) 100%,
+        calc(50% - 10%) 100%,
+        calc(50% - 10%) calc(50% + 10%),
+        0% calc(50% + 10%),
+        0% calc(50% - 10%),
+        calc(50% - 10%) calc(50% - 10%)
+    ); */
+}
+
+.bead.active {
+    background-color: #FFECB3; /* Amarillo pastel claro para la cuenta activa */
+    box-shadow: 0 0 15px rgba(255, 236, 179, 0.7); /* Resplandor más suave */
+    transform: scale(1.1); /* Efecto de escala más sutil */
+}
+
+.prayer-display {
+    background-color: #FFFDE7; /* Amarillo muy pálido para la oración */
+    border: 1px solid #FFE0B2; /* Borde naranja pálido */
+    border-radius: 10px; /* Menos redondeado */
+    padding: 15px; /* Menos padding */
+    margin-top: 20px;
+    min-height: 80px; /* Altura un poco menor */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05); /* Sombra interna más sutil */
+}
+
+#current-prayer-text {
+    font-family: 'Merriweather', serif;
+    font-size: 1.05em; /* Texto de oración ligeramente más pequeño */
+    color: #4A4A4A;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.controls {
+    margin-top: 20px;
+    display: flex; /* Para alinear los botones */
+    justify-content: center; /* Centrar los botones */
+    gap: 15px; /* Espacio entre botones */
+}
+
+#next-button, #prev-button, #next-litany-button {
+    background-color: #81C784; /* Verde pastel suave */
+    color: #333; /* Texto oscuro para contraste */
+    border: none;
+    padding: 12px 25px; /* Botones más pequeños */
+    border-radius: 30px; /* Más redondeados */
+    cursor: pointer;
+    font-size: 1em; /* Fuente un poco más pequeña */
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(129, 199, 132, 0.3); /* Sombra más suave */
+}
+
+#next-button:hover, #prev-button:hover, #next-litany-button:hover {
+    background-color: #66BB6A; /* Verde pastel más intenso */
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(129, 199, 132, 0.5);
+}
+
+#prev-button {
+    background-color: #FFCDD2; /* Rosa pastel para el botón de regresar */
+    box-shadow: 0 4px 12px rgba(255, 205, 210, 0.3);
+}
+
+#prev-button:hover {
+    background-color: #F8BBD0;
+    box-shadow: 0 6px 15px rgba(255, 205, 210, 0.5);
+}
+
+.litany-container {
+    margin-top: 30px;
+    border-top: 1px solid #E0E0E0;
+    padding-top: 20px;
+}
+
+.litany-container h3 {
+    font-family: 'Playfair Display', serif;
+    color: #880E4F;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+.litany-beads {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 7px; /* Menos espacio */
+    margin-bottom: 20px;
+}
+
+.litany-bead {
+    width: 32px; /* Cuentas de letanías un poco más pequeñas */
+    height: 32px;
+    background-color: #ADD8E6; /* Azul cielo pastel para letanías */
+    border-radius: 50%; /* Mantener circular para las letanías */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.litany-bead.active {
+    background-color: #FFECB3; /* Amarillo pastel para activa */
+    box-shadow: 0 0 12px rgba(255, 236, 179, 0.6);
+    transform: scale(1.08);
+}
+
+#current-litany-text {
+    font-family: 'Merriweather', serif;
+    font-size: 1em;
+    color: #4A4A4A;
+    line-height: 1.5;
+    text-align: center;
+    background-color: #E3F2FD; /* Azul muy pálido para letanía */
+    border: 1px solid #BBDEFB;
+    border-radius: 8px;
+    padding: 10px;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+/* Media Queries para Responsividad (ajustadas para el nuevo tamaño) */
+@media (max-width: 600px) {
+    .container {
+        padding: 12px;
+        border-radius: 0;
+        box-shadow: none;
+        min-height: 100vh;
+        justify-content: space-between;
+        gap: 12px;
+    }
+
+    body {
+        padding: 0;
+        align-items: stretch;
+    }
+
+    .mystery-selection button {
+        flex: 1 1 auto;
+        font-size: 0.85em;
+        padding: 8px 12px;
+    }
+
+    .language-selector button {
+        padding: 7px 10px;
+        font-size: 0.8em;
+    }
+
+    #mystery-image {
+        width: 90px;
+        height: 90px;
+    }
+
+    #mystery-title {
+        font-size: 1.4em;
+    }
+
+    .bead {
+        width: 28px;
+        height: 28px;
+    }
+    .bead.large {
+        width: 35px;
+        height: 35px;
+    }
+
+    .prayer-display {
+        padding: 10px;
+        min-height: 70px;
+    }
+
+    #current-prayer-text {
+        font-size: 0.95em;
+    }
+
+    #next-button, #prev-button, #next-litany-button {
+        padding: 10px 18px;
+        font-size: 0.95em;
+    }
+
+    .litany-bead {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+@media (max-width: 400px) {
+    .mystery-selection {
+        flex-direction: column;
+    }
+}
