@@ -3,51 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rosario Interactivo</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <title>Santo Rosario Interactivo</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <div class="language-selector">
-                <button data-lang="es">ES</button>
-                <button data-lang="la">LA</button>
-                <button data-lang="it">IT</button>
-            </div>
-            <div class="mystery-info">
-                <img id="mystery-image" src="https://via.placeholder.com/150" alt="Misterio del Rosario">
-                <h2 id="mystery-title"></h2>
-                <p id="mystery-day"></p>
-            </div>
-            <div class="mystery-selection">
-                <button data-mystery-type="gozosos">Gozosos</button>
-                <button data-mystery-type="dolorosos">Dolorosos</button>
-                <button data-mystery-type="gloriosos">Gloriosos</button>
-                <button data-mystery-type="luminosos">Luminosos</button>
-            </div>
-        </div>
 
-        <div class="rosary-container">
-            </div>
+    <div id="rosary-container">
+        <div id="background-image"></div>
+        <div class="overlay"></div>
 
-        <div class="prayer-display">
-            <p id="current-prayer-text"></p>
-        </div>
-
-        <div class="controls">
-            <button id="prev-button">Regresar</button> <button id="next-button">Siguiente Oración</button>
-        </div>
-
-        <div class="litany-container" style="display: none;">
-            <h3>Letanías Lauretanas</h3>
-            <div class="litany-beads">
+        <div class="main-content">
+            <div class="controls">
+                <div class="control-group">
+                    <label for="language-select">Idioma:</label>
+                    <select id="language-select">
+                        <option value="es">Español</option>
+                        <option value="it">Italiano</option>
+                        <option value="la">Latín</option>
+                    </select>
                 </div>
-            <p id="current-litany-text"></p>
-            <button id="next-litany-button">Siguiente Letanía</button>
+                <div class="control-group">
+                    <label for="mystery-select">Misterios:</label>
+                    <select id="mystery-select">
+                        <option value="joyful">Gozosos (Lunes, Sábado)</option>
+                        <option value="luminous">Luminosos (Jueves)</option>
+                        <option value="sorrowful">Dolorosos (Martes, Viernes)</option>
+                        <option value="glorious">Gloriosos (Miércoles, Domingo)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="prayer-area">
+                <h1 id="mystery-title"></h1>
+                <p id="prayer-text"></p>
+            </div>
+
+            <div id="bead-container">
+                </div>
+
+            <div class="navigation">
+                <button id="prev-btn">Anterior</button> <button id="next-btn">Siguiente</button>
+            </div>
+            
+            <div class="progress-bar-container">
+                <div id="progress-bar"></div>
+            </div>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="js/content.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
