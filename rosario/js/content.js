@@ -4,6 +4,7 @@ const rosaryContent = {
     // #####################################################################
     es: {
         next_btn: "Siguiente",
+        prev_btn: "Anterior",
         mysteries: { /* ... (El contenido de los misterios no cambia, se mantiene como en la versión anterior) ... */ },
         prayers: {
             sign_of_cross: "Por la señal de la Santa Cruz, de nuestros enemigos, líbranos Señor, Dios nuestro.\nEn el nombre del Padre, y del Hijo, y del Espíritu Santo. Amén.",
