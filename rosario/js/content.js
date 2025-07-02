@@ -3,10 +3,41 @@ const rosaryContent = {
     // #####                        ESPAÑOL                            #####
     // #####################################################################
     es: {
-        next_btn: "Siguiente",
+        default_image: "default.jpg",
         prev_btn: "Anterior",
-        mysteries: { /* ... (El contenido de los misterios no cambia, se mantiene como en la versión anterior) ... */ },
+        next_btn: "Siguiente",
+        mysteries: {
+            joyful: [
+                { title: "La Anunciación", image: "gozosos1.jpg", citation_text: "Lectura del Santo Evangelio según San Lucas (1, 28-38)", verse_text: '"He aquí la esclava del Señor; hágase en mí según tu palabra."', reflection_text: "La Anunciación a María inaugura la plenitud de los tiempos, es decir, el cumplimiento de las promesas y de las preparaciones. María es llamada a concebir a Aquel en quien habitará 'corporalmente la plenitud de la divinidad'. La respuesta divina a su '¿cómo será esto, puesto que no conozco varón?' se dio por el poder del Espíritu: 'El Espíritu Santo vendrá sobre ti'. (CIC, 484)" },
+                { title: "La Visitación", image: "gozosos2.jpg", citation_text: "Lectura del Santo Evangelio según San Lucas (1, 41-45)", verse_text: '"Bendita tú entre las mujeres y bendito el fruto de tu vientre... ¡Feliz la que ha creído que se cumplirían las cosas que le fueron dichas de parte del Señor!"', reflection_text: "La visitación de María a Isabel se convirtió así en visita de Dios a su pueblo. Isabel, 'llena de Espíritu Santo', es la primera en la larga serie de generaciones que llaman bienaventurada a María. (CIC, 717, 489)" },
+                { title: "El Nacimiento de Jesús", image: "gozosos3.jpg", citation_text: "Lectura del Santo Evangelio según San Lucas (2, 6-11)", verse_text: '"Y dio a luz a su hijo primogénito, lo envolvió en pañales y lo acostó en un pesebre... Os ha nacido hoy, en la ciudad de David, un salvador, que es el Cristo Señor."', reflection_text: "Jesús nació en la humildad de un establo, de una familia pobre; unos sencillos pastores son los primeros testigos del acontecimiento. En esta pobreza se manifiesta la gloria del cielo. Hacerse niño, pobre, y obediente hasta la muerte en cruz, revela el amor de Dios que viene a salvar a la humanidad. (CIC, 525)" },
+                { title: "La Presentación en el Templo", image: "gozosos4.jpg", citation_text: "Lectura del Santo Evangelio según San Lucas (2, 22-35)", verse_text: '"Mis ojos han visto tu salvación... luz para iluminar a las naciones y gloria de tu pueblo Israel... Y a ti misma una espada te atravesará el alma."', reflection_text: "La Presentación de Jesús en el Templo lo muestra como el Primogénito que pertenece al Señor. Con Simeón y Ana, toda la expectación de Israel es la que viene al Encuentro de su Salvador. Jesús es reconocido como el Mesías tan esperado, 'luz de las naciones' y 'gloria de Israel', pero también 'signo de contradicción'. La espada de dolor predicha a María anuncia otra oblación, perfecta y única, la de la Cruz. (CIC, 527, 529)" },
+                { title: "El Niño Perdido y Hallado", image: "gozosos5.jpg", citation_text: "Lectura del Santo Evangelio según San Lucas (2, 41-50)", verse_text: '"¿Por qué me buscabais? ¿No sabíais que yo debía estar en la casa de mi Padre?"', reflection_text: "El hallazgo de Jesús en el Templo es el único suceso que rompe el silencio de los Evangelios sobre los años ocultos de Jesús. Jesús deja entrever en ello el misterio de su consagración total a una misión derivada de su filiación divina. María y José 'no comprendieron' esta palabra, pero la acogieron en la fe. (CIC, 534)" }
+            ],
+            luminous: [
+                { title: "El Bautismo en el Jordán", image: "luminosos1.jpg", citation_text: "Lectura del Santo Evangelio según San Mateo (3, 16-17)", verse_text: '"Y una voz que salía de los cielos decía: Éste es mi Hijo amado, en quien me complazco."', reflection_text: "El bautismo de Jesús es, por su parte, la aceptación y la inauguración de su misión de Siervo doliente. Se deja contar entre los pecadores; es ya 'el Cordero de Dios que quita el pecado del mundo'. El Espíritu que había cernido sobre las aguas de la primera creación desciende entonces sobre Cristo, como preludio de la nueva creación, y el Padre manifiesta a Jesús como su 'Hijo amado'. (CIC, 536)" },
+                { title: "Las Bodas de Caná", image: "luminosos2.jpg", citation_text: "Lectura del Santo Evangelio según San Juan (2, 1-11)", verse_text: '"Haced lo que él os diga... Así, en Caná de Galilea, Jesús comenzó sus señales, manifestó su gloria y creció la fe de sus discípulos en él."', reflection_text: "En el umbral de su vida pública, Jesús realiza su primer signo —a petición de su Madre— con ocasión de un banquete de bodas. La Iglesia concede una gran importancia a la presencia de Jesús en las bodas de Caná. Ve en ella la confirmación de la bondad del matrimonio y el anuncio de que en adelante el matrimonio será un signo eficaz de la presencia de Cristo. (CIC, 1613)" },
+                { title: "El Anuncio del Reino", image: "luminosos3.jpg", citation_text: "Lectura del Santo Evangelio según San Marcos (1, 14-15)", verse_text: '"El tiempo se ha cumplido y el Reino de Dios está cerca; convertíos y creed en la Buena Nueva."', reflection_text: "Todos los hombres están llamados a entrar en el Reino. Anunciado primero a los hijos de Israel, este reino mesiánico está destinado a acoger a los hombres de todas las naciones. Para entrar en él, es necesario acoger la palabra de Jesús. El Reino de Dios llega en la persona de Cristo y crece misteriosamente en el corazón de los que le son incorporados hasta su plenitud escatológica. (CIC, 543, 541)" },
+                { title: "La Transfiguración", image: "luminosos4.jpg", citation_text: "Lectura del Santo Evangelio según San Mateo (17, 1-8)", verse_text: '"Y se transfiguró delante de ellos: su rostro se puso brillante como el sol y sus vestidos se volvieron blancos como la luz... Señor, ¡qué bien se está aquí!"', reflection_text: "Por un instante, Jesús muestra su gloria divina, confirmando así la confesión de Pedro. Muestra también que para 'entrar en su gloria' es necesario pasar por la Cruz en Jerusalén. La Transfiguración nos concede una prueba de la vida nueva: 'como Él, seremos nosotros'. Pero nos recuerda también que 'es necesario que pasemos por muchas tribulaciones para entrar en el Reino de Dios'. (CIC, 554, 556)" },
+                { title: "La Institución de la Eucaristía", image: "luminosos5.jpg", citation_text: "Lectura de la Primera Carta de San Pablo a los Corintios (11, 23-26)", verse_text: '"Porque cada vez que coméis este pan y bebéis esta copa, proclamáis la muerte del Señor hasta que vuelva."', reflection_text: "Al celebrar la última Cena con sus apóstoles en el transcurso del banquete pascual, Jesús dio su sentido definitivo a la pascua judía. En efecto, el paso de Jesús a su Padre por su Muerte y su Resurrección, la Pascua nueva, es anticipado en la Cena y celebrado en la Eucaristía que da cumplimiento a la pascua judía y anticipa la pascua final de la Iglesia en la gloria del Reino. (CIC, 1340)" }
+            ],
+            sorrowful: [
+                { title: "La Oración en el Huerto", image: "dolorosos1.jpg", citation_text: "Lectura del Santo Evangelio según San Lucas (22, 39-46)", verse_text: '"Padre, si quieres, aparta de mí esta copa; pero no se haga mi voluntad, sino la tuya."', reflection_text: "La agonía de Jesús en Getsemaní representa la lucha de la voluntad humana de Jesús contra la voluntad divina del Padre. Jesús, aun siendo Dios, experimenta el horror de la muerte y la angustia de la separación, pero su obediencia filial lo lleva a aceptar la misión redentora. Su oración nos enseña a conformar nuestra voluntad con la de Dios en medio de la prueba. (CIC, 612)" },
+                { title: "La Flagelación", image: "dolorosos2.jpg", citation_text: "Lectura del Santo Evangelio según San Juan (19, 1)", verse_text: '"Entonces Pilato tomó a Jesús y mandó azotarle."', reflection_text: "La flagelación fue un castigo brutal que formaba parte de la Pasión de Cristo, predicha por los profetas. A través de este sufrimiento físico extremo, Jesús carga sobre sí los pecados y dolores de toda la humanidad. 'Por sus llagas hemos sido curados' (Isaías 53,5). Este misterio nos invita a unir nuestros propios sufrimientos a los de Cristo para la redención del mundo. (CIC, 614)" },
+                { title: "La Coronación de Espinas", image: "dolorosos3.jpg", citation_text: "Lectura del Santo Evangelio según San Mateo (27, 27-31)", verse_text: '"Y trenzando una corona de espinas, se la pusieron sobre su cabeza, y en su mano derecha una caña; y doblando la rodilla delante de él, le escarnecían, diciendo: ¡Salve, Rey de los judíos!"', reflection_text: "La coronación de espinas es una burla cruel a la realeza de Cristo. Sin embargo, en esta humillación se revela la verdadera naturaleza de su Reino: un reino no de poder terrenal, sino de amor, humildad y servicio. Jesús acepta la corona de dolor, transformando un símbolo de escarnio en un signo de su amor redentor y de su soberanía sobre el pecado y la muerte. (CIC, 478)" },
+                { title: "Jesús con la Cruz a Cuestas", image: "dolorosos4.jpg", citation_text: "Lectura del Santo Evangelio según San Juan (19, 17)", verse_text: '"Y él, cargando su cruz, salió al lugar llamado de la Calavera, que en hebreo se llama Gólgota."', reflection_text: "Jesús carga con la cruz, en la que se encuentran todos nuestros pecados. El camino del Calvario es el camino de la obediencia y del amor hasta el extremo. Al abrazar la cruz, Jesús nos enseña que el sufrimiento, aceptado con amor, tiene un valor redentor. Nos invita a tomar nuestra propia cruz cada día y seguirle, participando así en su obra de salvación. (CIC, 618)" },
+                { title: "La Crucifixión y Muerte", image: "dolorosos5.jpg", citation_text: "Lectura del Santo Evangelio según San Lucas (23, 44-46)", verse_text: '"Padre, en tus manos encomiendo mi espíritu. Y habiendo dicho esto, expiró."', reflection_text: "La muerte de Cristo es el sacrificio único y definitivo que reconcilia a la humanidad con Dios. En la cruz, Jesús experimenta el abandono para que nosotros nunca seamos abandonados por Dios. Su entrega total es la máxima prueba de amor. Desde la cruz, nos entrega a su Madre y nos da el don del Espíritu Santo, abriendo las puertas de la vida eterna. (CIC, 606, 616)" }
+            ],
+            glorious: [
+                { title: "La Resurrección", image: "gloriosos1.jpg", citation_text: "Lectura del Santo Evangelio según San Marcos (16, 1-7)", verse_text: '"No os asustéis. Buscáis a Jesús de Nazaret, el crucificado. Ha resucitado, no está aquí."', reflection_text: "La Resurrección de Jesús es la verdad culminante de nuestra fe en Cristo, creída y vivida por la primera comunidad cristiana como verdad central. Es la obra trascendente de Dios mismo. Confirma la divinidad de Cristo y es la promesa de nuestra propia resurrección. (CIC, 638, 651)" },
+                { title: "La Ascensión", image: "gloriosos2.jpg", citation_text: "Lectura de los Hechos de los Apóstoles (1, 9-11)", verse_text: '"Dicho esto, fue levantado en presencia de ellos, y una nube le ocultó a sus ojos... Este mismo Jesús, que ha sido tomado de vosotros al cielo, vendrá de la misma manera que le habéis visto ir al cielo."', reflection_text: "La Ascensión de Cristo al cielo marca la entrada definitiva de la humanidad de Jesús en el dominio celestial de Dios, de donde ha de volver. Jesucristo, cabeza de la Iglesia, nos precede en el Reino glorioso del Padre para que nosotros, miembros de su cuerpo, vivamos en la esperanza de estar un día con Él eternamente. (CIC, 665)" },
+                { title: "La Venida del Espíritu Santo", image: "gloriosos3.jpg", citation_text: "Lectura de los Hechos de los Apóstoles (2, 1-4)", verse_text: '"Se les aparecieron unas lenguas como de fuego que se repartieron y se posaron sobre cada uno de ellos; quedaron todos llenos del Espíritu Santo y se pusieron a hablar en otras lenguas."', reflection_text: "En el día de Pentecostés, la Pascua de Cristo se consuma con la efusión del Espíritu Santo que se manifiesta, da y comunica como Persona divina: desde su plenitud, Cristo, el Señor, derrama profusamente el Espíritu. El Espíritu Santo viene a santificar a la Iglesia y a capacitar a los apóstoles para anunciar con valentía el Evangelio. (CIC, 731)" },
+                { title: "La Asunción de María", image: "gloriosos4.jpg", citation_text: "Lectura del Santo Evangelio según San Lucas (1, 48-49)", verse_text: '"Porque ha puesto los ojos en la humildad de su esclava, por eso desde ahora todas las generaciones me llamarán bienaventurada, porque ha hecho en mi favor maravillas el Poderoso."', reflection_text: "La Santísima Virgen María, cumplido el curso de su vida terrena, fue llevada en cuerpo y alma a la gloria del cielo, en donde participa ya en la gloria de la Resurrección de su Hijo, anticipando la resurrección de todos los miembros de su Cuerpo. Es signo de esperanza cierta para la Iglesia peregrina. (CIC, 966)" },
+                { title: "La Coronación de María", image: "gloriosos5.jpg", citation_text: "Lectura del Libro del Apocalipsis (12, 1)", verse_text: '"Una gran señal apareció en el cielo: una Mujer, vestida del sol, con la luna bajo sus pies, y una corona de doce estrellas sobre su cabeza."', reflection_text: "Finalmente, la Virgen Inmaculada, preservada inmune de toda mancha de pecado original, terminado el curso de su vida en la tierra, fue asunta en cuerpo y alma a la gloria del cielo y enaltecida por el Señor como Reina de todos los vivientes, para que se asemejara más plenamente a su Hijo, Señor de señores y vencedor del pecado y de la muerte. (CIC, 966)" }
+            ]
+        },
         prayers: {
+            welcome_invitation: "Bienvenido.\n\nTe invitamos a tomar un momento para ofrecer este Santo Rosario por tus intenciones particulares, por las necesidades del mundo y por todos aquellos que han pedido tus oraciones.",
             sign_of_cross: "Por la señal de la Santa Cruz, de nuestros enemigos, líbranos Señor, Dios nuestro.\nEn el nombre del Padre, y del Hijo, y del Espíritu Santo. Amén.",
             versicle: "V. Dios mío, ven en mi auxilio.\nR. Señor, date prisa en socorrerme.",
             creed: "Creo en Dios, Padre todopoderoso, Creador del cielo y de la tierra. Creo en Jesucristo, su único Hijo, nuestro Señor, que fue concebido por obra y gracia del Espíritu Santo, nació de Santa María Virgen, padeció bajo el poder de Poncio Pilato, fue crucificado, muerto y sepultado, descendió a los infiernos, al tercer día resucitó de entre los muertos, subió a los cielos y está sentado a la derecha de Dios, Padre todopoderoso. Desde allí ha de venir a juzgar a vivos y muertos. Creo en el Espíritu Santo, la santa Iglesia católica, la comunión de los santos, el perdón de los pecados, la resurrección de la carne y la vida eterna. Amén.",
@@ -16,79 +47,7 @@ const rosaryContent = {
             fatima_prayer: "Oh, Jesús mío, perdona nuestros pecados, líbranos del fuego del infierno, lleva al cielo a todas las almas, especialmente a las más necesitadas de tu divina misericordia.",
             mary_mother: "María, Madre de gracia, Madre de piedad y misericordia, defiéndenos de nuestros enemigos y ampáranos ahora y en la hora de nuestra muerte. Amén.",
             salve_regina: "Dios te salve, Reina y Madre de misericordia, vida, dulzura y esperanza nuestra. ¡Dios te salve! A Ti llamamos los desterrados hijos de Eva; a Ti suspiramos, gimiendo y llorando, en este valle de lágrimas. Ea, pues, Señora, abogada nuestra, vuelve a nosotros esos tus ojos misericordiosos; y después de este destierro, muéstranos a Jesús, fruto bendito de tu vientre. ¡Oh, clemente, oh, piadosa, oh, dulce siempre Virgen María! Ruega por nosotros, Santa Madre de Dios, para que seamos dignos de alcanzar las promesas de Nuestro Señor Jesucristo. Amén.",
-            litany: `LETANÍAS LAURETANAS\n
-Señor, ten piedad
-Cristo, ten piedad
-Señor, ten piedad.
-Cristo, óyenos.
-Cristo, escúchanos.
-
-Dios, Padre celestial, ten piedad de nosotros.
-Dios, Hijo, Redentor del mundo, ten piedad de nosotros.
-Dios, Espíritu Santo, ten piedad de nosotros.
-Santísima Trinidad, un solo Dios, ten piedad de nosotros.
-
-Santa María, ruega por nosotros.
-Santa Madre de Dios, ruega por nosotros.
-Santa Virgen de las Vírgenes, ruega por nosotros.
-Madre de Cristo, ruega por nosotros.
-Madre de la Iglesia, ruega por nosotros.
-Madre de la misericordia, ruega por nosotros.
-Madre de la divina gracia, ruega por nosotros.
-Madre de la esperanza, ruega por nosotros.
-Madre purísima, ruega por nosotros.
-Madre castísima, ruega por nosotros.
-Madre siempre virgen, ruega por nosotros.
-Madre inmaculada, ruega por nosotros.
-Madre amable, ruega por nosotros.
-Madre admirable, ruega por nosotros.
-Madre del buen consejo, ruega por nosotros.
-Madre del Creador, ruega por nosotros.
-Madre del Salvador, ruega por nosotros.
-Virgen prudentísima, ruega por nosotros.
-Virgen digna de veneración, ruega por nosotros.
-Virgen digna de alabanza, ruega por nosotros.
-Virgen poderosa, ruega por nosotros.
-Virgen clemente, ruega por nosotros.
-Virgen fiel, ruega por nosotros.
-Espejo de justicia, ruega por nosotros.
-Trono de la sabiduría, ruega por nosotros.
-Causa de nuestra alegría, ruega por nosotros.
-Vaso espiritual, ruega por nosotros.
-Vaso digno de honor, ruega por nosotros.
-Vaso de insigne devoción, ruega por nosotros.
-Rosa mística, ruega por nosotros.
-Torre de David, ruega por nosotros.
-Torre de marfil, ruega por nosotros.
-Casa de oro, ruega por nosotros.
-Arca de la Alianza, ruega por nosotros.
-Puerta del cielo, ruega por nosotros.
-Estrella de la mañana, ruega por nosotros.
-Salud de los enfermos, ruega por nosotros.
-Refugio de los pecadores, ruega por nosotros.
-Consuelo de los migrantes, ruega por nosotros.
-Consoladora de los afligidos, ruega por nosotros.
-Auxilio de los cristianos, ruega por nosotros.
-Reina de los Ángeles, ruega por nosotros.
-Reina de los Patriarcas, ruega por nosotros.
-Reina de los Profetas, ruega por nosotros.
-Reina de los Apóstoles, ruega por nosotros.
-Reina de los Mártires, ruega por nosotros.
-Reina de los Confesores, ruega por nosotros.
-Reina de las Vírgenes, ruega por nosotros.
-Reina de todos los Santos, ruega por nosotros.
-Reina concebida sin pecado original, ruega por nosotros.
-Reina asunta al Cielo, ruega por nosotros.
-Reina del Santísimo Rosario, ruega por nosotros.
-Reina de la familia, ruega por nosotros.
-Reina de la paz, ruega por nosotros.
-
-Cordero de Dios, que quitas el pecado del mundo, perdónanos, Señor.
-Cordero de Dios, que quitas el pecado del mundo, escúchanos, Señor.
-Cordero de Dios, que quitas el pecado del mundo, ten misericordia de nosotros.
-
-V. Ruega por nosotros, Santa Madre de Dios.
-R. Para que seamos dignos de alcanzar las promesas de Nuestro Señor Jesucristo.`,
+            litany: `LETANÍAS LAURETANAS\n\nSeñor, ten piedad\nCristo, ten piedad\nSeñor, ten piedad.\nCristo, óyenos.\nCristo, escúchanos.\n\nDios, Padre celestial, ten piedad de nosotros.\nDios, Hijo, Redentor del mundo, ten piedad de nosotros.\nDios, Espíritu Santo, ten piedad de nosotros.\nSantísima Trinidad, un solo Dios, ten piedad de nosotros.\n\nSanta María, ruega por nosotros.\nSanta Madre de Dios, ruega por nosotros.\nSanta Virgen de las Vírgenes, ruega por nosotros.\nMadre de Cristo, ruega por nosotros.\nMadre de la Iglesia, ruega por nosotros.\nMadre de la misericordia, ruega por nosotros.\nMadre de la divina gracia, ruega por nosotros.\nMadre de la esperanza, ruega por nosotros.\nMadre purísima, ruega por nosotros.\nMadre castísima, ruega por nosotros.\nMadre siempre virgen, ruega por nosotros.\nMadre inmaculada, ruega por nosotros.\nMadre amable, ruega por nosotros.\nMadre admirable, ruega por nosotros.\nMadre del buen consejo, ruega por nosotros.\nMadre del Creador, ruega por nosotros.\nMadre del Salvador, ruega por nosotros.\nVirgen prudentísima, ruega por nosotros.\nVirgen digna de veneración, ruega por nosotros.\nVirgen digna de alabanza, ruega por nosotros.\nVirgen poderosa, ruega por nosotros.\nVirgen clemente, ruega por nosotros.\nVirgen fiel, ruega por nosotros.\nEspejo de justicia, ruega por nosotros.\nTrono de la sabiduría, ruega por nosotros.\nCausa de nuestra alegría, ruega por nosotros.\nVaso espiritual, ruega por nosotros.\nVaso digno de honor, ruega por nosotros.\nVaso de insigne devoción, ruega por nosotros.\nRosa mística, ruega por nosotros.\nTorre de David, ruega por nosotros.\nTorre de marfil, ruega por nosotros.\nCasa de oro, ruega por nosotros.\nArca de la Alianza, ruega por nosotros.\nPuerta del cielo, ruega por nosotros.\nEstrella de la mañana, ruega por nosotros.\nSalud de los enfermos, ruega por nosotros.\nRefugio de los pecadores, ruega por nosotros.\nConsuelo de los migrantes, ruega por nosotros.\nConsoladora de los afligidos, ruega por nosotros.\nAuxilio de los cristianos, ruega por nosotros.\nReina de los Ángeles, ruega por nosotros.\nReina de los Patriarcas, ruega por nosotros.\nReina de los Profetas, ruega por nosotros.\nReina de los Apóstoles, ruega por nosotros.\nReina de los Mártires, ruega por nosotros.\nReina de los Confesores, ruega por nosotros.\nReina de las Vírgenes, ruega por nosotros.\nReina de todos los Santos, ruega por nosotros.\nReina concebida sin pecado original, ruega por nosotros.\nReina asunta al Cielo, ruega por nosotros.\nReina del Santísimo Rosario, ruega por nosotros.\nReina de la familia, ruega por nosotros.\nReina de la paz, ruega por nosotros.\n\nCordero de Dios, que quitas el pecado del mundo, perdónanos, Señor.\nCordero de Dios, que quitas el pecado del mundo, escúchanos, Señor.\nCordero de Dios, que quitas el pecado del mundo, ten misericordia de nosotros.\n\nV. Ruega por nosotros, Santa Madre de Dios.\nR. Para que seamos dignos de alcanzar las promesas de Nuestro Señor Jesucristo.`,
             pope_intentions: "Por las intenciones del Santo Padre, por la Santa Iglesia y por nuestras necesidades.",
             final_sign_of_cross: "En el nombre del Padre, y del Hijo, y del Espíritu Santo. Amén."
         }
@@ -96,103 +55,46 @@ R. Para que seamos dignos de alcanzar las promesas de Nuestro Señor Jesucristo.
     // #####################################################################
     // #####                        ITALIANO                           #####
     // #####################################################################
-    it: {
-        next_btn: "Successivo",
-        mysteries: { /* ... (El contenido de los misterios no cambia) ... */ },
-        prayers: {
-            sign_of_cross: "Nel segno della santa croce, dai nostri nemici, liberaci, o Signore, Dio nostro.\nNel nome del Padre e del Figlio e dello Spirito Santo. Amen.",
-            versicle: "V. O Dio, vieni a salvarmi.\nR. Signore, vieni presto in mio aiuto.",
-            creed: "Io credo in Dio, Padre onnipotente, Creatore del cielo e della terra; e in Gesù Cristo, suo unico Figlio, nostro Signore, il quale fu concepito di Spirito Santo, nacque da Maria Vergine, patì sotto Ponzio Pilato, fu crocifisso, morì e fu sepolto; discese agli inferi; il terzo giorno risuscitò da morte; salì al cielo, siede alla destra di Dio Padre onnipotente; di là verrà a giudicare i vivi e i morti. Credo nello Spirito Santo, la santa Chiesa cattolica, la comunione dei santi, la remissione dei peccati, la risurrezione della carne, la vita eterna. Amen.",
-            our_father: "Padre nostro, che sei nei cieli, sia santificato il tuo nome, venga il tuo regno, sia fatta la tua volontà, come in cielo così in terra. Dacci oggi il nostro pane quotidiano, e rimetti a noi i nostri debiti come anche noi li rimettiamo ai nostri debitori, e non abbandonarci alla tentazione, ma liberaci dal male. Amen.",
-            hail_mary: "Ave, o Maria, piena di grazia, il Signore è con te. Tu sei benedetta fra le donne e benedetto è il frutto del tuo seno, Gesù. Santa Maria, Madre di Dio, prega per noi peccatori, adesso e nell'ora della nostra morte. Amen.",
-            gloria: "Gloria al Padre e al Figlio e allo Spirito Santo. Come era nel principio, e ora e sempre, nei secoli dei seoli. Amen.",
-            fatima_prayer: "O Gesù mio, perdona le nostre colpe, preservaci dal fuoco dell'inferno, porta in cielo tutte le anime, specialmente le più bisognose della tua divina misericordia.",
-            mary_mother: "Maria, Madre di grazia, Madre di pietà e di misericordia, difendici dal nemico e proteggici ora e nell'ora della nostra morte. Amen.",
-            salve_regina: "Salve, Regina, madre di misericordia, vita, dolcezza e speranza nostra, salve. A te ricorriamo, esuli figli di Eva; a te sospiriamo, gementi e piangenti in questa valle di lacrime. Orsù dunque, avvocata nostra, rivolgi a noi gli occhi tuoi misericordiosi. E mostraci, dopo questo esilio, Gesù, il frutto benedetto del tuo seno. O clemente, o pia, o dolce Vergine Maria. Prega per noi, Santa Madre di Dio, affinché siamo fatti degni delle promesse di Cristo. Amen.",
-            litany: `LITANIE LAURETANE\n
-Signore, pietà
-Cristo, pietà
-Signore, pietà
-Cristo, ascoltaci
-Cristo, esaudiscici
 
-Padre del cielo, che sei Dio, abbi pietà di noi.
-Figlio, Redentore del mondo, che sei Dio, abbi pietà di noi.
-Spirito Santo, che sei Dio, abbi pietà di noi.
-Santa Trinità, unico Dio, abbi pietà di noi.
-
-Santa Maria, prega per noi.
-Santa Madre di Dio, prega per noi.
-Santa Vergine delle vergini, prega per noi.
-Madre di Cristo, prega per noi.
-Madre della Chiesa, prega per noi.
-Madre della misericordia, prega per noi.
-Madre della divina grazia, prega per noi.
-Madre della speranza, prega per noi.
-Madre purissima, prega per noi.
-Madre castissima, prega per noi.
-Madre sempre vergine, prega per noi.
-Madre immacolata, prega per noi.
-Madre degna d'amore, prega per noi.
-Madre ammirabile, prega per noi.
-Madre del buon consiglio, prega per noi.
-Madre del Creatore, prega per noi.
-Madre del Salvatore, prega per noi.
-Vergine prudentissima, prega per noi.
-Vergine degna di onore, prega per noi.
-Vergine degna di lode, prega per noi.
-Vergine potente, prega per noi.
-Vergine clemente, prega per noi.
-Vergine fedele, prega per noi.
-Specchio di perfezione, prega per noi.
-Sede della sapienza, prega per noi.
-Fonte della nostra gioia, prega per noi.
-Tempio dello Spirito Santo, prega per noi.
-Tabernacolo dell'eterna gloria, prega per noi.
-Dimora tutta consacrata a Dio, prega per noi.
-Rosa mistica, prega per noi.
-Torre di Davide, prega per noi.
-Torre d'avorio, prega per noi.
-Casa d'oro, prega per noi.
-Arca dell'alleanza, prega per noi.
-Porta del cielo, prega per noi.
-Stella del mattino, prega per noi.
-Salute degli infermi, prega per noi.
-Rifugio dei peccatori, prega per noi.
-Conforto dei migranti, prega per noi.
-Consolatrice degli afflitti, prega per noi.
-Aiuto dei cristiani, prega per noi.
-Regina degli Angeli, prega per noi.
-Regina dei Patriarchi, prega per noi.
-Regina dei Profeti, prega per noi.
-Regina degli Apostoli, prega per noi.
-Regina dei Martiri, prega per noi.
-Regina dei Confessori, prega per noi.
-Regina delle Vergini, prega per noi.
-Regina di tutti i Santi, prega per noi.
-Regina concepita senza peccato originale, prega per noi.
-Regina assunta in cielo, prega per noi.
-Regina del santo Rosario, prega per noi.
-Regina della famiglia, prega per noi.
-Regina della pace, prega per noi.
-
-Agnello di Dio, che togli i peccati del mondo, perdonaci, o Signore.
-Agnello di Dio, che togli i peccati del mondo, ascoltaci, o Signore.
-Agnello di Dio, che togli i peccati del mondo, abbi pietà di noi.
-
-V. Prega per noi, Santa Madre di Dio.
-R. E saremo degni delle promesse di Cristo.`,
-            pope_intentions: "Per le intenzioni del Sommo Pontefice, per la Santa Chiesa e per le nostre necessità.",
-            final_sign_of_cross: "Nel nome del Padre e del Figlio e dello Spirito Santo. Amen."
-        }
-    },
     // #####################################################################
     // #####                          LATÍN                            #####
     // #####################################################################
     la: {
+        default_image: "default.jpg",
+        prev_btn: "Prior",
         next_btn: "Sequens",
-        mysteries: { /* ... (El contenido de los misterios no cambia) ... */ },
+        mysteries: {
+            joyful: [
+                { title: "Annuntiatio", image: "gozosos1.jpg", citation_text: "Lectio sancti Evangelii secundum Lucam (1, 28-38)", verse_text: '"Ecce ancilla Domini; fiat mihi secundum verbum tuum."', reflection_text: "Annuntiatio Mariae inaugurat plenitudinem temporum, id est, adimpletionem promissionum et praeparationum. Maria vocatur ad concipiendum Illum in quo habitabit 'corporaliter plenitudo divinitatis'. Responsum divinum ad eius 'quomodo fiet istud, quoniam virum non cognosco?' datum est per potentiam Spiritus: 'Spiritus Sanctus superveniet in te'. (CCC, 484)" },
+                { title: "Visitatio", image: "gozosos2.jpg", citation_text: "Lectio sancti Evangelii secundum Lucam (1, 41-45)", verse_text: '"Benedicta tu inter mulieres, et benedictus fructus ventris tui... Beata quae credidit, quoniam perficientur ea, quae dicta sunt ei a Domino!"', reflection_text: "Visitatio Mariae ad Elisabeth sic facta est visitatio Dei ad populum suum. Elisabeth, 'repleta Spiritu Sancto', prima est in longa serie generationum quae Mariam beatam dicunt. (CCC, 717, 489)" },
+                { title: "Nativitas Iesu", image: "gozosos3.jpg", citation_text: "Lectio sancti Evangelii secundum Lucam (2, 6-11)", verse_text: '"Et peperit filium suum primogenitum, et pannis eum involvit, et reclinavit eum in praesepio... Natus est vobis hodie Salvator, qui est Christus Dominus, in civitate David."', reflection_text: "Iesus in humilitate stabuli natus est, ex familia paupere; simplices pastores primi testes eventus sunt. In hac paupertate gloria caeli manifestatur. Fieri puerum, pauperem et obedientem usque ad mortem crucis, amorem Dei revelat qui venit ad salvandam humanitatem. (CCC, 525)" },
+                { title: "Praesentatio in Templo", image: "gozosos4.jpg", citation_text: "Lectio sancti Evangelii secundum Lucam (2, 22-35)", verse_text: '"Viderunt oculi mei salutare tuum... lumen ad revelationem gentium et gloriam plebis tuae Israel... Et tuam ipsius animam pertransibit gladius."', reflection_text: "Praesentatio Iesu in Templo Eum ostendit ut Primogenitum qui ad Dominum pertinet. Cum Simeone et Anna, tota exspectatio Israel venit ad Salvatorem suum. Iesus agnoscitur ut Messias exspectatus, 'lumen gentium' et 'gloria Israel', sed etiam 'signum contradictionis'. Gladius doloris Mariae praedictus aliam oblationem, perfectam et unicam, Crucis annuntiat. (CCC, 527, 529)" },
+                { title: "Inventio in Templo", image: "gozosos5.jpg", citation_text: "Lectio sancti Evangelii secundum Lucam (2, 41-50)", verse_text: '"Quid est quod me quaerebatis? Nesciebatis quia in his quae Patris mei sunt, oportet me esse?"', reflection_text: "Inventio Iesu in Templo unicus est eventus qui silentium Evangeliorum de annis Iesu absconditis frangit. Iesus in eo mysterium suae totalis consecrationis missioni ex filiatione divina derivatae revelat. Maria et Ioseph 'non intellexerunt' verbum hoc, sed in fide illud acceperunt. (CCC, 534)" }
+            ],
+            luminous: [
+                { title: "Baptisma in Iordane", image: "luminosos1.jpg", citation_text: "Lectio sancti Evangelii secundum Matthaeum (3, 16-17)", verse_text: '"Et vox de caelis dicens: Hic est Filius meus dilectus, in quo mihi complacui."', reflection_text: "Baptisma Iesu est, ex parte sua, acceptatio et inauguratio missionis suae Servi patientis. Se inter peccatores numerari sinit; iam est 'Agnus Dei, qui tollit peccatum mundi'. Spiritus, qui super aquas primae creationis ferebatur, tunc super Christum descendit, tamquam praeludium novae creationis, et Pater Iesum ut 'Filium suum dilectum' manifestat. (CCC, 536)" },
+                { title: "Nuptiae in Cana", image: "luminosos2.jpg", citation_text: "Lectio sancti Evangelii secundum Ioannem (2, 1-11)", verse_text: '"Quodcumque dixerit vobis, facite... Hoc fecit initium signorum Iesus in Cana Galilaeae et manifestavit gloriam suam, et crediderunt in eum discipuli eius."', reflection_text: "In limine vitae suae publicae, Iesus primum suum signum facit — rogatu Matris suae — in convivio nuptiali. Ecclesia magnam tribuit momentum praesentiae Iesu in nuptiis Canensibus. In ea videt confirmationem bonitatis matrimonii et annuntiationem quod matrimonium posthac signum efficax praesentiae Christi erit. (CCC, 1613)" },
+                { title: "Proclamatio Regni", image: "luminosos3.jpg", citation_text: "Lectio sancti Evangelii secundum Marcum (1, 14-15)", verse_text: '"Impletum est tempus, et appropinquavit regnum Dei; paenitemini et credite Evangelio."', reflection_text: "Omnes homines vocantur ad intrandum in Regnum. Primum filiis Israel annuntiatum, hoc regnum messianicum destinatur ad accipiendos homines omnium gentium. Ut in illud intretur, necesse est verbum Iesu accipere. Regnum Dei venit in persona Christi et mysteriose crescit in cordibus eorum qui Ei incorporantur usque ad plenitudinem eschatologicam. (CCC, 543, 541)" },
+                { title: "Transfiguratio", image: "luminosos4.jpg", citation_text: "Lectio sancti Evangelii secundum Matthaeum (17, 1-8)", verse_text: '"Et transfiguratus est ante eos, et resplenduit facies eius sicut sol, vestimenta autem eius facta sunt alba sicut nix... Domine, bonum est nos hic esse!"', reflection_text: "Ad momentum, Iesus gloriam suam divinam ostendit, ita confessionem Petri confirmans. Ostendit etiam quod ad 'intrandum in gloriam suam' necesse est per Crucem Ierosolymis transire. Transfiguratio nobis praegustatum vitae novae concedit: 'similes ei erimus'. Sed nos admonet etiam quod 'per multas tribulationes oportet nos intrare in regnum Dei'. (CCC, 554, 556)" },
+                { title: "Institutio Eucharistiae", image: "luminosos5.jpg", citation_text: "Ex prima Epistula beati Pauli Apostoli ad Corinthios (11, 23-26)", verse_text: '"Quotiescumque enim manducabitis panem hunc et calicem bibetis, mortem Domini annuntiatis, donec veniat."', reflection_text: "Celebrans ultimam Cenam cum apostolis suis in convivio paschali, Iesus paschae iudaicae sensum suum definitivum dedit. Etenim transitus Iesu ad Patrem suum per Mortem et Resurrectionem suam, Pascha novum, in Cena anticipatur et in Eucharistia celebratur, quae pascha iudaicum adimplet et pascha finale Ecclesiae in gloria Regni anticipat. (CCC, 1340)" }
+            ],
+            sorrowful: [
+                { title: "Oratio in Horto", image: "dolorosos1.jpg", citation_text: "Lectio sancti Evangelii secundum Lucam (22, 39-46)", verse_text: '"Pater, si vis, transfer calicem istum a me; verumtamen non mea voluntas, sed tua fiat."', reflection_text: "Agonia Iesu in Gethsemani certamen voluntatis humanae Iesu contra voluntatem divinam Patris repraesentat. Iesus, licet Deus, horrorem mortis et angustiam separationis experitur, sed oboedientia filialis Eum ad missionem redemptricem acceptandam ducit. Oratio Eius nos docet voluntatem nostram cum Dei voluntate in media probatione conformare. (CCC, 612)" },
+                { title: "Flagellatio", image: "dolorosos2.jpg", citation_text: "Lectio sancti Evangelii secundum Ioannem (19, 1)", verse_text: '"Tunc ergo apprehendit Pilatus Iesum et flagellavit."', reflection_text: "Flagellatio poena crudelis fuit quae partem Passionis Christi, a prophetis praedictae, formabat. Per hanc extremam passionem physicam, Iesus peccata et dolores totius humanitatis in seipsum portat. 'Livore eius sanati sumus' (Isaias 53,5). Hoc mysterium nos invitat ut passiones nostras cum Christi passionibus pro redemptione mundi coniungamus. (CCC, 614)" },
+                { title: "Coronatio Spinis", image: "dolorosos3.jpg", citation_text: "Lectio sancti Evangelii secundum Matthaeum (27, 27-31)", verse_text: '"Et plectentes coronam de spinis, posuerunt super caput eius, et arundinem in dextera eius; et genu flexo ante eum, illudebant ei, dicentes: Ave, Rex Iudaeorum!"', reflection_text: "Coronatio spinis est crudelis irrisio regalis Christi. Tamen, in hac humiliatione vera natura Regni Eius revelatur: regnum non terrenae potentiae, sed amoris, humilitatis et servitii. Iesus coronam doloris accipit, signum irrisionis in signum amoris sui redemptoris et dominationis suae super peccatum et mortem transformans. (CCC, 478)" },
+                { title: "Baiulatio Crucis", image: "dolorosos4.jpg", citation_text: "Lectio sancti Evangelii secundum Ioannem (19, 17)", verse_text: '"Et baiulans sibi crucem, exivit in eum, qui dicitur Calvariae, locum, qui hebraice dicitur Golgotha."', reflection_text: "Iesus crucem portat, in qua omnia peccata nostra continentur. Via Calvariae est via oboedientiae et amoris usque ad finem. Crucem amplectendo, Iesus nos docet passionem, cum amore acceptam, valorem redemptricem habere. Nos invitat ut crucem nostram quotidie tollamus et Eum sequamur, sic in opere salutis Eius participando. (CCC, 618)" },
+                { title: "Crucifixio et Mors", image: "dolorosos5.jpg", citation_text: "Lectio sancti Evangelii secundum Lucam (23, 44-46)", verse_text: '"Pater, in manus tuas commendo spiritum meum. Et haec dicens, exspiravit."', reflection_text: "Mors Christi est unicum et definitivum sacrificium quod humanitatem cum Deo reconciliat. In cruce, Iesus derelictionem experitur ut nos a Deo numquam derelinquamur. Eius totalis deditio est maxima probatio amoris. De cruce, Matrem suam nobis tradit et donum Spiritus Sancti nobis dat, portas vitae aeternae aperiens. (CCC, 606, 616)" }
+            ],
+            glorious: [
+                { title: "Resurrectio", image: "gloriosos1.jpg", citation_text: "Lectio sancti Evangelii secundum Marcum (16, 1-7)", verse_text: '"Nolite expavescere. Iesum quaeritis Nazarenum, crucifixum. Surrexit, non est hic."', reflection_text: "Resurrectio Iesu est culmen fidei nostrae in Christum, a prima communitate christiana ut veritas centralis credita et vissuta. Est opus transcendens Dei ipsius. Divinitatem Christi confirmat et est promissio resurrectionis nostrae. (CCC, 638, 651)" },
+                { title: "Ascensio", image: "gloriosos2.jpg", citation_text: "Lectio libri Actuum Apostolorum (1, 9-11)", verse_text: '"Et cum haec dixisset, videntibus illis, elevatus est, et nubes suscepit eum ab oculis eorum... Hic Iesus, qui assumptus est a vobis in caelum, sic veniet, quemadmodum vidistis eum euntem in caelum."', reflection_text: "Ascensio Christi in caelum significat introitum definitivum humanitatis Iesu in dominium caeleste Dei, unde venturus est. Iesus Christus, caput Ecclesiae, nos praecedit in gloriosum Regnum Patris, ut nos, membra corporis Eius, in spe vivamus ut aliquando cum Illo aeternaliter simus. (CCC, 665)" },
+                { title: "Descensus Spiritus Sancti", image: "gloriosos3.jpg", citation_text: "Lectio libri Actuum Apostolorum (2, 1-4)", verse_text: '"Et apparuerunt illis dispertitae linguae tamquam ignis, seditque supra singulos eorum; et repleti sunt omnes Spiritu Sancto et coeperunt loqui aliis linguis."', reflection_text: "Die Pentecostes, Pascha Christi consummatur effusione Spiritus Sancti qui se manifestat, dat et communicat ut Persona divina: ex plenitudine sua, Christus Dominus abundanter Spiritum effundit. Spiritus Sanctus venit ad sanctificandam Ecclesiam et ad apostolos idoneos reddendos ad Evangelium audacter annuntiandum. (CCC, 731)" },
+                { title: "Assumptio Mariae", image: "gloriosos4.jpg", citation_text: "Lectio sancti Evangelii secundum Lucam (1, 48-49)", verse_text: '"Quia respexit humilitatem ancillae suae; ecce enim ex hoc beatam me dicent omnes generationes. Quia fecit mihi magna qui potens est."', reflection_text: "Beatissima Virgo Maria, expleto terrestris vitae cursu, corpore et anima ad caelestem gloriam assumpta est, ubi iam participat gloriam Resurrectionis Filii sui, resurrectionem omnium membrorum Corporis Eius anticipans. Est signum certae spei pro Ecclesia peregrinanti. (CCC, 966)" },
+                { title: "Coronatio Mariae", image: "gloriosos5.jpg", citation_text: "Lectio libri Apocalypsis (12, 1)", verse_text: '"Et signum magnum apparuit in caelo: Mulier amicta sole, et luna sub pedibus eius, et in capite eius corona stellarum duodecim."', reflection_text: "Denique Immaculata Virgo, ab omni originalis culpae labe praeservata, expleto terrestris vitae cursu, corpore et anima ad caelestem gloriam est assumpta; a Domino autem exaltata est ut Regina universorum, ut plene conformis esset Filio suo, Domino dominantium ac victori peccati et mortis. (CCC, 966)" }
+            ]
+        },
         prayers: {
+            welcome_invitation: "Gratus advenisti.\n\nTe invitamus ut hoc Sanctum Rosarium pro tuis intentionibus particularibus, pro necessitatibus mundi, et pro omnibus qui tuas preces petiverunt, offerre velis.",
             sign_of_cross: "Per signum Crucis de inimicis nostris libera nos, Deus noster.\nIn nomine Patris, et Filii, et Spiritus Sancti. Amen.",
             versicle: "V. Deus, in adiutorium meum intende.\nR. Domine, ad adiuvandum me festina.",
             creed: "Credo in Deum Patrem omnipotentem, Creatorem caeli et terrae. Et in Iesum Christum, Filium eius unicum, Dominum nostrum, qui conceptus est de Spiritu Sancto, natus ex Maria Virgine, passus sub Pontio Pilato, crucifixus, mortuus, et sepultus, descendit ad inferos, tertia die resurrexit a mortuis, ascendit ad caelos, sedet ad dexteram Dei Patris omnipotentis, inde venturus est iudicare vivos et mortuos. Credo in Spiritum Sanctum, sanctam Ecclesiam catholicam, sanctorum communionem, remissionem peccatorum, carnis resurrectionem, vitam aeternam. Amen.",
@@ -202,115 +104,9 @@ R. E saremo degni delle promesse di Cristo.`,
             fatima_prayer: "Domine Iesu, dimitte nobis debita nostra, salva nos ab igne inferiori, perduc in caelum omnes animas, praesertim eas, quae misericordiae tuae maxime indigent.",
             mary_mother: "Maria, Mater gratiae, Mater misericordiae, tu nos ab hoste protege et hora mortis suscipe. Amen.",
             salve_regina: "Salve, Regina, Mater misericordiae, vita, dulcedo, et spes nostra, salve. Ad te clamamus exsules filii Hevae. Ad te suspiramus, gementes et flentes in hac lacrimarum valle. Eia, ergo, advocata nostra, illos tuos misericordes oculos ad nos converte. Et Iesum, benedictum fructum ventris tui, nobis post hoc exsilium ostende. O clemens, o pia, o dulcis Virgo Maria. Ora pro nobis, Sancta Dei Genetrix, ut digni efficiamur promissionibus Christi. Amen.",
-            litany: `LITANIAE LAURETANAE\n
-Kyrie, eleison
-Christe, eleison
-Kyrie, eleison
-Christe, audi nos
-Christe, exaudi nos
-
-Pater de caelis, Deus, miserere nobis.
-Fili, Redemptor mundi, Deus, miserere nobis.
-Spiritus Sancte, Deus, miserere nobis.
-Sancta Trinitas, unus Deus, miserere nobis.
-
-Sancta Maria, ora pro nobis.
-Sancta Dei Genetrix, ora pro nobis.
-Sancta Virgo virginum, ora pro nobis.
-Mater Christi, ora pro nobis.
-Mater Ecclesiae, ora pro nobis.
-Mater misericordiae, ora pro nobis.
-Mater divinae gratiae, ora pro nobis.
-Mater spei, ora pro nobis.
-Mater purissima, ora pro nobis.
-Mater castissima, ora pro nobis.
-Mater semper Virgo, ora pro nobis.
-Mater immaculata, ora pro nobis.
-Mater amabilis, ora pro nobis.
-Mater admirabilis, ora pro nobis.
-Mater boni consilii, ora pro nobis.
-Mater Creatoris, ora pro nobis.
-Mater Salvatoris, ora pro nobis.
-Virgo prudentissima, ora pro nobis.
-Virgo veneranda, ora pro nobis.
-Virgo praedicanda, ora pro nobis.
-Virgo potens, ora pro nobis.
-Virgo clemens, ora pro nobis.
-Virgo fidelis, ora pro nobis.
-Speculum iustitiae, ora pro nobis.
-Sedes sapientiae, ora pro nobis.
-Causa nostrae laetitiae, ora pro nobis.
-Vas spirituale, ora pro nobis.
-Vas honorabile, ora pro nobis.
-Vas insigne devotionis, ora pro nobis.
-Rosa mystica, ora pro nobis.
-Turris Davidica, ora pro nobis.
-Turris eburnea, ora pro nobis.
-Domus aurea, ora pro nobis.
-Foederis arca, ora pro nobis.
-Ianua caeli, ora pro nobis.
-Stella matutina, ora pro nobis.
-Salus infirmorum, ora pro nobis.
-Refugium peccatorum, ora pro nobis.
-Solacium migrantium, ora pro nobis.
-Consolatrix afflictorum, ora pro nobis.
-Auxilium Christianorum, ora pro nobis.
-Regina Angelorum, ora pro nobis.
-Regina Patriarcharum, ora pro nobis.
-Regina Prophetarum, ora pro nobis.
-Regina Apostolorum, ora pro nobis.
-Regina Martyrum, ora pro nobis.
-Regina Confessorum, ora pro nobis.
-Regina Virginum, ora pro nobis.
-Regina Sanctorum omnium, ora pro nobis.
-Regina sine labe originali concepta, ora pro nobis.
-Regina in caelum assumpta, ora pro nobis.
-Regina sacratissimi Rosarii, ora pro nobis.
-Regina familiae, ora pro nobis.
-Regina pacis, ora pro nobis.
-
-Agnus Dei, qui tollis peccata mundi, parce nobis, Domine.
-Agnus Dei, qui tollis peccata mundi, exaudi nos, Domine.
-Agnus Dei, qui tollis peccata mundi, miserere nobis.
-
-V. Ora pro nobis, Sancta Dei Genetrix.
-R. Ut digni efficiamur promissionibus Christi.`,
+            litany: `LITANIAE LAURETANAE\n\nKyrie, eleison\nChriste, eleison\nKyrie, eleison\nChriste, audi nos\nChriste, exaudi nos\n\nPater de caelis, Deus, miserere nobis.\nFili, Redemptor mundi, Deus, miserere nobis.\nSpiritus Sancte, Deus, miserere nobis.\nSancta Trinitas, unus Deus, miserere nobis.\n\nSancta Maria, ora pro nobis.\nSancta Dei Genetrix, ora pro nobis.\nSancta Virgo virginum, ora pro nobis.\nMater Christi, ora pro nobis.\nMater Ecclesiae, ora pro nobis.\nMater misericordiae, ora pro nobis.\nMater divinae gratiae, ora pro nobis.\nMater spei, ora pro nobis.\nMater purissima, ora pro nobis.\nMater castissima, ora pro nobis.\nMater semper Virgo, ora pro nobis.\nMater immaculata, ora pro nobis.\nMater amabilis, ora pro nobis.\nMater admirabilis, ora pro nobis.\nMater boni consilii, ora pro nobis.\nMater Creatoris, ora pro nobis.\nMater Salvatoris, ora pro nobis.\nVirgo prudentissima, ora pro nobis.\nVirgo veneranda, ora pro nobis.\nVirgo praedicanda, ora pro nobis.\nVirgo potens, ora pro nobis.\nVirgo clemens, ora pro nobis.\nVirgo fidelis, ora pro nobis.\nSpeculum iustitiae, ora pro nobis.\nSedes sapientiae, ora pro nobis.\nCausa nostrae laetitiae, ora pro nobis.\nVas spirituale, ora pro nobis.\nVas honorabile, ora pro nobis.\nVas insigne devotionis, ora pro nobis.\nRosa mystica, ora pro nobis.\nTurris Davidica, ora pro nobis.\nTurris eburnea, ora pro nobis.\nDomus aurea, ora pro nobis.\nFoederis arca, ora pro nobis.\nIanua caeli, ora pro nobis.\nStella matutina, ora pro nobis.\nSalus infirmorum, ora pro nobis.\nRefugium peccatorum, ora pro nobis.\nSolacium migrantium, ora pro nobis.\nConsolatrix afflictorum, ora pro nobis.\nAuxilium Christianorum, ora pro nobis.\nRegina Angelorum, ora pro nobis.\nRegina Patriarcharum, ora pro nobis.\nRegina Prophetarum, ora pro nobis.\nRegina Apostolorum, ora pro nobis.\nRegina Martyrum, ora pro nobis.\nRegina Confessorum, ora pro nobis.\nRegina Virginum, ora pro nobis.\nRegina Sanctorum omnium, ora pro nobis.\nRegina sine labe originali concepta, ora pro nobis.\nRegina in caelum assumpta, ora pro nobis.\nRegina sacratissimi Rosarii, ora pro nobis.\nRegina familiae, ora pro nobis.\nRegina pacis, ora pro nobis.\n\nAgnus Dei, qui tollis peccata mundi, parce nobis, Domine.\nAgnus Dei, qui tollis peccata mundi, exaudi nos, Domine.\nAgnus Dei, qui tollis peccata mundi, miserere nobis.\n\nV. Ora pro nobis, Sancta Dei Genetrix.\nR. Ut digni efficiamur promissionibus Christi.`,
             pope_intentions: "Oremus pro Pontifice nostro, pro Sancta Ecclesia, et pro necessitatibus nostris.",
             final_sign_of_cross: "In nomine Patris, et Filii, et Spiritus Sancti. Amen."
         }
     }
 };
-// Agrega aquí los objetos de los misterios para 'es', 'it' y 'la', 
-// ya que se omitieron por brevedad, pero deben estar presentes.
-// Ejemplo para español:
-rosaryContent.es.mysteries = {
-    joyful: [
-        { title: "Primer Misterio Gozoso", text: "La Anunciación del Ángel a María", image: "gozosos1.jpg" },
-        { title: "Segundo Misterio Gozoso", text: "La Visitación de María a su prima Santa Isabel", image: "gozosos2.jpg" },
-        { title: "Tercer Misterio Gozoso", text: "El Nacimiento de Jesús en Belén", image: "gozosos3.jpg" },
-        { title: "Cuarto Misterio Gozoso", text: "La Presentación del Niño Jesús en el Templo", image: "gozosos4.jpg" },
-        { title: "Quinto Misterio Gozoso", text: "El Niño Jesús perdido y hallado en el Templo", image: "gozosos5.jpg" }
-    ],
-    luminous: [
-        { title: "Primer Misterio Luminoso", text: "El Bautismo de Jesús en el Jordán", image: "luminosos1.jpg" },
-        { title: "Segundo Misterio Luminoso", text: "La Autorrevelación de Jesús en las bodas de Caná", image: "luminosos2.jpg" },
-        { title: "Tercer Misterio Luminoso", text: "El Anuncio del Reino de Dios", image: "luminosos3.jpg" },
-        { title: "Cuarto Misterio Luminoso", text: "La Transfiguración de Jesús", image: "luminosos4.jpg" },
-        { title: "Quinto Misterio Luminoso", text: "La Institución de la Eucaristía", image: "luminosos5.jpg" }
-    ],
-    sorrowful: [
-        { title: "Primer Misterio Doloroso", text: "La Oración de Jesús en el Huerto de Getsemaní", image: "dolorosos1.jpg" },
-        { title: "Segundo Misterio Doloroso", text: "La Flagelación de Jesús atado a la columna", image: "dolorosos2.jpg" },
-        { title: "Tercer Misterio Doloroso", text: "La Coronación de espinas", image: "dolorosos3.jpg" },
-        { title: "Cuarto Misterio Doloroso", text: "Jesús con la Cruz a cuestas camino del Calvario", image: "dolorosos4.jpg" },
-        { title: "Quinto Misterio Doloroso", text: "La Crucifixión y Muerte de Jesús", image: "dolorosos5.jpg" }
-    ],
-    glorious: [
-        { title: "Primer Misterio Glorioso", text: "La Resurrección de Jesús", image: "gloriosos1.jpg" },
-        { title: "Segundo Misterio Glorioso", text: "La Ascensión de Jesús al Cielo", image: "gloriosos2.jpg" },
-        { title: "Tercer Misterio Glorioso", text: "La Venida del Espíritu Santo", image: "gloriosos3.jpg" },
-        { title: "Cuarto Misterio Glorioso", text: "La Asunción de la Virgen María al Cielo", image: "gloriosos4.jpg" },
-        { title: "Quinto Misterio Glorioso", text: "La Coronación de la Virgen María como Reina del Cielo y de la Tierra", image: "gloriosos5.jpg" }
-    ]
-};
-// Asegúrate de hacer lo mismo para 'it' y 'la' copiando de la respuesta anterior.
