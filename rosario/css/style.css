@@ -70,6 +70,7 @@ body, html {
     gap: 20px;
     margin-bottom: 15px;
     flex-wrap: wrap;
+    transition: opacity 0.5s ease, height 0.5s ease, margin 0.5s ease;
 }
 
 .control-group {
@@ -119,9 +120,17 @@ body, html {
     font-family: var(--primary-font);
     font-size: 2.2em;
     font-weight: 700;
-    margin: 0 0 10px 0;
+    margin: 10px 0 0 0;
     color: var(--accent-color);
     text-shadow: 2px 2px 4px #000;
+}
+
+#mystery-name-text {
+    font-family: var(--primary-font);
+    font-size: 1.6em;
+    font-weight: 400;
+    margin: 5px 0 10px 0;
+    color: var(--text-color);
 }
 
 #prayer-text {
@@ -132,7 +141,6 @@ body, html {
     white-space: pre-wrap;
 }
 
-/* === ESTILOS NUEVOS AÑADIDOS === */
 .citation {
     margin-top: 20px;
     margin-bottom: 5px;
@@ -161,7 +169,6 @@ body, html {
     color: #dddddd;
     text-align: justify;
 }
-/* ================================== */
 
 #bead-container {
     display: flex;
@@ -246,6 +253,14 @@ body, html {
     color: var(--accent-color);
 }
 
+.controls.hidden {
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    margin-bottom: 0;
+    overflow: hidden;
+}
+
 .progress-bar-container {
     width: 100%;
     background-color: rgba(255, 255, 255, 0.2);
@@ -264,6 +279,7 @@ body, html {
 
 @media (max-width: 768px) {
     #mystery-title { font-size: 1.8em; }
+    #mystery-name-text { font-size: 1.3em; }
     #prayer-text { font-size: 1.2em; }
     .bead { width: 30px; height: 30px; font-size: 1.4em; gap: 8px; }
     #next-btn, #prev-btn { padding: 10px 25px; }
