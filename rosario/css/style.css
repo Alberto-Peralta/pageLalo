@@ -1,10 +1,19 @@
 :root {
-    --primary-font: 'Crimson Text', serif;
-    --secondary-font: 'Lato', sans-serif;
-    --text-color: #f0f0f0;
-    --bg-overlay: rgba(0, 0, 0, 0.6);
-    --accent-color: #d4af37; /* Gold */
-    --active-bead-color: #ffffff;
+    /* Paleta de colores de "Oraciones del Coro" adaptada para el Rosario */
+    --primary-color: #DAA520; /* Amarillo mostaza oscuro (Goldenrod) */
+    --primary-light-color: #FFDB58; /* Amarillo mostaza claro */
+    --accent-color: #B8860B; /* Amarillo mostaza más oscuro/marrón (DarkGoldenrod) */
+    
+    /* Fuentes del proyecto "Oraciones del Coro" */
+    --font-heading: 'Cormorant Garamond', serif;
+    --font-body: 'Lato', sans-serif;
+
+    /* Variables específicas para el Rosario, usando la nueva paleta */
+    --rosary-primary-font: var(--font-heading);
+    --rosary-secondary-font: var(--font-body);
+    --text-light-color: #f0f0f0; /* Color de texto claro para fondos oscuros */
+    --bg-overlay: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente */
+    --active-bead-color: var(--primary-light-color); /* Color de cuenta activa */
 }
 
 body, html {
@@ -12,8 +21,8 @@ body, html {
     padding: 0;
     width: 100%;
     height: 100%;
-    font-family: var(--secondary-font);
-    background-color: #000;
+    font-family: var(--rosary-secondary-font);
+    background-color: #000; /* Fondo negro para el tema oscuro */
 }
 
 #rosary-container {
@@ -50,7 +59,7 @@ body, html {
 .main-content {
     position: relative;
     z-index: 2;
-    color: var(--text-color);
+    color: var(--text-light-color); /* Usando el color de texto claro */
     text-align: center;
     padding: 20px;
     max-width: 900px;
@@ -85,11 +94,11 @@ body, html {
 
 .controls select {
     background: rgba(255, 255, 255, 0.1);
-    color: var(--text-color);
-    border: 1px solid var(--accent-color);
+    color: var(--text-light-color); /* Usando el color de texto claro */
+    border: 1px solid var(--accent-color); /* Borde con color de acento */
     border-radius: 5px;
     padding: 5px;
-    font-family: var(--secondary-font);
+    font-family: var(--rosary-secondary-font);
 }
 
 #prayer-area {
@@ -109,64 +118,65 @@ body, html {
     border-radius: 4px;
 }
 #prayer-area::-webkit-scrollbar-thumb {
-    background: var(--accent-color);
+    background: var(--accent-color); /* Scrollbar con color de acento */
     border-radius: 4px;
 }
 #prayer-area::-webkit-scrollbar-thumb:hover {
-    background: #f0f0f0;
+    background: var(--text-light-color); /* Hover con color de texto claro */
 }
 
 #mystery-title {
-    font-family: var(--primary-font);
+    font-family: var(--rosary-primary-font);
     font-size: 2.2em;
     font-weight: 700;
     margin: 10px 0 0 0;
-    color: var(--accent-color);
+    color: var(--primary-color); /* Título con color principal */
     text-shadow: 2px 2px 4px #000;
 }
 
 #mystery-name-text {
-    font-family: var(--primary-font);
+    font-family: var(--rosary-primary-font);
     font-size: 1.6em;
     font-weight: 400;
     margin: 5px 0 10px 0;
-    color: var(--text-color);
+    color: var(--text-light-color); /* Nombre del misterio con texto claro */
 }
 
 #prayer-text {
-    font-family: var(--primary-font);
+    font-family: var(--rosary-primary-font);
     font-size: 1.5em;
     line-height: 1.6;
     margin: 10px 0;
     white-space: pre-wrap;
+    color: var(--text-light-color); /* Texto de la oración con texto claro */
 }
 
 .citation {
     margin-top: 20px;
     margin-bottom: 5px;
-    font-family: var(--secondary-font);
+    font-family: var(--rosary-secondary-font);
     font-weight: bold;
     font-size: 1.1em;
-    color: var(--accent-color);
+    color: var(--accent-color); /* Cita con color de acento */
 }
 
 .verse {
     margin-top: 0;
     margin-bottom: 15px;
-    font-family: var(--primary-font);
+    font-family: var(--rosary-primary-font);
     font-style: italic;
     font-size: 1.2em;
-    color: #cccccc;
+    color: var(--text-light-color); /* Verso con texto claro */
 }
 
 .reflection {
     margin-top: 0;
     padding-left: 20px;
     padding-right: 20px;
-    font-family: var(--secondary-font);
+    font-family: var(--rosary-secondary-font);
     font-size: 1em;
     line-height: 1.5;
-    color: #dddddd;
+    color: var(--text-light-color); /* Reflexión con texto claro */
     text-align: justify;
 }
 
@@ -184,14 +194,14 @@ body, html {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.15);
-    border: 2px solid var(--accent-color);
+    background: rgba(255, 255, 255, 0.15); /* Fondo semitransparente */
+    border: 2px solid var(--primary-color); /* Borde con color principal */
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.8em;
     font-weight: bold;
-    color: var(--text-color);
+    color: var(--text-light-color); /* Texto de cuenta con texto claro */
     transition: all 0.3s ease;
 }
 
@@ -200,9 +210,9 @@ body, html {
 }
 
 .bead.active {
-    background-color: var(--active-bead-color);
-    border-color: var(--active-bead-color);
-    color: #000;
+    background-color: var(--active-bead-color); /* Color de cuenta activa */
+    border-color: var(--active-bead-color); /* Borde de cuenta activa */
+    color: #000; /* Texto de cuenta activa en negro para contraste */
     transform: scale(1.1);
 }
 
@@ -216,30 +226,30 @@ body, html {
 #next-btn, #prev-btn {
     padding: 12px 30px;
     font-size: 1.1em;
-    font-family: var(--secondary-font);
-    border: 2px solid var(--accent-color);
+    font-family: var(--rosary-secondary-font);
+    border: 2px solid var(--accent-color); /* Borde con color de acento */
     border-radius: 50px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease, opacity 0.3s ease;
 }
 
 #next-btn {
-    color: #000;
-    background-color: var(--accent-color);
+    color: #000; /* Texto de botón siguiente en negro */
+    background-color: var(--accent-color); /* Fondo con color de acento */
 }
 #next-btn:hover {
-    background-color: #fff;
-    border-color: #fff;
+    background-color: var(--primary-light-color); /* Hover con color claro principal */
+    border-color: var(--primary-light-color); /* Borde con color claro principal */
     transform: scale(1.05);
 }
 
 #prev-btn {
-    color: var(--accent-color);
+    color: var(--accent-color); /* Texto de botón anterior con color de acento */
     background-color: transparent;
 }
 #prev-btn:hover {
-    background-color: var(--accent-color);
-    color: #000;
+    background-color: var(--accent-color); /* Hover con color de acento */
+    color: #000; /* Texto de hover en negro */
     transform: scale(1.05);
 }
 
@@ -272,15 +282,70 @@ body, html {
 #progress-bar {
     width: 0%;
     height: 100%;
-    background-color: var(--accent-color);
+    background-color: var(--accent-color); /* Barra de progreso con color de acento */
     border-radius: 5px;
     transition: width 0.5s ease-in-out;
 }
 
+/* --- Media Queries para responsividad --- */
+
+/* Para pantallas más pequeñas que 768px (tabletas y móviles) */
 @media (max-width: 768px) {
     #mystery-title { font-size: 1.8em; }
     #mystery-name-text { font-size: 1.3em; }
     #prayer-text { font-size: 1.2em; }
     .bead { width: 30px; height: 30px; font-size: 1.4em; gap: 8px; }
     #next-btn, #prev-btn { padding: 10px 25px; }
+
+    /* Otros ajustes para 768px que ya estaban incluidos */
+    .main-content {
+        padding: 15px;
+        width: 95%;
+        height: 90vh; /* Ajuste adicional para tablets/móviles grandes */
+    }
+    .controls {
+        gap: 15px;
+        margin-bottom: 10px;
+    }
+    .bead-container {
+        gap: 10px;
+        padding: 15px 0;
+    }
+}
+
+/* Para pantallas muy pequeñas (como el Galaxy A14 en orientación vertical, ~420px de ancho) */
+@media (max-width: 420px) {
+    #mystery-title { font-size: 1.5em; }
+    #mystery-name-text { font-size: 1.1em; }
+    #prayer-text { font-size: 1.0em; }
+    .bead { width: 25px; height: 25px; font-size: 1.2em; gap: 6px; }
+    #next-btn, #prev-btn { padding: 8px 20px; font-size: 1em; }
+
+    /* Otros ajustes para 420px que ya estaban incluidos */
+    .main-content {
+        padding: 10px;
+        width: 98%;
+        height: 98vh; /* Maximizar el uso del espacio vertical */
+        border-radius: 5px;
+    }
+    .controls {
+        flex-direction: column;
+        gap: 8px;
+        margin-bottom: 8px;
+    }
+    .control-group {
+        justify-content: center;
+    }
+    .controls select {
+        width: 80%;
+    }
+    .bead-container {
+        gap: 8px;
+        padding: 10px 0;
+    }
+    .reflection {
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 0.9em;
+    }
 }
