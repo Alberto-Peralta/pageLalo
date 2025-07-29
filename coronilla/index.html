@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coronilla a la Divina Misericordia</title>
+    
+    <!-- Tailwind CSS para un diseño moderno y adaptable -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts para una tipografía más elegante -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* Estilos personalizados que complementan a Tailwind CSS */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+            /* Transición suave para el cambio de imagen de fondo */
+            transition: background-image 1s ease-in-out;
+            background-size: cover;
+            background-position: center;
+        }
+
+        h1, h2 {
+            font-family: 'Tinos', serif;
+        }
+
+        /* Capa semitransparente sobre el fondo para mejorar la legibilidad del texto */
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.55);
+        }
+
+        /* Animación de entrada para el panel de oración */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .prayer-display {
+            animation: fadeIn 0.7s ease-in-out;
+        }
+
+        /* Estilo para la barra de progreso */
+        #progress-bar {
+            transition: width 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen text-white">
+
+    <!-- Contenedor principal con capa de superposición -->
+    <div class="absolute top-0 left-0 w-full h-full overlay z-0"></div>
+    
+    <!-- Contenido de la aplicación -->
+    <div class="relative z-10 container mx-auto p-4 lg:p-8 flex flex-col h-screen justify-between">
+        
+        <!-- Sección central con el contenido de la oración -->
+        <div class="w-full max-w-3xl mx-auto text-center flex flex-col justify-center flex-grow">
+            <div id="prayer-container" class="min-h-[300px] flex items-center justify-center">
+                <div id="prayer-display" class="prayer-display">
+                    <h2 id="prayer-title" class="text-3xl lg:text-5xl font-semibold text-yellow-500 mb-4">Bienvenido</h2>
+                    <p id="prayer-text" class="text-gray-200 text-lg lg:text-xl leading-relaxed max-w-2xl mx-auto">Presiona "Comenzar" para iniciar el rezo de la Coronilla.</p>
+                    <p id="prayer-count" class="mt-6 font-bold text-gray-300 text-lg"></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección inferior con barra de progreso y controles -->
+        <div class="pb-4">
+            <!-- Barra de Progreso -->
+            <div class="w-full max-w-md mx-auto mb-6">
+                <div class="bg-white/20 rounded-full h-2">
+                    <div id="progress-bar" class="bg-yellow-500 h-2 rounded-full" style="width: 0%"></div>
+                </div>
+            </div>
+
+            <!-- Controles -->
+            <div class="flex justify-center items-center space-x-4">
+                <button id="prev-btn" class="bg-white/20 backdrop-blur-sm border border-white/30 text-white font-bold py-3 px-6 rounded-full shadow-md hover:bg-white/30 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-75 transition-all duration-300 ease-in-out transform hover:scale-105">
+                    Anterior
+                </button>
+                <button id="next-btn" class="bg-yellow-600 text-white font-bold py-4 px-8 rounded-full shadow-lg hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-75 transition-all duration-300 ease-in-out transform hover:scale-105">
+                    Comenzar
+                </button>
+                <button id="reset-btn" class="bg-red-500 text-white font-bold py-3 px-6 rounded-full shadow-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-opacity-75 transition-all duration-300 ease-in-out transform hover:scale-105">
+                    Reiniciar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- REFERENCIAS A ELEMENTOS DEL DOM ---
+            const prayerContainer = document.getElementById('prayer-container');
+            const nextBtn = document.getElementById('next-btn');
+            const prevBtn = document.getElementById('prev-btn');
+            const resetBtn = document.getElementById('reset-btn');
+            const progressBar = document.getElementById('progress-bar');
+
+            // --- SECUENCIA DE ORACIONES CON IMÁGENES DE FONDO ---
+            const chapletSequence = [
+                // Oraciones Iniciales
+                { title: 'Señal de la Cruz', text: 'Por la señal de la Santa Cruz, de nuestros enemigos, líbranos Señor, Dios nuestro. En el nombre del Padre, y del Hijo, y del Espíritu Santo. Amén.', imageUrl: '1.png' },
+                { title: 'Oración Inicial', text: 'Expiraste, Jesús, pero la fuente de vida brotó para las almas, y el mar de misericordia se abrió para el mundo entero. Oh, fuente de vida, insondable Misericordia Divina, abarca al mundo entero y derrámate sobre nosotros.', imageUrl: '2.png' },
+                { title: 'Oración Inicial', text: 'Oh, Sangre y Agua que brotaste del Corazón de Jesús como una Fuente de Misericordia para nosotros, en Ti confío.', imageUrl: '3.png' },
+                { title: 'Padre Nuestro', text: 'Padre nuestro, que estás en el cielo, santificado sea tu Nombre; venga a nosotros tu reino; hágase tu voluntad, en la tierra como en el cielo. Danos hoy nuestro pan de cada día; perdona nuestras ofensas, como también nosotros perdonamos a los que nos ofenden; no nos dejes caer en la tentación y líbranos del mal. Amén.', imageUrl: '4.png' },
+                { title: 'Avemaría', text: 'Dios te salve, María, llena eres de gracia; el Señor es contigo. Bendita Tú eres entre todas las mujeres, y bendito es el fruto de tu vientre, Jesús. Santa María, Madre de Dios, ruega por nosotros, pecadores, ahora y en la hora de nuestra muerte. Amén.', imageUrl: '5.png' },
+                { title: 'Credo de los Apóstoles', text: 'Creo en Dios, Padre Todopoderoso, Creador del cielo y de la tierra. Creo en Jesucristo, su único Hijo, nuestro Señor, que fue concebido por obra y gracia del Espíritu Santo, nació de Santa María Virgen, padeció bajo el poder de Poncio Pilato, fue crucificado, muerto y sepultado, descendió a los infiernos, al tercer día resucitó de entre los muertos, subió a los cielos y está sentado a la derecha de Dios, Padre todopoderoso. Desde allí ha de venir a juzgar a vivos y muertos. Creo en el Espíritu Santo, la santa Iglesia católica, la comunión de los santos, el perdón de los pecados, la resurrección de la carne y la vida eterna. Amén.', imageUrl: '6.png' },
+            ];
+
+            // Generar las 5 décadas dinámicamente
+            const decadeImage = '8.png'; // Ruta local para la imagen de la década (manos_oracion.jpg)
+            for (let i = 1; i <= 5; i++) {
+                chapletSequence.push({
+                    title: `Padre Eterno`,
+                    text: 'Padre Eterno, te ofrezco el Cuerpo y la Sangre, el Alma y la Divinidad de Tu Amadísimo Hijo, Nuestro Señor Jesucristo, como propiciación de nuestros pecados y los del mundo entero.',
+                    imageUrl: '7.png' // Ruta local para la imagen del Padre Eterno (sacrificio_santo.jpg)
+                });
+                for (let j = 1; j <= 10; j++) {
+                    chapletSequence.push({
+                        title: `Por su Dolorosa Pasión`,
+                        text: 'Por su dolorosa Pasión, ten misericordia de nosotros y del mundo entero.',
+                        count: j,
+                        isDecadeBead: true,
+                        imageUrl: decadeImage
+                    });
+                }
+            }
+
+            // Doxología Final (Santo Dios)
+            const doxologyImage = '9.png'; // Ruta local para la imagen de la doxología (angel_cielo.jpg)
+            for (let i = 1; i <= 3; i++) {
+                chapletSequence.push({
+                    title: 'Santo Dios',
+                    text: 'Santo Dios, Santo Fuerte, Santo Inmortal, ten piedad de nosotros y del mundo entero.',
+                    count: i,
+                    isDoxology: true,
+                    imageUrl: doxologyImage
+                });
+            }
+
+            // Oración de Cierre
+            chapletSequence.push({
+                title: 'Oración Final',
+                text: 'Oh Dios Eterno, en quien la misericordia es infinita y el tesoro de compasión inagotable, vuelve a nosotros Tu mirada bondadosa y aumenta Tu misericordia en nosotros, para que en momentos difíciles no nos desesperemos ni nos desalentemos, sino que, con gran confianza, nos sometamos a Tu santa voluntad, que es el Amor y la Misericordia Mismos. Amén.',
+                imageUrl: '10.png' // Ruta local para la imagen de la oración final (esperanza_luz.jpg)
+            });
+
+            // --- LÓGICA DE LA APLICACIÓN ---
+            let currentStep = -1;
+
+            function updateUI() {
+                // Recrea el elemento de la oración para reiniciar la animación de entrada
+                const oldPrayerDisplay = document.getElementById('prayer-display');
+                const newPrayerDisplay = oldPrayerDisplay.cloneNode(true);
+                oldPrayerDisplay.parentNode.replaceChild(newPrayerDisplay, oldPrayerDisplay);
+                
+                const currentPrayerTitle = newPrayerDisplay.querySelector('#prayer-title');
+                const currentPrayerText = newPrayerDisplay.querySelector('#prayer-text');
+                const currentPrayerCount = newPrayerDisplay.querySelector('#prayer-count');
+
+                // Actualizar barra de progreso
+                const progressPercentage = (currentStep >= 0) ? ((currentStep + 1) / chapletSequence.length) * 100 : 0;
+                progressBar.style.width = `${progressPercentage}%`;
+
+                // Estado Final (Coronilla completada)
+                if (currentStep >= chapletSequence.length) {
+                    currentPrayerTitle.textContent = 'Amén';
+                    currentPrayerText.textContent = 'Has completado la Coronilla a la Divina Misericordia. Que la paz del Señor sea contigo.';
+                    currentPrayerCount.textContent = '';
+                    document.body.style.backgroundImage = `url('12.png')`; // Ruta local para la imagen final (paz_paloma.jpg)
+                    progressBar.style.width = '100%';
+                    nextBtn.style.display = 'none';
+                    prevBtn.style.display = 'none';
+                    resetBtn.style.display = 'inline-flex';
+                    return;
+                }
+
+                // Estado Inicial (Bienvenida)
+                if (currentStep === -1) {
+                    currentPrayerTitle.textContent = 'Bienvenido';
+                    currentPrayerText.textContent = 'Presiona "Comenzar" para iniciar el rezo de la Coronilla.';
+                    currentPrayerCount.textContent = '';
+                    document.body.style.backgroundImage = `url('11.png')`; // Ruta local para la imagen de bienvenida (catedral_vidrieras.jpg)
+                    nextBtn.textContent = 'Comenzar';
+                    nextBtn.style.display = 'inline-flex';
+                    prevBtn.style.display = 'none';
+                    resetBtn.style.display = 'none';
+                    return;
+                }
+                
+                // Estado Durante el Rezo
+                const step = chapletSequence[currentStep];
+                currentPrayerTitle.textContent = step.title;
+                currentPrayerText.textContent = step.text;
+                document.body.style.backgroundImage = `url('${step.imageUrl}')`;
+                
+                if (step.isDecadeBead) {
+                    currentPrayerCount.textContent = `(${step.count}/10)`;
+                } else if (step.isDoxology) {
+                    currentPrayerCount.textContent = `(${step.count}/3)`;
+                } else {
+                    currentPrayerCount.textContent = '';
+                }
+
+                nextBtn.textContent = 'Siguiente';
+                prevBtn.style.display = (currentStep > 0) ? 'inline-flex' : 'none';
+                nextBtn.style.display = 'inline-flex';
+                resetBtn.style.display = 'none';
+            }
+
+            // --- MANEJADORES DE EVENTOS ---
+            function nextStep() {
+                if (currentStep < chapletSequence.length) {
+                    currentStep++;
+                    updateUI();
+                }
+            }
+
+            function prevStep() {
+                if (currentStep > 0) {
+                    currentStep--;
+                    updateUI();
+                }
+            }
+
+            function resetChaplet() {
+                currentStep = -1;
+                updateUI();
+            }
+
+            // Asignación de eventos a los botones
+            nextBtn.addEventListener('click', nextStep);
+            prevBtn.addEventListener('click', prevStep);
+            resetBtn.addEventListener('click', resetChaplet);
+            
+            // --- INICIALIZACIÓN ---
+            resetChaplet();
+        });
+    </script>
+</body>
+</html>
