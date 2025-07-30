@@ -215,6 +215,19 @@ body {
     color: #c1440e; /* Terracota para destacar */
 }
 
+.card-link {
+    text-decoration: none; /* Quita el subrayado del enlace */
+    color: inherit; /* Hereda el color del texto de su elemento padre */
+    display: block; /* Hace que el enlace ocupe todo el espacio de la tarjeta */
+    height: 100%; /* Asegura que el enlace cubra la altura completa de la tarjeta */
+}
+
+/* Opcional: Puedes añadir un efecto al pasar el ratón por encima del enlace */
+.card-link:hover .card {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Ejemplo: un poco de sombra */
+}
+
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .menu {

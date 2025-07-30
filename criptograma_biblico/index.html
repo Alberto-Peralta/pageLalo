@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criptograma Bíblico</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <style>
+        body {
+            font-family: 'EB Garamond', serif;
+            background-color: #F0E68C; /* Amarillo Mostaza muy claro para el fondo */
+            color: #4A3C00; /* Texto oscuro para contraste */
+        }
+        .letter-container {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            margin: 0 2px;
+        }
+        .letter-input {
+            font-family: 'EB Garamond', serif;
+            border: none;
+            border-bottom: 2px solid #B8860B; /* Amarillo Mostaza para el borde del input */
+            background-color: transparent;
+            text-transform: uppercase;
+            caret-color: #DAA520; /* Amarillo Mostaza más oscuro */
+        }
+        .letter-input:focus {
+            outline: none;
+            border-bottom: 2px solid #DAA520; /* Amarillo Mostaza más vibrante al enfocar */
+        }
+        .letter-input:disabled {
+            color: #1a9e5b; /* Verde para letras reveladas (se mantiene si es deseado) */
+            background-color: transparent;
+            border-bottom-color: transparent;
+        }
+        .word-container {
+            display: flex;
+            align-items: flex-end;
+            margin-right: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .encrypted-letter {
+            font-size: 1.25rem;
+            color: #4A3C00; /* Texto oscuro para letras encriptadas */
+            font-weight: 700;
+        }
+        .punctuation-mark {
+            padding: 0 4px;
+            font-size: 1.5rem;
+            margin-bottom: -4px;
+        }
+        .btn-custom {
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .btn-custom:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        .btn-custom:disabled {
+            background-color: #9ca3af;
+            cursor: not-allowed;
+        }
+        #message-box {
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        /* Estilos para el modal de configuración de exportación */
+        .modal {
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .modal-content {
+            background-color: #fefefe;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            width: 90%;
+            max-width: 500px;
+            position: relative;
+        }
+        .close-button {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+        }
+        .close-button:hover,
+        .close-button:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .alphabet-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+            gap: 8px;
+            margin-top: 15px;
+            max-height: 200px; /* Limita la altura */
+            overflow-y: auto; /* Agrega scroll si es necesario */
+            padding-right: 10px; /* Espacio para la barra de desplazamiento */
+        }
+        .alphabet-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #4A3C00; /* Texto oscuro */
+        }
+
+        /* Estilo para el título temporal de exportación */
+        .export-title {
+            text-align: center;
+            font-size: 2.5rem; /* Ajusta el tamaño según prefieras */
+            font-weight: bold;
+            color: #B8860B; /* Amarillo Mostaza oscuro para el título de exportación */
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #DAA520; /* Una línea sutil debajo del título */
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4">
+
+    <div id="main-content" class="w-full max-w-5xl mx-auto bg-white/50 backdrop-blur-sm rounded-xl shadow-2xl p-6 md:p-8 border border-[#DAA520]/50">
+        
+        <div class="text-center mb-6">
+            <h1 class="text-4xl md:text-5xl font-bold text-[#B8860B]">Criptograma Bíblico</h1>
+            <p class="text-lg text-[#DAA520] mt-2">Descifra la cita sagrada</p>
+        </div>
+
+        <div id="puzzle-container" class="flex flex-wrap justify-center p-4 min-h-[150px] items-center">
+            </div>
+
+        <div id="source-container" class="text-center mt-4 mb-6">
+            <p id="source-text" class="text-xl font-bold text-[#B8860B]"></p> 
+        </div>
+
+        <div id="controls" class="grid grid-cols-2 sm:flex sm:flex-row items-center justify-center gap-4 my-6">
+            <button id="new-game-btn" class="btn-custom bg-[#B8860B] hover:bg-[#DAA520] text-white font-bold py-2 px-5 rounded-lg col-span-2">
+                <i class="fa-solid fa-file-lines mr-2"></i>Nuevo Juego
+            </button>
+            <div class="flex items-center justify-center">
+                   <button id="reveal-letter-btn" class="btn-custom bg-[#DAA520] hover:bg-[#FFD700] text-white font-bold py-2 px-5 rounded-lg">
+                    <i class="fa-solid fa-lightbulb mr-2"></i>Revelar
+                </button>
+                <span id="reveal-count" class="ml-2 bg-[#F0E68C] text-[#4A3C00] font-bold text-sm rounded-full h-6 w-6 flex items-center justify-center"></span>
+            </div>
+            <button id="undo-btn" class="btn-custom bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-5 rounded-lg">
+                <i class="fa-solid fa-rotate-left mr-2"></i>Deshacer
+            </button>
+            <button id="check-solution-btn" class="btn-custom bg-[#32CD32] hover:bg-[#228B22] text-white font-bold py-2 px-5 rounded-lg">
+                <i class="fa-solid fa-check mr-2"></i>Verificar
+            </button>
+            <button id="open-export-modal-btn" class="btn-custom bg-[#DAA520] hover:bg-[#B8860B] text-white font-bold py-2 px-5 rounded-lg">
+                   <i class="fa-solid fa-file-export mr-2"></i>Exportar a PDF
+            </button>
+        </div>
+
+        <div id="message-box" class="text-center mt-4 h-8">
+               <p id="message-text" class="text-xl font-semibold"></p>
+        </div>
+
+    </div>
+
+    <div id="export-config-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-button" id="close-modal-btn">&times;</span>
+            <h2 class="text-2xl font-bold text-[#B8860B] mb-4">Configuración de Exportación</h2>
+            
+            <div class="mb-4">
+                <label for="export-pdf-title" class="block text-[#DAA520] text-sm font-bold mb-2">Título del PDF / Encabezado de la Hoja:</label>
+                <input type="text" id="export-pdf-title" placeholder="Criptograma Bíblico" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline border-[#DAA520]">
+            </div>
+
+            <div class="mb-6">
+                <label class="block text-[#DAA520] text-sm font-bold mb-2">Letras a revelar en el PDF (opcional):</label>
+                <div id="alphabet-checkboxes" class="alphabet-grid">
+                    </div>
+            </div>
+
+            <button id="generate-pdf-btn" class="btn-custom bg-[#DAA520] hover:bg-[#B8860B] text-white font-bold py-2 px-5 rounded-lg w-full">
+                <i class="fa-solid fa-file-pdf mr-2"></i>Generar PDF
+            </button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- ELEMENTOS DEL DOM ---
+            const elements = {
+                mainContent: document.getElementById('main-content'), 
+                puzzleContainer: document.getElementById('puzzle-container'),
+                sourceText: document.getElementById('source-text'),
+                newGameBtn: document.getElementById('new-game-btn'),
+                revealLetterBtn: document.getElementById('reveal-letter-btn'),
+                checkSolutionBtn: document.getElementById('check-solution-btn'),
+                messageText: document.getElementById('message-text'),
+                openExportModalBtn: document.getElementById('open-export-modal-btn'),
+                undoBtn: document.getElementById('undo-btn'),
+                revealCount: document.getElementById('reveal-count'),
+                exportConfigModal: document.getElementById('export-config-modal'),
+                closeModalBtn: document.getElementById('close-modal-btn'),
+                exportPdfTitleInput: document.getElementById('export-pdf-title'),
+                alphabetCheckboxesContainer: document.getElementById('alphabet-checkboxes'),
+                generatePdfBtn: document.getElementById('generate-pdf-btn'),
+                gameMainTitle: document.querySelector('#main-content .text-center h1'), 
+                gameSubtitle: document.querySelector('#main-content .text-center p') 
+            };
+
+            // --- DATOS DEL JUEGO ---
+            const quotes = [
+                { text: "PORQUE DE TAL MANERA AMO DIOS AL MUNDO QUE HA DADO A SU HIJO UNIGENITO PARA QUE TODO AQUEL QUE EN EL CREE NO SE PIERDA MAS TENGA VIDA ETERNA", source: "Juan 3:16" },
+                { text: "EL SEÑOR ES MI PASTOR NADA ME FALTARA", source: "Salmo 23:1" },
+                { text: "TODO LO PUEDO EN CRISTO QUE ME FORTALECE", source: "Filipenses 4:13" },
+                { text: "EN EL PRINCIPIO CREO DIOS LOS CIELOS Y LA TIERRA", source: "Génesis 1:1" },
+                { text: "YO SOY EL CAMINO Y LA VERDAD Y LA VIDA NADIE VIENE AL PADRE SINO POR MI", source: "Juan 14:6" },
+                { text: "EL AMOR ES PACIENTE ES BONDADOSO EL AMOR NO ES ENVIDIOSO NI JACTANCIOSO NI ORGULLOSO", source: "1 Corintios 13:4" },
+                { text: "ESFORZAOS Y COBRAD ANIMO NO TEMAIS NI TENGAIS MIEDO DE ELLOS PORQUE JEHOVA TU DIOS ES EL QUE VA CONTIGO NO TE DEJARA NI TE DESAMPARARA", source: "Deuteronomio 31:6" },
+                // --- Nuevas frases más largas añadidas ---
+                { text: "QUE LA PAZ DE DIOS REINE EN TU CORAZON. EL TE DARA LA FORTALEZA QUE NECESITAS.", source: "Reflexión" },
+                { text: "CONFIA EN EL PLAN DIVINO. TODO OBRA PARA BIEN PARA AQUELLOS QUE CREEN.", source: "Reflexión" },
+                { text: "SIEMBRA AMOR Y COSECHARAS ALEGRIA. EL BIEN QUE HACES SIEMPRE REGRESA A TI.", source: "Reflexión" },
+                { text: "NO TEMAS AL MANANA. CADA NUEVO DIA TRAE CONSIGO NUEVAS OPORTUNIDADES.", source: "Reflexión" },
+                { text: "LA ESPERANZA ES EL ANCLA DEL ALMA. MANTENTE FIRME AUN EN LA TORMENTA.", source: "Reflexión" },
+                { text: "DA GRACIAS POR LAS PEQUENAS COSAS. EN ELLAS SE ENCUENTRA LA VERDADERA FELICIDAD.", source: "Reflexión" },
+                { text: "PERDONA A QUIENES TE HAN OFENDIDO. LIBERA TU CORAZON Y ENCUENTRA LA PAZ.", source: "Reflexión" },
+                { text: "ILUMINA EL CAMINO DE OTROS. TU LUZ PUEDE SER LA ESPERANZA QUE ALGUIEN NECESITA.", source: "Reflexión" },
+                { text: "BUSCA LA SABIDURIA EN CADA EXPERIENCIA. APRENDE DE TUS ERRORES Y CRECE.", source: "Reflexión" },
+                { text: "EL AMOR DE DIOS ES INFINITO. SIENTE SU PRESENCIA EN CADA PASO QUE DAS.", source: "Reflexión" }
+            ];
+            const alphabetLetters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZÑ'.split('');
+
+            // --- ESTADO DEL JUEGO ---
+            let gameState = {};
+            const MAX_REVEALS = 3;
+
+            // --- FUNCIONES PRINCIPALES ---
+            function initGame() {
+                const quote = quotes[Math.floor(Math.random() * quotes.length)];
+                gameState = {
+                    solution: quote.text,
+                    source: quote.source,
+                    cipherMap: {},
+                    decipherMap: {},
+                    history: [],
+                    revealsUsed: 0
+                };
+                createCipher();
+                renderPuzzle();
+                updateUI();
+                elements.exportPdfTitleInput.value = ''; 
+                populateAlphabetCheckboxes();
+            }
+            
+            function createCipher() {
+                const alphabet = 'ABCDEFGHIJKLMNÑOPQRSTUVWXYZ'.split('');
+                let shuffledAlphabet;
+                do {
+                    shuffledAlphabet = [...alphabet].sort(() => Math.random() - 0.5);
+                } while (alphabet.some((letter, index) => letter === shuffledAlphabet[index]));
+
+                alphabet.forEach((letter, index) => {
+                    gameState.cipherMap[letter] = shuffledAlphabet[index];
+                    gameState.decipherMap[shuffledAlphabet[index]] = letter;
+                });
+            }
+
+            function renderPuzzle() {
+                elements.puzzleContainer.innerHTML = '';
+                const words = gameState.solution.split(' ');
+
+                words.forEach(word => {
+                    const wordContainer = document.createElement('div');
+                    wordContainer.className = 'word-container';
+                    for (const char of word) {
+                        if (/[A-ZÑ]/.test(char)) {
+                            const encryptedChar = gameState.cipherMap[char];
+                            const letterContainer = document.createElement('div');
+                            letterContainer.className = 'letter-container';
+                            const encryptedLetterSpan = document.createElement('span');
+                            encryptedLetterSpan.className = 'encrypted-letter';
+                            encryptedLetterSpan.textContent = encryptedChar;
+                            const input = document.createElement('input');
+                            input.type = 'text';
+                            input.maxLength = 1;
+                            input.className = 'letter-input w-8 h-8 text-center text-2xl';
+                            input.dataset.encrypted = encryptedChar;
+                            letterContainer.appendChild(encryptedLetterSpan);
+                            letterContainer.appendChild(input);
+                            wordContainer.appendChild(letterContainer);
+                        } else {
+                            const puncSpan = document.createElement('span');
+                            puncSpan.className = 'punctuation-mark';
+                            puncSpan.textContent = char;
+                            wordContainer.appendChild(puncSpan);
+                        }
+                    }
+                    elements.puzzleContainer.appendChild(wordContainer);
+                });
+            }
+
+            function updateUI() {
+                // Modificado: Ahora el texto inicial es una cadena vacía
+                elements.sourceText.textContent = ''; 
+                elements.messageText.textContent = '';
+                elements.messageText.parentElement.classList.add('opacity-0');
+                elements.revealCount.textContent = MAX_REVEALS - gameState.revealsUsed;
+                elements.revealLetterBtn.disabled = gameState.revealsUsed >= MAX_REVEALS;
+                elements.undoBtn.disabled = gameState.history.length === 0;
+            }
+
+            function handleInput(e) {
+                if (e.target.tagName !== 'INPUT' || !e.target.dataset.encrypted) return;
+                const encryptedChar = e.target.dataset.encrypted;
+                const userGuess = e.target.value.toUpperCase();
+
+                let previousValue = '';
+                const allInputs = document.querySelectorAll(`input[data-encrypted="${encryptedChar}"]`);
+                if (allInputs.length > 0) {
+                    previousValue = allInputs[0].value;
+                }
+                
+                if (previousValue !== userGuess) {
+                    gameState.history.push({ encryptedChar, value: previousValue });
+                    elements.undoBtn.disabled = false;
+                }
+
+                allInputs.forEach(input => {
+                    input.value = userGuess;
+                });
+            }
+            
+            function revealLetter() {
+                if (gameState.revealsUsed >= MAX_REVEALS) {
+                    showMessage("Has agotado todas tus pistas.", "info");
+                    return;
+                }
+                const unsolvedInputs = Array.from(document.querySelectorAll('input.letter-input:not(:disabled)'))
+                                                 .filter(input => input.value === '');
+                if (unsolvedInputs.length === 0) {
+                    showMessage("Ya has resuelto todas las letras.", "info");
+                    return;
+                }
+                gameState.revealsUsed++;
+                const randomInput = unsolvedInputs[Math.floor(Math.random() * unsolvedInputs.length)];
+                const encryptedChar = randomInput.dataset.encrypted;
+                const correctLetter = gameState.decipherMap[encryptedChar];
+                const allInputsForChar = document.querySelectorAll(`input[data-encrypted="${encryptedChar}"]`);
+                allInputsForChar.forEach(input => {
+                    input.value = correctLetter;
+                    input.disabled = true;
+                    input.classList.add('font-bold');
+                });
+                updateUI();
+            }
+
+            function undoLastMove() {
+                if (gameState.history.length === 0) return;
+                const lastAction = gameState.history.pop();
+                const inputsToRevert = document.querySelectorAll(`input[data-encrypted="${lastAction.encryptedChar}"]`);
+                inputsToRevert.forEach(input => {
+                    input.value = lastAction.value;
+                });
+                elements.undoBtn.disabled = gameState.history.length === 0;
+            }
+
+            function checkSolution() {
+                const userSolution = Array.from(elements.puzzleContainer.querySelectorAll('.word-container'))
+                    .map(wordDiv => {
+                        return Array.from(wordDiv.children).map(child => {
+                            if (child.classList.contains('letter-container')) {
+                                return child.querySelector('input').value.toUpperCase() || '_';
+                            }
+                            return child.textContent;
+                        }).join('');
+                    }).join(' ');
+
+                if (userSolution === gameState.solution) {
+                    showMessage("¡Correcto! ¡Has descifrado la cita!", "success");
+                    elements.sourceText.textContent = gameState.source;
+                    document.querySelectorAll('input.letter-input').forEach(input => input.disabled = true);
+                } else {
+                    showMessage("Aún no es correcto. ¡Sigue intentando!", "error");
+                }
+            }
+            
+            async function exportPuzzle() {
+                const { jsPDF } = window.jspdf;
+                const exportBtnInModal = elements.generatePdfBtn;
+                const contentToExport = elements.mainContent;
+                
+                // Guardar el estado original de visibilidad de los títulos del juego
+                const wasGameMainTitleHidden = elements.gameMainTitle.classList.contains('hidden');
+                const wasGameSubtitleHidden = elements.gameSubtitle.classList.contains('hidden');
+
+
+                const pdfTitle = elements.exportPdfTitleInput.value.trim() || 'Criptograma Bíblico';
+                const lettersToRevealInPdf = getSelectedLettersToReveal();
+
+                // --- PREPARAR EL PUZZLE PARA LA EXPORTACIÓN ---
+                const exportTitleDiv = document.createElement('div');
+                exportTitleDiv.className = 'export-title'; 
+                exportTitleDiv.textContent = pdfTitle;
+
+                // Insertar el título al principio del main-content
+                contentToExport.prepend(exportTitleDiv);
+
+                // Ocultar el título y subtítulo originales del juego para evitar duplicidad
+                elements.gameMainTitle.classList.add('hidden');
+                elements.gameSubtitle.classList.add('hidden');
+
+                // Guardar el estado actual de los inputs
+                const currentInputStates = {};
+                document.querySelectorAll('input.letter-input').forEach(input => {
+                    currentInputStates[input.dataset.encrypted] = {
+                        value: input.value,
+                        disabled: input.disabled,
+                        classList: Array.from(input.classList)
+                    };
+                });
+
+                // Modificar inputs temporalmente para la exportación según la configuración del modal
+                document.querySelectorAll('input.letter-input').forEach(input => {
+                    const encryptedChar = input.dataset.encrypted;
+                    const correctLetter = gameState.decipherMap[encryptedChar];
+
+                    if (lettersToRevealInPdf.includes(correctLetter)) {
+                        input.value = correctLetter;
+                        input.disabled = true;
+                        input.classList.add('font-bold');
+                        input.classList.add('bg-green-100');
+                    } else if (!currentInputStates[encryptedChar].disabled && currentInputStates[encryptedChar].value === '') {
+                         input.value = '';
+                    }
+                });
+                // --- FIN DE PREPARACIÓN ---
+
+                exportBtnInModal.disabled = true;
+                exportBtnInModal.innerHTML = `<i class="fa-solid fa-spinner fa-spin mr-2"></i>Generando...`;
+                
+                elements.exportConfigModal.classList.add('hidden');
+                document.getElementById('controls').style.display = 'none'; 
+
+
+                try {
+                    const canvas = await html2canvas(contentToExport, {
+                        scale: 2, 
+                        backgroundColor: '#F0E68C' /* Fondo del PDF del mismo color que el body */
+                    });
+                    const imgData = canvas.toDataURL('image/png');
+                    
+                    const pdf = new jsPDF({
+                        orientation: canvas.width > canvas.height ? 'landscape' : 'portrait',
+                        unit: 'px',
+                        format: [canvas.width, canvas.height]
+                    });
+
+                    pdf.addImage(imgData, 'PNG', 0, 0, canvas.width, canvas.height);
+                    pdf.save(`${pdfTitle}.pdf`);
+                } catch (error) {
+                    console.error("Error al exportar:", error);
+                    showMessage("Ocurrió un error al exportar el archivo.", "error");
+                } finally {
+                    // --- RESTAURAR ESTADO ORIGINAL DE LOS INPUTS Y UI ---
+                    document.querySelectorAll('input.letter-input').forEach(input => {
+                        const encryptedChar = input.dataset.encrypted;
+                        if (currentInputStates[encryptedChar]) {
+                            input.value = currentInputStates[encryptedChar].value;
+                            input.disabled = currentInputStates[encryptedChar].disabled;
+                            input.className = currentInputStates[encryptedChar].classList.join(' ');
+                        }
+                    });
+
+                    // Eliminar el título temporal de exportación
+                    if (exportTitleDiv && exportTitleDiv.parentNode) {
+                        exportTitleDiv.parentNode.removeChild(exportTitleDiv);
+                    }
+                    // Restaurar la visibilidad original de los títulos del juego
+                    if (!wasGameMainTitleHidden) {
+                        elements.gameMainTitle.classList.remove('hidden');
+                    }
+                    if (!wasGameSubtitleHidden) {
+                        elements.gameSubtitle.classList.remove('hidden');
+                    }
+
+                    document.getElementById('controls').style.display = '';
+                    exportBtnInModal.disabled = false;
+                    exportBtnInModal.innerHTML = `<i class="fa-solid fa-file-pdf mr-2"></i>Generar PDF`;
+                }
+            }
+
+            function showMessage(text, type) {
+                elements.messageText.textContent = text;
+                elements.messageText.parentElement.classList.remove('opacity-0');
+                const colors = { 
+                    success: 'text-green-700', 
+                    error: 'text-red-600', 
+                    info: 'text-[#DAA520]' /* Amarillo mostaza para mensajes de información */
+                };
+                elements.messageText.className = `text-xl font-semibold ${colors[type] || colors.info}`;
+                setTimeout(() => elements.messageText.parentElement.classList.add('opacity-0'), 4000);
+            }
+
+            function openExportModal() {
+                elements.exportConfigModal.classList.remove('hidden');
+                if (!elements.exportPdfTitleInput.value.trim()) {
+                    elements.exportPdfTitleInput.value = 'Criptograma Bíblico';
+                }
+                elements.alphabetCheckboxesContainer.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+                    checkbox.checked = false;
+                });
+            }
+
+            function closeExportModal() {
+                elements.exportConfigModal.classList.add('hidden');
+            }
+
+            function populateAlphabetCheckboxes() {
+                elements.alphabetCheckboxesContainer.innerHTML = '';
+                alphabetLetters.forEach(letter => {
+                    const div = document.createElement('div');
+                    div.className = 'alphabet-item';
+                    div.innerHTML = `
+                        <input type="checkbox" id="reveal-checkbox-${letter}" value="${letter}" class="mr-1">
+                        <label for="reveal-checkbox-${letter}">${letter}</label>
+                    `;
+                    elements.alphabetCheckboxesContainer.appendChild(div);
+                });
+            }
+
+            function getSelectedLettersToReveal() {
+                const selectedLetters = [];
+                elements.alphabetCheckboxesContainer.querySelectorAll('input[type="checkbox"]:checked').forEach(checkbox => {
+                    selectedLetters.push(checkbox.value);
+                });
+                return selectedLetters;
+            }
+
+            // --- EVENT LISTENERS ---
+            elements.newGameBtn.addEventListener('click', initGame);
+            elements.revealLetterBtn.addEventListener('click', revealLetter);
+            elements.checkSolutionBtn.addEventListener('click', checkSolution);
+            elements.puzzleContainer.addEventListener('input', handleInput);
+            elements.undoBtn.addEventListener('click', undoLastMove);
+            elements.openExportModalBtn.addEventListener('click', openExportModal);
+            elements.closeModalBtn.addEventListener('click', closeExportModal);
+            elements.generatePdfBtn.addEventListener('click', exportPuzzle);
+
+            window.addEventListener('click', (event) => {
+                if (event.target == elements.exportConfigModal) {
+                    closeExportModal();
+                }
+            });
+
+            // --- INICIAR JUEGO ---
+            initGame();
+        });
+    </script>
+</body>
+</html>
