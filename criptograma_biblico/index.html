@@ -14,8 +14,8 @@
     <style>
         body {
             font-family: 'EB Garamond', serif;
-            background-color: #F0E68C; /* Amarillo Mostaza muy claro para el fondo */
-            color: #4A3C00; /* Texto oscuro para contraste */
+            background-color: #D4AF37; /* Mostaza profundo del fondo de la imagen */
+            color: #2E1A00; /* Marrón muy oscuro, casi negro, para el texto */
         }
         .letter-container {
             display: flex;
@@ -26,17 +26,17 @@
         .letter-input {
             font-family: 'EB Garamond', serif;
             border: none;
-            border-bottom: 2px solid #B8860B; /* Amarillo Mostaza para el borde del input */
+            border-bottom: 2px solid #8B4513; /* Marrón oscuro para el borde del input */
             background-color: transparent;
             text-transform: uppercase;
-            caret-color: #DAA520; /* Amarillo Mostaza más oscuro */
+            caret-color: #8B4513;
         }
         .letter-input:focus {
             outline: none;
-            border-bottom: 2px solid #DAA520; /* Amarillo Mostaza más vibrante al enfocar */
+            border-bottom: 2px solid #FFD700; /* Oro para el enfoque */
         }
         .letter-input:disabled {
-            color: #1a9e5b; /* Verde para letras reveladas (se mantiene si es deseado) */
+            color: #6B8E23; /* Verde oliva para letras reveladas */
             background-color: transparent;
             border-bottom-color: transparent;
         }
@@ -48,7 +48,7 @@
         }
         .encrypted-letter {
             font-size: 1.25rem;
-            color: #4A3C00; /* Texto oscuro para letras encriptadas */
+            color: #2E1A00; /* Marrón muy oscuro para letras encriptadas */
             font-weight: 700;
         }
         .punctuation-mark {
@@ -62,10 +62,10 @@
         }
         .btn-custom:hover:not(:disabled) {
             transform: translateY(-2px);
-            box-shadow: 0 4x 8px rgba(0,0,0,0.15);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
         }
         .btn-custom:disabled {
-            background-color: #9ca3af;
+            background-color: #A8A29E; /* Gris piedra para deshabilitado */
             cursor: not-allowed;
         }
         #message-box {
@@ -125,7 +125,7 @@
             justify-content: center;
             font-size: 1.1rem;
             font-weight: bold;
-            color: #4A3C00; /* Texto oscuro */
+            color: #2E1A00; /* Marrón muy oscuro para texto del alfabeto */
         }
 
         /* Estilo para el título temporal de exportación */
@@ -133,46 +133,46 @@
             text-align: center;
             font-size: 2.5rem; /* Ajusta el tamaño según prefieras */
             font-weight: bold;
-            color: #B8860B; /* Amarillo Mostaza oscuro para el título de exportación */
+            color: #8B4513; /* Marrón oscuro para el título */
             margin-bottom: 20px;
             padding-bottom: 10px;
-            border-bottom: 2px solid #DAA520; /* Una línea sutil debajo del título */
+            border-bottom: 2px solid #DAA520; /* Goldenrod para la línea */
         }
     </style>
 </head>
 <body class="flex items-center justify-center min-h-screen p-4">
 
-    <div id="main-content" class="w-full max-w-5xl mx-auto bg-white/50 backdrop-blur-sm rounded-xl shadow-2xl p-6 md:p-8 border border-[#DAA520]/50">
+    <div id="main-content" class="w-full max-w-5xl mx-auto bg-white/50 backdrop-blur-sm rounded-xl shadow-2xl p-6 md:p-8 border border-amber-600/50">
         
         <div class="text-center mb-6">
-            <h1 class="text-4xl md:text-5xl font-bold text-[#B8860B]">Criptograma Bíblico</h1>
-            <p class="text-lg text-[#DAA520] mt-2">Descifra la cita sagrada</p>
+            <h1 class="text-4xl md:text-5xl font-bold text-amber-900">Criptograma Bíblico</h1>
+            <p class="text-lg text-amber-800 mt-2">Descifra la cita sagrada</p>
         </div>
 
         <div id="puzzle-container" class="flex flex-wrap justify-center p-4 min-h-[150px] items-center">
             </div>
 
         <div id="source-container" class="text-center mt-4 mb-6">
-            <p id="source-text" class="text-xl font-bold text-[#B8860B]"></p> 
+            <p id="source-text" class="text-xl font-bold text-amber-900"></p> 
         </div>
 
         <div id="controls" class="grid grid-cols-2 sm:flex sm:flex-row items-center justify-center gap-4 my-6">
-            <button id="new-game-btn" class="btn-custom bg-[#B8860B] hover:bg-[#DAA520] text-white font-bold py-2 px-5 rounded-lg col-span-2">
+            <button id="new-game-btn" class="btn-custom bg-amber-900 hover:bg-amber-950 text-white font-bold py-2 px-5 rounded-lg col-span-2">
                 <i class="fa-solid fa-file-lines mr-2"></i>Nuevo Juego
             </button>
             <div class="flex items-center justify-center">
-                   <button id="reveal-letter-btn" class="btn-custom bg-[#DAA520] hover:bg-[#FFD700] text-white font-bold py-2 px-5 rounded-lg">
+                   <button id="reveal-letter-btn" class="btn-custom bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-2 px-5 rounded-lg">
                     <i class="fa-solid fa-lightbulb mr-2"></i>Revelar
                 </button>
-                <span id="reveal-count" class="ml-2 bg-[#F0E68C] text-[#4A3C00] font-bold text-sm rounded-full h-6 w-6 flex items-center justify-center"></span>
+                <span id="reveal-count" class="ml-2 bg-yellow-200 text-yellow-900 font-bold text-sm rounded-full h-6 w-6 flex items-center justify-center"></span>
             </div>
-            <button id="undo-btn" class="btn-custom bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-5 rounded-lg">
+            <button id="undo-btn" class="btn-custom bg-stone-500 hover:bg-stone-600 text-white font-bold py-2 px-5 rounded-lg">
                 <i class="fa-solid fa-rotate-left mr-2"></i>Deshacer
             </button>
-            <button id="check-solution-btn" class="btn-custom bg-[#32CD32] hover:bg-[#228B22] text-white font-bold py-2 px-5 rounded-lg">
+            <button id="check-solution-btn" class="btn-custom bg-green-700 hover:bg-green-800 text-white font-bold py-2 px-5 rounded-lg">
                 <i class="fa-solid fa-check mr-2"></i>Verificar
             </button>
-            <button id="open-export-modal-btn" class="btn-custom bg-[#DAA520] hover:bg-[#B8860B] text-white font-bold py-2 px-5 rounded-lg">
+            <button id="open-export-modal-btn" class="btn-custom bg-orange-700 hover:bg-orange-800 text-white font-bold py-2 px-5 rounded-lg">
                    <i class="fa-solid fa-file-export mr-2"></i>Exportar a PDF
             </button>
         </div>
@@ -186,20 +186,20 @@
     <div id="export-config-modal" class="modal hidden">
         <div class="modal-content">
             <span class="close-button" id="close-modal-btn">&times;</span>
-            <h2 class="text-2xl font-bold text-[#B8860B] mb-4">Configuración de Exportación</h2>
+            <h2 class="text-2xl font-bold text-amber-800 mb-4">Configuración de Exportación</h2>
             
             <div class="mb-4">
-                <label for="export-pdf-title" class="block text-[#DAA520] text-sm font-bold mb-2">Título del PDF / Encabezado de la Hoja:</label>
-                <input type="text" id="export-pdf-title" placeholder="Criptograma Bíblico" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline border-[#DAA520]">
+                <label for="export-pdf-title" class="block text-amber-700 text-sm font-bold mb-2">Título del PDF / Encabezado de la Hoja:</label>
+                <input type="text" id="export-pdf-title" placeholder="Criptograma Bíblico" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline border-yellow-400">
             </div>
 
             <div class="mb-6">
-                <label class="block text-[#DAA520] text-sm font-bold mb-2">Letras a revelar en el PDF (opcional):</label>
+                <label class="block text-amber-700 text-sm font-bold mb-2">Letras a revelar en el PDF (opcional):</label>
                 <div id="alphabet-checkboxes" class="alphabet-grid">
                     </div>
             </div>
 
-            <button id="generate-pdf-btn" class="btn-custom bg-[#DAA520] hover:bg-[#B8860B] text-white font-bold py-2 px-5 rounded-lg w-full">
+            <button id="generate-pdf-btn" class="btn-custom bg-orange-700 hover:bg-orange-800 text-white font-bold py-2 px-5 rounded-lg w-full">
                 <i class="fa-solid fa-file-pdf mr-2"></i>Generar PDF
             </button>
         </div>
@@ -237,23 +237,65 @@
                 { text: "YO SOY EL CAMINO Y LA VERDAD Y LA VIDA NADIE VIENE AL PADRE SINO POR MI", source: "Juan 14:6" },
                 { text: "EL AMOR ES PACIENTE ES BONDADOSO EL AMOR NO ES ENVIDIOSO NI JACTANCIOSO NI ORGULLOSO", source: "1 Corintios 13:4" },
                 { text: "ESFORZAOS Y COBRAD ANIMO NO TEMAIS NI TENGAIS MIEDO DE ELLOS PORQUE JEHOVA TU DIOS ES EL QUE VA CONTIGO NO TE DEJARA NI TE DESAMPARARA", source: "Deuteronomio 31:6" },
-                // --- Nuevas citas bíblicas añadidas ---
                 { text: "FIATE DE JEHOVA DE TODO TU CORAZON Y NO TE APOYES EN TU PROPIA PRUDENCIA", source: "Proverbios 3:5" },
                 { text: "VENID A MI TODOS LOS QUE ESTAIS TRABAJADOS Y CARGADOS Y YO OS HARE DESCANSAR", source: "Mateo 11:28" },
                 { text: "LA PAZ OS DEJO MI PAZ OS DOY YO NO OS LA DOY COMO EL MUNDO LA DA NO SE TURBE VUESTRO CORAZON NI TENGA MIEDO", source: "Juan 14:27" },
                 { text: "PORQUE DONDE ESTAN DOS O TRES CONGREGADOS EN MI NOMBRE ALLI ESTOY YO EN MEDIO DE ELLOS", source: "Mateo 18:20" },
-                { text: "PORQUE NADA HAY IMPOSIBLE PARA DIOS", source: "Lucas 1:37" },
+                { text: "PORQUE NADA HAY IMPOSSIBLE PARA DIOS", source: "Lucas 1:37" },
                 { text: "BUSCAD PRIMERAMENTE EL REINO DE DIOS Y SU JUSTICIA Y TODAS ESTAS COSAS OS SERAN AÑADIDAS", source: "Mateo 6:33" },
                 { text: "Y SABEMOS QUE A LOS QUE AMAN A DIOS TODAS LAS COSAS LES AYUDAN A BIEN ESTO ES A LOS QUE CONFORME A SU PROPOSITO SON LLAMADOS", source: "Romanos 8:28" },
                 { text: "PERO EL QUE PERSEVERE HASTA EL FIN ESTE SERA SALVO", source: "Mateo 24:13" },
                 { text: "SI PUES LA LUZ QUE EN TI HAY ES TINIEBLAS CUANTAS NO SERAN LAS MISMAS TINIEBLAS", source: "Mateo 6:23" },
-                { text: "MAS EL FRUTO DEL ESPIRITU ES AMOR GOZO PAZ PACIENCIA BENIGNIDAD BONDAD FE", source: "Gálatas 5:22" }
+                { text: "MAS EL FRUTO DEL ESPIRITU ES AMOR GOZO PAZ PACIENCIA BENIGNIDAD BONDAD FE", source: "Gálatas 5:22" },
+                { text: "JEHOVA ES MI LUZ Y MI SALVACION DE QUIEN TEMERE", source: "Salmo 27:1" },
+                { text: "EN PAZ ME ACOSTARE Y ASIMISMO DORMIRE PORQUE SOLO TU JEHOVA ME HACES VIVIR CONFIADO", source: "Salmo 4:8" },
+                { text: "DIOS ES NUESTRO AMPARO Y FORTALEZA NUESTRO PRONTO AUXILIO EN LAS TRIBULACIONES", source: "Salmo 46:1" },
+                { text: "ENCOMENDA A JEHOVA TU CAMINO Y CONFIA EN EL Y EL HARA", source: "Salmo 37:5" },
+                { text: "ALZARE MIS OJOS A LOS MONTES DE DONDE VENDRA MI SOCORRO MI SOCORRO VIENE DE JEHOVA QUE HIZO LOS CIELOS Y LA TIERRA", source: "Salmo 121:1-2" },
+                { text: "LOS QUE CONFIAN EN JEHOVA SON COMO EL MONTE DE SION QUE NO SE MUEVE SINO QUE PERMANECE PARA SIEMPRE", source: "Salmo 125:1" },
+                { text: "CREA EN MI OH DIOS UN CORAZON LIMPIO Y RENUEVA UN ESPIRITU RECTO DENTRO DE MI", source: "Salmo 51:10" },
+                { text: "GUSTAD Y VED QUE ES BUENO JEHOVA DICHOSO EL HOMBRE QUE CONFIA EN EL", source: "Salmo 34:8" },
+                { text: "PORQUE TU OH JEHOVA ERES BUENO Y AFIN A PERDONAR Y GRANDE EN MISERICORDIA PARA CON TODOS LOS QUE TE INVOCAN", source: "Salmo 86:5" },
+                { text: "NO TEMERE MAL ALGUNO PORQUE TU ESTARAS CONMIGO TU VARA Y TU CAYADO ME INFUNDIRAN ALIENTO", source: "Salmo 23:4" },
+                { text: "OH SI EL ME BESARA CON BESOS DE SU BOCA PORQUE MEJORES SON TUS AMORES QUE EL VINO", source: "Cantares 1:2" },
+                { text: "MI AMADO ES PARA MI UN MANOJITO DE MIRRA QUE REPOSA TODA LA NOCHE ENTRE MIS PECHOS", source: "Cantares 1:13" },
+                { text: "HE AQUI QUE TU ERES HERMOSA AMADA MIA HE AQUI QUE ERES BELLA TUS OJOS SON COMO DE PALOMA", source: "Cantares 1:15" },
+                { text: "YO SOY LA ROSA DE SARON Y EL LIRIO DE LOS VALLES", source: "Cantares 2:1" },
+                { text: "MI AMADO ES MIO Y YO SUYA EL APAZIENTA ENTRE LIRIOS", source: "Cantares 2:16" },
+                { text: "LEVANTATE AMADA MIA HERMOSA MIA Y VEN", source: "Cantares 2:10" },
+                { text: "PONME COMO UN SELLO SOBRE TU CORAZON COMO UNA MARCA SOBRE TU BRAZO PORQUE FUERTE ES COMO LA MUERTE EL AMOR", source: "Cantares 8:6" },
+                { text: "NI LAS MUCHAS AGUAS PODRAN APAGAR EL AMOR NI LO AHOGARAN LOS RIOS", source: "Cantares 8:7" },
+                { text: "SU MANO IZQUIERDA ESTE DEBAJO DE MI CABEZA Y SU DERECHA ME ABRAZE", source: "Cantares 8:3" },
+                { text: "QUE ES ESTA QUE SUBE DEL DESIERTO COMO COLUMNAS DE HUMO ADEREZADA DE MIRRA Y DE INCIENSO", source: "Cantares 3:6" },
+                // --- Citas del Apocalipsis ---
+                { text: "YO SOY EL ALFA Y LA OMEGA EL PRINCIPIO Y EL FIN", source: "Apocalipsis 21:6" },
+                { text: "BIENAVENTURADOS LOS QUE LAVAN SUS ROPAS PARA TENER DERECHO AL ARBOL DE LA VIDA", source: "Apocalipsis 22:14" },
+                { text: "Y ENJUGARA DIOS TODA LAGRIMA DE LOS OJOS DE ELLOS", source: "Apocalipsis 21:4" },
+                { text: "HE AQUI YO VENGO PRONTO Y MI GALARDON CONMIGO", source: "Apocalipsis 22:12" },
+                { text: "EL QUE VENCIERE NO SUFRIRA DAÑO DE LA SEGUNDA MUERTE", source: "Apocalipsis 2:11" },
+                { text: "EL QUE TIENE OIDO OIGA LO QUE EL ESPIRITU DICE A LAS IGLESIAS", source: "Apocalipsis 2:7" },
+                { text: "NO TEMAS EN NADA LO QUE VAS A PADECER", source: "Apocalipsis 2:10" },
+                { text: "YO ESTOY A LA PUERTA Y LLAMO SI ALGUNO OYE MI VOZ Y ABRE LA PUERTA ENTRARE A EL", source: "Apocalipsis 3:20" },
+                { text: "SANTO SANTO SANTO ES EL SEÑOR DIOS TODOPODEROSO EL QUE ERA EL QUE ES Y EL QUE HA DE VENIR", source: "Apocalipsis 4:8" },
+                { text: "Y EL SEPTIMO ANGEL TOCO LA TROMPETA", source: "Apocalipsis 11:15" },
+                // --- Nuevas citas sobre el Amor de Dios ---
+                { text: "EL QUE NO AMA NO HA CONOCIDO A DIOS PORQUE DIOS ES AMOR", source: "1 Juan 4:8" },
+                { text: "EN ESTO SE MOSTRO EL AMOR DE DIOS PARA CON NOSOTROS EN QUE DIOS ENVIO A SU HIJO UNIGENITO AL MUNDO PARA QUE VIVAMOS POR EL", source: "1 Juan 4:9" },
+                { text: "NADIE TIENE MAYOR AMOR QUE ESTE QUE UNO PONGA SU VIDA POR SUS AMIGOS", source: "Juan 15:13" },
+                { text: "MAS DIOS MUESTRA SU AMOR PARA CON NOSOTROS EN QUE SIENDO AUN PECADORES CRISTO MURIO POR NOSOTROS", source: "Romanos 5:8" },
+                { text: "PORQUE NADA NOS PODRA SEPARAR DEL AMOR DE DIOS QUE ES EN CRISTO JESUS SEÑOR NUESTRO", source: "Romanos 8:39" },
+                { text: "MIRAD CUAL AMOR NOS HA DADO EL PADRE PARA QUE SEAMOS LLAMADOS HIJOS DE DIOS", source: "1 Juan 3:1" },
+                { text: "PERO DIOS QUE ES RICO EN MISERICORDIA POR SU GRAN AMOR CON QUE NOS AMO", source: "Efesios 2:4" },
+                { text: "JEHOVA SE MANIFESTO A MI HACE YA MUCHO TIEMPO DICIENDO CON AMOR ETERNO TE HE AMADO POR TANTO TE PROLONGE MI MISERICORDIA", source: "Jeremías 31:3" },
+                { text: "EL AMOR CUBRIRA MULTITUD DE PECADOS", source: "1 Pedro 4:8" },
+                { text: "EN EL AMOR NO HAY TEMOR SINO QUE EL PERFECTO AMOR ECHA FUERA EL TEMOR", source: "1 Juan 4:18" }
             ];
             const alphabetLetters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZÑ'.split('');
 
             // --- ESTADO DEL JUEGO ---
             let gameState = {};
             const MAX_REVEALS = 3;
+            let backspaceTimer; // Para el borrado continuo
 
             // --- FUNCIONES PRINCIPALES ---
             function initGame() {
@@ -321,7 +363,6 @@
             }
 
             function updateUI() {
-                // Modificado: Ahora el texto inicial es una cadena vacía
                 elements.sourceText.textContent = ''; 
                 elements.messageText.textContent = '';
                 elements.messageText.parentElement.classList.add('opacity-0');
@@ -332,13 +373,14 @@
 
             function handleInput(e) {
                 if (e.target.tagName !== 'INPUT' || !e.target.dataset.encrypted) return;
-                const encryptedChar = e.target.dataset.encrypted;
-                const userGuess = e.target.value.toUpperCase();
+                const currentInput = e.target;
+                const encryptedChar = currentInput.dataset.encrypted;
+                const userGuess = currentInput.value.toUpperCase();
 
                 let previousValue = '';
-                const allInputs = document.querySelectorAll(`input[data-encrypted="${encryptedChar}"]`);
-                if (allInputs.length > 0) {
-                    previousValue = allInputs[0].value;
+                const allInputsForChar = document.querySelectorAll(`input[data-encrypted="${encryptedChar}"]`);
+                if (allInputsForChar.length > 0) {
+                    previousValue = allInputsForChar[0].value;
                 }
                 
                 if (previousValue !== userGuess) {
@@ -346,9 +388,130 @@
                     elements.undoBtn.disabled = false;
                 }
 
-                allInputs.forEach(input => {
+                allInputsForChar.forEach(input => {
                     input.value = userGuess;
                 });
+
+                // Mover automáticamente al siguiente input si se ingresó una letra
+                if (userGuess && userGuess.length === 1 && /[A-ZÑ]/.test(userGuess)) {
+                    const inputs = Array.from(document.querySelectorAll('input.letter-input'));
+                    const currentIndex = inputs.indexOf(currentInput);
+                    const nextInput = findNextEditableInput(inputs, currentIndex);
+                    if (nextInput) {
+                        nextInput.focus();
+                    }
+                }
+            }
+
+            function handleKeydown(e) {
+                if (e.target.tagName !== 'INPUT' || !e.target.classList.contains('letter-input')) return;
+
+                const currentInput = e.target;
+                const inputs = Array.from(document.querySelectorAll('input.letter-input'));
+                const currentIndex = inputs.indexOf(currentInput);
+
+                if (e.key === 'Backspace') {
+                    // Prevenir el comportamiento por defecto para manejar el borrado continuo
+                    e.preventDefault(); 
+                    if (currentInput.value === '' && currentIndex > 0) {
+                        // Si el input actual está vacío, intentar borrar el anterior
+                        const prevInput = findPrevEditableInput(inputs, currentIndex);
+                        if (prevInput) {
+                            prevInput.value = ''; // Borrar el valor del input anterior
+                            const encryptedChar = prevInput.dataset.encrypted;
+                            // Actualizar todos los inputs con la misma letra encriptada
+                            document.querySelectorAll(`input[data-encrypted="${encryptedChar}"]`).forEach(input => {
+                                input.value = '';
+                            });
+                            prevInput.focus();
+                        }
+                    } else {
+                        // Si el input actual tiene valor, simplemente borrarlo
+                        currentInput.value = '';
+                        const encryptedChar = currentInput.dataset.encrypted;
+                        document.querySelectorAll(`input[data-encrypted="${encryptedChar}"]`).forEach(input => {
+                            input.value = '';
+                        });
+                    }
+
+                    // Iniciar el temporizador para borrado continuo si se mantiene presionado
+                    if (!backspaceTimer) {
+                        backspaceTimer = setTimeout(() => {
+                            // Si se mantiene presionado, cada 100ms se intenta mover y borrar
+                            backspaceTimer = setInterval(() => {
+                                const focusedInput = document.activeElement;
+                                if (focusedInput && focusedInput.classList.contains('letter-input')) {
+                                    const focusedIndex = inputs.indexOf(focusedInput);
+                                    const prevInput = findPrevEditableInput(inputs, focusedIndex);
+                                    if (prevInput) {
+                                        prevInput.value = '';
+                                        const encryptedChar = prevInput.dataset.encrypted;
+                                        document.querySelectorAll(`input[data-encrypted="${encryptedChar}"]`).forEach(input => {
+                                            input.value = '';
+                                        });
+                                        prevInput.focus();
+                                    } else {
+                                        clearInterval(backspaceTimer); // Detener si no hay más inputs anteriores
+                                        backspaceTimer = null;
+                                    }
+                                } else {
+                                    clearInterval(backspaceTimer);
+                                    backspaceTimer = null;
+                                }
+                            }, 100); // Borrar y mover cada 100ms
+                        }, 500); // Esperar 500ms antes de iniciar el borrado continuo
+                    }
+                } else if (e.key === ' ' || e.key === 'Spacebar') { // Manejar la barra espaciadora
+                    e.preventDefault(); // Evitar que se escriba un espacio
+                    const nextInput = findNextEditableInput(inputs, currentIndex);
+                    if (nextInput) {
+                        nextInput.focus();
+                    }
+                } else if (e.key === 'Tab') {
+                    // El comportamiento predeterminado de Tab es bueno, pero lo ajustaremos
+                    // para saltar inputs deshabilitados.
+                    e.preventDefault();
+                    if (e.shiftKey) { // Shift + Tab para ir hacia atrás
+                        const prevInput = findPrevEditableInput(inputs, currentIndex);
+                        if (prevInput) {
+                            prevInput.focus();
+                        }
+                    } else { // Tab para ir hacia adelante
+                        const nextInput = findNextEditableInput(inputs, currentIndex);
+                        if (nextInput) {
+                            nextInput.focus();
+                        }
+                    }
+                } else if (!/[A-ZÑ]/.test(e.key.toUpperCase()) && e.key.length === 1) {
+                    // Prevenir la entrada de caracteres no alfabéticos
+                    e.preventDefault();
+                }
+            }
+
+            function handleKeyup(e) {
+                if (e.key === 'Backspace') {
+                    clearTimeout(backspaceTimer);
+                    clearInterval(backspaceTimer);
+                    backspaceTimer = null;
+                }
+            }
+
+            function findNextEditableInput(inputsArray, startIndex) {
+                for (let i = startIndex + 1; i < inputsArray.length; i++) {
+                    if (!inputsArray[i].disabled) {
+                        return inputsArray[i];
+                    }
+                }
+                return null;
+            }
+
+            function findPrevEditableInput(inputsArray, startIndex) {
+                for (let i = startIndex - 1; i >= 0; i--) {
+                    if (!inputsArray[i].disabled) {
+                        return inputsArray[i];
+                    }
+                }
+                return null;
             }
             
             function revealLetter() {
@@ -380,7 +543,10 @@
                 const lastAction = gameState.history.pop();
                 const inputsToRevert = document.querySelectorAll(`input[data-encrypted="${lastAction.encryptedChar}"]`);
                 inputsToRevert.forEach(input => {
-                    input.value = lastAction.value;
+                    // Solo revertir si no está deshabilitado (revelado)
+                    if (!input.disabled) { 
+                        input.value = lastAction.value;
+                    }
                 });
                 elements.undoBtn.disabled = gameState.history.length === 0;
             }
@@ -466,7 +632,7 @@
                 try {
                     const canvas = await html2canvas(contentToExport, {
                         scale: 2, 
-                        backgroundColor: '#F0E68C' /* Fondo del PDF del mismo color que el body */
+                        backgroundColor: '#D4AF37' /* Usar el nuevo color de fondo para el PDF */
                     });
                     const imgData = canvas.toDataURL('image/png');
                     
@@ -516,7 +682,7 @@
                 const colors = { 
                     success: 'text-green-700', 
                     error: 'text-red-600', 
-                    info: 'text-[#DAA520]' /* Amarillo mostaza para mensajes de información */
+                    info: 'text-amber-700' 
                 };
                 elements.messageText.className = `text-xl font-semibold ${colors[type] || colors.info}`;
                 setTimeout(() => elements.messageText.parentElement.classList.add('opacity-0'), 4000);
@@ -562,6 +728,8 @@
             elements.revealLetterBtn.addEventListener('click', revealLetter);
             elements.checkSolutionBtn.addEventListener('click', checkSolution);
             elements.puzzleContainer.addEventListener('input', handleInput);
+            elements.puzzleContainer.addEventListener('keydown', handleKeydown); // Nuevo listener para keydown
+            elements.puzzleContainer.addEventListener('keyup', handleKeyup);     // Nuevo listener para keyup
             elements.undoBtn.addEventListener('click', undoLastMove);
             elements.openExportModalBtn.addEventListener('click', openExportModal);
             elements.closeModalBtn.addEventListener('click', closeExportModal);
