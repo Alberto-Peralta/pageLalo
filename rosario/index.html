@@ -696,13 +696,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     beadCounterElem.textContent = `${step.currentBead + 1} / ${step.totalBeads}`;
                 }
                 
-                // Actualiza imagen de fondo al misterio actual
-                const mysteryIndex = findCurrentMysteryIndex(currentStep);
-                if (mysteryIndex !== null) {
-                    currentBgImage = content.mysteries[currentMysteryKey][mysteryIndex].image;
-                } else {
-                    currentBgImage = content.default_image;
-                }
+                
             } 
             else if (step.type === 'litany') {
                  mysteryTitleElem.textContent = currentLanguage === 'la' ? "Litaniae Lauretanae" : "Letanías Lauretanas";
