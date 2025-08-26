@@ -2,33 +2,36 @@
 
 /* Estilos generales para el cuerpo y el contenedor principal */
 body {
-    font-family: 'Poppins', sans-serif; /* Tipografía más suave */
+    font-family: 'Poppins', sans-serif;
     background-color: #d4a017;
     color: #5c3a00;
     margin: 0;
     padding: 0;
+    line-height: 1.6;
 }
 
 /* --- Estilos del Menú de Navegación --- */
 .navbar {
     background-color: #b8860b;
-    padding: 1.5rem 3rem; /* Más "pachonsito" */
+    padding: 1.5rem 3rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative; /* Necesario para el menú desplegable */
 }
 
 .navbar .logo {
     color: white;
-    font-size: 2rem; /* Tamaño más grande */
+    font-size: 2rem;
     font-weight: 600;
+    z-index: 101; /* Para que siempre esté encima del menú */
 }
 
 .navbar .menu {
     list-style: none;
     display: flex;
-    gap: 2rem; /* Espacio más grande */
+    gap: 2rem;
     margin: 0;
     padding: 0;
 }
@@ -36,9 +39,9 @@ body {
 .navbar .menu a {
     color: white;
     text-decoration: none;
-    font-size: 1.1rem; /* Tamaño más grande */
-    padding: 0.75rem 1rem; /* Más "pachonsito" */
-    border-radius: 15px; /* Más redondeado */
+    font-size: 1.1rem;
+    padding: 0.75rem 1rem;
+    border-radius: 15px;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
@@ -52,51 +55,82 @@ body {
     background: none;
     border: none;
     color: white;
-    font-size: 2.5rem; /* Ícono más grande */
+    font-size: 2.5rem;
     cursor: pointer;
+    z-index: 101; /* Para que siempre esté encima del menú */
 }
 
+/* Media query para dispositivos móviles */
 @media (max-width: 768px) {
-    .menu {
+    .navbar {
+        padding: 1rem 1.5rem;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .navbar .menu {
         display: none;
         flex-direction: column;
         width: 100%;
         text-align: center;
         background-color: #b8860b;
         position: absolute;
-        top: 80px;
+        top: 100%; /* Se despliega debajo de la barra de navegación */
         left: 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         z-index: 100;
     }
 
-    .menu.active {
+    .navbar .menu.active {
         display: flex;
     }
 
-    .menu-toggle {
+    .navbar .menu li {
+        width: 100%;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .navbar .menu a {
         display: block;
+        padding: 1.5rem;
+        border-radius: 0;
     }
 }
 
 /* --- Estilos para la página de Intenciones y Login --- */
 .intentions-forum, .login-form-container, .admin-panel {
     max-width: 900px;
-    margin: 3rem auto; /* Más espacio */
-    padding: 3rem; /* Más "pachonsito" */
+    margin: 3rem auto;
+    padding: 3rem;
     background-color: #fef6e4;
-    border-radius: 25px; /* Bordes más redondeados */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+    border-radius: 25px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     text-align: center;
 }
 
+@media (max-width: 768px) {
+    .intentions-forum, .login-form-container, .admin-panel {
+        margin: 1.5rem;
+        padding: 1.5rem;
+    }
+}
+
 h1 {
-    font-size: 3rem; /* Título más grande */
+    font-size: 3rem;
     color: #b8860b;
     margin-bottom: 1rem;
 }
 
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+}
+
 p {
-    font-size: 1.2rem; /* Párrafos más grandes */
+    font-size: 1.2rem;
     margin-bottom: 2.5rem;
 }
 
@@ -104,33 +138,37 @@ p {
 #intention-form {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem; /* Más espacio entre elementos */
+    gap: 1.5rem;
     margin-bottom: 2.5rem;
 }
 
-#intention-form textarea {
+#intention-form textarea, .login-form-container input {
     width: 100%;
-    min-height: 150px; /* Más alto */
-    padding: 1.2rem; /* Más "pachonsito" */
+    min-height: 150px;
+    padding: 1.2rem;
     border: 2px solid #ccc;
-    border-radius: 15px; /* Bordes más redondeados */
-    font-size: 1.1rem; /* Fuente más grande */
+    border-radius: 15px;
+    font-size: 1.1rem;
     resize: vertical;
 }
 
-#intention-form button {
-    padding: 1rem 2rem; /* Más "pachonsito" */
+.login-form-container input {
+    min-height: auto;
+}
+
+#intention-form button, .login-form-container button {
+    padding: 1rem 2rem;
     background-color: #b8860b;
     color: white;
     border: none;
-    border-radius: 50px; /* Borde muy redondeado para un efecto de píldora */
+    border-radius: 50px;
     cursor: pointer;
-    font-size: 1.2rem; /* Fuente más grande */
+    font-size: 1.2rem;
     font-weight: 600;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-#intention-form button:hover {
+#intention-form button:hover, .login-form-container button:hover {
     background-color: #daa520;
     transform: scale(1.05);
 }
@@ -139,17 +177,17 @@ p {
 .intentions-list {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem; /* Más espacio entre elementos */
+    gap: 1.5rem;
     text-align: left;
     max-height: 600px;
     overflow-y: auto;
 }
 
 .intention-item {
-    padding: 2rem; /* Más "pachonsito" */
+    padding: 2rem;
     background-color: #fff;
-    border-radius: 20px; /* Bordes más redondeados */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Sombra más suave */
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
 .intention-item p {
@@ -166,13 +204,15 @@ p {
 .intention-item .actions {
     margin-top: 1.5rem;
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
+    justify-content: flex-start;
 }
 
 .intention-item .actions button {
     padding: 0.75rem 1.5rem;
     border: none;
-    border-radius: 50px; /* Botones tipo píldora */
+    border-radius: 50px;
     font-weight: 600;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -191,8 +231,8 @@ p {
 /* Estilos de la tabla de administración */
 .admin-table {
     width: 100%;
-    border-collapse: separate; /* Permite border-radius en las celdas */
-    border-spacing: 0 1rem; /* Espacio entre filas */
+    border-collapse: separate;
+    border-spacing: 0 1rem;
     margin-top: 3rem;
     background-color: transparent;
 }
@@ -204,14 +244,14 @@ p {
 }
 
 .admin-table th, .admin-table td {
-    padding: 1.5rem; /* Más "pachonsito" */
+    padding: 1.5rem;
     text-align: left;
     border-bottom: none;
 }
 
 .admin-table tr {
     background-color: #fff;
-    border-radius: 15px; /* Bordes de las filas */
+    border-radius: 15px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
@@ -223,17 +263,62 @@ p {
 .admin-table th:last-child { border-top-right-radius: 15px; }
 
 .admin-table .edit-btn, .admin-table .delete-btn {
-    padding: 0.75rem 1.5rem; /* Botones más grandes */
-    border-radius: 50px; /* Botones tipo píldora */
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
     font-size: 1rem;
     font-weight: 600;
     margin-right: 0.75rem;
 }
 
+/* --- Estilos responsivos para la tabla (Transformación a tarjetas) --- */
+@media screen and (max-width: 768px) {
+    .admin-table {
+        border: 0;
+        border-spacing: 0;
+    }
+    .admin-table thead {
+        display: none; /* Oculta la cabecera de la tabla */
+    }
+    .admin-table tr {
+        margin-bottom: 1.5rem; /* Más espacio entre las "tarjetas" */
+        display: block;
+        border: 1px solid #ddd;
+        border-radius: 15px;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 1rem;
+    }
+    .admin-table td {
+        display: block;
+        text-align: right;
+        font-size: 1.1rem;
+        border-bottom: 1px dashed #ccc;
+        padding: 1rem;
+    }
+    .admin-table td:last-child {
+        border-bottom: 0;
+    }
+    /* Estilos para el "data-label" */
+    .admin-table td::before {
+        content: attr(data-label);
+        float: left;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: #b8860b;
+        font-size: 1rem;
+        margin-right: 1rem;
+    }
+    .admin-table td:last-child {
+        text-align: center;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+}
+
 /* --- Estilos del Modal --- */
 .modal-content {
-    padding: 3rem; /* Más "pachonsito" */
-    border-radius: 25px; /* Bordes muy redondeados */
+    padding: 3rem;
+    border-radius: 25px;
     width: 90%;
     max-width: 600px;
     box-shadow: 0 8px 25px rgba(0,0,0,0.25);
@@ -258,31 +343,4 @@ p {
     border-radius: 50px;
     font-size: 1.2rem;
     font-weight: 600;
-}
-
-/* --- Estilos responsivos para la tabla --- */
-@media screen and (max-width: 768px) {
-    .admin-table {
-        border: 0;
-        border-spacing: 0;
-    }
-    .admin-table tr {
-        margin-bottom: 2rem; /* Más espacio entre filas */
-        border-radius: 20px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-    .admin-table td {
-        padding: 1.5rem;
-        font-size: 1.1rem;
-        border-bottom: 1px dashed #ccc;
-        padding-left: 55%; /* Ajusta el espacio para el data-label */
-    }
-    .admin-table td::before {
-        font-size: 1.1rem;
-    }
-    .admin-table td:last-child {
-        text-align: center;
-        padding-top: 2rem;
-        padding-bottom: 2rem;
-    }
 }
