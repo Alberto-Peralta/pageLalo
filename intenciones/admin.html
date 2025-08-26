@@ -216,34 +216,37 @@
         const saveEditBtn = document.getElementById('save-edit-btn');
         let currentKey = null;
 
+        // Listener para verificar el estado de autenticación
         auth.onAuthStateChanged(user => {
             if (!user) {
+                // Si no hay usuario logueado (solo anónimo), lo redirige al login
                 window.location.href = 'login.html'; 
-            }
-        });
-
-        intentionsRef.on('value', (snapshot) => {
-            const intentions = snapshot.val();
-            adminIntentionsList.innerHTML = '';
-            if (intentions) {
-                const intentionKeys = Object.keys(intentions).reverse();
-                intentionKeys.forEach(key => {
-                    const intention = intentions[key];
-                    const timestamp = new Date(intention.timestamp);
-                    const formattedDate = timestamp.toLocaleDateString('es-ES');
-                    const row = document.createElement('tr');
-                    row.innerHTML = `
-                        <td>${intention.text}</td>
-                        <td>${formattedDate}</td>
-                        <td>
-                            <button class="edit-btn" data-key="${key}">Editar</button>
-                            <button class="delete-btn" data-key="${key}">Borrar</button>
-                        </td>
-                    `;
-                    adminIntentionsList.appendChild(row);
-                });
             } else {
-                adminIntentionsList.innerHTML = '<tr><td colspan="3">No hay intenciones para moderar.</td></tr>';
+                // Si el usuario está logueado (admin), carga las intenciones
+                intentionsRef.on('value', (snapshot) => {
+                    const intentions = snapshot.val();
+                    adminIntentionsList.innerHTML = '';
+                    if (intentions) {
+                        const intentionKeys = Object.keys(intentions).reverse();
+                        intentionKeys.forEach(key => {
+                            const intention = intentions[key];
+                            const timestamp = new Date(intention.timestamp);
+                            const formattedDate = timestamp.toLocaleDateString('es-ES');
+                            const row = document.createElement('tr');
+                            row.innerHTML = `
+                                <td>${intention.text}</td>
+                                <td>${formattedDate}</td>
+                                <td>
+                                    <button class="edit-btn" data-key="${key}">Editar</button>
+                                    <button class="delete-btn" data-key="${key}">Borrar</button>
+                                </td>
+                            `;
+                            adminIntentionsList.appendChild(row);
+                        });
+                    } else {
+                        adminIntentionsList.innerHTML = '<tr><td colspan="3">No hay intenciones para moderar.</td></tr>';
+                    }
+                });
             }
         });
 
@@ -265,14 +268,17 @@
                 });
             }
         });
+
         closeBtn.onclick = () => {
             editModal.style.display = 'none';
         };
+
         window.onclick = (e) => {
             if (e.target === editModal) {
                 editModal.style.display = 'none';
             }
         };
+
         saveEditBtn.onclick = () => {
             const newText = editTextarea.value.trim();
             if (newText && currentKey) {
