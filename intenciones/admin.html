@@ -284,13 +284,18 @@
                     .catch(error => console.error('Error al actualizar:', error));
             }
         };
-        logoutBtn.addEventListener('click', () => {
-            auth.signOut().then(() => {
-                window.location.href = 'login.html';
-            }).catch(error => {
-                console.error('Error al cerrar sesión:', error);
+        
+        // Lógica de cierre de sesión
+        if (logoutBtn) {
+            logoutBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                auth.signOut().then(() => {
+                    window.location.href = 'login.html';
+                }).catch(error => {
+                    console.error('Error al cerrar sesión:', error);
+                });
             });
-        });
+        }
     </script>
 </body>
 </html>
