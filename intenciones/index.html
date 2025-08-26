@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intenciones de Oración</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Agregamos los scripts de Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+    
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">Lalo Peralta</div>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <ul class="menu" id="menu">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../rosario/index.html">Rosario</a></li>
+                <li><a href="#">Intenciones</a></li> 
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="intentions-forum">
+            <h1>Intenciones de Oración Compartidas</h1>
+            <p>Escribe tu intención y la compartiremos con toda la comunidad para que recemos por ella.</p>
+
+            <form id="intention-form">
+                <textarea id="intention-text" placeholder="Escribe aquí tu intención..." required></textarea>
+                <button type="submit">Enviar Intención</button>
+            </form>
+
+            <div class="intentions-list" id="intentions-list">
+                <!-- Las intenciones se cargarán aquí dinámicamente -->
+                </div>
+        </section>
+    </main>
+
+    <!-- El script de la página se carga al final para asegurar que todos los elementos HTML existan -->
+    <script src="script.js"></script>
+</body>
+</html>
