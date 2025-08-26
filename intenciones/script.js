@@ -13,9 +13,18 @@ function showMessageModal(message) {
     }
 }
 
+// Tu configuración de Firebase
+const firebaseConfig = {
+  apiKey: "AIzaSyCO3FRhSwH1xLABwVGFSd_YYrbFp0lQEv8",
+  authDomain: "pagelalo-1b210.firebaseapp.com",
+  projectId: "pagelalo-1b210",
+  storageBucket: "pagelalo-1b210.firebasestorage.app",
+  messagingSenderId: "1096735980204",
+  appId: "1:1096735980204:web:8252ddb9fb484c398dfd09"
+};
+
 // Variables globales proporcionadas por el entorno de Canvas
 const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
-const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : {};
 const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
 
 // Inicialización de Firebase
