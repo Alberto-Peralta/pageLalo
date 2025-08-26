@@ -1,7 +1,7 @@
 // Importa los módulos necesarios de Firebase para la versión modular (v11.6.1)
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
 import { getAuth, signInWithCustomToken, signInAnonymously } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
-import { getFirestore, collection, addDoc, onSnapshot, query, orderBy } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+import { getFirestore, collection, addDoc, onSnapshot, query, orderBy, serverTimestamp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
 
 // Funciones globales para manejar el estado del UI
 function showMessageModal(message) {
@@ -31,16 +31,16 @@ let auth;
 let userId;
 
 async function initializeFirebase() {
-    // Verificar si la configuración de Firebase es válida
-    if (!firebaseConfig.projectId) {
-        const errorMessage = 'Error al inicializar Firebase: "projectId" no proporcionado.';
-        console.error(errorMessage);
-        document.getElementById('loading-message').textContent = 'Error al cargar.';
-        showMessageModal(errorMessage);
-        return;
-    }
-
     try {
+        // Validación estricta de la configuración
+        if (!firebaseConfig.projectId) {
+            const errorMessage = 'Error de configuración: "projectId" no proporcionado en la configuración de Firebase.';
+            console.error(errorMessage);
+            document.getElementById('loading-message').textContent = 'Error al cargar. Revisa la configuración de la aplicación.';
+            showMessageModal(errorMessage);
+            return;
+        }
+
         const app = initializeApp(firebaseConfig);
         db = getFirestore(app);
         auth = getAuth(app);
@@ -101,7 +101,7 @@ function setupFormSubmission() {
                     await addDoc(intentionsCollectionRef, {
                         text: text,
                         userId: userId, // Guarda el ID del usuario
-                        timestamp: new Date()
+                        timestamp: serverTimestamp()
                     });
                     if (intentionText) {
                         intentionText.value = ''; // Limpia el área de texto
