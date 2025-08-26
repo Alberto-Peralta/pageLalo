@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
         
-        // ** Nueva lógica para el botón de editar **
+        // ** Lógica para el botón de editar **
         if (e.target.classList.contains('edit-btn')) {
             currentKey = key;
             const intentionToEdit = intentionsRef.child(key);
@@ -127,3 +127,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 });
+
+// Función para el menú de navegación en dispositivos móviles
+function toggleMenu() {
+    const menu = document.getElementById('menu');
+    if (menu) {
+        menu.classList.toggle('active');
+    }
+}
