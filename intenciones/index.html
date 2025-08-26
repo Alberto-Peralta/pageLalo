@@ -9,6 +9,7 @@
     <!-- Agregamos los scripts de Firebase -->
     <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
     
 </head>
 <body>
@@ -37,8 +38,16 @@
 
             <div class="intentions-list" id="intentions-list">
                 <!-- Las intenciones se cargarán aquí dinámicamente -->
-                </div>
+            </div>
         </section>
+
+        <!-- Panel de Administración - visible solo para el ADMIN_ID en script.js -->
+        <section class="admin-panel" id="admin-panel" style="display:none;">
+            <h2>Panel de Administración</h2>
+            <p>Este panel solo es visible para ti. Puedes borrar todas las intenciones a la vez.</p>
+            <button id="delete-all-btn">Borrar todas las intenciones</button>
+        </section>
+
     </main>
 
     <!-- El script de la página se carga al final para asegurar que todos los elementos HTML existan -->
