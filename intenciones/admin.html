@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panel de Administración - Lalo Peralta</title>
-
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -150,10 +149,9 @@
     <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
-
+    <script src="admin-script.js"></script>
 </head>
 <body>
-
     <header>
         <nav class="navbar">
             <div class="logo">Lalo Peralta</div>
@@ -165,7 +163,7 @@
     </header>
 
     <main>
-        <section class="admin-panel">
+        <section class="admin-panel" style="display: none;">
             <h1>Panel de Administración de Intenciones</h1>
             <p>Aquí puedes gestionar y moderar las intenciones de oración.</p>
             
@@ -191,117 +189,5 @@
             <button id="save-edit-btn" class="edit-btn" style="margin-top: 1rem;">Guardar Cambios</button>
         </div>
     </div>
-
-    <script>
-        const firebaseConfig = {
-            apiKey: "AIzaSyCO3FRhSwH1xLABwVGFSd_YYrbFp0lQEv8",
-            authDomain: "pagelalo-1b210.firebaseapp.com",
-            projectId: "pagelalo-1b210",
-            storageBucket: "pagelalo-1b210.firebasestorage.app",
-            messagingSenderId: "1096735980204",
-            appId: "1:1096735980204:web:8252ddb9fb484c398dfd09"
-        };
-
-        const app = firebase.initializeApp(firebaseConfig);
-        const database = firebase.database();
-        const auth = firebase.auth();
-        const intentionsRef = database.ref('intenciones');
-
-        const adminIntentionsList = document.getElementById('admin-intentions-list');
-        const logoutBtn = document.getElementById('logout-btn');
-
-        const editModal = document.getElementById('edit-modal');
-        const closeBtn = document.querySelector('.close-btn');
-        const editTextarea = document.getElementById('edit-text');
-        const saveEditBtn = document.getElementById('save-edit-btn');
-        let currentKey = null;
-
-        // Listener para verificar el estado de autenticación
-        auth.onAuthStateChanged(user => {
-            if (!user) {
-                // Si no hay usuario logueado (solo anónimo), lo redirige al login
-                window.location.href = 'login.html'; 
-            } else {
-                // Si el usuario está logueado (admin), carga las intenciones
-                intentionsRef.on('value', (snapshot) => {
-                    const intentions = snapshot.val();
-                    adminIntentionsList.innerHTML = '';
-                    if (intentions) {
-                        const intentionKeys = Object.keys(intentions).reverse();
-                        intentionKeys.forEach(key => {
-                            const intention = intentions[key];
-                            const timestamp = new Date(intention.timestamp);
-                            const formattedDate = timestamp.toLocaleDateString('es-ES');
-                            const row = document.createElement('tr');
-                            row.innerHTML = `
-                                <td>${intention.text}</td>
-                                <td>${formattedDate}</td>
-                                <td>
-                                    <button class="edit-btn" data-key="${key}">Editar</button>
-                                    <button class="delete-btn" data-key="${key}">Borrar</button>
-                                </td>
-                            `;
-                            adminIntentionsList.appendChild(row);
-                        });
-                    } else {
-                        adminIntentionsList.innerHTML = '<tr><td colspan="3">No hay intenciones para moderar.</td></tr>';
-                    }
-                });
-            }
-        });
-
-        adminIntentionsList.addEventListener('click', (e) => {
-            const key = e.target.dataset.key;
-            if (e.target.classList.contains('delete-btn')) {
-                if (confirm('¿Estás seguro de que quieres borrar esta intención?')) {
-                    intentionsRef.child(key).remove()
-                        .then(() => console.log('Intención borrada'))
-                        .catch(error => console.error('Error al borrar:', error));
-                }
-            }
-            if (e.target.classList.contains('edit-btn')) {
-                currentKey = key;
-                const intentionText = intentionsRef.child(key).child('text');
-                intentionText.once('value').then(snapshot => {
-                    editTextarea.value = snapshot.val();
-                    editModal.style.display = 'flex';
-                });
-            }
-        });
-
-        closeBtn.onclick = () => {
-            editModal.style.display = 'none';
-        };
-
-        window.onclick = (e) => {
-            if (e.target === editModal) {
-                editModal.style.display = 'none';
-            }
-        };
-
-        saveEditBtn.onclick = () => {
-            const newText = editTextarea.value.trim();
-            if (newText && currentKey) {
-                intentionsRef.child(currentKey).update({ text: newText })
-                    .then(() => {
-                        editModal.style.display = 'none';
-                        console.log('Intención actualizada');
-                    })
-                    .catch(error => console.error('Error al actualizar:', error));
-            }
-        };
-        
-        // Lógica de cierre de sesión
-        if (logoutBtn) {
-            logoutBtn.addEventListener('click', (e) => {
-                e.preventDefault();
-                auth.signOut().then(() => {
-                    window.location.href = 'login.html';
-                }).catch(error => {
-                    console.error('Error al cerrar sesión:', error);
-                });
-            });
-        }
-    </script>
 </body>
 </html>
