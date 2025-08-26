@@ -23,26 +23,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Redirige al login si no hay un usuario autenticado
     auth.onAuthStateChanged(user => {
-        if (!user) {
-            window.location.href = 'login.html';
+        const adminPanel = document.querySelector('.admin-panel');
+        if (user) {
+            adminPanel.style.display = 'block';
         } else {
-            // Muestra el panel de administración si el usuario está autenticado
-            document.querySelector('.admin-panel').style.display = 'block';
+            window.location.href = 'login.html';
         }
     });
 
-    // Muestra las intenciones en la tabla de administración
+    // Muestra las intenciones en la tabla
     intentionsRef.on('value', (snapshot) => {
-        const intentions = snapshot.val();
         adminIntentionsList.innerHTML = '';
+        const intentions = snapshot.val();
         if (intentions) {
             Object.keys(intentions).reverse().forEach(key => {
                 const intention = intentions[key];
                 const row = document.createElement('tr');
+                const formattedDate = new Date(intention.timestamp).toLocaleDateString();
+
                 row.innerHTML = `
-                    <td>${intention.text}</td>
-                    <td>${new Date(intention.timestamp).toLocaleDateString()}</td>
-                    <td>
+                    <td data-label="Intención">${intention.text}</td>
+                    <td data-label="Fecha">${formattedDate}</td>
+                    <td data-label="Acciones">
                         <button class="edit-btn" data-key="${key}">Editar</button>
                         <button class="delete-btn" data-key="${key}">Borrar</button>
                     </td>
@@ -52,9 +54,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Maneja los clics en la tabla para editar o borrar
+    // Maneja los clics de los botones de la tabla
     adminIntentionsList.addEventListener('click', (e) => {
         const key = e.target.getAttribute('data-key');
+        if (!key) return;
+
         if (e.target.classList.contains('delete-btn')) {
             if (confirm('¿Estás seguro de que quieres borrar esta intención?')) {
                 intentionsRef.child(key).remove()
@@ -71,6 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Lógica del modal de edición
     closeBtn.onclick = () => {
         editModal.style.display = 'none';
     };
