@@ -8,7 +8,6 @@ const firebaseConfig = {
     appId: "1:1096735980204:web:8252ddb9fb484c398dfd09"
 };
 
-// Importa los módulos de Firebase que vamos a usar
 const app = firebase.initializeApp(firebaseConfig);
 const database = firebase.database();
 const auth = firebase.auth();
@@ -18,13 +17,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const intentionForm = document.getElementById('intention-form');
     const intentionText = document.getElementById('intention-text');
     const intentionsList = document.getElementById('intentions-list');
+    
+    // Elementos del modal de edición
+    const editModal = document.getElementById('edit-modal');
+    const editTextarea = document.getElementById('edit-text');
+    const saveEditBtn = document.getElementById('save-edit-btn');
+    const closeBtn = document.querySelector('.close-btn');
+    let currentKey = null; // Variable para guardar la clave de la intención a editar
 
-    // ** Autenticación Anónima **
     auth.signInAnonymously().catch((error) => {
         console.error("Error al autenticar anónimamente:", error);
     });
     
-    // ** Leer intenciones y mostrar botones de acción **
     intentionsRef.on('value', (snapshot) => {
         const intentions = snapshot.val();
         intentionsList.innerHTML = '';
@@ -58,7 +62,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // ** Lógica para enviar una nueva intención **
     intentionForm.addEventListener('submit', (e) => {
         e.preventDefault();
         const text = intentionText.value.trim();
@@ -78,7 +81,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // ** Delegación de eventos para los botones de editar y borrar **
     intentionsList.addEventListener('click', (e) => {
         const key = e.target.dataset.key;
         if (!key) return;
@@ -90,5 +92,38 @@ document.addEventListener('DOMContentLoaded', () => {
                     .catch(error => console.error('Error al borrar:', error));
             }
         }
+        
+        // ** Nueva lógica para el botón de editar **
+        if (e.target.classList.contains('edit-btn')) {
+            currentKey = key;
+            const intentionToEdit = intentionsRef.child(key);
+            intentionToEdit.once('value').then(snapshot => {
+                editTextarea.value = snapshot.val().text;
+                editModal.style.display = 'flex';
+            });
+        }
     });
+
+    // ** Lógica para el modal de edición **
+    closeBtn.onclick = () => {
+        editModal.style.display = 'none';
+    };
+
+    window.onclick = (e) => {
+        if (e.target === editModal) {
+            editModal.style.display = 'none';
+        }
+    };
+
+    saveEditBtn.onclick = () => {
+        const newText = editTextarea.value.trim();
+        if (newText && currentKey) {
+            intentionsRef.child(currentKey).update({ text: newText })
+                .then(() => {
+                    editModal.style.display = 'none';
+                    console.log('Intención actualizada');
+                })
+                .catch(error => console.error('Error al actualizar:', error));
+        }
+    };
 });
