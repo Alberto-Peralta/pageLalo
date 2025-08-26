@@ -81,3 +81,29 @@ p {
     font-style: italic;
     color: #333;
 }
+
+/* Estilos adicionales para los botones de editar y borrar en la página principal */
+.intention-item .actions {
+    margin-top: 1rem;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-end;
+}
+
+.intention-item .actions button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.intention-item .actions .edit-btn {
+    background-color: #b8860b;
+    color: white;
+}
+
+.intention-item .actions .delete-btn {
+    background-color: #e55353;
+    color: white;
+}
