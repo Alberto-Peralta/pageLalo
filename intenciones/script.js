@@ -1,180 +1,67 @@
-// Importa los módulos necesarios de Firebase para la versión modular (v11.6.1)
-import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
-import { getAuth, signInWithCustomToken, signInAnonymously } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
-import { getFirestore, collection, addDoc, onSnapshot, query, orderBy, serverTimestamp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+// Your web app's Firebase configuration
+const firebaseConfig = {
+    apiKey: "AIzaSyCO3FRhSwH1xLABwVGFSd_YYrbFp0lQEv8",
+    authDomain: "pagelalo-1b210.firebaseapp.com",
+    projectId: "pagelalo-1b210",
+    storageBucket: "pagelalo-1b210.firebasestorage.app",
+    messagingSenderId: "1096735980204",
+    appId: "1:1096735980204:web:8252ddb9fb484c398dfd09"
+};
 
-// Funciones globales para manejar el estado del UI
-function showMessageModal(message) {
-    const modal = document.getElementById('message-modal');
-    const modalText = document.getElementById('modal-text');
-    if (modal && modalText) {
-        modalText.textContent = message;
-        modal.style.display = 'flex';
-    }
-}
+// Importa los módulos de Firebase que vamos a usar
+const app = firebase.initializeApp(firebaseConfig);
+const database = firebase.database();
+const intentionsRef = database.ref('intenciones'); // Referencia a la "tabla" de intenciones en la base de datos
 
-function hideMessageModal() {
-    const modal = document.getElementById('message-modal');
-    if (modal) {
-        modal.style.display = 'none';
-    }
-}
-
-// Variables globales proporcionadas por el entorno de Canvas
-const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
-const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : {};
-const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
-
-// Inicialización de Firebase
-let db;
-let auth;
-let userId;
-
-async function initializeFirebase() {
-    try {
-        // Validación estricta de la configuración
-        if (!firebaseConfig.projectId) {
-            const errorMessage = 'Error de configuración: "projectId" no proporcionado en la configuración de Firebase.';
-            console.error(errorMessage);
-            document.getElementById('loading-message').textContent = 'Error al cargar. Revisa la configuración de la aplicación.';
-            showMessageModal(errorMessage);
-            return;
-        }
-
-        const app = initializeApp(firebaseConfig);
-        db = getFirestore(app);
-        auth = getAuth(app);
-        
-        // Autentica al usuario usando el token proporcionado
-        if (initialAuthToken) {
-            await signInWithCustomToken(auth, initialAuthToken);
-        } else {
-            // Si no hay token, usa autenticación anónima
-            await signInAnonymously(auth);
-        }
-
-        // Usa onAuthStateChanged para obtener el usuario actual de forma segura
-        auth.onAuthStateChanged(user => {
-            if (user) {
-                userId = user.uid;
-                const userInfoElement = document.getElementById('user-info');
-                if (userInfoElement) {
-                    userInfoElement.textContent = `Tu ID de usuario es: ${userId}`;
-                }
-                // Cargar las intenciones solo después de la autenticación
-                fetchIntentions();
-            } else {
-                console.log("Usuario no autenticado. Usando ID anónimo.");
-                userId = crypto.randomUUID();
-                const userInfoElement = document.getElementById('user-info');
-                if (userInfoElement) {
-                    userInfoElement.textContent = `ID Anónimo: ${userId}`;
-                }
-                // Cargar intenciones incluso para usuarios anónimos
-                fetchIntentions();
-            }
-        });
-
-    } catch (error) {
-        console.error('Error al inicializar Firebase:', error);
-        const loadingMessage = document.getElementById('loading-message');
-        if (loadingMessage) {
-            loadingMessage.textContent = 'Error al cargar. Revisa la consola para más detalles.';
-        }
-        showMessageModal(`Error: ${error.message}`);
-    }
-}
-
-// Lógica para enviar una nueva intención a Firestore
-function setupFormSubmission() {
+document.addEventListener('DOMContentLoaded', () => {
     const intentionForm = document.getElementById('intention-form');
     const intentionText = document.getElementById('intention-text');
-    
-    if (intentionForm) {
-        intentionForm.addEventListener('submit', async (e) => {
-            e.preventDefault(); // Evita que la página se recargue
-            const text = intentionText.value.trim();
-
-            if (text) {
-                try {
-                    const intentionsCollectionRef = collection(db, 'artifacts', appId, 'public', 'data', 'intenciones');
-                    await addDoc(intentionsCollectionRef, {
-                        text: text,
-                        userId: userId, // Guarda el ID del usuario
-                        timestamp: serverTimestamp()
-                    });
-                    if (intentionText) {
-                        intentionText.value = ''; // Limpia el área de texto
-                    }
-                } catch (error) {
-                    console.error("Error al guardar la intención:", error);
-                    showMessageModal(`Error: ${error.message}. No se pudo enviar la intención.`);
-                }
-            }
-        });
-    }
-}
-
-// Lógica para leer las intenciones de Firestore en tiempo real
-function fetchIntentions() {
     const intentionsList = document.getElementById('intentions-list');
-    if (!db || !intentionsList) {
-        return; // Salir si la base de datos o la lista no están listas
-    }
-    
-    // Esconder el mensaje de carga
-    const loadingMessage = document.getElementById('loading-message');
-    if (loadingMessage) {
-        loadingMessage.style.display = 'none';
-    }
 
-    try {
-        const intentionsCollectionRef = collection(db, 'artifacts', appId, 'public', 'data', 'intenciones');
-        const q = query(intentionsCollectionRef, orderBy('timestamp', 'desc'));
+    // ** Lógica para leer las intenciones de la base de datos en tiempo real **
+    // onValue escucha los cambios en la base de datos. Se activa al inicio y cada vez que hay una actualización.
+    intentionsRef.on('value', (snapshot) => {
+        const intentions = snapshot.val(); // Obtiene todos los datos de 'intenciones'
+        intentionsList.innerHTML = ''; // Limpia la lista actual
 
-        onSnapshot(q, (snapshot) => {
-            if (intentionsList) {
-                intentionsList.innerHTML = ''; // Limpia la lista actual
-                if (snapshot.empty) {
-                    intentionsList.innerHTML = '<p class="text-gray-500 text-center">Todavía no hay intenciones. ¡Sé el primero en enviar una!</p>';
-                } else {
-                    snapshot.forEach((doc) => {
-                        const intention = doc.data();
-                        const item = document.createElement('div');
-                        item.className = 'intention-item p-4 bg-white rounded-lg shadow-sm mb-2';
-                        item.innerHTML = `
-                            <p class="text-gray-800 text-lg font-medium mb-1">"${intention.text}"</p>
-                            <small class="text-gray-500">Por usuario: ${intention.userId}</small>
-                        `;
-                        intentionsList.appendChild(item);
-                    });
-                }
-            }
-        });
-    } catch (error) {
-        console.error('Error al cargar las intenciones:', error);
-        if (intentionsList) {
-            intentionsList.innerHTML = '<p class="text-red-500 text-center">Lo sentimos, no pudimos cargar las intenciones. Intenta de nuevo más tarde.</p>';
+        if (intentions) {
+            // Convierte el objeto de intenciones en un array para poder recorrerlo
+            const intentionKeys = Object.keys(intentions).reverse(); // Muestra las más recientes primero
+            intentionKeys.forEach(key => {
+                const intention = intentions[key];
+                const item = document.createElement('div');
+                item.className = 'intention-item';
+                // Usamos innerHTML para incluir el párrafo con el texto de la intención
+                item.innerHTML = `<p>"${intention.text}"</p>`;
+                intentionsList.appendChild(item);
+            });
+        } else {
+            intentionsList.innerHTML = '<p>Todavía no hay intenciones. ¡Sé el primero en enviar una!</p>';
         }
-    }
-}
+    });
 
-// Inicia el proceso de la aplicación
-document.addEventListener('DOMContentLoaded', () => {
-    // Escucha el evento de cierre del modal
-    const closeButton = document.querySelector('#message-modal .close');
-    if (closeButton) {
-        closeButton.addEventListener('click', hideMessageModal);
-    }
-    
-    initializeFirebase();
-    setupFormSubmission();
+    // ** Lógica para enviar una nueva intención a la base de datos **
+    intentionForm.addEventListener('submit', (e) => {
+        e.preventDefault(); // Evita que la página se recargue
+        const text = intentionText.value.trim();
+
+        if (text) {
+            // Guarda la nueva intención en la base de datos usando .push()
+            // Firebase le asignará una clave única
+            intentionsRef.push({
+                text: text,
+                timestamp: firebase.database.ServerValue.TIMESTAMP // Guarda la fecha y hora del servidor
+            }).then(() => {
+                intentionText.value = ''; // Limpia el área de texto
+            }).catch((error) => {
+                console.error("Error al guardar la intención:", error);
+                // Usamos un modal o un mensaje en la página en lugar de alert()
+                intentionsList.innerHTML = `<p style="color:red;">Error: ${error.message}. No se pudo enviar la intención.</p>`;
+            });
+        }
+    });
+
+    // Esta función ya no es necesaria con onValue()
+    // Ya que la lista se actualiza automáticamente
+    // async function fetchIntentions() { ... }
 });
-
-// Función para mostrar u ocultar el menú en dispositivos móviles (función original)
-function toggleMenu() {
-    const menu = document.getElementById('menu');
-    if (menu) {
-        menu.classList.toggle('show');
-    }
-}
