@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 /* Estilos generales para el cuerpo y el contenedor principal */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Poppins', sans-serif; /* Tipografía más suave */
     background-color: #d4a017;
     color: #5c3a00;
     margin: 0;
@@ -10,23 +12,23 @@ body {
 /* --- Estilos del Menú de Navegación --- */
 .navbar {
     background-color: #b8860b;
-    padding: 1rem 2rem;
+    padding: 1.5rem 3rem; /* Más "pachonsito" */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .navbar .logo {
     color: white;
-    font-size: 1.8rem;
-    font-weight: bold;
+    font-size: 2rem; /* Tamaño más grande */
+    font-weight: 600;
 }
 
 .navbar .menu {
     list-style: none;
     display: flex;
-    gap: 1.5rem;
+    gap: 2rem; /* Espacio más grande */
     margin: 0;
     padding: 0;
 }
@@ -34,14 +36,15 @@ body {
 .navbar .menu a {
     color: white;
     text-decoration: none;
-    font-size: 1rem;
-    padding: 0.5rem;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    font-size: 1.1rem; /* Tamaño más grande */
+    padding: 0.75rem 1rem; /* Más "pachonsito" */
+    border-radius: 15px; /* Más redondeado */
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .navbar .menu a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
 }
 
 .menu-toggle {
@@ -49,7 +52,7 @@ body {
     background: none;
     border: none;
     color: white;
-    font-size: 2rem;
+    font-size: 2.5rem; /* Ícono más grande */
     cursor: pointer;
 }
 
@@ -61,7 +64,7 @@ body {
         text-align: center;
         background-color: #b8860b;
         position: absolute;
-        top: 60px;
+        top: 80px;
         left: 0;
         z-index: 100;
     }
@@ -77,199 +80,209 @@ body {
 
 /* --- Estilos para la página de Intenciones y Login --- */
 .intentions-forum, .login-form-container, .admin-panel {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 2rem;
+    max-width: 900px;
+    margin: 3rem auto; /* Más espacio */
+    padding: 3rem; /* Más "pachonsito" */
     background-color: #fef6e4;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 25px; /* Bordes más redondeados */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
     text-align: center;
 }
 
-.login-form-container h1, .admin-panel h1 {
+h1 {
+    font-size: 3rem; /* Título más grande */
     color: #b8860b;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1.2rem; /* Párrafos más grandes */
+    margin-bottom: 2.5rem;
+}
+
+/* Estilos del formulario */
+#intention-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* Más espacio entre elementos */
+    margin-bottom: 2.5rem;
+}
+
+#intention-form textarea {
+    width: 100%;
+    min-height: 150px; /* Más alto */
+    padding: 1.2rem; /* Más "pachonsito" */
+    border: 2px solid #ccc;
+    border-radius: 15px; /* Bordes más redondeados */
+    font-size: 1.1rem; /* Fuente más grande */
+    resize: vertical;
+}
+
+#intention-form button {
+    padding: 1rem 2rem; /* Más "pachonsito" */
+    background-color: #b8860b;
+    color: white;
+    border: none;
+    border-radius: 50px; /* Borde muy redondeado para un efecto de píldora */
+    cursor: pointer;
+    font-size: 1.2rem; /* Fuente más grande */
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#intention-form button:hover {
+    background-color: #daa520;
+    transform: scale(1.05);
+}
+
+/* Estilos para la lista de intenciones */
+.intentions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* Más espacio entre elementos */
+    text-align: left;
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+.intention-item {
+    padding: 2rem; /* Más "pachonsito" */
+    background-color: #fff;
+    border-radius: 20px; /* Bordes más redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Sombra más suave */
+}
+
+.intention-item p {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.intention-item .author-info {
+    font-size: 0.9rem;
+    color: #888;
+    margin-top: 0.5rem;
+}
+
+.intention-item .actions {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.intention-item .actions button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 50px; /* Botones tipo píldora */
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.intention-item .edit-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.intention-item .delete-btn {
+    background-color: #f44336;
+    color: white;
 }
 
 /* Estilos de la tabla de administración */
 .admin-table {
     width: 100%;
-    border-collapse: collapse;
-    margin-top: 2rem;
-    background-color: #fff;
-    border-radius: 8px;
-    overflow: hidden; /* Para que los bordes redondeados se apliquen al contenido de la tabla */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    border-collapse: separate; /* Permite border-radius en las celdas */
+    border-spacing: 0 1rem; /* Espacio entre filas */
+    margin-top: 3rem;
+    background-color: transparent;
 }
 
 .admin-table thead {
     background-color: #b8860b;
     color: white;
+    border-radius: 15px 15px 0 0;
 }
 
 .admin-table th, .admin-table td {
-    padding: 1.25rem;
+    padding: 1.5rem; /* Más "pachonsito" */
     text-align: left;
-}
-
-.admin-table td {
-    border-bottom: 1px solid #eee;
-}
-
-.admin-table tr:last-child td {
     border-bottom: none;
 }
 
-/* Estilos para los botones de la tabla */
-.admin-table button {
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 0.9rem;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-    margin-right: 0.5rem;
+.admin-table tr {
+    background-color: #fff;
+    border-radius: 15px; /* Bordes de las filas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
-.admin-table .edit-btn {
-    background-color: #4CAF50; /* Verde para editar */
-    color: white;
+.admin-table tr:hover {
+    background-color: #f8f8f8;
 }
 
-.admin-table .edit-btn:hover {
-    background-color: #45a049;
+.admin-table th:first-child { border-top-left-radius: 15px; }
+.admin-table th:last-child { border-top-right-radius: 15px; }
+
+.admin-table .edit-btn, .admin-table .delete-btn {
+    padding: 0.75rem 1.5rem; /* Botones más grandes */
+    border-radius: 50px; /* Botones tipo píldora */
+    font-size: 1rem;
+    font-weight: 600;
+    margin-right: 0.75rem;
 }
 
-.admin-table .delete-btn {
-    background-color: #f44336; /* Rojo para borrar */
-    color: white;
-}
-
-.admin-table .delete-btn:hover {
-    background-color: #da190b;
-}
-
-/* --- Modal y otros estilos comunes --- */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.6);
-    justify-content: center;
-    align-items: center;
-}
-
+/* --- Estilos del Modal --- */
 .modal-content {
-    background-color: #fef6e4;
-    padding: 2rem;
-    border-radius: 10px;
+    padding: 3rem; /* Más "pachonsito" */
+    border-radius: 25px; /* Bordes muy redondeados */
     width: 90%;
-    max-width: 500px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    position: relative;
-    animation: fadeIn 0.3s ease-out;
-}
-
-.close-btn {
-    color: #5c3a00;
-    font-size: 2rem;
-    font-weight: bold;
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    cursor: pointer;
-    transition: color 0.3s ease;
-}
-
-.close-btn:hover,
-.close-btn:focus {
-    color: #b8860b;
-    text-decoration: none;
+    max-width: 600px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+    animation: fadeIn 0.4s ease-out;
 }
 
 .modal-content h2 {
-    color: #b8860b;
-    margin-top: 0;
-    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    margin-bottom: 2rem;
 }
 
 .modal-content textarea {
-    width: 100%;
-    min-height: 100px;
-    padding: 0.75rem;
-    margin-bottom: 1.5rem;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    resize: vertical;
+    min-height: 150px;
+    padding: 1rem;
+    border-radius: 15px;
+    border: 2px solid #ccc;
+    font-size: 1.1rem;
 }
 
 #save-edit-btn {
-    padding: 0.75rem 1.5rem;
-    background-color: #b8860b;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-}
-
-#save-edit-btn:hover {
-    background-color: #daa520;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
 }
 
 /* --- Estilos responsivos para la tabla --- */
 @media screen and (max-width: 768px) {
     .admin-table {
         border: 0;
+        border-spacing: 0;
     }
-
-    .admin-table thead {
-        display: none; /* Oculta la cabecera de la tabla */
-    }
-
     .admin-table tr {
-        margin-bottom: 1rem;
-        display: block;
-        border: 1px solid #ccc;
-        border-radius: 8px;
-        background-color: #fff;
+        margin-bottom: 2rem; /* Más espacio entre filas */
+        border-radius: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
-
     .admin-table td {
-        display: block;
-        text-align: right;
-        font-size: 1rem;
+        padding: 1.5rem;
+        font-size: 1.1rem;
         border-bottom: 1px dashed #ccc;
-        position: relative;
-        padding-left: 50%;
+        padding-left: 55%; /* Ajusta el espacio para el data-label */
     }
-
     .admin-table td::before {
-        content: attr(data-label);
-        position: absolute;
-        left: 1rem;
-        width: calc(50% - 1.5rem);
-        padding-right: 1rem;
-        white-space: nowrap;
-        text-align: left;
-        font-weight: bold;
-        color: #5c3a00;
+        font-size: 1.1rem;
     }
-
     .admin-table td:last-child {
-        border-bottom: 0;
         text-align: center;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
     }
 }
