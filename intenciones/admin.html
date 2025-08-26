@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración - Lalo Peralta</title>
+
+    <style>
+        /* Estilos generales del cuerpo y el contenedor principal */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #d4a017;
+            color: #5c3a00;
+        }
+
+        .navbar {
+            background-color: #b8860b;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar .logo {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .navbar .menu {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar .menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .navbar .menu a:hover {
+            color: #fef6e4;
+        }
+
+        /* Estilos específicos para el panel de admin */
+        .admin-panel {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .admin-panel h1 {
+            color: #b8860b;
+        }
+
+        .admin-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 2rem;
+        }
+
+        .admin-table th, .admin-table td {
+            padding: 1rem;
+            border-bottom: 1px solid #ddd;
+            text-align: left;
+        }
+
+        .admin-table th {
+            background-color: #fef6e4;
+            color: #5c3a00;
+        }
+
+        .admin-table button {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 0.5rem;
+        }
+
+        .edit-btn {
+            background-color: #b8860b;
+            color: white;
+        }
+
+        .delete-btn {
+            background-color: #e55353;
+            color: white;
+        }
+        
+        /* Modal para editar */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.4);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: #fef6e4;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .close-btn {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close-btn:hover,
+        .close-btn:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .login-form-container {
+            max-width: 400px;
+            margin: 4rem auto;
+            padding: 2rem;
+            background-color: #fef6e4;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .login-form-container h1 {
+            color: #b8860b;
+        }
+
+        .login-form-container input {
+            width: 100%;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .login-form-container button {
+            width: 100%;
+            padding: 0.75rem;
+            background-color: #b8860b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1rem;
+        }
+
+        .login-form-container button:hover {
+            background-color: #daa520;
+        }
+    </style>
+    
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">Lalo Peralta</div>
+            <ul class="menu" id="menu">
+                <li><a href="index.html">Intenciones</a></li> 
+                <li><a href="#" id="logout-btn">Cerrar Sesión</a></li> 
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="admin-panel">
+            <h1>Panel de Administración de Intenciones</h1>
+            <p>Aquí puedes gestionar y moderar las intenciones de oración.</p>
+            
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>Intención</th>
+                        <th>Fecha</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="admin-intentions-list">
+                    </tbody>
+            </table>
+        </section>
+    </main>
+
+    <div id="edit-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Editar Intención</h2>
+            <textarea id="edit-text" style="width: 100%; min-height: 100px;"></textarea>
+            <button id="save-edit-btn" class="edit-btn" style="margin-top: 1rem;">Guardar Cambios</button>
+        </div>
+    </div>
+
+    <script>
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyCO3FRhSwH1xLABwVGFSd_YYrbFp0lQEv8",
+            authDomain: "pagelalo-1b210.firebaseapp.com",
+            projectId: "pagelalo-1b210",
+            storageBucket: "pagelalo-1b210.firebasestorage.app",
+            messagingSenderId: "1096735980204",
+            appId: "1:1096735980204:web:8252ddb9fb484c398dfd09"
+        };
+
+        const app = firebase.initializeApp(firebaseConfig);
+        const database = firebase.database();
+        const auth = firebase.auth();
+        const intentionsRef = database.ref('intenciones');
+
+        const adminIntentionsList = document.getElementById('admin-intentions-list');
+        const logoutBtn = document.getElementById('logout-btn');
+
+        const editModal = document.getElementById('edit-modal');
+        const closeBtn = document.querySelector('.close-btn');
+        const editTextarea = document.getElementById('edit-text');
+        const saveEditBtn = document.getElementById('save-edit-btn');
+        let currentKey = null;
+
+        // ** 1. Protección de la página con Autenticación **
+        auth.onAuthStateChanged(user => {
+            if (!user) {
+                // Si no hay usuario, redirigir a la página de inicio de sesión
+                window.location.href = 'login.html'; 
+            }
+        });
+
+        // ** 2. Cargar y mostrar las intenciones para el admin **
+        intentionsRef.on('value', (snapshot) => {
+            const intentions = snapshot.val();
+            adminIntentionsList.innerHTML = ''; // Limpiar la tabla
+
+            if (intentions) {
+                const intentionKeys = Object.keys(intentions).reverse();
+                intentionKeys.forEach(key => {
+                    const intention = intentions[key];
+                    const timestamp = new Date(intention.timestamp);
+                    const formattedDate = timestamp.toLocaleDateString('es-ES');
+                    
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${intention.text}</td>
+                        <td>${formattedDate}</td>
+                        <td>
+                            <button class="edit-btn" data-key="${key}">Editar</button>
+                            <button class="delete-btn" data-key="${key}">Borrar</button>
+                        </td>
+                    `;
+                    adminIntentionsList.appendChild(row);
+                });
+            } else {
+                adminIntentionsList.innerHTML = '<tr><td colspan="3">No hay intenciones para moderar.</td></tr>';
+            }
+        });
+
+        // ** 3. Lógica para los botones de Editar y Borrar **
+        adminIntentionsList.addEventListener('click', (e) => {
+            const key = e.target.dataset.key;
+            if (e.target.classList.contains('delete-btn')) {
+                if (confirm('¿Estás seguro de que quieres borrar esta intención?')) {
+                    intentionsRef.child(key).remove()
+                        .then(() => console.log('Intención borrada'))
+                        .catch(error => console.error('Error al borrar:', error));
+                }
+            }
+
+            if (e.target.classList.contains('edit-btn')) {
+                currentKey = key;
+                const intentionText = intentionsRef.child(key).child('text');
+                intentionText.once('value').then(snapshot => {
+                    editTextarea.value = snapshot.val();
+                    editModal.style.display = 'flex';
+                });
+            }
+        });
+
+        // ** 4. Lógica para el modal de edición **
+        closeBtn.onclick = () => {
+            editModal.style.display = 'none';
+        };
+
+        window.onclick = (e) => {
+            if (e.target === editModal) {
+                editModal.style.display = 'none';
+            }
+        };
+
+        saveEditBtn.onclick = () => {
+            const newText = editTextarea.value.trim();
+            if (newText && currentKey) {
+                intentionsRef.child(currentKey).update({ text: newText })
+                    .then(() => {
+                        editModal.style.display = 'none';
+                        console.log('Intención actualizada');
+                    })
+                    .catch(error => console.error('Error al actualizar:', error));
+            }
+        };
+
+        // ** 5. Cerrar Sesión **
+        logoutBtn.addEventListener('click', () => {
+            auth.signOut().then(() => {
+                window.location.href = 'login.html';
+            }).catch(error => {
+                console.error('Error al cerrar sesión:', error);
+            });
+        });
+    </script>
+</body>
+</html>

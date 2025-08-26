@@ -6,7 +6,6 @@
     <title>Intenciones de Oración</title>
     <link rel="stylesheet" href="styles.css">
     
-    <!-- Agregamos los scripts de Firebase -->
     <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
     
@@ -20,7 +19,8 @@
             <ul class="menu" id="menu">
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="../rosario/index.html">Rosario</a></li>
-                <li><a href="#">Intenciones</a></li> 
+                <li><a href="#">Intenciones</a></li>
+                <li><a href="login.html">Admin</a></li> 
             </ul>
         </nav>
     </header>
@@ -36,12 +36,10 @@
             </form>
 
             <div class="intentions-list" id="intentions-list">
-                <!-- Las intenciones se cargarán aquí dinámicamente -->
                 </div>
         </section>
     </main>
 
-    <!-- El script de la página se carga al final para asegurar que todos los elementos HTML existan -->
     <script src="script.js"></script>
 </body>
 </html>
