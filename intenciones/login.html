@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar Sesión</title>
     <link rel="stylesheet" href="styles.css">
+    
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+    
     <style>
         .login-form-container {
             max-width: 400px;
@@ -43,21 +47,17 @@
             background-color: #daa520;
         }
     </style>
-    
-    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
 </head>
 <body>
-
     <main>
         <section class="login-form-container">
-            <h1>Acceso de Administrador</h1>
+            <h1>Iniciar Sesión de Administrador</h1>
             <form id="login-form">
-                <input type="email" id="email" placeholder="Correo electrónico" required>
+                <input type="email" id="email" placeholder="Correo Electrónico" required>
                 <input type="password" id="password" placeholder="Contraseña" required>
                 <button type="submit">Iniciar Sesión</button>
+                <p id="error-message" style="color: red; margin-top: 1rem;"></p>
             </form>
-            <p id="error-message" style="color: red; margin-top: 1rem;"></p>
         </section>
     </main>
 
@@ -87,10 +87,13 @@
                 })
                 .catch((error) => {
                     let message = "Error de inicio de sesión. Por favor, verifica tus credenciales.";
-                    if (error.code === 'auth/user-not-found' || error.code === 'auth/wrong-password') {
-                        message = "Correo o contraseña incorrectos.";
+                    if (error.code === 'auth/user-not-found') {
+                        message = "No se encontró el usuario con este correo electrónico.";
+                    } else if (error.code === 'auth/wrong-password') {
+                        message = "La contraseña es incorrecta.";
                     }
                     errorMessage.textContent = message;
+                    console.error("Error al iniciar sesión:", error);
                 });
         });
     </script>

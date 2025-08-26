@@ -13,7 +13,7 @@ const database = firebase.database();
 const auth = firebase.auth();
 const intentionsRef = database.ref('intenciones');
 
-// UIDs de los administradores. Puedes añadir más si es necesario.
+// UIDs de los administradores.
 const adminUIDs = ["xqhClOg845dSU5XIu4vqTCy4XAj2", "UbR2AIirbiNH7uCXfl5P7rSWpIB2"];
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -28,116 +28,66 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeBtn = document.querySelector('.close-btn');
     let currentKey = null; // Variable para guardar la clave de la intención a editar
 
-    // Iniciar sesión anónimamente al cargar la página para permitir a cualquiera escribir
-    auth.signInAnonymously().catch((error) => {
+    // Iniciar sesión de forma anónima
+    auth.signInAnonymously().catch(error => {
         console.error("Error al autenticar anónimamente:", error);
     });
-    
+
+    // Muestra las intenciones en la página principal
     intentionsRef.on('value', (snapshot) => {
         const intentions = snapshot.val();
         intentionsList.innerHTML = '';
-        const user = auth.currentUser;
-
         if (intentions) {
-            const intentionKeys = Object.keys(intentions).reverse();
-            intentionKeys.forEach(key => {
+            Object.keys(intentions).reverse().forEach(key => {
                 const intention = intentions[key];
                 const item = document.createElement('div');
-                item.className = 'intention-item';
-                
-                let actionsHtml = '';
-                // Verificar si el usuario actual es el autor o un administrador
-                const isAuthor = user && user.uid === intention.userId;
-                const isAdmin = user && adminUIDs.includes(user.uid);
-                
-                if (isAuthor || isAdmin) {
-                    actionsHtml = `
-                        <div class="actions">
-                            <button class="edit-btn" data-key="${key}">Editar</button>
-                            <button class="delete-btn" data-key="${key}">Borrar</button>
-                        </div>
-                    `;
-                }
-
+                item.classList.add('intention-item');
                 item.innerHTML = `
-                    <p>"${intention.text}"</p>
-                    ${actionsHtml}
+                    <p>${intention.text}</p>
+                    <div class="intention-meta">
+                        <span>${new Date(intention.timestamp).toLocaleDateString()}</span>
+                        ${auth.currentUser && auth.currentUser.uid === intention.uid ? `<button class="delete-btn" data-key="${key}">Borrar</button>` : ''}
+                    </div>
                 `;
                 intentionsList.appendChild(item);
             });
-        } else {
-            intentionsList.innerHTML = '<p>Todavía no hay intenciones. ¡Sé el primero en enviar una!</p>';
         }
     });
 
+    // Envía la intención a Firebase
     intentionForm.addEventListener('submit', (e) => {
         e.preventDefault();
         const text = intentionText.value.trim();
-        const user = auth.currentUser;
-
-        if (text && user) {
-            intentionsRef.push({
+        if (text !== '') {
+            const newIntentionRef = intentionsRef.push();
+            newIntentionRef.set({
                 text: text,
-                timestamp: firebase.database.ServerValue.TIMESTAMP,
-                userId: user.uid
+                timestamp: Date.now(),
+                uid: auth.currentUser.uid // Guarda el UID del usuario anónimo
             }).then(() => {
                 intentionText.value = '';
-            }).catch((error) => {
-                console.error("Error al guardar la intención:", error);
-                intentionsList.innerHTML = `<p style="color:red;">Error: ${error.message}. No se pudo enviar la intención.</p>`;
+                console.log('Intención enviada');
+            }).catch(error => {
+                console.error("Error al enviar la intención:", error);
             });
         }
     });
 
+    // Maneja el borrado de intenciones
     intentionsList.addEventListener('click', (e) => {
-        const key = e.target.dataset.key;
-        if (!key) return;
-
+        const key = e.target.getAttribute('data-key');
         if (e.target.classList.contains('delete-btn')) {
-            if (confirm('¿Estás seguro de que quieres borrar esta intención?')) {
+            if (confirm('¿Estás seguro de que quieres borrar tu intención?')) {
                 intentionsRef.child(key).remove()
                     .then(() => console.log('Intención borrada'))
                     .catch(error => console.error('Error al borrar:', error));
             }
         }
-        
-        if (e.target.classList.contains('edit-btn')) {
-            currentKey = key;
-            const intentionToEdit = intentionsRef.child(key);
-            intentionToEdit.once('value').then(snapshot => {
-                editTextarea.value = snapshot.val().text;
-                editModal.style.display = 'flex';
-            });
-        }
     });
-
-    closeBtn.onclick = () => {
-        editModal.style.display = 'none';
-    };
-
-    window.onclick = (e) => {
-        if (e.target === editModal) {
-            editModal.style.display = 'none';
-        }
-    };
-
-    saveEditBtn.onclick = () => {
-        const newText = editTextarea.value.trim();
-        if (newText && currentKey) {
-            intentionsRef.child(currentKey).update({ text: newText })
-                .then(() => {
-                    editModal.style.display = 'none';
-                    console.log('Intención actualizada');
-                })
-                .catch(error => console.error('Error al actualizar:', error));
-        }
-    };
 });
 
 // Función para el menú de navegación en dispositivos móviles
 function toggleMenu() {
     const menu = document.getElementById('menu');
-    if (menu) {
-        menu.classList.toggle('active');
-    }
+    menu.classList.toggle('active');
 }
