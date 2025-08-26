@@ -83,7 +83,6 @@
 
             auth.signInWithEmailAndPassword(email, password)
                 .then((userCredential) => {
-                    // Redirige al usuario al panel de administración después de un inicio de sesión exitoso
                     window.location.href = 'admin.html';
                 })
                 .catch((error) => {
