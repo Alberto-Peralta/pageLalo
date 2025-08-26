@@ -13,7 +13,7 @@ const database = firebase.database();
 const auth = firebase.auth();
 const intentionsRef = database.ref('intenciones');
 
-// UIDs de los administradores.
+// UIDs de los administradores. Puedes añadir más si es necesario.
 const adminUIDs = ["xqhClOg845dSU5XIu4vqTCy4XAj2", "UbR2AIirbiNH7uCXfl5P7rSWpIB2"];
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -28,25 +28,59 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeBtn = document.querySelector('.close-btn');
     let currentKey = null; // Variable para guardar la clave de la intención a editar
 
-    // Iniciar sesión de forma anónima
-    auth.signInAnonymously().catch(error => {
+    // Autenticación anónima para usuarios no logueados
+    auth.signInAnonymously().catch((error) => {
         console.error("Error al autenticar anónimamente:", error);
     });
 
-    // Muestra las intenciones en la página principal
+    // Envía la intención de oración
+    intentionForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const user = auth.currentUser;
+        if (!user) {
+            console.error("No hay un usuario autenticado para enviar la intención.");
+            return;
+        }
+
+        const newIntention = {
+            text: intentionText.value,
+            timestamp: Date.now(),
+            userId: user.uid // Guardamos el UID del usuario que crea la intención
+        };
+
+        intentionsRef.push(newIntention)
+            .then(() => {
+                intentionText.value = ''; // Limpia el formulario
+            })
+            .catch(error => {
+                console.error("Error al guardar en la base de datos:", error);
+            });
+    });
+
+    // Muestra las intenciones en tiempo real
     intentionsRef.on('value', (snapshot) => {
-        const intentions = snapshot.val();
         intentionsList.innerHTML = '';
+        const intentions = snapshot.val();
         if (intentions) {
-            Object.keys(intentions).reverse().forEach(key => {
+            const intentionKeys = Object.keys(intentions).reverse();
+            intentionKeys.forEach(key => {
                 const intention = intentions[key];
                 const item = document.createElement('div');
                 item.classList.add('intention-item');
+
+                const date = new Date(intention.timestamp);
+                const formattedDate = date.toLocaleDateString();
+
+                const user = auth.currentUser;
+                const isAuthor = user && intention.userId === user.uid;
+                const isAdmin = user && adminUIDs.includes(user.uid);
+
                 item.innerHTML = `
                     <p>${intention.text}</p>
                     <div class="intention-meta">
-                        <span>${new Date(intention.timestamp).toLocaleDateString()}</span>
-                        ${auth.currentUser && auth.currentUser.uid === intention.uid ? `<button class="delete-btn" data-key="${key}">Borrar</button>` : ''}
+                        <span>${formattedDate}</span>
+                        ${isAuthor || isAdmin ? `<button class="edit-btn" data-key="${key}">Editar</button>` : ''}
+                        ${isAuthor || isAdmin ? `<button class="delete-btn" data-key="${key}">Borrar</button>` : ''}
                     </div>
                 `;
                 intentionsList.appendChild(item);
@@ -54,28 +88,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Envía la intención a Firebase
-    intentionForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const text = intentionText.value.trim();
-        if (text !== '') {
-            const newIntentionRef = intentionsRef.push();
-            newIntentionRef.set({
-                text: text,
-                timestamp: Date.now(),
-                uid: auth.currentUser.uid // Guarda el UID del usuario anónimo
-            }).then(() => {
-                intentionText.value = '';
-                console.log('Intención enviada');
-            }).catch(error => {
-                console.error("Error al enviar la intención:", error);
-            });
-        }
-    });
-
-    // Maneja el borrado de intenciones
+    // Lógica para borrar y editar
     intentionsList.addEventListener('click', (e) => {
         const key = e.target.getAttribute('data-key');
+        if (!key) return;
+
         if (e.target.classList.contains('delete-btn')) {
             if (confirm('¿Estás seguro de que quieres borrar tu intención?')) {
                 intentionsRef.child(key).remove()
@@ -83,7 +100,44 @@ document.addEventListener('DOMContentLoaded', () => {
                     .catch(error => console.error('Error al borrar:', error));
             }
         }
+        
+        // Lógica para el botón de editar
+        if (e.target.classList.contains('edit-btn')) {
+            currentKey = key;
+            const intentionToEdit = intentionsRef.child(key);
+            intentionToEdit.once('value').then(snapshot => {
+                // Comprobamos que el dato exista
+                const intentionData = snapshot.val();
+                if (intentionData) {
+                    editTextarea.value = intentionData.text;
+                    editModal.style.display = 'flex';
+                }
+            });
+        }
     });
+
+    // Lógica para el modal de edición
+    closeBtn.onclick = () => {
+        editModal.style.display = 'none';
+    };
+
+    window.onclick = (e) => {
+        if (e.target === editModal) {
+            editModal.style.display = 'none';
+        }
+    };
+
+    saveEditBtn.onclick = () => {
+        const newText = editTextarea.value.trim();
+        if (newText && currentKey) {
+            intentionsRef.child(currentKey).update({ text: newText })
+                .then(() => {
+                    editModal.style.display = 'none';
+                    console.log('Intención actualizada');
+                })
+                .catch(error => console.error('Error al actualizar:', error));
+        }
+    };
 });
 
 // Función para el menú de navegación en dispositivos móviles
