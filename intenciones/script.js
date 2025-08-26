@@ -13,6 +13,9 @@ const database = firebase.database();
 const auth = firebase.auth();
 const intentionsRef = database.ref('intenciones');
 
+// UIDs de los administradores. Puedes añadir más si es necesario.
+const adminUIDs = ["xqhClOg845dSU5XIu4vqTCy4XAj2", "UbR2AIirbiNH7uCXfl5P7rSWpIB2"];
+
 document.addEventListener('DOMContentLoaded', () => {
     const intentionForm = document.getElementById('intention-form');
     const intentionText = document.getElementById('intention-text');
@@ -25,6 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeBtn = document.querySelector('.close-btn');
     let currentKey = null; // Variable para guardar la clave de la intención a editar
 
+    // Iniciar sesión anónimamente al cargar la página para permitir a cualquiera escribir
     auth.signInAnonymously().catch((error) => {
         console.error("Error al autenticar anónimamente:", error);
     });
@@ -42,7 +46,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 item.className = 'intention-item';
                 
                 let actionsHtml = '';
-                if (user && user.uid === intention.userId) {
+                // Verificar si el usuario actual es el autor o un administrador
+                const isAuthor = user && user.uid === intention.userId;
+                const isAdmin = user && adminUIDs.includes(user.uid);
+                
+                if (isAuthor || isAdmin) {
                     actionsHtml = `
                         <div class="actions">
                             <button class="edit-btn" data-key="${key}">Editar</button>
@@ -86,14 +94,13 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!key) return;
 
         if (e.target.classList.contains('delete-btn')) {
-            if (confirm('¿Estás seguro de que quieres borrar tu intención?')) {
+            if (confirm('¿Estás seguro de que quieres borrar esta intención?')) {
                 intentionsRef.child(key).remove()
-                    .then(() => console.log('Intención borrada por el autor'))
+                    .then(() => console.log('Intención borrada'))
                     .catch(error => console.error('Error al borrar:', error));
             }
         }
         
-        // ** Lógica para el botón de editar **
         if (e.target.classList.contains('edit-btn')) {
             currentKey = key;
             const intentionToEdit = intentionsRef.child(key);
@@ -104,7 +111,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // ** Lógica para el modal de edición **
     closeBtn.onclick = () => {
         editModal.style.display = 'none';
     };
