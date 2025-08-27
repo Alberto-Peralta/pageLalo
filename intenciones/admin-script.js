@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const editTextarea = document.getElementById('edit-text');
     const saveEditBtn = document.getElementById('save-edit-btn');
     const closeBtn = document.querySelector('.close-btn');
+    const menuLinks = document.querySelectorAll('.menu a');
     let currentKey = null;
 
     // Redirige al login si no hay un usuario autenticado o si no es un admin
@@ -100,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 .catch(error => console.error('Error al actualizar:', error));
         }
     };
-
+    
     // Lógica para cerrar sesión
     logoutBtn.addEventListener('click', () => {
         auth.signOut().then(() => {
@@ -109,10 +110,19 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error('Error al cerrar sesión:', error);
         });
     });
+
+    // Cierra el menú cuando se hace clic en un enlace del menú
+    menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            toggleMenu();
+        });
+    });
 });
 
 // Función para el menú de navegación en dispositivos móviles
 function toggleMenu() {
     const menu = document.getElementById('menu');
-    menu.classList.toggle('active');
+    if (menu) {
+        menu.classList.toggle('active');
+    }
 }
