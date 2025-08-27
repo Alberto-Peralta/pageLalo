@@ -1,371 +1,81 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-
-/* Estilos base para móviles (Mobile-first) */
-
-/* Estilos generales para el cuerpo y el contenedor principal */
+/* New global styles for a cleaner look */
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #d4a017;
+    background-color: #fcf7e3; /* A very light gold for a clean background */
     color: #5c3a00;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
 }
 
-/* --- Estilos del Menú de Navegación --- */
-.navbar {
-    background-color: #b8860b;
-    padding: 1rem 1.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    position: relative;
+/* Rediseño de la tarjeta de intenciones */
+.intention-item, .login-form-container, .admin-panel {
+    background-color: #ffffff;
+    border-radius: 20px;
+    /* Sombras más suaves y modernas */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); 
+    padding: 2.5rem;
 }
 
-.navbar .logo {
-    color: white;
-    font-size: 2rem;
-    font-weight: 600;
-    z-index: 101;
-}
-
-.navbar .menu {
-    list-style: none;
-    display: none; /* Oculto por defecto en móvil */
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-    background-color: #b8860b;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 100;
-    margin: 0;
-    padding: 0;
-}
-
-.navbar .menu.active {
-    display: flex; /* Se muestra con la clase 'active' */
-}
-
-.navbar .menu li {
-    width: 100%;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.navbar .menu a {
-    display: block;
-    color: white;
-    text-decoration: none;
-    font-size: 1.1rem;
-    padding: 1.5rem;
-    border-radius: 0;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.menu-toggle {
-    display: block; /* Visible por defecto en móvil */
-    background: none;
-    border: none;
-    color: white;
-    font-size: 2.5rem;
-    cursor: pointer;
-    z-index: 101;
-}
-
-/* --- Estilos para la página de Intenciones y Login --- */
-.intentions-forum, .login-form-container, .admin-panel {
-    width: 90%;
-    margin: 1.5rem auto;
-    padding: 1.5rem;
-    background-color: #fef6e4;
-    border-radius: 25px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    text-align: center;
-}
-
-h1 {
-    font-size: 2rem;
-    color: #b8860b;
-    margin-bottom: 1rem;
-}
-
-p {
-    font-size: 1.2rem;
-    margin-bottom: 2.5rem;
-}
-
-/* Estilos del formulario */
-#intention-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    margin-bottom: 2.5rem;
-}
-
-#intention-form textarea, .login-form-container input {
-    width: 100%;
-    min-height: 150px;
-    padding: 1.2rem;
-    border: 2px solid #ccc;
-    border-radius: 15px;
-    font-size: 1.1rem;
-    resize: vertical;
-}
-
-.login-form-container input {
-    min-height: auto;
-}
-
-#intention-form button, .login-form-container button {
-    padding: 1rem 2rem;
-    background-color: #b8860b;
-    color: white;
+/* Rediseño de botones con efecto de elevación */
+#intention-form button, .login-form-container button, .edit-btn, .delete-btn {
+    transition: all 0.3s ease-in-out;
     border: none;
     border-radius: 50px;
-    cursor: pointer;
-    font-size: 1.2rem;
     font-weight: 600;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    text-transform: uppercase;
 }
 
 #intention-form button:hover, .login-form-container button:hover {
     background-color: #daa520;
-    transform: scale(1.05);
+    transform: translateY(-3px); /* Efecto de "elevación" al pasar el mouse */
 }
 
-/* Estilos para la lista de intenciones */
-.intentions-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    text-align: left;
-    max-height: 600px;
-    overflow-y: auto;
+/* Estilo para los campos de entrada y texto */
+#intention-form textarea, .login-form-container input {
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    transition: border-color 0.3s ease-in-out;
 }
 
-.intention-item {
-    padding: 2rem;
-    background-color: #fff;
-    border-radius: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+#intention-form textarea:focus, .login-form-container input:focus {
+    outline: none;
+    border-color: #b8860b; /* Color de acento al enfocar */
+}
+
+/* Ajustes de tipografía */
+h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #b8860b;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #888;
 }
 
 .intention-item p {
-    margin: 0;
-    font-size: 1.1rem;
-}
-
-.intention-item .author-info {
-    font-size: 0.9rem;
-    color: #888;
-    margin-top: 0.5rem;
-}
-
-.intention-item .actions {
-    margin-top: 1.5rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: flex-start;
-}
-
-.intention-item .actions button {
-    padding: 0.75rem 1.5rem;
-    border: none;
-    border-radius: 50px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.intention-item .edit-btn {
-    background-color: #4CAF50;
-    color: white;
-}
-
-.intention-item .delete-btn {
-    background-color: #f44336;
-    color: white;
-}
-
-/* --- Estilos de la tabla de administración (por defecto en formato de tarjeta) --- */
-.admin-table {
-    width: 100%;
-    border: 0;
-    border-spacing: 0;
-    margin-top: 3rem;
-}
-
-.admin-table thead {
-    display: none; /* Oculta la cabecera de la tabla en móvil */
-}
-
-.admin-table tr {
-    margin-bottom: 1.5rem;
-    display: block;
-    border: 1px solid #ddd;
-    border-radius: 15px;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
-}
-
-.admin-table td {
-    display: block;
-    text-align: right;
-    font-size: 1.1rem;
-    border-bottom: 1px dashed #ccc;
-    padding: 1rem;
-}
-
-.admin-table td:last-child {
-    border-bottom: 0;
-    text-align: center;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-}
-
-.admin-table td::before {
-    content: attr(data-label);
-    float: left;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: #b8860b;
-    font-size: 1rem;
-    margin-right: 1rem;
-}
-
-.admin-table .edit-btn, .admin-table .delete-btn {
-    padding: 0.75rem 1.5rem;
-    border-radius: 50px;
-    font-size: 1rem;
-    font-weight: 600;
-    margin-right: 0.75rem;
-}
-
-/* --- Estilos del Modal --- */
-.modal-content {
-    padding: 3rem;
-    border-radius: 25px;
-    width: 90%;
-    max-width: 600px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
-    animation: fadeIn 0.4s ease-out;
-}
-
-.modal-content h2 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-}
-
-.modal-content textarea {
-    min-height: 150px;
-    padding: 1rem;
-    border-radius: 15px;
-    border: 2px solid #ccc;
-    font-size: 1.1rem;
-}
-
-#save-edit-btn {
-    padding: 1rem 2rem;
-    border-radius: 50px;
     font-size: 1.2rem;
-    font-weight: 600;
+    color: #5c3a00;
 }
 
-/* --- Media Queries para dispositivos más grandes (Desktop-down) --- */
+.intention-item .intention-meta {
+    font-size: 0.9rem;
+    color: #a0a0a0;
+    margin-top: 1rem;
+}
 
-/* Estilos para pantallas de 768px o más (Tabletas y Escritorios) */
+/* Estilos para la tabla del panel de administración */
 @media screen and (min-width: 768px) {
-    .navbar {
-        padding: 1.5rem 3rem;
-    }
-
-    .navbar .menu {
-        display: flex; /* Se vuelve un menú flexbox en pantallas grandes */
-        flex-direction: row;
-        width: auto;
-        text-align: left;
-        background-color: transparent;
-        position: static;
-        box-shadow: none;
-        gap: 2rem;
-    }
-
-    .navbar .menu li {
-        border-top: none;
-    }
-
-    .navbar .menu a {
-        display: inline-block;
-        padding: 0.75rem 1rem;
-        border-radius: 15px;
-    }
-
-    .navbar .menu a:hover {
-        background-color: rgba(255, 255, 255, 0.15);
-        transform: translateY(-2px);
-    }
-
-    .menu-toggle {
-        display: none; /* Oculta el botón de hamburguesa en pantallas grandes */
-    }
-
-    .intentions-forum, .login-form-container, .admin-panel {
-        max-width: 900px;
-        margin: 3rem auto;
-        padding: 3rem;
-    }
-
-    h1 {
-        font-size: 3rem;
-    }
-
-    /* Estilos para la tabla de administración en escritorio */
     .admin-table {
-        border-collapse: separate;
-        border-spacing: 0 1rem;
-        margin-top: 3rem;
-        background-color: transparent;
-    }
-
-    .admin-table thead {
-        display: table-header-group; /* Muestra la cabecera de la tabla */
-        background-color: #b8860b;
-        color: white;
-        border-radius: 15px 15px 0 0;
-    }
-
-    .admin-table th, .admin-table td {
-        display: table-cell;
-        padding: 1.5rem;
-        text-align: left;
-        border-bottom: none;
+        border-spacing: 0 1.2rem; /* Aumenta el espaciado entre filas */
     }
 
     .admin-table tr {
-        background-color: #fff;
         border-radius: 15px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        transition: transform 0.2s ease-in-out;
     }
-
+    
     .admin-table tr:hover {
-        background-color: #f8f8f8;
-    }
-
-    .admin-table th:first-child { border-top-left-radius: 15px; }
-    .admin-table th:last-child { border-top-right-radius: 15px; }
-
-    .admin-table td::before {
-        content: none;
-    }
-
-    .admin-table td:last-child {
-        text-align: left;
-        padding-top: 1.5rem;
-        padding-bottom: 1.5rem;
+        transform: translateY(-2px); /* Efecto de "elevación" en las filas */
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     }
 }
