@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const intentionForm = document.getElementById('intention-form');
     const intentionText = document.getElementById('intention-text');
     const intentionsList = document.getElementById('intentions-list');
-    
+
     // Elementos del modal de edición
     const editModal = document.getElementById('edit-modal');
     const editTextarea = document.getElementById('edit-text');
@@ -45,7 +45,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const newIntention = {
             text: intentionText.value,
             timestamp: Date.now(),
-            userId: user.uid // Guardamos el UID del usuario que crea la intención
+            userId: user.uid, // Guardamos el UID del usuario que crea la intención
+            joinedBy: [user.uid] // El autor se une automáticamente a su intención
         };
 
         intentionsRef.push(newIntention)
@@ -61,24 +62,33 @@ document.addEventListener('DOMContentLoaded', () => {
     intentionsRef.on('value', (snapshot) => {
         intentionsList.innerHTML = '';
         const intentions = snapshot.val();
+        const user = auth.currentUser;
         if (intentions) {
             const intentionKeys = Object.keys(intentions).reverse();
             intentionKeys.forEach(key => {
                 const intention = intentions[key];
-                const item = document.createElement('div');
-                item.classList.add('intention-item');
-
                 const date = new Date(intention.timestamp);
                 const formattedDate = date.toLocaleDateString();
 
-                const user = auth.currentUser;
                 const isAuthor = user && intention.userId === user.uid;
                 const isAdmin = user && adminUIDs.includes(user.uid);
+
+                const joinedCount = intention.joinedBy ? intention.joinedBy.length : 0;
+                const userJoined = user && intention.joinedBy && intention.joinedBy.includes(user.uid);
+                const buttonText = userJoined ? 'Te uniste a esta intención' : 'Unirme a esta intención';
+                const buttonDisabled = ''; // El botón nunca está deshabilitado para que se pueda desunir
+
+                const countLegend = isAuthor ? `${joinedCount} personas se han unido a tu intención` : `${joinedCount} personas unidas`;
+
+                const item = document.createElement('div');
+                item.classList.add('intention-item');
 
                 item.innerHTML = `
                     <p>${intention.text}</p>
                     <div class="intention-meta">
                         <span>${formattedDate}</span>
+                        <button class="join-btn" data-key="${key}" ${buttonDisabled}>${buttonText}</button>
+                        <span class="join-count">${countLegend}</span>
                         ${isAuthor || isAdmin ? `<button class="edit-btn" data-key="${key}">Editar</button>` : ''}
                         ${isAuthor || isAdmin ? `<button class="delete-btn" data-key="${key}">Borrar</button>` : ''}
                     </div>
@@ -88,11 +98,46 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Lógica para borrar y editar
+    // Lógica para borrar, editar y unirse
     intentionsList.addEventListener('click', (e) => {
         const key = e.target.getAttribute('data-key');
         if (!key) return;
 
+        // Lógica del botón de unirse/desunirse
+        if (e.target.classList.contains('join-btn')) {
+            const user = auth.currentUser;
+            if (!user) {
+                console.error("No hay un usuario autenticado.");
+                return;
+            }
+
+            const intentionRef = intentionsRef.child(key);
+            intentionRef.transaction(currentIntention => {
+                if (currentIntention) {
+                    if (!currentIntention.joinedBy) {
+                        currentIntention.joinedBy = [];
+                    }
+                    const userIndex = currentIntention.joinedBy.indexOf(user.uid);
+                    if (userIndex === -1) {
+                        // Unirse
+                        currentIntention.joinedBy.push(user.uid);
+                    } else {
+                        // Desunirse
+                        currentIntention.joinedBy.splice(userIndex, 1);
+                    }
+                }
+                return currentIntention;
+            }, (error, committed) => {
+                if (error) {
+                    console.error("Error al unirse/desunirse de la intención:", error);
+                } else if (committed) {
+                    console.log("Acción completada.");
+                }
+            });
+            return;
+        }
+
+        // Lógica para el botón de borrar
         if (e.target.classList.contains('delete-btn')) {
             if (confirm('¿Estás seguro de que quieres borrar tu intención?')) {
                 intentionsRef.child(key).remove()
@@ -100,13 +145,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     .catch(error => console.error('Error al borrar:', error));
             }
         }
-        
+
         // Lógica para el botón de editar
         if (e.target.classList.contains('edit-btn')) {
             currentKey = key;
             const intentionToEdit = intentionsRef.child(key);
             intentionToEdit.once('value').then(snapshot => {
-                // Comprobamos que el dato exista
                 const intentionData = snapshot.val();
                 if (intentionData) {
                     editTextarea.value = intentionData.text;
