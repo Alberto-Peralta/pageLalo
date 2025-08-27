@@ -100,6 +100,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Lógica para borrar, editar y unirse
     intentionsList.addEventListener('click', (e) => {
+        // --- INICIO DE LA MODIFICACIÓN ---
+        e.preventDefault(); // Evita que el navegador realice la acción por defecto del botón.
+        // --- FIN DE LA MODIFICACIÓN ---
+
         const key = e.target.getAttribute('data-key');
         if (!key) return;
 
