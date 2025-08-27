@@ -1,55 +1,79 @@
-/* New global styles for a cleaner look */
+/* 🎨 Estilo global */
 body {
-    background-color: #fcf7e3; /* A very light gold for a clean background */
+    background-color: #fcf7e3; /* Fondo suave */
     color: #5c3a00;
+    font-family: "Segoe UI", Roboto, sans-serif; /* Tipografía más moderna */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
 }
 
-/* Rediseño de la tarjeta de intenciones */
-.intention-item, .login-form-container, .admin-panel {
+/* 📦 Contenedores principales */
+.intention-item, 
+.login-form-container, 
+.admin-panel {
     background-color: #ffffff;
     border-radius: 20px;
-    /* Sombras más suaves y modernas */
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); 
     padding: 2.5rem;
+    margin-bottom: 2rem; /* Separación entre tarjetas */
 }
 
-/* Rediseño de botones con efecto de elevación */
-#intention-form button, .login-form-container button, .edit-btn, .delete-btn {
-    transition: all 0.3s ease-in-out;
+/* 🔘 Botones */
+#intention-form button, 
+.login-form-container button, 
+.edit-btn, 
+.delete-btn {
+    background: #b8860b; /* Color base */
+    color: #fff;
+    padding: 0.8rem 1.6rem;
     border: none;
     border-radius: 50px;
     font-weight: 600;
     cursor: pointer;
     text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
 }
 
-#intention-form button:hover, .login-form-container button:hover {
+#intention-form button:hover, 
+.login-form-container button:hover,
+.edit-btn:hover, 
+.delete-btn:hover {
     background-color: #daa520;
-    transform: translateY(-3px); /* Efecto de "elevación" al pasar el mouse */
+    transform: translateY(-3px); /* efecto "elevado" */
 }
 
-/* Estilo para los campos de entrada y texto */
-#intention-form textarea, .login-form-container input {
+/* 📝 Campos de formulario */
+#intention-form textarea, 
+.login-form-container input {
+    width: 100%;
+    padding: 0.8rem 1rem;
     border: 1px solid #ddd;
     border-radius: 12px;
-    transition: border-color 0.3s ease-in-out;
+    font-size: 1rem;
+    transition: border-color 0.3s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
-#intention-form textarea:focus, .login-form-container input:focus {
+#intention-form textarea:focus, 
+.login-form-container input:focus {
     outline: none;
-    border-color: #b8860b; /* Color de acento al enfocar */
+    border-color: #b8860b;
+    box-shadow: 0 0 6px rgba(184, 134, 11, 0.4); /* Glow dorado */
 }
 
-/* Ajustes de tipografía */
+/* ✍️ Tipografía */
 h1 {
-    font-size: 3rem;
-    font-weight: 600;
+    font-size: 2.5rem;
+    font-weight: 700;
     color: #b8860b;
+    margin-bottom: 1rem;
+    text-align: center;
 }
 
 p {
     font-size: 1.1rem;
-    color: #888;
+    color: #555;
 }
 
 .intention-item p {
@@ -63,19 +87,39 @@ p {
     margin-top: 1rem;
 }
 
-/* Estilos para la tabla del panel de administración */
+/* 📊 Tablas en admin */
 @media screen and (min-width: 768px) {
     .admin-table {
-        border-spacing: 0 1.2rem; /* Aumenta el espaciado entre filas */
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0 1.2rem;
     }
 
     .admin-table tr {
+        background: #fff;
         border-radius: 15px;
-        transition: transform 0.2s ease-in-out;
+        transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     }
     
     .admin-table tr:hover {
-        transform: translateY(-2px); /* Efecto de "elevación" en las filas */
+        transform: translateY(-2px);
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+}
+
+/* 📱 Responsividad */
+@media screen and (max-width: 767px) {
+    body {
+        padding: 1rem;
+    }
+
+    .intention-item, 
+    .login-form-container, 
+    .admin-panel {
+        padding: 1.5rem;
+    }
+
+    h1 {
+        font-size: 2rem;
     }
 }
