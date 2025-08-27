@@ -11,7 +11,6 @@ const app = firebase.initializeApp(firebaseConfig);
 const database = firebase.database();
 const auth = firebase.auth();
 const intentionsRef = database.ref('intenciones');
-const rolesRef = database.ref('roles'); // Nueva referencia a la rama de roles
 
 document.addEventListener('DOMContentLoaded', () => {
     const adminIntentionsList = document.getElementById('admin-intentions-list');
@@ -22,22 +21,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeBtn = document.querySelector('.close-btn');
     let currentKey = null;
 
-    // Redirige al login si no hay un usuario autenticado o si no es un admin
+    // Redirige al login si no hay un usuario autenticado
     auth.onAuthStateChanged(user => {
-        if (!user) {
+        const adminPanel = document.querySelector('.admin-panel');
+        if (user) {
+            adminPanel.style.display = 'block';
+        } else {
             window.location.href = 'login.html';
-            return;
         }
-
-        rolesRef.child(user.uid).once('value').then(snapshot => {
-            const isAdmin = snapshot.val() === true;
-            const adminPanel = document.querySelector('.admin-panel');
-            if (isAdmin) {
-                adminPanel.style.display = 'block';
-            } else {
-                window.location.href = '../intenciones/index.html'; // Redirige si no es admin
-            }
-        });
     });
 
     // Muestra las intenciones en la tabla
