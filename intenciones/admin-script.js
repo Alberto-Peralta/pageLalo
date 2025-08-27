@@ -21,11 +21,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeBtn = document.querySelector('.close-btn');
     let currentKey = null;
 
-    // Se cambió el código para que el panel de administración se muestre si el usuario está logueado, sin redirigir.
+    // Código actualizado para mostrar el panel si el usuario está autenticado.
     auth.onAuthStateChanged(user => {
         const adminPanel = document.querySelector('.admin-panel');
         if (user) {
             adminPanel.style.display = 'block';
+        } else {
+            // Si el usuario no está logueado, redirige al login
+            window.location.href = 'login.html';
         }
     });
 
