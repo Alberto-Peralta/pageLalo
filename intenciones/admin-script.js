@@ -26,6 +26,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const adminPanel = document.querySelector('.admin-panel');
         if (user) {
             adminPanel.style.display = 'block';
+        } else {
+            // Eliminar esta sección, si deseas que el usuario no tenga que loguearse de nuevo
+            window.location.href = 'login.html';
         }
     });
 
