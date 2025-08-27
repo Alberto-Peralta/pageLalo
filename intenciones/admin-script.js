@@ -12,7 +12,8 @@ const database = firebase.database();
 const auth = firebase.auth();
 const intentionsRef = database.ref('intenciones');
 
-
+// UIDs de los administradores. Deben coincidir con los de `script.js`.
+const adminUIDs = ["xqhClOg845dSU5XIu4vqTCy4XAj2", "UbR2AIirbiNH7uCXfl5P7rSWpIB2"];
 
 document.addEventListener('DOMContentLoaded', () => {
     const adminIntentionsList = document.getElementById('admin-intentions-list');
