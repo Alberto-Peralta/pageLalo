@@ -12,6 +12,9 @@ const database = firebase.database();
 const auth = firebase.auth();
 const intentionsRef = database.ref('intenciones');
 
+// UIDs de los administradores. Deben coincidir con los de `script.js`.
+const adminUIDs = ["xqhClOg845dSU5XIu4vqTCy4XAj2", "UbR2AIirbiNH7uCXfl5P7rSWpIB2"];
+
 document.addEventListener('DOMContentLoaded', () => {
     const adminIntentionsList = document.getElementById('admin-intentions-list');
     const logoutBtn = document.getElementById('logout-btn');
@@ -21,41 +24,36 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeBtn = document.querySelector('.close-btn');
     let currentKey = null;
 
-    // Función para cargar las intenciones desde la base de datos
-    function loadIntentions() {
-        intentionsRef.on('value', (snapshot) => {
-            adminIntentionsList.innerHTML = '';
-            const intentions = snapshot.val();
-            if (intentions) {
-                Object.keys(intentions).reverse().forEach(key => {
-                    const intention = intentions[key];
-                    const row = document.createElement('tr');
-                    const formattedDate = new Date(intention.timestamp).toLocaleDateString();
-
-                    row.innerHTML = `
-                        <td data-label="Intención">${intention.text}</td>
-                        <td data-label="Fecha">${formattedDate}</td>
-                        <td data-label="Acciones">
-                            <button class="edit-btn" data-key="${key}">Editar</button>
-                            <button class="delete-btn" data-key="${key}">Borrar</button>
-                        </td>
-                    `;
-                    adminIntentionsList.appendChild(row);
-                });
-            }
-        });
-    }
-
-    // Verifica el estado de autenticación del usuario
+    // Redirige al login si no hay un usuario autenticado o si no es un admin
     auth.onAuthStateChanged(user => {
         const adminPanel = document.querySelector('.admin-panel');
-        if (user) {
-            // El usuario está logueado, muestra el panel y carga los datos.
+        if (user && adminUIDs.includes(user.uid)) {
             adminPanel.style.display = 'block';
-            loadIntentions(); // Llama a la función para cargar las intenciones
         } else {
-            // El usuario no está logueado, redirige a la página de login.
             window.location.href = 'login.html';
+        }
+    });
+
+    // Muestra las intenciones en la tabla
+    intentionsRef.on('value', (snapshot) => {
+        adminIntentionsList.innerHTML = '';
+        const intentions = snapshot.val();
+        if (intentions) {
+            Object.keys(intentions).reverse().forEach(key => {
+                const intention = intentions[key];
+                const row = document.createElement('tr');
+                const formattedDate = new Date(intention.timestamp).toLocaleDateString();
+
+                row.innerHTML = `
+                    <td data-label="Intención">${intention.text}</td>
+                    <td data-label="Fecha">${formattedDate}</td>
+                    <td data-label="Acciones">
+                        <button class="edit-btn" data-key="${key}">Editar</button>
+                        <button class="delete-btn" data-key="${key}">Borrar</button>
+                    </td>
+                `;
+                adminIntentionsList.appendChild(row);
+            });
         }
     });
 
