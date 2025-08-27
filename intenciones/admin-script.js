@@ -21,34 +21,41 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeBtn = document.querySelector('.close-btn');
     let currentKey = null;
 
-    // Se cambió el código para que el panel de administración se muestre si el usuario está logueado, sin redirigir.
+    // Función para cargar las intenciones desde la base de datos
+    function loadIntentions() {
+        intentionsRef.on('value', (snapshot) => {
+            adminIntentionsList.innerHTML = '';
+            const intentions = snapshot.val();
+            if (intentions) {
+                Object.keys(intentions).reverse().forEach(key => {
+                    const intention = intentions[key];
+                    const row = document.createElement('tr');
+                    const formattedDate = new Date(intention.timestamp).toLocaleDateString();
+
+                    row.innerHTML = `
+                        <td data-label="Intención">${intention.text}</td>
+                        <td data-label="Fecha">${formattedDate}</td>
+                        <td data-label="Acciones">
+                            <button class="edit-btn" data-key="${key}">Editar</button>
+                            <button class="delete-btn" data-key="${key}">Borrar</button>
+                        </td>
+                    `;
+                    adminIntentionsList.appendChild(row);
+                });
+            }
+        });
+    }
+
+    // Verifica el estado de autenticación del usuario
     auth.onAuthStateChanged(user => {
         const adminPanel = document.querySelector('.admin-panel');
         if (user) {
+            // El usuario está logueado, muestra el panel y carga los datos.
             adminPanel.style.display = 'block';
-        }
-    });
-
-    // Muestra las intenciones en la tabla
-    intentionsRef.on('value', (snapshot) => {
-        adminIntentionsList.innerHTML = '';
-        const intentions = snapshot.val();
-        if (intentions) {
-            Object.keys(intentions).reverse().forEach(key => {
-                const intention = intentions[key];
-                const row = document.createElement('tr');
-                const formattedDate = new Date(intention.timestamp).toLocaleDateString();
-
-                row.innerHTML = `
-                    <td data-label="Intención">${intention.text}</td>
-                    <td data-label="Fecha">${formattedDate}</td>
-                    <td data-label="Acciones">
-                        <button class="edit-btn" data-key="${key}">Editar</button>
-                        <button class="delete-btn" data-key="${key}">Borrar</button>
-                    </td>
-                `;
-                adminIntentionsList.appendChild(row);
-            });
+            loadIntentions(); // Llama a la función para cargar las intenciones
+        } else {
+            // El usuario no está logueado, redirige a la página de login.
+            window.location.href = 'login.html';
         }
     });
 
