@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
+/* Estilos base para móviles (Mobile-first) */
+
 /* Estilos generales para el cuerpo y el contenedor principal */
 body {
     font-family: 'Poppins', sans-serif;
@@ -13,120 +15,81 @@ body {
 /* --- Estilos del Menú de Navegación --- */
 .navbar {
     background-color: #b8860b;
-    padding: 1.5rem 3rem;
+    padding: 1rem 1.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    position: relative; /* Necesario para el menú desplegable */
+    position: relative;
 }
 
 .navbar .logo {
     color: white;
     font-size: 2rem;
     font-weight: 600;
-    z-index: 101; /* Para que siempre esté encima del menú */
+    z-index: 101;
 }
 
 .navbar .menu {
     list-style: none;
-    display: flex;
-    gap: 2rem;
+    display: none; /* Oculto por defecto en móvil */
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    background-color: #b8860b;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 100;
     margin: 0;
     padding: 0;
 }
 
+.navbar .menu.active {
+    display: flex; /* Se muestra con la clase 'active' */
+}
+
+.navbar .menu li {
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
 .navbar .menu a {
+    display: block;
     color: white;
     text-decoration: none;
     font-size: 1.1rem;
-    padding: 0.75rem 1rem;
-    border-radius: 15px;
+    padding: 1.5rem;
+    border-radius: 0;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.navbar .menu a:hover {
-    background-color: rgba(255, 255, 255, 0.15);
-    transform: translateY(-2px);
-}
-
 .menu-toggle {
-    display: none;
+    display: block; /* Visible por defecto en móvil */
     background: none;
     border: none;
     color: white;
     font-size: 2.5rem;
     cursor: pointer;
-    z-index: 101; /* Para que siempre esté encima del menú */
-}
-
-/* Media query para dispositivos móviles */
-@media (max-width: 768px) {
-    .navbar {
-        padding: 1rem 1.5rem;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .navbar .menu {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-        background-color: #b8860b;
-        position: absolute;
-        top: 100%; /* Se despliega debajo de la barra de navegación */
-        left: 0;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        z-index: 100;
-    }
-
-    .navbar .menu.active {
-        display: flex;
-    }
-
-    .navbar .menu li {
-        width: 100%;
-        border-top: 1px solid rgba(255, 255, 255, 0.2);
-    }
-    
-    .navbar .menu a {
-        display: block;
-        padding: 1.5rem;
-        border-radius: 0;
-    }
+    z-index: 101;
 }
 
 /* --- Estilos para la página de Intenciones y Login --- */
 .intentions-forum, .login-form-container, .admin-panel {
-    max-width: 900px;
-    margin: 3rem auto;
-    padding: 3rem;
+    width: 90%;
+    margin: 1.5rem auto;
+    padding: 1.5rem;
     background-color: #fef6e4;
     border-radius: 25px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     text-align: center;
 }
 
-@media (max-width: 768px) {
-    .intentions-forum, .login-form-container, .admin-panel {
-        margin: 1.5rem;
-        padding: 1.5rem;
-    }
-}
-
 h1 {
-    font-size: 3rem;
+    font-size: 2rem;
     color: #b8860b;
     margin-bottom: 1rem;
-}
-
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2rem;
-    }
 }
 
 p {
@@ -228,39 +191,52 @@ p {
     color: white;
 }
 
-/* Estilos de la tabla de administración */
+/* --- Estilos de la tabla de administración (por defecto en formato de tarjeta) --- */
 .admin-table {
     width: 100%;
-    border-collapse: separate;
-    border-spacing: 0 1rem;
+    border: 0;
+    border-spacing: 0;
     margin-top: 3rem;
-    background-color: transparent;
 }
 
 .admin-table thead {
-    background-color: #b8860b;
-    color: white;
-    border-radius: 15px 15px 0 0;
-}
-
-.admin-table th, .admin-table td {
-    padding: 1.5rem;
-    text-align: left;
-    border-bottom: none;
+    display: none; /* Oculta la cabecera de la tabla en móvil */
 }
 
 .admin-table tr {
-    background-color: #fff;
+    margin-bottom: 1.5rem;
+    display: block;
+    border: 1px solid #ddd;
     border-radius: 15px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
 }
 
-.admin-table tr:hover {
-    background-color: #f8f8f8;
+.admin-table td {
+    display: block;
+    text-align: right;
+    font-size: 1.1rem;
+    border-bottom: 1px dashed #ccc;
+    padding: 1rem;
 }
 
-.admin-table th:first-child { border-top-left-radius: 15px; }
-.admin-table th:last-child { border-top-right-radius: 15px; }
+.admin-table td:last-child {
+    border-bottom: 0;
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.admin-table td::before {
+    content: attr(data-label);
+    float: left;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #b8860b;
+    font-size: 1rem;
+    margin-right: 1rem;
+}
 
 .admin-table .edit-btn, .admin-table .delete-btn {
     padding: 0.75rem 1.5rem;
@@ -268,51 +244,6 @@ p {
     font-size: 1rem;
     font-weight: 600;
     margin-right: 0.75rem;
-}
-
-/* --- Estilos responsivos para la tabla (Transformación a tarjetas) --- */
-@media screen and (max-width: 768px) {
-    .admin-table {
-        border: 0;
-        border-spacing: 0;
-    }
-    .admin-table thead {
-        display: none; /* Oculta la cabecera de la tabla */
-    }
-    .admin-table tr {
-        margin-bottom: 1.5rem; /* Más espacio entre las "tarjetas" */
-        display: block;
-        border: 1px solid #ddd;
-        border-radius: 15px;
-        background-color: #fff;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        padding: 1rem;
-    }
-    .admin-table td {
-        display: block;
-        text-align: right;
-        font-size: 1.1rem;
-        border-bottom: 1px dashed #ccc;
-        padding: 1rem;
-    }
-    .admin-table td:last-child {
-        border-bottom: 0;
-    }
-    /* Estilos para el "data-label" */
-    .admin-table td::before {
-        content: attr(data-label);
-        float: left;
-        text-transform: uppercase;
-        font-weight: bold;
-        color: #b8860b;
-        font-size: 1rem;
-        margin-right: 1rem;
-    }
-    .admin-table td:last-child {
-        text-align: center;
-        padding-top: 2rem;
-        padding-bottom: 2rem;
-    }
 }
 
 /* --- Estilos del Modal --- */
@@ -343,4 +274,98 @@ p {
     border-radius: 50px;
     font-size: 1.2rem;
     font-weight: 600;
+}
+
+/* --- Media Queries para dispositivos más grandes (Desktop-down) --- */
+
+/* Estilos para pantallas de 768px o más (Tabletas y Escritorios) */
+@media screen and (min-width: 768px) {
+    .navbar {
+        padding: 1.5rem 3rem;
+    }
+
+    .navbar .menu {
+        display: flex; /* Se vuelve un menú flexbox en pantallas grandes */
+        flex-direction: row;
+        width: auto;
+        text-align: left;
+        background-color: transparent;
+        position: static;
+        box-shadow: none;
+        gap: 2rem;
+    }
+
+    .navbar .menu li {
+        border-top: none;
+    }
+
+    .navbar .menu a {
+        display: inline-block;
+        padding: 0.75rem 1rem;
+        border-radius: 15px;
+    }
+
+    .navbar .menu a:hover {
+        background-color: rgba(255, 255, 255, 0.15);
+        transform: translateY(-2px);
+    }
+
+    .menu-toggle {
+        display: none; /* Oculta el botón de hamburguesa en pantallas grandes */
+    }
+
+    .intentions-forum, .login-form-container, .admin-panel {
+        max-width: 900px;
+        margin: 3rem auto;
+        padding: 3rem;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    /* Estilos para la tabla de administración en escritorio */
+    .admin-table {
+        border-collapse: separate;
+        border-spacing: 0 1rem;
+        margin-top: 3rem;
+        background-color: transparent;
+    }
+
+    .admin-table thead {
+        display: table-header-group; /* Muestra la cabecera de la tabla */
+        background-color: #b8860b;
+        color: white;
+        border-radius: 15px 15px 0 0;
+    }
+
+    .admin-table th, .admin-table td {
+        display: table-cell;
+        padding: 1.5rem;
+        text-align: left;
+        border-bottom: none;
+    }
+
+    .admin-table tr {
+        background-color: #fff;
+        border-radius: 15px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    .admin-table tr:hover {
+        background-color: #f8f8f8;
+    }
+
+    .admin-table th:first-child { border-top-left-radius: 15px; }
+    .admin-table th:last-child { border-top-right-radius: 15px; }
+
+    .admin-table td::before {
+        content: none;
+    }
+
+    .admin-table td:last-child {
+        text-align: left;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
 }
