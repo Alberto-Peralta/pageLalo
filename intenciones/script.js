@@ -19,21 +19,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const intentionText = document.getElementById('intention-text');
     const intentionsList = document.getElementById('intentions-list');
 
-    // Elementos del modal de edición
     const editModal = document.getElementById('edit-modal');
     const editTextarea = document.getElementById('edit-text');
     const saveEditBtn = document.getElementById('save-edit-btn');
     const closeBtn = document.querySelector('.close-btn');
-    let currentKey = null; // Variable para guardar la clave de la intención a editar
+    let currentKey = null;
 
-    // Autenticación anónima para usuarios no logueados
     auth.signInAnonymously().catch((error) => {
         console.error("Error al autenticar anónimamente:", error);
     });
 
-    // Envía la intención de oración
     intentionForm.addEventListener('submit', (e) => {
-        e.preventDefault();
+        e.preventDefault(); // Esta línea evita la recarga de la página
         const user = auth.currentUser;
         if (!user) {
             console.error("No hay un usuario autenticado para enviar la intención.");
@@ -43,20 +40,19 @@ document.addEventListener('DOMContentLoaded', () => {
         const newIntention = {
             text: intentionText.value,
             timestamp: Date.now(),
-            userId: user.uid, // Guardamos el UID del usuario que crea la intención
-            joinedBy: [user.uid] // El autor se une automáticamente a su intención
+            userId: user.uid,
+            joinedBy: [user.uid]
         };
 
         intentionsRef.push(newIntention)
             .then(() => {
-                intentionText.value = ''; // Limpia el formulario
+                intentionText.value = '';
             })
             .catch(error => {
                 console.error("Error al guardar en la base de datos:", error);
             });
     });
 
-    // Muestra las intenciones en tiempo real
     intentionsRef.on('value', (snapshot) => {
         intentionsList.innerHTML = '';
         const intentions = snapshot.val();
@@ -67,15 +63,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 const intention = intentions[key];
                 const date = new Date(intention.timestamp);
                 const formattedDate = date.toLocaleDateString();
-
                 const isAuthor = user && intention.userId === user.uid;
-                const isAdminPromise = user ? rolesRef.child(user.uid).once('value').then(s => s.val() === true) : Promise.resolve(false);
 
+                const isAdminPromise = user ? rolesRef.child(user.uid).once('value').then(s => s.val() === true) : Promise.resolve(false);
+                
                 isAdminPromise.then(isAdmin => {
                     const joinedCount = intention.joinedBy ? intention.joinedBy.length : 0;
                     const userJoined = user && intention.joinedBy && intention.joinedBy.includes(user.uid);
                     const buttonText = userJoined ? 'Te uniste a esta intención' : 'Unirme a esta intención';
-                    const buttonDisabled = ''; // El botón nunca está deshabilitado para que se pueda desunir
 
                     const countLegend = isAuthor ? `${joinedCount} personas se han unido a tu intención` : `${joinedCount} personas unidas`;
 
@@ -86,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <p>${intention.text}</p>
                         <div class="intention-meta">
                             <span>${formattedDate}</span>
-                            <button class="join-btn" data-key="${key}" ${buttonDisabled}>${buttonText}</button>
+                            <button class="join-btn" data-key="${key}">${buttonText}</button>
                             <span class="join-count">${countLegend}</span>
                             ${isAuthor || isAdmin ? `<button class="edit-btn" data-key="${key}">Editar</button>` : ''}
                             ${isAuthor || isAdmin ? `<button class="delete-btn" data-key="${key}">Borrar</button>` : ''}
@@ -98,19 +93,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Lógica para borrar, editar y unirse
     intentionsList.addEventListener('click', (e) => {
         const key = e.target.getAttribute('data-key');
         if (!key) return;
 
-        // Lógica del botón de unirse/desunirse
         if (e.target.classList.contains('join-btn')) {
             const user = auth.currentUser;
             if (!user) {
                 console.error("No hay un usuario autenticado.");
                 return;
             }
-
             const intentionRef = intentionsRef.child(key);
             intentionRef.transaction(currentIntention => {
                 if (currentIntention) {
@@ -119,10 +111,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                     const userIndex = currentIntention.joinedBy.indexOf(user.uid);
                     if (userIndex === -1) {
-                        // Unirse
                         currentIntention.joinedBy.push(user.uid);
                     } else {
-                        // Desunirse
                         currentIntention.joinedBy.splice(userIndex, 1);
                     }
                 }
@@ -137,7 +127,6 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        // Lógica para el botón de borrar
         if (e.target.classList.contains('delete-btn')) {
             if (confirm('¿Estás seguro de que quieres borrar tu intención?')) {
                 intentionsRef.child(key).remove()
@@ -146,7 +135,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-        // Lógica para el botón de editar
         if (e.target.classList.contains('edit-btn')) {
             currentKey = key;
             const intentionToEdit = intentionsRef.child(key);
@@ -160,7 +148,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Lógica para el modal de edición
     closeBtn.onclick = () => {
         editModal.style.display = 'none';
     };
@@ -184,7 +171,6 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 });
 
-// Función para el menú de navegación en dispositivos móviles
 function toggleMenu() {
     const menu = document.getElementById('menu');
     menu.classList.toggle('active');
