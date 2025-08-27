@@ -107,3 +107,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+// Función para el menú de navegación en dispositivos móviles
+function toggleMenu() {
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('active');
+}

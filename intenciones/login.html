@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
-    
+
     <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
 </head>
@@ -20,8 +20,9 @@
     <header>
         <nav class="navbar">
             <div class="logo">Lalo Peralta</div>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
             <ul class="menu" id="menu">
-                <li><a href="../intenciones/index.html">Intenciones</a></li> 
+                <li><a href="../intenciones/index.html">Intenciones</a></li>
                 <li><a href="../rosario/index.html">Rosario</a></li>
                 <li><a href="../intenciones/admin.html">Admin</a></li>
             </ul>
@@ -76,6 +77,12 @@
                     console.error("Error al iniciar sesión:", error);
                 });
         });
+
+        // Función para el menú de navegación en dispositivos móviles
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('active');
+        }
     </script>
 </body>
 </html>
