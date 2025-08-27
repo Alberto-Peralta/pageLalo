@@ -21,13 +21,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeBtn = document.querySelector('.close-btn');
     let currentKey = null;
 
-    // Código actualizado para mostrar el panel si el usuario está autenticado.
-   auth.onAuthStateChanged(user => {
+    // Se cambió el código para que el panel de administración se muestre si el usuario está logueado, sin redirigir.
+    auth.onAuthStateChanged(user => {
         const adminPanel = document.querySelector('.admin-panel');
         if (user) {
             adminPanel.style.display = 'block';
+        } else {
+            window.location.href = 'login.html';
         }
-    }); 
+    });
 
     // Muestra las intenciones en la tabla
     intentionsRef.on('value', (snapshot) => {
