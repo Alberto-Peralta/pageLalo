@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 .catch(error => console.error('Error al actualizar:', error));
         }
     };
-    
+
     // Lógica para cerrar sesión
     logoutBtn.addEventListener('click', () => {
         auth.signOut().then(() => {
