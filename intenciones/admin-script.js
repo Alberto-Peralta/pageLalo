@@ -26,8 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const adminPanel = document.querySelector('.admin-panel');
         if (user) {
             adminPanel.style.display = 'block';
-        } else {
-            window.location.href = 'login.html';
         }
     });
 

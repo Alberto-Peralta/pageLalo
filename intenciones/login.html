@@ -64,7 +64,7 @@
 
             auth.signInWithEmailAndPassword(email, password)
                 .then((userCredential) => {
-                    // No se necesita redirección aquí, el archivo admin.js lo manejará.
+                    window.location.href = 'admin.html';
                 })
                 .catch((error) => {
                     let message = "Error de inicio de sesión. Por favor, verifica tus credenciales.";
