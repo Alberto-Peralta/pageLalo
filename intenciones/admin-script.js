@@ -12,6 +12,9 @@ const database = firebase.database();
 const auth = firebase.auth();
 const intentionsRef = database.ref('intenciones');
 
+// UIDs de los administradores. Deben coincidir con los de `script.js`.
+const adminUIDs = ["xqhClOg845dSU5XIu4vqTCy4XAj2", "UbR2AIirbiNH7uCXfl5P7rSWpIB2"];
+
 document.addEventListener('DOMContentLoaded', () => {
     const adminIntentionsList = document.getElementById('admin-intentions-list');
     const logoutBtn = document.getElementById('logout-btn');
@@ -21,10 +24,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeBtn = document.querySelector('.close-btn');
     let currentKey = null;
 
-    // Redirige al login si no hay un usuario autenticado
+    // Redirige al login si no hay un usuario autenticado o si no es un admin
     auth.onAuthStateChanged(user => {
         const adminPanel = document.querySelector('.admin-panel');
-        if (user) {
+        if (user && adminUIDs.includes(user.uid)) {
             adminPanel.style.display = 'block';
         } else {
             window.location.href = 'login.html';
