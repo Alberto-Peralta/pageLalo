@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- CONTENEDOR PRINCIPAL DEL JUEGO -->
     <div class="game-container" id="game-container" role="main">
         <h1 class="game-title">¿Quién quiere ser Cristiano?</h1> 
         
@@ -25,10 +26,10 @@
             <button class="answer-btn" id="answer4"></button>
         </div>
         
-
- <div class="confirm-btn-container">
-    <button id="confirm-btn" aria-label="Confirmar respuesta seleccionada" disabled>Confirmar</button>
-</div>      
+        <div class="confirm-btn-container">
+            <button id="confirm-btn" aria-label="Confirmar respuesta seleccionada" disabled>Confirmar</button>
+        </div>      
+        
         <div class="controls">
             <button id="fifty-fifty" aria-label="Usar comodín 50/50">50/50</button>
             <button id="pause-time" aria-label="Pausar temporizador">Pausar Tiempo</button>
@@ -43,21 +44,24 @@
                 <button id="modal-ok-btn">OK</button>
             </div>
         </div>
-        
-            <div id="progression-screen" style="display: none;">
-                <h2>Tu Camino en la Fe</h2>
-                <div id="progression-steps-container"></div>
-                <button id="continue-btn">Continuar</button>
-            </div>
+    </div>
+    <!-- FIN DEL CONTENEDOR PRINCIPAL -->
 
-            <!-- PANTALLA FINAL - FUERA del game-container -->
-            <div id="end-screen" style="display: none;">
-                <h2>Juego Terminado</h2>
-                <p>Puntuación final: <span id="final-score">0</span></p>
-                <p>Preguntas respondidas: <span id="questions-answered">0</span></p>
-                <p>Tiempo restante: <span id="remaining-time">0</span></p>
-                <button id="restart-btn">Reiniciar Juego</button>
-            </div>
+    <!-- PANTALLA DE PROGRESIÓN - FUERA del game-container -->
+    <div id="progression-screen" style="display: none;">
+        <h2>Tu Camino en la Fe</h2>
+        <div id="progression-steps-container"></div>
+        <button id="continue-btn">Continuar</button>
+    </div>
+
+    <!-- PANTALLA FINAL - FUERA del game-container -->
+    <div id="end-screen" style="display: none;">
+        <h2>Juego Terminado</h2>
+        <p>Puntuación final: <span id="final-score">0</span></p>
+        <p>Preguntas respondidas: <span id="questions-answered">0</span></p>
+        <p>Tiempo restante: <span id="remaining-time">0</span></p>
+        <button id="restart-btn">Reiniciar Juego</button>
+    </div>
 
     <script type="module" src="script.js"></script>
 </body>

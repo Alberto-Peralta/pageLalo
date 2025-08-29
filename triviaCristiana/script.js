@@ -240,12 +240,12 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-          function mostrarPantallaFinal() {
+         function mostrarPantallaFinal() {
     console.log("🔴 EJECUTANDO mostrarPantallaFinal()");
     
     clearInterval(temporizador);
     
-    // Calcular valores finales (+1 porque el índice comienza en 0)
+    // Calcular valores finales
     const preguntasRespondidas = preguntaActualIndex;
     
     // Actualizar la UI
