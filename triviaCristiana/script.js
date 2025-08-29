@@ -23,6 +23,7 @@ let preguntaActualIndex = 0;
 let puntuacion = 0;
 let comodin5050Usado = false;
 let comodinPasarPreguntaUsado = false;
+let comodinPausarTiempoUsado = false;
 let temporizador;
 const TIEMPO_POR_PREGUNTA = 30;
 let tiempoRestante = TIEMPO_POR_PREGUNTA;
@@ -76,6 +77,7 @@ function iniciarJuego() {
     puntuacion = 0;
     comodin5050Usado = false;
     comodinPasarPreguntaUsado = false;
+    comodinPausarTiempoUsado = false;
     juegoPausado = false;
     reiniciarComodines();
     actualizarPuntuacion();
@@ -123,8 +125,17 @@ function iniciarTemporizador() {
 }
 
 function pausarJuego() {
+    if (comodinPausarTiempoUsado) {
+        mostrarAlerta("Ya usaste este comodín.");
+        return;
+    }
+    
     juegoPausado = !juegoPausado;
     pauseTimeBtn.textContent = juegoPausado ? 'Continuar' : 'Pausar Tiempo';
+    if (!juegoPausado) {
+        comodinPausarTiempoUsado = true;
+        pauseTimeBtn.disabled = true;
+    }
 }
 
 function seleccionarRespuesta(event) {
@@ -137,18 +148,26 @@ function revisarRespuesta(respuestaSeleccionada) {
     clearInterval(temporizador);
     
     let esCorrecto = false;
+    const pregunta = preguntas[preguntaActualIndex];
+    const respuestaCorrecta = pregunta.respuesta;
+    const respuestaCorrectaBtn = document.getElementById(`answer${respuestaCorrecta}`);
+
     if (respuestaSeleccionada) {
-        const respuestaCorrecta = preguntas[preguntaActualIndex].respuesta;
-        if (respuestaSeleccionada.id.slice(-1) === respuestaCorrecta) {
+        const respuestaSeleccionadaLetra = respuestaSeleccionada.id.slice(-1);
+        if (respuestaSeleccionadaLetra === respuestaCorrecta) {
             esCorrecto = true;
             respuestaSeleccionada.classList.add('correct');
             puntuacion++;
         } else {
             respuestaSeleccionada.classList.add('incorrect');
-            const respuestaCorrectaBtn = document.getElementById(`answer${respuestaCorrecta}`);
             if (respuestaCorrectaBtn) {
                 respuestaCorrectaBtn.classList.add('correct');
             }
+        }
+    } else {
+        // En caso de que se acabe el tiempo
+        if (respuestaCorrectaBtn) {
+            respuestaCorrectaBtn.classList.add('correct');
         }
     }
 
@@ -172,14 +191,19 @@ function usar5050() {
 
     const pregunta = preguntas[preguntaActualIndex];
     const respuestaCorrecta = pregunta.respuesta;
-    const opcionesIncorrectas = pregunta.opciones.filter(op => op.substring(0, 1) !== respuestaCorrecta);
-    const opcionesAEliminar = opcionesIncorrectas.slice(0, 2);
-
-    opcionesAEliminar.forEach(op => {
-        const btn = answerButtons.find(btn => btn.textContent === op);
-        if (btn) {
-            btn.style.display = 'none';
+    const opcionesIncorrectas = answerButtons.filter(btn => btn.id.slice(-1) !== respuestaCorrecta);
+    
+    const opcionesAEliminar = [];
+    while (opcionesAEliminar.length < 2) {
+        const randomIndex = Math.floor(Math.random() * opcionesIncorrectas.length);
+        const opcion = opcionesIncorrectas[randomIndex];
+        if (!opcionesAEliminar.includes(opcion)) {
+            opcionesAEliminar.push(opcion);
         }
+    }
+
+    opcionesAEliminar.forEach(btn => {
+        btn.style.display = 'none';
     });
 }
 
@@ -211,8 +235,10 @@ function mostrarPantallaFinal() {
 function reiniciarComodines() {
     fiftyFiftyBtn.disabled = false;
     nextQuestionBtn.disabled = false;
+    pauseTimeBtn.disabled = false;
     comodin5050Usado = false;
     comodinPasarPreguntaUsado = false;
+    comodinPausarTiempoUsado = false;
     pauseTimeBtn.textContent = 'Pausar Tiempo';
 }
 
@@ -222,7 +248,7 @@ function mostrarAlerta(mensaje) {
     const modalOkBtn = document.getElementById('modal-ok-btn');
 
     modalMessage.textContent = mensaje;
-    modal.style.display = 'block';
+    modal.style.display = 'flex';
     
     modalOkBtn.onclick = () => {
         modal.style.display = 'none';
