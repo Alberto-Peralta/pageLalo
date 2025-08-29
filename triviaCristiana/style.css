@@ -148,11 +148,7 @@ body {
 }
 
 /* Estilos para el nuevo enlace de administrador */
-.admin-access {
-    margin-top: 20px;
-}
-
-.admin-link {
+#admin-link {
     display: inline-block;
     padding: 10px 20px;
     background-color: #ffcc00;
@@ -161,9 +157,10 @@ body {
     border-radius: 5px;
     font-weight: bold;
     transition: background-color 0.3s ease;
+    margin-top: 20px;
 }
 
-.admin-link:hover {
+#admin-link:hover {
     background-color: #ffb800;
 }
 
@@ -215,7 +212,6 @@ body {
 .modal-content .modal-buttons button {
     flex-grow: 1;
 }
-
 
 /* Estilos para la pantalla de fin de juego */
 #end-screen {

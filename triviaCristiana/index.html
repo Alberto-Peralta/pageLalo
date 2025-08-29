@@ -7,7 +7,11 @@
   <title>Juego de Preguntas</title>
   <link rel="stylesheet" href="style.css">
   
-  <script type="module" src="script.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+  <script src="preguntas.js"></script>
+  <script src="script.js"></script>
 </head>
 <body>
   <div class="game-container" role="main">
@@ -57,12 +61,6 @@
       <p id="time-remaining">Tiempo restante: 0</p>
       <button id="restart-btn">Reiniciar Juego</button>
     </div>
-
   </div>
-  
-  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
-  <script src="script.js"></script>
 </body>
 </html>
