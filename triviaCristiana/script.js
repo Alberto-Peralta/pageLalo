@@ -4,13 +4,13 @@ import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/9.
 
 // Tu configuración de Firebase
 const firebaseConfig = {
-    apiKey: "TU_API_KEY",
-    authDomain: "TU_PROJECT_ID.firebaseapp.com",
-    databaseURL: "https://TU_PROJECT_ID-default-rtdb.firebaseio.com",
-    projectId: "TU_PROJECT_ID",
-    storageBucket: "TU_PROJECT_ID.appspot.com",
-    messagingSenderId: "TU_MESSAGING_SENDER_ID",
-    appId: "TU_APP_ID"
+    apiKey: "AIzaSyCO3FRhSwH1xLABwVGFSd_YYrbFp0lQEv8",
+    authDomain: "pagelalo-1b210.firebaseapp.com",
+    databaseURL: "https://pagelalo-1b210-default-rtdb.firebaseio.com",
+    projectId: "pagelalo-1b210",
+    storageBucket: "pagelalo-1b210.firebasestorage.app",
+    messagingSenderId: "1096735980204",
+    appId: "1:1096735980204:web:8252ddb9fb484c398dfd09"
 };
 
 // Inicializar Firebase
@@ -234,17 +234,4 @@ function mostrarAlerta(mensaje) {
 
 
 // Listeners de eventos
-answerButtons.forEach(btn => btn.addEventListener('click', seleccionarRespuesta));
-confirmBtn.addEventListener('click', () => {
-    const selectedBtn = document.querySelector('.answer-btn.selected');
-    if (selectedBtn) {
-        revisarRespuesta(selectedBtn);
-    }
-});
-fiftyFiftyBtn.addEventListener('click', usar5050);
-pauseTimeBtn.addEventListener('click', pausarJuego);
-nextQuestionBtn.addEventListener('click', pasarPregunta);
-restartBtn.addEventListener('click', iniciarJuego);
-
-// Iniciar la carga de preguntas
-cargarPreguntas();
+answerButtons
