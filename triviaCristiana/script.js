@@ -28,6 +28,8 @@ let temporizador;
 const TIEMPO_POR_PREGUNTA = 30;
 let tiempoRestante = TIEMPO_POR_PREGUNTA;
 let juegoPausado = false;
+let respuestaSeleccionada;
+let estadoBotonConfirmar = 'confirmar'; // 'confirmar' o 'siguiente'
 
 // Referencias a los elementos del DOM
 const scoreDisplay = document.getElementById('score-display');
@@ -48,12 +50,6 @@ const finalScoreElement = document.getElementById('final-score');
 const questionsAnsweredElement = document.getElementById('questions-answered');
 const timeRemainingElement = document.getElementById('time-remaining');
 const restartBtn = document.getElementById('restart-btn');
-
-// Modal de confirmación para pasar a la siguiente pregunta
-const confirmModal = document.getElementById('confirm-modal');
-const confirmMessage = document.getElementById('confirm-message');
-const confirmYesBtn = document.getElementById('confirm-yes-btn');
-const confirmNoBtn = document.getElementById('confirm-no-btn');
 
 // --- Lógica del juego ---
 
@@ -89,7 +85,6 @@ function iniciarJuego() {
     actualizarPuntuacion();
     document.querySelector('.game-container').style.display = 'block';
     document.querySelector('#end-screen').style.display = 'none';
-    confirmModal.style.display = 'none';
     mostrarPreguntaActual();
 }
 
@@ -110,6 +105,9 @@ function mostrarPreguntaActual() {
     });
 
     confirmBtn.disabled = true;
+    confirmBtn.textContent = "Confirmar";
+    estadoBotonConfirmar = 'confirmar';
+    respuestaSeleccionada = null;
     iniciarTemporizador();
 }
 
@@ -146,12 +144,16 @@ function pausarJuego() {
 }
 
 function seleccionarRespuesta(event) {
+    if (estadoBotonConfirmar === 'siguiente') {
+        return; // No permitir selección después de confirmar
+    }
     answerButtons.forEach(btn => btn.classList.remove('selected'));
     event.target.classList.add('selected');
+    respuestaSeleccionada = event.target;
     confirmBtn.disabled = false;
 }
 
-function revisarRespuesta(respuestaSeleccionada) {
+function revisarRespuesta() {
     clearInterval(temporizador);
     
     const pregunta = preguntas[preguntaActualIndex];
@@ -163,37 +165,26 @@ function revisarRespuesta(respuestaSeleccionada) {
         if (respuestaSeleccionadaLetra === respuestaCorrecta) {
             respuestaSeleccionada.classList.add('correct');
             puntuacion++;
-            mostrarAlerta("¡Respuesta Correcta!");
-            confirmBtn.disabled = true;
         } else {
             respuestaSeleccionada.classList.add('incorrect');
             if (respuestaCorrectaBtn) {
                 respuestaCorrectaBtn.classList.add('correct');
             }
-            mostrarAlerta("Respuesta Incorrecta. La opción correcta era: " + respuestaCorrecta);
         }
     } else {
         // En caso de que se acabe el tiempo
         if (respuestaCorrectaBtn) {
             respuestaCorrectaBtn.classList.add('correct');
         }
-        mostrarAlerta("¡Se acabó el tiempo! La opción correcta era: " + respuestaCorrecta);
     }
 
     answerButtons.forEach(btn => btn.disabled = true);
-    confirmBtn.style.display = 'none';
     actualizarPuntuacion();
-
-    // Muestra el modal de confirmación para pasar a la siguiente pregunta
-    setTimeout(() => {
-        confirmMessage.textContent = '¿Estás listo para la siguiente pregunta?';
-        confirmModal.style.display = 'flex';
-    }, 1500);
+    confirmBtn.textContent = "Siguiente Pregunta";
+    estadoBotonConfirmar = 'siguiente';
 }
 
 function pasarSiguientePregunta() {
-    confirmModal.style.display = 'none';
-    confirmBtn.style.display = 'inline-block';
     preguntaActualIndex++;
     mostrarPreguntaActual();
 }
@@ -276,23 +267,22 @@ function mostrarAlerta(mensaje) {
 
 // Listeners de eventos
 answerButtons.forEach(btn => btn.addEventListener('click', seleccionarRespuesta));
+
 confirmBtn.addEventListener('click', () => {
-    const selectedBtn = document.querySelector('.answer-btn.selected');
-    if (selectedBtn) {
-        revisarRespuesta(selectedBtn);
+    if (estadoBotonConfirmar === 'confirmar') {
+        const selectedBtn = document.querySelector('.answer-btn.selected');
+        if (selectedBtn) {
+            revisarRespuesta();
+        }
+    } else {
+        pasarSiguientePregunta();
     }
 });
+
 fiftyFiftyBtn.addEventListener('click', usar5050);
 pauseTimeBtn.addEventListener('click', pausarJuego);
 nextQuestionBtn.addEventListener('click', pasarPregunta);
 restartBtn.addEventListener('click', iniciarJuego);
-
-// Listener para el nuevo botón de confirmación
-confirmYesBtn.addEventListener('click', pasarSiguientePregunta);
-confirmNoBtn.addEventListener('click', () => {
-    // Si el usuario presiona "No" se cierra el modal pero se mantiene la pregunta
-    confirmModal.style.display = 'none';
-});
 
 // Iniciar la carga de preguntas
 cargarPreguntas();
