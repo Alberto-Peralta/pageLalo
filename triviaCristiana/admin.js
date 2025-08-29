@@ -114,28 +114,14 @@ async function initializeFirebase() {
         auth = getAuth(app);
         db = getDatabase(app);
 
-        // Agregamos un observador para el estado de autenticación
-        onAuthStateChanged(auth, async (user) => {
-            if (user) {
-                // Si el usuario está autenticado, verificamos su rol
-                const rolesRef = ref(db, 'roles/' + user.uid);
-                const snapshot = await get(rolesRef);
-                if (snapshot.exists() && snapshot.val() === 'admin') {
-                    loginForm.style.display = 'none';
-                    adminPanel.style.display = 'block';
-                    listenForQuestions();
-                } else {
-                    // Si no tiene el rol de admin, lo desautenticamos y mostramos un error
-                    signOut(auth);
-                    showMessage("Acceso denegado. No tienes permisos de administrador.");
-                    loginForm.style.display = 'block';
-                    adminPanel.style.display = 'none';
-                }
-            } else {
-                loginForm.style.display = 'block';
-                adminPanel.style.display = 'none';
-            }
-        });
+        // AVISO IMPORTANTE: ESTO ES SÓLO PARA PRUEBAS LOCALES.
+        // Deshabilita la autenticación para mostrar el panel de administración directamente.
+        // NO USES ESTO EN PRODUCCIÓN, ya que tu panel quedaría expuesto a cualquier persona.
+        
+        loginForm.style.display = 'none';
+        adminPanel.style.display = 'block';
+        listenForQuestions();
+
 
     } catch (error) {
         console.error("Error al inicializar Firebase:", error);
@@ -180,6 +166,8 @@ logoutBtn.addEventListener('click', async () => {
     try {
         await signOut(auth);
         showMessage("Sesión cerrada correctamente.");
+        // Opcional: Recargar la página para volver al estado inicial de login
+        window.location.reload(); 
     } catch (error) {
         console.error("Error al cerrar sesión:", error);
         showMessage("Error al cerrar sesión.");
