@@ -107,10 +107,11 @@ function loadQuestions() {
             Object.keys(questions).forEach(id => {
                 const question = questions[id];
                 const row = questionsTableBody.insertRow();
+                // AQUÍ ESTÁ EL CAMBIO
                 row.innerHTML = `
-                    <td>${question.pregunta}</td>
-                    <td>${question.dificultad}</td>
-                    <td>
+                    <td data-label="Pregunta">${question.pregunta}</td>
+                    <td data-label="Dificultad">${question.dificultad}</td>
+                    <td data-label="Acciones">
                         <button class="edit-btn" data-id="${id}">Editar</button>
                         <button class="delete-btn" data-id="${id}">Borrar</button>
                     </td>
