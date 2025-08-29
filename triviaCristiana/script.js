@@ -56,6 +56,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const timeRemainingElement = document.getElementById('time-remaining');
 
 
+    // Función para barajar un array (algoritmo de Fisher-Yates)
+    function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+    }
+
     // Cargar preguntas desde Firebase
     function loadQuestions() {
         const questionsRef = ref(db, 'questions');
@@ -63,6 +71,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const data = snapshot.val();
             if (data) {
                 preguntas = Object.values(data);
+                
+                // Barajar las preguntas al cargarlas
+                shuffleArray(preguntas);
+                
                 if (preguntas.length > 0) {
                     mostrarPregunta();
                 } else {
