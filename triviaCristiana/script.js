@@ -29,27 +29,31 @@ document.addEventListener('DOMContentLoaded', () => {
     let comodin5050Usado = false;
     let comodinPasarPreguntaUsado = false;
     let comodinPausarTiempoUsado = false;
-    let estadoBotonConfirmar = 'confirmar'; // 'confirmar' o 'siguiente'
+    let estadoBotonConfirmar = 'confirmar';
     let esCorrecto = false;
 
     // Elementos de la UI
     const scoreDisplay = document.getElementById('score-display');
     const timeElement = document.getElementById('time');
     const questionTextElement = document.getElementById('question-text');
-    const currentQuestionTitle = document.getElementById('current-question-title');
-    const answerButtons = document.querySelectorAll('.answer-btn');
+    const answerButtons = [
+        document.getElementById('answer1'),
+        document.getElementById('answer2'),
+        document.getElementById('answer3'),
+        document.getElementById('answer4')
+    ];
     const confirmBtn = document.getElementById('confirm-btn');
     const endScreen = document.getElementById('end-screen');
     const finalScoreElement = document.getElementById('final-score');
-    const playAgainBtn = document.getElementById('play-again-btn');
+    const playAgainBtn = document.getElementById('restart-btn');
     const fiftyFiftyBtn = document.getElementById('fifty-fifty');
     const nextQuestionBtn = document.getElementById('next-question');
     const pauseTimeBtn = document.getElementById('pause-time');
-    const progressBar = document.getElementById('progress-bar');
     const messageModal = document.getElementById('message-modal');
     const modalMessage = document.getElementById('modal-message');
     const modalOkBtn = document.getElementById('modal-ok-btn');
-    const adminLink = document.getElementById('admin-link');
+    const questionsAnsweredElement = document.getElementById('questions-answered');
+    const timeRemainingElement = document.getElementById('time-remaining');
 
 
     // Cargar preguntas desde Firebase
@@ -62,11 +66,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (preguntas.length > 0) {
                     mostrarPregunta();
                 } else {
-                    currentQuestionTitle.textContent = "No hay preguntas.";
                     questionTextElement.textContent = "No hay preguntas disponibles. Añade algunas en el panel de administración.";
                 }
             } else {
-                currentQuestionTitle.textContent = "No hay preguntas.";
                 questionTextElement.textContent = "No hay preguntas disponibles. Añade algunas en el panel de administración.";
             }
         });
@@ -78,7 +80,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (preguntaActualIndex < preguntas.length) {
             const pregunta = preguntas[preguntaActualIndex];
             
-            currentQuestionTitle.textContent = `Pregunta ${preguntaActualIndex + 1}`; 
             questionTextElement.textContent = pregunta.pregunta;
 
             answerButtons.forEach((btn, index) => {
@@ -92,8 +93,6 @@ document.addEventListener('DOMContentLoaded', () => {
             confirmBtn.disabled = true;
             estadoBotonConfirmar = 'confirmar';
             esCorrecto = false;
-
-            actualizarProgreso();
         } else {
             mostrarPantallaFinal();
         }
@@ -148,8 +147,8 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('.game-container').style.display = 'none';
         endScreen.style.display = 'flex';
         finalScoreElement.textContent = puntuacion;
-        currentQuestionTitle.textContent = "";
-        questionTextElement.textContent = "";
+        questionsAnsweredElement.textContent = preguntaActualIndex;
+        timeRemainingElement.textContent = tiempoRestante;
     }
 
     // Reiniciar el juego
@@ -233,11 +232,6 @@ document.addEventListener('DOMContentLoaded', () => {
         tiempoRestante = 30;
         timeElement.textContent = tiempoRestante;
         iniciarTemporizador();
-    }
-
-    function actualizarProgreso() {
-        const progreso = (preguntaActualIndex / preguntas.length) * 100;
-        progressBar.style.width = progreso + '%';
     }
 
     function reiniciarComodines() {

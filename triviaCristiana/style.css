@@ -50,17 +50,6 @@ body {
     margin-bottom: 1.5rem;
 }
 
-/* Estilos para el nuevo título de la pregunta pequeña */
-.question-title-small {
-    font-size: clamp(1.2rem, 3.5vw, 1.8rem); /* Font-size adaptable */
-    color: #ffd700; /* Un color dorado para que resalte */
-    text-shadow: 1px 1px 2px #000;
-    margin-top: 0.5rem;
-    margin-bottom: 1rem;
-    font-weight: normal; /* Menos negrita que el título principal */
-}
-
-
 /* Estilos para el panel de administración */
 .admin-container {
     background-color: #004d99;
@@ -122,6 +111,14 @@ body {
     color: #ffcc00;
 }
 
+/* Estilos para el texto de la pregunta */
+#question-text {
+    font-size: clamp(1.2rem, 3.5vw, 1.8rem);
+    color: #ffffff;
+    text-shadow: 1px 1px 2px #000;
+    margin: 1.5rem 0;
+}
+
 /* Estilos de botones de respuesta */
 .answer-btn {
     width: 95%;
@@ -165,6 +162,11 @@ body {
     background-color: #dc3545 !important;
     color: white !important;
     border-color: #dc3545 !important;
+}
+
+/* Espaciado del nuevo div */
+.button-spacing {
+    margin: 1.5rem;
 }
 
 #confirm-btn {
@@ -348,84 +350,21 @@ body {
     transform: translateY(-2px);
 }
 
-/* Estilos para la barra de progreso */
-.progress-container {
-    width: 90%;
-    max-width: 500px;
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 5px;
-    margin-bottom: 1.5rem;
-    height: 1.5rem;
-    position: relative;
-    border: 1px solid #ffcc00;
-}
-
-.progress-bar {
-    height: 100%;
+/* Estilos para el nuevo enlace de administrador */
+#admin-link {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
     background-color: #ffcc00;
-    border-radius: 5px;
-    transition: width 0.5s linear;
-}
-
-/* Nuevo estilo para el botón de cerrar sesión */
-#logout-btn {
-    background-color: #dc3545;
-    color: white;
-    border: none;
-    padding: 0.75rem 1.25rem;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 1.5rem;
+    color: #003366;
+    text-decoration: none;
+    border-radius: 8px;
     font-weight: bold;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s;
+    margin-top: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-#logout-btn:hover {
-    background-color: #c82333;
-}
-
-/* === Estilos para Responsividad === */
-
-/* Diseño de la tabla en móviles */
-@media screen and (max-width: 768px) {
-    .admin-container table {
-        border: 0;
-    }
-
-    .admin-container thead {
-        display: none; /* Oculta la cabecera de la tabla */
-    }
-
-    .admin-container tr {
-        display: block;
-        margin-bottom: 0.625rem;
-        border: 1px solid #ffcc00;
-        border-radius: 10px;
-        padding: 0.5rem;
-    }
-
-    .admin-container td {
-        display: block;
-        text-align: right;
-        border-bottom: 1px solid #ffcc00;
-        padding-left: 50%;
-        position: relative;
-        /* Aseguramos que el texto se ajuste */
-        white-space: normal;
-    }
-
-    .admin-container td:before {
-        content: attr(data-label);
-        position: absolute;
-        left: 0;
-        width: 45%;
-        padding-left: 0.75rem;
-        font-weight: bold;
-        text-align: left;
-        color: #ffcc00;
-    }
-
-    .admin-container td:last-child {
-        border-bottom: 0;
-    }
+#admin-link:hover {
+    background-color: #ffb800;
+    transform: translateY(-2px);
 }
