@@ -119,12 +119,10 @@ document.addEventListener('DOMContentLoaded', () => {
             puntuacion++;
             scoreDisplay.textContent = `Puntuación: ${puntuacion}`;
             selectedBtn.classList.add('correct');
-            mostrarAlerta("¡Respuesta correcta!");
             esCorrecto = true;
         } else {
             selectedBtn.classList.add('incorrect');
             answerButtons[correctIndex].classList.add('correct');
-            mostrarAlerta(`Respuesta incorrecta. La respuesta correcta era la ${correctAnswer}.`);
         }
 
         confirmBtn.textContent = 'Siguiente';
