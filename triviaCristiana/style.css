@@ -1,4 +1,8 @@
 /* Estilos generales */
+:root {
+    font-size: 16px; /* Base para unidades rem */
+}
+
 body {
     font-family: 'Arial', sans-serif;
     background: linear-gradient(to bottom, #003366, #2c6f8c);
@@ -8,18 +12,20 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh; /* Usa min-height para que el contenido pueda crecer */
     flex-direction: column;
+    padding: 1rem; /* Padding general para que el contenido no toque los bordes */
+    box-sizing: border-box; /* Incluye padding y borde en el ancho/alto */
 }
 
-/* Contenedor del juego */
+/* Contenedor del juego y admin */
 .game-container, .admin-container {
-    width: 90%;
-    max-width: 600px;
-    background: rgba(0, 51, 102, 0.85); /* Fondo semitransparente para ver el fondo */
+    width: 95%; /* Ocupa casi todo el ancho */
+    max-width: 900px; /* Aumentado para mejor visualización en pantallas más grandes */
+    background: rgba(0, 51, 102, 0.85);
     border-radius: 20px;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
-    padding: 20px;
+    padding: 1.5rem;
     text-align: center;
     transition: transform 0.3s ease-in-out;
 }
@@ -38,10 +44,10 @@ body {
 }
 
 .game-title {
-    font-size: 2.8rem;
+    font-size: clamp(1.8rem, 5vw, 2.8rem); /* Font-size adaptable */
     color: #ffcc00;
     text-shadow: 2px 2px 4px #000;
-    margin-bottom: 25px;
+    margin-bottom: 1.5rem;
 }
 
 /* Estilos para el panel de administración */
@@ -51,29 +57,32 @@ body {
 
 .admin-container h2 {
     color: #ffcc00;
+    font-size: 1.8rem;
 }
 
 .admin-container input, .admin-container textarea, .admin-container select {
-    width: 90%;
-    padding: 12px;
-    margin: 10px 0;
+    width: 100%;
+    padding: 0.8rem;
+    margin: 0.5rem 0;
     border-radius: 8px;
     border: 1px solid #ccc;
     font-size: 1rem;
     background-color: #f0f0f0;
     color: #003366;
+    box-sizing: border-box; /* Asegura que el padding no desborde */
 }
 
 .admin-container button {
     background-color: #ffcc00;
     color: #003366;
     border: none;
-    padding: 12px 25px;
-    margin: 8px;
+    padding: 0.8rem 1.5rem;
+    margin: 0.5rem;
     border-radius: 8px;
     cursor: pointer;
     font-weight: bold;
     transition: background-color 0.3s, transform 0.2s;
+    font-size: 1rem;
 }
 
 .admin-container button:hover {
@@ -84,15 +93,17 @@ body {
 .admin-container table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
+    margin-top: 1.5rem;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
+    table-layout: fixed; /* Ayuda a que las columnas no se desborden */
 }
 
 .admin-container th, .admin-container td {
     border: 1px solid #ffcc00;
-    padding: 12px;
+    padding: 0.75rem;
     text-align: left;
+    word-wrap: break-word; /* Rompe palabras largas */
 }
 
 .admin-container th {
@@ -102,19 +113,21 @@ body {
 
 /* Estilos de botones de respuesta */
 .answer-btn {
-    width: 90%;
-    padding: 18px;
-    margin: 12px auto;
+    width: 95%; /* Ajustado para un mejor espaciado */
+    padding: 1.25rem;
+    margin: 0.75rem auto;
     background-color: #003366;
     color: #ffcc00;
     border: 2px solid #ffcc00;
     border-radius: 12px;
     cursor: pointer;
-    font-size: 1.25rem;
+    font-size: clamp(1rem, 3.5vw, 1.25rem);
     font-weight: bold;
     transition: background-color 0.3s, color 0.3s, transform 0.2s;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    word-wrap: break-word;
+    min-height: 50px; /* Altura mínima para mejor tacto */
 }
 
 .answer-btn:hover {
@@ -144,8 +157,8 @@ body {
 }
 
 #confirm-btn {
-    padding: 15px 40px;
-    font-size: 1.3rem;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
     background-color: #4CAF50;
     color: white;
     border: none;
@@ -153,6 +166,7 @@ body {
     cursor: pointer;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
     transition: background-color 0.3s, transform 0.2s;
+    margin-top: 1rem;
 }
 
 #confirm-btn:hover {
@@ -167,15 +181,25 @@ body {
 }
 
 /* Estilos de comodines y controles */
+.controls {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que los botones se envuelvan en pantallas pequeñas */
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+}
+
 .controls button {
+    flex: 1 1 auto; /* Permite que los botones crezcan y se adapten */
+    max-width: 150px;
     background-color: #005f99;
     color: #fff;
     border: 1px solid #fff;
     border-radius: 5px;
-    padding: 10px 15px;
-    margin: 5px;
+    padding: 0.75rem 1rem;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s;
+    font-size: clamp(0.8rem, 2.5vw, 1rem);
 }
 
 .controls button:hover {
@@ -193,14 +217,14 @@ body {
 /* Estilos para el nuevo enlace de administrador */
 #admin-link {
     display: inline-block;
-    padding: 12px 25px;
+    padding: 0.75rem 1.5rem;
     background-color: #ffcc00;
     color: #003366;
     text-decoration: none;
     border-radius: 8px;
     font-weight: bold;
     transition: background-color 0.3s ease, transform 0.2s;
-    margin-top: 25px;
+    margin-top: 1.5rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
@@ -225,9 +249,9 @@ body {
 
 .modal-content {
     background-color: #003366;
-    padding: 30px;
+    padding: 1.5rem;
     border: 2px solid #ffcc00;
-    width: 80%;
+    width: 90%;
     max-width: 450px;
     border-radius: 15px;
     text-align: center;
@@ -244,16 +268,16 @@ body {
 
 .modal-content p {
     color: #ffcc00;
-    font-size: 1.4rem;
-    margin-bottom: 20px;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
 }
 
 .modal-content button {
     background-color: #ffcc00;
     color: #003366;
     border: none;
-    padding: 12px 25px;
-    margin-top: 15px;
+    padding: 0.75rem 1.5rem;
+    margin-top: 1rem;
     border-radius: 8px;
     cursor: pointer;
     font-weight: bold;
@@ -268,7 +292,7 @@ body {
 .modal-content .modal-buttons {
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 1rem;
 }
 
 .modal-content .modal-buttons button {
@@ -277,29 +301,29 @@ body {
 
 /* Estilos para la pantalla de fin de juego */
 #end-screen {
-    padding: 30px;
+    padding: 2rem;
     border-radius: 15px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-    margin: 20px auto;
+    margin: 1.5rem auto;
     width: 90%;
     max-width: 500px;
     background: #003366;
 }
 
 #end-screen h2 {
-    font-size: 2.5rem;
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
     color: #ffcc00;
     text-shadow: 1px 1px 2px #000;
 }
 
 #end-screen p {
-    font-size: 1.2rem;
-    margin: 10px 0;
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    margin: 0.5rem 0;
 }
 
 #end-screen button {
-    padding: 12px 30px;
-    font-size: 1.1rem;
+    padding: 0.75rem 1.75rem;
+    font-size: 1rem;
     background-color: #4caf50;
     color: white;
     border: none;
@@ -319,8 +343,8 @@ body {
     max-width: 500px;
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 5px;
-    margin-bottom: 20px;
-    height: 30px;
+    margin-bottom: 1.5rem;
+    height: 1.5rem;
     position: relative;
     border: 1px solid #ffcc00;
 }
@@ -337,14 +361,62 @@ body {
     background-color: #dc3545;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 0.75rem 1.25rem;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 20px;
+    margin-top: 1.5rem;
     font-weight: bold;
     transition: background-color 0.3s ease;
 }
 
 #logout-btn:hover {
     background-color: #c82333;
+}
+
+/* === Estilos para Responsividad === */
+
+/* Diseño de la tabla en móviles */
+@media screen and (max-width: 768px) {
+    .admin-container table {
+        border: 0;
+    }
+
+    .admin-container thead {
+        display: none; /* Oculta la cabecera de la tabla */
+    }
+
+    .admin-container tr {
+        display: block;
+        margin-bottom: 0.625rem;
+        border: 1px solid #ffcc00;
+        border-radius: 10px;
+        padding: 0.5rem;
+    }
+
+    .admin-container td {
+        display: block;
+        text-align: right;
+        border-bottom: 1px solid #ffcc00;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    .admin-container td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 45%;
+        padding-left: 0.75rem;
+        font-weight: bold;
+        text-align: left;
+        color: #ffcc00;
+    }
+    
+    .admin-container td:nth-of-type(1):before { content: "Pregunta"; }
+    .admin-container td:nth-of-type(2):before { content: "Dificultad"; }
+    .admin-container td:nth-of-type(3):before { content: "Acciones"; }
+
+    .admin-container td:last-child {
+        border-bottom: 0;
+    }
 }
