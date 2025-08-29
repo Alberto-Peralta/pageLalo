@@ -27,17 +27,16 @@ function showMessage(message) {
     const messageBox = document.createElement('div');
     messageBox.style.cssText = `
         position: fixed;
-        top: 50%;
+        bottom: 20px;
         left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: #f8d7da;
-        color: #721c24;
-        border: 1px solid #f5c6cb;
-        padding: 20px;
-        border-radius: 5px;
+        transform: translateX(-50%);
+        background-color: #333;
+        color: white;
+        padding: 15px 25px;
+        border-radius: 8px;
         z-index: 1000;
-        box-shadow: 0 0 10px rgba(0,0,0,0.5);
-        text-align: center;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        animation: fadein 0.5s, fadeout 0.5s 2.5s;
     `;
     messageBox.textContent = message;
     document.body.appendChild(messageBox);
@@ -46,216 +45,114 @@ function showMessage(message) {
     }, 3000);
 }
 
-// Función para manejar el cuadro de diálogo de confirmación personalizado
-function showConfirm(message, onConfirm, onCancel) {
-    const overlay = document.createElement('div');
-    overlay.style.cssText = `
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-        z-index: 1000;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    `;
-
-    const dialog = document.createElement('div');
-    dialog.style.cssText = `
-        background-color: white;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        text-align: center;
-        width: 300px;
-    `;
-
-    const messageText = document.createElement('p');
-    messageText.textContent = message;
-    dialog.appendChild(messageText);
-
-    const confirmBtn = document.createElement('button');
-    confirmBtn.textContent = 'Confirmar';
-    confirmBtn.onclick = () => {
-        onConfirm();
-        document.body.removeChild(overlay);
-    };
-    confirmBtn.style.cssText = `
-        margin-right: 10px;
-        background-color: #dc3545;
-        color: white;
-        border: none;
-        padding: 8px 16px;
-        cursor: pointer;
-        border-radius: 4px;
-    `;
-
-    const cancelBtn = document.createElement('button');
-    cancelBtn.textContent = 'Cancelar';
-    cancelBtn.onclick = () => {
-        if (onCancel) onCancel();
-        document.body.removeChild(overlay);
-    };
-    cancelBtn.style.cssText = `
-        background-color: #6c757d;
-        color: white;
-        border: none;
-        padding: 8px 16px;
-        cursor: pointer;
-        border-radius: 4px;
-    `;
-
-    dialog.appendChild(confirmBtn);
-    dialog.appendChild(cancelBtn);
-    overlay.appendChild(dialog);
-    document.body.appendChild(overlay);
-}
-
-// Inicializa Firebase y configura el oyente de estado de autenticación
-async function initializeFirebase() {
-    try {
-        const firebaseConfig = {
-            apiKey: "AIzaSyCO3FRhSwH1xLABwVGFSd_YYrbFp0lQEv8",
-            authDomain: "pagelalo-1b210.firebaseapp.com",
-            databaseURL: "https://pagelalo-1b210-default-rtdb.firebaseio.com",
-            projectId: "pagelalo-1b210",
-            storageBucket: "pagelalo-1b210.firebasestorage.app",
-            messagingSenderId: "1096735980204",
-            appId: "1:1096735980204:web:8252ddb9fb484c398dfd09"
-        };
-        const app = initializeApp(firebaseConfig);
-        auth = getAuth(app);
-        db = getDatabase(app);
-
-        // Agrega el oyente para el estado de autenticación
-        onAuthStateChanged(auth, (user) => {
-            if (user) {
-                // Usuario logueado: mostrar panel de administración
-                loginForm.style.display = 'none';
-                adminPanel.style.display = 'block';
-                listenForQuestions();
-            } else {
-                // No hay usuario logueado: mostrar formulario de login
-                adminPanel.style.display = 'none';
-                loginForm.style.display = 'block';
-            }
-        });
-
-    } catch (error) {
-        console.error("Error al inicializar Firebase:", error);
-        showMessage("Error al conectar con la base de datos.");
-    }
-}
-
-
-// Manejar el clic del botón de login
+// Iniciar sesión
 loginBtn.addEventListener('click', async () => {
     const email = emailInput.value;
     const password = passwordInput.value;
-
-    if (email && password) {
-        try {
-            await signInWithEmailAndPassword(auth, email, password);
-        } catch (error) {
-            console.error("Error al iniciar sesión:", error);
-            showMessage("Error al iniciar sesión. Verifica tu correo y contraseña.");
-        }
-    } else {
-        showMessage("Por favor, ingresa tu correo y contraseña.");
+    try {
+        await signInWithEmailAndPassword(auth, email, password);
+        showMessage("Inicio de sesión exitoso.");
+    } catch (error) {
+        console.error("Error al iniciar sesión:", error);
+        showMessage("Error al iniciar sesión: " + error.message);
     }
 });
 
-// Manejar el clic del botón de cerrar sesión
+// Cerrar sesión
 logoutBtn.addEventListener('click', async () => {
     try {
         await signOut(auth);
         showMessage("Sesión cerrada correctamente.");
+        window.location.href = 'index.html';
     } catch (error) {
         console.error("Error al cerrar sesión:", error);
-        showMessage("Error al cerrar sesión.");
+        showMessage("Error al cerrar sesión: " + error.message);
     }
 });
 
-// Obtener todas las preguntas de Realtime Database y mostrarlas en la tabla
-function listenForQuestions() {
-    onValue(ref(db, 'questions'), (snapshot) => {
-        questionsTableBody.innerHTML = ''; // Limpia el cuerpo de la tabla
-        if (snapshot.exists()) {
-            snapshot.forEach((childSnapshot) => {
-                const id = childSnapshot.key;
-                const question = childSnapshot.val();
+// Listener del estado de autenticación
+onAuthStateChanged(auth, (user) => {
+    if (user) {
+        loginForm.style.display = 'none';
+        adminPanel.style.display = 'block';
+        loadQuestions();
+    } else {
+        loginForm.style.display = 'block';
+        adminPanel.style.display = 'none';
+    }
+});
+
+// Cargar preguntas existentes
+function loadQuestions() {
+    const questionsRef = ref(db, 'questions');
+    onValue(questionsRef, (snapshot) => {
+        questionsTableBody.innerHTML = '';
+        const questions = snapshot.val();
+        if (questions) {
+            Object.keys(questions).forEach(id => {
+                const question = questions[id];
                 const row = questionsTableBody.insertRow();
-                row.dataset.id = id;
-
-                row.insertCell(0).textContent = question.pregunta;
-                row.insertCell(1).textContent = question.dificultad;
-
-                const actionsCell = row.insertCell(2);
-                const editBtn = document.createElement('button');
-                editBtn.textContent = 'Editar';
-                editBtn.onclick = () => editQuestion(id);
-                actionsCell.appendChild(editBtn);
-
-                const deleteBtn = document.createElement('button');
-                deleteBtn.textContent = 'Borrar';
-                deleteBtn.onclick = () => deleteQuestion(id);
-                actionsCell.appendChild(deleteBtn);
+                row.innerHTML = `
+                    <td>${question.pregunta}</td>
+                    <td>${question.dificultad}</td>
+                    <td>
+                        <button class="edit-btn" data-id="${id}">Editar</button>
+                        <button class="delete-btn" data-id="${id}">Borrar</button>
+                    </td>
+                `;
             });
+            document.querySelectorAll('.edit-btn').forEach(btn => btn.addEventListener('click', handleEdit));
+            document.querySelectorAll('.delete-btn').forEach(btn => btn.addEventListener('click', handleDelete));
         }
     });
 }
 
-// Añadir un listener al botón de guardar
+// Guardar o actualizar una pregunta
 saveQuestionBtn.addEventListener('click', async () => {
-    const questionId = questionIdInput.value;
-    const pregunta = document.getElementById('question-text-input').value;
-    const opciones = [
-        document.getElementById('option-a').value,
-        document.getElementById('option-b').value,
-        document.getElementById('option-c').value,
-        document.getElementById('option-d').value,
-    ];
-    const respuesta = document.getElementById('correct-answer').value;
-    const dificultad = document.getElementById('difficulty').value;
+    const id = questionIdInput.value;
+    const newQuestion = {
+        pregunta: document.getElementById('question-text-input').value,
+        opciones: [
+            document.getElementById('option-a').value,
+            document.getElementById('option-b').value,
+            document.getElementById('option-c').value,
+            document.getElementById('option-d').value
+        ],
+        respuesta: document.getElementById('correct-answer').value,
+        dificultad: document.getElementById('difficulty').value
+    };
 
-    if (pregunta && opciones.every(opt => opt) && respuesta && dificultad) {
-        const newQuestion = {
-            pregunta,
-            opciones,
-            respuesta,
-            dificultad,
-        };
-
+    if (id) {
+        // Actualizar pregunta
         try {
-            if (questionId) {
-                // Actualizar una pregunta existente
-                await set(ref(db, 'questions/' + questionId), newQuestion);
-                showMessage("Pregunta actualizada con éxito.");
-            } else {
-                // Añadir una nueva pregunta
-                const newPostRef = push(ref(db, 'questions'));
-                await set(newPostRef, newQuestion);
-                showMessage("Pregunta guardada con éxito.");
-            }
-            clearForm();
+            await set(ref(db, 'questions/' + id), newQuestion);
+            showMessage("Pregunta actualizada con éxito.");
         } catch (error) {
-            console.error("Error al guardar la pregunta:", error);
-            showMessage("Error al guardar la pregunta.");
+            console.error("Error al actualizar la pregunta:", error);
+            showMessage("Error al actualizar la pregunta.");
         }
     } else {
-        showMessage("Por favor, rellene todos los campos.");
+        // Añadir nueva pregunta
+        try {
+            await push(ref(db, 'questions'), newQuestion);
+            showMessage("Pregunta añadida con éxito.");
+        } catch (error) {
+            console.error("Error al añadir la pregunta:", error);
+            showMessage("Error al añadir la pregunta.");
+        }
     }
+    clearForm();
 });
 
-// Cargar una pregunta en el formulario para editar
-async function editQuestion(questionId) {
+// Lógica de edición
+async function handleEdit(e) {
+    const questionId = e.target.dataset.id;
+    const questionRef = ref(db, 'questions/' + questionId);
     try {
-        const snapshot = await get(ref(db, 'questions/' + questionId));
-        if (snapshot.exists()) {
-            const question = snapshot.val();
-            questionIdInput.value = snapshot.key;
+        const snapshot = await get(questionRef);
+        const question = snapshot.val();
+        if (question) {
+            questionIdInput.value = questionId;
             document.getElementById('question-text-input').value = question.pregunta;
             document.getElementById('option-a').value = question.opciones[0];
             document.getElementById('option-b').value = question.opciones[1];
@@ -274,16 +171,17 @@ async function editQuestion(questionId) {
 }
 
 // Borrar una pregunta
-function deleteQuestion(questionId) {
-    showConfirm("¿Estás seguro de que quieres borrar esta pregunta?", async () => {
+function handleDelete(e) {
+    const questionId = e.target.dataset.id;
+    if (confirm("¿Estás seguro de que quieres borrar esta pregunta?")) {
         try {
-            await remove(ref(db, 'questions/' + questionId));
+            remove(ref(db, 'questions/' + questionId));
             showMessage("Pregunta borrada con éxito.");
         } catch (error) {
             console.error("Error al borrar la pregunta:", error);
             showMessage("Error al borrar la pregunta.");
         }
-    });
+    }
 }
 
 // Limpiar el formulario
@@ -294,12 +192,13 @@ function clearForm() {
     document.getElementById('option-b').value = '';
     document.getElementById('option-c').value = '';
     document.getElementById('option-d').value = '';
+    document.getElementById('correct-answer').value = 'A';
+    document.getElementById('difficulty').value = 'facil';
     saveQuestionBtn.textContent = "Guardar Pregunta";
     cancelEditBtn.style.display = 'none';
 }
 
 // Añadir un listener al botón de cancelar
-cancelEditBtn.addEventListener('click', clearForm);
-
-// Inicia la aplicación
-initializeFirebase();
+cancelEditBtn.addEventListener('click', () => {
+    clearForm();
+});
