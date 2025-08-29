@@ -1,224 +1,250 @@
+// Importaciones de Firebase (modular v9+)
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
+import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js";
+
+// Tu configuración de Firebase
+const firebaseConfig = {
+    apiKey: "TU_API_KEY",
+    authDomain: "TU_PROJECT_ID.firebaseapp.com",
+    databaseURL: "https://TU_PROJECT_ID-default-rtdb.firebaseio.com",
+    projectId: "TU_PROJECT_ID",
+    storageBucket: "TU_PROJECT_ID.appspot.com",
+    messagingSenderId: "TU_MESSAGING_SENDER_ID",
+    appId: "TU_APP_ID"
+};
+
+// Inicializar Firebase
+const app = initializeApp(firebaseConfig);
+const db = getDatabase(app);
+
 // Variables del juego
-let time = 30;
-let timer;
-let currentQuestionIndex = 0;
-let correctAnswer = null;
-let selectedAnswer = null;
-let fiftyFiftyUsed = false;
-let score = 0;
-let answerConfirmed = false;
+let preguntas = [];
+let preguntaActualIndex = 0;
+let puntuacion = 0;
+let comodin5050Usado = false;
+let comodinPasarPreguntaUsado = false;
+let temporizador;
+const TIEMPO_POR_PREGUNTA = 30;
+let tiempoRestante = TIEMPO_POR_PREGUNTA;
+let juegoPausado = false;
 
-// Inicia el temporizador
-function startTimer() {
-  clearInterval(timer);
-  time = 30;
-  document.getElementById("time").textContent = time;
-  timer = setInterval(() => {
-    if (time > 0) {
-      time--;
-      document.getElementById("time").textContent = time;
-    } else {
-      clearInterval(timer);
-      endGame();
+// Referencias a los elementos del DOM
+const scoreDisplay = document.getElementById('score-display');
+const timeDisplay = document.getElementById('time');
+const questionTextElement = document.getElementById('question-text');
+const answerButtons = [
+    document.getElementById('answer1'),
+    document.getElementById('answer2'),
+    document.getElementById('answer3'),
+    document.getElementById('answer4')
+];
+const confirmBtn = document.getElementById('confirm-btn');
+const fiftyFiftyBtn = document.getElementById('fifty-fifty');
+const pauseTimeBtn = document.getElementById('pause-time');
+const nextQuestionBtn = document.getElementById('next-question');
+const endScreen = document.getElementById('end-screen');
+const finalScoreElement = document.getElementById('final-score');
+const questionsAnsweredElement = document.getElementById('questions-answered');
+const timeRemainingElement = document.getElementById('time-remaining');
+const restartBtn = document.getElementById('restart-btn');
+
+// --- Lógica del juego ---
+
+// Cargar preguntas desde Firebase
+function cargarPreguntas() {
+    const preguntasRef = ref(db, 'questions');
+    onValue(preguntasRef, (snapshot) => {
+        const data = snapshot.val();
+        if (data) {
+            preguntas = Object.values(data);
+            iniciarJuego();
+        } else {
+            // Si no hay preguntas en la base de datos, usamos las del archivo local
+            // Suponiendo que tienes un archivo preguntas.js con el array 'preguntas'
+            if (window.preguntas && window.preguntas.length > 0) {
+                preguntas = window.preguntas;
+                iniciarJuego();
+            } else {
+                mostrarAlerta("No se encontraron preguntas en la base de datos ni en el archivo local.");
+            }
+        }
+    }, {
+        onlyOnce: true
+    });
+}
+
+function iniciarJuego() {
+    preguntaActualIndex = 0;
+    puntuacion = 0;
+    comodin5050Usado = false;
+    comodinPasarPreguntaUsado = false;
+    juegoPausado = false;
+    reiniciarComodines();
+    actualizarPuntuacion();
+    document.querySelector('.game-container').style.display = 'block';
+    document.querySelector('#end-screen').style.display = 'none';
+    mostrarPreguntaActual();
+}
+
+function mostrarPreguntaActual() {
+    if (preguntaActualIndex >= preguntas.length) {
+        mostrarPantallaFinal();
+        return;
     }
-  }, 1000);
+
+    const pregunta = preguntas[preguntaActualIndex];
+    questionTextElement.textContent = pregunta.pregunta;
+
+    answerButtons.forEach((btn, index) => {
+        btn.textContent = pregunta.opciones[index];
+        btn.style.display = 'block';
+        btn.classList.remove('selected', 'correct', 'incorrect');
+        btn.disabled = false;
+    });
+
+    confirmBtn.disabled = true;
+    iniciarTemporizador();
 }
 
-// Seleccionar y ordenar preguntas
-function seleccionarPreguntas() {
-  mezclarPreguntas(preguntas);
-  return preguntas.slice(0, 15).sort((a, b) => a.dificultad - b.dificultad);
+function iniciarTemporizador() {
+    clearInterval(temporizador);
+    tiempoRestante = TIEMPO_POR_PREGUNTA;
+    timeDisplay.textContent = tiempoRestante;
+
+    temporizador = setInterval(() => {
+        if (!juegoPausado) {
+            tiempoRestante--;
+            timeDisplay.textContent = tiempoRestante;
+
+            if (tiempoRestante <= 0) {
+                clearInterval(temporizador);
+                revisarRespuesta(null); // Pasa null para indicar que el tiempo se acabó
+            }
+        }
+    }, 1000);
 }
 
-// Iniciar partida
-function iniciarPartida() {
-  const preguntasParaPartida = seleccionarPreguntas();
-  currentQuestionIndex = 0;
-  score = 0;
-  mostrarNuevaPregunta(preguntasParaPartida);
+function pausarJuego() {
+    juegoPausado = !juegoPausado;
+    pauseTimeBtn.textContent = juegoPausado ? 'Continuar' : 'Pausar Tiempo';
 }
 
-// Función para finalizar el juego
-function endGame() {
-  alert(`¡Se acabó el tiempo! Tu puntuación final es: ${score}`);
-  disableButton("fifty-fifty");
-  disableButton("pause-time");
-  disableButton("next-question");
-  disableButton("confirm-btn");
+function seleccionarRespuesta(event) {
+    answerButtons.forEach(btn => btn.classList.remove('selected'));
+    event.target.classList.add('selected');
+    confirmBtn.disabled = false;
 }
 
-// Deshabilitar botones
-function disableButton(buttonId) {
-  const button = document.getElementById(buttonId);
-  button.disabled = true;
-  button.style.backgroundColor = "#b0bec5";
-  button.style.cursor = "not-allowed";
-  button.classList.add("disabled");
-}
-
-// Mostrar nueva pregunta
-function mostrarNuevaPregunta(preguntas) {
-  const pregunta = preguntas[currentQuestionIndex];
-  document.getElementById("question-text").textContent = pregunta.pregunta;
-
-  pregunta.opciones.forEach((opcion, index) => {
-    const btn = document.getElementById(`answer${index + 1}`);
-    btn.textContent = opcion;
-    btn.classList.remove("correct", "incorrect", "selected");
-    btn.style.display = "inline-block";
-  });
-
-  correctAnswer = pregunta.respuesta;
-  selectedAnswer = null;
-  fiftyFiftyUsed = false;
-  answerConfirmed = false;
-
-  startTimer();
-  const confirmButton = document.getElementById("confirm-btn");
-  confirmButton.textContent = "Confirmar";
-  confirmButton.onclick = () => checkAnswer(preguntas);
-}
-
-// Verificar la respuesta seleccionada
-function checkAnswer(preguntas) {
-  if (!selectedAnswer) {
-    alert("Por favor, selecciona una respuesta.");
-    return;
-  }
-  if (answerConfirmed) return;
-
-  const answerButtons = document.querySelectorAll(".answer-btn");
-  answerButtons.forEach(button => {
-    button.classList.remove("selected");
-    const answerLetter = button.textContent[0];
-    if (answerLetter === correctAnswer) {
-      button.classList.add("correct");
-      if (selectedAnswer === correctAnswer) {
-        score++;
-        document.getElementById("score-display").textContent = `Puntuación: ${score}`;
-      }
-    } else if (answerLetter === selectedAnswer) {
-      button.classList.add("incorrect");
+function revisarRespuesta(respuestaSeleccionada) {
+    clearInterval(temporizador);
+    
+    let esCorrecto = false;
+    if (respuestaSeleccionada) {
+        const respuestaCorrecta = preguntas[preguntaActualIndex].respuesta;
+        if (respuestaSeleccionada.id.slice(-1) === respuestaCorrecta) {
+            esCorrecto = true;
+            respuestaSeleccionada.classList.add('correct');
+            puntuacion++;
+        } else {
+            respuestaSeleccionada.classList.add('incorrect');
+            // Marcar la respuesta correcta
+            const respuestaCorrectaBtn = document.getElementById(`answer${respuestaCorrecta}`);
+            if (respuestaCorrectaBtn) {
+                respuestaCorrectaBtn.classList.add('correct');
+            }
+        }
     }
-  });
 
-  clearInterval(timer);
-  convertirBotonASiguiente();
+    answerButtons.forEach(btn => btn.disabled = true);
+    actualizarPuntuacion();
+
+    setTimeout(() => {
+        preguntaActualIndex++;
+        mostrarPreguntaActual();
+    }, 2000);
 }
 
-// Convertir el botón "Confirmar" en "Siguiente Pregunta"
-function convertirBotonASiguiente() {
-  const confirmButton = document.getElementById("confirm-btn");
-  confirmButton.textContent = "Siguiente Pregunta";
-  confirmButton.onclick = cargarSiguientePregunta;
-  answerConfirmed = true;
+function usar5050() {
+    if (comodin5050Usado) {
+        mostrarAlerta("Ya usaste este comodín.");
+        return;
+    }
+
+    comodin5050Usado = true;
+    fiftyFiftyBtn.disabled = true;
+
+    const pregunta = preguntas[preguntaActualIndex];
+    const respuestaCorrecta = pregunta.respuesta;
+    const opcionesIncorrectas = pregunta.opciones.filter(op => op.substring(0, 1) !== respuestaCorrecta);
+    const opcionesAEliminar = opcionesIncorrectas.slice(0, 2);
+
+    opcionesAEliminar.forEach(op => {
+        const btn = answerButtons.find(btn => btn.textContent === op);
+        if (btn) {
+            btn.style.display = 'none';
+        }
+    });
 }
 
-// Cargar siguiente pregunta
-function cargarSiguientePregunta() {
-  if (currentQuestionIndex < 14) { // Esto asegura que el juego termine en la pregunta 15
-    currentQuestionIndex++;
-    mostrarNuevaPregunta(preguntas);
-  } else {
-    endGame(); // Finaliza el juego después de 15 preguntas
-  }
+function pasarPregunta() {
+    if (comodinPasarPreguntaUsado) {
+        mostrarAlerta("Ya usaste este comodín.");
+        return;
+    }
+
+    comodinPasarPreguntaUsado = true;
+    nextQuestionBtn.disabled = true;
+
+    preguntaActualIndex++;
+    mostrarPreguntaActual();
+}
+
+function actualizarPuntuacion() {
+    scoreDisplay.textContent = `Puntuación: ${puntuacion}`;
+}
+
+function mostrarPantallaFinal() {
+    document.querySelector('.game-container').style.display = 'none';
+    endScreen.style.display = 'block';
+    finalScoreElement.textContent = `Puntuación final: ${puntuacion}`;
+    questionsAnsweredElement.textContent = `Preguntas respondidas: ${preguntaActualIndex}`;
+    timeRemainingElement.textContent = `Tiempo restante: ${tiempoRestante < 0 ? 0 : tiempoRestante} segundos`;
+}
+
+function reiniciarComodines() {
+    fiftyFiftyBtn.disabled = false;
+    nextQuestionBtn.disabled = false;
+    comodin5050Usado = false;
+    comodinPasarPreguntaUsado = false;
+    pauseTimeBtn.textContent = 'Pausar Tiempo';
+}
+
+function mostrarAlerta(mensaje) {
+    const modal = document.getElementById('message-modal');
+    const modalMessage = document.getElementById('modal-message');
+    const modalOkBtn = document.getElementById('modal-ok-btn');
+
+    modalMessage.textContent = mensaje;
+    modal.style.display = 'block';
+    
+    modalOkBtn.onclick = () => {
+        modal.style.display = 'none';
+    };
 }
 
 
-
-// Reiniciar juego
-function reiniciarJuego() {
-  currentQuestionIndex = 0;
-  score = 0;
-  document.getElementById("score-display").textContent = `Puntuación: ${score}`;
-  mostrarNuevaPregunta(preguntas); // Reinicia el juego mostrando la primera pregunta
-}
-
-
-// Mezclar preguntas
-function mezclarPreguntas() {
-  for (let i = preguntas.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [preguntas[i], preguntas[j]] = [preguntas[j], preguntas[i]];
-  }
-}
-
-// Evento para 50/50
-document.getElementById("fifty-fifty").addEventListener("click", function () {
-  if (fiftyFiftyUsed) return;
-
-  const botonesRespuesta = document.querySelectorAll(".answer-btn");
-  const respuestasIncorrectas = Array.from(botonesRespuesta).filter(button => button.textContent[0] !== correctAnswer);
-  for (let i = 0; i < 2; i++) {
-    const randomIndex = Math.floor(Math.random() * respuestasIncorrectas.length);
-    respuestasIncorrectas[randomIndex].style.display = "none";
-    respuestasIncorrectas.splice(randomIndex, 1);
-  }
-
-  fiftyFiftyUsed = true;
-  disableButton("fifty-fifty");
+// Listeners de eventos
+answerButtons.forEach(btn => btn.addEventListener('click', seleccionarRespuesta));
+confirmBtn.addEventListener('click', () => {
+    const selectedBtn = document.querySelector('.answer-btn.selected');
+    if (selectedBtn) {
+        revisarRespuesta(selectedBtn);
+    }
 });
+fiftyFiftyBtn.addEventListener('click', usar5050);
+pauseTimeBtn.addEventListener('click', pausarJuego);
+nextQuestionBtn.addEventListener('click', pasarPregunta);
+restartBtn.addEventListener('click', iniciarJuego);
 
-// Pausar o reanudar el temporizador
-document.getElementById("pause-time").addEventListener("click", function () {
-  if (timer) {
-    clearInterval(timer);
-    timer = null;
-    this.textContent = "Pausar Tiempo";
-  } else {
-    startTimer();
-    this.textContent = "Pausar Tiempo";
-  }
-  
-  // Deshabilitar el botón después de usarlo
-  disableButton("pause-time");
-});
-
-// Función para deshabilitar un botón
-function disableButton(buttonId) {
-  const button = document.getElementById(buttonId);
-  button.disabled = true;
-  button.style.backgroundColor = "#b0bec5";  // Cambia el color del botón a un gris para indicar que está deshabilitado
-  button.style.cursor = "not-allowed";  // Cambia el cursor para mostrar que el botón no es clickeable
-  button.classList.add("disabled"); // Puedes agregar una clase si quieres personalizar más el estilo
-}
-
-// Función para deshabilitar botones después de usarlos
-document.getElementById("next-question").addEventListener("click", function () {
-  disableButton("next-question");
-});
-
-// Seleccionar respuesta
-const answerButtons = document.querySelectorAll(".answer-btn");
-answerButtons.forEach(button => {
-  button.addEventListener("click", () => {
-    answerButtons.forEach(btn => btn.classList.remove("selected"));
-    button.classList.add("selected");
-    selectedAnswer = button.textContent[0];
-  });
-});
-
-
-
-
-// Función para finalizar el juego
-function endGame() {
-  clearInterval(timer); // Detener el temporizador
-
-  // Ocultar el contenedor del juego
-  document.getElementById("game-container").style.display = "none";
-  
-  // Mostrar la pantalla de fin del juego
-  const endScreen = document.getElementById("end-screen");
-  endScreen.style.display = "block";
-  
-  // Actualizar el mensaje de fin del juego
-  document.getElementById("final-score").textContent = `Puntuación final: ${score}`;
-  document.getElementById("questions-answered").textContent = `Preguntas respondidas: ${currentQuestionIndex + 1}`;
-  document.getElementById("time-remaining").textContent = `Tiempo restante: ${time} segundos`;
-}
-
-
-
-// Iniciar el juego
-iniciarPartida();
+// Iniciar la carga de preguntas
+cargarPreguntas();
