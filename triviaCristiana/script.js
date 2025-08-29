@@ -51,6 +51,30 @@ document.addEventListener('DOMContentLoaded', () => {
     const messageModal = document.getElementById('message-modal');
     const modalMessage = document.getElementById('modal-message');
     const modalOkBtn = document.getElementById('modal-ok-btn');
+    
+    // Nuevos elementos para la pantalla de progresión
+    const progressionScreen = document.getElementById('progression-screen');
+    const progressionStepsContainer = document.getElementById('progression-steps-container');
+    const continueBtn = document.getElementById('continue-btn');
+
+    // Datos de los 15 niveles de progresión
+    const niveles = [
+        { title: "Neófito", emoji: "🔰", description: "Recién iniciado en la fe cristiana, especialmente tras el Bautismo." },
+        { title: "Catecúmeno", emoji: "📖", description: "Persona que se prepara para recibir los sacramentos de iniciación cristiana." },
+        { title: "Aprendiz de la fe", emoji: "🔎", description: "Quien comienza a conocer las enseñanzas de la Iglesia." },
+        { title: "Discípulo en formación", emoji: "💡", description: "Estudia y sigue a Cristo con intencionalidad creciente." },
+        { title: "Creyente comprometido", emoji: "🛐", description: "Vive activamente su fe en la comunidad y busca coherencia cristiana." },
+        { title: "Estudioso del Catecismo", emoji: "🧭", description: "Conoce las enseñanzas esenciales de la Iglesia y su doctrina." },
+        { title: "Iniciado en Teología", emoji: "🧠", description: "Ha comenzado estudios teológicos formales o profundos." },
+        { title: "Servidor pastoral", emoji: "✝️", description: "Participa activamente en la vida de la Iglesia: catequista, lector, animador, etc." },
+        { title: "Estudiante de Teología", emoji: "📚", description: "En formación académica sistemática en teología o ciencias religiosas." },
+        { title: "Teólogo en ejercicio", emoji: "🗝️", description: "Reflexiona, enseña y escribe sobre las verdades de la fe." },
+        { title: "Licenciado en Teología", emoji: "🎓", description: "Ha obtenido un título universitario reconocido en teología." },
+        { title: "Formador o Maestro de la fe", emoji: "🧱", description: "Enseña, guía y acompaña a otros en su camino de fe." },
+        { title: "Profesor o Catedrático en Teología", emoji: "🧑‍🏫", description: "Se dedica a la docencia e investigación académica teológica." },
+        { title: "Santo reconocido por la Iglesia", emoji: "👑", description: "Ha vivido la fe de forma heroica y es modelo de vida cristiana." },
+        { title: "Doctor de la Iglesia", emoji: "🦉", description: "Santo/a cuyas enseñanzas teológicas o espirituales tienen valor universal y permanente." }
+    ];
 
     // === Lógica para la conexión a Firebase y carga de datos ===
     const questionsRef = ref(db, 'questions');
@@ -102,6 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
         answersContainer.style.display = 'grid';
         confirmBtn.style.display = 'block';
         endScreen.style.display = 'none';
+        progressionScreen.style.display = 'none'; // Asegurar que la pantalla de progresión esté oculta al inicio
         mostrarPregunta();
     }
 
@@ -163,7 +188,6 @@ document.addEventListener('DOMContentLoaded', () => {
         
         answerButtons.forEach(btn => btn.disabled = true);
 
-        // La respuesta correcta en la base de datos es una letra (A, B, C, D)
         const correctaOriginalIndex = pregunta.respuesta.charCodeAt(0) - 'A'.charCodeAt(0);
         const textoRespuestaCorrecta = pregunta.opciones[correctaOriginalIndex];
         
@@ -179,14 +203,63 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
         
-        confirmBtn.textContent = 'Siguiente';
-        confirmBtn.disabled = false;
-        estadoBotonConfirmar = 'siguiente';
+        // Mostrar la pantalla de progresión
+        setTimeout(() => {
+            mostrarPantallaProgreso();
+        }, 1500); // Dar tiempo para que el usuario vea si acertó o no
     }
 
+    // Función para mostrar la pantalla de progreso
+    function mostrarPantallaProgreso() {
+        // Ocultar el juego principal
+        document.querySelector('.game-container > h1').style.display = 'none';
+        document.querySelector('.header-info').style.display = 'none';
+        questionTextElement.style.display = 'none';
+        answersContainer.style.display = 'none';
+        confirmBtn.style.display = 'none';
+        document.querySelector('.controls').style.display = 'none';
+        document.getElementById('admin-link').style.display = 'none';
+        
+        // Mostrar la pantalla de progresión
+        progressionScreen.style.display = 'flex';
+        renderProgressionSteps();
+    }
+
+    // Función para renderizar los 15 escalones
+    function renderProgressionSteps() {
+        progressionStepsContainer.innerHTML = '';
+        niveles.forEach((nivel, index) => {
+            const stepElement = document.createElement('div');
+            stepElement.classList.add('progression-step');
+            
+            // El índice de la pregunta actual es igual a la puntuación
+            if (puntuacion > index) {
+                stepElement.classList.add('completed');
+            }
+            
+            stepElement.innerHTML = `
+                <h4>${index + 1}. ${nivel.emoji} ${nivel.title}</h4>
+                <p>${nivel.description}</p>
+            `;
+            progressionStepsContainer.appendChild(stepElement);
+        });
+    }
+
+    // Función para pasar a la siguiente pregunta
     function pasarSiguientePregunta() {
         preguntaActualIndex++;
         if (preguntaActualIndex < preguntas.length) {
+            // Ocultar la pantalla de progresión
+            progressionScreen.style.display = 'none';
+            // Mostrar el juego principal
+            document.querySelector('.game-container > h1').style.display = 'block';
+            document.querySelector('.header-info').style.display = 'flex';
+            questionTextElement.style.display = 'block';
+            answersContainer.style.display = 'grid';
+            confirmBtn.style.display = 'block';
+            document.querySelector('.controls').style.display = 'flex';
+            document.getElementById('admin-link').style.display = 'block';
+            
             mostrarPregunta();
         } else {
             mostrarPantallaFinal();
@@ -197,6 +270,7 @@ document.addEventListener('DOMContentLoaded', () => {
         clearInterval(temporizador);
         answersContainer.style.display = 'none';
         confirmBtn.style.display = 'none';
+        progressionScreen.style.display = 'none';
         endScreen.style.display = 'block';
         finalScoreSpan.textContent = puntuacion;
         questionsAnsweredSpan.textContent = preguntas.length;
@@ -252,6 +326,10 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             pasarSiguientePregunta();
         }
+    });
+
+    continueBtn.addEventListener('click', () => {
+        pasarSiguientePregunta();
     });
 
     modalOkBtn.addEventListener('click', () => {
