@@ -12,16 +12,16 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Usa min-height para que el contenido pueda crecer */
+    min-height: 100vh;
     flex-direction: column;
-    padding: 1rem; /* Padding general para que el contenido no toque los bordes */
-    box-sizing: border-box; /* Incluye padding y borde en el ancho/alto */
+    padding: 1rem;
+    box-sizing: border-box;
 }
 
 /* Contenedor del juego y admin */
 .game-container, .admin-container {
-    width: 95%; /* Ocupa casi todo el ancho */
-    max-width: 900px; /* Aumentado para mejor visualización en pantallas más grandes */
+    width: 95%;
+    max-width: 900px;
     background: rgba(0, 51, 102, 0.85);
     border-radius: 20px;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
@@ -44,7 +44,7 @@ body {
 }
 
 .game-title {
-    font-size: clamp(1.8rem, 5vw, 2.8rem); /* Font-size adaptable */
+    font-size: clamp(1.8rem, 5vw, 2.8rem);
     color: #ffcc00;
     text-shadow: 2px 2px 4px #000;
     margin-bottom: 1.5rem;
@@ -69,7 +69,7 @@ body {
     font-size: 1rem;
     background-color: #f0f0f0;
     color: #003366;
-    box-sizing: border-box; /* Asegura que el padding no desborde */
+    box-sizing: border-box;
 }
 
 .admin-container button {
@@ -96,14 +96,14 @@ body {
     margin-top: 1.5rem;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
-    table-layout: fixed; /* Ayuda a que las columnas no se desborden */
+    table-layout: fixed;
 }
 
 .admin-container th, .admin-container td {
     border: 1px solid #ffcc00;
     padding: 0.75rem;
     text-align: left;
-    word-wrap: break-word; /* Rompe palabras largas */
+    word-wrap: break-word;
 }
 
 .admin-container th {
@@ -113,7 +113,7 @@ body {
 
 /* Estilos de botones de respuesta */
 .answer-btn {
-    width: 95%; /* Ajustado para un mejor espaciado */
+    width: 95%;
     padding: 1.25rem;
     margin: 0.75rem auto;
     background-color: #003366;
@@ -127,7 +127,7 @@ body {
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     word-wrap: break-word;
-    min-height: 50px; /* Altura mínima para mejor tacto */
+    min-height: 50px;
 }
 
 .answer-btn:hover {
@@ -184,13 +184,13 @@ body {
 .controls {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* Permite que los botones se envuelvan en pantallas pequeñas */
+    flex-wrap: wrap;
     gap: 0.5rem;
     margin-top: 1.5rem;
 }
 
 .controls button {
-    flex: 1 1 auto; /* Permite que los botones crezcan y se adapten */
+    flex: 1 1 auto;
     max-width: 150px;
     background-color: #005f99;
     color: #fff;
@@ -399,8 +399,10 @@ body {
         border-bottom: 1px solid #ffcc00;
         padding-left: 50%;
         position: relative;
+        /* Aseguramos que el texto se ajuste */
+        white-space: normal;
     }
-    
+
     .admin-container td:before {
         content: attr(data-label);
         position: absolute;
