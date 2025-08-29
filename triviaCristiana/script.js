@@ -272,6 +272,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }, 1000);
         }
+
+        
     }
 
     function reiniciarTemporizador() {
@@ -299,7 +301,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Listeners de eventos
     answerButtons.forEach(btn => btn.addEventListener('click', seleccionarRespuesta));
 
-    confirmBtn.addEventListener('click', () => {
+        confirmBtn.addEventListener('click', () => {
         if (estadoBotonConfirmar === 'confirmar') {
             const selectedBtn = document.querySelector('.answer-btn.selected');
             if (selectedBtn) {
@@ -307,7 +309,7 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 mostrarAlerta("Por favor, selecciona una respuesta antes de confirmar.");
             }
-        } else {
+        } else if (estadoBotonConfirmar === 'siguiente') {
             // Si la respuesta fue correcta, muestra la pantalla de progresión
             if (esCorrecto) {
                 mostrarPantallaProgresion();
@@ -315,6 +317,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Si la respuesta fue incorrecta, avanza a la siguiente pregunta directamente
                 pasarSiguientePregunta();
             }
+        } else if (estadoBotonConfirmar === 'finalizar') {
+            finalizarJuego();
         }
     });
 
@@ -379,4 +383,28 @@ document.addEventListener('DOMContentLoaded', () => {
             comodinPausarTiempoUsado = true;
         }
     });
+
+
+
+    // Función para mostrar la pantalla de fin de partida
+function endGame() {
+    const gameContainer = document.getElementById('game-container');
+    const endScreen = document.getElementById('end-screen');
+    const finalScoreSpan = document.getElementById('final-score');
+    const questionsAnsweredSpan = document.getElementById('questions-answered');
+    const remainingTimeSpan = document.getElementById('remaining-time');
+    
+    // Detiene el temporizador y el juego
+    clearInterval(temporizador);
+    
+    // Actualiza la información en la pantalla final
+    finalScoreSpan.textContent = puntuacion;
+    questionsAnsweredSpan.textContent = preguntasRespondidas;
+    remainingTimeSpan.textContent = segundosRestantes;
+    
+    // Oculta la pantalla del juego y muestra la pantalla final
+    gameContainer.style.display = 'none';
+    endScreen.style.display = 'flex'; // O 'block', si no usas Flexbox para el centrado
+}
+
 });
