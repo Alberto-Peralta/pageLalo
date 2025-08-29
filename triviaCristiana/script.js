@@ -157,12 +157,13 @@ function revisarRespuesta() {
     clearInterval(temporizador);
     
     const pregunta = preguntas[preguntaActualIndex];
-    const respuestaCorrecta = pregunta.respuesta;
-    const respuestaCorrectaBtn = document.getElementById(`answer${respuestaCorrecta}`);
+    const respuestaCorrectaLetra = pregunta.respuesta;
+    const respuestaCorrectaIndex = ['A', 'B', 'C', 'D'].indexOf(respuestaCorrectaLetra);
+    const respuestaCorrectaBtn = answerButtons[respuestaCorrectaIndex];
 
     if (respuestaSeleccionada) {
-        const respuestaSeleccionadaLetra = respuestaSeleccionada.id.slice(-1);
-        if (respuestaSeleccionadaLetra === respuestaCorrecta) {
+        const respuestaSeleccionadaIndex = answerButtons.indexOf(respuestaSeleccionada);
+        if (respuestaSeleccionadaIndex === respuestaCorrectaIndex) {
             respuestaSeleccionada.classList.add('correct');
             puntuacion++;
         } else {
@@ -199,8 +200,10 @@ function usar5050() {
     fiftyFiftyBtn.disabled = true;
 
     const pregunta = preguntas[preguntaActualIndex];
-    const respuestaCorrecta = pregunta.respuesta;
-    const opcionesIncorrectas = answerButtons.filter(btn => btn.id.slice(-1) !== respuestaCorrecta);
+    const respuestaCorrectaLetra = pregunta.respuesta;
+    const respuestaCorrectaIndex = ['A', 'B', 'C', 'D'].indexOf(respuestaCorrectaLetra);
+
+    const opcionesIncorrectas = answerButtons.filter((btn, index) => index !== respuestaCorrectaIndex);
     
     const opcionesAEliminar = [];
     while (opcionesAEliminar.length < 2) {
