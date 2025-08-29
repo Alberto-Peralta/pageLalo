@@ -59,8 +59,6 @@ function cargarPreguntas() {
             preguntas = Object.values(data);
             iniciarJuego();
         } else {
-            // Si no hay preguntas en la base de datos, usamos las del archivo local
-            // Suponiendo que tienes un archivo preguntas.js con el array 'preguntas'
             if (window.preguntas && window.preguntas.length > 0) {
                 preguntas = window.preguntas;
                 iniciarJuego();
@@ -118,7 +116,7 @@ function iniciarTemporizador() {
 
             if (tiempoRestante <= 0) {
                 clearInterval(temporizador);
-                revisarRespuesta(null); // Pasa null para indicar que el tiempo se acabó
+                revisarRespuesta(null);
             }
         }
     }, 1000);
@@ -147,7 +145,6 @@ function revisarRespuesta(respuestaSeleccionada) {
             puntuacion++;
         } else {
             respuestaSeleccionada.classList.add('incorrect');
-            // Marcar la respuesta correcta
             const respuestaCorrectaBtn = document.getElementById(`answer${respuestaCorrecta}`);
             if (respuestaCorrectaBtn) {
                 respuestaCorrectaBtn.classList.add('correct');
@@ -234,4 +231,17 @@ function mostrarAlerta(mensaje) {
 
 
 // Listeners de eventos
-answerButtons
+answerButtons.forEach(btn => btn.addEventListener('click', seleccionarRespuesta));
+confirmBtn.addEventListener('click', () => {
+    const selectedBtn = document.querySelector('.answer-btn.selected');
+    if (selectedBtn) {
+        revisarRespuesta(selectedBtn);
+    }
+});
+fiftyFiftyBtn.addEventListener('click', usar5050);
+pauseTimeBtn.addEventListener('click', pausarJuego);
+nextQuestionBtn.addEventListener('click', pasarPregunta);
+restartBtn.addEventListener('click', iniciarJuego);
+
+// Iniciar la carga de preguntas
+cargarPreguntas();
