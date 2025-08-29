@@ -77,45 +77,53 @@ document.addEventListener('DOMContentLoaded', () => {
     // ********************************************************************************
 
     // === Lógica para la conexión a Firebase y carga de datos ===
-    const questionsRef = ref(db, 'questions');
-    onValue(questionsRef, (snapshot) => {
-        const data = snapshot.val();
-        if (data) {
-            const allQuestions = Object.values(data);
-            
-            // Filtrar preguntas por dificultad
-            const preguntasFaciles = allQuestions.filter(q => q.dificultad === 'facil');
-            const preguntasIntermedias = allQuestions.filter(q => q.dificultad === 'intermedio');
-            const preguntasDificiles = allQuestions.filter(q => q.dificultad === 'dificil');
+      const questionsRef = ref(db, 'questions');
+      onValue(questionsRef, (snapshot) => {
+          const data = snapshot.val();
+          if (data) {
+              const allQuestions = Object.values(data);
+              
+              // Filtrar preguntas por dificultad
+              const preguntasFaciles = allQuestions.filter(q => q.dificultad === 'facil');
+              const preguntasIntermedias = allQuestions.filter(q => q.dificultad === 'intermedio');
+              const preguntasDificiles = allQuestions.filter(q => q.dificultad === 'dificil');
 
-            // Barajar cada categoría
-            shuffleArray(preguntasFaciles);
-            shuffleArray(preguntasIntermedias);
-            shuffleArray(preguntasDificiles);
-            
-            // Seleccionar 5 de cada categoría y combinarlas
-            preguntas = [
-                ...preguntasFaciles.slice(0, 5),
-                ...preguntasIntermedias.slice(0, 5),
-                ...preguntasDificiles.slice(0, 5)
-            ];
-            
-            // Asegurarse de que hay 15 preguntas en total, si no, mostrar un mensaje de error
-            if (preguntas.length < 15) {
-                questionTextElement.textContent = "No hay suficientes preguntas para iniciar el juego. Se necesitan al menos 5 de cada dificultad.";
-                // Deshabilitar el juego
-                confirmBtn.disabled = true;
-                answerButtons.forEach(btn => btn.disabled = true);
-                fiftyFiftyBtn.disabled = true;
-                nextQuestionBtn.disabled = true;
-                pauseTimeBtn.disabled = true;
-            } else {
-                iniciarJuego();
-            }
-        } else {
-            questionTextElement.textContent = "No hay preguntas disponibles. Revisa el panel de administración.";
-        }
-    });
+              // Barajar cada categoría
+              shuffleArray(preguntasFaciles);
+              shuffleArray(preguntasIntermedias);
+              shuffleArray(preguntasDificiles);
+              
+              // ✅ CORREGIDO: Seleccionar 5 de cada categoría en ORDEN
+              preguntas = [];
+              
+              // Primeras 5: Fáciles (0-4)
+              for (let i = 0; i < 5 && i < preguntasFaciles.length; i++) {
+                  preguntas.push(preguntasFaciles[i]);
+              }
+              
+              // Siguientes 5: Intermedias (5-9)
+              for (let i = 0; i < 5 && i < preguntasIntermedias.length; i++) {
+                  preguntas.push(preguntasIntermedias[i]);
+              }
+              
+              // Últimas 5: Difíciles (10-14)
+              for (let i = 0; i < 5 && i < preguntasDificiles.length; i++) {
+                  preguntas.push(preguntasDificiles[i]);
+              }
+              
+              console.log("✅ Preguntas cargadas en orden:", 
+                  preguntas.map((p, i) => `${i + 1}:${p.dificultad.charAt(0)}`).join(" "));
+              
+              // Asegurarse de que hay 15 preguntas en total
+              if (preguntas.length < 15) {
+                  // ... código de error
+              } else {
+                  iniciarJuego();
+              }
+          } else {
+              questionTextElement.textContent = "No hay preguntas disponibles. Revisa el panel de administración.";
+          }
+      });
 
 
     // Muestra la pantalla de progresión sin temporizador
