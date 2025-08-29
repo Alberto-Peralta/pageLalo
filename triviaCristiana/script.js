@@ -192,7 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
             confirmBtn.textContent = 'Confirmar';
             confirmBtn.disabled = true;
             estadoBotonConfirmar = 'confirmar';
-            esCorrecto = false;
+            esCorrecto = false; // Reinicia el estado de la respuesta
         } else {
             mostrarPantallaFinal();
         }
@@ -223,10 +223,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const textoRespuestaCorrecta = pregunta.opciones[correctaOriginalIndex];
         
         if (selectedOptionText === textoRespuestaCorrecta) {
+            esCorrecto = true; // Actualiza el estado de la respuesta
             puntuacion++;
             scoreDisplay.textContent = `Puntuación: ${puntuacion}`;
             selectedBtn.classList.add('correct');
         } else {
+            esCorrecto = false; // Actualiza el estado de la respuesta
             selectedBtn.classList.add('incorrect');
             const correctButton = Array.from(answerButtons).find(btn => btn.dataset.textoOpcion === textoRespuestaCorrecta);
             if (correctButton) {
@@ -307,7 +309,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         } else {
             // Si la respuesta fue correcta, muestra la pantalla de progresión
-            if (document.querySelector('.answer-btn.correct')) {
+            if (esCorrecto) {
                 mostrarPantallaProgresion();
             } else {
                 // Si la respuesta fue incorrecta, avanza a la siguiente pregunta directamente
