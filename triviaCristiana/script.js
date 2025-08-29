@@ -206,73 +206,65 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Función para revisar la respuesta del usuario
-  function revisarRespuesta() {
-    clearInterval(temporizador);
-    const selectedBtn = document.querySelector('.answer-btn.selected');
-    
-    if (!selectedBtn) return;
-    
-    const pregunta = preguntas[preguntaActualIndex];
+    function revisarRespuesta() {
+        clearInterval(temporizador);
+        const selectedBtn = document.querySelector('.answer-btn.selected');
+        
+        // Si no se selecciona ninguna respuesta, no hacer nada (esto debería ser manejado por el botón confirmar)
+        if (!selectedBtn) return;
+        
+        const selectedOptionText = selectedBtn.dataset.textoOpcion;
+        const pregunta = preguntas[preguntaActualIndex];
+        
+        answerButtons.forEach(btn => btn.disabled = true);
 
-    // Verificar si la pregunta existe antes de acceder a sus propiedades
-    if (!pregunta) {
-        finalizarJuego();
-        return;
-    }
-    
-    const selectedOptionText = selectedBtn.dataset.textoOpcion;
-    
-    answerButtons.forEach(btn => btn.disabled = true);
-
-    const correctaOriginalIndex = pregunta.respuesta.charCodeAt(0) - 'A'.charCodeAt(0);
-    const textoRespuestaCorrecta = pregunta.opciones[correctaOriginalIndex];
-    
-    if (selectedOptionText === textoRespuestaCorrecta) {
-        esCorrecto = true;
-        puntuacion++;
-        scoreDisplay.textContent = `Puntuación: ${puntuacion}`;
-        selectedBtn.classList.add('correct');
-    } else {
-        esCorrecto = false;
-        selectedBtn.classList.add('incorrect');
-        const correctButton = Array.from(answerButtons).find(btn => btn.dataset.textoOpcion === textoRespuestaCorrecta);
-        if (correctButton) {
-            correctButton.classList.add('correct');
+        // La respuesta correcta en la base de datos es una letra (A, B, C, D)
+        const correctaOriginalIndex = pregunta.respuesta.charCodeAt(0) - 'A'.charCodeAt(0);
+        const textoRespuestaCorrecta = pregunta.opciones[correctaOriginalIndex];
+        
+        if (selectedOptionText === textoRespuestaCorrecta) {
+            esCorrecto = true; // Actualiza el estado de la respuesta
+            puntuacion++;
+            scoreDisplay.textContent = `Puntuación: ${puntuacion}`;
+            selectedBtn.classList.add('correct');
+        } else {
+            esCorrecto = false; // Actualiza el estado de la respuesta
+            selectedBtn.classList.add('incorrect');
+            const correctButton = Array.from(answerButtons).find(btn => btn.dataset.textoOpcion === textoRespuestaCorrecta);
+            if (correctButton) {
+                correctButton.classList.add('correct');
+            }
         }
-    }
-    
-    // Incrementa el índice y verifica si el juego debe terminar
-    preguntaActualIndex++;
-    if (preguntaActualIndex < preguntas.length) {
+        
         confirmBtn.textContent = 'Siguiente';
         confirmBtn.disabled = false;
         estadoBotonConfirmar = 'siguiente';
-    } else {
-        setTimeout(() => {
-            finalizarJuego();
-        }, 1500);
     }
-}
 
-    function pasarSiguientePregunta() {
-        preguntaActualIndex++;
-        if (preguntaActualIndex < preguntas.length) {
-            mostrarPregunta();
-        } else {
-            mostrarPantallaFinal();
+          function pasarSiguientePregunta() {
+            preguntaActualIndex++;
+            console.log("Índice actual:", preguntaActualIndex, "Total preguntas:", preguntas.length); // Debug
+            
+            if (preguntaActualIndex < preguntas.length) {
+                mostrarPregunta();
+            } else {
+                console.log("Mostrando pantalla final"); // Debug
+                mostrarPantallaFinal();
+            }
         }
-    }
 
-    function mostrarPantallaFinal() {
-        clearInterval(temporizador);
-        gameContainer.style.display = 'none';
-        answersContainer.style.display = 'none';
-        confirmBtn.style.display = 'none';
-        endScreen.style.display = 'block';
-        finalScoreSpan.textContent = puntuacion;
-        questionsAnsweredSpan.textContent = preguntas.length;
-        remainingTimeSpan.textContent = tiempoRestante;
-    }
+        function mostrarPantallaFinal() {
+          clearInterval(temporizador);
+          // En lugar de ocultar gameContainer, oculta solo los elementos del juego
+          answersContainer.style.display = 'none';
+          confirmBtn.style.display = 'none';
+          document.querySelector('.controls').style.display = 'none';
+          document.querySelector('.header-info').style.display = 'none';
+          document.querySelector('.game-title').style.display = 'none';
+          
+          // Muestra la pantalla final
+          endScreen.style.display = 'block';
+      }
 
     function iniciarTemporizador() {
         if (!tiempoPausado) {
@@ -285,8 +277,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }, 1000);
         }
-
-        
     }
 
     function reiniciarTemporizador() {
@@ -314,7 +304,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Listeners de eventos
     answerButtons.forEach(btn => btn.addEventListener('click', seleccionarRespuesta));
 
-        confirmBtn.addEventListener('click', () => {
+    confirmBtn.addEventListener('click', () => {
         if (estadoBotonConfirmar === 'confirmar') {
             const selectedBtn = document.querySelector('.answer-btn.selected');
             if (selectedBtn) {
@@ -322,11 +312,12 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 mostrarAlerta("Por favor, selecciona una respuesta antes de confirmar.");
             }
-        } else if (estadoBotonConfirmar === 'siguiente') {
-            // Unifica el flujo para que siempre pase por la misma función
+        } else {
+            // Si la respuesta fue correcta, muestra la pantalla de progresión
             if (esCorrecto) {
                 mostrarPantallaProgresion();
             } else {
+                // Si la respuesta fue incorrecta, avanza a la siguiente pregunta directamente
                 pasarSiguientePregunta();
             }
         }
@@ -342,16 +333,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Lógica para que el botón de continuar de la pantalla de progresión avance el juego
-continueBtn.addEventListener('click', () => {
+    continueBtn.addEventListener('click', () => {
         gameContainer.style.display = 'block';
         progressionScreen.style.display = 'none';
-        
-        // La lógica para pasar a la siguiente pregunta solo se ejecuta si aún no es la última
-        if (preguntaActualIndex < preguntas.length) {
-            pasarSiguientePregunta();
-        } else {
-            finalizarJuego();
-        }
+        pasarSiguientePregunta();
     });
 
     // === Lógica de Comodines ===
@@ -399,26 +384,4 @@ continueBtn.addEventListener('click', () => {
             comodinPausarTiempoUsado = true;
         }
     });
-
-
-
-    // Función para mostrar la pantalla de fin de partida
-
-function finalizarJuego() {
-    // Asegúrate de que todas las variables del DOM están definidas y accesibles aquí
-    const gameContainer = document.getElementById('game-container');
-    const endScreen = document.getElementById('end-screen');
-    const finalScoreElement = document.getElementById('final-score');
-    const questionsAnsweredElement = document.getElementById('questions-answered');
-    
-    clearInterval(temporizador);
-    
-    gameContainer.style.display = 'none';
-    endScreen.style.display = 'block';
-
-    finalScoreElement.textContent = puntuacion;
-    questionsAnsweredElement.textContent = preguntas.length;
-}
-
-
 });
