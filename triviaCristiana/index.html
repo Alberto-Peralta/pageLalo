@@ -6,10 +6,29 @@
   <meta name="description" content="Juego de preguntas al estilo ¿Quién quiere ser millonario? con niveles, temporizador y comodines.">
   <title>Juego de Preguntas</title>
   <link rel="stylesheet" href="style.css">
+  
+  <script type="module" src="script.js"></script>
 </head>
 <body>
   <div class="game-container" role="main">
     <h1 class="game-title">¿Quién quiere ser Cristiano?</h1>
+
+    <div id="message-modal" class="modal">
+        <div class="modal-content">
+            <p id="modal-message"></p>
+            <button id="modal-ok-btn">OK</button>
+        </div>
+    </div>
+
+    <div id="confirm-modal" class="modal">
+        <div class="modal-content">
+            <p id="confirm-message"></p>
+            <div class="modal-buttons">
+                <button id="confirm-yes-btn">Sí</button>
+                <button id="confirm-no-btn">No</button>
+            </div>
+        </div>
+    </div>
 
     <div id="score-display">Puntuación: 0</div>
     <div id="time">30</div>
@@ -21,19 +40,16 @@
       <button class="answer-btn" id="answer4"></button>
     </div>
 
-    <!-- Botón de Confirmar -->
     <button id="confirm-btn" aria-label="Confirmar respuesta seleccionada">Confirmar</button><br><br><br>
-
+    
     <div class="controls">
       <button id="fifty-fifty" aria-label="Usar comodín 50/50">50/50</button>
       <button id="pause-time" aria-label="Pausar temporizador">Pausar Tiempo</button>
       <button id="next-question" aria-label="Pasar a la siguiente pregunta">Saltar Pregunta</button>
     </div>
     
-    <!-- Nuevo botón para acceder al panel de administración -->
     <a href="admin.html" id="admin-link">Ir al Panel de Administración</a>
 
-    <!-- Pantalla de fin del juego -->
     <div id="end-screen" style="display: none;">
       <h2>Juego Terminado</h2>
       <p id="final-score">Puntuación final: 0</p>
@@ -45,9 +61,10 @@
   </div>
   
   <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
   <script src="preguntas.js"></script>
   <script src="script.js"></script>
+
 </body>
 </html>

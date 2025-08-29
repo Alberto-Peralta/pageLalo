@@ -37,194 +37,185 @@ body {
     align-items: center;
 }
 
-.game-container:hover {
-    transform: translateY(-5px);
-}
-
-/* Título del juego */
 .game-title {
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: #ffcc00;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 8px rgba(255, 204, 0, 0.8);
-}
-
-/* Estilos para el temporizador */
-#time-remaining {
-    font-size: 3rem;
-    font-weight: bold;
-    color: #ffcc00;
-    padding: 10px 20px;
-    border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.3);
     margin-bottom: 20px;
 }
 
-/* Estilos para la pregunta */
-#question-text {
-    font-size: 1.8rem;
-    margin: 20px 0;
-    min-height: 80px;
+/* Estilos para el panel de administración */
+.admin-container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    background-color: #004d99;
+}
+
+.admin-container h2 {
+    color: #ffcc00;
+}
+
+.admin-container input, .admin-container textarea, .admin-container select {
+    width: 80%;
     padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
 }
 
-/* Contenedor de respuestas */
-#answers {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-    margin: 20px 0;
+.admin-container button {
+    background-color: #ffcc00;
+    color: #003366;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
 }
 
-/* Botones de respuesta */
+.admin-container button:hover {
+    background-color: #ffb800;
+}
+
+.admin-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.admin-container th, .admin-container td {
+    border: 1px solid #ffcc00;
+    padding: 10px;
+    text-align: left;
+}
+
+.admin-container th {
+    background-color: #003366;
+    color: #ffcc00;
+}
+
+/* Estilos de botones de respuesta */
 .answer-btn {
-    font-size: 1.2rem;
+    width: 80%;
     padding: 15px;
+    margin: 10px auto;
+    background-color: #003366;
+    color: #ffcc00;
     border: 2px solid #ffcc00;
     border-radius: 10px;
-    background-color: rgba(255, 204, 0, 0.1);
-    color: #ffffff;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.1s, border-color 0.3s;
-    font-weight: bold;
+    font-size: 1.2rem;
+    transition: background-color 0.3s, color 0.3s;
+    text-align: center;
 }
 
 .answer-btn:hover {
-    background-color: rgba(255, 204, 0, 0.3);
-    transform: scale(1.02);
-}
-
-/* Estilos para la respuesta seleccionada */
-.answer-btn.selected {
     background-color: #ffcc00;
     color: #003366;
-    transform: scale(1.05);
-    box-shadow: 0 0 15px #ffcc00;
 }
 
-/* Estilos para respuesta correcta */
-.answer-btn.correct {
-    background-color: #4CAF50; /* Verde */
-    border-color: #4CAF50;
-    color: white;
-}
-
-/* Estilos para respuesta incorrecta */
-.answer-btn.incorrect {
-    background-color: #F44336; /* Rojo */
-    border-color: #F44336;
-    color: white;
-}
-
-/* Botón de confirmar */
 #confirm-btn {
     padding: 15px 30px;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     background-color: #4CAF50;
     color: white;
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    transition: background-color 0.3s;
-    font-weight: bold;
-    margin-top: 20px;
 }
 
 #confirm-btn:hover {
     background-color: #45a049;
 }
 
-#confirm-btn:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-}
-
-/* Estilos para comodines */
-.controls {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-}
-
+/* Estilos de comodines */
 .controls button {
-    padding: 10px 20px;
-    font-size: 1rem;
-    border: 2px solid #ffffff;
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #ffffff;
-    border-radius: 10px;
+    background-color: #005f99;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 .controls button:hover {
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: #004c80;
 }
 
-.controls button:disabled {
-    background-color: #555;
-    border-color: #555;
-    cursor: not-allowed;
-}
-
-.answer-btn.hidden {
-    visibility: hidden;
-}
-
-/* Estilos del panel de administración */
-.admin-container {
-    background: #2c3e50;
-    color: #ecf0f1;
-}
-
-.admin-container h2, .admin-container h3 {
-    color: #3498db;
-}
-
-.admin-container input, .admin-container textarea, .admin-container select {
-    width: calc(100% - 22px);
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    border: 1px solid #7f8c8d;
-    background-color: #34495e;
-    color: #ecf0f1;
-}
-
-.admin-container button {
-    padding: 10px 20px;
-    font-size: 1rem;
-    background-color: #3498db;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 5px;
-}
-
-.admin-container button:hover {
-    background-color: #2980b9;
-}
-
-.list-section table {
-    width: 100%;
-    border-collapse: collapse;
+/* Estilos para el nuevo enlace de administrador */
+.admin-access {
     margin-top: 20px;
 }
 
-.list-section th, .list-section td {
-    border: 1px solid #7f8c8d;
-    padding: 8px;
-    text-align: left;
+.admin-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffcc00;
+    color: #003366;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
-.list-section th {
-    background-color: #34495e;
-    color: #ecf0f1;
+.admin-link:hover {
+    background-color: #ffb800;
 }
+
+/* Estilos de los modales (alerta y confirmación) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #003366;
+    padding: 20px;
+    border: 1px solid #ffcc00;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.modal-content p {
+    color: #ffcc00;
+    font-size: 1.2rem;
+}
+
+.modal-content button {
+    background-color: #ffcc00;
+    color: #003366;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal-content .modal-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.modal-content .modal-buttons button {
+    flex-grow: 1;
+}
+
 
 /* Estilos para la pantalla de fin de juego */
 #end-screen {
@@ -267,38 +258,24 @@ body {
 
 .progress-bar {
     height: 100%;
-    width: 0%;
     background-color: #ffcc00;
     border-radius: 5px;
-    transition: width 0.5s ease-in-out;
+    transition: width 0.5s linear;
 }
 
-.titles-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-weight: bold;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+/* Estilos para los mensajes de acierto/error */
+.correct {
+    background-color: #28a745 !important;
 }
 
-/* Media Queries para dispositivos pequeños */
-@media (max-width: 480px) {
-    #time-remaining {
-        font-size: 2.5rem;
-    }
+.incorrect {
+    background-color: #dc3545 !important;
+}
 
-    #question-text {
-        font-size: 1.5rem;
-    }
+.correct-text {
+    color: #28a745 !important;
+}
 
-    .answer-btn {
-        font-size: 1rem;
-        padding: 10px;
-    }
-
-    #answers {
-        grid-template-columns: 1fr;
-    }
+.incorrect-text {
+    color: #dc3545 !important;
 }
