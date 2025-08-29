@@ -192,6 +192,12 @@ body {
     /* Elimina cualquier 'margin' que pueda interferir con el centrado */
 }
 
+.confirm-btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem; /* O el valor que prefieras para el espaciado superior */
+}
+
 #confirm-btn:hover {
     transform: translateY(-2px);
 }
