@@ -34,6 +34,10 @@ document.addEventListener('DOMContentLoaded', () => {
     let tiempoPausado = false;
 
     // Elementos de la UI
+    const gameContainer = document.getElementById('game-container');
+    const progressionScreen = document.getElementById('progression-screen');
+    const progressionStepsContainer = document.getElementById('progression-steps-container');
+    const continueBtn = document.getElementById('continue-btn');
     const questionTextElement = document.getElementById('question-text');
     const answersContainer = document.getElementById('answers');
     const answerButtons = document.querySelectorAll('.answer-btn');
@@ -51,30 +55,26 @@ document.addEventListener('DOMContentLoaded', () => {
     const messageModal = document.getElementById('message-modal');
     const modalMessage = document.getElementById('modal-message');
     const modalOkBtn = document.getElementById('modal-ok-btn');
-    
-    // Nuevos elementos para la pantalla de progresión
-    const progressionScreen = document.getElementById('progression-screen');
-    const progressionStepsContainer = document.getElementById('progression-steps-container');
-    const continueBtn = document.getElementById('continue-btn');
 
     // Datos de los 15 niveles de progresión
     const niveles = [
-        { title: "Neófito", emoji: "🔰", description: "🍼 No sabe si se dice amén o salud, pero ya quiere evangelizar" },
-        { title: "Catecúmeno", emoji: "📖", description: "⏳ Suena a hechizo de Harry Potter, pero en realidad es alguien que todavía no se bautiza... aunque ya se siente parte del team Jesús" },
-        { title: "Aprendiz de la fe", emoji: "🔎", description: "🧐 Sabe que hay cuatro evangelios… pero cree que Pablo escribió uno" },
-        { title: "Discípulo en formación", emoji: "💡", description: "📓 Sigue a Jesús… pero todavía se pierde entre Levítico y Deuteronomio" },
-        { title: "Creyente comprometido", emoji: "🛐", description: "💪 Va a misa sin que lo arrastren. Hasta se emociona por el ofertorio" },
-        { title: "Estudioso del Catecismo", emoji: "🧭", description: "📘 Le dicen el “Catekisman” porque cita el número exacto antes de que termines tu pregunta" },
-        { title: "Iniciado en Teología", emoji: "🧠", description: "🧠 Dice cosas como ontología trinitaria mientras se sirve cereal y cree que Santo Tomás y San Agustín fueron roomies en el cielo" },
-        { title: "Servidor pastoral", emoji: "✝️", description: "🛠️ Es el multiusos de la parroquia. Da catequesis, barre la capilla y hace teatro bíblico… todo en una tarde (Sueña con tener su propio gafete con foto y cita bíblicas)" },
-        { title: "Estudiante de Teología", emoji: "📚", description: "Tiene más libros que calcetines. Sueña con San Agustín y tiene pesadillas con exámenes de eclesiología" },
-        { title: "Teólogo en ejercicio", emoji: "🗝️", description: "🧠 La fe y la razón no se pelean… solo discuten apasionadamente (Corrige homilías mentalmente y empieza frases con: según la Patrística…)" },
-        { title: "Licenciado en Teología", emoji: "🎓", description: "🎓 No presume, pero casualmente deja su título en la mesa cuando invitan café. Ya no dice “la Iglesia enseña”, dice “según el magisterio ordinario y extraordinario…" },
-        { title: "Formador o Maestro de la fe", emoji: "🧱", description: "🗣️ Tiene anécdotas con todos los Papas desde Juan Pablo II… aunque nunca los conoció" },
-        { title: "Profesor o Catedrático en Teología", emoji: "🧑‍🏫", description: "📚 Su escritorio tiene más latín que una misa tridentina. Puede corregir tu ensayo y tu vida espiritual en una sola mirada" },
-        { title: "Santo reconocido por la Iglesia", emoji: "👑", description: "👼 La gente le rezará… y él dirá: “tranquilos, solo hice lo que tenía que hacer" },
-        { title: "Doctor de la Iglesia", emoji: "🦉", description: "🏅 Doctor honoris causa del cielo. El Harvard celestial lo ovaciona. 🏅 Nivel jefe final. Lo que dijo, la Iglesia lo enmarca" }
-    ];
+        { title: "Neófito", emoji: "🔰", description: "🍼 No sabe si se dice amén o salud, pero ya quiere evangelizar" },
+        { title: "Catecúmeno", emoji: "📖", description: "⏳ Suena a hechizo de Harry Potter, pero en realidad es alguien que todavía no se bautiza... aunque ya se siente parte del team Jesús" },
+        { title: "Aprendiz de la fe", emoji: "🔎", description: "🧐 Sabe que hay cuatro evangelios… pero cree que Pablo escribió uno" },
+        { title: "Discípulo en formación", emoji: "💡", description: "📓 Sigue a Jesús… pero todavía se pierde entre Levítico y Deuteronomio" },
+        { title: "Creyente comprometido", emoji: "🛐", description: "💪 Va a misa sin que lo arrastren. Hasta se emociona por el ofertorio" },
+        { title: "Estudioso del Catecismo", emoji: "🧭", description: "📘 Le dicen el “Catekisman” porque cita el número exacto antes de que termines tu pregunta" },
+        { title: "Iniciado en Teología", emoji: "🧠", description: "🧠 Dice cosas como ontología trinitaria mientras se sirve cereal y cree que Santo Tomás y San Agustín fueron roomies en el cielo" },
+        { title: "Servidor pastoral", emoji: "✝️", description: "🛠️ Es el multiusos de la parroquia. Da catequesis, barre la capilla y hace teatro bíblico… todo en una tarde (Sueña con tener su propio gafete con foto y cita bíblicas)" },
+        { title: "Estudiante de Teología", emoji: "📚", description: "Tiene más libros que calcetines. Sueña con San Agustín y tiene pesadillas con exámenes de eclesiología" },
+        { title: "Teólogo en ejercicio", emoji: "🗝️", description: "🧠 La fe y la razón no se pelean… solo discuten apasionadamente (Corrige homilías mentalmente y empieza frases con: según la Patrística…)" },
+        { title: "Licenciado en Teología", emoji: "🎓", description: "🎓 No presume, pero casualmente deja su título en la mesa cuando invitan café. Ya no dice “la Iglesia enseña”, dice “según el magisterio ordinario y extraordinario…" },
+        { title: "Formador o Maestro de la fe", emoji: "🧱", description: "🗣️ Tiene anécdotas con todos los Papas desde Juan Pablo II… aunque nunca los conoció" },
+        { title: "Profesor o Catedrático en Teología", emoji: "🧑‍🏫", description: "📚 Su escritorio tiene más latín que una misa tridentina. Puede corregir tu ensayo y tu vida espiritual en una sola mirada" },
+        { title: "Santo reconocido por la Iglesia", emoji: "👑", description: "👼 La gente le rezará… y él dirá: “tranquilos, solo hice lo que tenía que hacer" },
+        { title: "Doctor de la Iglesia", emoji: "🦉", description: "🏅 Doctor honoris causa del cielo. El Harvard celestial lo ovaciona. 🏅 Nivel jefe final. Lo que dijo, la Iglesia lo enmarca" }
+    ];
+    // ********************************************************************************
 
     // === Lógica para la conexión a Firebase y carga de datos ===
     const questionsRef = ref(db, 'questions');
@@ -123,11 +123,37 @@ document.addEventListener('DOMContentLoaded', () => {
         preguntaActualIndex = 0;
         scoreDisplay.textContent = `Puntuación: 0`;
         reiniciarComodines();
+        gameContainer.style.display = 'block';
+        progressionScreen.style.display = 'none';
         answersContainer.style.display = 'grid';
         confirmBtn.style.display = 'block';
         endScreen.style.display = 'none';
-        progressionScreen.style.display = 'none'; // Asegurar que la pantalla de progresión esté oculta al inicio
         mostrarPregunta();
+    }
+
+    // Muestra la pantalla de progresión sin temporizador
+    function mostrarPantallaProgresion() {
+        clearInterval(temporizador);
+        gameContainer.style.display = 'none';
+        progressionScreen.style.display = 'flex';
+        actualizarMarcadorProgresion();
+    }
+    
+    // Función para actualizar el marcador de progresión
+    function actualizarMarcadorProgresion() {
+        progressionStepsContainer.innerHTML = '';
+        niveles.forEach((nivel, index) => {
+            const step = document.createElement('div');
+            step.classList.add('progression-step');
+            step.innerHTML = `<h4>${nivel.title} ${nivel.emoji}</h4><p>${nivel.description}</p>`;
+            
+            // Marca el nivel como completado si el índice es menor que la puntuación
+            if (index < puntuacion) {
+                step.classList.add('completed');
+            }
+            
+            progressionStepsContainer.appendChild(step);
+        });
     }
 
     // Función para barajar un array
@@ -183,11 +209,16 @@ document.addEventListener('DOMContentLoaded', () => {
     function revisarRespuesta() {
         clearInterval(temporizador);
         const selectedBtn = document.querySelector('.answer-btn.selected');
+        
+        // Si no se selecciona ninguna respuesta, no hacer nada (esto debería ser manejado por el botón confirmar)
+        if (!selectedBtn) return;
+        
         const selectedOptionText = selectedBtn.dataset.textoOpcion;
         const pregunta = preguntas[preguntaActualIndex];
         
         answerButtons.forEach(btn => btn.disabled = true);
 
+        // La respuesta correcta en la base de datos es una letra (A, B, C, D)
         const correctaOriginalIndex = pregunta.respuesta.charCodeAt(0) - 'A'.charCodeAt(0);
         const textoRespuestaCorrecta = pregunta.opciones[correctaOriginalIndex];
         
@@ -203,63 +234,14 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
         
-        // Mostrar la pantalla de progresión
-        setTimeout(() => {
-            mostrarPantallaProgreso();
-        }, 1500); // Dar tiempo para que el usuario vea si acertó o no
+        confirmBtn.textContent = 'Siguiente';
+        confirmBtn.disabled = false;
+        estadoBotonConfirmar = 'siguiente';
     }
 
-    // Función para mostrar la pantalla de progreso
-    function mostrarPantallaProgreso() {
-        // Ocultar el juego principal
-        document.querySelector('.game-container > h1').style.display = 'none';
-        document.querySelector('.header-info').style.display = 'none';
-        questionTextElement.style.display = 'none';
-        answersContainer.style.display = 'none';
-        confirmBtn.style.display = 'none';
-        document.querySelector('.controls').style.display = 'none';
-        document.getElementById('admin-link').style.display = 'none';
-        
-        // Mostrar la pantalla de progresión
-        progressionScreen.style.display = 'flex';
-        renderProgressionSteps();
-    }
-
-    // Función para renderizar los 15 escalones
-    function renderProgressionSteps() {
-        progressionStepsContainer.innerHTML = '';
-        niveles.forEach((nivel, index) => {
-            const stepElement = document.createElement('div');
-            stepElement.classList.add('progression-step');
-            
-            // El índice de la pregunta actual es igual a la puntuación
-            if (puntuacion > index) {
-                stepElement.classList.add('completed');
-            }
-            
-            stepElement.innerHTML = `
-                <h4>${index + 1}. ${nivel.emoji} ${nivel.title}</h4>
-                <p>${nivel.description}</p>
-            `;
-            progressionStepsContainer.appendChild(stepElement);
-        });
-    }
-
-    // Función para pasar a la siguiente pregunta
     function pasarSiguientePregunta() {
         preguntaActualIndex++;
         if (preguntaActualIndex < preguntas.length) {
-            // Ocultar la pantalla de progresión
-            progressionScreen.style.display = 'none';
-            // Mostrar el juego principal
-            document.querySelector('.game-container > h1').style.display = 'block';
-            document.querySelector('.header-info').style.display = 'flex';
-            questionTextElement.style.display = 'block';
-            answersContainer.style.display = 'grid';
-            confirmBtn.style.display = 'block';
-            document.querySelector('.controls').style.display = 'flex';
-            document.getElementById('admin-link').style.display = 'block';
-            
             mostrarPregunta();
         } else {
             mostrarPantallaFinal();
@@ -268,9 +250,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function mostrarPantallaFinal() {
         clearInterval(temporizador);
+        gameContainer.style.display = 'none';
         answersContainer.style.display = 'none';
         confirmBtn.style.display = 'none';
-        progressionScreen.style.display = 'none';
         endScreen.style.display = 'block';
         finalScoreSpan.textContent = puntuacion;
         questionsAnsweredSpan.textContent = preguntas.length;
@@ -324,12 +306,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 mostrarAlerta("Por favor, selecciona una respuesta antes de confirmar.");
             }
         } else {
-            pasarSiguientePregunta();
+            // Si la respuesta fue correcta, muestra la pantalla de progresión
+            if (document.querySelector('.answer-btn.correct')) {
+                mostrarPantallaProgresion();
+            } else {
+                // Si la respuesta fue incorrecta, avanza a la siguiente pregunta directamente
+                pasarSiguientePregunta();
+            }
         }
-    });
-
-    continueBtn.addEventListener('click', () => {
-        pasarSiguientePregunta();
     });
 
     modalOkBtn.addEventListener('click', () => {
@@ -339,6 +323,13 @@ document.addEventListener('DOMContentLoaded', () => {
     restartBtn.addEventListener('click', () => {
         iniciarJuego();
         reiniciarComodines();
+    });
+
+    // Lógica para que el botón de continuar de la pantalla de progresión avance el juego
+    continueBtn.addEventListener('click', () => {
+        gameContainer.style.display = 'block';
+        progressionScreen.style.display = 'none';
+        pasarSiguientePregunta();
     });
 
     // === Lógica de Comodines ===
