@@ -57,9 +57,37 @@ document.addEventListener('DOMContentLoaded', () => {
     onValue(questionsRef, (snapshot) => {
         const data = snapshot.val();
         if (data) {
-            preguntas = Object.values(data);
-            shuffleArray(preguntas);
-            iniciarJuego();
+            const allQuestions = Object.values(data);
+            
+            // Filtrar preguntas por dificultad
+            const preguntasFaciles = allQuestions.filter(q => q.dificultad === 'facil');
+            const preguntasIntermedias = allQuestions.filter(q => q.dificultad === 'intermedio');
+            const preguntasDificiles = allQuestions.filter(q => q.dificultad === 'dificil');
+
+            // Barajar cada categoría
+            shuffleArray(preguntasFaciles);
+            shuffleArray(preguntasIntermedias);
+            shuffleArray(preguntasDificiles);
+            
+            // Seleccionar 5 de cada categoría y combinarlas
+            preguntas = [
+                ...preguntasFaciles.slice(0, 5),
+                ...preguntasIntermedias.slice(0, 5),
+                ...preguntasDificiles.slice(0, 5)
+            ];
+            
+            // Asegurarse de que hay 15 preguntas en total, si no, mostrar un mensaje de error
+            if (preguntas.length < 15) {
+                questionTextElement.textContent = "No hay suficientes preguntas para iniciar el juego. Se necesitan al menos 5 de cada dificultad.";
+                // Deshabilitar el juego
+                confirmBtn.disabled = true;
+                answerButtons.forEach(btn => btn.disabled = true);
+                fiftyFiftyBtn.disabled = true;
+                nextQuestionBtn.disabled = true;
+                pauseTimeBtn.disabled = true;
+            } else {
+                iniciarJuego();
+            }
         } else {
             questionTextElement.textContent = "No hay preguntas disponibles. Revisa el panel de administración.";
         }
@@ -77,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
         mostrarPregunta();
     }
 
-    // Nueva función para barajar un array
+    // Función para barajar un array
     function shuffleArray(array) {
         for (let i = array.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
