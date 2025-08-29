@@ -7,6 +7,21 @@ import { getDatabase, ref, onValue, set, push, remove, get } from "https://www.g
 let db;
 let auth;
 
+// Elementos de la UI
+const loginForm = document.getElementById('login-form');
+const adminPanel = document.getElementById('admin-panel');
+const questionsTableBody = document.querySelector('#questions-table tbody');
+const saveQuestionBtn = document.getElementById('save-question-btn');
+const cancelEditBtn = document.getElementById('cancel-edit-btn');
+const questionIdInput = document.getElementById('question-id');
+
+// Nuevos elementos para el login
+const emailInput = document.getElementById('email-input');
+const passwordInput = document.getElementById('password-input');
+const loginBtn = document.getElementById('login-btn');
+const logoutBtn = document.getElementById('logout-btn');
+
+
 // Esta función es para manejar mensajes que normalmente se mostrarían con alert()
 function showMessage(message) {
     const messageBox = document.createElement('div');
@@ -98,7 +113,7 @@ function showConfirm(message, onConfirm, onCancel) {
     document.body.appendChild(overlay);
 }
 
-// Inicializa Firebase y obtiene las instancias de Realtime Database y Auth
+// Inicializa Firebase y configura el oyente de estado de autenticación
 async function initializeFirebase() {
     try {
         const firebaseConfig = {
@@ -114,14 +129,19 @@ async function initializeFirebase() {
         auth = getAuth(app);
         db = getDatabase(app);
 
-        // AVISO IMPORTANTE: ESTO ES SÓLO PARA PRUEBAS LOCALES.
-        // Deshabilita la autenticación para mostrar el panel de administración directamente.
-        // NO USES ESTO EN PRODUCCIÓN, ya que tu panel quedaría expuesto a cualquier persona.
-        
-        loginForm.style.display = 'none';
-        adminPanel.style.display = 'block';
-        listenForQuestions();
-
+        // Agrega el oyente para el estado de autenticación
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                // Usuario logueado: mostrar panel de administración
+                loginForm.style.display = 'none';
+                adminPanel.style.display = 'block';
+                listenForQuestions();
+            } else {
+                // No hay usuario logueado: mostrar formulario de login
+                adminPanel.style.display = 'none';
+                loginForm.style.display = 'block';
+            }
+        });
 
     } catch (error) {
         console.error("Error al inicializar Firebase:", error);
@@ -129,19 +149,6 @@ async function initializeFirebase() {
     }
 }
 
-// Elementos de la UI
-const loginForm = document.getElementById('login-form');
-const adminPanel = document.getElementById('admin-panel');
-const questionsTableBody = document.querySelector('#questions-table tbody');
-const saveQuestionBtn = document.getElementById('save-question-btn');
-const cancelEditBtn = document.getElementById('cancel-edit-btn');
-const questionIdInput = document.getElementById('question-id');
-
-// Nuevos elementos para el login
-const emailInput = document.getElementById('email-input');
-const passwordInput = document.getElementById('password-input');
-const loginBtn = document.getElementById('login-btn');
-const logoutBtn = document.getElementById('logout-btn');
 
 // Manejar el clic del botón de login
 loginBtn.addEventListener('click', async () => {
@@ -151,7 +158,6 @@ loginBtn.addEventListener('click', async () => {
     if (email && password) {
         try {
             await signInWithEmailAndPassword(auth, email, password);
-            // La función onAuthStateChanged se encargará de mostrar el panel si el rol es correcto
         } catch (error) {
             console.error("Error al iniciar sesión:", error);
             showMessage("Error al iniciar sesión. Verifica tu correo y contraseña.");
@@ -166,8 +172,6 @@ logoutBtn.addEventListener('click', async () => {
     try {
         await signOut(auth);
         showMessage("Sesión cerrada correctamente.");
-        // Opcional: Recargar la página para volver al estado inicial de login
-        window.location.reload(); 
     } catch (error) {
         console.error("Error al cerrar sesión:", error);
         showMessage("Error al cerrar sesión.");
