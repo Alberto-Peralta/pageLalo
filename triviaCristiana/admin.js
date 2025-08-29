@@ -24,68 +24,23 @@ const db = getDatabase(app);
 // Variables del juego
 // Elementos de la UI
 const loginForm = document.getElementById('login-form');
-const adminPanel = document.getElementById('admin-panel');
-const questionsTableBody = document.querySelector('#questions-table tbody');
-const saveQuestionBtn = document.getElementById('save-question-btn');
-const cancelEditBtn = document.getElementById('cancel-edit-btn');
-const questionIdInput = document.getElementById('question-id');
-
-// Nuevos elementos para el login
 const emailInput = document.getElementById('email-input');
 const passwordInput = document.getElementById('password-input');
 const loginBtn = document.getElementById('login-btn');
+const adminPanel = document.getElementById('admin-panel');
 const logoutBtn = document.getElementById('logout-btn');
+const questionIdInput = document.getElementById('question-id');
+const questionTextInput = document.getElementById('question-text-input');
+const optionAInput = document.getElementById('option-a');
+const optionBInput = document.getElementById('option-b');
+const optionCInput = document.getElementById('option-c');
+const optionDInput = document.getElementById('option-d');
+const difficultySelect = document.getElementById('difficulty');
+const saveQuestionBtn = document.getElementById('save-question-btn');
+const cancelEditBtn = document.getElementById('cancel-edit-btn');
+const questionsTableBody = document.querySelector('#questions-table tbody');
 
-
-// Esta función es para manejar mensajes que normalmente se mostrarían con alert()
-function showMessage(message) {
-    const messageBox = document.createElement('div');
-    messageBox.style.cssText = `
-        position: fixed;
-        bottom: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-        background-color: #333;
-        color: white;
-        padding: 15px 25px;
-        border-radius: 8px;
-        z-index: 1000;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-        animation: fadein 0.5s, fadeout 0.5s 2.5s;
-    `;
-    messageBox.textContent = message;
-    document.body.appendChild(messageBox);
-    setTimeout(() => {
-        document.body.removeChild(messageBox);
-    }, 3000);
-}
-
-// Iniciar sesión
-loginBtn.addEventListener('click', async () => {
-    const email = emailInput.value;
-    const password = passwordInput.value;
-    try {
-        await signInWithEmailAndPassword(auth, email, password);
-        showMessage("Inicio de sesión exitoso.");
-    } catch (error) {
-        console.error("Error al iniciar sesión:", error);
-        showMessage("Error al iniciar sesión: " + error.message);
-    }
-});
-
-// Cerrar sesión
-logoutBtn.addEventListener('click', async () => {
-    try {
-        await signOut(auth);
-        showMessage("Sesión cerrada correctamente.");
-        window.location.href = 'index.html';
-    } catch (error) {
-        console.error("Error al cerrar sesión:", error);
-        showMessage("Error al cerrar sesión: " + error.message);
-    }
-});
-
-// Listener del estado de autenticación
+// Manejar autenticación
 onAuthStateChanged(auth, (user) => {
     if (user) {
         loginForm.style.display = 'none';
@@ -97,70 +52,94 @@ onAuthStateChanged(auth, (user) => {
     }
 });
 
-// Cargar preguntas existentes
+// Event listeners
+loginBtn.addEventListener('click', () => {
+    signInWithEmailAndPassword(auth, emailInput.value, passwordInput.value)
+        .catch(error => {
+            console.error("Error de inicio de sesión:", error);
+            showMessage("Error de inicio de sesión: " + error.message);
+        });
+});
+
+logoutBtn.addEventListener('click', () => {
+    signOut(auth);
+});
+
+saveQuestionBtn.addEventListener('click', saveQuestion);
+cancelEditBtn.addEventListener('click', clearForm);
+
+// === Lógica para la conexión a Firebase y carga de datos ===
 function loadQuestions() {
     const questionsRef = ref(db, 'questions');
     onValue(questionsRef, (snapshot) => {
-        questionsTableBody.innerHTML = '';
-        const questions = snapshot.val();
-        if (questions) {
-            Object.keys(questions).forEach(id => {
-                const question = questions[id];
-                const row = questionsTableBody.insertRow();
-                // AQUÍ ESTÁ EL CAMBIO
-                row.innerHTML = `
-                    <td data-label="Pregunta">${question.pregunta}</td>
-                    <td data-label="Dificultad">${question.dificultad}</td>
-                    <td data-label="Acciones">
-                        <button class="edit-btn" data-id="${id}">Editar</button>
-                        <button class="delete-btn" data-id="${id}">Borrar</button>
-                    </td>
-                `;
-            });
-            document.querySelectorAll('.edit-btn').forEach(btn => btn.addEventListener('click', handleEdit));
-            document.querySelectorAll('.delete-btn').forEach(btn => btn.addEventListener('click', handleDelete));
-        }
+        const data = snapshot.val();
+        renderQuestions(data);
     });
 }
 
-// Guardar o actualizar una pregunta
-saveQuestionBtn.addEventListener('click', async () => {
-    const id = questionIdInput.value;
-    const newQuestion = {
-        pregunta: document.getElementById('question-text-input').value,
-        opciones: [
-            document.getElementById('option-a').value,
-            document.getElementById('option-b').value,
-            document.getElementById('option-c').value,
-            document.getElementById('option-d').value
-        ],
-        respuesta: document.getElementById('correct-answer').value,
-        dificultad: document.getElementById('difficulty').value
+function renderQuestions(questions) {
+    questionsTableBody.innerHTML = '';
+    if (questions) {
+        Object.entries(questions).forEach(([key, value]) => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${value.pregunta}</td>
+                <td>${value.dificultad}</td>
+                <td>
+                    <button class="edit-btn" data-id="${key}">Editar</button>
+                    <button class="delete-btn" data-id="${key}">Borrar</button>
+                </td>
+            `;
+            questionsTableBody.appendChild(row);
+        });
+        document.querySelectorAll('.edit-btn').forEach(btn => btn.addEventListener('click', handleEdit));
+        document.querySelectorAll('.delete-btn').forEach(btn => btn.addEventListener('click', handleDelete));
+    }
+}
+
+// Guardar/Actualizar una pregunta
+async function saveQuestion() {
+    const questionId = questionIdInput.value;
+    const newQuestion = questionTextInput.value;
+    const optionA = optionAInput.value;
+    const optionB = optionBInput.value;
+    const optionC = optionCInput.value;
+    const optionD = optionDInput.value;
+    const difficulty = difficultySelect.value;
+    
+    // Obtener la respuesta correcta del radio input
+    const correcta = document.querySelector('input[name="correcta"]:checked').value;
+
+    if (!newQuestion || !optionA || !optionB || !optionC || !optionD) {
+        showMessage("Por favor, llena todos los campos de la pregunta.");
+        return;
+    }
+
+    const questionData = {
+        pregunta: newQuestion,
+        opciones: [optionA, optionB, optionC, optionD],
+        respuesta: correcta, // <-- CAMBIO AQUÍ
+        dificultad: difficulty
     };
 
-    if (id) {
-        // Actualizar pregunta
-        try {
-            await set(ref(db, 'questions/' + id), newQuestion);
+    try {
+        if (questionId) {
+            // Actualizar pregunta existente
+            await set(ref(db, 'questions/' + questionId), questionData);
             showMessage("Pregunta actualizada con éxito.");
-        } catch (error) {
-            console.error("Error al actualizar la pregunta:", error);
-            showMessage("Error al actualizar la pregunta.");
+        } else {
+            // Agregar nueva pregunta
+            await push(ref(db, 'questions'), questionData);
+            showMessage("Pregunta guardada con éxito.");
         }
-    } else {
-        // Añadir nueva pregunta
-        try {
-            await push(ref(db, 'questions'), newQuestion);
-            showMessage("Pregunta añadida con éxito.");
-        } catch (error) {
-            console.error("Error al añadir la pregunta:", error);
-            showMessage("Error al añadir la pregunta.");
-        }
+        clearForm();
+    } catch (error) {
+        console.error("Error al guardar la pregunta:", error);
+        showMessage("Error al guardar la pregunta.");
     }
-    clearForm();
-});
+}
 
-// Lógica de edición
+// Editar una pregunta
 async function handleEdit(e) {
     const questionId = e.target.dataset.id;
     const questionRef = ref(db, 'questions/' + questionId);
@@ -169,13 +148,16 @@ async function handleEdit(e) {
         const question = snapshot.val();
         if (question) {
             questionIdInput.value = questionId;
-            document.getElementById('question-text-input').value = question.pregunta;
-            document.getElementById('option-a').value = question.opciones[0];
-            document.getElementById('option-b').value = question.opciones[1];
-            document.getElementById('option-c').value = question.opciones[2];
-            document.getElementById('option-d').value = question.opciones[3];
-            document.getElementById('correct-answer').value = question.respuesta;
-            document.getElementById('difficulty').value = question.dificultad;
+            questionTextInput.value = question.pregunta;
+            optionAInput.value = question.opciones[0];
+            optionBInput.value = question.opciones[1];
+            optionCInput.value = question.opciones[2];
+            optionDInput.value = question.opciones[3];
+            
+            // Marcar el radio button de la respuesta correcta
+            document.querySelector(`input[name="correcta"][value="${question.respuesta}"]`).checked = true;
+            
+            difficultySelect.value = question.dificultad;
             saveQuestionBtn.textContent = "Actualizar Pregunta";
             cancelEditBtn.style.display = 'inline-block';
         } else {
@@ -203,18 +185,18 @@ function handleDelete(e) {
 // Limpiar el formulario
 function clearForm() {
     questionIdInput.value = '';
-    document.getElementById('question-text-input').value = '';
-    document.getElementById('option-a').value = '';
-    document.getElementById('option-b').value = '';
-    document.getElementById('option-c').value = '';
-    document.getElementById('option-d').value = '';
-    document.getElementById('correct-answer').value = 'A';
-    document.getElementById('difficulty').value = 'facil';
+    questionTextInput.value = '';
+    optionAInput.value = '';
+    optionBInput.value = '';
+    optionCInput.value = '';
+    optionDInput.value = '';
+    document.getElementById('correct-A').checked = true;
+    difficultySelect.value = 'facil';
     saveQuestionBtn.textContent = "Guardar Pregunta";
     cancelEditBtn.style.display = 'none';
 }
 
-// Añadir un listener al botón de cancelar
-cancelEditBtn.addEventListener('click', () => {
-    clearForm();
-});
+function showMessage(msg) {
+    // Puedes usar una función de alerta o un div de mensaje en el HTML
+    alert(msg);
+}

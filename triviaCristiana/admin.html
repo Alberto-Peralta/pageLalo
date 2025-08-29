@@ -28,12 +28,15 @@
         <input type="text" id="option-b" placeholder="Opción B">
         <input type="text" id="option-c" placeholder="Opción C">
         <input type="text" id="option-d" placeholder="Opción D">
-        <select id="correct-answer">
-          <option value="A">A</option>
-          <option value="B">B</option>
-          <option value="C">C</option>
-          <option value="D">D</option>
-        </select>
+        
+        <label>Respuesta Correcta:</label>
+        <div class="correct-option-selection">
+          <input type="radio" id="correct-A" name="correcta" value="A" checked> <label for="correct-A">A</label>
+          <input type="radio" id="correct-B" name="correcta" value="B"> <label for="correct-B">B</label>
+          <input type="radio" id="correct-C" name="correcta" value="C"> <label for="correct-C">C</label>
+          <input type="radio" id="correct-D" name="correcta" value="D"> <label for="correct-D">D</label>
+        </div>
+        
         <select id="difficulty">
           <option value="facil">Fácil</option>
           <option value="intermedio">Intermedio</option>

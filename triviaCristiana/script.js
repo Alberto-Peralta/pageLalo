@@ -26,37 +26,58 @@ document.addEventListener('DOMContentLoaded', () => {
     let puntuacion = 0;
     let tiempoRestante = 30;
     let temporizador;
+    let estadoBotonConfirmar = 'confirmar';
+    let esCorrecto = false;
     let comodin5050Usado = false;
     let comodinPasarPreguntaUsado = false;
     let comodinPausarTiempoUsado = false;
-    let estadoBotonConfirmar = 'confirmar';
-    let esCorrecto = false;
+    let tiempoPausado = false;
 
     // Elementos de la UI
+    const questionTextElement = document.getElementById('question-text');
+    const answersContainer = document.getElementById('answers');
+    const answerButtons = document.querySelectorAll('.answer-btn');
     const scoreDisplay = document.getElementById('score-display');
     const timeElement = document.getElementById('time');
-    const questionTextElement = document.getElementById('question-text');
-    const answerButtons = [
-        document.getElementById('answer1'),
-        document.getElementById('answer2'),
-        document.getElementById('answer3'),
-        document.getElementById('answer4')
-    ];
     const confirmBtn = document.getElementById('confirm-btn');
-    const endScreen = document.getElementById('end-screen');
-    const finalScoreElement = document.getElementById('final-score');
-    const playAgainBtn = document.getElementById('restart-btn');
     const fiftyFiftyBtn = document.getElementById('fifty-fifty');
     const nextQuestionBtn = document.getElementById('next-question');
     const pauseTimeBtn = document.getElementById('pause-time');
+    const endScreen = document.getElementById('end-screen');
+    const finalScoreSpan = document.getElementById('final-score');
+    const questionsAnsweredSpan = document.getElementById('questions-answered');
+    const remainingTimeSpan = document.getElementById('remaining-time');
+    const restartBtn = document.getElementById('restart-btn');
     const messageModal = document.getElementById('message-modal');
     const modalMessage = document.getElementById('modal-message');
     const modalOkBtn = document.getElementById('modal-ok-btn');
-    const questionsAnsweredElement = document.getElementById('questions-answered');
-    const timeRemainingElement = document.getElementById('time-remaining');
 
+    // === Lógica para la conexión a Firebase y carga de datos ===
+    const questionsRef = ref(db, 'questions');
+    onValue(questionsRef, (snapshot) => {
+        const data = snapshot.val();
+        if (data) {
+            preguntas = Object.values(data);
+            shuffleArray(preguntas);
+            iniciarJuego();
+        } else {
+            questionTextElement.textContent = "No hay preguntas disponibles. Revisa el panel de administración.";
+        }
+    });
 
-    // Función para barajar un array (algoritmo de Fisher-Yates)
+    // === Lógica del Juego ===
+    function iniciarJuego() {
+        puntuacion = 0;
+        preguntaActualIndex = 0;
+        scoreDisplay.textContent = `Puntuación: 0`;
+        reiniciarComodines();
+        answersContainer.style.display = 'grid';
+        confirmBtn.style.display = 'block';
+        endScreen.style.display = 'none';
+        mostrarPregunta();
+    }
+
+    // Nueva función para barajar un array
     function shuffleArray(array) {
         for (let i = array.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
@@ -64,41 +85,29 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Cargar preguntas desde Firebase
-    function loadQuestions() {
-        const questionsRef = ref(db, 'questions');
-        onValue(questionsRef, (snapshot) => {
-            const data = snapshot.val();
-            if (data) {
-                preguntas = Object.values(data);
-                
-                // Barajar las preguntas al cargarlas
-                shuffleArray(preguntas);
-                
-                if (preguntas.length > 0) {
-                    mostrarPregunta();
-                } else {
-                    questionTextElement.textContent = "No hay preguntas disponibles. Añade algunas en el panel de administración.";
-                }
-            } else {
-                questionTextElement.textContent = "No hay preguntas disponibles. Añade algunas en el panel de administración.";
-            }
-        });
-    }
-
-    // Mostrar una pregunta
+    // Función para mostrar la pregunta y las opciones
     function mostrarPregunta() {
-        reiniciarTemporizador();
         if (preguntaActualIndex < preguntas.length) {
+            reiniciarTemporizador();
             const pregunta = preguntas[preguntaActualIndex];
             
             questionTextElement.textContent = pregunta.pregunta;
 
+            // Barajar las opciones para mostrarlas en un orden aleatorio
+            const opcionesBarajadas = [...pregunta.opciones];
+            shuffleArray(opcionesBarajadas);
+            
+            // Asignar las opciones barajadas a los botones, incluyendo las letras
+            const letras = ['A', 'B', 'C', 'D'];
             answerButtons.forEach((btn, index) => {
-                btn.textContent = pregunta.opciones[index];
+                const opcion = opcionesBarajadas[index];
+                btn.textContent = `${letras[index]}) ${opcion}`;
                 btn.classList.remove('selected', 'correct', 'incorrect');
                 btn.disabled = false;
                 btn.style.display = 'block';
+
+                // Guardar el texto original de la opción para la verificación
+                btn.dataset.textoOpcion = opcion;
             });
 
             confirmBtn.textContent = 'Confirmar';
@@ -109,40 +118,44 @@ document.addEventListener('DOMContentLoaded', () => {
             mostrarPantallaFinal();
         }
     }
-
-    // Función para seleccionar una respuesta
-    function seleccionarRespuesta(e) {
+    
+    // Función para manejar la selección de respuesta
+    function seleccionarRespuesta(event) {
         answerButtons.forEach(btn => btn.classList.remove('selected'));
-        e.target.classList.add('selected');
+        event.target.classList.add('selected');
         confirmBtn.disabled = false;
     }
 
-    // Revisar la respuesta
+    // Función para revisar la respuesta del usuario
     function revisarRespuesta() {
         clearInterval(temporizador);
         const selectedBtn = document.querySelector('.answer-btn.selected');
-        const selectedAnswerIndex = Array.from(answerButtons).indexOf(selectedBtn);
-        const correctAnswer = preguntas[preguntaActualIndex].respuesta;
-        const correctIndex = correctAnswer.charCodeAt(0) - 'A'.charCodeAt(0);
-
+        const selectedOptionText = selectedBtn.dataset.textoOpcion;
+        const pregunta = preguntas[preguntaActualIndex];
+        
         answerButtons.forEach(btn => btn.disabled = true);
 
-        if (selectedAnswerIndex === correctIndex) {
+        // La respuesta correcta en la base de datos es una letra (A, B, C, D)
+        const correctaOriginalIndex = pregunta.respuesta.charCodeAt(0) - 'A'.charCodeAt(0);
+        const textoRespuestaCorrecta = pregunta.opciones[correctaOriginalIndex];
+        
+        if (selectedOptionText === textoRespuestaCorrecta) {
             puntuacion++;
             scoreDisplay.textContent = `Puntuación: ${puntuacion}`;
             selectedBtn.classList.add('correct');
-            esCorrecto = true;
         } else {
             selectedBtn.classList.add('incorrect');
-            answerButtons[correctIndex].classList.add('correct');
+            const correctButton = Array.from(answerButtons).find(btn => btn.dataset.textoOpcion === textoRespuestaCorrecta);
+            if (correctButton) {
+                correctButton.classList.add('correct');
+            }
         }
-
+        
         confirmBtn.textContent = 'Siguiente';
         confirmBtn.disabled = false;
         estadoBotonConfirmar = 'siguiente';
     }
 
-    // Pasar a la siguiente pregunta
     function pasarSiguientePregunta() {
         preguntaActualIndex++;
         if (preguntaActualIndex < preguntas.length) {
@@ -152,89 +165,27 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Mostrar la pantalla final
     function mostrarPantallaFinal() {
-        document.querySelector('.game-container').style.display = 'none';
-        endScreen.style.display = 'flex';
-        finalScoreElement.textContent = puntuacion;
-        questionsAnsweredElement.textContent = preguntaActualIndex;
-        timeRemainingElement.textContent = tiempoRestante;
-    }
-
-    // Reiniciar el juego
-    function reiniciarJuego() {
-        preguntaActualIndex = 0;
-        puntuacion = 0;
-        scoreDisplay.textContent = `Puntuación: ${puntuacion}`;
-        endScreen.style.display = 'none';
-        document.querySelector('.game-container').style.display = 'flex';
-        reiniciarComodines();
-        loadQuestions();
-    }
-
-    // Comodines
-    fiftyFiftyBtn.addEventListener('click', () => {
-        if (!comodin5050Usado) {
-            comodin5050Usado = true;
-            fiftyFiftyBtn.disabled = true;
-            const pregunta = preguntas[preguntaActualIndex];
-            const correctIndex = pregunta.respuesta.charCodeAt(0) - 'A'.charCodeAt(0);
-            const opcionesIncorrectas = [0, 1, 2, 3].filter(i => i !== correctIndex);
-            const aEliminar = opcionesIncorrectas.sort(() => 0.5 - Math.random()).slice(0, 2);
-
-            aEliminar.forEach(index => {
-                answerButtons[index].style.display = 'none';
-            });
-
-            mostrarAlerta("Se han eliminado dos opciones incorrectas.");
-        }
-    });
-
-    nextQuestionBtn.addEventListener('click', () => {
-        if (!comodinPasarPreguntaUsado) {
-            comodinPasarPreguntaUsado = true;
-            nextQuestionBtn.disabled = true;
-            mostrarAlerta("Has usado tu comodín para pasar a la siguiente pregunta.");
-            pasarSiguientePregunta();
-        }
-    });
-
-    pauseTimeBtn.addEventListener('click', () => {
-        if (!comodinPausarTiempoUsado) {
-            comodinPausarTiempoUsado = true;
-            pauseTimeBtn.disabled = true;
-            clearInterval(temporizador);
-            mostrarAlerta("Tiempo pausado.");
-            pauseTimeBtn.textContent = 'Tiempo Pausado';
-        } else {
-            iniciarTemporizador();
-            comodinPausarTiempoUsado = false;
-            pauseTimeBtn.disabled = false;
-            pauseTimeBtn.textContent = 'Pausar Tiempo';
-        }
-    });
-
-    // Temporizador
-    function iniciarTemporizador() {
         clearInterval(temporizador);
-        tiempoRestante = 30;
-        timeElement.textContent = tiempoRestante;
-        temporizador = setInterval(() => {
-            tiempoRestante--;
-            timeElement.textContent = tiempoRestante;
-            if (tiempoRestante <= 0) {
-                clearInterval(temporizador);
-                mostrarAlerta("¡Se acabó el tiempo!");
-                if (document.querySelector('.answer-btn.selected')) {
+        answersContainer.style.display = 'none';
+        confirmBtn.style.display = 'none';
+        endScreen.style.display = 'block';
+        finalScoreSpan.textContent = puntuacion;
+        questionsAnsweredSpan.textContent = preguntas.length;
+        remainingTimeSpan.textContent = tiempoRestante;
+    }
+
+    function iniciarTemporizador() {
+        if (!tiempoPausado) {
+            temporizador = setInterval(() => {
+                tiempoRestante--;
+                timeElement.textContent = tiempoRestante;
+                if (tiempoRestante <= 0) {
+                    clearInterval(temporizador);
                     revisarRespuesta();
-                } else {
-                    mostrarAlerta("¡Se acabó el tiempo! No seleccionaste ninguna respuesta.");
-                    setTimeout(() => {
-                        pasarSiguientePregunta();
-                    }, 2000);
                 }
-            }
-        }, 1000);
+            }, 1000);
+        }
     }
 
     function reiniciarTemporizador() {
@@ -279,8 +230,54 @@ document.addEventListener('DOMContentLoaded', () => {
         messageModal.style.display = 'none';
     });
 
-    playAgainBtn.addEventListener('click', reiniciarJuego);
+    restartBtn.addEventListener('click', () => {
+        iniciarJuego();
+        reiniciarComodines();
+    });
 
-    // Iniciar el juego
-    loadQuestions();
+    // === Lógica de Comodines ===
+    fiftyFiftyBtn.addEventListener('click', () => {
+        if (!comodin5050Usado) {
+            const pregunta = preguntas[preguntaActualIndex];
+            const correctaOriginalIndex = pregunta.respuesta.charCodeAt(0) - 'A'.charCodeAt(0);
+            
+            const opcionesIncorrectas = Array.from(answerButtons).filter(btn => {
+                const textoOpcion = btn.dataset.textoOpcion;
+                const correctaOriginal = pregunta.opciones[correctaOriginalIndex];
+                return textoOpcion !== correctaOriginal;
+            });
+
+            shuffleArray(opcionesIncorrectas);
+
+            opcionesIncorrectas.slice(0, 2).forEach(btn => {
+                btn.disabled = true;
+                btn.textContent = ''; // Limpiar el texto
+            });
+
+            comodin5050Usado = true;
+            fiftyFiftyBtn.disabled = true;
+        }
+    });
+
+    nextQuestionBtn.addEventListener('click', () => {
+        if (!comodinPasarPreguntaUsado) {
+            pasarSiguientePregunta();
+            comodinPasarPreguntaUsado = true;
+            nextQuestionBtn.disabled = true;
+        }
+    });
+
+    pauseTimeBtn.addEventListener('click', () => {
+        if (!comodinPausarTiempoUsado) {
+            if (tiempoPausado) {
+                iniciarTemporizador();
+                pauseTimeBtn.textContent = 'Pausar Tiempo';
+            } else {
+                clearInterval(temporizador);
+                pauseTimeBtn.textContent = 'Continuar Tiempo';
+            }
+            tiempoPausado = !tiempoPausado;
+            comodinPausarTiempoUsado = true;
+        }
+    });
 });
