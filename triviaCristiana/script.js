@@ -49,6 +49,12 @@ const questionsAnsweredElement = document.getElementById('questions-answered');
 const timeRemainingElement = document.getElementById('time-remaining');
 const restartBtn = document.getElementById('restart-btn');
 
+// Modal de confirmación para pasar a la siguiente pregunta
+const confirmModal = document.getElementById('confirm-modal');
+const confirmMessage = document.getElementById('confirm-message');
+const confirmYesBtn = document.getElementById('confirm-yes-btn');
+const confirmNoBtn = document.getElementById('confirm-no-btn');
+
 // --- Lógica del juego ---
 
 // Cargar preguntas desde Firebase
@@ -83,6 +89,7 @@ function iniciarJuego() {
     actualizarPuntuacion();
     document.querySelector('.game-container').style.display = 'block';
     document.querySelector('#end-screen').style.display = 'none';
+    confirmModal.style.display = 'none';
     mostrarPreguntaActual();
 }
 
@@ -147,7 +154,6 @@ function seleccionarRespuesta(event) {
 function revisarRespuesta(respuestaSeleccionada) {
     clearInterval(temporizador);
     
-    let esCorrecto = false;
     const pregunta = preguntas[preguntaActualIndex];
     const respuestaCorrecta = pregunta.respuesta;
     const respuestaCorrectaBtn = document.getElementById(`answer${respuestaCorrecta}`);
@@ -155,29 +161,41 @@ function revisarRespuesta(respuestaSeleccionada) {
     if (respuestaSeleccionada) {
         const respuestaSeleccionadaLetra = respuestaSeleccionada.id.slice(-1);
         if (respuestaSeleccionadaLetra === respuestaCorrecta) {
-            esCorrecto = true;
             respuestaSeleccionada.classList.add('correct');
             puntuacion++;
+            mostrarAlerta("¡Respuesta Correcta!");
+            confirmBtn.disabled = true;
         } else {
             respuestaSeleccionada.classList.add('incorrect');
             if (respuestaCorrectaBtn) {
                 respuestaCorrectaBtn.classList.add('correct');
             }
+            mostrarAlerta("Respuesta Incorrecta. La opción correcta era: " + respuestaCorrecta);
         }
     } else {
         // En caso de que se acabe el tiempo
         if (respuestaCorrectaBtn) {
             respuestaCorrectaBtn.classList.add('correct');
         }
+        mostrarAlerta("¡Se acabó el tiempo! La opción correcta era: " + respuestaCorrecta);
     }
 
     answerButtons.forEach(btn => btn.disabled = true);
+    confirmBtn.style.display = 'none';
     actualizarPuntuacion();
 
+    // Muestra el modal de confirmación para pasar a la siguiente pregunta
     setTimeout(() => {
-        preguntaActualIndex++;
-        mostrarPreguntaActual();
-    }, 2000);
+        confirmMessage.textContent = '¿Estás listo para la siguiente pregunta?';
+        confirmModal.style.display = 'flex';
+    }, 1500);
+}
+
+function pasarSiguientePregunta() {
+    confirmModal.style.display = 'none';
+    confirmBtn.style.display = 'inline-block';
+    preguntaActualIndex++;
+    mostrarPreguntaActual();
 }
 
 function usar5050() {
@@ -268,6 +286,13 @@ fiftyFiftyBtn.addEventListener('click', usar5050);
 pauseTimeBtn.addEventListener('click', pausarJuego);
 nextQuestionBtn.addEventListener('click', pasarPregunta);
 restartBtn.addEventListener('click', iniciarJuego);
+
+// Listener para el nuevo botón de confirmación
+confirmYesBtn.addEventListener('click', pasarSiguientePregunta);
+confirmNoBtn.addEventListener('click', () => {
+    // Si el usuario presiona "No" se cierra el modal pero se mantiene la pregunta
+    confirmModal.style.display = 'none';
+});
 
 // Iniciar la carga de preguntas
 cargarPreguntas();
