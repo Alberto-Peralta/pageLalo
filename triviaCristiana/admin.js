@@ -3,10 +3,25 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebas
 import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
 import { getDatabase, ref, onValue, set, push, remove, get } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js";
 
-// Variables del juego
-let db;
-let auth;
+// === Copia y pega tu configuración de Firebase aquí ===
+const firebaseConfig = {
+    apiKey: "AIzaSyCO3FRhSwH1xLABwVGFSd_YYrbFp0lQEv8",
+    authDomain: "pagelalo-1b210.firebaseapp.com",
+    databaseURL: "https://pagelalo-1b210-default-rtdb.firebaseio.com",
+    projectId: "pagelalo-1b210",
+    storageBucket: "pagelalo-1b210.firebasestorage.app",
+    messagingSenderId: "1096735980204",
+    appId: "1:1096735980204:web:8252ddb9fb484c398dfd09"
+};
+// =======================================================
 
+
+// Inicializar Firebase
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getDatabase(app);
+
+// Variables del juego
 // Elementos de la UI
 const loginForm = document.getElementById('login-form');
 const adminPanel = document.getElementById('admin-panel');
