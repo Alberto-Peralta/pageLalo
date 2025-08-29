@@ -50,6 +50,17 @@ body {
     margin-bottom: 1.5rem;
 }
 
+/* Estilos para el nuevo título de la pregunta pequeña */
+.question-title-small {
+    font-size: clamp(1.2rem, 3.5vw, 1.8rem); /* Font-size adaptable */
+    color: #ffd700; /* Un color dorado para que resalte */
+    text-shadow: 1px 1px 2px #000;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    font-weight: normal; /* Menos negrita que el título principal */
+}
+
+
 /* Estilos para el panel de administración */
 .admin-container {
     background-color: #004d99;

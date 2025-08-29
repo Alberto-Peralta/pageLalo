@@ -1,54 +1,58 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Juego de preguntas al estilo ¿Quién quiere ser millonario? con niveles, temporizador y comodines.">
-  <title>Juego de Preguntas</title>
-  <link rel="stylesheet" href="style.css">
-  
-  <script type="module" src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntados Bíblicos</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="game-container" role="main">
-    
-<h1 class="game-title">¿Quién quiere ser Cristiano?</h1> 
+    <div class="game-container">
+        <h1 class="game-title">Preguntados Bíblicos</h1>
+        <h2 id="current-question-title" class="question-title-small">Cargando pregunta...</h2>
+        
+        <div class="header-info">
+            <span id="score-display">Puntuación: 0</span>
+            <span id="time">30</span>
+        </div>
+
+        <div class="progress-container">
+            <div id="progress-bar" class="progress-bar"></div>
+        </div>
+
+        <p id="question-text">Cargando pregunta...</p>
+
+        <div class="answer-buttons">
+            <button class="answer-btn" data-answer="A">Opción A</button>
+            <button class="answer-btn" data-answer="B">Opción B</button>
+            <button class="answer-btn" data-answer="C">Opción C</button>
+            <button class="answer-btn" data-answer="D">Opción D</button>
+        </div>
+
+        <button id="confirm-btn" disabled>Confirmar</button>
+
+        <div class="controls">
+            <button id="fifty-fifty">50/50</button>
+            <button id="next-question">Saltar Pregunta</button>
+            <button id="pause-time">Pausar Tiempo</button>
+        </div>
+        
+        <a href="admin.html" id="admin-link">Ir al Panel de Administración</a>
+    </div>
 
     <div id="message-modal" class="modal">
         <div class="modal-content">
             <p id="modal-message"></p>
-            <button id="modal-ok-btn">OK</button>
+            <button id="modal-ok-btn">Aceptar</button>
         </div>
     </div>
 
-    <div id="score-display">Puntuación: 0</div>
-    <div id="time">30</div>
-    <div id="question-text"></div>
-    <div id="answers">
-      <button class="answer-btn" id="answer1"></button>
-      <button class="answer-btn" id="answer2"></button>
-      <button class="answer-btn" id="answer3"></button>
-      <button class="answer-btn" id="answer4"></button>
-    </div>
-
-    <button id="confirm-btn" aria-label="Confirmar respuesta seleccionada">Confirmar</button><br><br><br>
-    
-    <div class="controls">
-      <button id="fifty-fifty" aria-label="Usar comodín 50/50">50/50</button>
-      <button id="pause-time" aria-label="Pausar temporizador">Pausar Tiempo</button>
-      <button id="next-question" aria-label="Pasar a la siguiente pregunta">Saltar Pregunta</button>
-    </div>
-    
-    <a href="admin.html" id="admin-link">Ir al Panel de Administración</a>
-
     <div id="end-screen" style="display: none;">
-      <h2>Juego Terminado</h2>
-      <p id="final-score">Puntuación final: 0</p>
-      <p id="questions-answered">Preguntas respondidas: 0</p>
-      <p id="time-remaining">Tiempo restante: 0</p>
-      <button id="restart-btn">Reiniciar Juego</button>
+        <h2>¡Juego Terminado!</h2>
+        <p>Tu puntuación final es: <span id="final-score">0</span></p>
+        <button id="play-again-btn">Jugar de Nuevo</button>
     </div>
 
-  </div>
+    <script type="module" src="script.js"></script>
 </body>
 </html>

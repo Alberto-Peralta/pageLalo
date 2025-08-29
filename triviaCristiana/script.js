@@ -33,6 +33,7 @@ let esCorrecto = false;
 const scoreDisplay = document.getElementById('score-display');
 const timeElement = document.getElementById('time');
 const questionTextElement = document.getElementById('question-text');
+const currentQuestionTitle = document.getElementById('current-question-title'); // NUEVO: Elemento para el título de la pregunta
 const answerButtons = document.querySelectorAll('.answer-btn');
 const confirmBtn = document.getElementById('confirm-btn');
 const endScreen = document.getElementById('end-screen');
@@ -54,9 +55,11 @@ function loadQuestions() {
             if (preguntas.length > 0) {
                 mostrarPregunta();
             } else {
+                currentQuestionTitle.textContent = "No hay preguntas."; // Actualiza el nuevo título
                 questionTextElement.textContent = "No hay preguntas disponibles. Añade algunas en el panel de administración.";
             }
         } else {
+            currentQuestionTitle.textContent = "No hay preguntas."; // Actualiza el nuevo título
             questionTextElement.textContent = "No hay preguntas disponibles. Añade algunas en el panel de administración.";
         }
     });
@@ -67,7 +70,10 @@ function mostrarPregunta() {
     reiniciarTemporizador();
     if (preguntaActualIndex < preguntas.length) {
         const pregunta = preguntas[preguntaActualIndex];
-        questionTextElement.textContent = pregunta.pregunta;
+        
+        // **ACTUALIZACIÓN CLAVE AQUI**: Muestra el texto de la pregunta en el nuevo h2
+        currentQuestionTitle.textContent = `Pregunta ${preguntaActualIndex + 1}`; 
+        questionTextElement.textContent = pregunta.pregunta; // Mantener aquí por si el p tiene estilos específicos
 
         answerButtons.forEach((btn, index) => {
             btn.textContent = pregunta.opciones[index];
@@ -138,6 +144,8 @@ function mostrarPantallaFinal() {
     document.querySelector('.game-container').style.display = 'none';
     endScreen.style.display = 'flex';
     finalScoreElement.textContent = puntuacion;
+    currentQuestionTitle.textContent = ""; // Limpiar el título de la pregunta al finalizar
+    questionTextElement.textContent = ""; // Limpiar el texto de la pregunta
 }
 
 // Reiniciar el juego
@@ -186,10 +194,16 @@ pauseTimeBtn.addEventListener('click', () => {
         mostrarAlerta("Tiempo pausado.");
         pauseTimeBtn.textContent = 'Tiempo Pausado';
     } else {
+        // Al reanudar, el comodín ya no está "usado" en este estado para permitir pausar de nuevo si el tiempo sigue corriendo
+        // Opcional: si quieres que solo se pueda pausar una vez, elimina las siguientes 3 líneas
         iniciarTemporizador();
         comodinPausarTiempoUsado = false;
-        pauseTimeBtn.disabled = false;
+        pauseTimeBtn.disabled = false; // Re-habilitar el botón si se puede volver a pausar
         pauseTimeBtn.textContent = 'Pausar Tiempo';
+        
+        // Si quieres que solo se pueda pausar una vez por partida, deja solo estas dos líneas
+        // iniciarTemporizador();
+        // pauseTimeBtn.textContent = 'Pausar Tiempo'; // El botón permanece deshabilitado
     }
 });
 
@@ -204,7 +218,18 @@ function iniciarTemporizador() {
         if (tiempoRestante <= 0) {
             clearInterval(temporizador);
             mostrarAlerta("¡Se acabó el tiempo!");
-            revisarRespuesta();
+            // Si el tiempo se acaba y no se ha seleccionado nada, se revisa la respuesta
+            if (document.querySelector('.answer-btn.selected')) {
+                revisarRespuesta();
+            } else {
+                // Si no se seleccionó ninguna respuesta, se marca como incorrecta y se avanza
+                mostrarAlerta("¡Se acabó el tiempo! No seleccionaste ninguna respuesta.");
+                // Para avanzar automáticamente tras la alerta de "tiempo acabado" sin respuesta
+                // Necesitamos un pequeño retraso para que la alerta sea visible
+                setTimeout(() => {
+                    pasarSiguientePregunta();
+                }, 2000); // Espera 2 segundos antes de pasar a la siguiente pregunta
+            }
         }
     }, 1000);
 }
@@ -241,6 +266,9 @@ function mostrarAlerta(mensaje) {
     
     modalOkBtn.onclick = () => {
         modal.style.display = 'none';
+        // Si la alerta es de "Tiempo acabado" y no se ha respondido,
+        // esto evita que se muestre la alerta y luego se quede esperando.
+        // La lógica de avanzar ya está en iniciarTemporizador()
     };
 }
 
