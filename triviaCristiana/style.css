@@ -442,3 +442,12 @@ body {
 #continue-btn:hover {
     background-color: #388e3c;
 }
+
+/* Estilo para el nuevo contenedor del botón de confirmar */
+.confirm-btn-container {
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center;     /* (Opcional) Centra el contenido verticalmente si es necesario */
+    width: 100%;             /* Asegura que el contenedor ocupe todo el ancho */
+    margin-top: 2rem;        /* Agrega un poco de espacio sobre el botón */
+}
