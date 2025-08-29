@@ -169,6 +169,16 @@ body {
     margin: 1.5rem;
 }
 
+/* Nuevo estilo para centrar el botón de confirmar */
+.confirm-btn-container {
+    display: flex;
+    justify-content: center; /* Centra el botón horizontalmente */
+    width: 100%;            /* Ocupa el ancho completo del contenedor principal */
+    margin-top: 1.5rem;     /* Agrega el espaciado superior que necesitas */
+    margin-bottom: 1.5rem;  /* Agrega espaciado inferior */
+}
+
+/* Puedes mantener los estilos existentes del botón, solo asegúrate de que no tengan márgenes laterales */
 #confirm-btn {
     padding: 1rem 2rem;
     font-size: 1.2rem;
@@ -179,16 +189,10 @@ body {
     cursor: pointer;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
     transition: background-color 0.3s, transform 0.2s;
-    margin-top: 1rem;
-
-    display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center;    /* Centra verticalmente */
-    height: 100%;
+    /* Elimina cualquier 'margin' que pueda interferir con el centrado */
 }
 
 #confirm-btn:hover {
-    background-color: #45a049;
     transform: translateY(-2px);
 }
 
