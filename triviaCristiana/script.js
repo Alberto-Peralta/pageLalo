@@ -117,19 +117,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // === Lógica del Juego ===
-    function iniciarJuego() {
-        puntuacion = 0;
-        preguntaActualIndex = 0;
-        scoreDisplay.textContent = `Puntuación: 0`;
-        reiniciarComodines();
-        gameContainer.style.display = 'block';
-        progressionScreen.style.display = 'none';
-        answersContainer.style.display = 'grid';
-        confirmBtn.style.display = 'block';
-        endScreen.style.display = 'none';
-        mostrarPregunta();
-    }
 
     // Muestra la pantalla de progresión sin temporizador
     function mostrarPantallaProgresion() {
@@ -253,18 +240,28 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-        function mostrarPantallaFinal() {
-          clearInterval(temporizador);
-          // En lugar de ocultar gameContainer, oculta solo los elementos del juego
-          answersContainer.style.display = 'none';
-          confirmBtn.style.display = 'none';
-          document.querySelector('.controls').style.display = 'none';
-          document.querySelector('.header-info').style.display = 'none';
-          document.querySelector('.game-title').style.display = 'none';
-          
-          // Muestra la pantalla final
-          endScreen.style.display = 'block';
-      }
+          function mostrarPantallaFinal() {
+    console.log("🔴 EJECUTANDO mostrarPantallaFinal()");
+    
+    clearInterval(temporizador);
+    
+    // Calcular valores finales (+1 porque el índice comienza en 0)
+    const preguntasRespondidas = preguntaActualIndex;
+    
+    // Actualizar la UI
+    finalScoreSpan.textContent = puntuacion;
+    questionsAnsweredSpan.textContent = preguntasRespondidas;
+    remainingTimeSpan.textContent = tiempoRestante;
+    
+    // Mostrar/ocultar elementos
+    gameContainer.style.display = 'none';
+    endScreen.style.display = 'flex'; // Usar flex para centrar contenido
+    
+    console.log("✅ Pantalla final mostrada");
+    console.log("Puntuación:", puntuacion);
+    console.log("Preguntas respondidas:", preguntasRespondidas);
+    console.log("Tiempo restante:", tiempoRestante);
+}
 
     function iniciarTemporizador() {
         if (!tiempoPausado) {
@@ -280,10 +277,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function reiniciarTemporizador() {
-        clearInterval(temporizador);
-        tiempoRestante = 30;
-        timeElement.textContent = tiempoRestante;
+    clearInterval(temporizador);
+    tiempoRestante = 30;
+    timeElement.textContent = tiempoRestante;
+    if (!tiempoPausado) {
         iniciarTemporizador();
+    }
     }
 
     function reiniciarComodines() {
@@ -327,10 +326,11 @@ document.addEventListener('DOMContentLoaded', () => {
         messageModal.style.display = 'none';
     });
 
-    restartBtn.addEventListener('click', () => {
-        iniciarJuego();
-        reiniciarComodines();
-    });
+          restartBtn.addEventListener('click', () => {
+          endScreen.style.display = 'none'; // Ocultar pantalla final primero
+          iniciarJuego();
+          reiniciarComodines();
+      });
 
     // Lógica para que el botón de continuar de la pantalla de progresión avance el juego
     continueBtn.addEventListener('click', () => {
@@ -384,4 +384,20 @@ document.addEventListener('DOMContentLoaded', () => {
             comodinPausarTiempoUsado = true;
         }
     });
+
+
+          function iniciarJuego() {
+          puntuacion = 0;
+          preguntaActualIndex = 0;
+          scoreDisplay.textContent = `Puntuación: 0`;
+          reiniciarComodines();
+          gameContainer.style.display = 'block';
+          progressionScreen.style.display = 'none';
+          answersContainer.style.display = 'grid';
+          confirmBtn.style.display = 'block';
+          endScreen.style.display = 'none'; // Asegurar que pantalla final esté oculta
+          mostrarPregunta();
+      }
+
+
 });
