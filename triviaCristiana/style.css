@@ -34,187 +34,271 @@ body {
     background-image: url('./fondo de pantalla para una app de trivia al estilo de quien quiere ser millonario con temática cristiana.png');
     background-size: cover;
     background-position: center;
-    min-height: 80vh;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
 }
 
 .game-title {
-    font-family: 'Georgia', serif;
-    font-size: clamp(2rem, 8vw, 4rem);
+    font-size: clamp(1.8rem, 5vw, 2.8rem);
     color: #ffcc00;
     text-shadow: 2px 2px 4px #000;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
-.header-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: clamp(0.9rem, 2.5vw, 1.2rem);
-    padding: 0 1rem;
+/* Estilos para el panel de administración */
+.admin-container {
+    background-color: #004d99;
 }
 
-.header-info #time {
-    background-color: #ffcc00;
-    color: #003366;
-    padding: 0.25rem 0.75rem;
-    border-radius: 10px;
-    font-weight: bold;
+.admin-container h2 {
+    color: #ffcc00;
+    font-size: 1.8rem;
 }
 
-#question-text {
-    font-size: clamp(1.2rem, 4vw, 2rem);
-    background: rgba(0, 0, 0, 0.3);
-    padding: 1rem;
-    border-radius: 10px;
-    min-height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#answers {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    padding: 1rem 0;
-}
-
-.answer-btn {
+.admin-container input, .admin-container textarea, .admin-container select {
     width: 100%;
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    background-color: #f0f0f0;
+    color: #003366;
+    box-sizing: border-box;
+}
+
+.admin-container button {
+    background-color: #ffcc00;
+    color: #003366;
+    border: none;
     padding: 0.8rem 1.5rem;
-    font-size: clamp(1rem, 3vw, 1.2rem);
-    font-weight: bold;
-    color: #003366;
-    background-color: #ffffff;
-    border: none;
-    border-radius: 25px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    margin: 0.5rem;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.2s, transform 0.2s, color 0.2s;
-}
-
-.answer-btn:hover:not(:disabled) {
-    background-color: #ffcc00;
-    transform: translateY(-3px);
-}
-
-.answer-btn:disabled {
-    cursor: not-allowed;
-    opacity: 0.6;
-}
-
-.answer-btn.selected {
-    background-color: #ffcc00;
-    color: #003366;
-}
-
-.answer-btn.correct {
-    background-color: #4caf50;
-    color: white;
-}
-
-.answer-btn.incorrect {
-    background-color: #f44336;
-    color: white;
-}
-
-#confirm-btn {
-    width: 80%;
-    padding: 1rem;
-    margin-top: 1rem;
-    font-size: 1.2rem;
     font-weight: bold;
-    color: #003366;
-    background-color: #ffcc00;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: background-color 0.2s, transform 0.2s;
+    transition: background-color 0.3s, transform 0.2s;
+    font-size: 1rem;
 }
 
-#confirm-btn:disabled {
-    background-color: #cccccc;
-    cursor: not-allowed;
-}
-
-#confirm-btn:hover:not(:disabled) {
-    background-color: #e6b800;
+.admin-container button:hover {
+    background-color: #ffb800;
     transform: translateY(-2px);
 }
 
-.controls {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.admin-container table {
     width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    table-layout: fixed;
+}
+
+.admin-container th, .admin-container td {
+    border: 1px solid #ffcc00;
+    padding: 0.75rem;
+    text-align: left;
+    word-wrap: break-word;
+}
+
+.admin-container th {
+    background-color: #003366;
+    color: #ffcc00;
+}
+
+/* Estilos para el texto de la pregunta */
+#question-text {
+    font-size: clamp(1.2rem, 3.5vw, 1.8rem);
+    color: #ffffff;
+    text-shadow: 1px 1px 2px #000;
+    margin: 1.5rem 0;
+}
+
+/* Estilos de botones de respuesta */
+.answer-btn {
+    width: 95%;
+    padding: 1rem 2.5rem; /* Ajuste para hacer el botón más largo */
+    margin: 0.75rem auto;
+    background-color: #003366;
+    color: #ffcc00;
+    border: 2px solid #ffcc00;
+    border-radius: 50px; /* Ajuste para hacer las esquinas más redondeadas */
+    cursor: pointer;
+    font-size: clamp(1rem, 3.5vw, 1.25rem);
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    word-wrap: break-word;
+    min-height: 50px;
+}
+
+.answer-btn:hover {
+    background-color: #ffcc00;
+    color: #003366;
+    transform: translateY(-2px);
+}
+
+.answer-btn.selected {
+    background-color: #ffb800;
+    color: #003366;
+    border-color: #ffb800;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+    transform: scale(1.02);
+}
+
+.answer-btn.correct {
+    background-color: #45a049 !important;
+    color: white !important;
+    border-color: #45a049 !important;
+}
+
+.answer-btn.incorrect {
+    background-color: #dc3545 !important;
+    color: white !important;
+    border-color: #dc3545 !important;
+}
+
+/* Espaciado del nuevo div */
+.button-spacing {
+    margin: 1.5rem;
+}
+
+#confirm-btn {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s, transform 0.2s;
     margin-top: 1rem;
 }
 
-.controls button {
-    padding: 0.75rem;
-    font-size: 0.8rem;
-    border: 1px solid #ffcc00;
-    background: transparent;
-    color: #ffcc00;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background-color 0.2s, color 0.2s;
+#confirm-btn:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
 }
 
-.controls button:hover:not(:disabled) {
-    background-color: rgba(255, 204, 0, 0.2);
+#confirm-btn:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* Estilos de comodines y controles */
+.controls {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+.controls button {
+    flex: 1 1 auto;
+    max-width: 150px;
+    background-color: #005f99;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    font-size: clamp(0.8rem, 2.5vw, 1rem);
+}
+
+.controls button:hover {
+    background-color: #004c80;
+    transform: translateY(-2px);
 }
 
 .controls button:disabled {
-    opacity: 0.5;
+    background-color: #333;
+    color: #999;
+    border-color: #555;
     cursor: not-allowed;
-    border-color: #888;
-    color: #888;
 }
 
-/* Estilos para el modal */
+/* Estilos para el nuevo enlace de administrador */
+#admin-link {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #ffcc00;
+    color: #003366;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s;
+    margin-top: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#admin-link:hover {
+    background-color: #ffb800;
+    transform: translateY(-2px);
+}
+
+/* Estilos de los modales (alerta y confirmación) */
 .modal {
     display: none;
     position: fixed;
-    z-index: 100;
+    z-index: 1001;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0,0,0,0.7);
     justify-content: center;
     align-items: center;
 }
 
 .modal-content {
-    background-color: #004d99;
-    padding: 2rem;
+    background-color: #003366;
+    padding: 1.5rem;
+    border: 2px solid #ffcc00;
+    width: 90%;
+    max-width: 450px;
     border-radius: 15px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-    max-width: 90%;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+    transform: scale(0.95);
+    animation: pop-up 0.3s forwards;
+}
+
+@keyframes pop-up {
+    100% {
+        transform: scale(1);
+    }
 }
 
 .modal-content p {
+    color: #ffcc00;
     font-size: 1.2rem;
     margin-bottom: 1rem;
 }
 
 .modal-content button {
-    padding: 0.75rem 1.75rem;
-    font-size: 1rem;
     background-color: #ffcc00;
     color: #003366;
     border: none;
-    border-radius: 20px;
+    padding: 0.75rem 1.5rem;
+    margin-top: 1rem;
+    border-radius: 8px;
     cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 .modal-content button:hover {
-    background-color: #e6b800;
+    background-color: #ffb800;
     transform: translateY(-2px);
 }
 
@@ -256,13 +340,14 @@ body {
     background-color: #4caf50;
     color: white;
     border: none;
-    border-radius: 20px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.2s;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 #end-screen button:hover {
-    background-color: #388e3c;
+    background-color: #45a049;
+    transform: translateY(-2px);
 }
 
 /* === Nuevos estilos para la pantalla de progresión === */
@@ -286,7 +371,7 @@ body {
 
 #progression-steps-container {
     display: flex;
-    flex-direction: column-reverse; /* Para que los pasos se muestren de forma ascendente */
+    flex-direction: column-reverse;
     gap: 0.5rem;
     width: 100%;
     max-height: 70vh;
