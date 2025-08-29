@@ -3,70 +3,61 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Panel de Administración - Preguntas</title>
+  <meta name="description" content="Juego de preguntas al estilo ¿Quién quiere ser millonario? con niveles, temporizador y comodines.">
+  <title>Juego de Preguntas</title>
   <link rel="stylesheet" href="style.css">
-  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+  
+  <script type="module" src="script.js"></script>
 </head>
 <body>
-  <div class="admin-container">
-    <div id="login-form">
-      <h2>Iniciar Sesión de Administrador</h2>
-      <input type="text" id="email-input" placeholder="Correo Electrónico">
-      <input type="password" id="password-input" placeholder="Contraseña">
-      <button id="login-btn">Acceder</button>
+  <div class="game-container" role="main">
+    <h1 class="game-title">¿Quién quiere ser Cristiano?</h1>
+
+    <!-- Modal personalizado para mensajes de alerta y confirmación -->
+    <div id="message-modal" class="modal">
+        <div class="modal-content">
+            <p id="modal-message"></p>
+            <button id="modal-ok-btn">OK</button>
+        </div>
     </div>
 
-    <div id="admin-panel" style="display: none;">
-      <h2>Panel de Administración</h2>
-      <button id="logout-btn">Cerrar Sesión</button>
-      
-      <div class="form-section">
-        <h3>Agregar/Editar Pregunta</h3>
-        <input type="hidden" id="question-id">
-        <textarea id="question-text-input" placeholder="Pregunta"></textarea>
-        <input type="text" id="option-a" placeholder="Opción A">
-        <input type="text" id="option-b" placeholder="Opción B">
-        <input type="text" id="option-c" placeholder="Opción C">
-        <input type="text" id="option-d" placeholder="Opción D">
-        <select id="correct-answer">
-          <option value="A">A</option>
-          <option value="B">B</option>
-          <option value="C">C</option>
-          <option value="D">D</option>
-        </select>
-        <select id="difficulty">
-          <option value="facil">Fácil</option>
-          <option value="intermedio">Intermedio</option>
-          <option value="dificil">Difícil</option>
-        </select>
-        <button id="save-question-btn">Guardar Pregunta</button>
-        <button id="cancel-edit-btn" style="display:none;">Cancelar Edición</button>
-      </div>
+    <div id="confirm-modal" class="modal">
+        <div class="modal-content">
+            <p id="confirm-message"></p>
+            <div class="modal-buttons">
+                <button id="confirm-yes-btn">Sí</button>
+                <button id="confirm-no-btn">No</button>
+            </div>
+        </div>
+    </div>
 
-      <div class="list-section">
-        <h3>Lista de Preguntas</h3>
-        <table id="questions-table">
-          <thead>
-            <tr>
-              <th>Pregunta</th>
-              <th>Dificultad</th>
-              <th>Acciones</th>
-            </tr>
-          </thead>
-          <tbody>
-            <!-- Las filas de la tabla se insertarán aquí dinámicamente -->
-          </tbody>
-        </table>
-      </div>
+    <div id="score-display">Puntuación: 0</div>
+    <div id="time">30</div>
+    <div id="question-text"></div>
+    <div id="answers">
+      <button class="answer-btn" id="answer1"></button>
+      <button class="answer-btn" id="answer2"></button>
+      <button class="answer-btn" id="answer3"></button>
+      <button class="answer-btn" id="answer4"></button>
+    </div>
+
+    <!-- Botón de Confirmar -->
+    <button id="confirm-btn" aria-label="Confirmar respuesta seleccionada">Confirmar</button><br><br><br>
+    
+    <div class="controls">
+      <button id="fifty-fifty" aria-label="Usar comodín 50/50">50/50</button>
+      <button id="pause-time" aria-label="Pausar temporizador">Pausar Tiempo</button>
+      <button id="next-question" aria-label="Pasar a la siguiente pregunta">Saltar Pregunta</button>
     </div>
   </div>
-  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
 
-  <!-- Se agregó type="module" para que admin.js funcione correctamente -->
-  <script type="module" src="admin.js"></script>
+  <div id="end-screen" style="display: none;">
+    <h2>Juego Terminado</h2>
+    <p id="final-score"></p>
+    <p id="questions-answered"></p>
+    <p id="time-remaining"></p>
+    <p id="final-title"></p>
+    <button id="restart-game-btn">Volver a Jugar</button>
+  </div>
 </body>
 </html>
