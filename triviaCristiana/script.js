@@ -59,21 +59,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Datos de los 15 niveles de progresión
     const niveles = [
-        { title: "Neófito", emoji: "🔰", description: "Recién iniciado en la fe cristiana, especialmente tras el Bautismo." },
-        { title: "Catecúmeno", emoji: "📖", description: "Persona que se prepara para recibir los sacramentos de iniciación cristiana." },
-        { title: "Aprendiz de la fe", emoji: "🔎", description: "Quien comienza a conocer las enseñanzas de la Iglesia." },
-        { title: "Discípulo en formación", emoji: "💡", description: "Estudia y sigue a Cristo con intencionalidad creciente." },
-        { title: "Creyente comprometido", emoji: "🛐", description: "Vive activamente su fe en la comunidad y busca coherencia cristiana." },
-        { title: "Estudioso del Catecismo", emoji: "🧭", description: "Conoce las enseñanzas esenciales de la Iglesia y su doctrina." },
-        { title: "Iniciado en Teología", emoji: "🧠", description: "Ha comenzado estudios teológicos formales o profundos." },
-        { title: "Servidor pastoral", emoji: "✝️", description: "Participa activamente en la vida de la Iglesia: catequista, lector, animador, etc." },
-        { title: "Estudiante de Teología", emoji: "📚", description: "En formación académica sistemática en teología o ciencias religiosas." },
-        { title: "Teólogo en ejercicio", emoji: "🗝️", description: "Reflexiona, enseña y escribe sobre las verdades de la fe." },
-        { title: "Licenciado en Teología", emoji: "🎓", description: "Ha obtenido un título universitario reconocido en teología." },
-        { title: "Formador o Maestro de la fe", emoji: "🧱", description: "Enseña, guía y acompaña a otros en su camino de fe." },
-        { title: "Profesor o Catedrático en Teología", emoji: "🧑‍🏫", description: "Se dedica a la docencia e investigación académica teológica." },
-        { title: "Santo reconocido por la Iglesia", emoji: "👑", description: "Ha vivido la fe de forma heroica y es modelo de vida cristiana." },
-        { title: "Doctor de la Iglesia", emoji: "🦉", description: "Santo/a cuyas enseñanzas teológicas o espirituales tienen valor universal y permanente." }
+        { title: "Neófito", emoji: "🔰", description: "🍼 No sabe si se dice amén o salud, pero ya quiere evangelizar" },
+        { title: "Catecúmeno", emoji: "📖", description: "⏳ Suena a hechizo de Harry Potter, pero en realidad es alguien que todavía no se bautiza... aunque ya se siente parte del team Jesús" },
+        { title: "Aprendiz de la fe", emoji: "🔎", description: "🧐 Sabe que hay cuatro evangelios… pero cree que Pablo escribió uno" },
+        { title: "Discípulo en formación", emoji: "💡", description: "📓 Sigue a Jesús… pero todavía se pierde entre Levítico y Deuteronomio" },
+        { title: "Creyente comprometido", emoji: "🛐", description: "💪 Va a misa sin que lo arrastren. Hasta se emociona por el ofertorio" },
+        { title: "Estudioso del Catecismo", emoji: "🧭", description: "📘 Le dicen el “Catekisman” porque cita el número exacto antes de que termines tu pregunta" },
+        { title: "Iniciado en Teología", emoji: "🧠", description: "🧠 Dice cosas como ontología trinitaria mientras se sirve cereal y cree que Santo Tomás y San Agustín fueron roomies en el cielo" },
+        { title: "Servidor pastoral", emoji: "✝️", description: "🛠️ Es el multiusos de la parroquia. Da catequesis, barre la capilla y hace teatro bíblico… todo en una tarde (Sueña con tener su propio gafete con foto y cita bíblicas)" },
+        { title: "Estudiante de Teología", emoji: "📚", description: "Tiene más libros que calcetines. Sueña con San Agustín y tiene pesadillas con exámenes de eclesiología" },
+        { title: "Teólogo en ejercicio", emoji: "🗝️", description: "🧠 La fe y la razón no se pelean… solo discuten apasionadamente (Corrige homilías mentalmente y empieza frases con: según la Patrística…)" },
+        { title: "Licenciado en Teología", emoji: "🎓", description: "🎓 No presume, pero casualmente deja su título en la mesa cuando invitan café. Ya no dice “la Iglesia enseña”, dice “según el magisterio ordinario y extraordinario…" },
+        { title: "Formador o Maestro de la fe", emoji: "🧱", description: "🗣️ Tiene anécdotas con todos los Papas desde Juan Pablo II… aunque nunca los conoció" },
+        { title: "Profesor o Catedrático en Teología", emoji: "🧑‍🏫", description: "📚 Su escritorio tiene más latín que una misa tridentina. Puede corregir tu ensayo y tu vida espiritual en una sola mirada" },
+        { title: "Santo reconocido por la Iglesia", emoji: "👑", description: "👼 La gente le rezará… y él dirá: “tranquilos, solo hice lo que tenía que hacer" },
+        { title: "Doctor de la Iglesia", emoji: "🦉", description: "🏅 Doctor honoris causa del cielo. El Harvard celestial lo ovaciona. 🏅 Nivel jefe final. Lo que dijo, la Iglesia lo enmarca" }
     ];
 
     // === Lógica para la conexión a Firebase y carga de datos ===
