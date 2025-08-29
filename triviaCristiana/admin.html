@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel de Administración - Preguntas</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+</head>
+<body>
+  <div class="admin-container">
+    <div id="login-form">
+      <h2>Iniciar Sesión de Administrador</h2>
+      <input type="text" id="email-input" placeholder="Correo Electrónico">
+      <input type="password" id="password-input" placeholder="Contraseña">
+      <button id="login-btn">Acceder</button>
+    </div>
+
+    <div id="admin-panel" style="display: none;">
+      <h2>Panel de Administración</h2>
+      <button id="logout-btn">Cerrar Sesión</button>
+      
+      <div class="form-section">
+        <h3>Agregar/Editar Pregunta</h3>
+        <input type="hidden" id="question-id">
+        <textarea id="question-text-input" placeholder="Pregunta"></textarea>
+        <input type="text" id="option-a" placeholder="Opción A">
+        <input type="text" id="option-b" placeholder="Opción B">
+        <input type="text" id="option-c" placeholder="Opción C">
+        <input type="text" id="option-d" placeholder="Opción D">
+        <select id="correct-answer">
+          <option value="A">A</option>
+          <option value="B">B</option>
+          <option value="C">C</option>
+          <option value="D">D</option>
+        </select>
+        <select id="difficulty">
+          <option value="facil">Fácil</option>
+          <option value="intermedio">Intermedio</option>
+          <option value="dificil">Difícil</option>
+        </select>
+        <button id="save-question-btn">Guardar Pregunta</button>
+        <button id="cancel-edit-btn" style="display:none;">Cancelar Edición</button>
+      </div>
+
+      <div class="list-section">
+        <h3>Lista de Preguntas</h3>
+        <table id="questions-table">
+          <thead>
+            <tr>
+              <th>Pregunta</th>
+              <th>Dificultad</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Las filas de la tabla se insertarán aquí dinámicamente -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+
+  <!-- Se agregó type="module" para que admin.js funcione correctamente -->
+  <script type="module" src="admin.js"></script>
+</body>
+</html>

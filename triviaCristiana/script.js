@@ -1,224 +1,68 @@
-// Variables del juego
-let time = 30;
-let timer;
-let currentQuestionIndex = 0;
-let correctAnswer = null;
-let selectedAnswer = null;
-let fiftyFiftyUsed = false;
-let score = 0;
-let answerConfirmed = false;
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel de Administración - Preguntas</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+  <!-- Se ha cambiado la referencia a firebase-firestore.js por firebase-database.js -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+</head>
+<body>
+  <div class="admin-container">
+    <div id="login-form">
+      <h2>Iniciar Sesión de Administrador</h2>
+      <input type="text" id="email-input" placeholder="Correo Electrónico">
+      <input type="password" id="password-input" placeholder="Contraseña">
+      <button id="login-btn">Acceder</button>
+    </div>
 
-// Inicia el temporizador
-function startTimer() {
-  clearInterval(timer);
-  time = 30;
-  document.getElementById("time").textContent = time;
-  timer = setInterval(() => {
-    if (time > 0) {
-      time--;
-      document.getElementById("time").textContent = time;
-    } else {
-      clearInterval(timer);
-      endGame();
-    }
-  }, 1000);
-}
+    <div id="admin-panel" style="display: none;">
+      <h2>Panel de Administración</h2>
+      <button id="logout-btn">Cerrar Sesión</button>
+      
+      <div class="form-section">
+        <h3>Agregar/Editar Pregunta</h3>
+        <input type="hidden" id="question-id">
+        <textarea id="question-text-input" placeholder="Pregunta"></textarea>
+        <input type="text" id="option-a" placeholder="Opción A">
+        <input type="text" id="option-b" placeholder="Opción B">
+        <input type="text" id="option-c" placeholder="Opción C">
+        <input type="text" id="option-d" placeholder="Opción D">
+        <select id="correct-answer">
+          <option value="A">A</option>
+          <option value="B">B</option>
+          <option value="C">C</option>
+          <option value="D">D</option>
+        </select>
+        <select id="difficulty">
+          <option value="facil">Fácil</option>
+          <option value="intermedio">Intermedio</option>
+          <option value="dificil">Difícil</option>
+        </select>
+        <button id="save-question-btn">Guardar Pregunta</button>
+        <button id="cancel-edit-btn" style="display:none;">Cancelar Edición</button>
+      </div>
 
-// Seleccionar y ordenar preguntas
-function seleccionarPreguntas() {
-  mezclarPreguntas(preguntas);
-  return preguntas.slice(0, 15).sort((a, b) => a.dificultad - b.dificultad);
-}
-
-// Iniciar partida
-function iniciarPartida() {
-  const preguntasParaPartida = seleccionarPreguntas();
-  currentQuestionIndex = 0;
-  score = 0;
-  mostrarNuevaPregunta(preguntasParaPartida);
-}
-
-// Función para finalizar el juego
-function endGame() {
-  alert(`¡Se acabó el tiempo! Tu puntuación final es: ${score}`);
-  disableButton("fifty-fifty");
-  disableButton("pause-time");
-  disableButton("next-question");
-  disableButton("confirm-btn");
-}
-
-// Deshabilitar botones
-function disableButton(buttonId) {
-  const button = document.getElementById(buttonId);
-  button.disabled = true;
-  button.style.backgroundColor = "#b0bec5";
-  button.style.cursor = "not-allowed";
-  button.classList.add("disabled");
-}
-
-// Mostrar nueva pregunta
-function mostrarNuevaPregunta(preguntas) {
-  const pregunta = preguntas[currentQuestionIndex];
-  document.getElementById("question-text").textContent = pregunta.pregunta;
-
-  pregunta.opciones.forEach((opcion, index) => {
-    const btn = document.getElementById(`answer${index + 1}`);
-    btn.textContent = opcion;
-    btn.classList.remove("correct", "incorrect", "selected");
-    btn.style.display = "inline-block";
-  });
-
-  correctAnswer = pregunta.respuesta;
-  selectedAnswer = null;
-  fiftyFiftyUsed = false;
-  answerConfirmed = false;
-
-  startTimer();
-  const confirmButton = document.getElementById("confirm-btn");
-  confirmButton.textContent = "Confirmar";
-  confirmButton.onclick = () => checkAnswer(preguntas);
-}
-
-// Verificar la respuesta seleccionada
-function checkAnswer(preguntas) {
-  if (!selectedAnswer) {
-    alert("Por favor, selecciona una respuesta.");
-    return;
-  }
-  if (answerConfirmed) return;
-
-  const answerButtons = document.querySelectorAll(".answer-btn");
-  answerButtons.forEach(button => {
-    button.classList.remove("selected");
-    const answerLetter = button.textContent[0];
-    if (answerLetter === correctAnswer) {
-      button.classList.add("correct");
-      if (selectedAnswer === correctAnswer) {
-        score++;
-        document.getElementById("score-display").textContent = `Puntuación: ${score}`;
-      }
-    } else if (answerLetter === selectedAnswer) {
-      button.classList.add("incorrect");
-    }
-  });
-
-  clearInterval(timer);
-  convertirBotonASiguiente();
-}
-
-// Convertir el botón "Confirmar" en "Siguiente Pregunta"
-function convertirBotonASiguiente() {
-  const confirmButton = document.getElementById("confirm-btn");
-  confirmButton.textContent = "Siguiente Pregunta";
-  confirmButton.onclick = cargarSiguientePregunta;
-  answerConfirmed = true;
-}
-
-// Cargar siguiente pregunta
-function cargarSiguientePregunta() {
-  if (currentQuestionIndex < 14) { // Esto asegura que el juego termine en la pregunta 15
-    currentQuestionIndex++;
-    mostrarNuevaPregunta(preguntas);
-  } else {
-    endGame(); // Finaliza el juego después de 15 preguntas
-  }
-}
-
-
-
-// Reiniciar juego
-function reiniciarJuego() {
-  currentQuestionIndex = 0;
-  score = 0;
-  document.getElementById("score-display").textContent = `Puntuación: ${score}`;
-  mostrarNuevaPregunta(preguntas); // Reinicia el juego mostrando la primera pregunta
-}
-
-
-// Mezclar preguntas
-function mezclarPreguntas() {
-  for (let i = preguntas.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [preguntas[i], preguntas[j]] = [preguntas[j], preguntas[i]];
-  }
-}
-
-// Evento para 50/50
-document.getElementById("fifty-fifty").addEventListener("click", function () {
-  if (fiftyFiftyUsed) return;
-
-  const botonesRespuesta = document.querySelectorAll(".answer-btn");
-  const respuestasIncorrectas = Array.from(botonesRespuesta).filter(button => button.textContent[0] !== correctAnswer);
-  for (let i = 0; i < 2; i++) {
-    const randomIndex = Math.floor(Math.random() * respuestasIncorrectas.length);
-    respuestasIncorrectas[randomIndex].style.display = "none";
-    respuestasIncorrectas.splice(randomIndex, 1);
-  }
-
-  fiftyFiftyUsed = true;
-  disableButton("fifty-fifty");
-});
-
-// Pausar o reanudar el temporizador
-document.getElementById("pause-time").addEventListener("click", function () {
-  if (timer) {
-    clearInterval(timer);
-    timer = null;
-    this.textContent = "Pausar Tiempo";
-  } else {
-    startTimer();
-    this.textContent = "Pausar Tiempo";
-  }
-  
-  // Deshabilitar el botón después de usarlo
-  disableButton("pause-time");
-});
-
-// Función para deshabilitar un botón
-function disableButton(buttonId) {
-  const button = document.getElementById(buttonId);
-  button.disabled = true;
-  button.style.backgroundColor = "#b0bec5";  // Cambia el color del botón a un gris para indicar que está deshabilitado
-  button.style.cursor = "not-allowed";  // Cambia el cursor para mostrar que el botón no es clickeable
-  button.classList.add("disabled"); // Puedes agregar una clase si quieres personalizar más el estilo
-}
-
-// Función para deshabilitar botones después de usarlos
-document.getElementById("next-question").addEventListener("click", function () {
-  disableButton("next-question");
-});
-
-// Seleccionar respuesta
-const answerButtons = document.querySelectorAll(".answer-btn");
-answerButtons.forEach(button => {
-  button.addEventListener("click", () => {
-    answerButtons.forEach(btn => btn.classList.remove("selected"));
-    button.classList.add("selected");
-    selectedAnswer = button.textContent[0];
-  });
-});
-
-
-
-
-// Función para finalizar el juego
-function endGame() {
-  clearInterval(timer); // Detener el temporizador
-
-  // Ocultar el contenedor del juego
-  document.getElementById("game-container").style.display = "none";
-  
-  // Mostrar la pantalla de fin del juego
-  const endScreen = document.getElementById("end-screen");
-  endScreen.style.display = "block";
-  
-  // Actualizar el mensaje de fin del juego
-  document.getElementById("final-score").textContent = `Puntuación final: ${score}`;
-  document.getElementById("questions-answered").textContent = `Preguntas respondidas: ${currentQuestionIndex + 1}`;
-  document.getElementById("time-remaining").textContent = `Tiempo restante: ${time} segundos`;
-}
-
-
-
-// Iniciar el juego
-iniciarPartida();
+      <div class="list-section">
+        <h3>Lista de Preguntas</h3>
+        <table id="questions-table">
+          <thead>
+            <tr>
+              <th>Pregunta</th>
+              <th>Dificultad</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Las preguntas se insertarán dinámicamente aquí -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <script src="admin.js"></script>
+</body>
+</html>
