@@ -299,26 +299,38 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-            function mostrarPantallaFinal() {
-          console.log("🔴 EJECUTANDO mostrarPantallaFinal()");
-          
-          clearInterval(temporizador);
-          
-          // Actualizar la UI
-          finalScoreSpan.textContent = puntuacion;
-          questionsAnsweredSpan.textContent = preguntaActualIndex;
-          remainingTimeSpan.textContent = tiempoRestante;
-          
-          // Resetear formulario de ranking
-          playerAliasInput.value = '';
-          saveScoreForm.style.display = 'block';
-          viewRankingBtn.style.display = 'none';
-          
-          // Mostrar/ocultar elementos
-          gameContainer.style.display = 'none';
-          progressionScreen.style.display = 'none';
-          endScreen.style.display = 'flex'; // Cambiado a flex para mejor visualización
-      }
+       function mostrarPantallaFinal() {
+    console.log("🔴 EJECUTANDO mostrarPantallaFinal()");
+    
+    clearInterval(temporizador);
+    
+    // Actualizar la UI
+    finalScoreSpan.textContent = puntuacion;
+    questionsAnsweredSpan.textContent = preguntaActualIndex;
+    remainingTimeSpan.textContent = tiempoRestante;
+    
+    // Mostrar mensaje especial si fue partida perfecta
+    if (puntuacion === 15 && preguntaActualIndex === 15) {
+        const perfectMessage = document.createElement('p');
+        perfectMessage.textContent = '🎉 ¡PARTIDA PERFECTA! 🎉';
+        perfectMessage.style.color = '#ffcc00';
+        perfectMessage.style.fontWeight = 'bold';
+        perfectMessage.style.fontSize = '1.5rem';
+        endScreen.insertBefore(perfectMessage, saveScoreForm);
+    }
+    
+    // Resetear formulario de ranking
+    playerAliasInput.value = '';
+    saveScoreForm.style.display = 'block';
+    viewRankingBtn.style.display = 'none';
+    
+    // Mostrar/ocultar elementos
+    gameContainer.style.display = 'none';
+    progressionScreen.style.display = 'none';
+    endScreen.style.display = 'flex';
+}
+
+
     function iniciarTemporizador() {
         if (!tiempoPausado) {
             temporizador = setInterval(() => {
@@ -495,64 +507,93 @@ document.addEventListener('DOMContentLoaded', () => {
 
               // AGREGA esta función
           async function guardarPuntuacion() {
-              const alias = playerAliasInput.value.trim();
-              if (!alias) {
-                  mostrarAlerta("Por favor, escribe un alias");
-                  return;
-              }
+    const alias = playerAliasInput.value.trim();
+    if (!alias) {
+        mostrarAlerta("Por favor, escribe un alias");
+        return;
+    }
 
-              const scoreData = {
-                  alias: alias,
-                  puntuacion: puntuacion,
-                  preguntasRespondidas: preguntaActualIndex,
-                  tiempoRestante: tiempoRestante,
-                  fecha: new Date().toISOString(),
-                  timestamp: Date.now()
-              };
+    // Calcular si fue partida perfecta
+        const partidaPerfecta = (puntuacion === 15 && preguntaActualIndex === 15);
+        
+        const scoreData = {
+            alias: alias,
+            puntuacion: puntuacion,
+            preguntasRespondidas: preguntaActualIndex,
+            tiempoRestante: tiempoRestante,
+            partidaPerfecta: partidaPerfecta, // ← NUEVO CAMPO
+            partidasGanadas: partidaPerfecta ? 1 : 0, // ← NUEVO CAMPO
+            fecha: new Date().toISOString(),
+            timestamp: Date.now()
+        };
 
-              try {
-                  await push(ref(db, 'rankings'), scoreData);
-                  mostrarAlerta("✅ Puntuación guardada en el ranking");
-                  saveScoreForm.style.display = 'none';
-                  viewRankingBtn.style.display = 'block';
-              } catch (error) {
-                  console.error("Error al guardar puntuación:", error);
-                  mostrarAlerta("Error al guardar puntuación");
-              }
-          }
-
-
-
-    //  función de ranking
-              function cargarRanking() {
-            const rankingsRef = ref(db, 'rankings');
-            const topRankingsQuery = query(rankingsRef, orderByChild('puntuacion'), limitToLast(10));
-            
-            onValue(topRankingsQuery, (snapshot) => {
-                const data = snapshot.val();
-                rankingList.innerHTML = '';
-                
-                if (data) {
-                    const rankingsArray = Object.entries(data)
-                        .map(([key, value]) => ({ id: key, ...value }))
-                        .sort((a, b) => b.puntuacion - a.puntuacion || b.tiempoRestante - a.tiempoRestante);
-                    
-                    rankingsArray.forEach((score, index) => {
-                        const rankItem = document.createElement('div');
-                        rankItem.className = 'rank-item';
-                        rankItem.innerHTML = `
-                            <span class="rank-position">${index + 1}º</span>
-                            <span class="rank-alias">${score.alias}</span>
-                            <span class="rank-score">${score.puntuacion} pts</span>
-                            <span class="rank-time">⏱️ ${score.tiempoRestante}s</span>
-                        `;
-                        rankingList.appendChild(rankItem);
-                    });
-                } else {
-                    rankingList.innerHTML = '<p>No hay puntuaciones aún</p>';
-                }
-            });
+        try {
+            await push(ref(db, 'rankings'), scoreData);
+            mostrarAlerta("✅ Puntuación guardada en el ranking");
+            saveScoreForm.style.display = 'none';
+            viewRankingBtn.style.display = 'block';
+        } catch (error) {
+            console.error("Error al guardar puntuación:", error);
+            mostrarAlerta("Error al guardar puntuación");
         }
+    }
+
+
+
+          function cargarRanking() {
+          const rankingsRef = ref(db, 'rankings');
+          const topRankingsQuery = query(rankingsRef, orderByChild('puntuacion'), limitToLast(20));
+          
+          onValue(topRankingsQuery, (snapshot) => {
+              const data = snapshot.val();
+              rankingList.innerHTML = '';
+              
+              if (data) {
+                  const rankingsArray = Object.entries(data)
+                      .map(([key, value]) => ({ id: key, ...value }))
+                      .sort((a, b) => b.puntuacion - a.puntuacion || b.tiempoRestante - a.tiempoRestante);
+                  
+                  // Contar partidas perfectas por jugador
+                  const jugadoresConPerfectas = {};
+                  rankingsArray.forEach(score => {
+                      if (score.partidaPerfecta) {
+                          if (!jugadoresConPerfectas[score.alias]) {
+                              jugadoresConPerfectas[score.alias] = 0;
+                          }
+                          jugadoresConPerfectas[score.alias]++;
+                      }
+                  });
+                  
+                  rankingsArray.forEach((score, index) => {
+                      const rankItem = document.createElement('div');
+                      rankItem.className = 'rank-item';
+                      
+                      const partidasPerfectas = jugadoresConPerfectas[score.alias] || 0;
+                      const esPerfecta = score.partidaPerfecta ? '🏆 PERFECTA!' : '';
+                      
+                      rankItem.innerHTML = `
+                          <span class="rank-position">${index + 1}º</span>
+                          <span class="rank-alias">${score.alias}</span>
+                          <span class="rank-score">${score.puntuacion}/15 pts</span>
+                          <span class="rank-perfectas">⭐ ${partidasPerfectas}</span>
+                          <span class="rank-time">⏱️ ${score.tiempoRestante}s</span>
+                          <span class="rank-perfect-badge">${esPerfecta}</span>
+                      `;
+                      
+                      // Destacar partidas perfectas
+                      if (score.partidaPerfecta) {
+                          rankItem.style.background = 'linear-gradient(135deg, #ffd700 0%, #ffb700 100%)';
+                          rankItem.style.color = '#003366';
+                          rankItem.style.fontWeight = 'bold';
+                      }
+                      
+                      rankingList.appendChild(rankItem);
+                  });
+              } else {
+                  rankingList.innerHTML = '<p>No hay puntuaciones aún</p>';
+              }
+          });
+      }
 
                 saveScoreBtn.addEventListener('click', guardarPuntuacion);
         viewRankingBtn.addEventListener('click', () => {
@@ -569,5 +610,23 @@ document.addEventListener('DOMContentLoaded', () => {
                 guardarPuntuacion();
             }
         });       
+
+
+        function mostrarEstadisticasPerfectas() {
+    const rankingsRef = ref(db, 'rankings');
+    
+    onValue(rankingsRef, (snapshot) => {
+        const data = snapshot.val();
+        if (data) {
+            const rankingsArray = Object.values(data);
+            const partidasPerfectasTotales = rankingsArray.filter(score => score.partidaPerfecta).length;
+            
+            // Mostrar en alguna parte de la UI
+            console.log(`Partidas perfectas totales: ${partidasPerfectasTotales}`);
+        }
+    });
+}
+
+// Llamar esta función cuando sea necesario
 
 });

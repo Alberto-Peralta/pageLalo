@@ -639,3 +639,35 @@ body {
     width: 400px;
     max-width: 90%;
 }
+
+.rank-item {
+    display: grid;
+    grid-template-columns: 50px 1fr 80px 50px 60px;
+    align-items: center;
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    border-left: 4px solid #ffcc00;
+    gap: 0.5rem;
+}
+
+.rank-perfectas {
+    color: #ffcc00;
+    font-weight: bold;
+    text-align: center;
+}
+
+.rank-perfect-badge {
+    color: #ff6b6b;
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* Para partidas perfectas */
+.rank-item.perfect {
+    background: linear-gradient(135deg, #ffd700 0%, #ffb700 100%) !important;
+    color: #003366;
+    border-left: 4px solid #ff6b6b;
+}
