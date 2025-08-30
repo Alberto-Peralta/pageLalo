@@ -8,8 +8,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!-- PANTALLA DE INICIO -->
+    <div id="start-screen" style="display: flex;">
+        <div class="start-container">
+            <h1>¿Quién quiere ser Cristiano?</h1>
+            <div class="start-buttons">
+                <button id="start-game-btn" class="start-btn">Comenzar Juego</button>
+                <button id="view-ranking-btn-start" class="start-btn">Ver Ranking</button>
+            </div>
+        </div>
+    </div>
+
     <!-- CONTENEDOR PRINCIPAL DEL JUEGO -->
-    <div class="game-container" id="game-container" role="main">
+    <div class="game-container" id="game-container" role="main" style="display: none;">
         <h1 class="game-title">¿Quién quiere ser Cristiano?</h1> 
         
         <div class="header-info">
@@ -55,13 +67,28 @@
     </div>
 
     <!-- PANTALLA FINAL - FUERA del game-container -->
-    <div id="end-screen" style="display: none;">
-        <h2>Juego Terminado</h2>
-        <p>Puntuación final: <span id="final-score">0</span></p>
-        <p>Preguntas respondidas: <span id="questions-answered">0</span></p>
-        <p>Tiempo restante: <span id="remaining-time">0</span></p>
-        <button id="restart-btn">Reiniciar Juego</button>
-    </div>
+          <div id="end-screen" style="display: none;">
+              <h2>Juego Terminado</h2>
+              <p>Puntuación final: <span id="final-score">0</span></p>
+              <p>Preguntas respondidas: <span id="questions-answered">0</span></p>
+              <p>Tiempo restante: <span id="remaining-time">0</span></p>
+              
+              <!-- ✅ AGREGAR ESTO: FORMULARIO DE ALIAS -->
+              <div id="save-score-form">
+                  <input type="text" id="player-alias" placeholder="Escribe tu alias (máx. 15 caracteres)" maxlength="15">
+                  <button id="save-score-btn">Guardar Puntuación</button>
+              </div>
+              
+              <button id="restart-btn">Reiniciar Juego</button>
+              <button id="view-ranking-btn" style="display:none;">Ver Ranking</button>
+          </div>
+
+          <div id="ranking-screen" style="display: none;">
+              <h2>🏆 Ranking de Jugadores</h2>
+              <div id="ranking-list"></div>
+              <button id="back-to-game-btn">Volver al Juego</button>
+              <button id="back-to-start-btn">Volver al Inicio</button>
+          </div>
 
     <script type="module" src="script.js"></script>
 </body>
