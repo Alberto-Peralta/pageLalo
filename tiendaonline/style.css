@@ -1,13 +1,18 @@
 :root {
-    --color-primary: #FF7F00; /* Naranja Truper */
-    --color-secondary: #FFD700; /* Amarillo Pretul */
-    --color-background-dark: #1a202c; /* Gris oscuro para el fondo */
-    --color-card-dark: #2d3748; /* Gris oscuro para las tarjetas */
+    --color-primary: #D4A017;       /* Amarillo mostaza principal */
+    --color-primary-light: #E6B325; /* Amarillo mostaza claro */
+    --color-primary-dark: #B8860B;  /* Amarillo mostaza oscuro */
+    --color-secondary: #3C2A1E;     /* Marrón oscuro como secundario */
+    --color-background: #F5F5DC;    /* Fondo crema claro (antes era oscuro) */
+    --color-card: #FFFFFF;          /* Tarjetas blancas (antes oscuras) */
+    --color-text: #2D2D2D;          /* Texto oscuro (antes claro) */
+    --color-text-light: #5A5A5A;    /* Texto secundario */
 }
 
 body {
     font-family: 'Inter', sans-serif;
-    background-color: var(--color-background-dark);
+    background-color: var(--color-background);
+    color: var(--color-text);
 }
 
 .modal {
@@ -39,8 +44,7 @@ body {
 }
 
 .product-card {
-    animation: slideInUp 0.5s ease-out forwards;
-    opacity: 0;
+    background-color: var(--color-card);
 }
 
 @keyframes fadeIn {
@@ -81,6 +85,7 @@ body {
     transform: scale(1.05);
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
 }
+
 
 .admin-panel {
     display: none;

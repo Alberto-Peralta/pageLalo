@@ -4,17 +4,14 @@ const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial
 
 // Tu configuración de Firebase
 const firebaseConfig = {
-    apiKey: "AIzaSyCO3FRhSwH1xLABwVGFSd_YYrbFp0lQEv8",
-    authDomain: "pagelalo-1b210.firebaseapp.com",
-    databaseURL: "https://pagelalo-1b210-default-rtdb.firebaseio.com",
-    projectId: "pagelalo-1b210",
-    storageBucket: "pagelalo-1b210.firebasestorage.app",
-    messagingSenderId: "1096735980204",
-    appId: "1:1096735980204:web:8252ddb9fb484c398dfd09"
+  apiKey: "AIzaSyCO3FRhSwH1xLABwVGFSd_YYrbFp0lQEv8",
+  authDomain: "pagelalo-1b210.firebaseapp.com",
+  databaseURL: "https://pagelalo-1b210-default-rtdb.firebaseio.com",
+  projectId: "pagelalo-1b210",
+  storageBucket: "pagelalo-1b210.firebasestorage.app",
+  messagingSenderId: "1096735980204",
+  appId: "1:1096735980204:web:8252ddb9fb484c398dfd09"
 };
-
-// Inicializar Firebase
-const app = initializeApp(firebaseConfig);
 
 // Importaciones de Firebase
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
@@ -229,17 +226,17 @@ function loadSampleProducts() {
     products = [
         {
             id: 'sample1',
-            name: 'Rosario Tradicional',
-            description: 'Rosario de madera con cuentas ovaladas y detalles de metal',
+            name: 'Martillo Truper',
+            description: 'Martillo de acero forjado con mango de fibra de vidrio',
             price: 150.00,
-            imageUrl: 'https://loremflickr.com/400/300/rosary?random=1'
+            imageUrl: 'https://placehold.co/400x300/e2e8f0/64748b?text=Martillo+Truper'
         },
         {
             id: 'sample2', 
-            name: 'Cruz de San Benito',
-            description: 'Crucifijo de metal con la medalla de San Benito, ideal para protección',
-            price: 250.00,
-            imageUrl: 'https://loremflickr.com/400/300/cross?random=2'
+            name: 'Desarmador Phillips',
+            description: 'Juego de desarmadores profesionales Pretul',
+            price: 89.50,
+            imageUrl: 'https://placehold.co/400x300/e2e8f0/64748b?text=Desarmador+Phillips'
         }
     ];
     renderProducts(products);
@@ -464,19 +461,12 @@ function generatePrintContent() {
         `;
     }).join('');
 
-    return `
-        <div style="font-family: Arial, sans-serif; padding: 20px; color: #333;">
-            <h1 style="text-align: center; color: #ff8c00;">🛒 Resumen de tu Pedido</h1>
-            <p style="text-align: center; color: #666;">Soluciones Delicias</p>
-            <div style="margin-top: 30px;">
-                ${itemsHtml}
-            </div>
-            <div style="margin-top: 20px; border-top: 2px solid #333; padding-top: 20px; display: flex; justify-content: space-between; font-weight: bold; font-size: 24px;">
-                <span>Total:</span>
-                <span>$${total.toFixed(2)}</span>
-            </div>
-        </div>
-    `;
+   return `
+    <div style="font-family: Arial, sans-serif; padding: 20px; color: #333;">
+        <h1 style="text-align: center; color: #D4A017;">🛒 Resumen de tu Pedido</h1>
+        <!-- ... resto del contenido ... -->
+    </div>
+`;
 }
 
 function renderAdminProductList() {

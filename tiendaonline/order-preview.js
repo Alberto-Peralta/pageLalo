@@ -4,13 +4,13 @@ import { getDatabase, ref, get, update, remove } from "https://www.gstatic.com/f
 import { getAuth } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyCO3FRhSwH1xLABwVGFSd_YYrbFp0lQEv8",
-    authDomain: "pagelalo-1b210.firebaseapp.com",
-    databaseURL: "https://pagelalo-1b210-default-rtdb.firebaseio.com",
-    projectId: "pagelalo-1b210",
-    storageBucket: "pagelalo-1b210.firebasestorage.app",
-    messagingSenderId: "1096735980204",
-    appId: "1:1096735980204:web:8252ddb9fb484c398dfd09"
+  apiKey: "AIzaSyCO3FRhSwH1xLABwVGFSd_YYrbFp0lQEv8",
+  authDomain: "pagelalo-1b210.firebaseapp.com",
+  databaseURL: "https://pagelalo-1b210-default-rtdb.firebaseio.com",
+  projectId: "pagelalo-1b210",
+  storageBucket: "pagelalo-1b210.firebasestorage.app",
+  messagingSenderId: "1096735980204",
+  appId: "1:1096735980204:web:8252ddb9fb484c398dfd09"
 };
 
 const appId = "default-app-id";
@@ -527,13 +527,13 @@ async function confirmOrder() {
         
         // Inicializar Firebase en order-preview.html también
         const firebaseConfig = {
-            apiKey: "AIzaSyCO3FRhSwH1xLABwVGFSd_YYrbFp0lQEv8",
-            authDomain: "pagelalo-1b210.firebaseapp.com",
-            databaseURL: "https://pagelalo-1b210-default-rtdb.firebaseio.com",
-            projectId: "pagelalo-1b210",
-            storageBucket: "pagelalo-1b210.firebasestorage.app",
-            messagingSenderId: "1096735980204",
-            appId: "1:1096735980204:web:8252ddb9fb484c398dfd09"
+            apiKey: "AIzaSyBChsbH9IyHGVGlH0Gg05pyTchM_kuJLrE",
+            authDomain: "soluciones-c5d76.firebaseapp.com",
+            databaseURL: "https://soluciones-c5d76-default-rtdb.firebaseio.com",
+            projectId: "soluciones-c5d76",
+            storageBucket: "soluciones-c5d76.firebasestorage.app",
+            messagingSenderId: "126602231797",
+            appId: "1:126602231797:web:f91f0bd6c9f97243186abc"
         };
         
         const app = initializeApp(firebaseConfig);

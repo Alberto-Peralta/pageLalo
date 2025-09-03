@@ -6,14 +6,14 @@
     <title>Seguimiento de Pedido - Soluciones Delicias</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-900 min-h-screen text-white">
+<body class="bg-amber-50 min-h-screen text-gray-800">
     <div class="container mx-auto p-6">
         <header class="text-center my-8">
             <h1 class="text-4xl font-bold text-yellow-500">📦 Seguimiento de Pedido</h1>
-            <p class="text-gray-400">Consulta el estado de tu pedido en tiempo real</p>
+            <p class="text-yellow-300">Consulta el estado de tu pedido en tiempo real</p>
         </header>
 
-        <div class="max-w-md mx-auto bg-gray-800 p-6 rounded-2xl shadow-lg">
+        <div class="max-w-md mx-auto bg-white p-6 rounded-2xl shadow-lg">
             <div class="mb-6">
                 <label class="block text-gray-400 mb-2">Número de Pedido:</label>
                 <input type="text" id="orderNumberInput" 
@@ -42,14 +42,14 @@
         import { getDatabase, ref, get } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-database.js";
 
         // Configuración de Firebase
-        const firebaseConfig = {
-            apiKey: "AIzaSyCO3FRhSwH1xLABwVGFSd_YYrbFp0lQEv8",
-            authDomain: "pagelalo-1b210.firebaseapp.com",
-            databaseURL: "https://pagelalo-1b210-default-rtdb.firebaseio.com",
-            projectId: "pagelalo-1b210",
-            storageBucket: "pagelalo-1b210.firebasestorage.app",
-            messagingSenderId: "1096735980204",
-            appId: "1:1096735980204:web:8252ddb9fb484c398dfd09"
+       const firebaseConfig = {
+        apiKey: "AIzaSyCO3FRhSwH1xLABwVGFSd_YYrbFp0lQEv8",
+        authDomain: "pagelalo-1b210.firebaseapp.com",
+        databaseURL: "https://pagelalo-1b210-default-rtdb.firebaseio.com",
+        projectId: "pagelalo-1b210",
+        storageBucket: "pagelalo-1b210.firebasestorage.app",
+        messagingSenderId: "1096735980204",
+        appId: "1:1096735980204:web:8252ddb9fb484c398dfd09"
         };
 
         const app = initializeApp(firebaseConfig);

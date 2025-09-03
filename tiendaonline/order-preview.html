@@ -3,22 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resumen de Pedido - El Cielo en tus Manos</title>    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Resumen de Pedido - El cielo en tus manos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Importar Firebase -->
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
         import { getDatabase, ref, set, onValue } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-database.js";
         
         // Configuración de Firebase
         const firebaseConfig = {
-            apiKey: "AIzaSyCO3FRhSwH1xLABwVGFSd_YYrbFp0lQEv8",
-            authDomain: "pagelalo-1b210.firebaseapp.com",
-            databaseURL: "https://pagelalo-1b210-default-rtdb.firebaseio.com",
-            projectId: "pagelalo-1b210",
-            storageBucket: "pagelalo-1b210.firebasestorage.app",
-            messagingSenderId: "1096735980204",
-            appId: "1:1096735980204:web:8252ddb9fb484c398dfd09"
+        apiKey: "AIzaSyCO3FRhSwH1xLABwVGFSd_YYrbFp0lQEv8",
+        authDomain: "pagelalo-1b210.firebaseapp.com",
+        databaseURL: "https://pagelalo-1b210-default-rtdb.firebaseio.com",
+        projectId: "pagelalo-1b210",
+        storageBucket: "pagelalo-1b210.firebasestorage.app",
+        messagingSenderId: "1096735980204",
+        appId: "1:1096735980204:web:8252ddb9fb484c398dfd09"
         };
-        
         // Inicializar Firebase
         const app = initializeApp(firebaseConfig);
         const db = getDatabase(app);
