@@ -1,0 +1,375 @@
+:root {
+    --color-primary: #FF7F00; /* Naranja Truper */
+    --color-secondary: #FFD700; /* Amarillo Pretul */
+    --color-background-dark: #1a202c; /* Gris oscuro para el fondo */
+    --color-card-dark: #2d3748; /* Gris oscuro para las tarjetas */
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-background-dark);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.modal-content {
+    background-color: var(--color-card-dark);
+    color: white;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    max-width: 90%;
+    max-height: 90%;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.product-card {
+    animation: slideInUp 0.5s ease-out forwards;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.close-button {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    color: #aaa;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.close-button:hover {
+    color: var(--color-primary);
+}
+
+.whatsapp-button {
+    background-color: #25d366;
+    color: white;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    border-radius: 9999px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+}
+
+.admin-panel {
+    display: none;
+}
+
+.admin-panel.active {
+    display: block;
+}
+
+#cartList::-webkit-scrollbar {
+    display: none;
+}
+
+#cartList {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+/* Estilo para los botones de acción */
+.btn-primary {
+    background-color: var(--color-primary);
+    color: white;
+    font-weight: bold;
+    border-radius: 9999px;
+    padding: 0.75rem 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: #FF9833;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: var(--color-card-dark);
+    color: #ddd;
+    border: 1px solid #4a5568;
+    font-weight: bold;
+    border-radius: 9999px;
+    padding: 0.75rem 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.btn-secondary:hover {
+    background-color: #4a5568;
+    transform: translateY(-2px);
+}
+
+/* NUEVOS ESTILOS AÑADIDOS */
+#cartPanel {
+    transform: translateX(100%);
+}
+
+@media (max-width: 640px) {
+    #cartPanel {
+        transform: translateY(100%);
+    }
+}
+
+body {
+    padding-bottom: 80px; /* Ajuste para el botón flotante en móviles */
+}
+
+#cartPanel.active {
+    transform: translateX(0);
+}
+
+@media (max-width: 640px) {
+    #cartPanel.active {
+        transform: translateY(0);
+    }
+}
+
+/* Estilos para el elemento de la animación de "vuelo" (flying-product) */
+
+.flying-product {
+  position: fixed;
+  z-index: 1000;
+  width: 50px;
+  height: 50px;
+  opacity: 1; 
+  border-radius: 50%; /* Esto lo hace circular */
+  transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+  pointer-events: none;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media print {
+    body {
+        background-color: white !important;
+        color: black !important;
+    }
+    .container {
+        padding: 0;
+    }
+    header,
+    #searchInput,
+    #adminPanel,
+    #productGrid .product-card button,
+    #openCartBtn,
+    #cartPanel,
+    .whatsapp-button,
+    #printOrderBtn {
+        display: none !important;
+    }
+    
+    /* Mostrar solo el contenido generado para la impresión */
+    .print-only-content {
+        display: block;
+    }
+}
+
+/* === ESTILOS ADICIONALES PARA MEJORAR LA UI DE ESCRITORIO === */
+
+/* Mejoras para los campos de formulario y búsqueda */
+input[type="text"],
+input[type="number"],
+input[type="url"],
+input[type="email"],
+input[type="password"],
+textarea {
+    transition: all 0.2s ease-in-out;
+    border: 2px solid transparent;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="url"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(255, 127, 0, 0.3);
+    outline: none;
+}
+
+/* Estilos para la tabla de administración en PC */
+.admin-table-container {
+    overflow-x: auto; /* Para asegurar que la tabla no rompa el layout si es muy ancha */
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+}
+
+.admin-table th,
+.admin-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #4a5568; /* Gris más oscuro para las líneas */
+}
+
+.admin-table th {
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    color: #a0aec0; /* Texto más tenue para los encabezados */
+    background-color: #2d3748; /* Color de las tarjetas */
+}
+
+.admin-table td {
+    color: #e2e8f0; /* Texto blanco suave */
+    vertical-align: middle;
+}
+
+.admin-table tr:hover td {
+    background-color: #2d3748; /* Resaltado sutil al pasar el mouse */
+}
+
+.admin-table img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    background-color: #4a5568;
+}
+
+/* Ocultar la tabla en móvil para mantener la vista de tarjetas */
+@media (max-width: 767px) {
+    .admin-table-container {
+        display: none; /* Ocultamos la tabla en móvil */
+    }
+}
+
+/* Mostrar la lista original en móvil y ocultarla en desktop */
+#adminProductList {
+    display: grid; /* El grid que ya tenías */
+}
+
+@media (min-width: 768px) {
+    #adminProductList {
+        display: none; /* Ocultamos las tarjetas en PC */
+    }
+}
+
+/* Estilos para las pestañas */
+.tab-button {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.tab-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Estilos para los estados de pedidos */
+.status-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: bold;
+}
+
+.status-pendiente { background-color: #f59e0b; color: white; }
+.status-confirmado { background-color: #10b981; color: white; }
+.status-preparando { background-color: #3b82f6; color: white; }
+.status-en_camino { background-color: #8b5cf6; color: white; }
+.status-entregado { background-color: #059669; color: white; }
+.status-cancelado { background-color: #ef4444; color: white; }
+
+/* Estilos para los items de pedidos */
+.order-item {
+    border-left: 4px solid #3b82f6;
+    transition: transform 0.2s ease;
+}
+
+.order-item:hover {
+    transform: translateY(-2px);
+}
+
+.delete-order-btn {
+    transition: all 0.3s ease;
+}
+
+.delete-order-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(239, 68, 68, 0.5);
+}
+
+/* Estilos para las imágenes de productos en pedidos */
+.order-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Mejora la visualización de la grid de productos */
+.order-item .grid {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+/* Scroll personalizado para la lista de productos */
+.order-item .grid::-webkit-scrollbar {
+    width: 6px;
+}
+
+.order-item .grid::-webkit-scrollbar-track {
+    background: #2d3748;
+    border-radius: 3px;
+}
+
+.order-item .grid::-webkit-scrollbar-thumb {
+    background: #4a5568;
+    border-radius: 3px;
+}
+
+.order-item .grid::-webkit-scrollbar-thumb:hover {
+    background: #718096;
+}
+
+/* Estilos para el buscador */
+#searchInput {
+    transition: all 0.3s ease;
+}
+
+#searchInput:focus {
+    transform: scale(1.02);
+    box-shadow: 0 0 15px rgba(255, 199, 0, 0.3);
+}
+
+/* Asegurar que el header se vea bien en ambas vistas */
+header {
+    position: relative;
+    z-index: 10;
+}

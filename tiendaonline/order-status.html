@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seguimiento de Pedido - Soluciones Delicias</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 min-h-screen text-white">
+    <div class="container mx-auto p-6">
+        <header class="text-center my-8">
+            <h1 class="text-4xl font-bold text-yellow-500">📦 Seguimiento de Pedido</h1>
+            <p class="text-gray-400">Consulta el estado de tu pedido en tiempo real</p>
+        </header>
+
+        <div class="max-w-md mx-auto bg-gray-800 p-6 rounded-2xl shadow-lg">
+            <div class="mb-6">
+                <label class="block text-gray-400 mb-2">Número de Pedido:</label>
+                <input type="text" id="orderNumberInput" 
+                       placeholder="Ej: 123456" 
+                       class="w-full p-3 bg-gray-700 rounded-lg text-white">
+            </div>
+            
+            <button id="searchOrderBtn" 
+                    class="w-full bg-yellow-500 text-gray-900 font-bold py-3 px-8 rounded-full transition-colors hover:bg-yellow-600">
+                🔍 Buscar Pedido
+            </button>
+        </div>
+
+        <div id="orderResult" class="hidden">
+            </div>
+
+        <div class="max-w-md mx-auto mt-6 text-center">
+            <a href="index.html" class="text-yellow-500 hover:underline transition-colors">
+                ← Volver al Catálogo
+            </a>
+        </div>
+    </div>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getDatabase, ref, get } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-database.js";
+
+        // Configuración de Firebase
+        const firebaseConfig = {
+            apiKey: "AIzaSyCO3FRhSwH1xLABwVGFSd_YYrbFp0lQEv8",
+            authDomain: "pagelalo-1b210.firebaseapp.com",
+            databaseURL: "https://pagelalo-1b210-default-rtdb.firebaseio.com",
+            projectId: "pagelalo-1b210",
+            storageBucket: "pagelalo-1b210.firebasestorage.app",
+            messagingSenderId: "1096735980204",
+            appId: "1:1096735980204:web:8252ddb9fb484c398dfd09"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase(app);
+        const appId = 'default-app-id';
+        let productMap = {}; 
+
+        // Función para obtener el catálogo de productos de Firebase
+        async function getProductCatalog() {
+            try {
+                const productsRef = ref(db, `/artifacts/${appId}/public/products`);
+                const snapshot = await get(productsRef);
+                return snapshot.exists() ? snapshot.val() : {};
+            } catch (error) {
+                console.error("Error al cargar el catálogo de productos:", error);
+                return {};
+            }
+        }
+
+        // Función principal para buscar el pedido
+        async function searchOrder() {
+            const orderNumber = document.getElementById('orderNumberInput').value.trim();
+            const orderResult = document.getElementById('orderResult');
+
+            orderResult.innerHTML = '<p class="text-gray-400">Buscando pedido...</p>';
+            orderResult.classList.remove('hidden');
+
+            if (!orderNumber) {
+                orderResult.innerHTML = '<p class="text-red-400">Por favor, ingresa un número de pedido.</p>';
+                return;
+            }
+
+            try {
+                if (Object.keys(productMap).length === 0) {
+                    orderResult.innerHTML = '<p class="text-gray-400">Cargando catálogo de productos...</p>';
+                    productMap = await getProductCatalog();
+                    if (Object.keys(productMap).length === 0) {
+                        orderResult.innerHTML = '<p class="text-red-400">⚠️ Error: No se pudo cargar el catálogo de productos. Intenta de nuevo.</p>';
+                        return;
+                    }
+                }
+
+                orderResult.innerHTML = '<p class="text-gray-400">Buscando pedido...</p>';
+                const ordersRef = ref(db, `/artifacts/${appId}/public/orders`);
+                const ordersSnapshot = await get(ordersRef);
+
+                if (ordersSnapshot.exists()) {
+                    const orders = ordersSnapshot.val();
+                    let foundOrder = null;
+                    for (const orderId in orders) {
+                        if (orders[orderId].orderNumber == orderNumber) {
+                            foundOrder = { id: orderId, ...orders[orderId] };
+                            break;
+                        }
+                    }
+
+                    if (foundOrder) {
+                        renderOrderDetails(foundOrder);
+                    } else {
+                        orderResult.innerHTML = '<p class="text-red-400">No se encontró el pedido con ese número.</p>';
+                    }
+                } else {
+                    orderResult.innerHTML = '<p class="text-red-400">No se encontraron pedidos en la base de datos.</p>';
+                }
+            } catch (error) {
+                console.error("Error al buscar el pedido:", error);
+                orderResult.innerHTML = '<p class="text-red-400">Error en la conexión con la base de datos. Intenta nuevamente.</p>';
+            }
+        }
+        
+        // Renderiza los detalles del pedido en la pantalla
+        function renderOrderDetails(order) {
+            const orderResult = document.getElementById('orderResult');
+            const productListHtml = renderProductsList(order.cart);
+            
+            orderResult.innerHTML = `
+                <div class="bg-gray-700 p-6 rounded-2xl shadow-lg mt-6">
+                    <div class="flex justify-between items-center mb-4">
+                        <h2 class="text-2xl font-bold text-yellow-500">Pedido #${order.orderNumber}</h2>
+                        <span class="${getStatusClass(order.status)}">${getStatusText(order.status)}</span>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <p class="text-gray-400 text-sm">Fecha: ${new Date(order.timestamp).toLocaleDateString()}</p>
+                        <p class="text-gray-400 text-sm">Cliente: ${order.customerName}</p>
+                    </div>
+                    
+                    <h3 class="text-lg font-semibold text-white mb-2 border-b border-gray-600 pb-2">Productos:</h3>
+                    
+                    <div class="space-y-4">
+                        ${productListHtml}
+                    </div>
+                    
+                    <div class="border-t border-gray-600 pt-4 mt-4">
+                        <div class="flex justify-between items-center text-lg">
+                            <span class="text-white font-semibold">Total del pedido:</span>
+                            <span class="text-yellow-500 font-bold text-xl">$${order.total.toFixed(2)}</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 bg-yellow-500 bg-opacity-10 border border-yellow-500 border-opacity-30 rounded-lg p-4">
+                        <p class="text-yellow-400 text-sm text-center">✅ ¡Todo en orden! El estado de tu pedido es ${getStatusText(order.status)}.</p>
+                    </div>
+                </div>
+            `;
+            orderResult.classList.remove('hidden');
+        }
+
+        // Funciones de utilidad
+        function getStatusClass(status) {
+            const classes = {
+                'pendiente': 'bg-yellow-500 text-yellow-900',
+                'confirmado': 'bg-blue-500 text-blue-900',
+                'preparando': 'bg-orange-500 text-orange-900',
+                'en_camino': 'bg-purple-500 text-purple-900',
+                'entregado': 'bg-green-500 text-green-900',
+                'cancelado': 'bg-red-500 text-red-900'
+            };
+            return `px-3 py-1 rounded-full text-sm font-bold ${classes[status] || 'bg-gray-500'}`;
+        }
+
+        function getStatusText(status) {
+            const statusMap = {
+                'pendiente': '⏳ Pendiente',
+                'confirmado': '✅ Confirmado',
+                'preparando': '👨‍🍳 Preparando',
+                'en_camino': '🚚 En camino',
+                'entregado': '📦 Entregado',
+                'cancelado': '❌ Cancelado'
+            };
+            return statusMap[status] || status;
+        }
+
+        // Renderiza la lista de productos con nombres e imágenes
+        function renderProductsList(cart) {
+            return Object.entries(cart).map(([productId, quantity]) => {
+                const product = productMap[productId];
+                if (product) {
+                    return `
+                        <div class="flex items-center bg-gray-800 p-4 rounded-xl gap-4 hover:bg-gray-750 transition-colors">
+                            <img src="${product.imageUrl || 'https://via.placeholder.com/80'}" 
+                                alt="${product.name}" 
+                                class="w-20 h-20 object-cover rounded-lg shadow-md">
+                            
+                            <div class="flex-grow">
+                                <h4 class="text-white font-semibold">${product.name}</h4>
+                                <p class="text-gray-400 text-sm">Cantidad: ${quantity}</p>
+                                <p class="text-gray-400 text-sm">Precio unitario: $${product.price} c/u</p>
+                            </div>
+                            
+                            <div class="text-right">
+                                <p class="text-yellow-500 font-bold text-lg">$${(product.price * quantity).toFixed(2)}</p>
+                            </div>
+                        </div>
+                    `;
+                } else {
+                    return `
+                        <div class="flex items-center bg-gray-800 p-4 rounded-xl gap-4">
+                            <div class="w-20 h-20 bg-gray-700 rounded-lg flex items-center justify-center">
+                                <span class="text-gray-400 text-2xl">❓</span>
+                            </div>
+                            <div class="flex-grow">
+                                <h4 class="text-white">Producto no encontrado</h4>
+                                <p class="text-gray-400 text-sm">ID: ${productId.substring(0, 8)}...</p>
+                                <p class="text-gray-400 text-sm">Cantidad: ${quantity}</p>
+                            </div>
+                        </div>
+                    `;
+                }
+            }).join('');
+        }
+        
+        // CORRECCIÓN: Adjuntar el evento de clic al botón después de que el DOM esté cargado
+        document.addEventListener('DOMContentLoaded', () => {
+            const searchOrderBtn = document.getElementById('searchOrderBtn');
+            if (searchOrderBtn) {
+                searchOrderBtn.addEventListener('click', searchOrder);
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Cielo en tus Manos</title>    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container mx-auto p-4 md:p-8">
+    <header class="text-center my-8">
+
+
+<h1 id="mainTitle" class="text-4xl md:text-5xl font-extrabold text-white cursor-pointer transition-transform duration-200 hover:scale-105">El Cielo en tus Manos</h1>    
+<p class="mt-2 text-lg text-gray-400">Todo para vivir tu fe con el corazón</p>    
+
+        <!-- BUSCADOR PARA VISTA CLIENTE (añade la clase "client-search") -->
+    <div class="mt-6 max-w-md mx-auto client-search">
+        <input type="text" id="searchInput" placeholder="Buscar productos..." 
+               class="w-full rounded-full border-transparent shadow-sm p-3 text-lg bg-gray-700 text-white placeholder-gray-400 focus:ring-2 focus:ring-yellow-500">
+    </div>
+    
+    <div class="mt-4 flex justify-center">
+        <a href="order-status.html" 
+           class="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-semibold py-2 px-4 rounded-full transition-all duration-200 inline-flex items-center">
+            📦 Seguir mi pedido
+        </a>
+    </div>
+    </header>
+
+                <div id="adminPanel" class="admin-panel bg-gray-800 p-6 md:p-8 rounded-3xl shadow-lg mb-8">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-bold text-white">Panel de Administración</h2>
+                <button id="logoutBtn" class="btn-secondary">Cerrar Sesión</button>
+            </div>
+
+
+   
+            
+            <!-- Pestañas -->
+                    <div class="flex border-b border-gray-700 mb-6">
+                <button id="productsTab" class="tab-button py-2 px-4 text-white border-b-2 border-yellow-500">
+                    Productos
+                </button>
+                <button id="ordersTab" class="tab-button py-2 px-4 text-gray-400 hover:text-white">
+                    Pedidos
+                </button>
+            </div>
+
+            
+            <!-- Contenido de Productos -->
+            <div id="productsContent">
+                <form id="productForm" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <input type="hidden" id="productId">
+                    
+                    <div class="form-group">
+                        <label for="productName" class="block text-sm font-medium text-gray-400 mb-1">Nombre</label>
+                        <input type="text" id="productName" required 
+                            class="w-full rounded-lg border-gray-600 shadow-sm p-2 bg-gray-700 text-white">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="productPrice" class="block text-sm font-medium text-gray-400 mb-1">Precio</label>
+                        <input type="number" id="productPrice" step="0.01" min="0" required 
+                            class="w-full rounded-lg border-gray-600 shadow-sm p-2 bg-gray-700 text-white">
+                    </div>
+                    
+                    <div class="form-group md:col-span-2 lg:col-span-3">
+                        <label for="productDescription" class="block text-sm font-medium text-gray-400 mb-1">Descripción</label>
+                        <textarea id="productDescription" rows="3" required 
+                                class="w-full rounded-lg border-gray-600 shadow-sm p-2 bg-gray-700 text-white"></textarea>
+                    </div>
+                    
+                    <div class="form-group md:col-span-2 lg:col-span-3">
+                        <label for="productImage" class="block text-sm font-medium text-gray-400 mb-1">URL de Imagen</label>
+                        <input type="url" id="productImage" required 
+                            class="w-full rounded-lg border-gray-600 shadow-sm p-2 bg-gray-700 text-white">
+                    </div>
+                    
+                    <div class="form-actions md:col-span-2 lg:col-span-3 flex gap-4 justify-end">
+                        <button type="button" id="cancelBtn" class="btn-secondary hidden">Cancelar</button>
+                        <button type="submit" id="submitBtn" class="btn-primary">Agregar Producto</button>
+                    </div>
+                </form>
+
+
+                                          <!-- BUSCADOR PARA VISTA ADMIN (añade la clase "admin-search") -->
+            <div class="mt-6 max-w-md mx-auto admin-search hidden">
+                <input type="text" id="adminSearchInput" placeholder="Buscar productos en administración..." 
+                    class="w-full rounded-full border-transparent shadow-sm p-3 text-lg bg-gray-700 text-white placeholder-gray-400 focus:ring-2 focus:ring-yellow-500">
+            </div>
+    
+                
+                <div id="adminProductList" class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                </div>
+                <div id="adminTableContainer" class="admin-table-container mt-6">
+                </div>
+            </div>
+
+    
+            
+            <!-- Contenido de Pedidos -->
+            <div id="ordersContent" class="hidden">                <div class="mb-4">
+                    <input type="text" id="orderSearch" placeholder="Buscar pedidos..." class="w-full rounded-full border-transparent shadow-sm p-3 text-lg bg-gray-700 text-white placeholder-gray-400 focus:ring-2 focus:ring-yellow-500">
+                </div>
+                <div id="ordersList" class="space-y-4">
+                    <!-- Aquí se cargarán los pedidos -->
+                </div>
+            </div>
+        </div>
+
+        <section id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        </section>
+
+    </div>
+
+    <div id="productModal" class="modal">
+        <div class="modal-content text-center">
+            <span class="close-button">&times;</span>
+            <img id="modalImage" class="w-full h-auto rounded-xl shadow-lg mb-4" src="" alt="Producto en pantalla completa">
+            <h3 id="modalName" class="text-3xl font-bold mb-2"></h3>
+            <p id="modalDescription" class="text-lg text-gray-300 mb-4"></p>
+            <span id="modalPrice" class="text-2xl font-semibold text-yellow-500"></span>
+        </div>
+    </div>
+    
+    <div id="messageBox" class="modal">
+        <div class="modal-content text-center max-w-sm">
+            <h3 id="messageTitle" class="text-xl font-bold mb-2 text-red-500"></h3>
+            <p id="messageText" class="text-gray-300 mb-4"></p>
+            <button id="closeMessageBtn" class="bg-gray-700 text-white font-bold py-2 px-4 rounded-full">Cerrar</button>
+        </div>
+    </div>
+
+    <div id="confirmBox" class="modal">
+        <div class="modal-content text-center max-w-sm">
+            <h3 id="confirmTitle" class="text-xl font-bold mb-2 text-yellow-500">¿Estás seguro?</h3>
+            <p id="confirmText" class="text-gray-300 mb-4">¿Estás seguro de que quieres eliminar este producto?</p>
+            <div class="flex justify-center gap-4">
+                <button id="confirmYesBtn" class="bg-red-500 text-white font-bold py-2 px-4 rounded-full hover:bg-red-600">Sí, eliminar</button>
+                <button id="confirmNoBtn" class="bg-gray-500 text-white font-bold py-2 px-4 rounded-full hover:bg-gray-600">No, cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content text-center max-w-sm">
+            <span class="close-button" id="closeLoginModal">&times;</span>
+            <h3 class="text-2xl font-bold mb-4 text-white">Acceso de Administrador</h3>
+            <form id="authForm">
+                <div class="mb-4">
+                    <label for="authEmail" class="block text-left text-sm font-medium text-gray-400">Correo Electrónico</label>
+                    <input type="email" id="authEmail" class="mt-1 block w-full rounded-lg border-gray-600 shadow-sm p-2 bg-gray-700 text-white" required>
+                </div>
+                <div class="mb-6">
+                    <label for="authPassword" class="block text-left text-sm font-medium text-gray-400">Contraseña</label>
+                    <input type="password" id="authPassword" class="mt-1 block w-full rounded-lg border-gray-600 shadow-sm p-2 bg-gray-700 text-white" required>
+                </div>
+                <div class="flex flex-col space-y-4">
+                    <button type="button" id="loginBtn" class="w-full btn-primary">Ingresar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- PANEL DEL CARRITO -->
+    <div id="cartPanel" class="fixed top-0 right-0 h-full w-full sm:w-80 bg-gray-800 shadow-2xl z-50 transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col p-6">
+        <div class="flex justify-between items-center mb-4">
+            <h3 class="text-2xl font-bold text-white">🛒 Tu Carrito</h3>
+            <button id="closeCartBtn" class="text-gray-400 hover:text-white text-3xl">&times;</button>
+        </div>
+        <ul id="cartList" class="flex-grow overflow-y-auto space-y-4 pr-2">
+        </ul>
+
+        <div class="mt-auto pt-4 border-t border-gray-700">
+            <div class="flex justify-between text-white font-bold text-lg">
+                <span>Total:</span>
+                <span id="cartTotal">$0.00</span>
+            </div>
+            <button id="printOrderBtn" class="w-full bg-green-500 text-white font-bold py-3 px-6 rounded-full hover:bg-green-600 transition-colors mt-4">
+                Continuar
+            </button>
+        </div>
+    </div>
+
+    <!-- BOTÓN FLOTANTE DEL CARRITO - DEBE ESTAR FUERA DEL PANEL -->
+    <button id="openCartBtn" class="fixed bottom-6 right-6 p-4 rounded-full bg-yellow-500 text-white shadow-lg transition-transform duration-200 hover:scale-110 z-50">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.182 1.254.632 1.254H20l-.546-2.185L17 13H7z" />
+        </svg>
+        <span id="cartCount" class="absolute top-0 right-0 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-100 transform translate-x-1/2 -translate-y-1/2 bg-red-600 rounded-full">0</span>
+    </button>
+
+    <div id="orderDetailsModal" class="modal">
+    <div class="modal-content text-white p-6 md:p-8 rounded-xl shadow-lg">
+        <div id="orderDetailsContent">
+            </div>
+        </div>
+    </div>
+
+    <div id="orderDetailsModal" class="modal">
+    <div class="modal-content text-white p-6 md:p-8 rounded-xl shadow-lg">
+        <div id="orderDetailsContent">
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
