@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Campaña Temporal Padrinos</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+ <style>
+  body { font-family: Arial, sans-serif; margin:0; }
+
+  /* Banner */
+  .campana-padrinos {
+    background: linear-gradient(135deg, #ffe082, #ffcc80);
+    color: #4e342e;
+    text-align: center;
+    padding: 2em 1em;
+    border-bottom: 4px solid #ff9800;
+    animation: fadeIn 1s ease-in-out;
+  }
+  .contenedor-campana { max-width: 800px; margin:auto; }
+  .campana-padrinos h2 { font-size: 2em; margin-bottom:0.5em; cursor:pointer; }
+  .campana-padrinos p { font-size:1.2em; margin-bottom:1.5em; }
+
+  /* Botones */
+  .botones-campana { display:flex; justify-content:center; gap:1em; flex-wrap:wrap; margin-top:1em; }
+  .btn-campana {
+    background-color:#ff6f00; color:white;
+    padding:0.8em 1.5em; font-weight:bold;
+    border-radius:5px; text-decoration:none;
+    display:inline-flex; align-items:center; justify-content:center;
+    transition:0.3s; border:none; cursor:pointer;
+  }
+  .btn-campana:hover { background-color:#e65100;
+   }
+   
+ .btn-campana.secundario {
+  background-color:transparent; 
+  color:#4e342e; 
+  border:2px solid #ff6f00;
+  font-weight: bold; /* agrega esto */
+}
+
+  .btn-campana.secundario:hover { background-color:#ffcc80; color:#4e342e; }
+  .btn-campana i { margin-right:0.5em; }
+
+  @keyframes fadeIn { from {opacity:0; transform:translateY(-20px);} to {opacity:1; transform:translateY(0);} }
+
+  /* Modal */
+  .modal { display:none; position:fixed; z-index:999; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.5); justify-content:center; align-items:center; }
+  .modal-content {
+    background-color:#fff3e0; padding:2em; border-radius:10px;
+    max-width:500px; width:90%; position:relative;
+  }
+  .close { position:absolute; top:10px; right:15px; font-size:1.5em; cursor:pointer; }
+  .modal-content input, .modal-content textarea { width:100%; padding:0.8em; margin-bottom:1em; border:1px solid #ccc; border-radius:5px; font-size:1em; }
+  .modal-content textarea { resize:vertical; min-height:80px; }
+  .mensaje-exito, .mensaje-error { font-weight:bold; margin-top:1em; display:none; }
+
+  /* Panel administrador */
+  .panel-admin { display:none; padding:2em; background:#f5f5f5; }
+  .panel-admin h2 { margin-top:0; }
+  table { width:100%; border-collapse: collapse; margin-top:1em; }
+  table, th, td { border:1px solid #ccc; }
+  th, td { padding:0.5em; text-align:left; }
+</style>
+
+</head>
+<body>
+
+  <!-- Banner -->
+  <section class="campana-padrinos">
+    <div class="contenedor-campana">
+      <h2>🎯 Conviértete en Padrino de un Misionero</h2>
+      <p>Tu generosidad puede llevar el Evangelio y la ayuda a donde más se necesita. Sé parte del cambio.</p>
+      <div class="botones-campana">
+        <a href="https://wa.me/526393992678?text=Hola,%20quiero%20información%20sobre%20cómo%20convertirme%20en%20padrino" 
+           class="btn-campana" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-whatsapp"></i> Quiero info por WhatsApp
+        </a>
+        <button class="btn-campana secundario" id="btn-mostrar-formulario">Dejar mis datos</button>
+        
+            <a href="https://misioneros.org.mx" class="btn-campana secundario" target="_blank" rel="noopener noreferrer">
+            Conocer Más
+            </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal Formulario -->
+  <div class="modal" id="modal-formulario">
+    <div class="modal-content">
+      <span class="close" id="cerrar-modal">&times;</span>
+      <h2>Deja tus datos para contactarte</h2>
+      <form id="form-padrinos">
+        <input type="text" name="nombre" placeholder="Tu nombre" required>
+        <input type="email" name="correo" placeholder="Tu correo" required>
+        <input type="tel" name="telefono" placeholder="Tu teléfono" required>
+        <textarea name="mensaje" placeholder="Comentario (opcional)"></textarea>
+        <button type="submit" class="btn-campana">Enviar</button>
+      </form>
+      <p class="mensaje-exito" id="mensaje-exito">¡Gracias! Te contactaremos pronto.</p>
+    </div>
+  </div>
+
+  <!-- Modal Login Admin -->
+  <div class="modal" id="modal-login">
+    <div class="modal-content">
+      <span class="close" id="cerrar-login">&times;</span>
+      <h2>Acceso Administrador</h2>
+      <form id="form-login">
+        <input type="email" name="correo" placeholder="Correo" required>
+        <input type="password" name="password" placeholder="Contraseña" required>
+        <button type="submit" class="btn-campana">Ingresar</button>
+      </form>
+      <p class="mensaje-error" id="mensaje-error">Correo o contraseña incorrectos</p>
+    </div>
+  </div>
+
+  <!-- Panel administrador -->
+  <section class="panel-admin" id="panel-admin">
+    <h2>Panel de Administrador</h2>
+    <button id="btn-logout" class="btn-campana secundario">Cerrar sesión</button>
+    <table id="tabla-prospectos">
+      <thead>
+        <tr><th>Nombre</th><th>Correo</th><th>Teléfono</th><th>Mensaje</th><th>Fecha</th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </section>
+
+  <!-- Firebase y Scripts -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+    import { getDatabase, ref, push, onValue } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js";
+    import { getAuth, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
+
+    // Config Firebase
+    const firebaseConfig = {
+      apiKey: "AIzaSyCO3FRhSwH1xLABwVGFSd_YYrbFp0lQEv8",
+      authDomain: "pagelalo-1b210.firebaseapp.com",
+      databaseURL: "https://pagelalo-1b210-default-rtdb.firebaseio.com",
+      projectId: "pagelalo-1b210",
+      storageBucket: "pagelalo-1b210.firebasestorage.app",
+      messagingSenderId: "1096735980204",
+      appId: "1:1096735980204:web:8252ddb9fb484c398dfd09"
+    };
+    const app = initializeApp(firebaseConfig);
+    const database = getDatabase(app);
+    const auth = getAuth(app);
+
+    // Modal Formulario
+    const modal = document.getElementById('modal-formulario');
+    const btnMostrar = document.getElementById('btn-mostrar-formulario');
+    const cerrarModal = document.getElementById('cerrar-modal');
+    btnMostrar.addEventListener('click', ()=> modal.style.display='flex');
+    cerrarModal.addEventListener('click', ()=> modal.style.display='none');
+    window.addEventListener('click', (e)=> { if(e.target==modal) modal.style.display='none'; });
+
+    // Guardar datos en Firebase
+    const form = document.getElementById('form-padrinos');
+    const mensajeExito = document.getElementById('mensaje-exito');
+    form.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      const datos = {
+        nombre: form.nombre.value,
+        correo: form.correo.value,
+        telefono: form.telefono.value,
+        mensaje: form.mensaje.value,
+        fecha: new Date().toLocaleString()
+      };
+      push(ref(database,'padrinos'), datos)
+        .then(()=> { mensajeExito.style.display='block'; form.reset(); })
+        .catch(err=>alert('Error: '+err));
+    });
+
+    // Modal Login Admin
+    const modalLogin = document.getElementById('modal-login');
+    const cerrarLogin = document.getElementById('cerrar-login');
+    const tituloBanner = document.querySelector('.campana-padrinos h2');
+    const formLogin = document.getElementById('form-login');
+    const mensajeError = document.getElementById('mensaje-error');
+    const panel = document.getElementById('panel-admin');
+
+    let clicks = 0, timer;
+    tituloBanner.addEventListener('click', ()=>{
+      clicks++;
+      clearTimeout(timer);
+      timer = setTimeout(()=>{ clicks=0; }, 1500);
+      if(clicks >=5) modalLogin.style.display='flex';
+    });
+    cerrarLogin.addEventListener('click', ()=> modalLogin.style.display='none');
+    window.addEventListener('click', (e)=> { if(e.target==modalLogin) modalLogin.style.display='none'; });
+
+    // Login con Firebase Authentication
+    formLogin.addEventListener('submit', async (e)=>{
+      e.preventDefault();
+      const correo = formLogin.correo.value.trim();
+      const password = formLogin.password.value.trim();
+
+      try {
+        await signInWithEmailAndPassword(auth, correo, password);
+        modalLogin.style.display='none';
+        panel.style.display='block';
+        mostrarDatosAdmin();
+      } catch(error) {
+        mensajeError.style.display='block';
+        setTimeout(()=> mensajeError.style.display='none',3000);
+      }
+    });
+
+    // Mostrar prospectos
+    function mostrarDatosAdmin(){
+      const tablaBody = document.querySelector('#tabla-prospectos tbody');
+      const padrinosRef = ref(database,'padrinos');
+      onValue(padrinosRef, snapshot=>{
+        tablaBody.innerHTML='';
+        snapshot.forEach(child=>{
+          const data=child.val();
+          const tr=document.createElement('tr');
+          tr.innerHTML=`<td>${data.nombre}</td><td>${data.correo}</td><td>${data.telefono}</td><td>${data.mensaje}</td><td>${data.fecha}</td>`;
+          tablaBody.appendChild(tr);
+        });
+      });
+    }
+
+    // Logout admin
+    const btnLogout = document.getElementById('btn-logout');
+    btnLogout.addEventListener('click', async () => {
+      try {
+        await signOut(auth);
+        panel.style.display = 'none';
+        alert('Has cerrado sesión correctamente.');
+      } catch (error) {
+        alert('Error al cerrar sesión: ' + error.message);
+      }
+    });
+  </script>
+</body>
+
+<script>
+  function enviarAltura() {
+    const altura = document.body.scrollHeight;
+    window.parent.postMessage({ height: altura }, "*");
+  }
+
+  // Enviar altura al cargar y al cambiar tamaño
+  window.addEventListener('load', enviarAltura);
+  window.addEventListener('resize', enviarAltura);
+</script>
+
+
+</html>
