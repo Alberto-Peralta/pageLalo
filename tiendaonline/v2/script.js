@@ -21,7 +21,7 @@ const auth = getAuth(app);
 
 const appId = 'default-app-id';
 
-// --- ELEMENTOS DE LA UI ---
+// --- UI ELEMENTS ---
 const productGrid = document.getElementById('productGrid');
 const adminPanel = document.getElementById('adminPanel');
 const mainTitle = document.getElementById('mainTitle');
@@ -30,11 +30,11 @@ const productForm = document.getElementById('productForm');
 const productIdInput = document.getElementById('productId');
 const submitBtn = document.getElementById('submitBtn');
 const cancelBtn = document.getElementById('cancelBtn');
-// Modales
+// Modals
 const productModal = document.getElementById('productModal');
 const messageBox = document.getElementById('messageBox');
 const loginModal = document.getElementById('loginModal');
-// Carrito
+// Cart
 const cartPanel = document.getElementById('cartPanel');
 const cartCount = document.getElementById('cartCount');
 const openCartBtn = document.getElementById('openCartBtn');
@@ -45,34 +45,34 @@ const logoutBtn = document.getElementById('logoutBtn');
 const authEmailInput = document.getElementById('authEmail');
 const authPasswordInput = document.getElementById('authPassword');
 const adminTableContainer = document.getElementById('adminTableContainer');
+const adminSearchInput = document.getElementById('adminSearchInput');
 let ordersTab, productsTab, ordersContent, productsContent, orderSearch;
 
 
-// --- ESTADO DE LA APLICACIÓN ---
+// --- APPLICATION STATE ---
 let products = [];
 let cart = {};
 let admins = {};
-let currentUser = null; // Para saber quién está logueado
+let currentUser = null; 
 let adminClicks = 0;
 let orders = [];
 
 
-// --- LÓGICA PRINCIPAL ---
+// --- MAIN LOGIC ---
 
-// 1. Listener para la lista de administradores (siempre activo)
+// 1. Listener for admin list (always active)
 const adminsRef = ref(db, '/admins');
 onValue(adminsRef, (snapshot) => {
     admins = snapshot.val() || {};
-    // Si ya hay un usuario logueado, re-evaluamos su rol con la nueva lista de admins
     if (currentUser) {
         updateUIBasedOnUserRole(currentUser);
     }
 });
 
-// 2. Listener para la autenticación (siempre activo)
+// 2. Listener for authentication (always active)
 onAuthStateChanged(auth, (user) => {
-    currentUser = user; // Actualizamos el usuario actual
-    updateUIBasedOnUserRole(user); // Actualizamos la UI
+    currentUser = user; 
+    updateUIBasedOnUserRole(user); 
 });
 
 
@@ -86,20 +86,20 @@ function updateUIBasedOnUserRole(user) {
         if (mainTitle) mainTitle.style.display = 'none';
         clientElements.forEach(el => el.style.display = 'none');
         
-        setupAdminListeners(); // Carga datos de productos y pedidos
+        setupAdminListeners(); 
         setupAdminTabs();
     } else {
         adminPanel.classList.remove('active');
         productGrid.style.display = 'grid';
         if (mainTitle) mainTitle.style.display = 'block';
-        clientElements.forEach(el => el.style.display = 'inline-flex');
+        clientElements.forEach(el => el.style.display = 'flex'); // Use flex for proper alignment
         
-        setupRealtimeListeners(); // Carga solo productos
+        setupRealtimeListeners(); 
     }
 }
 
 function setupAdminListeners() {
-    setupRealtimeListeners(); // Los admins también necesitan la lista de productos
+    setupRealtimeListeners(); 
     setupAdminOrdersListener();
 }
 
@@ -111,7 +111,7 @@ function setupRealtimeListeners() {
         products.sort((a, b) => (b.timestamp || 0) - (a.timestamp || 0));
         
         renderProducts(products);
-        if (adminTableContainer) renderAdminTable(); // Actualiza la tabla de admin si existe
+        if (adminTableContainer) renderAdminTable(); 
         updateCartUI();
     });
 }
@@ -127,7 +127,7 @@ function setupAdminOrdersListener() {
 }
 
 
-// --- RENDERIZADO ---
+// --- RENDERING ---
 
 function renderProducts(productList) {
     if (!productGrid) return;
@@ -152,7 +152,7 @@ function renderProducts(productList) {
     });
 }
 
-function renderAdminTable() {
+function renderAdminTable(productList = products) {
     if (!adminTableContainer) return;
     const table = document.createElement('table');
     table.className = 'admin-table';
@@ -161,7 +161,7 @@ function renderAdminTable() {
             <tr><th>Imagen</th><th>Artículo</th><th>Precio</th><th class="text-center">Acciones</th></tr>
         </thead>
         <tbody>
-            ${products.map(p => `
+            ${productList.map(p => `
                 <tr>
                     <td><img src="${p.imageUrl}" alt="${p.name}"></td>
                     <td>
@@ -183,10 +183,14 @@ function renderAdminTable() {
     addAdminTableEventListeners();
 }
 
-function renderOrdersList() {
+function renderOrdersList(orderList = orders) {
     const ordersList = document.getElementById('ordersList');
     if (!ordersList) return;
-    ordersList.innerHTML = orders.map(order => `
+    if (orderList.length === 0) {
+        ordersList.innerHTML = `<p class="text-center text-gray-500 py-4">No se encontraron pedidos.</p>`;
+        return;
+    }
+    ordersList.innerHTML = orderList.map(order => `
         <div class="order-item bg-white p-4 rounded-xl shadow">
             <div class="flex justify-between items-start mb-3">
                 <div>
@@ -197,22 +201,26 @@ function renderOrdersList() {
                 <span class="status-badge status-${order.status || 'pendiente'}">${order.status || 'pendiente'}</span>
             </div>
             <div class="border-t border-gray-200 pt-3 flex justify-between items-center">
-                <span class="text-lg font-bold text-gray-800">Total: $${order.total.toFixed(2)}</span>
-                <select class="status-select bg-gray-100 border border-gray-300 text-gray-800 p-1 rounded text-sm" data-order-id="${order.id}">
-                    <option value="pendiente" ${order.status === 'pendiente' ? 'selected' : ''}>Pendiente</option>
-                    <option value="confirmado" ${order.status === 'confirmado' ? 'selected' : ''}>Confirmado</option>
-                    <option value="preparando" ${order.status === 'preparando' ? 'selected' : ''}>Preparando</option>
-                    <option value="en_camino" ${order.status === 'en_camino' ? 'selected' : ''}>En camino</option>
-                    <option value="entregado" ${order.status === 'entregado' ? 'selected' : ''}>Entregado</option>
-                    <option value="cancelado" ${order.status === 'cancelado' ? 'selected' : ''}>Cancelado</option>
-                </select>
+                <span class="text-lg font-bold text-gray-800">Total: $${(order.total || 0).toFixed(2)}</span>
+                <div class="flex items-center gap-4">
+                    <select class="status-select bg-gray-100 border border-gray-300 text-gray-800 p-1 rounded text-sm" data-order-id="${order.id}">
+                        <option value="pendiente" ${order.status === 'pendiente' ? 'selected' : ''}>Pendiente</option>
+                        <option value="confirmado" ${order.status === 'confirmado' ? 'selected' : ''}>Confirmado</option>
+                        <option value="preparando" ${order.status === 'preparando' ? 'selected' : ''}>Preparando</option>
+                        <option value="en_camino" ${order.status === 'en_camino' ? 'selected' : ''}>En camino</option>
+                        <option value="entregado" ${order.status === 'entregado' ? 'selected' : ''}>Entregado</option>
+                        <option value="cancelado" ${order.status === 'cancelado' ? 'selected' : ''}>Cancelado</option>
+                    </select>
+                    <button class="edit-order-btn bg-blue-500 text-white font-bold py-1 px-3 rounded-full hover:bg-blue-600 text-xs" data-order-id="${order.id}">Editar</button>
+                    <button class="delete-order-btn bg-red-600 text-white font-bold py-1 px-3 rounded-full hover:bg-red-700 text-xs" data-order-id="${order.id}">Borrar</button>
+                </div>
             </div>
         </div>
     `).join('');
     reconnectOrderEventListeners();
 }
 
-// --- CARRITO ---
+// --- CART LOGIC ---
 function addToCart(productId) {
     cart[productId] = (cart[productId] || 0) + 1;
     updateCartUI();
@@ -252,7 +260,7 @@ function updateCartUI() {
     document.getElementById('cartTotal').textContent = `$${total.toFixed(2)}`;
 }
 
-// --- MODALES Y MENSAJES ---
+// --- MODALS AND MESSAGES ---
 function showProductModal(product) {
     productModal.querySelector('#modalImage').src = product.imageUrl;
     productModal.querySelector('#modalName').textContent = product.name;
@@ -268,7 +276,7 @@ function showMessage(title, text) {
 
 // --- EVENT LISTENERS ---
 document.addEventListener('DOMContentLoaded', () => {
-    // Cerrar modales
+    // Close modals
     document.querySelectorAll('.modal').forEach(modal => {
         modal.addEventListener('click', (e) => {
             if (e.target === modal || e.target.closest('.close-button') || e.target.closest('#closeMessageBtn')) {
@@ -286,15 +294,14 @@ document.addEventListener('DOMContentLoaded', () => {
         adminClicks = (adminClicks + 1) % 5;
         if (adminClicks === 0) loginModal.style.display = 'flex';
     });
-
-    // --- FORMULARIO Y LÓGICA DE ADMIN ---
+    
+    // --- ADMIN LOGIC AND FORMS ---
     if (loginBtn) {
         loginBtn.addEventListener('click', async () => {
             const email = authEmailInput.value;
             const password = authPasswordInput.value;
             try {
-                const userCredential = await signInWithEmailAndPassword(auth, email, password);
-                // onAuthStateChanged se encargará de actualizar la UI.
+                await signInWithEmailAndPassword(auth, email, password);
                 loginModal.style.display = 'none';
                 showMessage('Inicio de Sesión Exitoso', `Bienvenido, se han cargado los permisos de administrador.`);
             } catch (error) {
@@ -307,6 +314,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (productForm) productForm.addEventListener('submit', handleProductFormSubmit);
     if (cancelBtn) cancelBtn.addEventListener('click', resetProductForm);
+    
+    // Search listeners
+    if(adminSearchInput) adminSearchInput.addEventListener('input', (e) => {
+        const term = e.target.value.toLowerCase();
+        const filtered = products.filter(p => p.name.toLowerCase().includes(term) || p.description.toLowerCase().includes(term));
+        renderAdminTable(filtered);
+    });
+
+    orderSearch = document.getElementById('orderSearch');
+    if(orderSearch) orderSearch.addEventListener('input', (e) => {
+        const term = e.target.value.toLowerCase();
+        const filtered = orders.filter(o => 
+            o.customerName.toLowerCase().includes(term) ||
+            (o.customerPhone && o.customerPhone.includes(term)) ||
+            (o.orderNumber && o.orderNumber.toString().includes(term))
+        );
+        renderOrdersList(filtered);
+    });
+
 
     if (printOrderBtn) printOrderBtn.addEventListener('click', () => {
         if (Object.keys(cart).length === 0) return showMessage('Cesta Vacía', 'Añade artículos para continuar.');
@@ -332,6 +358,7 @@ function addAdminTableEventListeners() {
             document.getElementById('productImage').value = product.imageUrl;
             submitBtn.textContent = 'Actualizar Artículo';
             cancelBtn.classList.remove('hidden');
+            window.scrollTo(0, 0);
         }
     }));
     document.querySelectorAll('.delete-btn').forEach(btn => btn.addEventListener('click', async (e) => {
@@ -349,6 +376,23 @@ function reconnectOrderEventListeners() {
             const newStatus = e.target.value;
             await update(ref(db, `/artifacts/${appId}/public/orders/${orderId}`), { status: newStatus });
             showMessage('Estado Actualizado', `El pedido ahora está: ${newStatus}`);
+        });
+    });
+
+    document.querySelectorAll('.edit-order-btn').forEach(btn => {
+        btn.addEventListener('click', e => {
+            const orderId = e.target.dataset.orderId;
+            window.open(`order-preview.html?id=${orderId}`, '_blank');
+        });
+    });
+
+    document.querySelectorAll('.delete-order-btn').forEach(btn => {
+        btn.addEventListener('click', async e => {
+            const orderId = e.target.dataset.orderId;
+            if (confirm('¿Estás seguro que quieres ELIMINAR este pedido? Esta acción es permanente.')) {
+                await remove(ref(db, `/artifacts/${appId}/public/orders/${orderId}`));
+                showMessage('Éxito', 'Pedido eliminado correctamente.');
+            }
         });
     });
 }
