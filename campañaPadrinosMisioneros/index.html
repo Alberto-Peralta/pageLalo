@@ -55,11 +55,25 @@
   @keyframes fadeIn { from {opacity:0; transform:translateY(-20px);} to {opacity:1; transform:translateY(0);} }
 
   /* Modal */
-  .modal { display:none; position:fixed; z-index:999; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.5); justify-content:center; align-items:center; }
+  .modal { 
+    display: none; 
+    position: fixed; 
+    z-index: 999; 
+    left: 0; 
+    top: 0; 
+    width: 100%; 
+    height: 100%; 
+    background: rgba(0,0,0,0.5); 
+    justify-content: center; 
+    align-items: center; 
+  }
   .modal-content {
-    background-color:#fff3e0; padding:2em; border-radius:10px;
-    max-width:500px; width:90%; position:relative;
-    /* Solución elegante para el scroll en móviles */
+    background-color:#fff3e0; 
+    padding:2em; 
+    border-radius:10px;
+    max-width:500px; 
+    width:90%; 
+    position:relative;
     max-height: 90vh; 
     overflow-y: auto;
   }
@@ -67,6 +81,12 @@
   .modal-content input, .modal-content textarea { width:100%; padding:0.8em; margin-bottom:1em; border:1px solid #ccc; border-radius:5px; font-size:1em; }
   .modal-content textarea { resize:vertical; min-height:80px; }
   .mensaje-exito, .mensaje-error { font-weight:bold; margin-top:1em; display:none; }
+  .form-group-flex {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5em;
+    margin-bottom: 1em;
+  }
 
   /* Panel administrador */
   .panel-admin { display:none; padding:2em; background:#f5f5f5; }
@@ -80,17 +100,31 @@
     .panel-admin {
       padding: 1em;
     }
-
     table {
       font-size: 0.9em;
       display: block;
       overflow-x: auto;
       white-space: nowrap;
     }
-
     th, td {
       padding: 0.4em;
     }
+  }
+
+  /* Estilo para hacer la barra de scroll más visible en Webkit (Chrome, Safari) */
+  .modal-content::-webkit-scrollbar {
+    width: 8px;
+  }
+  .modal-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+  }
+  .modal-content::-webkit-scrollbar-thumb {
+    background: #ff6f00;
+    border-radius: 10px;
+  }
+  .modal-content::-webkit-scrollbar-thumb:hover {
+    background: #e65100;
   }
 </style>
 </head>
@@ -114,6 +148,7 @@
           Conocer Más
         </a>
       </div>
+      <a href="terminos.html" target="_blank" rel="noopener noreferrer" style="color: #4e342e; font-size: 0.9em; margin-top: 1em; display: inline-block;">Aviso de Privacidad</a>
     </div>
   </section>
 
@@ -126,6 +161,12 @@
         <input type="email" name="correo" placeholder="Tu correo" required>
         <input type="tel" name="telefono" placeholder="Tu teléfono" required>
         <textarea name="mensaje" placeholder="Comentario (opcional)"></textarea>
+        <div class="form-group-flex">
+            <input type="checkbox" id="aceptar-terminos" required style="width: auto; margin-top: 0.2em;">
+            <label for="aceptar-terminos" style="font-size: 0.9em;">
+                Acepto los <a href="terminos.html" target="_blank" rel="noopener noreferrer" style="color: #ff6f00;">Términos y Condiciones</a> y la Política de Privacidad.
+            </label>
+        </div>
         <button type="submit" class="btn-campana">Enviar</button>
       </form>
       <p class="mensaje-exito" id="mensaje-exito">¡Gracias! Te contactaremos pronto.</p>
