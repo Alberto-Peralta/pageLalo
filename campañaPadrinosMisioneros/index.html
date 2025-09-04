@@ -15,7 +15,6 @@
     padding: 2em 1em;
     border-bottom: 4px solid #ff9800;
     animation: fadeIn 1s ease-in-out;
-    min-height: 300px;
   }
   .contenedor-campana { max-width: 800px; margin:auto; }
   .campana-padrinos h2 { font-size: 2em; margin-bottom:0.5em; cursor:pointer; }
@@ -60,7 +59,7 @@
   .modal-content {
     background-color:#fff3e0; padding:2em; border-radius:10px;
     max-width:500px; width:90%; position:relative;
-    /* Nuevas propiedades para la barra de desplazamiento y altura máxima */
+    /* Solución elegante para el scroll en móviles */
     max-height: 90vh; 
     overflow-y: auto;
   }
@@ -78,11 +77,6 @@
 
   /* Estilos responsivos para el panel administrador */
   @media (max-width: 768px) {
-    .modal-content {
-      max-height: 90vh;
-      overflow-y: auto;
-    }
-
     .panel-admin {
       padding: 1em;
     }
@@ -417,7 +411,5 @@
     window.addEventListener('load', enviarAltura);
     window.addEventListener('resize', enviarAltura);
   </script>
-</body>
-</html>
 </body>
 </html>
