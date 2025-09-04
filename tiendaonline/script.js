@@ -141,7 +141,7 @@ function renderProducts(productList) {
             <h3 class="text-xl font-bold mb-2 text-gray-800">${product.name}</h3>
             <p class="text-sm text-gray-600 mb-4 flex-grow line-clamp-3">${product.description}</p>
             <span class="text-2xl font-bold text-yellow-600 mb-4">$${product.price.toFixed(2)}</span>
-            <button class="add-to-cart-btn btn-primary w-full">Añadir a la Cesta</button>
+            <button class="add-to-cart-btn btn-primary w-full">Añadir al carrito</button>
         `;
         productCard.querySelector('.add-to-cart-btn').addEventListener('click', (e) => {
             e.stopPropagation();
@@ -309,7 +309,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (cancelBtn) cancelBtn.addEventListener('click', resetProductForm);
 
     if (printOrderBtn) printOrderBtn.addEventListener('click', () => {
-        if (Object.keys(cart).length === 0) return showMessage('Cesta Vacía', 'Añade artículos para continuar.');
+        if (Object.keys(cart).length === 0) return showMessage('Carrito Vacío', 'Añade artículos para continuar.');
         const total = Object.values(cart).reduce((sum, qty, i) => sum + (products.find(p => p.id === Object.keys(cart)[i])?.price || 0) * qty, 0);
         const orderPreviewData = {
             cart: { ...cart },
