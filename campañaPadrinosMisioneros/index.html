@@ -15,6 +15,7 @@
     padding: 2em 1em;
     border-bottom: 4px solid #ff9800;
     animation: fadeIn 1s ease-in-out;
+    min-height: 300px;
   }
   .contenedor-campana { max-width: 800px; margin:auto; }
   .campana-padrinos h2 { font-size: 2em; margin-bottom:0.5em; cursor:pointer; }
@@ -35,6 +36,22 @@
   }
   .btn-campana.secundario:hover { background-color:#ffcc80; color:#4e342e; }
   .btn-campana i { margin-right:0.5em; }
+  .btn-accion {
+    padding: 0.5em 1em;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 0.8em;
+  }
+  .btn-editar {
+    background-color: #4CAF50;
+    color: white;
+  }
+  .btn-eliminar {
+    background-color: #f44336;
+    color: white;
+  }
+  .btn-accion:hover { opacity: 0.8; }
 
   @keyframes fadeIn { from {opacity:0; transform:translateY(-20px);} to {opacity:1; transform:translateY(0);} }
 
@@ -43,6 +60,9 @@
   .modal-content {
     background-color:#fff3e0; padding:2em; border-radius:10px;
     max-width:500px; width:90%; position:relative;
+    /* Nuevas propiedades para la barra de desplazamiento y altura máxima */
+    max-height: 90vh; 
+    overflow-y: auto;
   }
   .close { position:absolute; top:10px; right:15px; font-size:1.5em; cursor:pointer; }
   .modal-content input, .modal-content textarea { width:100%; padding:0.8em; margin-bottom:1em; border:1px solid #ccc; border-radius:5px; font-size:1em; }
@@ -56,68 +76,53 @@
   table, th, td { border:1px solid #ccc; }
   th, td { padding:0.5em; text-align:left; }
 
-  .campana-padrinos {
-  min-height: 300px;
-}
+  /* Estilos responsivos para el panel administrador */
+  @media (max-width: 768px) {
+    .modal-content {
+      max-height: 90vh;
+      overflow-y: auto;
+    }
 
+    .panel-admin {
+      padding: 1em;
+    }
 
-/* Estilos responsivos para el panel administrador */
-@media (max-width: 768px) {
-  .modal-content {
-    max-height: 90vh;
-    overflow-y: auto;
+    table {
+      font-size: 0.9em;
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+
+    th, td {
+      padding: 0.4em;
+    }
   }
-
-  .panel-admin {
-    padding: 1em;
-  }
-
-  table {
-    font-size: 0.9em;
-    display: block;
-    overflow-x: auto;
-    white-space: nowrap;
-  }
-
-  th, td {
-    padding: 0.4em;
-  }
-}
-
 </style>
-
 </head>
 <body>
 
-  <!-- Banner -->
   <section class="campana-padrinos">
-    <<!-- Banner -->
-<section class="campana-padrinos">
-  <div class="contenedor-campana">
-    <h2>🎯 Conviértete en Padrino de un Misionero</h2>
-    <p>Tu generosidad puede llevar el Evangelio y la ayuda a donde más se necesita. Sé parte del cambio.</p>
-    
-    <div class="botones-campana">
-      <a href="https://wa.me/526393992678?text=Hola,%20quiero%20información%20sobre%20cómo%20convertirme%20en%20padrino" 
-         class="btn-campana" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-whatsapp"></i> Quiero info por WhatsApp
-      </a>
+    <div class="contenedor-campana">
+      <h2>🎯 Conviértete en Padrino de un Misionero</h2>
+      <p>Tu generosidad puede llevar el Evangelio y la ayuda a donde más se necesita. Sé parte del cambio.</p>
 
-      <button class="btn-campana secundario" id="btn-mostrar-formulario">Dejar mis datos</button>
+      <div class="botones-campana">
+        <a href="https://wa.me/526393992678?text=Hola,%20quiero%20información%20sobre%20cómo%20convertirme%20en%20padrino" 
+           class="btn-campana" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-whatsapp"></i> Quiero info por WhatsApp
+        </a>
 
-      <a href="https://www.misionerosdeguadalupe.org" 
-         class="btn-campana secundario" target="_blank" rel="noopener noreferrer">
-        Conocer Más
-      </a>
+        <button class="btn-campana secundario" id="btn-mostrar-formulario">Dejar mis datos</button>
+
+        <a href="https://www.misionerosdeguadalupe.org" 
+           class="btn-campana secundario" target="_blank" rel="noopener noreferrer">
+          Conocer Más
+        </a>
+      </div>
     </div>
-  </div>
-</section>
-
-
-
   </section>
 
-  <!-- Modal Formulario -->
   <div class="modal" id="modal-formulario">
     <div class="modal-content">
       <span class="close" id="cerrar-modal">&times;</span>
@@ -133,7 +138,6 @@
     </div>
   </div>
 
-  <!-- Modal Login Admin -->
   <div class="modal" id="modal-login">
     <div class="modal-content">
       <span class="close" id="cerrar-login">&times;</span>
@@ -147,25 +151,40 @@
     </div>
   </div>
 
-  <!-- Panel administrador -->
+  <div class="modal" id="modal-editar">
+    <div class="modal-content">
+      <span class="close" id="cerrar-editar">&times;</span>
+      <h2>Editar Prospecto</h2>
+      <form id="form-editar">
+        <input type="hidden" id="edit-key">
+        <input type="text" name="nombre" id="edit-nombre" placeholder="Tu nombre" required>
+        <input type="email" name="correo" id="edit-correo" placeholder="Tu correo" required>
+        <input type="tel" name="telefono" id="edit-telefono" placeholder="Tu teléfono" required>
+        <textarea name="mensaje" id="edit-mensaje" placeholder="Comentario (opcional)"></textarea>
+        <button type="submit" class="btn-campana">Guardar Cambios</button>
+      </form>
+      <p class="mensaje-exito" id="mensaje-exito-editar">¡Cambios guardados con éxito!</p>
+    </div>
+  </div>
+
   <section class="panel-admin" id="panel-admin">
     <h2>Panel de Administrador</h2>
     <button id="btn-logout" class="btn-campana secundario">Cerrar sesión</button>
     <table id="tabla-prospectos">
       <thead>
-        <tr><th>Nombre</th><th>Correo</th><th>Teléfono</th><th>Mensaje</th><th>Fecha</th></tr>
+        <tr><th>Nombre</th><th>Correo</th><th>Teléfono</th><th>Mensaje</th><th>Fecha</th><th>Acciones</th></tr>
       </thead>
       <tbody></tbody>
     </table>
   </section>
 
-  <!-- Firebase y Scripts -->
   <script type="module">
+    // 1. IMPORTACIONES: Todas las funciones necesarias de Firebase en una sola línea.
     import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
-    import { getDatabase, ref, push, onValue } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js";
+    import { getDatabase, ref, push, onValue, remove, update } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js";
     import { getAuth, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
 
-    // Config Firebase
+    // 2. CONFIGURACIÓN DE FIREBASE Y VARIABLES GLOBALES
     const firebaseConfig = {
       apiKey: "AIzaSyCO3FRhSwH1xLABwVGFSd_YYrbFp0lQEv8",
       authDomain: "pagelalo-1b210.firebaseapp.com",
@@ -179,18 +198,30 @@
     const database = getDatabase(app);
     const auth = getAuth(app);
 
+    // 3. VARIABLES Y EVENTOS DE LOS MODALES Y FORMULARIOS
     // Modal Formulario
     const modal = document.getElementById('modal-formulario');
     const btnMostrar = document.getElementById('btn-mostrar-formulario');
     const cerrarModal = document.getElementById('cerrar-modal');
-    btnMostrar.addEventListener('click', ()=> modal.style.display='flex');
-    cerrarModal.addEventListener('click', ()=> modal.style.display='none');
-    window.addEventListener('click', (e)=> { if(e.target==modal) modal.style.display='none'; });
+    btnMostrar.addEventListener('click', () => {
+      modal.style.display = 'flex';
+      enviarAltura();
+    });
+    cerrarModal.addEventListener('click', () => {
+      modal.style.display = 'none';
+      enviarAltura();
+    });
+    window.addEventListener('click', (e) => { 
+      if (e.target == modal) {
+        modal.style.display = 'none'; 
+        enviarAltura();
+      }
+    });
 
     // Guardar datos en Firebase
     const form = document.getElementById('form-padrinos');
     const mensajeExito = document.getElementById('mensaje-exito');
-    form.addEventListener('submit', (e)=>{
+    form.addEventListener('submit', (e) => {
       e.preventDefault();
       const datos = {
         nombre: form.nombre.value,
@@ -199,9 +230,12 @@
         mensaje: form.mensaje.value,
         fecha: new Date().toLocaleString()
       };
-      push(ref(database,'padrinos'), datos)
-        .then(()=> { mensajeExito.style.display='block'; form.reset(); })
-        .catch(err=>alert('Error: '+err));
+      push(ref(database, 'padrinos'), datos)
+        .then(() => { 
+          mensajeExito.style.display = 'block'; 
+          form.reset(); 
+        })
+        .catch(err => alert('Error: ' + err));
     });
 
     // Modal Login Admin
@@ -213,46 +247,43 @@
     const panel = document.getElementById('panel-admin');
 
     let clicks = 0, timer;
-    tituloBanner.addEventListener('click', ()=>{
+    tituloBanner.addEventListener('click', () => {
       clicks++;
       clearTimeout(timer);
-      timer = setTimeout(()=>{ clicks=0; }, 1500);
-      if(clicks >=5) modalLogin.style.display='flex';
+      timer = setTimeout(() => { clicks = 0; }, 1500);
+      if (clicks >= 5) {
+        modalLogin.style.display = 'flex';
+        enviarAltura();
+      }
     });
-    cerrarLogin.addEventListener('click', ()=> modalLogin.style.display='none');
-    window.addEventListener('click', (e)=> { if(e.target==modalLogin) modalLogin.style.display='none'; });
+    cerrarLogin.addEventListener('click', () => {
+      modalLogin.style.display = 'none';
+      enviarAltura();
+    });
+    window.addEventListener('click', (e) => { 
+      if (e.target == modalLogin) {
+        modalLogin.style.display = 'none';
+        enviarAltura();
+      }
+    });
 
     // Login con Firebase Authentication
-    formLogin.addEventListener('submit', async (e)=>{
+    formLogin.addEventListener('submit', async (e) => {
       e.preventDefault();
       const correo = formLogin.correo.value.trim();
       const password = formLogin.password.value.trim();
 
       try {
         await signInWithEmailAndPassword(auth, correo, password);
-        modalLogin.style.display='none';
-        panel.style.display='block';
+        modalLogin.style.display = 'none';
+        panel.style.display = 'block';
         mostrarDatosAdmin();
-      } catch(error) {
-        mensajeError.style.display='block';
-        setTimeout(()=> mensajeError.style.display='none',3000);
+        enviarAltura();
+      } catch (error) {
+        mensajeError.style.display = 'block';
+        setTimeout(() => mensajeError.style.display = 'none', 3000);
       }
     });
-
-    // Mostrar prospectos
-    function mostrarDatosAdmin(){
-      const tablaBody = document.querySelector('#tabla-prospectos tbody');
-      const padrinosRef = ref(database,'padrinos');
-      onValue(padrinosRef, snapshot=>{
-        tablaBody.innerHTML='';
-        snapshot.forEach(child=>{
-          const data=child.val();
-          const tr=document.createElement('tr');
-          tr.innerHTML=`<td>${data.nombre}</td><td>${data.correo}</td><td>${data.telefono}</td><td>${data.mensaje}</td><td>${data.fecha}</td>`;
-          tablaBody.appendChild(tr);
-        });
-      });
-    }
 
     // Logout admin
     const btnLogout = document.getElementById('btn-logout');
@@ -261,22 +292,132 @@
         await signOut(auth);
         panel.style.display = 'none';
         alert('Has cerrado sesión correctamente.');
+        enviarAltura();
       } catch (error) {
         alert('Error al cerrar sesión: ' + error.message);
       }
     });
+
+    // 4. FUNCIONES DEL PANEL DE ADMINISTRACIÓN
+    function mostrarDatosAdmin() {
+      const tablaBody = document.querySelector('#tabla-prospectos tbody');
+      const padrinosRef = ref(database, 'padrinos');
+      onValue(padrinosRef, snapshot => {
+        tablaBody.innerHTML = '';
+        snapshot.forEach(child => {
+          const key = child.key;
+          const data = child.val();
+          const tr = document.createElement('tr');
+          tr.innerHTML = `
+            <td>${data.nombre}</td>
+            <td>${data.correo}</td>
+            <td>${data.telefono}</td>
+            <td>${data.mensaje}</td>
+            <td>${data.fecha}</td>
+            <td>
+              <button class="btn-accion btn-editar" data-key="${key}">Editar</button>
+              <button class="btn-accion btn-eliminar" data-key="${key}">Eliminar</button>
+            </td>
+          `;
+          tablaBody.appendChild(tr);
+        });
+        enviarAltura();
+      });
+    }
+
+    // 5. LÓGICA DE EDICIÓN Y ELIMINACIÓN
+    // Modal de edición
+    const modalEditar = document.getElementById('modal-editar');
+    const cerrarEditar = document.getElementById('cerrar-editar');
+    const formEditar = document.getElementById('form-editar');
+    const mensajeExitoEditar = document.getElementById('mensaje-exito-editar');
+
+    // Abrir el modal de edición y llenar el formulario
+    document.addEventListener('click', (e) => {
+      if (e.target.classList.contains('btn-editar')) {
+        const key = e.target.dataset.key;
+        const padrinoRef = ref(database, `padrinos/${key}`);
+        onValue(padrinoRef, (snapshot) => {
+          const data = snapshot.val();
+          document.getElementById('edit-key').value = key;
+          document.getElementById('edit-nombre').value = data.nombre;
+          document.getElementById('edit-correo').value = data.correo;
+          document.getElementById('edit-telefono').value = data.telefono;
+          document.getElementById('edit-mensaje').value = data.mensaje;
+          modalEditar.style.display = 'flex';
+          enviarAltura();
+        }, {
+          onlyOnce: true
+        });
+      }
+    });
+
+    // Enviar formulario de edición
+    formEditar.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const key = document.getElementById('edit-key').value;
+      const updates = {};
+      updates[`/padrinos/${key}/nombre`] = document.getElementById('edit-nombre').value;
+      updates[`/padrinos/${key}/correo`] = document.getElementById('edit-correo').value;
+      updates[`/padrinos/${key}/telefono`] = document.getElementById('edit-telefono').value;
+      updates[`/padrinos/${key}/mensaje`] = document.getElementById('edit-mensaje').value;
+
+      update(ref(database), updates)
+        .then(() => {
+          mensajeExitoEditar.style.display = 'block';
+          setTimeout(() => {
+            mensajeExitoEditar.style.display = 'none';
+            modalEditar.style.display = 'none';
+            enviarAltura();
+          }, 2000);
+        })
+        .catch((error) => {
+          alert("Error al actualizar: " + error.message);
+        });
+    });
+
+    // Lógica de eliminación
+    document.addEventListener('click', (e) => {
+      if (e.target.classList.contains('btn-eliminar')) {
+        const key = e.target.dataset.key;
+        if (confirm('¿Estás seguro de que quieres eliminar este registro?')) {
+          const padrinoRef = ref(database, `padrinos/${key}`);
+          remove(padrinoRef)
+            .then(() => {
+              alert("Registro eliminado con éxito.");
+              enviarAltura();
+            })
+            .catch((error) => {
+              alert("Error al eliminar: " + error.message);
+            });
+        }
+      }
+    });
+
+    // Cierre del modal de edición
+    cerrarEditar.addEventListener('click', () => {
+      modalEditar.style.display = 'none';
+      enviarAltura();
+    });
+    window.addEventListener('click', (e) => {
+      if (e.target == modalEditar) {
+        modalEditar.style.display = 'none';
+        enviarAltura();
+      }
+    });
+  </script>
+
+  <script>
+    function enviarAltura() {
+      const altura = document.body.scrollHeight;
+      window.parent.postMessage({ height: altura }, "*");
+    }
+
+    // Enviar altura al cargar y al cambiar tamaño
+    window.addEventListener('load', enviarAltura);
+    window.addEventListener('resize', enviarAltura);
   </script>
 </body>
-
-<script>
-  function enviarAltura() {
-    const altura = document.body.scrollHeight;
-    window.parent.postMessage({ height: altura }, "*");
-  }
-
-  // Enviar altura al cargar y al cambiar tamaño
-  window.addEventListener('load', enviarAltura);
-  window.addEventListener('resize', enviarAltura);
-</script>
-
+</html>
+</body>
 </html>
