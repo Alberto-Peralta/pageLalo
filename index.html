@@ -44,16 +44,17 @@
         style="width:100%; border:none;" 
         title="Campaña Padrinos Misioneros"></iframe>
 
-<script>
-  const iframe = document.getElementById('iframe-campaña');
-  
-  // Escuchar mensajes del iframe
-  window.addEventListener('message', (event) => {
-    if (event.data.height) {
-      iframe.style.height = event.data.height + 'px';
-    }
-  });
-</script>
+        <script>
+        const iframe = document.getElementById('iframe-campaña');
+        
+        // Escuchar mensajes del iframe
+        window.addEventListener('message', (event) => {
+            if (event.data.height) {
+            iframe.style.height = event.data.height + 'px';
+            }
+        });
+        </script>
+
 
       <!-- Campaña temporal de padrinos de misioneros-->
 
