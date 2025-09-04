@@ -9,13 +9,16 @@
 
   /* Banner */
   .campana-padrinos {
-    background: linear-gradient(135deg, #ffe082, #ffcc80);
-    color: #4e342e;
-    text-align: center;
-    padding: 2em 1em;
-    border-bottom: 4px solid #ff9800;
-    animation: fadeIn 1s ease-in-out;
-  }
+  /* Nueva imagen de fondo con una capa semitransparente para mejor legibilidad */
+  background: linear-gradient(rgba(255, 204, 128, 0.8), rgba(255, 224, 128, 0.8)),
+              url('./Gemini_Generated_Image_ap8di7ap8di7ap8d.png') no-repeat center center;
+  background-size: cover;
+  color: #4e342e;
+  text-align: center;
+  padding: 2em 1em;
+  border-bottom: 4px solid #ff9800;
+  animation: fadeIn 1s ease-in-out;
+}
   .contenedor-campana { max-width: 800px; margin:auto; }
   .campana-padrinos h2 { font-size: 2em; margin-bottom:0.5em; cursor:pointer; }
   .campana-padrinos p { font-size:1.2em; margin-bottom:1.5em; }
@@ -141,7 +144,7 @@
           <i class="fab fa-whatsapp"></i> Quiero info por WhatsApp
         </a>
 
-        <button class="btn-campana secundario" id="btn-mostrar-formulario">Dejar mis datos</button>
+        <button class="btn-campana secundario" id="btn-mostrar-formulario">Me interesa! Contactenme</button>
 
         <a href="https://www.misionerosdeguadalupe.org" 
            class="btn-campana secundario" target="_blank" rel="noopener noreferrer">
@@ -159,6 +162,7 @@
     <div class="modal-content">
       <span class="close" id="cerrar-modal">&times;</span>
       <h2>Deja tus datos para contactarte</h2>
+      <h6>En caso de que aceptes una visita deja tu direccion en la seccion de comentarios con alguna referencia</h6>
       <form id="form-padrinos">
         <input type="text" name="nombre" placeholder="Tu nombre" required>
         <input type="email" name="correo" placeholder="Tu correo" required>
@@ -167,7 +171,7 @@
         <div class="form-group-flex">
             <input type="checkbox" id="aceptar-terminos" required style="width: auto; margin-top: 0.2em;">
             <label for="aceptar-terminos" style="font-size: 0.9em;">
-                Acepto el <a href="aviso-de-privacidad.html" target="_blank" rel="noopener noreferrer" style="color: #ff6f00;">Aviso de Privacidad</a>.
+                Acepto el <a href="terminos.html" target="_blank" rel="noopener noreferrer" style="color: #ff6f00;">Aviso de Privacidad</a>.
             </label>
         </div>
         <button type="submit" class="btn-campana">Enviar</button>
