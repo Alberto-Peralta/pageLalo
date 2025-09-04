@@ -141,7 +141,7 @@ function renderProducts(productList) {
             <h3 class="text-xl font-bold mb-2 text-gray-800">${product.name}</h3>
             <p class="text-sm text-gray-600 mb-4 flex-grow line-clamp-3">${product.description}</p>
             <span class="text-2xl font-bold text-yellow-600 mb-4">$${product.price.toFixed(2)}</span>
-            <button class="add-to-cart-btn btn-primary w-full">Añadir al carrito</button>
+            <button class="add-to-cart-btn btn-primary w-full">Añadir al Carrito</button>
         `;
         productCard.querySelector('.add-to-cart-btn').addEventListener('click', (e) => {
             e.stopPropagation();
