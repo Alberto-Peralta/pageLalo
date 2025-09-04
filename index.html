@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-KNVBfXvnC+jL3nRxZPqaEdW6OvR4UhoN0SxWDR4kQn4+oBl+rNEMJ27hGl6f6iV0gVfAl+P0G7efXG35l4Xslg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+
+    <!-- solo mientras está la campaña de padrinos es para iconos como el de hWats app-->
+<!-- Font Awesome para iconos -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 <body>
 
@@ -38,6 +43,105 @@
         </nav>
     </header>
     
+
+<!-- Campaña temporal de padrinos -->
+<section class="campana-padrinos">
+  <div class="contenedor-campana">
+    <h2>🎯 Conviértete en Padrino de un Misionero</h2>
+    <p>Tu generosidad puede llevar el Evangelio y la ayuda a donde más se necesita. Sé parte del cambio.</p>
+    <div class="botones-campana">
+  <a href="https://wa.me/526393992678?text=Hola,%20quiero%20información%20sobre%20cómo%20convertirme%20en%20padrino" 
+   class="btn-campana" 
+   target="_blank" 
+   rel="noopener noreferrer">
+  <i class="fab fa-whatsapp"></i> Quiero información por WhatsApp
+</a>
+
+
+
+
+
+      <a href="https://www.misionerosdeguadalupe.org/" class="btn-campana secundario" target="_blank" rel="noopener noreferrer">
+        Conocer Más
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+
+    .btn-campana i {
+  margin-right: 0.5em;
+}
+
+.campana-padrinos {
+  background: linear-gradient(135deg, #ffe082, #ffcc80);
+  color: #4e342e;
+  text-align: center;
+  padding: 2em 1em;
+  border-bottom: 4px solid #ff9800;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.contenedor-campana {
+  max-width: 800px;
+  margin: auto;
+}
+
+.campana-padrinos h2 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+
+.campana-padrinos p {
+  font-size: 1.2em;
+  margin-bottom: 1.5em;
+}
+
+.botones-campana {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  flex-wrap: wrap;
+}
+
+.btn-campana {
+  background-color: #ff6f00;
+  color: white;
+  padding: 0.8em 1.5em;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.btn-campana:hover {
+  background-color: #e65100;
+}
+
+.btn-campana.secundario {
+  background-color: transparent;
+  color: #4e342e;
+  border: 2px solid #ff6f00;
+}
+
+.btn-campana.secundario:hover {
+  background-color: #ffcc80;
+  color: #4e342e;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
+
+
+
+
+
+
 
     <main>
         <section class="hero">
