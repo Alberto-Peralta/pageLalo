@@ -552,7 +552,7 @@ async function confirmOrder() {
                               `📦 *Número de pedido:* ${orderData.orderNumber}\n` +
                               `💰 *Total:* $${orderData.total.toFixed(2)}\n\n` +
                               `🔍 *Sigue el estado de tu pedido aquí:*\n` +
-                              `${window.location.origin}/order-status\n\n` +
+                              `www.laloperalta.netlify.app/order-status\n\n` +
                               `¡Gracias por tu compra! 🛠️`;
         
         const whatsappUrl = `https://wa.me/52${customerPhone.replace(/\D/g, '')}?text=${encodeURIComponent(whatsappMessage)}`;
