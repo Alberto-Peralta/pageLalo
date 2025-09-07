@@ -494,77 +494,47 @@ async function confirmOrder() {
         
         const orderData = JSON.parse(decodeURIComponent(previewData));
         
-        // VERIFICAR QUE orderId EXISTA
-        if (!orderData.orderId) {
-            alert('Error: Falta el ID del pedido. Vuelve a intentarlo.');
-            window.location.href = 'index.html';
-            return;
-        }
-        
-        // Pedir datos del cliente
+        // Pedir datos del cliente (mejor usar un formulario en el HTML)
         const customerName = prompt('Por favor, ingresa tu nombre completo:') || 'Cliente';
-        if (!customerName || customerName.trim() === '') {
-            alert('El nombre es requerido para confirmar el pedido');
-            return;
-        }
-        
         const customerPhone = prompt('Por favor, ingresa tu número de teléfono:') || '';
-        if (!customerPhone || customerPhone.trim() === '') {
-            alert('El número de teléfono es requerido para enviar los detalles');
+
+        if (!customerName.trim() || !customerPhone.trim()) {
+            alert('Nombre y teléfono son requeridos para confirmar el pedido.');
             return;
         }
         
         // Datos completos del pedido
         const completeOrderData = {
-            cart: orderData.cart,
+            ...orderData, // Copia todos los datos existentes
             timestamp: Date.now(),
-            total: orderData.total,
             status: 'pendiente',
             customerName: customerName.trim(),
             customerPhone: customerPhone.trim(),
-            orderNumber: orderData.orderNumber
         };
         
-        // Inicializar Firebase en order-preview.html también
-        const firebaseConfig = {
-            apiKey: "AIzaSyBChsbH9IyHGVGlH0Gg05pyTchM_kuJLrE",
-            authDomain: "soluciones-c5d76.firebaseapp.com",
-            databaseURL: "https://soluciones-c5d76-default-rtdb.firebaseio.com",
-            projectId: "soluciones-c5d76",
-            storageBucket: "soluciones-c5d76.firebasestorage.app",
-            messagingSenderId: "126602231797",
-            appId: "1:126602231797:web:f91f0bd6c9f97243186abc"
-        };
-        
-        const app = initializeApp(firebaseConfig);
-        const db = getDatabase(app);
-        const appId = 'default-app-id';
-        
-        // Guardar en Firebase
+        // Asumiendo que `app` y `db` ya están inicializados globalmente
         const orderRef = ref(db, `/artifacts/${appId}/public/orders/${orderData.orderId}`);
         await set(orderRef, completeOrderData);
         
-        console.log("Pedido confirmado y guardado:", completeOrderData);
-        
-        // ENVIAR WHATSAPP
+        // Construir el mensaje de WhatsApp
         const whatsappMessage = `¡Hola ${customerName}! 👋\n\n` +
-                              `✅ Tu pedido en *Soluciones Delicias* ha sido registrado\n` +
-                              `📦 *Número de pedido:* ${orderData.orderNumber}\n` +
-                              `💰 *Total:* $${orderData.total.toFixed(2)}\n\n` +
-                              `🔍 *Sigue el estado de tu pedido aquí:*\n` +
-                              `www.laloperalta.netlify.app/order-status\n\n` +
-                              `¡Gracias por tu compra! 🛠️`;
+                                `✅ Tu pedido en *El cielo en tus manos* ha sido registrado.\n` +
+                                `📦 *Número de pedido:* ${orderData.orderNumber}\n` +
+                                `💰 *Total:* $${orderData.total.toFixed(2)}\n\n` +
+                                `🔍 *Sigue el estado de tu pedido aquí:*\n` +
+                                `${window.location.origin}/order-status.html?id=${orderData.orderId}\n\n` +
+                                `¡Gracias por tu compra! 🙏`;
+                                
+        // Generar la URL de WhatsApp (nota: se ha eliminado el prefijo +52 del número)
+        // Esto permite que el usuario ingrese el número completo, incluyendo el prefijo del país
+        const whatsappUrl = `https://wa.me/${customerPhone.replace(/\D/g, '')}?text=${encodeURIComponent(whatsappMessage)}`;
         
-        const whatsappUrl = `https://wa.me/52${customerPhone.replace(/\D/g, '')}?text=${encodeURIComponent(whatsappMessage)}`;
+        // Abrir la URL en una nueva pestaña
         window.open(whatsappUrl, '_blank');
         
-        // Mostrar confirmación
-        alert(`✅ Pedido #${orderData.orderNumber} confirmado\n📱 Se enviaron los detalles por WhatsApp`);
-        
-        // Redirigir a página principal
-        setTimeout(() => {
-            window.location.href = 'index.html';
-        }, 3000);
+        // Redirigir a la página de estatus inmediatamente después
+        // La URL de status ahora incluye el ID del pedido para rastreo
+        window.location.href = `order-status.html?id=${orderData.orderId}`;
         
     } catch (error) {
         console.error("Error al confirmar pedido:", error);
