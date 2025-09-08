@@ -211,6 +211,103 @@ header h1, header p {
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
+/* --- NUEVOS ESTILOS PARA BOTONES DE ACCIÓN DE PEDIDOS --- */
+.order-item .view-order-btn,
+.order-item .delete-order-btn {
+    font-size: 0.75rem;
+    padding: 0.375rem 0.75rem;
+    border-radius: 0.375rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    border: none;
+    cursor: pointer;
+}
+
+.order-item .view-order-btn {
+    background-color: #3b82f6;
+    color: white;
+}
+
+.order-item .view-order-btn:hover {
+    background-color: #2563eb;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(59, 130, 246, 0.2);
+}
+
+.order-item .delete-order-btn {
+    background-color: #ef4444;
+    color: white;
+}
+
+.order-item .delete-order-btn:hover {
+    background-color: #dc2626;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(239, 68, 68, 0.2);
+}
+
+/* Estilo para el contenedor de botones de acción */
+.order-item > div:last-child > div:last-child {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-end;
+    margin-top: 0.5rem;
+}
+
+/* --- RESPONSIVE PARA DISPOSITIVOS MÓVILES --- */
+@media (max-width: 640px) {
+    .order-item .view-order-btn,
+    .order-item .delete-order-btn {
+        font-size: 0.7rem;
+        padding: 0.25rem 0.5rem;
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 0.25rem;
+    }
+    
+    .order-item > div:last-child {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    
+    .order-item > div:last-child > div:first-child {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    .order-item > div:last-child > div:last-child {
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 100%;
+    }
+    
+    .order-item .status-select {
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+}
+
+/* Mejoras adicionales para la experiencia de usuario */
+.order-item .view-order-btn:active,
+.order-item .delete-order-btn:active {
+    transform: translateY(0);
+}
+
+/* Efectos de hover más suaves */
+.order-item .view-order-btn:focus,
+.order-item .delete-order-btn:focus {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+}
+
+.order-item .delete-order-btn:focus {
+    box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.5);
+}
+
 /* CLASES AUXILIARES */
 .hidden {
     display: none !important;

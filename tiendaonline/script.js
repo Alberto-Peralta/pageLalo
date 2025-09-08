@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
 import { getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
-import { getDatabase, ref, push, remove, set, onValue, update } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-database.js";
+import { getDatabase, ref, push, remove, set, onValue, update, get } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-database.js";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -103,6 +103,7 @@ function setupAdminListeners() {
     setupRealtimeListeners();
     setupAdminOrdersListener();
     setupAdminCouponsListener();
+    setupOrderSearch(); // Agregar búsqueda de pedidos
 }
 
 function setupRealtimeListeners() {
@@ -137,6 +138,30 @@ function setupAdminCouponsListener() {
     });
 }
 
+// --- NUEVA FUNCIÓN: Configurar búsqueda de pedidos ---
+function setupOrderSearch() {
+    const orderSearch = document.getElementById('orderSearch');
+    if (orderSearch) {
+        orderSearch.addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase().trim();
+            
+            if (searchTerm === '') {
+                renderOrdersList(); // Mostrar todos los pedidos
+                return;
+            }
+            
+            const filteredOrders = orders.filter(order => 
+                order.customerName?.toLowerCase().includes(searchTerm) ||
+                order.customerPhone?.includes(searchTerm) ||
+                order.orderNumber?.toString().includes(searchTerm) ||
+                order.status?.toLowerCase().includes(searchTerm)
+            );
+            
+            // Renderizar solo los pedidos filtrados
+            renderFilteredOrdersList(filteredOrders, searchTerm);
+        });
+    }
+}
 
 // --- RENDERIZADO ---
 
@@ -212,32 +237,134 @@ function renderAdminTable() {
     addAdminTableEventListeners();
 }
 
+// --- FUNCIÓN ACTUALIZADA: Renderizar lista de pedidos con botones de eliminar ---
 function renderOrdersList() {
     const ordersList = document.getElementById('ordersList');
     if (!ordersList) return;
-    ordersList.innerHTML = orders.map(order => `
-        <div class="order-item bg-white p-4 rounded-xl shadow">
-            <div class="flex justify-between items-start mb-3">
-                <div>
-                    <h4 class="font-bold text-gray-800">Pedido #${order.orderNumber}</h4>
-                    <p class="text-sm text-gray-600">${order.customerName}</p>
-                    <p class="text-sm text-gray-500">${order.customerPhone}</p>
+    
+    if (orders.length === 0) {
+        ordersList.innerHTML = `
+            <div class="text-center py-8 text-gray-500">
+                <p>No hay pedidos registrados aún.</p>
+            </div>
+        `;
+        return;
+    }
+
+    ordersList.innerHTML = orders.map(order => {
+        const statusTextMap = {
+            'pendiente': 'Pendiente',
+            'confirmado': 'Confirmado', 
+            'preparando': 'Preparando',
+            'en_camino': 'En camino',
+            'entregado': 'Entregado',
+            'cancelado': 'Cancelado'
+        };
+
+        return `
+            <div class="order-item bg-white p-4 rounded-xl shadow">
+                <div class="flex justify-between items-start mb-3">
+                    <div>
+                        <h4 class="font-bold text-gray-800">Pedido #${order.orderNumber}</h4>
+                        <p class="text-sm text-gray-600">${order.customerName || 'Cliente'}</p>
+                        <p class="text-sm text-gray-500">${order.customerPhone || 'Sin teléfono'}</p>
+                        <p class="text-xs text-gray-400">${new Date(order.timestamp).toLocaleDateString('es-ES')} ${new Date(order.timestamp).toLocaleTimeString('es-ES')}</p>
+                    </div>
+                    <span class="status-badge status-${order.status || 'pendiente'}">${statusTextMap[order.status || 'pendiente']}</span>
                 </div>
-                <span class="status-badge status-${order.status || 'pendiente'}">${order.status || 'pendiente'}</span>
+                <div class="border-t border-gray-200 pt-3">
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="text-lg font-bold text-gray-800">Total: $${order.total.toFixed(2)}</span>
+                        <select class="status-select bg-gray-100 border border-gray-300 text-gray-800 p-1 rounded text-sm" data-order-id="${order.id}">
+                            <option value="pendiente" ${(order.status || 'pendiente') === 'pendiente' ? 'selected' : ''}>Pendiente</option>
+                            <option value="confirmado" ${(order.status || 'pendiente') === 'confirmado' ? 'selected' : ''}>Confirmado</option>
+                            <option value="preparando" ${(order.status || 'pendiente') === 'preparando' ? 'selected' : ''}>Preparando</option>
+                            <option value="en_camino" ${(order.status || 'pendiente') === 'en_camino' ? 'selected' : ''}>En camino</option>
+                            <option value="entregado" ${(order.status || 'pendiente') === 'entregado' ? 'selected' : ''}>Entregado</option>
+                            <option value="cancelado" ${(order.status || 'pendiente') === 'cancelado' ? 'selected' : ''}>Cancelado</option>
+                        </select>
+                    </div>
+                    <!-- NUEVOS BOTONES DE ACCIÓN -->
+                    <div class="flex justify-end gap-2 mt-2">
+                        <button class="view-order-btn bg-blue-500 text-white px-3 py-1 rounded text-sm hover:bg-blue-600 transition-colors" data-order-id="${order.id}">
+                            👁️ Ver Detalles
+                        </button>
+                        <button class="delete-order-btn bg-red-500 text-white px-3 py-1 rounded text-sm hover:bg-red-600 transition-colors" data-order-id="${order.id}">
+                            🗑️ Eliminar
+                        </button>
+                    </div>
+                </div>
             </div>
-            <div class="border-t border-gray-200 pt-3 flex justify-between items-center">
-                <span class="text-lg font-bold text-gray-800">Total: $${order.total.toFixed(2)}</span>
-                <select class="status-select bg-gray-100 border border-gray-300 text-gray-800 p-1 rounded text-sm" data-order-id="${order.id}">
-                    <option value="pendiente" ${order.status === 'pendiente' ? 'selected' : ''}>Pendiente</option>
-                    <option value="confirmado" ${order.status === 'confirmado' ? 'selected' : ''}>Confirmado</option>
-                    <option value="preparando" ${order.status === 'preparando' ? 'selected' : ''}>Preparando</option>
-                    <option value="en_camino" ${order.status === 'en_camino' ? 'selected' : ''}>En camino</option>
-                    <option value="entregado" ${order.status === 'entregado' ? 'selected' : ''}>Entregado</option>
-                    <option value="cancelado" ${order.status === 'cancelado' ? 'selected' : ''}>Cancelado</option>
-                </select>
+        `;
+    }).join('');
+    reconnectOrderEventListeners();
+}
+
+// --- NUEVA FUNCIÓN: Renderizar pedidos filtrados ---
+function renderFilteredOrdersList(filteredOrders, searchTerm) {
+    const ordersList = document.getElementById('ordersList');
+    if (!ordersList) return;
+    
+    if (filteredOrders.length === 0) {
+        ordersList.innerHTML = `
+            <div class="text-center py-8 text-gray-500">
+                <p>No se encontraron pedidos que coincidan con "${searchTerm}"</p>
+                <button onclick="document.getElementById('orderSearch').value = ''; document.getElementById('orderSearch').dispatchEvent(new Event('input'))" class="mt-2 text-blue-500 hover:text-blue-700 underline">
+                    Mostrar todos los pedidos
+                </button>
             </div>
+        `;
+        return;
+    }
+
+    const statusTextMap = {
+        'pendiente': 'Pendiente',
+        'confirmado': 'Confirmado', 
+        'preparando': 'Preparando',
+        'en_camino': 'En camino',
+        'entregado': 'Entregado',
+        'cancelado': 'Cancelado'
+    };
+
+    ordersList.innerHTML = `
+        <div class="mb-4 p-2 bg-blue-50 rounded-lg border border-blue-200">
+            <p class="text-sm text-blue-700">Mostrando ${filteredOrders.length} pedido(s) que coinciden con "${searchTerm}"</p>
         </div>
-    `).join('');
+        ${filteredOrders.map(order => `
+            <div class="order-item bg-white p-4 rounded-xl shadow">
+                <div class="flex justify-between items-start mb-3">
+                    <div>
+                        <h4 class="font-bold text-gray-800">Pedido #${order.orderNumber}</h4>
+                        <p class="text-sm text-gray-600">${order.customerName || 'Cliente'}</p>
+                        <p class="text-sm text-gray-500">${order.customerPhone || 'Sin teléfono'}</p>
+                        <p class="text-xs text-gray-400">${new Date(order.timestamp).toLocaleDateString('es-ES')} ${new Date(order.timestamp).toLocaleTimeString('es-ES')}</p>
+                    </div>
+                    <span class="status-badge status-${order.status || 'pendiente'}">${statusTextMap[order.status || 'pendiente']}</span>
+                </div>
+                <div class="border-t border-gray-200 pt-3">
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="text-lg font-bold text-gray-800">Total: $${order.total.toFixed(2)}</span>
+                        <select class="status-select bg-gray-100 border border-gray-300 text-gray-800 p-1 rounded text-sm" data-order-id="${order.id}">
+                            <option value="pendiente" ${(order.status || 'pendiente') === 'pendiente' ? 'selected' : ''}>Pendiente</option>
+                            <option value="confirmado" ${(order.status || 'pendiente') === 'confirmado' ? 'selected' : ''}>Confirmado</option>
+                            <option value="preparando" ${(order.status || 'pendiente') === 'preparando' ? 'selected' : ''}>Preparando</option>
+                            <option value="en_camino" ${(order.status || 'pendiente') === 'en_camino' ? 'selected' : ''}>En camino</option>
+                            <option value="entregado" ${(order.status || 'pendiente') === 'entregado' ? 'selected' : ''}>Entregado</option>
+                            <option value="cancelado" ${(order.status || 'pendiente') === 'cancelado' ? 'selected' : ''}>Cancelado</option>
+                        </select>
+                    </div>
+                    <div class="flex justify-end gap-2 mt-2">
+                        <button class="view-order-btn bg-blue-500 text-white px-3 py-1 rounded text-sm hover:bg-blue-600 transition-colors" data-order-id="${order.id}">
+                            👁️ Ver Detalles
+                        </button>
+                        <button class="delete-order-btn bg-red-500 text-white px-3 py-1 rounded text-sm hover:bg-red-600 transition-colors" data-order-id="${order.id}">
+                            🗑️ Eliminar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        `).join('')}
+    `;
     reconnectOrderEventListeners();
 }
 
@@ -246,46 +373,70 @@ function renderCouponsTable() {
     if (!couponsTableContainer) return;
 
     if (coupons.length === 0) {
-        couponsTableContainer.innerHTML = `<p class="text-center text-gray-500 mt-8">Aún no has creado ningún cupón.</p>`;
+        couponsTableContainer.innerHTML = `
+            <div class="text-center py-8 text-gray-500">
+                <p>No hay cupones creados aún.</p>
+            </div>
+        `;
         return;
     }
 
-    const table = document.createElement('table');
-    table.className = 'admin-table';
-    table.innerHTML = `
-        <thead>
-            <tr>
-                <th>Código</th>
-                <th>Tipo</th>
-                <th>Valor</th>
-                <th class="text-center">Estado</th>
-                <th class="text-center">Acciones</th>
-            </tr>
-        </thead>
-        <tbody>
-            ${coupons.map(coupon => `
-                <tr>
-                    <td class="font-mono font-bold text-gray-800">${coupon.code}</td>
-                    <td>${coupon.type === 'percentage' ? 'Porcentaje' : 'Monto Fijo'}</td>
-                    <td class="font-semibold text-yellow-600">${coupon.type === 'percentage' ? `${coupon.value}%` : `$${coupon.value.toFixed(2)}`}</td>
-                    <td class="text-center">
-                        <label class="switch">
-                          <input type="checkbox" class="toggle-coupon-status" data-code="${coupon.code}" ${coupon.isActive ? 'checked' : ''}>
-                          <span class="slider round"></span>
-                        </label>
-                    </td>
-                    <td>
-                        <div class="flex justify-center gap-2">
-                            <button class="edit-coupon-btn btn-secondary" data-code="${coupon.code}">Editar</button>
-                            <button class="delete-coupon-btn bg-red-600 text-white font-bold py-2 px-4 rounded-full hover:bg-red-700" data-code="${coupon.code}">Eliminar</button>
-                        </div>
-                    </td>
-                </tr>
-            `).join('')}
-        </tbody>`;
-    couponsTableContainer.innerHTML = '';
-    couponsTableContainer.appendChild(table);
-    addCouponTableEventListeners();
+    const tableHtml = `
+        <div class="overflow-x-auto">
+            <table class="w-full bg-white rounded-lg shadow-sm border border-gray-200">
+                <thead class="bg-gray-50">
+                    <tr>
+                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Código</th>
+                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Tipo</th>
+                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Valor</th>
+                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Usos</th>
+                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Estado</th>
+                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-200">
+                    ${coupons.map(coupon => `
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-4 py-3 font-mono font-bold text-gray-900">${coupon.code}</td>
+                            <td class="px-4 py-3 text-gray-700">
+                                <span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${coupon.type === 'percentage' ? 'bg-blue-100 text-blue-800' : 'bg-green-100 text-green-800'}">
+                                    ${coupon.type === 'percentage' ? 'Porcentaje' : 'Monto Fijo'}
+                                </span>
+                            </td>
+                            <td class="px-4 py-3 font-semibold text-gray-900">
+                                ${coupon.value}${coupon.type === 'percentage' ? '%' : '$'}
+                            </td>
+                            <td class="px-4 py-3 text-gray-700">
+                                <span class="font-semibold ${coupon.usesRemaining === 0 ? 'text-red-600' : 'text-gray-900'}">
+                                    ${coupon.usesRemaining !== undefined ? coupon.usesRemaining : '∞'}
+                                </span>
+                            </td>
+                            <td class="px-4 py-3">
+                                <span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${coupon.isActive ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}">
+                                    ${coupon.isActive ? 'Activo' : 'Inactivo'}
+                                </span>
+                            </td>
+                            <td class="px-4 py-3">
+                                <div class="flex space-x-2">
+                                    <button onclick="editCoupon('${coupon.code}')" class="text-blue-600 hover:text-blue-800 text-sm font-medium">
+                                        Editar
+                                    </button>
+                                    <button onclick="toggleCouponStatus('${coupon.code}', ${coupon.isActive})" class="text-yellow-600 hover:text-yellow-800 text-sm font-medium">
+                                        ${coupon.isActive ? 'Desactivar' : 'Activar'}
+                                    </button>
+                                    <button onclick="deleteCoupon('${coupon.code}')" class="text-red-600 hover:text-red-800 text-sm font-medium">
+                                        Eliminar
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                    `).join('')}
+                </tbody>
+            </table>
+        </div>
+    `;
+    
+    couponsTableContainer.innerHTML = tableHtml;
 }
 
 // --- CARRITO ---
@@ -326,7 +477,7 @@ function updateCartUI() {
             cartList.appendChild(item);
         }
     });
-    document.getElementById('cartTotal').textContent = `$${total.toFixed(2)}`;
+    document.getElementById('cartTotal').textContent = `${total.toFixed(2)}`;
 }
 
 // --- MODALES Y MENSAJES ---
@@ -334,13 +485,207 @@ function showProductModal(product) {
     productModal.querySelector('#modalImage').src = product.imageUrl;
     productModal.querySelector('#modalName').textContent = product.name;
     productModal.querySelector('#modalDescription').textContent = product.description;
-    productModal.querySelector('#modalPrice').textContent = `$${product.price.toFixed(2)}`;
+    productModal.querySelector('#modalPrice').textContent = `${product.price.toFixed(2)}`;
     productModal.style.display = 'flex';
 }
 function showMessage(title, text) {
     messageBox.querySelector('#messageTitle').textContent = title;
     messageBox.querySelector('#messageText').textContent = text;
     messageBox.style.display = 'flex';
+}
+
+// --- FUNCIONES DE CUPONES ---
+async function saveCoupon() {
+    const code = document.getElementById('couponCode').value.trim().toUpperCase();
+    const type = document.getElementById('couponType').value;
+    const value = parseFloat(document.getElementById('couponValue').value);
+    const usesInput = document.getElementById('couponUses').value.trim();
+
+    if (!code || !type || !value || value <= 0) {
+        showMessage('Error', 'Por favor completa todos los campos correctamente.');
+        return;
+    }
+
+    // Validaciones específicas
+    if (type === 'percentage' && value > 100) {
+        showMessage('Error', 'El porcentaje no puede ser mayor a 100%.');
+        return;
+    }
+
+    const couponData = {
+        type: type,
+        value: value,
+        isActive: true,
+        createdAt: Date.now(),
+        updatedAt: Date.now()
+    };
+
+    // Solo agregar usesRemaining si se especificó un número
+    if (usesInput && parseInt(usesInput) > 0) {
+        couponData.usesRemaining = parseInt(usesInput);
+    }
+
+    try {
+        await set(ref(db, `/artifacts/${appId}/public/coupons/${code}`), couponData);
+        const isUpdating = document.getElementById('couponCode').readOnly;
+        showMessage('Éxito', `Cupón "${code}" ${isUpdating ? 'actualizado' : 'creado'} exitosamente.`);
+        resetCouponForm();
+    } catch (error) {
+        console.error('Error al guardar cupón:', error);
+        showMessage('Error', 'Ocurrió un error al guardar el cupón.');
+    }
+}
+
+// Editar cupón
+async function editCoupon(code) {
+    try {
+        const couponRef = ref(db, `/artifacts/${appId}/public/coupons/${code}`);
+        const snapshot = await get(couponRef);
+        
+        if (snapshot.exists()) {
+            const coupon = snapshot.val();
+            
+            // Llenar el formulario con los datos del cupón
+            document.getElementById('couponCode').value = code;
+            document.getElementById('couponCode').readOnly = true;
+            document.getElementById('couponType').value = coupon.type;
+            document.getElementById('couponValue').value = coupon.value;
+            
+            // Si existe campo de usos, llenarlo
+            const usesInput = document.getElementById('couponUses');
+            if (usesInput && coupon.usesRemaining !== undefined) {
+                usesInput.value = coupon.usesRemaining;
+            }
+            
+            // Cambiar botón a modo edición
+            submitCouponBtn.textContent = 'Actualizar Cupón';
+            cancelCouponBtn.classList.remove('hidden');
+            
+            // Hacer scroll al formulario
+            document.getElementById('couponForm').scrollIntoView({ behavior: 'smooth' });
+        }
+    } catch (error) {
+        console.error('Error al cargar cupón:', error);
+        showMessage('Error', 'No se pudo cargar el cupón para editar.');
+    }
+}
+
+// Alternar estado del cupón (activo/inactivo)
+async function toggleCouponStatus(code, currentStatus) {
+    const newStatus = !currentStatus;
+    const action = newStatus ? 'activar' : 'desactivar';
+    
+    if (confirm(`¿Estás seguro de que quieres ${action} el cupón "${code}"?`)) {
+        try {
+            await update(ref(db, `/artifacts/${appId}/public/coupons/${code}`), {
+                isActive: newStatus,
+                updatedAt: Date.now()
+            });
+            showMessage('Éxito', `Cupón "${code}" ${newStatus ? 'activado' : 'desactivado'} exitosamente.`);
+        } catch (error) {
+            console.error('Error al cambiar estado del cupón:', error);
+            showMessage('Error', 'No se pudo cambiar el estado del cupón.');
+        }
+    }
+}
+
+// Eliminar cupón
+async function deleteCoupon(code) {
+    if (confirm(`¿Estás seguro de que quieres eliminar el cupón "${code}"?\n\nEsta acción no se puede deshacer.`)) {
+        try {
+            await remove(ref(db, `/artifacts/${appId}/public/coupons/${code}`));
+            showMessage('Éxito', `Cupón "${code}" eliminado exitosamente.`);
+        } catch (error) {
+            console.error('Error al eliminar cupón:', error);
+            showMessage('Error', 'No se pudo eliminar el cupón.');
+        }
+    }
+}
+
+// Resetear formulario de cupones
+function resetCouponForm() {
+    couponForm.reset();
+    const codeInput = document.getElementById('couponCode');
+    codeInput.readOnly = false;
+    submitCouponBtn.textContent = 'Agregar Cupón';
+    cancelCouponBtn.classList.add('hidden');
+}
+
+// Hacer funciones globales para los botones onclick
+window.editCoupon = editCoupon;
+window.toggleCouponStatus = toggleCouponStatus;
+window.deleteCoupon = deleteCoupon;
+
+// --- FUNCIÓN ACTUALIZADA: Event listeners para pedidos con eliminación ---
+function reconnectOrderEventListeners() {
+    // Event listeners para cambio de estado
+    document.querySelectorAll('.status-select').forEach(select => {
+        select.addEventListener('change', async (e) => {
+            const orderId = e.target.dataset.orderId;
+            const newStatus = e.target.value;
+            try {
+                await update(ref(db, `/artifacts/${appId}/public/orders/${orderId}`), { 
+                    status: newStatus,
+                    lastUpdated: Date.now()
+                });
+                showMessage('Estado Actualizado', `El pedido ahora está: ${newStatus}`);
+            } catch (error) {
+                console.error('Error al actualizar estado:', error);
+                showMessage('Error', 'No se pudo actualizar el estado del pedido');
+            }
+        });
+    });
+
+    // NEW: Event listeners para ver detalles del pedido
+    document.querySelectorAll('.view-order-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const orderId = e.target.dataset.orderId;
+            // Abrir en nueva ventana la página de detalles del pedido
+            window.open(`order-preview.html?id=${orderId}`, '_blank');
+        });
+    });
+
+    // NEW: Event listeners para eliminar pedidos
+    document.querySelectorAll('.delete-order-btn').forEach(btn => {
+        btn.addEventListener('click', async (e) => {
+            const orderId = e.target.dataset.orderId;
+            const order = orders.find(o => o.id === orderId);
+            
+            if (!order) {
+                showMessage('Error', 'No se encontró el pedido');
+                return;
+            }
+
+            // Confirmación doble para evitar eliminaciones accidentales
+            const confirmMessage = `¿Estás seguro de que quieres ELIMINAR PERMANENTEMENTE el pedido #${order.orderNumber}?
+
+Cliente: ${order.customerName || 'Cliente'}
+Total: ${order.total.toFixed(2)}
+Fecha: ${new Date(order.timestamp).toLocaleDateString('es-ES')}
+
+⚠️ ESTA ACCIÓN NO SE PUEDE DESHACER ⚠️`;
+
+            if (confirm(confirmMessage)) {
+                // Segunda confirmación
+                if (confirm('⚠️ CONFIRMACIÓN FINAL: ¿Realmente quieres eliminar este pedido? Esta acción es irreversible.')) {
+                    try {
+                        await remove(ref(db, `/artifacts/${appId}/public/orders/${orderId}`));
+                        showMessage('Pedido Eliminado', `El pedido #${order.orderNumber} ha sido eliminado permanentemente.`);
+                        
+                        // Opcional: También eliminar de la lista local para actualización inmediata
+                        const orderIndex = orders.findIndex(o => o.id === orderId);
+                        if (orderIndex > -1) {
+                            orders.splice(orderIndex, 1);
+                            renderOrdersList(); // Re-renderizar la lista
+                        }
+                    } catch (error) {
+                        console.error('Error al eliminar pedido:', error);
+                        showMessage('Error', 'No se pudo eliminar el pedido. Inténtalo de nuevo.');
+                    }
+                }
+            }
+        });
+    });
 }
 
 // --- EVENT LISTENERS ---
@@ -405,15 +750,27 @@ document.addEventListener('DOMContentLoaded', () => {
         window.location.href = `order-preview.html?data=${encodeURIComponent(JSON.stringify(orderPreviewData))}`;
     });
 
+    // Inicializar elementos de cupones
     couponForm = document.getElementById('couponForm');
     submitCouponBtn = document.getElementById('submitCouponBtn');
     cancelCouponBtn = document.getElementById('cancelCouponBtn');
     
     if (couponForm) {
-        couponForm.addEventListener('submit', handleCouponFormSubmit);
+        couponForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            await saveCoupon();
+        });
     }
     if(cancelCouponBtn) {
         cancelCouponBtn.addEventListener('click', resetCouponForm);
+    }
+
+    // Convertir código a mayúsculas automáticamente
+    const couponCodeInput = document.getElementById('couponCode');
+    if (couponCodeInput) {
+        couponCodeInput.addEventListener('input', function(e) {
+            e.target.value = e.target.value.toUpperCase();
+        });
     }
 });
 
@@ -439,53 +796,6 @@ function addAdminTableEventListeners() {
     }));
 }
 
-function reconnectOrderEventListeners() {
-    document.querySelectorAll('.status-select').forEach(select => {
-        select.addEventListener('change', async (e) => {
-            const { orderId } = e.target.dataset;
-            const newStatus = e.target.value;
-            await update(ref(db, `/artifacts/${appId}/public/orders/${orderId}`), { status: newStatus });
-            showMessage('Estado Actualizado', `El pedido ahora está: ${newStatus}`);
-        });
-    });
-}
-
-function addCouponTableEventListeners() {
-    document.querySelectorAll('.edit-coupon-btn').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            const code = e.target.dataset.code;
-            const coupon = coupons.find(c => c.code === code);
-            if (coupon) {
-                document.getElementById('couponCode').value = coupon.code;
-                document.getElementById('couponCode').readOnly = true;
-                document.getElementById('couponType').value = coupon.type;
-                document.getElementById('couponValue').value = coupon.value;
-                submitCouponBtn.textContent = 'Actualizar Cupón';
-                cancelCouponBtn.classList.remove('hidden');
-            }
-        });
-    });
-
-    document.querySelectorAll('.delete-coupon-btn').forEach(btn => {
-        btn.addEventListener('click', async (e) => {
-            const code = e.target.dataset.code;
-            if (confirm(`¿Seguro que quieres eliminar el cupón "${code}"?`)) {
-                await remove(ref(db, `/artifacts/${appId}/public/coupons/${code}`));
-                showMessage('Éxito', 'Cupón eliminado correctamente.');
-            }
-        });
-    });
-
-    document.querySelectorAll('.toggle-coupon-status').forEach(toggle => {
-        toggle.addEventListener('change', async (e) => {
-            const code = e.target.dataset.code;
-            const newStatus = e.target.checked;
-            await update(ref(db, `/artifacts/${appId}/public/coupons/${code}`), { isActive: newStatus });
-            showMessage('Estado Actualizado', `El cupón ahora está ${newStatus ? 'activo' : 'inactivo'}.`);
-        });
-    });
-}
-
 async function handleProductFormSubmit(e) {
     e.preventDefault();
     const offerPriceValue = document.getElementById('productOfferPrice').value;
@@ -504,46 +814,11 @@ async function handleProductFormSubmit(e) {
     resetProductForm();
 }
 
-async function handleCouponFormSubmit(e) {
-    e.preventDefault();
-    const code = document.getElementById('couponCode').value.trim().toUpperCase();
-    if (!code) {
-        showMessage('Error', 'El código del cupón no puede estar vacío.');
-        return;
-    }
-
-    const isUpdating = document.getElementById('couponCode').readOnly;
-    
-    // Al crear un cupón nuevo, por defecto está activo. Al actualizar, se mantiene su estado.
-    const couponData = {
-        type: document.getElementById('couponType').value,
-        value: parseFloat(document.getElementById('couponValue').value)
-    };
-    
-    if (!isUpdating) {
-        couponData.isActive = true; 
-    }
-
-    const dbRef = ref(db, `/artifacts/${appId}/public/coupons/${code}`);
-    await set(dbRef, couponData, { merge: true }); // Usamos set con merge para actualizar
-    
-    showMessage('Éxito', `Cupón ${isUpdating ? 'actualizado' : 'agregado'} correctamente.`);
-    resetCouponForm();
-}
-
 function resetProductForm() {
     productForm.reset();
     productIdInput.value = '';
     submitBtn.textContent = 'Agregar Artículo';
     cancelBtn.classList.add('hidden');
-}
-
-function resetCouponForm() {
-    couponForm.reset();
-    const codeInput = document.getElementById('couponCode');
-    codeInput.readOnly = false;
-    submitCouponBtn.textContent = 'Agregar Cupón';
-    cancelCouponBtn.classList.add('hidden');
 }
 
 function setupAdminTabs() {
