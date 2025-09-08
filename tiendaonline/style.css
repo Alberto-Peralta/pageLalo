@@ -13,6 +13,38 @@ body {
     color: var(--color-text-dark);
 }
 
+
+
+
+  header {
+    background-image: url('../Imagen\ de\ WhatsApp\ 2025-09-07\ a\ las\ 17.45.22_b86e8fb0.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* Ajusta la altura del header para que la imagen sea visible */
+    height: 300px; /* Puedes cambiar este valor */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Necesario para posicionar otros elementos */
+  }
+
+  /* Aplica estilos a todos los elementos de texto directamente dentro del header */
+  header h1, header p {
+    color: #1A2C5B; /* Un azul marino oscuro que contrasta bien */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Sombra para mejor legibilidad */
+  }
+
+  /* Si estás usando Tailwind, cambia las clases en el HTML */
+  .text-gray-900 {
+    color: #1A2C5B;
+  }
+  .text-gray-600 {
+    color: #333333; /* Un gris oscuro para el subtítulo */
+  }
+
+
 /* --- MODALES --- */
 .modal {
     display: none;
