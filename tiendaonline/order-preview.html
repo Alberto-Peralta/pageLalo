@@ -35,7 +35,7 @@
 
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
-        import { getDatabase, ref, set, onValue, get } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-database.js";
+        import { getDatabase, ref, set, onValue, get, update } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-database.js";
 
         const firebaseConfig = {
             apiKey: "AIzaSyCO3FRhSwH1xLABwVGFSd_YYrbFp0lQEv8",
@@ -135,6 +135,18 @@
 
             if (snapshot.exists() && snapshot.val().isActive) {
                 const coupon = snapshot.val();
+                
+                // VERIFICAR SI TIENE USOS DISPONIBLES
+                if (coupon.usesRemaining !== undefined && coupon.usesRemaining <= 0) {
+                    discountAmount = 0;
+                    finalTotal = subtotal;
+                    appliedCoupon = null;
+                    messageDiv.textContent = 'Este cupón ya no tiene usos disponibles.';
+                    messageDiv.className = 'text-sm mt-2 text-center text-red-600';
+                    updateTotalsUI();
+                    return;
+                }
+
                 let calculatedDiscount = 0;
                 let applicableItems = [];
                 
@@ -199,19 +211,47 @@
                 // Asegurarse de que el descuento no sea mayor al total
                 discountAmount = Math.min(calculatedDiscount, subtotal);
                 finalTotal = subtotal - discountAmount;
-                appliedCoupon = { code, ...coupon, applicableItems };
-
-                let successMessage = `¡Cupón "${code}" aplicado con éxito!`;
-                if (coupon.applicationType === 'specific' && applicableItems.length > 0) {
-                    successMessage += ` Aplicado a: ${applicableItems.join(', ')}`;
-                }
-
-                messageDiv.textContent = successMessage;
-                messageDiv.className = 'text-sm mt-2 text-center text-green-600';
-                updateTotalsUI();
                 
-                // Actualizar la visualización para mostrar productos con descuento
-                updateProductsWithDiscountInfo(coupon);
+                // SI EL DESCUENTO SE APLICÓ CORRECTAMENTE, DECREMENTAR USOS
+                if (discountAmount > 0) {
+                    // DECREMENTAR CONTADOR DE USOS SI ES LIMITADO
+                    if (coupon.usesRemaining !== undefined) {
+                        try {
+                            await update(couponRef, {
+                                usesRemaining: coupon.usesRemaining - 1,
+                                updatedAt: Date.now()
+                            });
+                        } catch (error) {
+                            console.error("Error al actualizar usos del cupón:", error);
+                        }
+                    }
+                    
+                    appliedCoupon = { code, ...coupon, applicableItems };
+
+                    let successMessage = `¡Cupón "${code}" aplicado con éxito!`;
+                    if (coupon.applicationType === 'specific' && applicableItems.length > 0) {
+                        successMessage += ` Aplicado a: ${applicableItems.join(', ')}`;
+                    }
+                    if (coupon.usesRemaining !== undefined) {
+                        successMessage += `<br>Usos restantes: ${coupon.usesRemaining - 1}`;
+                    }
+
+                    messageDiv.innerHTML = successMessage;
+                    messageDiv.className = 'text-sm mt-2 text-center text-green-600';
+                    updateTotalsUI();
+                    
+                    // Actualizar la visualización para mostrar productos con descuento
+                    updateProductsWithDiscountInfo(coupon);
+                    
+                } else {
+                    discountAmount = 0;
+                    finalTotal = subtotal;
+                    appliedCoupon = null;
+                    messageDiv.textContent = 'No se pudo aplicar el descuento.';
+                    messageDiv.className = 'text-sm mt-2 text-center text-red-600';
+                    updateTotalsUI();
+                    clearProductDiscountInfo();
+                }
                 
             } else {
                 discountAmount = 0;
@@ -228,7 +268,7 @@
         function updateProductsWithDiscountInfo(coupon) {
             if (coupon.applicationType === 'specific' && coupon.applicableProducts) {
                 // Agregar indicadores visuales a los productos con descuento
-                const productItems = document.querySelectorAll('.product-item');
+                const productItems = document.querySelectorAll('.flex.items-center.bg-gray-50');
                 productItems.forEach(item => {
                     const productId = Object.keys(orderData.cart).find(id => {
                         const product = products.find(p => p.id === id);
@@ -239,10 +279,12 @@
                         // Agregar indicador de descuento al producto
                         if (!item.querySelector('.discount-indicator')) {
                             const discountBadge = document.createElement('span');
-                            discountBadge.className = 'discount-indicator absolute top-2 right-2 bg-green-500 text-white text-xs px-2 py-1 rounded-full';
+                            discountBadge.className = 'discount-indicator bg-green-500 text-white text-xs px-2 py-1 rounded-full ml-2';
                             discountBadge.textContent = '🎟️ Descuento aplicado';
-                            item.style.position = 'relative';
-                            item.appendChild(discountBadge);
+                            const productName = item.querySelector('h4');
+                            if (productName) {
+                                productName.appendChild(discountBadge);
+                            }
                         }
                     }
                 });
@@ -305,7 +347,6 @@
 
             alert(`✅ Pedido #${orderData.orderNumber} confirmado. Se abrirá WhatsApp para notificar al vendedor.`);
             setTimeout(() => { window.location.href = 'index.html'; }, 2000);
-
 
         };
         
