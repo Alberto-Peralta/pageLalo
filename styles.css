@@ -209,6 +209,30 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
+/* estilos de la card de tienda*/
+
+
+#misioneros1 {
+    background-image: url('./Imagen de WhatsApp 2025-09-07 a las 17.45.22_b86e8fb0.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* ESTILOS AÑADIDOS PARA LAS LETRAS */
+    color: #1A2C5B; /* Un azul marino oscuro que contrasta bien con el cielo */
+}
+
+#misioneros1 h2, #misioneros1 p {
+    color: #1A2C5B;
+    /* Puedes usar un color diferente para el título si lo deseas */
+}
+
+
+
+
+
+
+
 #account-number {
     margin-top: 1rem;
     font-weight: bold;
