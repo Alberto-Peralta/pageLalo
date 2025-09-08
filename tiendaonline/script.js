@@ -93,17 +93,19 @@ function updateUIBasedOnUserRole(user) {
     if (logoutBtn) logoutBtn.style.display = isAdmin ? 'inline-block' : 'none';
 
     if (isAdmin) {
-        adminPanel.classList.add('active');
-        productGrid.style.display = 'none';
+        if (adminPanel) adminPanel.classList.add('active'); // Added check
+        if (productGrid) productGrid.style.display = 'none'; // Added check
         if (mainTitle) mainTitle.style.display = 'none';
+        if (openCartBtn) openCartBtn.classList.add('hidden'); // Added check
         clientElements.forEach(el => el.style.display = 'none');
         
         setupAdminListeners();
         setupAdminTabs();
     } else {
-        adminPanel.classList.remove('active');
-        productGrid.style.display = 'grid';
+        if (adminPanel) adminPanel.classList.remove('active'); // Added check
+        if (productGrid) productGrid.style.display = 'grid'; // Added check
         if (mainTitle) mainTitle.style.display = 'block';
+        if (openCartBtn) openCartBtn.classList.remove('hidden'); // Added check
         clientElements.forEach(el => el.style.display = 'inline-flex');
         
         setupRealtimeListeners(); 
@@ -481,12 +483,15 @@ async function removeFromCart(productId) {
     }
 }
 function updateCartUI() {
-    const totalCount = Object.values(cart).reduce((sum, count) => sum + count, 0);
-    cartCount.textContent = totalCount;
-    openCartBtn.classList.toggle('hidden', totalCount === 0);
+    // Added null checks
+    if (cartCount) cartCount.textContent = Object.values(cart).reduce((sum, count) => sum + count, 0);
+    if (openCartBtn) openCartBtn.classList.toggle('hidden', Object.values(cart).reduce((sum, count) => sum + count, 0) === 0);
     
     const cartList = document.getElementById('cartList');
-    if (!cartList) return;
+    const cartTotalElement = document.getElementById('cartTotal');
+    
+    if (!cartList || !cartTotalElement) return;
+    
     cartList.innerHTML = '';
     
     const productMap = products.reduce((acc, p) => ({ ...acc, [p.id]: p }), {});
@@ -509,21 +514,27 @@ function updateCartUI() {
             cartList.appendChild(item);
         }
     });
-    document.getElementById('cartTotal').textContent = `${total.toFixed(2)}`;
+    cartTotalElement.textContent = `${total.toFixed(2)}`;
 }
 
 // --- MODALES Y MENSAJES ---
 function showProductModal(product) {
-    productModal.querySelector('#modalImage').src = product.imageUrl;
-    productModal.querySelector('#modalName').textContent = product.name;
-    productModal.querySelector('#modalDescription').textContent = product.description;
-    productModal.querySelector('#modalPrice').textContent = `${product.price.toFixed(2)}`;
-    productModal.style.display = 'flex';
+    // Added null checks
+    if (productModal) {
+        productModal.querySelector('#modalImage').src = product.imageUrl;
+        productModal.querySelector('#modalName').textContent = product.name;
+        productModal.querySelector('#modalDescription').textContent = product.description;
+        productModal.querySelector('#modalPrice').textContent = `${product.price.toFixed(2)}`;
+        productModal.style.display = 'flex';
+    }
 }
 function showMessage(title, text) {
-    messageBox.querySelector('#messageTitle').textContent = title;
-    messageBox.querySelector('#messageText').textContent = text;
-    messageBox.style.display = 'flex';
+    // Added null check
+    if (messageBox) {
+        messageBox.querySelector('#messageTitle').textContent = title;
+        messageBox.querySelector('#messageText').textContent = text;
+        messageBox.style.display = 'flex';
+    }
 }
 
 // --- FUNCIONES DE CUPONES ---
@@ -590,8 +601,8 @@ async function editCoupon(code) {
             }
             
             // Cambiar botón a modo edición
-            submitCouponBtn.textContent = 'Actualizar Cupón';
-            cancelCouponBtn.classList.remove('hidden');
+            if(submitCouponBtn) submitCouponBtn.textContent = 'Actualizar Cupón';
+            if(cancelCouponBtn) cancelCouponBtn.classList.remove('hidden');
             
             // Hacer scroll al formulario
             document.getElementById('couponForm').scrollIntoView({ behavior: 'smooth' });
@@ -636,11 +647,11 @@ async function deleteCoupon(code) {
 
 // Resetear formulario de cupones
 function resetCouponForm() {
-    couponForm.reset();
+    if (couponForm) couponForm.reset();
     const codeInput = document.getElementById('couponCode');
-    codeInput.readOnly = false;
-    submitCouponBtn.textContent = 'Agregar Cupón';
-    cancelCouponBtn.classList.add('hidden');
+    if (codeInput) codeInput.readOnly = false;
+    if (submitCouponBtn) submitCouponBtn.textContent = 'Agregar Cupón';
+    if (cancelCouponBtn) cancelCouponBtn.classList.add('hidden');
 }
 
 // Hacer funciones globales para los botones onclick
@@ -724,11 +735,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (searchInput) searchInput.addEventListener('input', () => renderProducts(products.filter(p => p.name.toLowerCase().includes(searchInput.value.toLowerCase()))));
     
     if (openCartBtn) openCartBtn.addEventListener('click', () => cartPanel.classList.add('active'));
-    document.getElementById('closeCartBtn')?.addEventListener('click', () => cartPanel.classList.remove('active'));
+    if (document.getElementById('closeCartBtn')) document.getElementById('closeCartBtn').addEventListener('click', () => cartPanel.classList.remove('active'));
 
     if(mainTitle) mainTitle.addEventListener('click', () => {
         adminClicks = (adminClicks + 1) % 5;
-        if (adminClicks === 0) loginModal.style.display = 'flex';
+        if (adminClicks === 0) if(loginModal) loginModal.style.display = 'flex';
     });
 
     // --- FORMULARIO Y LÓGICA DE ADMIN ---
@@ -738,7 +749,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const password = authPasswordInput.value;
             try {
                 await signInWithEmailAndPassword(auth, email, password);
-                loginModal.style.display = 'none';
+                if(loginModal) loginModal.style.display = 'none';
                 showMessage('Inicio de Sesión Exitoso', `Bienvenido, se han cargado los permisos de administrador.`);
             } catch (error) {
                 showMessage('Error de Autenticación', 'Correo o contraseña incorrectos. Inténtalo de nuevo.');
@@ -804,8 +815,8 @@ function addAdminTableEventListeners() {
             document.getElementById('productPrice').value = product.price;
             document.getElementById('productOfferPrice').value = product.offerPrice || '';
             document.getElementById('productImage').value = product.imageUrl;
-            submitBtn.textContent = 'Actualizar Artículo';
-            cancelBtn.classList.remove('hidden');
+            if (submitBtn) submitBtn.textContent = 'Actualizar Artículo';
+            if (cancelBtn) cancelBtn.classList.remove('hidden');
         }
     }));
     document.querySelectorAll('.delete-btn').forEach(btn => btn.addEventListener('click', async (e) => {
@@ -835,10 +846,10 @@ async function handleProductFormSubmit(e) {
 }
 
 function resetProductForm() {
-    productForm.reset();
-    productIdInput.value = '';
-    submitBtn.textContent = 'Agregar Artículo';
-    cancelBtn.classList.add('hidden');
+    if (productForm) productForm.reset();
+    if (productIdInput) productIdInput.value = '';
+    if (submitBtn) submitBtn.textContent = 'Agregar Artículo';
+    if (cancelBtn) cancelBtn.classList.add('hidden');
 }
 
 function setupAdminTabs() {
@@ -859,9 +870,9 @@ function setupAdminTabs() {
             tab.classList.toggle('text-gray-800', tab === activeTab);
             tab.classList.toggle('text-gray-500', tab !== activeTab);
         });
-        productsContent.classList.toggle('hidden', activeTab !== productsTab);
-        ordersContent.classList.toggle('hidden', activeTab !== ordersTab);
-        couponsContent.classList.toggle('hidden', activeTab !== couponsTab);
+        if (productsContent) productsContent.classList.toggle('hidden', activeTab !== productsTab);
+        if (ordersContent) ordersContent.classList.toggle('hidden', activeTab !== ordersTab);
+        if (couponsContent) couponsContent.classList.toggle('hidden', activeTab !== couponsTab);
     };
     
     // NEW: Activar la pestaña de productos por defecto
