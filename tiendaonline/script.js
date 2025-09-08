@@ -46,6 +46,7 @@ const authEmailInput = document.getElementById('authEmail');
 const authPasswordInput = document.getElementById('authPassword');
 const adminTableContainer = document.getElementById('adminTableContainer');
 let ordersTab, productsTab, ordersContent, productsContent, orderSearch;
+let couponsTab, couponsContent, couponForm, submitCouponBtn, cancelCouponBtn, couponsTableContainer;
 
 
 // --- ESTADO DE LA APLICACIÓN ---
@@ -55,6 +56,7 @@ let admins = {};
 let currentUser = null; // Para saber quién está logueado
 let adminClicks = 0;
 let orders = [];
+let coupons = [];
 
 
 // --- LÓGICA PRINCIPAL ---
@@ -63,7 +65,6 @@ let orders = [];
 const adminsRef = ref(db, '/admins');
 onValue(adminsRef, (snapshot) => {
     admins = snapshot.val() || {};
-    // Si ya hay un usuario logueado, re-evaluamos su rol con la nueva lista de admins
     if (currentUser) {
         updateUIBasedOnUserRole(currentUser);
     }
@@ -71,8 +72,8 @@ onValue(adminsRef, (snapshot) => {
 
 // 2. Listener para la autenticación (siempre activo)
 onAuthStateChanged(auth, (user) => {
-    currentUser = user; // Actualizamos el usuario actual
-    updateUIBasedOnUserRole(user); // Actualizamos la UI
+    currentUser = user; 
+    updateUIBasedOnUserRole(user); 
 });
 
 
@@ -86,7 +87,7 @@ function updateUIBasedOnUserRole(user) {
         if (mainTitle) mainTitle.style.display = 'none';
         clientElements.forEach(el => el.style.display = 'none');
         
-        setupAdminListeners(); // Carga datos de productos y pedidos
+        setupAdminListeners();
         setupAdminTabs();
     } else {
         adminPanel.classList.remove('active');
@@ -94,13 +95,14 @@ function updateUIBasedOnUserRole(user) {
         if (mainTitle) mainTitle.style.display = 'block';
         clientElements.forEach(el => el.style.display = 'inline-flex');
         
-        setupRealtimeListeners(); // Carga solo productos
+        setupRealtimeListeners(); 
     }
 }
 
 function setupAdminListeners() {
-    setupRealtimeListeners(); // Los admins también necesitan la lista de productos
+    setupRealtimeListeners();
     setupAdminOrdersListener();
+    setupAdminCouponsListener();
 }
 
 function setupRealtimeListeners() {
@@ -111,7 +113,7 @@ function setupRealtimeListeners() {
         products.sort((a, b) => (b.timestamp || 0) - (a.timestamp || 0));
         
         renderProducts(products);
-        if (adminTableContainer) renderAdminTable(); // Actualiza la tabla de admin si existe
+        if (adminTableContainer) renderAdminTable();
         updateCartUI();
     });
 }
@@ -126,6 +128,15 @@ function setupAdminOrdersListener() {
     });
 }
 
+function setupAdminCouponsListener() {
+    const couponsRef = ref(db, `/artifacts/${appId}/public/coupons`);
+    onValue(couponsRef, (snapshot) => {
+        const data = snapshot.val();
+        coupons = data ? Object.keys(data).map(code => ({ code, ...data[code] })) : [];
+        renderCouponsTable();
+    });
+}
+
 
 // --- RENDERIZADO ---
 
@@ -137,7 +148,6 @@ function renderProducts(productList) {
         productCard.className = `product-card relative rounded-3xl shadow-lg p-6 flex flex-col items-center text-center transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 cursor-pointer`;
         productCard.style.animationDelay = `${index * 50}ms`;
 
-        // Lógica para determinar qué precio mostrar
         const isOnSale = product.offerPrice && product.offerPrice < product.price;
         let priceHtml = '';
         let offerBadgeHtml = '';
@@ -231,6 +241,53 @@ function renderOrdersList() {
     reconnectOrderEventListeners();
 }
 
+function renderCouponsTable() {
+    couponsTableContainer = document.getElementById('couponsTableContainer');
+    if (!couponsTableContainer) return;
+
+    if (coupons.length === 0) {
+        couponsTableContainer.innerHTML = `<p class="text-center text-gray-500 mt-8">Aún no has creado ningún cupón.</p>`;
+        return;
+    }
+
+    const table = document.createElement('table');
+    table.className = 'admin-table';
+    table.innerHTML = `
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Tipo</th>
+                <th>Valor</th>
+                <th class="text-center">Estado</th>
+                <th class="text-center">Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            ${coupons.map(coupon => `
+                <tr>
+                    <td class="font-mono font-bold text-gray-800">${coupon.code}</td>
+                    <td>${coupon.type === 'percentage' ? 'Porcentaje' : 'Monto Fijo'}</td>
+                    <td class="font-semibold text-yellow-600">${coupon.type === 'percentage' ? `${coupon.value}%` : `$${coupon.value.toFixed(2)}`}</td>
+                    <td class="text-center">
+                        <label class="switch">
+                          <input type="checkbox" class="toggle-coupon-status" data-code="${coupon.code}" ${coupon.isActive ? 'checked' : ''}>
+                          <span class="slider round"></span>
+                        </label>
+                    </td>
+                    <td>
+                        <div class="flex justify-center gap-2">
+                            <button class="edit-coupon-btn btn-secondary" data-code="${coupon.code}">Editar</button>
+                            <button class="delete-coupon-btn bg-red-600 text-white font-bold py-2 px-4 rounded-full hover:bg-red-700" data-code="${coupon.code}">Eliminar</button>
+                        </div>
+                    </td>
+                </tr>
+            `).join('')}
+        </tbody>`;
+    couponsTableContainer.innerHTML = '';
+    couponsTableContainer.appendChild(table);
+    addCouponTableEventListeners();
+}
+
 // --- CARRITO ---
 function addToCart(productId) {
     cart[productId] = (cart[productId] || 0) + 1;
@@ -313,7 +370,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const email = authEmailInput.value;
             const password = authPasswordInput.value;
             try {
-                const userCredential = await signInWithEmailAndPassword(auth, email, password);
+                await signInWithEmailAndPassword(auth, email, password);
                 loginModal.style.display = 'none';
                 showMessage('Inicio de Sesión Exitoso', `Bienvenido, se han cargado los permisos de administrador.`);
             } catch (error) {
@@ -347,6 +404,17 @@ document.addEventListener('DOMContentLoaded', () => {
         };
         window.location.href = `order-preview.html?data=${encodeURIComponent(JSON.stringify(orderPreviewData))}`;
     });
+
+    couponForm = document.getElementById('couponForm');
+    submitCouponBtn = document.getElementById('submitCouponBtn');
+    cancelCouponBtn = document.getElementById('cancelCouponBtn');
+    
+    if (couponForm) {
+        couponForm.addEventListener('submit', handleCouponFormSubmit);
+    }
+    if(cancelCouponBtn) {
+        cancelCouponBtn.addEventListener('click', resetCouponForm);
+    }
 });
 
 function addAdminTableEventListeners() {
@@ -382,6 +450,42 @@ function reconnectOrderEventListeners() {
     });
 }
 
+function addCouponTableEventListeners() {
+    document.querySelectorAll('.edit-coupon-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const code = e.target.dataset.code;
+            const coupon = coupons.find(c => c.code === code);
+            if (coupon) {
+                document.getElementById('couponCode').value = coupon.code;
+                document.getElementById('couponCode').readOnly = true;
+                document.getElementById('couponType').value = coupon.type;
+                document.getElementById('couponValue').value = coupon.value;
+                submitCouponBtn.textContent = 'Actualizar Cupón';
+                cancelCouponBtn.classList.remove('hidden');
+            }
+        });
+    });
+
+    document.querySelectorAll('.delete-coupon-btn').forEach(btn => {
+        btn.addEventListener('click', async (e) => {
+            const code = e.target.dataset.code;
+            if (confirm(`¿Seguro que quieres eliminar el cupón "${code}"?`)) {
+                await remove(ref(db, `/artifacts/${appId}/public/coupons/${code}`));
+                showMessage('Éxito', 'Cupón eliminado correctamente.');
+            }
+        });
+    });
+
+    document.querySelectorAll('.toggle-coupon-status').forEach(toggle => {
+        toggle.addEventListener('change', async (e) => {
+            const code = e.target.dataset.code;
+            const newStatus = e.target.checked;
+            await update(ref(db, `/artifacts/${appId}/public/coupons/${code}`), { isActive: newStatus });
+            showMessage('Estado Actualizado', `El cupón ahora está ${newStatus ? 'activo' : 'inactivo'}.`);
+        });
+    });
+}
+
 async function handleProductFormSubmit(e) {
     e.preventDefault();
     const offerPriceValue = document.getElementById('productOfferPrice').value;
@@ -394,11 +498,37 @@ async function handleProductFormSubmit(e) {
         offerPrice: offerPriceValue ? parseFloat(offerPriceValue) : null 
     };
     const id = productIdInput.value;
-    const dbRef = id ? ref(db, `/artifacts/${appId}/public/products/${id}`) : ref(db, `/artifacts/${appId}/public/products`);
-    const action = id ? set : push;
-    await action(dbRef, productData);
+    const dbRef = id ? ref(db, `/artifacts/${appId}/public/products/${id}`) : push(ref(db, `/artifacts/${appId}/public/products`));
+    await set(dbRef, productData);
     showMessage('Éxito', `Artículo ${id ? 'actualizado' : 'agregado'} correctamente.`);
     resetProductForm();
+}
+
+async function handleCouponFormSubmit(e) {
+    e.preventDefault();
+    const code = document.getElementById('couponCode').value.trim().toUpperCase();
+    if (!code) {
+        showMessage('Error', 'El código del cupón no puede estar vacío.');
+        return;
+    }
+
+    const isUpdating = document.getElementById('couponCode').readOnly;
+    
+    // Al crear un cupón nuevo, por defecto está activo. Al actualizar, se mantiene su estado.
+    const couponData = {
+        type: document.getElementById('couponType').value,
+        value: parseFloat(document.getElementById('couponValue').value)
+    };
+    
+    if (!isUpdating) {
+        couponData.isActive = true; 
+    }
+
+    const dbRef = ref(db, `/artifacts/${appId}/public/coupons/${code}`);
+    await set(dbRef, couponData, { merge: true }); // Usamos set con merge para actualizar
+    
+    showMessage('Éxito', `Cupón ${isUpdating ? 'actualizado' : 'agregado'} correctamente.`);
+    resetCouponForm();
 }
 
 function resetProductForm() {
@@ -408,15 +538,27 @@ function resetProductForm() {
     cancelBtn.classList.add('hidden');
 }
 
+function resetCouponForm() {
+    couponForm.reset();
+    const codeInput = document.getElementById('couponCode');
+    codeInput.readOnly = false;
+    submitCouponBtn.textContent = 'Agregar Cupón';
+    cancelCouponBtn.classList.add('hidden');
+}
+
 function setupAdminTabs() {
-    ordersTab = document.getElementById('ordersTab');
     productsTab = document.getElementById('productsTab');
-    ordersContent = document.getElementById('ordersContent');
+    ordersTab = document.getElementById('ordersTab');
+    couponsTab = document.getElementById('couponsTab');
+
     productsContent = document.getElementById('productsContent');
-    if (!ordersTab || !productsTab) return;
+    ordersContent = document.getElementById('ordersContent');
+    couponsContent = document.getElementById('couponsContent');
+    
+    if (!ordersTab || !productsTab || !couponsTab) return;
     
     const setActiveTab = (activeTab) => {
-        [productsTab, ordersTab].forEach(tab => {
+        [productsTab, ordersTab, couponsTab].forEach(tab => {
             tab.classList.toggle('border-yellow-500', tab === activeTab);
             tab.classList.toggle('font-semibold', tab === activeTab);
             tab.classList.toggle('text-gray-800', tab === activeTab);
@@ -424,7 +566,9 @@ function setupAdminTabs() {
         });
         productsContent.classList.toggle('hidden', activeTab !== productsTab);
         ordersContent.classList.toggle('hidden', activeTab !== ordersTab);
+        couponsContent.classList.toggle('hidden', activeTab !== couponsTab);
     };
     productsTab.addEventListener('click', () => setActiveTab(productsTab));
     ordersTab.addEventListener('click', () => setActiveTab(ordersTab));
+    couponsTab.addEventListener('click', () => setActiveTab(couponsTab));
 }

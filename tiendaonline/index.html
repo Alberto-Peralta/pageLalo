@@ -42,6 +42,9 @@
                 <button id="ordersTab" class="tab-button py-2 px-4 text-gray-500 hover:text-gray-800">
                     Pedidos
                 </button>
+                <button id="couponsTab" class="tab-button py-2 px-4 text-gray-500 hover:text-gray-800">
+                    Cupones
+                </button>
             </div>
             
             <div id="productsContent">
@@ -81,6 +84,34 @@
                     <input type="text" id="orderSearch" placeholder="Buscar pedidos por cliente, teléfono..." class="w-full rounded-full border border-gray-300 shadow-sm p-3 text-lg bg-gray-50 text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-yellow-500 focus:border-transparent">
                 </div>
                 <div id="ordersList" class="space-y-4"></div>
+            </div>
+
+            <div id="couponsContent" class="hidden">
+                <h3 class="text-xl font-bold text-gray-800 mb-4">Gestionar Cupones</h3>
+                <form id="couponForm" class="grid grid-cols-1 md:grid-cols-3 gap-6 p-4 bg-gray-50 rounded-lg border">
+                    <div class="form-group">
+                        <label for="couponCode" class="block text-sm font-medium text-gray-600 mb-1">Código del Cupón</label>
+                        <input type="text" id="couponCode" required placeholder="EJ: BIENVENIDO10" class="w-full rounded-lg border-gray-300 shadow-sm p-2 bg-white text-gray-900 uppercase">
+                    </div>
+                    <div class="form-group">
+                        <label for="couponType" class="block text-sm font-medium text-gray-600 mb-1">Tipo de Descuento</label>
+                        <select id="couponType" required class="w-full rounded-lg border-gray-300 shadow-sm p-2 bg-white text-gray-900">
+                            <option value="percentage">Porcentaje (%)</option>
+                            <option value="fixed">Monto Fijo ($)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="couponValue" class="block text-sm font-medium text-gray-600 mb-1">Valor</label>
+                        <input type="number" id="couponValue" step="0.01" min="0" required placeholder="Ej: 15 o 50" class="w-full rounded-lg border-gray-300 shadow-sm p-2 bg-white text-gray-900">
+                    </div>
+                    <div class="md:col-span-3 flex gap-4 justify-end">
+                        <button type="button" id="cancelCouponBtn" class="btn-secondary hidden">Cancelar</button>
+                        <button type="submit" id="submitCouponBtn" class="btn-primary">Agregar Cupón</button>
+                    </div>
+                </form>
+        
+                <div id="couponsTableContainer" class="mt-6">
+                    </div>
             </div>
         </div>
 
