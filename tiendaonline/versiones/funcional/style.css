@@ -1,0 +1,191 @@
+:root {
+    --color-primary: #D97706; /* Amarillo Mostaza Oscuro */
+    --color-secondary: #FBBF24; /* Amarillo Mostaza Claro */
+    --color-background-light: #FEFCE8; /* Blanco Hueso (amarillo muy claro) */
+    --color-card-light: #FFFFFF; /* Blanco puro para tarjetas */
+    --color-text-dark: #1f2937; /* Gris oscuro para texto principal */
+    --color-text-light: #4b5563; /* Gris medio para texto secundario */
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-background-light);
+    color: var(--color-text-dark);
+}
+
+/* --- MODALES --- */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.modal-content {
+    background-color: var(--color-card-light);
+    color: var(--color-text-dark);
+    padding: 2rem;
+    border-radius: 1.5rem;
+    max-width: 90vw;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.close-button {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    color: #9ca3af;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.close-button:hover {
+    color: var(--color-primary);
+}
+
+.product-card {
+    animation: slideInUp 0.5s ease-out forwards;
+    opacity: 0;
+    background-color: var(--color-card-light);
+    border: 1px solid #e5e7eb;
+}
+
+/* --- BOTONES --- */
+.btn-primary {
+    background-color: var(--color-primary);
+    color: white;
+    font-weight: bold;
+    border-radius: 9999px;
+    padding: 0.75rem 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-text-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(217, 119, 6, 0.2);
+}
+
+.btn-secondary {
+    background-color: #e5e7eb;
+    color: var(--color-text-light);
+    border: 1px solid #d1d5db;
+    font-weight: bold;
+    border-radius: 9999px;
+    padding: 0.75rem 1.5rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-secondary:hover {
+    background-color: #d1d5db;
+    transform: translateY(-2px);
+}
+
+/* --- PANELES Y OTROS --- */
+.admin-panel {
+    display: none;
+}
+
+.admin-panel.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+#cartPanel {
+    transform: translateX(100%);
+}
+
+#cartPanel.active {
+    transform: translateX(0);
+}
+
+#cartList::-webkit-scrollbar { display: none; }
+#cartList { -ms-overflow-style: none; scrollbar-width: none; }
+
+
+/* --- ESTILOS TABLA ADMIN --- */
+.admin-table-container {
+    overflow-x: auto;
+}
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+}
+.admin-table th, .admin-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+}
+.admin-table th {
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    color: var(--color-text-light);
+    background-color: #f9fafb;
+}
+.admin-table tr:hover td {
+    background-color: #f9fafb;
+}
+.admin-table img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+/* --- PESTAÑAS Y ESTADOS DE PEDIDO --- */
+.tab-button {
+    transition: all 0.3s ease;
+}
+.status-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+.status-pendiente { background-color: #fef3c7; color: #92400e; }
+.status-confirmado { background-color: #d1fae5; color: #065f46; }
+.status-preparando { background-color: #dbeafe; color: #1e40af; }
+.status-en_camino { background-color: #e0e7ff; color: #3730a3; }
+.status-entregado { background-color: #dcfce7; color: #15803d; }
+.status-cancelado { background-color: #fee2e2; color: #991b1b; }
+
+.order-item {
+    border-left: 4px solid var(--color-primary);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.order-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* CLASES AUXILIARES */
+.hidden {
+    display: none !important;
+}

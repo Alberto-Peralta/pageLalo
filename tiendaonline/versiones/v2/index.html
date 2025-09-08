@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Artículos Religiosos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container mx-auto p-4 md:p-8">
+        <header class="text-center my-8">
+            <h1 id="mainTitle" class="text-4xl md:text-5xl font-extrabold text-gray-900 cursor-pointer transition-transform duration-200 hover:scale-105">Luz Divina - Artículos Religiosos</h1>
+            <p class="mt-2 text-lg text-gray-600">Encuentra paz y fe en nuestros artículos seleccionados</p>
+            
+            <div class="mt-6 max-w-md mx-auto client-search">
+                <input type="text" id="searchInput" placeholder="Buscar rosarios, biblias, velas..." 
+                       class="w-full rounded-full border border-gray-300 shadow-sm p-3 text-lg bg-gray-50 text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-yellow-500 focus:border-transparent">
+            </div>
+            
+            <div class="mt-4 flex justify-center">
+                <a href="order-status.html" 
+                   class="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-semibold py-2 px-4 rounded-full transition-all duration-200 inline-flex items-center shadow-md">
+                    🙏 Seguir mi pedido
+                </a>
+            </div>
+        </header>
+
+        <div id="adminPanel" class="admin-panel bg-white p-6 md:p-8 rounded-3xl shadow-lg mb-8 border border-gray-200">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-bold text-gray-900">Panel de Administración</h2>
+                <button id="logoutBtn" class="btn-secondary">Cerrar Sesión</button>
+            </div>
+            
+            <div class="flex border-b border-gray-200 mb-6">
+                <button id="productsTab" class="tab-button py-2 px-4 text-gray-800 border-b-2 border-yellow-500 font-semibold">
+                    Productos
+                </button>
+                <button id="ordersTab" class="tab-button py-2 px-4 text-gray-500 hover:text-gray-800">
+                    Pedidos
+                </button>
+            </div>
+            
+            <div id="productsContent">
+                <form id="productForm" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <input type="hidden" id="productId">
+                    <div class="form-group">
+                        <label for="productName" class="block text-sm font-medium text-gray-600 mb-1">Nombre del Artículo</label>
+                        <input type="text" id="productName" required class="w-full rounded-lg border-gray-300 shadow-sm p-2 bg-gray-50 text-gray-900">
+                    </div>
+                    <div class="form-group">
+                        <label for="productPrice" class="block text-sm font-medium text-gray-600 mb-1">Precio</label>
+                        <input type="number" id="productPrice" step="0.01" min="0" required class="w-full rounded-lg border-gray-300 shadow-sm p-2 bg-gray-50 text-gray-900">
+                    </div>
+                    <div class="form-group md:col-span-2 lg:col-span-3">
+                        <label for="productDescription" class="block text-sm font-medium text-gray-600 mb-1">Descripción</label>
+                        <textarea id="productDescription" rows="3" required class="w-full rounded-lg border-gray-300 shadow-sm p-2 bg-gray-50 text-gray-900"></textarea>
+                    </div>
+                    <div class="form-group md:col-span-2 lg:col-span-3">
+                        <label for="productImage" class="block text-sm font-medium text-gray-600 mb-1">URL de Imagen</label>
+                        <input type="url" id="productImage" required class="w-full rounded-lg border-gray-300 shadow-sm p-2 bg-gray-50 text-gray-900">
+                    </div>
+                    <div class="form-actions md:col-span-2 lg:col-span-3 flex gap-4 justify-end">
+                        <button type="button" id="cancelBtn" class="btn-secondary hidden">Cancelar</button>
+                        <button type="submit" id="submitBtn" class="btn-primary">Agregar Artículo</button>
+                    </div>
+                </form>
+
+                <!-- Product search bar for admin -->
+                <div class="mt-8 mb-4 admin-search">
+                    <input type="text" id="adminSearchInput" placeholder="Buscar artículos por nombre o descripción..." 
+                        class="w-full rounded-full border border-gray-300 shadow-sm p-3 text-lg bg-gray-50 text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-yellow-500 focus:border-transparent">
+                </div>
+                
+                <div id="adminTableContainer" class="admin-table-container mt-2"></div>
+            </div>
+
+            <div id="ordersContent" class="hidden">
+                <!-- Order search bar for admin -->
+                <div class="mb-4">
+                    <input type="text" id="orderSearch" placeholder="Buscar por cliente, teléfono o N° de pedido..." class="w-full rounded-full border border-gray-300 shadow-sm p-3 text-lg bg-gray-50 text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-yellow-500 focus:border-transparent">
+                </div>
+                <div id="ordersList" class="space-y-4"></div>
+            </div>
+        </div>
+
+        <section id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"></section>
+    </div>
+
+    <div id="productModal" class="modal">
+        <div class="modal-content text-center">
+            <span class="close-button">&times;</span>
+            <img id="modalImage" class="w-full h-auto rounded-xl shadow-lg mb-4" src="" alt="Artículo en pantalla completa">
+            <h3 id="modalName" class="text-3xl font-bold mb-2"></h3>
+            <p id="modalDescription" class="text-lg text-gray-600 mb-4"></p>
+            <span id="modalPrice" class="text-2xl font-semibold text-yellow-600"></span>
+        </div>
+    </div>
+    
+    <div id="messageBox" class="modal">
+        <div class="modal-content text-center max-w-sm">
+            <h3 id="messageTitle" class="text-xl font-bold mb-2 text-yellow-600"></h3>
+            <p id="messageText" class="text-gray-600 mb-4"></p>
+            <button id="closeMessageBtn" class="bg-gray-200 text-gray-800 font-bold py-2 px-4 rounded-full">Cerrar</button>
+        </div>
+    </div>
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content text-center max-w-sm">
+            <span class="close-button" id="closeLoginModal">&times;</span>
+            <h3 class="text-2xl font-bold mb-4 text-gray-900">Acceso de Administrador</h3>
+            <form id="authForm" onsubmit="return false;">
+                <input type="email" id="authEmail" class="w-full mb-4 rounded-lg p-2 bg-gray-100 text-gray-900 border border-gray-300" placeholder="Correo Electrónico" required>
+                <input type="password" id="authPassword" class="w-full mb-6 rounded-lg p-2 bg-gray-100 text-gray-900 border border-gray-300" placeholder="Contraseña" required>
+                <button type="button" id="loginBtn" class="w-full btn-primary">Ingresar</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="cartPanel" class="fixed top-0 right-0 h-full w-full sm:w-96 bg-white shadow-2xl z-50 transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col p-6 border-l border-gray-200">
+        <div class="flex justify-between items-center mb-4">
+            <h3 class="text-2xl font-bold text-gray-900">✨ Tu Cesta</h3>
+            <button id="closeCartBtn" class="text-gray-500 hover:text-gray-800 text-3xl">&times;</button>
+        </div>
+        <ul id="cartList" class="flex-grow overflow-y-auto space-y-4 pr-2"></ul>
+        <div class="mt-auto pt-4 border-t border-gray-200">
+            <div class="flex justify-between text-gray-900 font-bold text-lg">
+                <span>Total:</span>
+                <span id="cartTotal">$0.00</span>
+            </div>
+            <button id="printOrderBtn" class="w-full bg-green-500 text-white font-bold py-3 px-6 rounded-full hover:bg-green-600 transition-colors mt-4">
+                Continuar Pedido
+            </button>
+        </div>
+    </div>
+
+    <button id="openCartBtn" class="fixed bottom-6 right-6 p-4 rounded-full bg-yellow-500 text-gray-900 shadow-lg transition-transform duration-200 hover:scale-110 z-40 hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.182 1.254.632 1.254H20l-.546-2.185L17 13H7z" />
+        </svg>
+        <span id="cartCount" class="absolute top-0 right-0 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-100 transform translate-x-1/2 -translate-y-1/2 bg-red-600 rounded-full">0</span>
+    </button>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>

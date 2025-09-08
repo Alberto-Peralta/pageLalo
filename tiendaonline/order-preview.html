@@ -190,7 +190,7 @@
                 } else {
                     // Aplicar a todo el carrito (comportamiento original)
                     if (coupon.type === 'percentage') {
-                        calculatedDiscount = subtotal * (couton.value / 100);
+                        calculatedDiscount = subtotal * (coupon.value / 100);
                     } else if (coupon.type === 'fixed') {
                         calculatedDiscount = coupon.value;
                     }
@@ -272,10 +272,12 @@
         }
 
         window.confirmOrder = async function() {
+            // Solo pedir el nombre del cliente
             const customerName = prompt('Por favor, ingresa tu nombre completo:');
-            if (!customerName) return alert('El nombre es requerido.');
-            const customerPhone = prompt('Ingresa tu número de teléfono (10 dígitos):');
-            if (!customerPhone || !/^\d{10}$/.test(customerPhone)) return alert('El número de teléfono es inválido.');
+            if (!customerName) return alert('El nombre es requerido para confirmar tu pedido.');
+            
+            // Número fijo al que se enviará el mensaje
+            const fixedPhoneNumber = '6393992678';
 
             const completeOrderData = { 
                 ...orderData,
@@ -286,23 +288,25 @@
                 timestamp: Date.now(), 
                 status: 'pendiente', 
                 customerName: customerName.trim(), 
-                customerPhone: customerPhone.trim() 
+                customerPhone: fixedPhoneNumber // Usamos el número fijo
             };
             
-            await set(ref(db, `/artifacts/${appId}/public/orders/${orderData.orderId}`), completeOrderData);
+           await set(ref(db, `/artifacts/${appId}/public/orders/${orderData.orderId}`), completeOrderData);
 
-            let msg = `¡Hola ${customerName}! 👋\n\n✅ Tu pedido en *El cielo en tus manos* ha sido registrado.\n✨ *Número de pedido:* ${orderData.orderNumber}\n\n`;
+            let msg = `¡Hola! 🙋‍♂️\n\nAcabo de hacer un pedido en *El cielo en tus manos* y quería confirmarlo con usted. ✨\n\n🧾 *Número de pedido:* #${orderData.orderNumber}`;
             if (discountAmount > 0) {
-                msg += `Subtotal: $${subtotal.toFixed(2)}\n`;
-                msg += `Descuento: -$${discountAmount.toFixed(2)}\n`;
+                msg += `\n💲 Subtotal: $${subtotal.toFixed(2)}\n🎁 Descuento aplicado: -$${discountAmount.toFixed(2)}`;
             }
-            msg += `💰 *Total a pagar:* $${finalTotal.toFixed(2)}\n\n`;
-            msg += `🔍 *Sigue el estado de tu pedido aquí:*\n${window.location.origin}/order-status.html\n\n¡Gracias por tu compra! 🙏`;
+            msg += `\n💰 *Total a pagar:* $${finalTotal.toFixed(2)}\n\n`;
+            msg += `📦 Puedo seguir el estado de mi pedido aquí:\n${window.location.origin}/order-status.html\n\n`;
+            msg += `🙏 Bendiciones`;
 
-            window.open(`https://wa.me/52${customerPhone}?text=${encodeURIComponent(msg)}`, '_blank');
-            
-            alert(`✅ Pedido #${orderData.orderNumber} confirmado. Se abrirá WhatsApp para enviar los detalles.`);
+            window.open(`https://wa.me/526393992678?text=${encodeURIComponent(msg)}`, '_blank');
+
+            alert(`✅ Pedido #${orderData.orderNumber} confirmado. Se abrirá WhatsApp para notificar al vendedor.`);
             setTimeout(() => { window.location.href = 'index.html'; }, 2000);
+
+
         };
         
         document.addEventListener('DOMContentLoaded', () => {
