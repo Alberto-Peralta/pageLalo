@@ -35,7 +35,7 @@
 
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
-        import { getDatabase, ref, set, onValue } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-database.js";
+        import { getDatabase, ref, set, onValue, get } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-database.js";
 
         const firebaseConfig = {
             apiKey: "AIzaSyCO3FRhSwH1xLABwVGFSd_YYrbFp0lQEv8",
@@ -50,11 +50,18 @@
         const app = initializeApp(firebaseConfig);
         const db = getDatabase(app);
         const appId = 'default-app-id';
-        let orderData = null, products = [];
+        
+        let orderData = null;
+        let products = [];
+        let subtotal = 0;
+        let discountAmount = 0;
+        let finalTotal = 0;
+        let appliedCoupon = null;
 
         function renderOrderDetails() {
             const container = document.getElementById('orderDetails');
             const productMap = products.reduce((acc, p) => ({ ...acc, [p.id]: p }), {});
+            
             const itemsHtml = Object.entries(orderData.cart).map(([id, qty]) => {
                 const product = productMap[id];
                 if (!product) return '';
@@ -72,27 +79,122 @@
                     </div>`;
             }).join('');
             
+            subtotal = orderData.total;
+            finalTotal = subtotal;
+
             container.innerHTML = `
                 <div class="text-center mb-6">
                     <h2 class="text-2xl font-bold text-gray-800">Pedido #${orderData.orderNumber}</h2>
                 </div>
                 <div class="space-y-4 mb-6">${itemsHtml}</div>
-                <div class="border-t border-gray-200 pt-4 flex justify-between items-center text-xl">
-                    <span class="text-gray-800 font-semibold">Total:</span>
-                    <span class="text-yellow-700 font-bold">$${orderData.total.toFixed(2)}</span>
+                
+                <div class="border-t border-gray-200 pt-4 mb-4">
+                    <div class="flex gap-2">
+                        <input type="text" id="couponCodeInput" placeholder="Código de cupón" class="w-full p-2 bg-gray-50 rounded-lg border border-gray-300 focus:ring-2 focus:ring-yellow-500">
+                        <button onclick="applyCoupon()" class="bg-gray-800 text-white font-bold py-2 px-4 rounded-lg hover:bg-gray-700 transition-colors">Aplicar</button>
+                    </div>
+                    <div id="couponMessage" class="text-sm mt-2 text-center"></div>
+                </div>
+
+                <div id="totalsSection" class="border-t border-gray-200 pt-4 space-y-2">
+                    <div class="flex justify-between items-center text-md">
+                        <span class="text-gray-600">Subtotal:</span>
+                        <span class="text-gray-800 font-semibold">$${subtotal.toFixed(2)}</span>
+                    </div>
+                    <div id="discountRow" class="hidden justify-between items-center text-md text-green-600">
+                        <span >Descuento:</span>
+                        <span id="discountValue" class="font-semibold"></span>
+                    </div>
+                    <div class="flex justify-between items-center text-xl">
+                        <span class="text-gray-800 font-bold">Total:</span>
+                        <span id="finalTotalValue" class="text-yellow-700 font-bold">$${finalTotal.toFixed(2)}</span>
+                    </div>
                 </div>`;
         }
         
+        window.applyCoupon = async function() {
+            const couponInput = document.getElementById('couponCodeInput');
+            const messageDiv = document.getElementById('couponMessage');
+            const code = couponInput.value.trim().toUpperCase();
+
+            if (!code) {
+                messageDiv.textContent = 'Por favor, introduce un código.';
+                messageDiv.className = 'text-sm mt-2 text-center text-red-600';
+                return;
+            }
+
+            const couponRef = ref(db, `/artifacts/${appId}/public/coupons/${code}`);
+            const snapshot = await get(couponRef);
+
+            if (snapshot.exists() && snapshot.val().isActive) {
+                const coupon = snapshot.val();
+                if (coupon.type === 'percentage') {
+                    discountAmount = subtotal * (coupon.value / 100);
+                } else if (coupon.type === 'fixed') {
+                    discountAmount = coupon.value;
+                }
+                
+                // Asegurarse de que el descuento no sea mayor al total
+                discountAmount = Math.min(discountAmount, subtotal);
+                finalTotal = subtotal - discountAmount;
+                appliedCoupon = { code, ...coupon };
+
+                messageDiv.textContent = `¡Cupón "${code}" aplicado con éxito!`;
+                messageDiv.className = 'text-sm mt-2 text-center text-green-600';
+                updateTotalsUI();
+            } else {
+                discountAmount = 0;
+                finalTotal = subtotal;
+                appliedCoupon = null;
+                messageDiv.textContent = 'El código del cupón no es válido o ha expirado.';
+                messageDiv.className = 'text-sm mt-2 text-center text-red-600';
+                updateTotalsUI();
+            }
+        }
+
+        function updateTotalsUI() {
+            const discountRow = document.getElementById('discountRow');
+            const discountValue = document.getElementById('discountValue');
+            const finalTotalValue = document.getElementById('finalTotalValue');
+
+            if (discountAmount > 0) {
+                discountValue.textContent = `- $${discountAmount.toFixed(2)}`;
+                discountRow.classList.remove('hidden');
+                discountRow.classList.add('flex');
+            } else {
+                discountRow.classList.add('hidden');
+            }
+            finalTotalValue.textContent = `$${finalTotal.toFixed(2)}`;
+        }
+
         window.confirmOrder = async function() {
             const customerName = prompt('Por favor, ingresa tu nombre completo:');
             if (!customerName) return alert('El nombre es requerido.');
             const customerPhone = prompt('Ingresa tu número de teléfono (10 dígitos):');
             if (!customerPhone || !/^\d{10}$/.test(customerPhone)) return alert('El número de teléfono es inválido.');
 
-            const completeOrderData = { ...orderData, timestamp: Date.now(), status: 'pendiente', customerName: customerName.trim(), customerPhone: customerPhone.trim() };
+            const completeOrderData = { 
+                ...orderData,
+                subtotal: subtotal,
+                discount: discountAmount,
+                total: finalTotal, // El total final con descuento
+                couponUsed: appliedCoupon ? appliedCoupon.code : null,
+                timestamp: Date.now(), 
+                status: 'pendiente', 
+                customerName: customerName.trim(), 
+                customerPhone: customerPhone.trim() 
+            };
+            
             await set(ref(db, `/artifacts/${appId}/public/orders/${orderData.orderId}`), completeOrderData);
 
-            const msg = `¡Hola ${customerName}! 👋\n\n✅ Tu pedido en *Luz Divina* ha sido registrado.\n✨ *Número de pedido:* ${orderData.orderNumber}\n💰 *Total:* $${orderData.total.toFixed(2)}\n\n🔍 *Sigue el estado de tu pedido aquí:*\n${window.location.origin}/order-status.html\n\n¡Gracias por tu compra! 🙏`;
+            let msg = `¡Hola ${customerName}! 👋\n\n✅ Tu pedido en *El cielo en tus manos* ha sido registrado.\n✨ *Número de pedido:* ${orderData.orderNumber}\n\n`;
+            if (discountAmount > 0) {
+                msg += `Subtotal: $${subtotal.toFixed(2)}\n`;
+                msg += `Descuento: -$${discountAmount.toFixed(2)}\n`;
+            }
+            msg += `💰 *Total a pagar:* $${finalTotal.toFixed(2)}\n\n`;
+            msg += `🔍 *Sigue el estado de tu pedido aquí:*\n${window.location.origin}/order-status.html\n\n¡Gracias por tu compra! 🙏`;
+
             window.open(`https://wa.me/52${customerPhone}?text=${encodeURIComponent(msg)}`, '_blank');
             
             alert(`✅ Pedido #${orderData.orderNumber} confirmado. Se abrirá WhatsApp para enviar los detalles.`);
