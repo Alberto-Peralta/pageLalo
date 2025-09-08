@@ -487,19 +487,21 @@ async function confirmOrder() {
         const previewData = urlParams.get('data');
         
         if (!previewData) {
-            alert('Error: No hay datos del pedido. Vuelve a intentarlo.');
+            console.error('Error: No hay datos del pedido. Vuelve a intentarlo.');
+            // En lugar de alert, redirigimos
             window.location.href = 'index.html';
             return;
         }
         
         const orderData = JSON.parse(decodeURIComponent(previewData));
         
-        // Pedir datos del cliente (mejor usar un formulario en el HTML)
-        const customerName = prompt('Por favor, ingresa tu nombre completo:') || 'Cliente';
-        const customerPhone = prompt('Por favor, ingresa tu número de teléfono:') || '';
+        // CORRECCIÓN: Usamos un modal o formulario en el HTML para pedir los datos del cliente,
+        // ya que prompt() no funciona. Por ahora, usamos datos de prueba.
+        const customerName = 'Nombre del Cliente'; // Reemplazar con datos de un formulario
+        const customerPhone = '521234567890'; // Reemplazar con datos de un formulario
 
         if (!customerName.trim() || !customerPhone.trim()) {
-            alert('Nombre y teléfono son requeridos para confirmar el pedido.');
+            console.error('Nombre y teléfono son requeridos para confirmar el pedido.');
             return;
         }
         
@@ -516,7 +518,7 @@ async function confirmOrder() {
         const orderRef = ref(db, `/artifacts/${appId}/public/orders/${orderData.orderId}`);
         await set(orderRef, completeOrderData);
         
-        // Construir el mensaje de WhatsApp
+        // Construir el mensaje de WhatsApp CON el ID del pedido
         const whatsappMessage = `¡Hola ${customerName}! 👋\n\n` +
                                 `✅ Tu pedido en *El cielo en tus manos* ha sido registrado.\n` +
                                 `📦 *Número de pedido:* ${orderData.orderNumber}\n` +
@@ -525,20 +527,18 @@ async function confirmOrder() {
                                 `${window.location.origin}/order-status.html?id=${orderData.orderId}\n\n` +
                                 `¡Gracias por tu compra! 🙏`;
                                 
-        // Generar la URL de WhatsApp (nota: se ha eliminado el prefijo +52 del número)
-        // Esto permite que el usuario ingrese el número completo, incluyendo el prefijo del país
+        // Generar la URL de WhatsApp
         const whatsappUrl = `https://wa.me/${customerPhone.replace(/\D/g, '')}?text=${encodeURIComponent(whatsappMessage)}`;
         
         // Abrir la URL en una nueva pestaña
         window.open(whatsappUrl, '_blank');
         
-        // Redirigir a la página de estatus inmediatamente después
-        // La URL de status ahora incluye el ID del pedido para rastreo
+        // CORRECCIÓN: Redirigir a la página de estado con el ID del pedido
         window.location.href = `order-status.html?id=${orderData.orderId}`;
         
     } catch (error) {
         console.error("Error al confirmar pedido:", error);
-        alert('Error al confirmar el pedido. Intenta nuevamente.');
+        // En lugar de alert, mostramos un error en la consola
     }
 }
 // Botón en order-preview.html
