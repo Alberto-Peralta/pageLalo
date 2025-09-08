@@ -104,6 +104,7 @@ function setupAdminListeners() {
     setupAdminOrdersListener();
     setupAdminCouponsListener();
     setupOrderSearch(); // Agregar búsqueda de pedidos
+    setupCouponListeners(); // Agregado para conectar los listeners de cupones
 }
 
 function setupRealtimeListeners() {
@@ -368,7 +369,7 @@ function renderFilteredOrdersList(filteredOrders, searchTerm) {
 }
 
 function renderCouponsTable() {
-    couponsTableContainer = document.getElementById('couponsTableContainer');
+    couponsTableContainer = document.getElementById('couponList');
     if (!couponsTableContainer) return;
     if (coupons.length === 0) {
         couponsTableContainer.innerHTML = `
@@ -781,102 +782,43 @@ function resetProductForm() {
     cancelBtn.classList.add('hidden');
 }
 
-function setupAdminTabs() {
-    productsTab = document.getElementById('productsTab');
-    ordersTab = document.getElementById('ordersTab');
-    couponsTab = document.getElementById('couponsTab');
-
-    productsContent = document.getElementById('productsContent');
-    ordersContent = document.getElementById('ordersContent');
-    couponsContent = document.getElementById('couponsContent');
-    
-    if (!ordersTab || !productsTab || !couponsTab) return;
-    
-    const setActiveTab = (activeTab) => {
-        [productsTab, ordersTab, couponsTab].forEach(tab => {
-            tab.classList.toggle('border-yellow-500', tab === activeTab);
-            tab.classList.toggle('font-semibold', tab === activeTab);
-            tab.classList.toggle('text-gray-800', tab === activeTab);
-            tab.classList.toggle('text-gray-500', tab !== activeTab);
-        });
-        productsContent.classList.toggle('hidden', activeTab !== productsTab);
-        ordersContent.classList.toggle('hidden', activeTab !== ordersTab);
-        couponsContent.classList.toggle('hidden', activeTab !== couponsTab);
-    };
-    productsTab.addEventListener('click', () => setActiveTab(productsTab));
-    ordersTab.addEventListener('click', () => setActiveTab(ordersTab));
-    couponsTab.addEventListener('click', () => setActiveTab(couponsTab));
-    setActiveTab(productsTab);
-}
-
 // --- MANEJO DE CUPONES EN EL ADMIN ---
-
-function renderCouponsTable() {
-    couponsTableContainer = document.getElementById('couponList');
-    if (!couponsTableContainer) return;
-    if (coupons.length === 0) {
-        couponsTableContainer.innerHTML = `
-            <div class="text-center py-8 text-gray-500">
-                <p>No hay cupones creados aún.</p>
-            </div>
-        `;
-        return;
+function setupCouponListeners() {
+    couponForm = document.getElementById('couponForm');
+    if (couponForm) {
+        couponForm.addEventListener('submit', handleCouponFormSubmit);
     }
-    const tableHtml = `
-        <div class="overflow-x-auto">
-            <table class="w-full bg-white rounded-lg shadow-sm border border-gray-200">
-                <thead class="bg-gray-50">
-                    <tr>
-                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Código</th>
-                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Tipo</th>
-                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Valor</th>
-                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Usos</th>
-                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Estado</th>
-                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Acciones</th>
-                    </tr>
-                </thead>
-                <tbody class="divide-y divide-gray-200">
-                    ${coupons.map(coupon => `
-                        <tr class="hover:bg-gray-50">
-                            <td class="px-4 py-3 font-mono font-bold text-gray-900">${coupon.code}</td>
-                            <td class="px-4 py-3 text-gray-700">
-                                <span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${coupon.type === 'percentage' ? 'bg-blue-100 text-blue-800' : 'bg-green-100 text-green-800'}">
-                                    ${coupon.type === 'percentage' ? 'Porcentaje' : 'Monto Fijo'}
-                                </span>
-                            </td>
-                            <td class="px-4 py-3 font-semibold text-gray-900">
-                                ${coupon.value}${coupon.type === 'percentage' ? '%' : '$'}
-                            </td>
-                            <td class="px-4 py-3 text-gray-700">
-                                <span class="font-semibold ${coupon.usesRemaining === 0 ? 'text-red-600' : 'text-gray-900'}">
-                                    ${coupon.usesRemaining !== undefined ? coupon.usesRemaining : '∞'}
-                                </span>
-                            </td>
-                            <td class="px-4 py-3">
-                                <span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${coupon.isActive ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}">
-                                    ${coupon.isActive ? 'Activo' : 'Inactivo'}
-                                </span>
-                            </td>
-                            <td class="px-4 py-3">
-                                <div class="flex space-x-2">
-                                    <button onclick="editCoupon('${coupon.code}')" class="text-blue-600 hover:text-blue-800 text-sm font-medium">
-                                        Editar
-                                    </button>
-                                    <button onclick="toggleCouponStatus('${coupon.code}', ${coupon.isActive})" class="text-yellow-600 hover:text-yellow-800 text-sm font-medium">
-                                        ${coupon.isActive ? 'Desactivar' : 'Activar'}
-                                    </button>
-                                    <button onclick="deleteCoupon('${coupon.code}')" class="text-red-600 hover:text-red-800 text-sm font-medium">
-                                        Eliminar
-                                    </button>
-                                </div>
-                            </td>
-                        </tr>
-                    `).join('')}
-                </tbody>
-            </table>
-        </div>
-    `;
-    couponsTableContainer.innerHTML = tableHtml;
+    const cancelCouponBtn = document.getElementById('cancelCouponBtn');
+    if (cancelCouponBtn) {
+        cancelCouponBtn.addEventListener('click', resetCouponForm);
+    }
+    const isSpecificToProducts = document.getElementById('isSpecificToProducts');
+    if (isSpecificToProducts) {
+        isSpecificToProducts.addEventListener('change', (e) => {
+            const productSelectionContainer = document.getElementById('productSelectionContainer');
+            if (e.target.checked) {
+                productSelectionContainer.classList.remove('hidden');
+                renderProductSelectionCheckboxes(null);
+            } else {
+                productSelectionContainer.classList.add('hidden');
+            }
+        });
+    }
+    const selectAllProductsBtn = document.getElementById('selectAllProductsBtn');
+    if (selectAllProductsBtn) {
+        selectAllProductsBtn.addEventListener('click', () => {
+            const checkboxes = document.querySelectorAll('#productSelectionList input[type="checkbox"]');
+            checkboxes.forEach(checkbox => checkbox.checked = true);
+        });
+    }
+
+    const clearAllProductsBtn = document.getElementById('clearAllProductsBtn');
+    if (clearAllProductsBtn) {
+        clearAllProductsBtn.addEventListener('click', () => {
+            const checkboxes = document.querySelectorAll('#productSelectionList input[type="checkbox"]');
+            checkboxes.forEach(checkbox => checkbox.checked = false);
+        });
+    }
 }
 
 function handleCouponFormSubmit(e) {
@@ -1008,35 +950,6 @@ function getSelectedProducts() {
         }
     });
     return selectedIds;
-}
-
-// Lógica para el toggle del checkbox "Aplicar a productos específicos"
-const isSpecificToProducts = document.getElementById('isSpecificToProducts');
-if (isSpecificToProducts) {
-    isSpecificToProducts.addEventListener('change', (e) => {
-        const productSelectionContainer = document.getElementById('productSelectionContainer');
-        if (e.target.checked) {
-            productSelectionContainer.classList.remove('hidden');
-            renderProductSelectionCheckboxes(null);
-        } else {
-            productSelectionContainer.classList.add('hidden');
-        }
-    });
-}
-const selectAllProductsBtn = document.getElementById('selectAllProductsBtn');
-if (selectAllProductsBtn) {
-    selectAllProductsBtn.addEventListener('click', () => {
-        const checkboxes = document.querySelectorAll('#productSelectionList input[type="checkbox"]');
-        checkboxes.forEach(checkbox => checkbox.checked = true);
-    });
-}
-
-const clearAllProductsBtn = document.getElementById('clearAllProductsBtn');
-if (clearAllProductsBtn) {
-    clearAllProductsBtn.addEventListener('click', () => {
-        const checkboxes = document.querySelectorAll('#productSelectionList input[type="checkbox"]');
-        checkboxes.forEach(checkbox => checkbox.checked = false);
-    });
 }
 
 // Llamadas iniciales
