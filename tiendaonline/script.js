@@ -134,13 +134,32 @@ function renderProducts(productList) {
     productGrid.innerHTML = '';
     productList.forEach((product, index) => {
         const productCard = document.createElement('div');
-        productCard.className = `product-card rounded-3xl shadow-lg p-6 flex flex-col items-center text-center transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 cursor-pointer`;
+        productCard.className = `product-card relative rounded-3xl shadow-lg p-6 flex flex-col items-center text-center transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 cursor-pointer`;
         productCard.style.animationDelay = `${index * 50}ms`;
+
+        // Lógica para determinar qué precio mostrar
+        const isOnSale = product.offerPrice && product.offerPrice < product.price;
+        let priceHtml = '';
+        let offerBadgeHtml = '';
+
+        if (isOnSale) {
+            priceHtml = `
+                <div class="flex items-center justify-center gap-2">
+                    <span class="text-lg text-gray-500 line-through">$${product.price.toFixed(2)}</span>
+                    <span class="text-2xl font-bold text-red-600">$${product.offerPrice.toFixed(2)}</span>
+                </div>
+            `;
+            offerBadgeHtml = `<div class="offer-badge absolute top-3 right-3 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded-full">OFERTA</div>`;
+        } else {
+            priceHtml = `<span class="text-2xl font-bold text-yellow-600">$${product.price.toFixed(2)}</span>`;
+        }
+
         productCard.innerHTML = `
+            ${offerBadgeHtml}
             <img src="${product.imageUrl}" alt="${product.name}" class="w-full h-48 object-cover rounded-xl mb-4">
             <h3 class="text-xl font-bold mb-2 text-gray-800">${product.name}</h3>
             <p class="text-sm text-gray-600 mb-4 flex-grow line-clamp-3">${product.description}</p>
-            <span class="text-2xl font-bold text-yellow-600 mb-4">$${product.price.toFixed(2)}</span>
+            <div class="mb-4">${priceHtml}</div>
             <button class="add-to-cart-btn btn-primary w-full">Añadir al Carrito</button>
         `;
         productCard.querySelector('.add-to-cart-btn').addEventListener('click', (e) => {
@@ -235,7 +254,8 @@ function updateCartUI() {
     Object.entries(cart).forEach(([id, quantity]) => {
         const product = productMap[id];
         if (product) {
-            total += product.price * quantity;
+            const priceToUse = (product.offerPrice && product.offerPrice < product.price) ? product.offerPrice : product.price;
+            total += priceToUse * quantity;
             const item = document.createElement('li');
             item.className = 'bg-gray-50 p-3 rounded-lg flex items-center gap-4 border border-gray-200';
             item.innerHTML = `
@@ -294,7 +314,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const password = authPasswordInput.value;
             try {
                 const userCredential = await signInWithEmailAndPassword(auth, email, password);
-                // onAuthStateChanged se encargará de actualizar la UI.
                 loginModal.style.display = 'none';
                 showMessage('Inicio de Sesión Exitoso', `Bienvenido, se han cargado los permisos de administrador.`);
             } catch (error) {
@@ -310,7 +329,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (printOrderBtn) printOrderBtn.addEventListener('click', () => {
         if (Object.keys(cart).length === 0) return showMessage('Carrito Vacío', 'Añade artículos para continuar.');
-        const total = Object.values(cart).reduce((sum, qty, i) => sum + (products.find(p => p.id === Object.keys(cart)[i])?.price || 0) * qty, 0);
+        
+        const total = Object.entries(cart).reduce((sum, [id, qty]) => {
+            const product = products.find(p => p.id === id);
+            if (product) {
+                const priceToUse = (product.offerPrice && product.offerPrice < product.price) ? product.offerPrice : product.price;
+                return sum + priceToUse * qty;
+            }
+            return sum;
+        }, 0);
+
         const orderPreviewData = {
             cart: { ...cart },
             total: total,
@@ -329,6 +357,7 @@ function addAdminTableEventListeners() {
             document.getElementById('productName').value = product.name;
             document.getElementById('productDescription').value = product.description;
             document.getElementById('productPrice').value = product.price;
+            document.getElementById('productOfferPrice').value = product.offerPrice || '';
             document.getElementById('productImage').value = product.imageUrl;
             submitBtn.textContent = 'Actualizar Artículo';
             cancelBtn.classList.remove('hidden');
@@ -355,12 +384,14 @@ function reconnectOrderEventListeners() {
 
 async function handleProductFormSubmit(e) {
     e.preventDefault();
+    const offerPriceValue = document.getElementById('productOfferPrice').value;
     const productData = {
         name: document.getElementById('productName').value,
         description: document.getElementById('productDescription').value,
         price: parseFloat(document.getElementById('productPrice').value),
         imageUrl: document.getElementById('productImage').value,
-        timestamp: Date.now()
+        timestamp: Date.now(),
+        offerPrice: offerPriceValue ? parseFloat(offerPriceValue) : null 
     };
     const id = productIdInput.value;
     const dbRef = id ? ref(db, `/artifacts/${appId}/public/products/${id}`) : ref(db, `/artifacts/${appId}/public/products`);

@@ -57,15 +57,19 @@
             const productMap = products.reduce((acc, p) => ({ ...acc, [p.id]: p }), {});
             const itemsHtml = Object.entries(orderData.cart).map(([id, qty]) => {
                 const product = productMap[id];
-                return product ? `
+                if (!product) return '';
+
+                const priceToUse = (product.offerPrice && product.offerPrice < product.price) ? product.offerPrice : product.price;
+                
+                return `
                     <div class="flex items-center bg-gray-50 p-4 rounded-xl gap-4 border border-gray-200">
                         <img src="${product.imageUrl}" alt="${product.name}" class="w-20 h-20 object-cover rounded-lg shadow-sm">
                         <div class="flex-grow">
                             <h4 class="text-gray-800 font-semibold">${product.name}</h4>
                             <span class="text-gray-600 text-sm">Cantidad: ${qty}</span>
                         </div>
-                        <p class="text-yellow-700 font-bold text-lg">$${(product.price * qty).toFixed(2)}</p>
-                    </div>` : '';
+                        <p class="text-yellow-700 font-bold text-lg">$${(priceToUse * qty).toFixed(2)}</p>
+                    </div>`;
             }).join('');
             
             container.innerHTML = `

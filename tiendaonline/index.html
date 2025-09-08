@@ -55,6 +55,10 @@
                         <label for="productPrice" class="block text-sm font-medium text-gray-600 mb-1">Precio</label>
                         <input type="number" id="productPrice" step="0.01" min="0" required class="w-full rounded-lg border-gray-300 shadow-sm p-2 bg-gray-50 text-gray-900">
                     </div>
+                    <div class="form-group">
+                        <label for="productOfferPrice" class="block text-sm font-medium text-gray-600 mb-1">Precio de Oferta (Opcional)</label>
+                        <input type="number" id="productOfferPrice" step="0.01" min="0" placeholder="Ej: 89.99" class="w-full rounded-lg border-gray-300 shadow-sm p-2 bg-gray-50 text-gray-900">
+                    </div>
                     <div class="form-group md:col-span-2 lg:col-span-3">
                         <label for="productDescription" class="block text-sm font-medium text-gray-600 mb-1">Descripción</label>
                         <textarea id="productDescription" rows="3" required class="w-full rounded-lg border-gray-300 shadow-sm p-2 bg-gray-50 text-gray-900"></textarea>
@@ -69,13 +73,6 @@
                     </div>
                 </form>
 
-                
-                
-                <div class="mt-6 max-w-md mx-auto admin-search hidden">
-                    <input type="text" id="adminSearchInput" placeholder="Buscar artículos en administración..." 
-                        class="w-full rounded-full border border-gray-300 shadow-sm p-3 text-lg bg-gray-50 text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-yellow-500 focus:border-transparent">
-                </div>
-                
                 <div id="adminTableContainer" class="admin-table-container mt-6"></div>
             </div>
 
