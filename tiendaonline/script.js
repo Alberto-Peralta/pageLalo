@@ -53,7 +53,7 @@ let couponsTab, couponsContent, couponForm, submitCouponBtn, cancelCouponBtn, co
 let products = [];
 let cart = {};
 let admins = {};
-let currentUser = null; // Para saber quién está logueado
+let currentUser = null; 
 let adminClicks = 0;
 let orders = [];
 let coupons = [];
@@ -72,36 +72,41 @@ onValue(adminsRef, (snapshot) => {
 
 // 2. Listener para la autenticación (siempre activo)
 onAuthStateChanged(auth, (user) => {
-    currentUser = user;
-    updateUIBasedOnUserRole(user);
+    currentUser = user; 
+    updateUIBasedOnUserRole(user); 
+    // NEW: Listener para el carrito del usuario actual
+    if (user) {
+        setupCartListener(user.uid);
+    } else {
+        // Si no hay usuario, resetear carrito y ocultar botón
+        cart = {};
+        updateCartUI();
+    }
 });
-
 
 function updateUIBasedOnUserRole(user) {
     const isAdmin = user && admins[user.uid];
     const clientElements = document.querySelectorAll('.client-search, a[href="order-status.html"]');
+    
+    // NEW: Lógica para mostrar/ocultar los botones de login y logout
+    if (loginBtn) loginBtn.style.display = isAdmin ? 'none' : 'inline-block';
+    if (logoutBtn) logoutBtn.style.display = isAdmin ? 'inline-block' : 'none';
 
     if (isAdmin) {
-        if (adminPanel) adminPanel.classList.add('active');
-        if (productGrid) productGrid.style.display = 'none';
+        adminPanel.classList.add('active');
+        productGrid.style.display = 'none';
         if (mainTitle) mainTitle.style.display = 'none';
-        if (openCartBtn) openCartBtn.classList.add('hidden');
-        if (logoutBtn) logoutBtn.classList.remove('hidden');
-        if (loginBtn) loginBtn.classList.add('hidden');
         clientElements.forEach(el => el.style.display = 'none');
-
+        
         setupAdminListeners();
         setupAdminTabs();
     } else {
-        if (adminPanel) adminPanel.classList.remove('active');
-        if (productGrid) productGrid.style.display = 'grid';
+        adminPanel.classList.remove('active');
+        productGrid.style.display = 'grid';
         if (mainTitle) mainTitle.style.display = 'block';
-        if (logoutBtn) logoutBtn.classList.add('hidden');
-        if (loginBtn) loginBtn.classList.remove('hidden');
-        updateCartUI();
         clientElements.forEach(el => el.style.display = 'inline-flex');
-
-        setupRealtimeListeners();
+        
+        setupRealtimeListeners(); 
     }
 }
 
@@ -109,8 +114,7 @@ function setupAdminListeners() {
     setupRealtimeListeners();
     setupAdminOrdersListener();
     setupAdminCouponsListener();
-    setupOrderSearch();
-    setupCouponListeners();
+    setupOrderSearch(); 
 }
 
 function setupRealtimeListeners() {
@@ -119,10 +123,10 @@ function setupRealtimeListeners() {
         const data = snapshot.val();
         products = data ? Object.keys(data).map(id => ({ id, ...data[id] })) : [];
         products.sort((a, b) => (b.timestamp || 0) - (a.timestamp || 0));
-
+        
         renderProducts(products);
         if (adminTableContainer) renderAdminTable();
-        updateCartUI();
+        // REMOVED: updateCartUI() llamada desde aquí, ahora se actualiza con su propio listener
     });
 }
 
@@ -151,20 +155,19 @@ function setupOrderSearch() {
     if (orderSearch) {
         orderSearch.addEventListener('input', (e) => {
             const searchTerm = e.target.value.toLowerCase().trim();
-
+            
             if (searchTerm === '') {
-                renderOrdersList(); // Mostrar todos los pedidos
+                renderOrdersList(); 
                 return;
             }
-
-            const filteredOrders = orders.filter(order =>
+            
+            const filteredOrders = orders.filter(order => 
                 order.customerName?.toLowerCase().includes(searchTerm) ||
                 order.customerPhone?.includes(searchTerm) ||
                 order.orderNumber?.toString().includes(searchTerm) ||
                 order.status?.toLowerCase().includes(searchTerm)
             );
-
-            // Renderizar solo los pedidos filtrados
+            
             renderFilteredOrdersList(filteredOrders, searchTerm);
         });
     }
@@ -244,11 +247,10 @@ function renderAdminTable() {
     addAdminTableEventListeners();
 }
 
-// --- FUNCIÓN ACTUALIZADA: Renderizar lista de pedidos con botones de eliminar ---
 function renderOrdersList() {
     const ordersList = document.getElementById('ordersList');
     if (!ordersList) return;
-
+    
     if (orders.length === 0) {
         ordersList.innerHTML = `
             <div class="text-center py-8 text-gray-500">
@@ -261,7 +263,7 @@ function renderOrdersList() {
     ordersList.innerHTML = orders.map(order => {
         const statusTextMap = {
             'pendiente': 'Pendiente',
-            'confirmado': 'Confirmado',
+            'confirmado': 'Confirmado', 
             'preparando': 'Preparando',
             'en_camino': 'En camino',
             'entregado': 'Entregado',
@@ -306,11 +308,10 @@ function renderOrdersList() {
     reconnectOrderEventListeners();
 }
 
-// --- NUEVA FUNCIÓN: Renderizar pedidos filtrados ---
 function renderFilteredOrdersList(filteredOrders, searchTerm) {
     const ordersList = document.getElementById('ordersList');
     if (!ordersList) return;
-
+    
     if (filteredOrders.length === 0) {
         ordersList.innerHTML = `
             <div class="text-center py-8 text-gray-500">
@@ -325,7 +326,7 @@ function renderFilteredOrdersList(filteredOrders, searchTerm) {
 
     const statusTextMap = {
         'pendiente': 'Pendiente',
-        'confirmado': 'Confirmado',
+        'confirmado': 'Confirmado', 
         'preparando': 'Preparando',
         'en_camino': 'En camino',
         'entregado': 'Entregado',
@@ -441,40 +442,51 @@ function renderCouponsTable() {
             </table>
         </div>
     `;
-
+    
     couponsTableContainer.innerHTML = tableHtml;
 }
 
-// --- CARRITO ---
-function addToCart(productId) {
-    cart[productId] = (cart[productId] || 0) + 1;
-    updateCartUI();
-    showMessage('Artículo añadido al carrito.', 'success');
+// --- CARRITO (ACTUALIZADO PARA FIREBASE) ---
+function setupCartListener(userId) {
+    const cartRef = ref(db, `/artifacts/${appId}/public/carts/${userId}`);
+    onValue(cartRef, (snapshot) => {
+        cart = snapshot.val() || {};
+        updateCartUI();
+    });
 }
-function removeFromCart(productId) {
-    if (cart[productId]) {
-        cart[productId] -= 1;
-        if (cart[productId] <= 0) {
-            delete cart[productId];
-        }
+async function addToCart(productId) {
+    if (!currentUser) {
+        showMessage('Error', 'Por favor, inicia sesión para añadir artículos al carrito.');
+        return;
     }
-    updateCartUI();
-    showMessage('Artículo eliminado del carrito.', 'success');
+    const cartItemRef = ref(db, `/artifacts/${appId}/public/carts/${currentUser.uid}/${productId}`);
+    const currentCount = cart[productId] || 0;
+    try {
+        await set(cartItemRef, currentCount + 1);
+        showMessage('Artículo Añadido', 'El artículo se ha agregado a tu carrito.');
+    } catch (error) {
+        console.error("Error adding to cart:", error);
+        showMessage('Error', 'No se pudo añadir el artículo al carrito.');
+    }
+}
+async function removeFromCart(productId) {
+    if (!currentUser) return;
+    const cartItemRef = ref(db, `/artifacts/${appId}/public/carts/${currentUser.uid}/${productId}`);
+    try {
+        await remove(cartItemRef);
+        showMessage('Artículo Eliminado', 'El artículo se ha eliminado del carrito.');
+    } catch (error) {
+        console.error("Error removing from cart:", error);
+        showMessage('Error', 'No se pudo eliminar el artículo del carrito.');
+    }
 }
 function updateCartUI() {
     const totalCount = Object.values(cart).reduce((sum, count) => sum + count, 0);
-    if (cartCount) {
-        cartCount.textContent = totalCount > 0 ? totalCount : '';
-        cartCount.classList.toggle('hidden', totalCount === 0);
-    }
-    if (openCartBtn) {
-        openCartBtn.classList.toggle('hidden', totalCount === 0);
-    }
-
-    const cartList = document.getElementById('cartList');
-    const cartTotalElement = document.getElementById('cartTotal');
-    if (!cartList || !cartTotalElement) return;
+    cartCount.textContent = totalCount;
+    openCartBtn.classList.toggle('hidden', totalCount === 0);
     
+    const cartList = document.getElementById('cartList');
+    if (!cartList) return;
     cartList.innerHTML = '';
     
     const productMap = products.reduce((acc, p) => ({ ...acc, [p.id]: p }), {});
@@ -483,8 +495,7 @@ function updateCartUI() {
         const product = productMap[id];
         if (product) {
             const priceToUse = (product.offerPrice && product.offerPrice < product.price) ? product.offerPrice : product.price;
-            const subtotal = priceToUse * quantity;
-            total += subtotal;
+            total += priceToUse * quantity;
             const item = document.createElement('li');
             item.className = 'bg-gray-50 p-3 rounded-lg flex items-center gap-4 border border-gray-200';
             item.innerHTML = `
@@ -493,66 +504,26 @@ function updateCartUI() {
                     <h4 class="text-sm font-bold text-gray-800">${product.name}</h4>
                     <p class="text-xs text-gray-600">Cantidad: ${quantity}</p>
                 </div>
-                <button class="remove-from-cart-btn text-red-500 hover:text-red-700 font-bold text-xl" onclick="removeFromCart('${id}')">&times;</button>`;
+                <button class="remove-from-cart-btn text-red-500 hover:text-red-700 font-bold text-xl" data-id="${id}">&times;</button>`;
+            item.querySelector('.remove-from-cart-btn').addEventListener('click', () => removeFromCart(id));
             cartList.appendChild(item);
         }
     });
-    cartTotalElement.textContent = `${total.toFixed(2)}`;
+    document.getElementById('cartTotal').textContent = `${total.toFixed(2)}`;
 }
 
 // --- MODALES Y MENSAJES ---
 function showProductModal(product) {
-    if (!productModal) return;
-    const modalContent = document.getElementById('productModalContent');
-    const isOnSale = product.offerPrice && product.offerPrice < product.price;
-    let priceHtml = '';
-
-    if (isOnSale) {
-        priceHtml = `
-            <div class="flex items-center gap-2">
-                <span class="text-2xl text-gray-500 line-through">$${product.price.toFixed(2)}</span>
-                <span class="text-3xl font-bold text-red-600">$${product.offerPrice.toFixed(2)}</span>
-            </div>
-            <span class="bg-red-600 text-white text-xs font-bold px-2 py-1 rounded-full ml-2">OFERTA</span>
-        `;
-    } else {
-        priceHtml = `<span class="text-3xl font-bold text-yellow-600">$${product.price.toFixed(2)}</span>`;
-    }
-
-    modalContent.innerHTML = `
-        <div class="flex flex-col md:flex-row gap-6 items-center">
-            <div class="flex-shrink-0">
-                <img src="${product.imageUrl}" alt="${product.name}" class="w-full md:w-64 h-auto md:h-64 object-cover rounded-xl shadow-lg">
-            </div>
-            <div class="flex-1">
-                <h3 class="text-3xl font-bold text-gray-900 mb-2">${product.name}</h3>
-                <p class="text-gray-600 mb-4">${product.description}</p>
-                <div class="mb-4">${priceHtml}</div>
-                <button onclick="addToCart('${product.id}'); hideModal('productModal')" class="btn-primary w-full md:w-auto">
-                    Añadir al Carrito
-                </button>
-            </div>
-        </div>
-    `;
-    productModal.classList.add('active');
+    productModal.querySelector('#modalImage').src = product.imageUrl;
+    productModal.querySelector('#modalName').textContent = product.name;
+    productModal.querySelector('#modalDescription').textContent = product.description;
+    productModal.querySelector('#modalPrice').textContent = `${product.price.toFixed(2)}`;
+    productModal.style.display = 'flex';
 }
-
-function showMessage(message, type) {
-    if (messageBox) {
-        messageBox.textContent = message;
-        messageBox.className = `message-box ${type}`;
-        messageBox.classList.add('active');
-        setTimeout(() => {
-            messageBox.classList.remove('active');
-        }, 3000);
-    }
-}
-
-function hideModal(modalId) {
-    const modal = document.getElementById(modalId);
-    if (modal) {
-        modal.classList.remove('active');
-    }
+function showMessage(title, text) {
+    messageBox.querySelector('#messageTitle').textContent = title;
+    messageBox.querySelector('#messageText').textContent = text;
+    messageBox.style.display = 'flex';
 }
 
 // --- FUNCIONES DE CUPONES ---
@@ -602,26 +573,26 @@ async function editCoupon(code) {
     try {
         const couponRef = ref(db, `/artifacts/${appId}/public/coupons/${code}`);
         const snapshot = await get(couponRef);
-
+        
         if (snapshot.exists()) {
             const coupon = snapshot.val();
-
+            
             // Llenar el formulario con los datos del cupón
             document.getElementById('couponCode').value = code;
             document.getElementById('couponCode').readOnly = true;
             document.getElementById('couponType').value = coupon.type;
             document.getElementById('couponValue').value = coupon.value;
-
+            
             // Si existe campo de usos, llenarlo
             const usesInput = document.getElementById('couponUses');
             if (usesInput && coupon.usesRemaining !== undefined) {
                 usesInput.value = coupon.usesRemaining;
             }
-
+            
             // Cambiar botón a modo edición
             submitCouponBtn.textContent = 'Actualizar Cupón';
             cancelCouponBtn.classList.remove('hidden');
-
+            
             // Hacer scroll al formulario
             document.getElementById('couponForm').scrollIntoView({ behavior: 'smooth' });
         }
@@ -635,7 +606,7 @@ async function editCoupon(code) {
 async function toggleCouponStatus(code, currentStatus) {
     const newStatus = !currentStatus;
     const action = newStatus ? 'activar' : 'desactivar';
-
+    
     if (confirm(`¿Estás seguro de que quieres ${action} el cupón "${code}"?`)) {
         try {
             await update(ref(db, `/artifacts/${appId}/public/coupons/${code}`), {
@@ -667,17 +638,9 @@ async function deleteCoupon(code) {
 function resetCouponForm() {
     couponForm.reset();
     const codeInput = document.getElementById('couponCode');
-    if (codeInput) {
-        codeInput.readOnly = false;
-    }
-    const saveCouponBtn = document.getElementById('saveCouponBtn');
-    if (saveCouponBtn) {
-        saveCouponBtn.textContent = 'Guardar Cupón';
-    }
-    const cancelCouponBtn = document.getElementById('cancelCouponBtn');
-    if (cancelCouponBtn) {
-        cancelCouponBtn.classList.add('hidden');
-    }
+    codeInput.readOnly = false;
+    submitCouponBtn.textContent = 'Agregar Cupón';
+    cancelCouponBtn.classList.add('hidden');
 }
 
 // Hacer funciones globales para los botones onclick
@@ -685,15 +648,13 @@ window.editCoupon = editCoupon;
 window.toggleCouponStatus = toggleCouponStatus;
 window.deleteCoupon = deleteCoupon;
 
-// --- FUNCIÓN ACTUALIZADA: Event listeners para pedidos con eliminación ---
 function reconnectOrderEventListeners() {
-    // Event listeners para cambio de estado
     document.querySelectorAll('.status-select').forEach(select => {
         select.addEventListener('change', async (e) => {
             const orderId = e.target.dataset.orderId;
             const newStatus = e.target.value;
             try {
-                await update(ref(db, `/artifacts/${appId}/public/orders/${orderId}`), {
+                await update(ref(db, `/artifacts/${appId}/public/orders/${orderId}`), { 
                     status: newStatus,
                     lastUpdated: Date.now()
                 });
@@ -705,47 +666,39 @@ function reconnectOrderEventListeners() {
         });
     });
 
-    // NEW: Event listeners para ver detalles del pedido
     document.querySelectorAll('.view-order-btn').forEach(btn => {
         btn.addEventListener('click', (e) => {
             const orderId = e.target.dataset.orderId;
-            // Abrir en nueva ventana la página de detalles del pedido
             window.open(`order-preview.html?id=${orderId}`, '_blank');
         });
     });
 
-    // NEW: Event listeners para eliminar pedidos
     document.querySelectorAll('.delete-order-btn').forEach(btn => {
         btn.addEventListener('click', async (e) => {
             const orderId = e.target.dataset.orderId;
             const order = orders.find(o => o.id === orderId);
-
+            
             if (!order) {
                 showMessage('Error', 'No se encontró el pedido');
                 return;
             }
 
-            // Confirmación doble para evitar eliminaciones accidentales
             const confirmMessage = `¿Estás seguro de que quieres ELIMINAR PERMANENTEMENTE el pedido #${order.orderNumber}?
-
 Cliente: ${order.customerName || 'Cliente'}
 Total: ${order.total.toFixed(2)}
 Fecha: ${new Date(order.timestamp).toLocaleDateString('es-ES')}
-
 ⚠️ ESTA ACCIÓN NO SE PUEDE DESHACER ⚠️`;
 
             if (confirm(confirmMessage)) {
-                // Segunda confirmación
                 if (confirm('⚠️ CONFIRMACIÓN FINAL: ¿Realmente quieres eliminar este pedido? Esta acción es irreversible.')) {
                     try {
                         await remove(ref(db, `/artifacts/${appId}/public/orders/${orderId}`));
                         showMessage('Pedido Eliminado', `El pedido #${order.orderNumber} ha sido eliminado permanentemente.`);
-
-                        // Opcional: También eliminar de la lista local para actualización inmediata
+                        
                         const orderIndex = orders.findIndex(o => o.id === orderId);
                         if (orderIndex > -1) {
                             orders.splice(orderIndex, 1);
-                            renderOrdersList(); // Re-renderizar la lista
+                            renderOrdersList();
                         }
                     } catch (error) {
                         console.error('Error al eliminar pedido:', error);
@@ -769,7 +722,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     if (searchInput) searchInput.addEventListener('input', () => renderProducts(products.filter(p => p.name.toLowerCase().includes(searchInput.value.toLowerCase()))));
-
+    
     if (openCartBtn) openCartBtn.addEventListener('click', () => cartPanel.classList.add('active'));
     document.getElementById('closeCartBtn')?.addEventListener('click', () => cartPanel.classList.remove('active'));
 
@@ -800,7 +753,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (printOrderBtn) printOrderBtn.addEventListener('click', () => {
         if (Object.keys(cart).length === 0) return showMessage('Carrito Vacío', 'Añade artículos para continuar.');
-
+        
         const total = Object.entries(cart).reduce((sum, [id, qty]) => {
             const product = products.find(p => p.id === id);
             if (product) {
@@ -819,11 +772,10 @@ document.addEventListener('DOMContentLoaded', () => {
         window.location.href = `order-preview.html?data=${encodeURIComponent(JSON.stringify(orderPreviewData))}`;
     });
 
-    // Inicializar elementos de cupones
     couponForm = document.getElementById('couponForm');
     submitCouponBtn = document.getElementById('submitCouponBtn');
     cancelCouponBtn = document.getElementById('cancelCouponBtn');
-
+    
     if (couponForm) {
         couponForm.addEventListener('submit', async (e) => {
             e.preventDefault();
@@ -834,7 +786,6 @@ document.addEventListener('DOMContentLoaded', () => {
         cancelCouponBtn.addEventListener('click', resetCouponForm);
     }
 
-    // Convertir código a mayúsculas automáticamente
     const couponCodeInput = document.getElementById('couponCode');
     if (couponCodeInput) {
         couponCodeInput.addEventListener('input', function(e) {
@@ -874,7 +825,7 @@ async function handleProductFormSubmit(e) {
         price: parseFloat(document.getElementById('productPrice').value),
         imageUrl: document.getElementById('productImage').value,
         timestamp: Date.now(),
-        offerPrice: offerPriceValue ? parseFloat(offerPriceValue) : null
+        offerPrice: offerPriceValue ? parseFloat(offerPriceValue) : null 
     };
     const id = productIdInput.value;
     const dbRef = id ? ref(db, `/artifacts/${appId}/public/products/${id}`) : push(ref(db, `/artifacts/${appId}/public/products`));
@@ -894,50 +845,29 @@ function setupAdminTabs() {
     productsTab = document.getElementById('productsTab');
     ordersTab = document.getElementById('ordersTab');
     couponsTab = document.getElementById('couponsTab');
+
     productsContent = document.getElementById('productsContent');
     ordersContent = document.getElementById('ordersContent');
     couponsContent = document.getElementById('couponsContent');
-
+    
     if (!ordersTab || !productsTab || !couponsTab) return;
-
+    
     const setActiveTab = (activeTab) => {
         [productsTab, ordersTab, couponsTab].forEach(tab => {
             tab.classList.toggle('border-yellow-500', tab === activeTab);
             tab.classList.toggle('font-semibold', tab === activeTab);
             tab.classList.toggle('text-gray-800', tab === activeTab);
             tab.classList.toggle('text-gray-500', tab !== activeTab);
-            tab.classList.toggle('hover:text-gray-800', tab !== activeTab);
-            tab.classList.toggle('hover:text-gray-500', tab === activeTab);
         });
         productsContent.classList.toggle('hidden', activeTab !== productsTab);
         ordersContent.classList.toggle('hidden', activeTab !== ordersTab);
         couponsContent.classList.toggle('hidden', activeTab !== couponsTab);
     };
+    
+    // NEW: Activar la pestaña de productos por defecto
+    setActiveTab(productsTab);
+
     productsTab.addEventListener('click', () => setActiveTab(productsTab));
     ordersTab.addEventListener('click', () => setActiveTab(ordersTab));
     couponsTab.addEventListener('click', () => setActiveTab(couponsTab));
-    setActiveTab(productsTab);
-}
-
-function setupCouponListeners() {
-    couponForm = document.getElementById('couponForm');
-    submitCouponBtn = document.getElementById('submitCouponBtn');
-    cancelCouponBtn = document.getElementById('cancelCouponBtn');
-    
-    if (couponForm) {
-        couponForm.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            await saveCoupon();
-        });
-    }
-    if(cancelCouponBtn) {
-        cancelCouponBtn.addEventListener('click', resetCouponForm);
-    }
-
-    const couponCodeInput = document.getElementById('couponCode');
-    if (couponCodeInput) {
-        couponCodeInput.addEventListener('input', function(e) {
-            e.target.value = e.target.value.toUpperCase();
-        });
-    }
 }
