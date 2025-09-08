@@ -102,7 +102,7 @@
                         <span class="text-gray-800 font-semibold">$${subtotal.toFixed(2)}</span>
                     </div>
                     <div id="discountRow" class="hidden justify-between items-center text-md text-green-600">
-                        <span>Descuento:</span>
+                        <span >Descuento:</span>
                         <span id="discountValue" class="font-semibold"></span>
                     </div>
                     <div class="flex justify-between items-center text-xl">
@@ -123,53 +123,32 @@
                 return;
             }
 
-            try {
-                const couponRef = ref(db, `/artifacts/${appId}/public/coupons/${code}`);
-                const snapshot = await get(couponRef);
+            const couponRef = ref(db, `/artifacts/${appId}/public/coupons/${code}`);
+            const snapshot = await get(couponRef);
 
-                if (snapshot.exists()) {
-                    const coupon = snapshot.val();
-                    
-                    // Validar que el cupón esté activo y tenga usos disponibles
-                    if (!coupon.isActive || (coupon.usesRemaining !== undefined && coupon.usesRemaining <= 0)) {
-                        discountAmount = 0;
-                        finalTotal = subtotal;
-                        appliedCoupon = null;
-                        messageDiv.textContent = 'El código del cupón ha sido desactivado o no tiene usos disponibles.';
-                        messageDiv.className = 'text-sm mt-2 text-center text-red-600';
-                        updateTotalsUI();
-                        return;
-                    }
-
-                    // Aplicar el descuento
-                    if (coupon.type === 'percentage') {
-                        discountAmount = subtotal * (coupon.value / 100);
-                    } else if (coupon.type === 'fixed') {
-                        discountAmount = coupon.value;
-                    }
-                    
-                    // Asegurarse de que el descuento no sea mayor al total
-                    discountAmount = Math.min(discountAmount, subtotal);
-                    finalTotal = subtotal - discountAmount;
-                    appliedCoupon = { code, ...coupon };
-
-                    // Mostrar mensaje con usos restantes
-                    const usesText = coupon.usesRemaining !== undefined ? coupon.usesRemaining : '∞';
-                    messageDiv.textContent = `¡Cupón "${code}" aplicado con éxito! Usos restantes: ${usesText}`;
-                    messageDiv.className = 'text-sm mt-2 text-center text-green-600';
-                    updateTotalsUI();
-                } else {
-                    discountAmount = 0;
-                    finalTotal = subtotal;
-                    appliedCoupon = null;
-                    messageDiv.textContent = 'El código del cupón no es válido.';
-                    messageDiv.className = 'text-sm mt-2 text-center text-red-600';
-                    updateTotalsUI();
+            if (snapshot.exists() && snapshot.val().isActive) {
+                const coupon = snapshot.val();
+                if (coupon.type === 'percentage') {
+                    discountAmount = subtotal * (coupon.value / 100);
+                } else if (coupon.type === 'fixed') {
+                    discountAmount = coupon.value;
                 }
-            } catch (error) {
-                console.error('Error al aplicar cupón:', error);
-                messageDiv.textContent = 'Error al validar el cupón. Inténtalo de nuevo.';
+                
+                // Asegurarse de que el descuento no sea mayor al total
+                discountAmount = Math.min(discountAmount, subtotal);
+                finalTotal = subtotal - discountAmount;
+                appliedCoupon = { code, ...coupon };
+
+                messageDiv.textContent = `¡Cupón "${code}" aplicado con éxito!`;
+                messageDiv.className = 'text-sm mt-2 text-center text-green-600';
+                updateTotalsUI();
+            } else {
+                discountAmount = 0;
+                finalTotal = subtotal;
+                appliedCoupon = null;
+                messageDiv.textContent = 'El código del cupón no es válido o ha expirado.';
                 messageDiv.className = 'text-sm mt-2 text-center text-red-600';
+                updateTotalsUI();
             }
         }
 
@@ -208,25 +187,13 @@
             
             await set(ref(db, `/artifacts/${appId}/public/orders/${orderData.orderId}`), completeOrderData);
 
-            // Actualizar los usos del cupón si se aplicó uno
-            if (appliedCoupon) {
-                const couponRef = ref(db, `/artifacts/${appId}/public/coupons/${appliedCoupon.code}`);
-                const newUsesRemaining = (appliedCoupon.usesRemaining || 1) - 1;
-                const updatedCoupon = {
-                    ...appliedCoupon,
-                    usesRemaining: newUsesRemaining,
-                    isActive: newUsesRemaining > 0
-                };
-                await set(couponRef, updatedCoupon);
-            }
-
             let msg = `¡Hola ${customerName}! 👋\n\n✅ Tu pedido en *El cielo en tus manos* ha sido registrado.\n✨ *Número de pedido:* ${orderData.orderNumber}\n\n`;
             if (discountAmount > 0) {
                 msg += `Subtotal: $${subtotal.toFixed(2)}\n`;
                 msg += `Descuento: -$${discountAmount.toFixed(2)}\n`;
             }
             msg += `💰 *Total a pagar:* $${finalTotal.toFixed(2)}\n\n`;
-            msg += `📍 *Sigue el estado de tu pedido aquí:*\n${window.location.origin}/order-status.html\n\n¡Gracias por tu compra! 🙏`;
+            msg += `🔍 *Sigue el estado de tu pedido aquí:*\n${window.location.origin}/order-status.html\n\n¡Gracias por tu compra! 🙏`;
 
             window.open(`https://wa.me/52${customerPhone}?text=${encodeURIComponent(msg)}`, '_blank');
             
