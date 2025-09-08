@@ -68,12 +68,19 @@
 
                 const priceToUse = (product.offerPrice && product.offerPrice < product.price) ? product.offerPrice : product.price;
                 
+                // Verificar si este producto tiene descuento aplicado
+                let hasSpecificDiscount = false;
+                if (appliedCoupon && appliedCoupon.applicationType === 'specific' && appliedCoupon.applicableProducts) {
+                    hasSpecificDiscount = appliedCoupon.applicableProducts.includes(id);
+                }
+                
                 return `
-                    <div class="flex items-center bg-gray-50 p-4 rounded-xl gap-4 border border-gray-200">
+                    <div class="flex items-center bg-gray-50 p-4 rounded-xl gap-4 border border-gray-200 ${hasSpecificDiscount ? 'ring-2 ring-green-400' : ''}">
                         <img src="${product.imageUrl}" alt="${product.name}" class="w-20 h-20 object-cover rounded-lg shadow-sm">
                         <div class="flex-grow">
                             <h4 class="text-gray-800 font-semibold">${product.name}</h4>
                             <span class="text-gray-600 text-sm">Cantidad: ${qty}</span>
+                            ${hasSpecificDiscount ? '<span class="text-green-600 text-xs font-medium">✅ Descuento aplicado</span>' : ''}
                         </div>
                         <p class="text-yellow-700 font-bold text-lg">$${(priceToUse * qty).toFixed(2)}</p>
                     </div>`;
@@ -102,7 +109,7 @@
                         <span class="text-gray-800 font-semibold">$${subtotal.toFixed(2)}</span>
                     </div>
                     <div id="discountRow" class="hidden justify-between items-center text-md text-green-600">
-                        <span >Descuento:</span>
+                        <span>Descuento:</span>
                         <span id="discountValue" class="font-semibold"></span>
                     </div>
                     <div class="flex justify-between items-center text-xl">
@@ -128,20 +135,84 @@
 
             if (snapshot.exists() && snapshot.val().isActive) {
                 const coupon = snapshot.val();
-                if (coupon.type === 'percentage') {
-                    discountAmount = subtotal * (coupon.value / 100);
-                } else if (coupon.type === 'fixed') {
-                    discountAmount = coupon.value;
+                let calculatedDiscount = 0;
+                let applicableItems = [];
+                
+                if (coupon.applicationType === 'specific' && coupon.applicableProducts) {
+                    // Aplicar descuento solo a productos específicos
+                    const productMap = products.reduce((acc, p) => ({ ...acc, [p.id]: p }), {});
+                    
+                    for (const [productId, quantity] of Object.entries(orderData.cart)) {
+                        if (coupon.applicableProducts.includes(productId)) {
+                            const product = productMap[productId];
+                            if (product) {
+                                const priceToUse = (product.offerPrice && product.offerPrice < product.price) 
+                                    ? product.offerPrice : product.price;
+                                const itemSubtotal = priceToUse * quantity;
+                                
+                                if (coupon.type === 'percentage') {
+                                    calculatedDiscount += itemSubtotal * (coupon.value / 100);
+                                } else if (coupon.type === 'fixed') {
+                                    // Para descuento fijo en productos específicos, distribuir proporcionalmente
+                                    const totalApplicableValue = Object.entries(orderData.cart)
+                                        .filter(([id]) => coupon.applicableProducts.includes(id))
+                                        .reduce((sum, [id, qty]) => {
+                                            const prod = productMap[id];
+                                            if (prod) {
+                                                const price = (prod.offerPrice && prod.offerPrice < prod.price) 
+                                                    ? prod.offerPrice : prod.price;
+                                                return sum + (price * qty);
+                                            }
+                                            return sum;
+                                        }, 0);
+                                    
+                                    if (totalApplicableValue > 0) {
+                                        const proportion = itemSubtotal / totalApplicableValue;
+                                        calculatedDiscount += Math.min(coupon.value * proportion, itemSubtotal);
+                                    }
+                                }
+                                
+                                applicableItems.push(product.name);
+                            }
+                        }
+                    }
+                    
+                    if (calculatedDiscount === 0) {
+                        discountAmount = 0;
+                        finalTotal = subtotal;
+                        appliedCoupon = null;
+                        messageDiv.textContent = 'Este cupón no se puede aplicar a los productos en tu carrito.';
+                        messageDiv.className = 'text-sm mt-2 text-center text-red-600';
+                        updateTotalsUI();
+                        return;
+                    }
+                    
+                } else {
+                    // Aplicar a todo el carrito (comportamiento original)
+                    if (coupon.type === 'percentage') {
+                        calculatedDiscount = subtotal * (couton.value / 100);
+                    } else if (coupon.type === 'fixed') {
+                        calculatedDiscount = coupon.value;
+                    }
                 }
                 
                 // Asegurarse de que el descuento no sea mayor al total
-                discountAmount = Math.min(discountAmount, subtotal);
+                discountAmount = Math.min(calculatedDiscount, subtotal);
                 finalTotal = subtotal - discountAmount;
-                appliedCoupon = { code, ...coupon };
+                appliedCoupon = { code, ...coupon, applicableItems };
 
-                messageDiv.textContent = `¡Cupón "${code}" aplicado con éxito!`;
+                let successMessage = `¡Cupón "${code}" aplicado con éxito!`;
+                if (coupon.applicationType === 'specific' && applicableItems.length > 0) {
+                    successMessage += ` Aplicado a: ${applicableItems.join(', ')}`;
+                }
+
+                messageDiv.textContent = successMessage;
                 messageDiv.className = 'text-sm mt-2 text-center text-green-600';
                 updateTotalsUI();
+                
+                // Actualizar la visualización para mostrar productos con descuento
+                updateProductsWithDiscountInfo(coupon);
+                
             } else {
                 discountAmount = 0;
                 finalTotal = subtotal;
@@ -149,7 +220,40 @@
                 messageDiv.textContent = 'El código del cupón no es válido o ha expirado.';
                 messageDiv.className = 'text-sm mt-2 text-center text-red-600';
                 updateTotalsUI();
+                clearProductDiscountInfo();
             }
+        }
+
+        // Nueva función para mostrar qué productos tienen descuento aplicado
+        function updateProductsWithDiscountInfo(coupon) {
+            if (coupon.applicationType === 'specific' && coupon.applicableProducts) {
+                // Agregar indicadores visuales a los productos con descuento
+                const productItems = document.querySelectorAll('.product-item');
+                productItems.forEach(item => {
+                    const productId = Object.keys(orderData.cart).find(id => {
+                        const product = products.find(p => p.id === id);
+                        return product && item.textContent.includes(product.name);
+                    });
+                    
+                    if (productId && coupon.applicableProducts.includes(productId)) {
+                        // Agregar indicador de descuento al producto
+                        if (!item.querySelector('.discount-indicator')) {
+                            const discountBadge = document.createElement('span');
+                            discountBadge.className = 'discount-indicator absolute top-2 right-2 bg-green-500 text-white text-xs px-2 py-1 rounded-full';
+                            discountBadge.textContent = '🎟️ Descuento aplicado';
+                            item.style.position = 'relative';
+                            item.appendChild(discountBadge);
+                        }
+                    }
+                });
+            }
+        }
+
+        // Función para limpiar los indicadores de descuento
+        function clearProductDiscountInfo() {
+            document.querySelectorAll('.discount-indicator').forEach(indicator => {
+                indicator.remove();
+            });
         }
 
         function updateTotalsUI() {

@@ -368,6 +368,123 @@ function renderFilteredOrdersList(filteredOrders, searchTerm) {
     reconnectOrderEventListeners();
 }
 
+// --- FUNCIONES ACTUALIZADAS PARA CUPONES POR PRODUCTO ---
+
+// Modificar la función saveCoupon para incluir productos específicos
+async function saveCoupon() {
+    const code = document.getElementById('couponCode').value.trim().toUpperCase();
+    const type = document.getElementById('couponType').value;
+    const value = parseFloat(document.getElementById('couponValue').value);
+    const usesInput = document.getElementById('couponUses').value.trim();
+    const applicationType = document.getElementById('couponApplicationType').value;
+    
+    if (!code || !type || !value || value <= 0) {
+        showMessage('Error', 'Por favor completa todos los campos correctamente.');
+        return;
+    }
+
+    // Validaciones específicas
+    if (type === 'percentage' && value > 100) {
+        showMessage('Error', 'El porcentaje no puede ser mayor a 100%.');
+        return;
+    }
+
+    const couponData = {
+        type: type,
+        value: value,
+        isActive: true,
+        applicationType: applicationType,
+        createdAt: Date.now(),
+        updatedAt: Date.now()
+    };
+
+    // Si es para productos específicos, obtener los productos seleccionados
+    if (applicationType === 'specific') {
+        const selectedProducts = Array.from(document.querySelectorAll('input[name="selectedProducts"]:checked'))
+            .map(checkbox => checkbox.value);
+        
+        if (selectedProducts.length === 0) {
+            showMessage('Error', 'Debes seleccionar al menos un producto para cupones específicos.');
+            return;
+        }
+        
+        couponData.applicableProducts = selectedProducts;
+    }
+
+    // Solo agregar usesRemaining si se especificó un número
+    if (usesInput && parseInt(usesInput) > 0) {
+        couponData.usesRemaining = parseInt(usesInput);
+    }
+
+    try {
+        await set(ref(db, `/artifacts/${appId}/public/coupons/${code}`), couponData);
+        const isUpdating = document.getElementById('couponCode').readOnly;
+        showMessage('Éxito', `Cupón "${code}" ${isUpdating ? 'actualizado' : 'creado'} exitosamente.`);
+        resetCouponForm();
+    } catch (error) {
+        console.error('Error al guardar cupón:', error);
+        showMessage('Error', 'Ocurrió un error al guardar el cupón.');
+    }
+}
+
+// Función para mostrar/ocultar la selección de productos
+function toggleProductSelection() {
+    const applicationType = document.getElementById('couponApplicationType').value;
+    const productSelectionDiv = document.getElementById('productSelection');
+    
+    if (applicationType === 'specific') {
+        productSelectionDiv.classList.remove('hidden');
+        renderProductSelection();
+    } else {
+        productSelectionDiv.classList.add('hidden');
+    }
+}
+
+// Función para renderizar la selección de productos
+function renderProductSelection() {
+    const productSelectionDiv = document.getElementById('productSelection');
+    if (!productSelectionDiv || products.length === 0) return;
+
+    const productCheckboxes = products.map(product => `
+        <label class="flex items-center p-2 bg-gray-50 rounded-lg hover:bg-gray-100 cursor-pointer">
+            <input type="checkbox" name="selectedProducts" value="${product.id}" class="mr-3 h-4 w-4 text-yellow-600 focus:ring-yellow-500 border-gray-300 rounded">
+            <img src="${product.imageUrl}" alt="${product.name}" class="w-10 h-10 object-cover rounded-md mr-3">
+            <div class="flex-grow">
+                <p class="text-sm font-medium text-gray-900">${product.name}</p>
+                <p class="text-xs text-gray-500">$${product.price.toFixed(2)}</p>
+            </div>
+        </label>
+    `).join('');
+
+    productSelectionDiv.innerHTML = `
+        <div class="max-h-60 overflow-y-auto space-y-2">
+            ${productCheckboxes}
+        </div>
+        <div class="mt-3 flex gap-2">
+            <button type="button" onclick="selectAllProducts()" class="text-xs bg-blue-500 text-white px-2 py-1 rounded hover:bg-blue-600">
+                Seleccionar Todo
+            </button>
+            <button type="button" onclick="clearAllProducts()" class="text-xs bg-gray-500 text-white px-2 py-1 rounded hover:bg-gray-600">
+                Limpiar
+            </button>
+        </div>
+    `;
+}
+
+// Funciones auxiliares para selección de productos
+function selectAllProducts() {
+    document.querySelectorAll('input[name="selectedProducts"]').forEach(checkbox => {
+        checkbox.checked = true;
+    });
+}
+
+function clearAllProducts() {
+    document.querySelectorAll('input[name="selectedProducts"]').forEach(checkbox => {
+        checkbox.checked = false;
+    });
+}
+
+// Actualizar la función renderCouponsTable para mostrar información de productos específicos
 function renderCouponsTable() {
     couponsTableContainer = document.getElementById('couponsTableContainer');
     if (!couponsTableContainer) return;
@@ -389,13 +506,23 @@ function renderCouponsTable() {
                         <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Código</th>
                         <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Tipo</th>
                         <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Valor</th>
+                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Aplicación</th>
                         <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Usos</th>
                         <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Estado</th>
                         <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Acciones</th>
                     </tr>
                 </thead>
                 <tbody class="divide-y divide-gray-200">
-                    ${coupons.map(coupon => `
+                    ${coupons.map(coupon => {
+                        let applicationInfo = '';
+                        if (coupon.applicationType === 'all') {
+                            applicationInfo = '<span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">Todo el carrito</span>';
+                        } else if (coupon.applicationType === 'specific' && coupon.applicableProducts) {
+                            const productCount = coupon.applicableProducts.length;
+                            applicationInfo = `<span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-purple-100 text-purple-800">${productCount} producto(s)</span>`;
+                        }
+
+                        return `
                         <tr class="hover:bg-gray-50">
                             <td class="px-4 py-3 font-mono font-bold text-gray-900">${coupon.code}</td>
                             <td class="px-4 py-3 text-gray-700">
@@ -406,6 +533,7 @@ function renderCouponsTable() {
                             <td class="px-4 py-3 font-semibold text-gray-900">
                                 ${coupon.value}${coupon.type === 'percentage' ? '%' : '$'}
                             </td>
+                            <td class="px-4 py-3">${applicationInfo}</td>
                             <td class="px-4 py-3 text-gray-700">
                                 <span class="font-semibold ${coupon.usesRemaining === 0 ? 'text-red-600' : 'text-gray-900'}">
                                     ${coupon.usesRemaining !== undefined ? coupon.usesRemaining : '∞'}
@@ -418,6 +546,9 @@ function renderCouponsTable() {
                             </td>
                             <td class="px-4 py-3">
                                 <div class="flex space-x-2">
+                                    <button onclick="viewCouponDetails('${coupon.code}')" class="text-purple-600 hover:text-purple-800 text-sm font-medium">
+                                        Ver
+                                    </button>
                                     <button onclick="editCoupon('${coupon.code}')" class="text-blue-600 hover:text-blue-800 text-sm font-medium">
                                         Editar
                                     </button>
@@ -430,7 +561,8 @@ function renderCouponsTable() {
                                 </div>
                             </td>
                         </tr>
-                    `).join('')}
+                        `;
+                    }).join('')}
                 </tbody>
             </table>
         </div>
@@ -438,6 +570,239 @@ function renderCouponsTable() {
     
     couponsTableContainer.innerHTML = tableHtml;
 }
+
+// Nueva función para ver detalles del cupón
+async function viewCouponDetails(code) {
+    try {
+        const couponRef = ref(db, `/artifacts/${appId}/public/coupons/${code}`);
+        const snapshot = await get(couponRef);
+        
+        if (snapshot.exists()) {
+            const coupon = snapshot.val();
+            let detailsHtml = `
+                <h3 class="text-xl font-bold text-gray-800 mb-4">Detalles del Cupón: ${code}</h3>
+                <div class="space-y-3">
+                    <div><strong>Tipo:</strong> ${coupon.type === 'percentage' ? 'Porcentaje' : 'Monto Fijo'}</div>
+                    <div><strong>Valor:</strong> ${coupon.value}${coupon.type === 'percentage' ? '%' : '$'}</div>
+                    <div><strong>Usos restantes:</strong> ${coupon.usesRemaining !== undefined ? coupon.usesRemaining : 'Ilimitado'}</div>
+                    <div><strong>Estado:</strong> ${coupon.isActive ? 'Activo' : 'Inactivo'}</div>
+                    <div><strong>Creado:</strong> ${new Date(coupon.createdAt).toLocaleString('es-ES')}</div>
+            `;
+
+            if (coupon.applicationType === 'specific' && coupon.applicableProducts) {
+                const applicableProductNames = coupon.applicableProducts
+                    .map(productId => {
+                        const product = products.find(p => p.id === productId);
+                        return product ? product.name : `ID: ${productId}`;
+                    });
+                
+                detailsHtml += `
+                    <div><strong>Aplicable a productos:</strong></div>
+                    <ul class="list-disc list-inside ml-4 space-y-1">
+                        ${applicableProductNames.map(name => `<li class="text-sm text-gray-600">${name}</li>`).join('')}
+                    </ul>
+                `;
+            } else {
+                detailsHtml += `<div><strong>Aplicación:</strong> Todo el carrito</div>`;
+            }
+
+            detailsHtml += `</div>`;
+
+            // Mostrar en el modal de mensajes
+            document.getElementById('messageTitle').innerHTML = '📋 Detalles del Cupón';
+            document.getElementById('messageText').innerHTML = detailsHtml;
+            messageBox.style.display = 'flex';
+        }
+    } catch (error) {
+        console.error('Error al cargar detalles del cupón:', error);
+        showMessage('Error', 'No se pudieron cargar los detalles del cupón.');
+    }
+}
+
+// Actualizar función editCoupon para manejar productos específicos
+async function editCoupon(code) {
+    try {
+        const couponRef = ref(db, `/artifacts/${appId}/public/coupons/${code}`);
+        const snapshot = await get(couponRef);
+        
+        if (snapshot.exists()) {
+            const coupon = snapshot.val();
+            
+            // Llenar el formulario con los datos del cupón
+            document.getElementById('couponCode').value = code;
+            document.getElementById('couponCode').readOnly = true;
+            document.getElementById('couponType').value = coupon.type;
+            document.getElementById('couponValue').value = coupon.value;
+            document.getElementById('couponApplicationType').value = coupon.applicationType || 'all';
+            
+            // Manejar la selección de productos específicos
+            toggleProductSelection();
+            
+            if (coupon.applicationType === 'specific' && coupon.applicableProducts) {
+                setTimeout(() => {
+                    coupon.applicableProducts.forEach(productId => {
+                        const checkbox = document.querySelector(`input[name="selectedProducts"][value="${productId}"]`);
+                        if (checkbox) checkbox.checked = true;
+                    });
+                }, 100);
+            }
+            
+            // Si existe campo de usos, llenarlo
+            const usesInput = document.getElementById('couponUses');
+            if (usesInput && coupon.usesRemaining !== undefined) {
+                usesInput.value = coupon.usesRemaining;
+            }
+            
+            // Cambiar botón a modo edición
+            submitCouponBtn.textContent = 'Actualizar Cupón';
+            cancelCouponBtn.classList.remove('hidden');
+            
+            // Hacer scroll al formulario
+            document.getElementById('couponForm').scrollIntoView({ behavior: 'smooth' });
+        }
+    } catch (error) {
+        console.error('Error al cargar cupón:', error);
+        showMessage('Error', 'No se pudo cargar el cupón para editar.');
+    }
+}
+
+// Función para aplicar cupón en order-preview (actualizada para productos específicos)
+async function applyCouponToOrder(couponCode, orderData) {
+    try {
+        const couponRef = ref(db, `/artifacts/${appId}/public/coupons/${couponCode.toUpperCase()}`);
+        const snapshot = await get(couponRef);
+
+        if (!snapshot.exists() || !snapshot.val().isActive) {
+            return { success: false, message: 'El código del cupón no es válido o ha expirado.' };
+        }
+
+        const coupon = snapshot.val();
+        let discountAmount = 0;
+        let applicableItems = [];
+
+        if (coupon.applicationType === 'specific' && coupon.applicableProducts) {
+            // Calcular descuento solo para productos específicos
+            for (const [productId, quantity] of Object.entries(orderData.cart)) {
+                if (coupon.applicableProducts.includes(productId)) {
+                    const product = products.find(p => p.id === productId);
+                    if (product) {
+                        const priceToUse = (product.offerPrice && product.offerPrice < product.price) 
+                            ? product.offerPrice : product.price;
+                        const itemSubtotal = priceToUse * quantity;
+                        
+                        if (coupon.type === 'percentage') {
+                            discountAmount += itemSubtotal * (coupon.value / 100);
+                        } else {
+                            // Para descuento fijo, aplicar proporcionalmente
+                            const totalApplicableValue = Object.entries(orderData.cart)
+                                .filter(([id]) => coupon.applicableProducts.includes(id))
+                                .reduce((sum, [id, qty]) => {
+                                    const prod = products.find(p => p.id === id);
+                                    if (prod) {
+                                        const price = (prod.offerPrice && prod.offerPrice < prod.price) 
+                                            ? prod.offerPrice : prod.price;
+                                        return sum + (price * qty);
+                                    }
+                                    return sum;
+                                }, 0);
+                            
+                            if (totalApplicableValue > 0) {
+                                discountAmount = Math.min(coupon.value, totalApplicableValue);
+                            }
+                        }
+                        
+                        applicableItems.push(product.name);
+                    }
+                }
+            }
+        } else {
+            // Aplicar a todo el carrito (comportamiento original)
+            const subtotal = orderData.subtotal || orderData.total;
+            if (coupon.type === 'percentage') {
+                discountAmount = subtotal * (coupon.value / 100);
+            } else {
+                discountAmount = coupon.value;
+            }
+            discountAmount = Math.min(discountAmount, subtotal);
+        }
+
+        if (discountAmount > 0) {
+            let successMessage = `¡Cupón "${couponCode}" aplicado con éxito!`;
+            if (coupon.applicationType === 'specific') {
+                successMessage += ` Descuento aplicado a: ${applicableItems.join(', ')}`;
+            }
+            
+            return { 
+                success: true, 
+                discountAmount, 
+                coupon, 
+                message: successMessage,
+                applicableItems 
+            };
+        } else {
+            return { 
+                success: false, 
+                message: 'Este cupón no se puede aplicar a los productos seleccionados.' 
+            };
+        }
+
+    } catch (error) {
+        console.error('Error al aplicar cupón:', error);
+        return { success: false, message: 'Error al verificar el cupón.' };
+    }
+}
+
+// Alternar estado del cupón (activo/inactivo)
+async function toggleCouponStatus(code, currentStatus) {
+    const newStatus = !currentStatus;
+    const action = newStatus ? 'activar' : 'desactivar';
+    
+    if (confirm(`¿Estás seguro de que quieres ${action} el cupón "${code}"?`)) {
+        try {
+            await update(ref(db, `/artifacts/${appId}/public/coupons/${code}`), {
+                isActive: newStatus,
+                updatedAt: Date.now()
+            });
+            showMessage('Éxito', `Cupón "${code}" ${newStatus ? 'activado' : 'desactivado'} exitosamente.`);
+        } catch (error) {
+            console.error('Error al cambiar estado del cupón:', error);
+            showMessage('Error', 'No se pudo cambiar el estado del cupón.');
+        }
+    }
+}
+
+// Eliminar cupón
+async function deleteCoupon(code) {
+    if (confirm(`¿Estás seguro de que quieres eliminar el cupón "${code}"?\n\nEsta acción no se puede deshacer.`)) {
+        try {
+            await remove(ref(db, `/artifacts/${appId}/public/coupons/${code}`));
+            showMessage('Éxito', `Cupón "${code}" eliminado exitosamente.`);
+        } catch (error) {
+            console.error('Error al eliminar cupón:', error);
+            showMessage('Error', 'No se pudo eliminar el cupón.');
+        }
+    }
+}
+
+// Resetear formulario de cupones
+function resetCouponForm() {
+    couponForm.reset();
+    const codeInput = document.getElementById('couponCode');
+    codeInput.readOnly = false;
+    submitCouponBtn.textContent = 'Agregar Cupón';
+    cancelCouponBtn.classList.add('hidden');
+    document.getElementById('productSelection').classList.add('hidden');
+}
+
+// Hacer funciones globales para los botones onclick
+window.toggleProductSelection = toggleProductSelection;
+window.selectAllProducts = selectAllProducts;
+window.clearAllProducts = clearAllProducts;
+window.viewCouponDetails = viewCouponDetails;
+window.editCoupon = editCoupon;
+window.toggleCouponStatus = toggleCouponStatus;
+window.deleteCoupon = deleteCoupon;
+window.applyCouponToOrder = applyCouponToOrder;
 
 // --- CARRITO ---
 function addToCart(productId) {
@@ -492,200 +857,6 @@ function showMessage(title, text) {
     messageBox.querySelector('#messageTitle').textContent = title;
     messageBox.querySelector('#messageText').textContent = text;
     messageBox.style.display = 'flex';
-}
-
-// --- FUNCIONES DE CUPONES ---
-async function saveCoupon() {
-    const code = document.getElementById('couponCode').value.trim().toUpperCase();
-    const type = document.getElementById('couponType').value;
-    const value = parseFloat(document.getElementById('couponValue').value);
-    const usesInput = document.getElementById('couponUses').value.trim();
-
-    if (!code || !type || !value || value <= 0) {
-        showMessage('Error', 'Por favor completa todos los campos correctamente.');
-        return;
-    }
-
-    // Validaciones específicas
-    if (type === 'percentage' && value > 100) {
-        showMessage('Error', 'El porcentaje no puede ser mayor a 100%.');
-        return;
-    }
-
-    const couponData = {
-        type: type,
-        value: value,
-        isActive: true,
-        createdAt: Date.now(),
-        updatedAt: Date.now()
-    };
-
-    // Solo agregar usesRemaining si se especificó un número
-    if (usesInput && parseInt(usesInput) > 0) {
-        couponData.usesRemaining = parseInt(usesInput);
-    }
-
-    try {
-        await set(ref(db, `/artifacts/${appId}/public/coupons/${code}`), couponData);
-        const isUpdating = document.getElementById('couponCode').readOnly;
-        showMessage('Éxito', `Cupón "${code}" ${isUpdating ? 'actualizado' : 'creado'} exitosamente.`);
-        resetCouponForm();
-    } catch (error) {
-        console.error('Error al guardar cupón:', error);
-        showMessage('Error', 'Ocurrió un error al guardar el cupón.');
-    }
-}
-
-// Editar cupón
-async function editCoupon(code) {
-    try {
-        const couponRef = ref(db, `/artifacts/${appId}/public/coupons/${code}`);
-        const snapshot = await get(couponRef);
-        
-        if (snapshot.exists()) {
-            const coupon = snapshot.val();
-            
-            // Llenar el formulario con los datos del cupón
-            document.getElementById('couponCode').value = code;
-            document.getElementById('couponCode').readOnly = true;
-            document.getElementById('couponType').value = coupon.type;
-            document.getElementById('couponValue').value = coupon.value;
-            
-            // Si existe campo de usos, llenarlo
-            const usesInput = document.getElementById('couponUses');
-            if (usesInput && coupon.usesRemaining !== undefined) {
-                usesInput.value = coupon.usesRemaining;
-            }
-            
-            // Cambiar botón a modo edición
-            submitCouponBtn.textContent = 'Actualizar Cupón';
-            cancelCouponBtn.classList.remove('hidden');
-            
-            // Hacer scroll al formulario
-            document.getElementById('couponForm').scrollIntoView({ behavior: 'smooth' });
-        }
-    } catch (error) {
-        console.error('Error al cargar cupón:', error);
-        showMessage('Error', 'No se pudo cargar el cupón para editar.');
-    }
-}
-
-// Alternar estado del cupón (activo/inactivo)
-async function toggleCouponStatus(code, currentStatus) {
-    const newStatus = !currentStatus;
-    const action = newStatus ? 'activar' : 'desactivar';
-    
-    if (confirm(`¿Estás seguro de que quieres ${action} el cupón "${code}"?`)) {
-        try {
-            await update(ref(db, `/artifacts/${appId}/public/coupons/${code}`), {
-                isActive: newStatus,
-                updatedAt: Date.now()
-            });
-            showMessage('Éxito', `Cupón "${code}" ${newStatus ? 'activado' : 'desactivado'} exitosamente.`);
-        } catch (error) {
-            console.error('Error al cambiar estado del cupón:', error);
-            showMessage('Error', 'No se pudo cambiar el estado del cupón.');
-        }
-    }
-}
-
-// Eliminar cupón
-async function deleteCoupon(code) {
-    if (confirm(`¿Estás seguro de que quieres eliminar el cupón "${code}"?\n\nEsta acción no se puede deshacer.`)) {
-        try {
-            await remove(ref(db, `/artifacts/${appId}/public/coupons/${code}`));
-            showMessage('Éxito', `Cupón "${code}" eliminado exitosamente.`);
-        } catch (error) {
-            console.error('Error al eliminar cupón:', error);
-            showMessage('Error', 'No se pudo eliminar el cupón.');
-        }
-    }
-}
-
-// Resetear formulario de cupones
-function resetCouponForm() {
-    couponForm.reset();
-    const codeInput = document.getElementById('couponCode');
-    codeInput.readOnly = false;
-    submitCouponBtn.textContent = 'Agregar Cupón';
-    cancelCouponBtn.classList.add('hidden');
-}
-
-// Hacer funciones globales para los botones onclick
-window.editCoupon = editCoupon;
-window.toggleCouponStatus = toggleCouponStatus;
-window.deleteCoupon = deleteCoupon;
-
-// --- FUNCIÓN ACTUALIZADA: Event listeners para pedidos con eliminación ---
-function reconnectOrderEventListeners() {
-    // Event listeners para cambio de estado
-    document.querySelectorAll('.status-select').forEach(select => {
-        select.addEventListener('change', async (e) => {
-            const orderId = e.target.dataset.orderId;
-            const newStatus = e.target.value;
-            try {
-                await update(ref(db, `/artifacts/${appId}/public/orders/${orderId}`), { 
-                    status: newStatus,
-                    lastUpdated: Date.now()
-                });
-                showMessage('Estado Actualizado', `El pedido ahora está: ${newStatus}`);
-            } catch (error) {
-                console.error('Error al actualizar estado:', error);
-                showMessage('Error', 'No se pudo actualizar el estado del pedido');
-            }
-        });
-    });
-
-    // NEW: Event listeners para ver detalles del pedido
-    document.querySelectorAll('.view-order-btn').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            const orderId = e.target.dataset.orderId;
-            // Abrir en nueva ventana la página de detalles del pedido
-            window.open(`order-preview.html?id=${orderId}`, '_blank');
-        });
-    });
-
-    // NEW: Event listeners para eliminar pedidos
-    document.querySelectorAll('.delete-order-btn').forEach(btn => {
-        btn.addEventListener('click', async (e) => {
-            const orderId = e.target.dataset.orderId;
-            const order = orders.find(o => o.id === orderId);
-            
-            if (!order) {
-                showMessage('Error', 'No se encontró el pedido');
-                return;
-            }
-
-            // Confirmación doble para evitar eliminaciones accidentales
-            const confirmMessage = `¿Estás seguro de que quieres ELIMINAR PERMANENTEMENTE el pedido #${order.orderNumber}?
-
-Cliente: ${order.customerName || 'Cliente'}
-Total: ${order.total.toFixed(2)}
-Fecha: ${new Date(order.timestamp).toLocaleDateString('es-ES')}
-
-⚠️ ESTA ACCIÓN NO SE PUEDE DESHACER ⚠️`;
-
-            if (confirm(confirmMessage)) {
-                // Segunda confirmación
-                if (confirm('⚠️ CONFIRMACIÓN FINAL: ¿Realmente quieres eliminar este pedido? Esta acción es irreversible.')) {
-                    try {
-                        await remove(ref(db, `/artifacts/${appId}/public/orders/${orderId}`));
-                        showMessage('Pedido Eliminado', `El pedido #${order.orderNumber} ha sido eliminado permanentemente.`);
-                        
-                        // Opcional: También eliminar de la lista local para actualización inmediata
-                        const orderIndex = orders.findIndex(o => o.id === orderId);
-                        if (orderIndex > -1) {
-                            orders.splice(orderIndex, 1);
-                            renderOrdersList(); // Re-renderizar la lista
-                        }
-                    } catch (error) {
-                        console.error('Error al eliminar pedido:', error);
-                        showMessage('Error', 'No se pudo eliminar el pedido. Inténtalo de nuevo.');
-                    }
-                }
-            }
-        });
-    });
 }
 
 // --- EVENT LISTENERS ---
@@ -846,4 +1017,76 @@ function setupAdminTabs() {
     productsTab.addEventListener('click', () => setActiveTab(productsTab));
     ordersTab.addEventListener('click', () => setActiveTab(ordersTab));
     couponsTab.addEventListener('click', () => setActiveTab(couponsTab));
+}
+
+// --- FUNCIÓN ACTUALIZADA: Event listeners para pedidos con eliminación ---
+function reconnectOrderEventListeners() {
+    // Event listeners para cambio de estado
+    document.querySelectorAll('.status-select').forEach(select => {
+        select.addEventListener('change', async (e) => {
+            const orderId = e.target.dataset.orderId;
+            const newStatus = e.target.value;
+            try {
+                await update(ref(db, `/artifacts/${appId}/public/orders/${orderId}`), { 
+                    status: newStatus,
+                    lastUpdated: Date.now()
+                });
+                showMessage('Estado Actualizado', `El pedido ahora está: ${newStatus}`);
+            } catch (error) {
+                console.error('Error al actualizar estado:', error);
+                showMessage('Error', 'No se pudo actualizar el estado del pedido');
+            }
+        });
+    });
+
+    // NEW: Event listeners para ver detalles del pedido
+    document.querySelectorAll('.view-order-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const orderId = e.target.dataset.orderId;
+            // Abrir en nueva ventana la página de detalles del pedido
+            window.open(`order-preview.html?id=${orderId}`, '_blank');
+        });
+    });
+
+    // NEW: Event listeners para eliminar pedidos
+    document.querySelectorAll('.delete-order-btn').forEach(btn => {
+        btn.addEventListener('click', async (e) => {
+            const orderId = e.target.dataset.orderId;
+            const order = orders.find(o => o.id === orderId);
+            
+            if (!order) {
+                showMessage('Error', 'No se encontró el pedido');
+                return;
+            }
+
+            // Confirmación doble para evitar eliminaciones accidentales
+            const confirmMessage = `¿Estás seguro de que quieres ELIMINAR PERMANENTEMENTE el pedido #${order.orderNumber}?
+
+Cliente: ${order.customerName || 'Cliente'}
+Total: ${order.total.toFixed(2)}
+Fecha: ${new Date(order.timestamp).toLocaleDateString('es-ES')}
+
+⚠️ ESTA ACCIÓN NO SE PUEDE DESHACER ⚠️`;
+
+            if (confirm(confirmMessage)) {
+                // Segunda confirmación
+                if (confirm('⚠️ CONFIRMACIÓN FINAL: ¿Realmente quieres eliminar este pedido? Esta acción es irreversible.')) {
+                    try {
+                        await remove(ref(db, `/artifacts/${appId}/public/orders/${orderId}`));
+                        showMessage('Pedido Eliminado', `El pedido #${order.orderNumber} ha sido eliminado permanentemente.`);
+                        
+                        // Opcional: También eliminar de la lista local para actualización inmediata
+                        const orderIndex = orders.findIndex(o => o.id === orderId);
+                        if (orderIndex > -1) {
+                            orders.splice(orderIndex, 1);
+                            renderOrdersList(); // Re-renderizar la lista
+                        }
+                    } catch (error) {
+                        console.error('Error al eliminar pedido:', error);
+                        showMessage('Error', 'No se pudo eliminar el pedido. Inténtalo de nuevo.');
+                    }
+                }
+            }
+        });
+    });
 }
