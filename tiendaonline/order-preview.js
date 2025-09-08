@@ -523,8 +523,8 @@ async function confirmOrder() {
                                 `✅ Tu pedido en *El cielo en tus manos* ha sido registrado.\n` +
                                 `📦 *Número de pedido:* ${orderData.orderNumber}\n` +
                                 `💰 *Total:* $${orderData.total.toFixed(2)}\n\n` +
-                                `🔍 *Sigue el estado de tu pedido aquí:*\n` +
-                                `${window.location.origin}/order-status.html?id=${orderData.orderId}\n\n` +
+                                `🔍 * Sigue el estado de tu pedido ingresando su numero aquí:*\n` +
+                                `https://laloperalta.netlify.app/tiendaonline/order-status\n\n` +
                                 `¡Gracias por tu compra! 🙏`;
                                 
         // Generar la URL de WhatsApp
