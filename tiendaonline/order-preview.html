@@ -307,8 +307,7 @@ window.confirmOrder = async function() {
         }
         msg += `\n💰 *Total a pagar:* $${finalTotal.toFixed(2)}\n\n`;
         // CAMBIO: Ahora el enlace usa el número de pedido en lugar del ID
-        msg += `📦 Puedes seguir el estado de tu pedido aquí:\n${window.location.origin}/order-status.html?number=${orderData.orderNumber}\n\n`;
-        msg += `🙏 Bendiciones`;
+msg += `📦 Puedes seguir el estado de tu pedido aquí:\n${window.location.origin}/tiendaonline/order-status.html?number=${orderData.orderNumber}\n\n`;        msg += `🙏 Bendiciones`;
 
         window.open(`https://wa.me/521${fixedPhoneNumber}?text=${encodeURIComponent(msg)}`, '_blank');
 
