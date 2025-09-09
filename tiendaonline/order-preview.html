@@ -306,7 +306,8 @@ window.confirmOrder = async function() {
             msg += `\n💲 Subtotal: $${subtotal.toFixed(2)}\n🎁 Descuento aplicado ("${appliedCoupon.code}"): -$${discountAmount.toFixed(2)}`;
         }
         msg += `\n💰 *Total a pagar:* $${finalTotal.toFixed(2)}\n\n`;
-        msg += `📦 Puedo seguir el estado de mi pedido aquí:\n${window.location.origin}/order-status.html\n\n`;
+        // Esta es la línea corregida que necesitas
+        msg += `📦 Puedes seguir el estado de tu pedido aquí:\n${window.location.origin}/order-status.html?id=${orderData.orderId}\n\n`;
         msg += `🙏 Bendiciones`;
 
         window.open(`https://wa.me/521${fixedPhoneNumber}?text=${encodeURIComponent(msg)}`, '_blank');
