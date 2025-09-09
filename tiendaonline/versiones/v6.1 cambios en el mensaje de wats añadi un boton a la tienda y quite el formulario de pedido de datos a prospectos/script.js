@@ -369,8 +369,6 @@ function renderFilteredOrdersList(filteredOrders, searchTerm) {
 }
 
 // --- FUNCIONES ACTUALIZADAS PARA CUPONES POR PRODUCTO ---
-
-// Modificar la función saveCoupon para incluir productos específicos
 async function saveCoupon() {
     const code = document.getElementById('couponCode').value.trim().toUpperCase();
     const type = document.getElementById('couponType').value;
@@ -395,7 +393,8 @@ async function saveCoupon() {
         isActive: true,
         applicationType: applicationType,
         createdAt: Date.now(),
-        updatedAt: Date.now()
+        updatedAt: Date.now(),
+        lastUsed: null // ← NUEVO CAMPO AGREGADO
     };
 
     // Si es para productos específicos, obtener los productos seleccionados
@@ -535,9 +534,10 @@ function renderCouponsTable() {
                             </td>
                             <td class="px-4 py-3">${applicationInfo}</td>
                             <td class="px-4 py-3 text-gray-700">
-                                <span class="font-semibold ${coupon.usesRemaining === 0 ? 'text-red-600' : 'text-gray-900'}">
-                                    ${coupon.usesRemaining !== undefined ? coupon.usesRemaining : '∞'}
+                                <span class="font-semibold ${coupon.usesRemaining === 0 ? 'text-red-600' : (coupon.usesRemaining !== undefined ? 'text-green-600' : 'text-gray-900')}">
+                                    ${coupon.usesRemaining !== undefined ? `${coupon.usesRemaining} restantes` : 'Ilimitado'}
                                 </span>
+                                ${coupon.lastUsed ? `<br><span class="text-xs text-gray-500">Último uso: ${new Date(coupon.lastUsed).toLocaleDateString()}</span>` : ''}
                             </td>
                             <td class="px-4 py-3">
                                 <span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${coupon.isActive ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}">
@@ -667,7 +667,8 @@ async function editCoupon(code) {
 }
 
 // Función para aplicar cupón en order-preview (actualizada para productos específicos)
-async function applyCouponToOrder(couponCode, orderData) {
+// --- FUNCIÓN PARA APLICAR CUPONES DESDE ORDER-PREVIEW ---
+async function applyCouponToOrder(couponCode, orderData, products) {
     try {
         const couponRef = ref(db, `/artifacts/${appId}/public/coupons/${couponCode.toUpperCase()}`);
         const snapshot = await get(couponRef);
@@ -677,14 +678,22 @@ async function applyCouponToOrder(couponCode, orderData) {
         }
 
         const coupon = snapshot.val();
+        
+        // Validar usos disponibles
+        if (coupon.usesRemaining !== undefined && coupon.usesRemaining <= 0) {
+            return { success: false, message: 'Este cupón ya no tiene usos disponibles.' };
+        }
+
         let discountAmount = 0;
         let applicableItems = [];
 
         if (coupon.applicationType === 'specific' && coupon.applicableProducts) {
             // Calcular descuento solo para productos específicos
+            const productMap = products.reduce((acc, p) => ({ ...acc, [p.id]: p }), {});
+            
             for (const [productId, quantity] of Object.entries(orderData.cart)) {
                 if (coupon.applicableProducts.includes(productId)) {
-                    const product = products.find(p => p.id === productId);
+                    const product = productMap[productId];
                     if (product) {
                         const priceToUse = (product.offerPrice && product.offerPrice < product.price) 
                             ? product.offerPrice : product.price;
@@ -707,7 +716,8 @@ async function applyCouponToOrder(couponCode, orderData) {
                                 }, 0);
                             
                             if (totalApplicableValue > 0) {
-                                discountAmount = Math.min(coupon.value, totalApplicableValue);
+                                const proportion = itemSubtotal / totalApplicableValue;
+                                discountAmount += Math.min(coupon.value * proportion, itemSubtotal);
                             }
                         }
                         
@@ -716,7 +726,7 @@ async function applyCouponToOrder(couponCode, orderData) {
                 }
             }
         } else {
-            // Aplicar a todo el carrito (comportamiento original)
+            // Aplicar a todo el carrito
             const subtotal = orderData.subtotal || orderData.total;
             if (coupon.type === 'percentage') {
                 discountAmount = subtotal * (coupon.value / 100);
@@ -727,17 +737,28 @@ async function applyCouponToOrder(couponCode, orderData) {
         }
 
         if (discountAmount > 0) {
+            // Decrementar usos si es limitado
+            if (coupon.usesRemaining !== undefined) {
+                await update(couponRef, {
+                    usesRemaining: coupon.usesRemaining - 1,
+                    updatedAt: Date.now(),
+                    lastUsed: Date.now()
+                });
+            }
+            
             let successMessage = `¡Cupón "${couponCode}" aplicado con éxito!`;
             if (coupon.applicationType === 'specific') {
                 successMessage += ` Descuento aplicado a: ${applicableItems.join(', ')}`;
+            }
+            if (coupon.usesRemaining !== undefined) {
+                successMessage += `\nUsos restantes: ${coupon.usesRemaining - 1}`;
             }
             
             return { 
                 success: true, 
                 discountAmount, 
-                coupon, 
-                message: successMessage,
-                applicableItems 
+                coupon: { ...coupon, applicableItems },
+                message: successMessage
             };
         } else {
             return { 
@@ -751,7 +772,6 @@ async function applyCouponToOrder(couponCode, orderData) {
         return { success: false, message: 'Error al verificar el cupón.' };
     }
 }
-
 // Alternar estado del cupón (activo/inactivo)
 async function toggleCouponStatus(code, currentStatus) {
     const newStatus = !currentStatus;
@@ -1090,3 +1110,25 @@ Fecha: ${new Date(order.timestamp).toLocaleDateString('es-ES')}
         });
     });
 }
+
+
+// --- FUNCIÓN PARA OBTENER DETALLES DEL CUPÓN ---
+async function getCouponDetails(couponCode) {
+    try {
+        const couponRef = ref(db, `/artifacts/${appId}/public/coupons/${couponCode.toUpperCase()}`);
+        const snapshot = await get(couponRef);
+        
+        if (snapshot.exists()) {
+            return { success: true, coupon: snapshot.val() };
+        } else {
+            return { success: false, message: 'Cupón no encontrado' };
+        }
+    } catch (error) {
+        console.error('Error al obtener detalles del cupón:', error);
+        return { success: false, message: 'Error al buscar el cupón' };
+    }
+}
+
+// --- HACER FUNCIONES GLOBALES PARA ORDER-PREVIEW ---
+window.applyCouponToOrder = applyCouponToOrder;
+window.getCouponDetails = getCouponDetails;
