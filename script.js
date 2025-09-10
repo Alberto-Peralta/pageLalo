@@ -4,10 +4,11 @@ function toggleMenu() {
     menu.classList.toggle('show'); // Agrega o elimina la clase 'show'
 }
 
-
-
-
-
+// --- NUEVA FUNCIÓN PARA LAS CARDS DESPLEGABLES ---
+function toggleCollapse(element) {
+    // Alterna la clase 'active' en la tarjeta que fue clickeada
+    element.classList.toggle('active');
+}
 
 // Copiar el número de cuenta
 function copyAccount() {

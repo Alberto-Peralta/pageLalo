@@ -52,7 +52,6 @@ body {
     color: #ecf0f1; /* Blanco humo */
 }
 
-
 .menu.show {
     display: flex;
 }
@@ -83,7 +82,6 @@ body {
     color: #3e2b00; /* Color más oscuro en el hover */
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3); /* Sombra más fuerte en hover */
 }
-
 
 /* Botón para desplegar menú */
 .menu-toggle {
@@ -118,8 +116,6 @@ body {
         transform: translateY(0);
     }
 }
-
-
 
 /* Hero section */
 .hero {
@@ -209,14 +205,6 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-
-
-
-
-
-
-
-
 #account-number {
     margin-top: 1rem;
     font-weight: bold;
@@ -230,11 +218,9 @@ body {
     height: 100%; /* Asegura que el enlace cubra la altura completa de la tarjeta */
 }
 
-/* Opcional: Puedes añadir un efecto al pasar el ratón por encima del enlace */
 .card-link:hover .card {
     box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Ejemplo: un poco de sombra */
 }
-
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
@@ -285,6 +271,7 @@ body {
         transform: translateY(0);
     }
 }
+
 /* Estilos generales para el footer */
 .footer {
     background-color: #d4a017; /* Mostaza claro */
@@ -390,4 +377,60 @@ body {
     .footer-bottom p {
         font-size: 0.8rem;
     }
+}
+/* --- ESTILOS PARA LAS CARDS DESPLEGABLES --- */
+
+/* Estilo para la tarjeta principal que se puede hacer clic */
+.collapsible-card {
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+/* Contenedor de los enlaces, oculto por defecto */
+.collapsible-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out; /* Animación un poco más lenta para acomodar las imágenes */
+    margin-top: 0;
+}
+
+/* Cuando la tarjeta está activa, muestra el contenido */
+.collapsible-card.active .collapsible-content {
+    max-height: 300px; /* Aumentamos la altura máxima para dar espacio a las imágenes */
+    margin-top: 1rem;
+}
+
+/* Estilo de los enlaces dentro del desplegable */
+.collapsible-link {
+    display: flex; /* <-- CLAVE: Para alinear imagen y texto */
+    align-items: center; /* <-- CLAVE: Para centrar verticalmente */
+    gap: 15px; /* Espacio entre la imagen y el texto */
+    background-color: #b8860b;
+    color: #ecf0f1;
+    padding: 0.6rem 1rem; /* Ajustamos el padding */
+    margin-bottom: 0.5rem;
+    border-radius: 8px; /* Un poco más redondeado */
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.collapsible-link:last-child {
+    margin-bottom: 0;
+}
+
+.collapsible-link:hover {
+    background-color: #daa520;
+    transform: scale(1.03);
+    color: #ecf0f1;
+}
+
+/* Estilo para la imagen miniatura dentro del enlace */
+.collapsible-link .link-image {
+    width: 80px;  /* Ancho fijo para la miniatura */
+    height: 50px; /* Altura fija para la miniatura */
+    object-fit: cover; /* Asegura que la imagen cubra el espacio sin deformarse */
+    border-radius: 5px; /* Bordes redondeados para la imagen */
+    flex-shrink: 0; /* Evita que la imagen se encoja */
 }

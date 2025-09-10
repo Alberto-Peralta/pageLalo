@@ -16,144 +16,122 @@
             <ul class="menu" id="menu">
                 <li><a href="./rosario/index.html">Rosario</a></li>
                 <li><a href="./coronilla/index.html">Coronilla de la Misericordia</a></li>
-
                 <li><a href="./triviaCristiana/index.html">¿Cristiano?</a></li>
                 <li><a href="./criptograma_biblico/index.html">Criptograma</a></li>
-
                 <li><a href="./biblia/index.html">Biblia</a></li>
                 <li><a href="https://www.misionerosdeguadalupe.org/">Misioneros</a></li>
                 <li><a href="#donar">Donar</a></li>
-
                 <li><a href="./intenciones/index.html">Intenciones</a></li>
-
                 <li><a href="./tiendaonline/index.html">Tienda</a></li>
-                
             </ul>
-
-            <ul class="menu" id="menu">
-    <li><a href="./rosario/index.html">Rosario</a></li>
-    <li><a href="./intenciones/index.html">Intenciones</a></li> </ul>
-
         </nav>
     </header>
 
-      <!-- Campaña temporal de padrinos de misioneros-->
-
-    <iframe id="iframe-campaña" 
+      <iframe id="iframe-campaña" 
         src="campañaPadrinosMisioneros/index.html" 
         style="width:100%; border:none;" 
         title="Campaña Padrinos Misioneros"></iframe>
-
-        <script>
+      <script>
         const iframe = document.getElementById('iframe-campaña');
         
         // Escuchar mensajes del iframe
         window.addEventListener('message', (event) => {
             if (event.data.height) {
-            iframe.style.height = event.data.height + 'px';
+                iframe.style.height = event.data.height + 'px';
             }
         });
-        </script>
-
-
-      <!-- Campaña temporal de padrinos de misioneros-->
-
-
-
-    <main>
+      </script>
+      <main>
         <section class="hero">
             <img src="./images/507c4aa7-b312-451d-9308-53c6a4ec5448.jpg" alt="Virgen de Guadalupe" class="hero-image">
             <h1>Bienvenido al espacio para acercarte a Dios</h1>
             <br>
         </section>
 
-        <section class="cards">
+       <section class="cards">
+
+    <a href="https://www.tiktok.com/@laloperalta77" target="_blank" class="card-link">
+        <div class="card" id="card-tiktok-link">
+            <h2>Síguenos en TikTok</h2>
+            <p>¡Contenido inspirador y divertido!</p>
+            <img src="./OOSum35.jpeg" alt="Logo de TikTok o imagen relacionada" style="width: 100%; height: auto; border-radius: 8px;">
+        </div>
+    </a>
 
 
-	<a href="https://www.tiktok.com/@laloperalta77" target="_blank" class="card-link">
-                <div class="card" id="card-tiktok-link">
-                    <h2>Síguenos en TikTok</h2>
-                    <p>¡Contenido inspirador y divertido!</p>
-                    <img src="./OOSum35.jpeg" alt="Logo de TikTok o imagen relacionada" style="width: 100%; height: auto; border-radius: 8px;">
-                </div>
+
+    <a href="https://www.misionerosdeguadalupe.org/" class="card-link">
+        <div class="card" id="misioneros">
+            <h2>Misioneros de Guadalupe</h2>
+            <p>Conoce y apoya a los misioneros</p>
+            <img src="./campañaPadrinosMisioneros/Gemini_Generated_Image_ap8di7ap8di7ap8d.png" alt="imagen relacionada" style="width: 100%; height: auto; border-radius: 8px;">
+        </div>
+    </a>
+
+      <a href="./tiendaonline/index.html" class="card-link">
+        <div class="card" id="tienda">
+            <h2>Tienda</h2>
+            <p>ve nuestro catalogo de rosarios y articulos y adquiere alguno</p>
+            <img src="./Imagen de WhatsApp 2025-09-07 a las 17.45.22_b86e8fb0.jpg" alt="imagen relacionada" style="width: 100%; height: auto; border-radius: 8px;">
+        </div>
+    </a>
+
+    <div class="card collapsible-card" onclick="toggleCollapse(this)">
+        <h2>Oraciones</h2>
+        <p>Únete a nosotros en oración</p>
+        <img src="./Gemini_Generated_Image_3pyf8s3pyf8s3pyf.png" alt="Imagen de Oraciones" style="width: 100%; height: auto; border-radius: 8px;">
+        <div class="collapsible-content">
+            <a href="./rosario/index.html" class="collapsible-link">
+                <img src="./rosario/images/default.jpg" alt="Rosario" class="link-image">
+                <span>Rezar el Rosario</span>
             </a>
-
-
-
-            <a href="./rosario/index.html" target="_blank" class="card-link">
-                <div class="card" id="card-tiktok-link">
-                    <h2>Rosario Online</h2>
-                    <p>Únete al rezo del Rosario</p>
-                    <img src="./rosario/images/default.jpg" alt="Logo de TikTok o imagen relacionada" style="width: 100%; height: auto; border-radius: 8px;">
-                </div>
+            <a href="./coronilla/index.html" class="collapsible-link">
+                <img src="./coronilla/1.png" alt="Coronilla de la Misericordia" class="link-image">
+                <span>Rezar la Coronilla</span>
             </a>
+        </div>
+    </div>
 
-
-            <a href="./coronilla/index.html" target="_blank" class="card-link">
-                <div class="card" id="card-tiktok-link">
-                    <h2>Coronilla de la Divina Misericordia</h2>
-                    <p>Únete al rezo de la coronilla de la divina misericordia</p>
-                    <img src="./coronilla/1.png" alt="Logo de TikTok o imagen relacionada" style="width: 100%; height: auto; border-radius: 8px;">
-                </div>
+    <div class="card collapsible-card" onclick="toggleCollapse(this)">
+        <h2>Juegos Bíblicos</h2>
+        <p>Diviértete y aprende de nuestra fe.</p>
+        <img src="./Gemini_Generated_Image_gtkcsxgtkcsxgtkc.png" alt="Imagen de Juegos Bíblicos" style="width: 100%; height: auto; border-radius: 8px;">
+        <div class="collapsible-content">
+            <a href="./triviaCristiana/index.html" class="collapsible-link">
+                <img src="./triviaCristiana/fondo de pantalla para una app de trivia al estilo de quien quiere ser millonario con temática cristiana.png" alt="¿Quién Quiere Ser Cristiano?" class="link-image">
+                <span>¿Quién Quiere Ser Cristiano?</span> 
             </a>
-
-            
-
-            <a href="./triviaCristiana/index.html" class="card-link">
-    <div class="card" id="cristiano">
-        <h2>¿Quién Quiere Ser Cristiano?</h2>
-        <p>Un divertido reto para aprender más de nuestra fe.</p>
-        <img src="./triviaCristiana/fondo de pantalla para una app de trivia al estilo de quien quiere ser millonario con temática cristiana.png" alt="imagen relacionada" style="width: 100%; height: auto; border-radius: 8px;">
-
+            <a href="./criptograma_biblico/index.html" class="collapsible-link">
+                <img src="./criptograma_biblico/Gemini_Generated_Image_9etlhr9etlhr9etl.png" alt="Criptograma Bíblico" class="link-image">
+                <span>Criptograma Bíblico</span>
+            </a>
+        </div>
     </div>
-</a>
 
-       <a href="./criptograma_biblico/index.html" class="card-link">
-    <div class="card" id="cristiano">
-        <h2>Criptograma biblico</h2>
-        <p>Un divertido reto para aprender más de la biblia.</p>
-        <img src="./criptograma_biblico/Gemini_Generated_Image_9etlhr9etlhr9etl.png" alt="Logo de TikTok o imagen relacionada" style="width: 100%; height: auto; border-radius: 8px;">
+ 
 
-    </div>
-</a>
 
-<a href="./biblia/index.html" class="card-link">
-    <div class="card" id="biblia">
-        <h2>Biblia</h2>
-        <p>Enlaces a las lecturas diarias</p>
-        <img src="./biblia/Gemini_Generated_Image_czdi62czdi62czdi.png" alt="imagen relacionada" style="width: 100%; height: auto; border-radius: 8px;">
+    <a href="./biblia/index.html" class="card-link">
+        <div class="card" id="biblia">
+            <h2>Biblia</h2>
+            <p>Enlaces a las lecturas diarias</p>
+            <img src="./biblia/Gemini_Generated_Image_czdi62czdi62czdi.png" alt="imagen relacionada" style="width: 100%; height: auto; border-radius: 8px;">
+        </div>
+    </a>
 
-    </div>
-</a>
-<a href="https://www.misionerosdeguadalupe.org/" class="card-link">
-    <div class="card" id="misioneros">
-        <h2>Misioneros de Guadalupe</h2>
-        <p>Conoce y apoya a los misioneros</p>
-        <img src="./campañaPadrinosMisioneros/Gemini_Generated_Image_ap8di7ap8di7ap8d.png" alt="imagen relacionada" style="width: 100%; height: auto; border-radius: 8px;">
+   
 
-    </div>
-</a>
+    <a href="./intenciones/index.html" class="card-link">
+        <div class="card" id="intenciones">
+            <h2>Intenciones</h2>
+            <p>comparte tus intenciones para orar por ti</p>
+            <img src="./intenciones/Gemini_Generated_Image_olqdzpolqdzpolqd.png" alt="imagen relacionada" style="width: 100%; height: auto; border-radius: 8px;">
+        </div>
+    </a>
 
-<a href="./intenciones/index.html" class="card-link">
-    <div class="card" id="misioneros">
-        <h2>Intenciones</h2>
-        <p>comparte tus intenciones para orar por ti</p>
-        <img src="./intenciones/Gemini_Generated_Image_olqdzpolqdzpolqd.png" alt="imagen relacionada" style="width: 100%; height: auto; border-radius: 8px;">
-
-    </div>
-</a>
-
-<a href="./tiendaonline/index.html" class="card-link">
-    <div class="card" id="misioneros1">
-        <h2>Tienda</h2>
-        <p>ve nuestro catalogo de rosarios y adquiere uno</p>
-        <img src="./Imagen de WhatsApp 2025-09-07 a las 17.45.22_b86e8fb0.jpg" alt="imagen relacionada" style="width: 100%; height: auto; border-radius: 8px;">
-
-    </div>
-</a>
-
-            
-            </section>
+  
+    
+</section>
 
         <section class="donate" id="donar">
             <h2>Apoya nuestra misión</h2>
@@ -167,7 +145,7 @@
 
     <footer class="footer">
         <div class="footer-content">
-            <div class="footer-logo"> </div>
+            <div class="footer-logo"></div>
             <div class="footer-links">
                 <ul>
                     <li><a href="#">Inicio</a></li>
@@ -187,7 +165,6 @@
         </div>
     </footer>
     
-
     <script src="script.js"></script>
 </body>
 </html>
