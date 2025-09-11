@@ -767,7 +767,7 @@ body {
 
 /* 3. Ocultamos la descripción larga por defecto (Mobile First) */
 .progression-step p {
-    display: none; 
+    display: visible; 
 }
 
 /* 4. Ajustamos el título para que ocupe el espacio disponible */
