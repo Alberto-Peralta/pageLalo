@@ -1,4 +1,4 @@
-// Importaciones de Firebase (modular v9+) - ACTUALIZADO
+// Importaciones de Firebase (modular v9+)
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
 import { 
     getDatabase, 
@@ -12,9 +12,7 @@ import {
     orderByChild, 
     limitToLast,
     limitToFirst
-} from "https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js"; // ← SOLO ESTA LÍNEA
-
-
+} from "https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js";
 
 // Tu configuración de Firebase
 const firebaseConfig = {
@@ -47,6 +45,12 @@ document.addEventListener('DOMContentLoaded', () => {
     let comodinPausarTiempoUsado = false;
     let tiempoPausado = false;
 
+    // Variables para el acceso secreto al admin
+    let clickCount = 0;
+    let clickTimer = null;
+    const CLICK_WINDOW = 3000; // 3 segundos para hacer los 5 clics
+    const REQUIRED_CLICKS = 5;
+
     // Elementos de la UI
     const gameContainer = document.getElementById('game-container');
     const progressionScreen = document.getElementById('progression-screen');
@@ -69,113 +73,164 @@ document.addEventListener('DOMContentLoaded', () => {
     const messageModal = document.getElementById('message-modal');
     const modalMessage = document.getElementById('modal-message');
     const modalOkBtn = document.getElementById('modal-ok-btn');
-
     const saveScoreBtn = document.getElementById('save-score-btn');
     const saveScoreForm = document.getElementById('save-score-form');
     const viewRankingBtn = document.getElementById('view-ranking-btn');
     const rankingScreen = document.getElementById('ranking-screen');
     const rankingList = document.getElementById('ranking-list');
     const backToGameBtn = document.getElementById('back-to-game-btn');
-    const playerAliasInput = document.getElementById('player-alias');      
+    const playerAliasInput = document.getElementById('player-alias');
     
-    
-        // Elementos de la nueva pantalla de inicio
+    // Elementos de la nueva pantalla de inicio
     const startScreen = document.getElementById('start-screen');
-    const startGameBtn = document.getElementById('start-game-btn'); // ← ESTA LÍNEA
+    const startGameBtn = document.getElementById('start-game-btn');
     const viewRankingBtnStart = document.getElementById('view-ranking-btn-start');
     const backToStartBtn = document.getElementById('back-to-start-btn');
+
+    // Elemento del título del juego para el acceso secreto
+    const gameTitle = document.getElementById('game-title');
+    const adminLink = document.getElementById('admin-link');
     
     // Datos de los 15 niveles de progresión
     const niveles = [
-        { title: "Neófito", emoji: "🔰", description: "🍼 No sabe si se dice amén o salud, pero ya quiere evangelizar" },
-        { title: "Catecúmeno", emoji: "📖", description: "⏳ Suena a hechizo de Harry Potter, pero en realidad es alguien que todavía no se bautiza... aunque ya se siente parte del team Jesús" },
-        { title: "Aprendiz de la fe", emoji: "🔎", description: "🧐 Sabe que hay cuatro evangelios… pero cree que Pablo escribió uno" },
-        { title: "Discípulo en formación", emoji: "💡", description: "📓 Sigue a Jesús… pero todavía se pierde entre Levítico y Deuteronomio" },
-        { title: "Creyente comprometido", emoji: "🛐", description: "💪 Va a misa sin que lo arrastren. Hasta se emociona por el ofertorio" },
-        { title: "Estudioso del Catecismo", emoji: "🧭", description: "📘 Le dicen el “Catekisman” porque cita el número exacto antes de que termines tu pregunta" },
-        { title: "Iniciado en Teología", emoji: "🧠", description: "🧠 Dice cosas como ontología trinitaria mientras se sirve cereal y cree que Santo Tomás y San Agustín fueron roomies en el cielo" },
-        { title: "Servidor pastoral", emoji: "✝️", description: "🛠️ Es el multiusos de la parroquia. Da catequesis, barre la capilla y hace teatro bíblico… todo en una tarde (Sueña con tener su propio gafete con foto y cita bíblicas)" },
-        { title: "Estudiante de Teología", emoji: "📚", description: "Tiene más libros que calcetines. Sueña con San Agustín y tiene pesadillas con exámenes de eclesiología" },
-        { title: "Teólogo en ejercicio", emoji: "🗝️", description: "🧠 La fe y la razón no se pelean… solo discuten apasionadamente (Corrige homilías mentalmente y empieza frases con: según la Patrística…)" },
-        { title: "Licenciado en Teología", emoji: "🎓", description: "🎓 No presume, pero casualmente deja su título en la mesa cuando invitan café. Ya no dice “la Iglesia enseña”, dice “según el magisterio ordinario y extraordinario…" },
-        { title: "Formador o Maestro de la fe", emoji: "🧱", description: "🗣️ Tiene anécdotas con todos los Papas desde Juan Pablo II… aunque nunca los conoció" },
-        { title: "Profesor o Catedrático en Teología", emoji: "🧑‍🏫", description: "📚 Su escritorio tiene más latín que una misa tridentina. Puede corregir tu ensayo y tu vida espiritual en una sola mirada" },
-        { title: "Santo reconocido por la Iglesia", emoji: "👑", description: "👼 La gente le rezará… y él dirá: “tranquilos, solo hice lo que tenía que hacer" },
-        { title: "Doctor de la Iglesia", emoji: "🦉", description: "🏅 Doctor honoris causa del cielo. El Harvard celestial lo ovaciona. 🏅 Nivel jefe final. Lo que dijo, la Iglesia lo enmarca" }
-    ];
-    // ********************************************************************************
+        { title: "Neófito", emoji: "📰", description: "🍼 No sabe si se dice amén o salud, pero ya quiere evangelizar" },
+        { title: "Catecúmeno", emoji: "📖", description: "⳿ Suena a hechizo de Harry Potter, pero en realidad es alguien que todavía no se bautiza... aunque ya se siente parte del team Jesús" },
+        { title: "Aprendiz de la fe", emoji: "🔎", description: "🧠 Sabe que hay cuatro evangelios… pero cree que Pablo escribió uno" },
+        { title: "Discípulo en formación", emoji: "💡", description: "📚 Sigue a Jesús… pero todavía se pierde entre Levítico y Deuteronomio" },
+        { title: "Creyente comprometido", emoji: "🛐", description: "💪 Va a misa sin que lo arrastren. Hasta se emociona por el ofertorio" },
+        { title: "Estudioso del Catecismo", emoji: "🧭", description: "📘 Le dicen el \"Catekisman\" porque cita el número exacto antes de que termines tu pregunta" },
+        { title: "Iniciado en Teología", emoji: "🧠", description: "🧠 Dice cosas como ontología trinitaria mientras se sirve cereal y cree que Santo Tomás y San Agustín fueron roomies en el cielo" },
+        { title: "Servidor pastoral", emoji: "✍️", description: "🛠️ Es el multiusos de la parroquia. Da catequesis, barre la capilla y hace teatro bíblico… todo en una tarde (Sueña con tener su propio gafete con foto y citas bíblicas)" },
+        { title: "Estudiante de Teología", emoji: "📚", description: "Tiene más libros que calcetines. Sueña con San Agustín y tiene pesadillas con exámenes de eclesiología" },
+        { title: "Teólogo en ejercicio", emoji: "🗝️", description: "🧠 La fe y la razón no se pelean… solo discuten apasionadamente (Corrige homilías mentalmente y empieza frases con: según la Patrística…)" },
+        { title: "Licenciado en Teología", emoji: "🎓", description: "🎓 No presume, pero casualmente deja su título en la mesa cuando invitan café. Ya no dice \"la Iglesia enseña\", dice \"según el magisterio ordinario y extraordinario…\"" },
+        { title: "Formador o Maestro de la fe", emoji: "🧱", description: "🗣️ Tiene anécdotas con todos los Papas desde Juan Pablo II… aunque nunca los conoció" },
+        { title: "Profesor o Catedrático en Teología", emoji: "🧑‍🏫", description: "📚 Su escritorio tiene más latín que una misa tridentina. Puede corregir tu ensayo y tu vida espiritual en una sola mirada" },
+        { title: "Santo reconocido por la Iglesia", emoji: "👑", description: "👼 La gente le rezará… y él dirá: \"tranquilos, solo hice lo que tenía que hacer\"" },
+        { title: "Doctor de la Iglesia", emoji: "🦉", description: "🏅 Doctor honoris causa del cielo. El Harvard celestial lo ovaciona. 🏅 Nivel jefe final. Lo que dijo, la Iglesia lo enmarca" }
+    ];
+
+    // === FUNCIÓN PARA EL ACCESO SECRETO AL ADMIN ===
+    function setupSecretAdminAccess() {
+        if (gameTitle) {
+            gameTitle.addEventListener('click', (e) => {
+                e.preventDefault();
+                clickCount++;
+                
+                // Resetear el timer si existe
+                if (clickTimer) {
+                    clearTimeout(clickTimer);
+                }
+                
+                // Mostrar feedback visual del clic
+                gameTitle.style.transform = 'scale(1.05)';
+                gameTitle.style.color = '#ffb800';
+                setTimeout(() => {
+                    gameTitle.style.transform = 'scale(1)';
+                    gameTitle.style.color = '#ffcc00';
+                }, 150);
+                
+                console.log(`Clic ${clickCount}/${REQUIRED_CLICKS}`);
+                
+                if (clickCount >= REQUIRED_CLICKS) {
+                    // Mostrar el enlace del admin
+                    if (adminLink) {
+                        adminLink.style.display = 'inline-block';
+                        mostrarAlerta(`🔓 ¡Acceso de administrador desbloqueado! El enlace aparecerá por 10 segundos.`);
+                        
+                        // Ocultar el enlace después de 10 segundos
+                        setTimeout(() => {
+                            adminLink.style.display = 'none';
+                        }, 10000);
+                    }
+                    
+                    // Resetear contador
+                    clickCount = 0;
+                } else {
+                    // Timer para resetear los clics si no se completan en el tiempo límite
+                    clickTimer = setTimeout(() => {
+                        clickCount = 0;
+                        console.log('Timer de clics reseteado');
+                    }, CLICK_WINDOW);
+                }
+            });
+            
+            // Hacer que el cursor cambie sobre el título para dar una pista sutil
+            gameTitle.style.cursor = 'pointer';
+            gameTitle.title = 'Hacer clic varias veces aquí...';
+        }
+    }
 
     // === Lógica para la conexión a Firebase y carga de datos ===
-        const questionsRef = ref(db, 'questions');
+    const questionsRef = ref(db, 'questions');
 
-      // Agregar timeout para conexión (15 segundos)
-      const connectionTimeout = setTimeout(() => {
-          console.error("Timeout de conexión a Firebase");
-          questionTextElement.textContent = "Error de conexión. Verifica tu internet e intenta recargar la página.";
-      }, 15000);
+    // Agregar timeout para conexión (15 segundos)
+    const connectionTimeout = setTimeout(() => {
+        console.error("Timeout de conexión a Firebase");
+        questionTextElement.textContent = "Error de conexión. Verifica tu internet e intenta recargar la página.";
+    }, 15000);
 
-      onValue(questionsRef, (snapshot) => {
-          // Limpiar el timeout si la conexión es exitosa
-          clearTimeout(connectionTimeout);
-          
-          const data = snapshot.val();
-          if (data) {
-              try {
-                  const allQuestions = Object.values(data);
-                  
-                  // Filtrar preguntas por dificultad
-                  const preguntasFaciles = allQuestions.filter(q => q.dificultad === 'facil');
-                  const preguntasIntermedias = allQuestions.filter(q => q.dificultad === 'intermedio');
-                  const preguntasDificiles = allQuestions.filter(q => q.dificultad === 'dificil');
+    onValue(questionsRef, (snapshot) => {
+        // Limpiar el timeout si la conexión es exitosa
+        clearTimeout(connectionTimeout);
+        
+        const data = snapshot.val();
+        if (data) {
+            try {
+                const allQuestions = Object.values(data);
+                
+                // Filtrar preguntas por dificultad
+                const preguntasFaciles = allQuestions.filter(q => q.dificultad === 'facil');
+                const preguntasIntermedias = allQuestions.filter(q => q.dificultad === 'intermedio');
+                const preguntasDificiles = allQuestions.filter(q => q.dificultad === 'dificil');
 
-                  // Barajar cada categoría
-                  shuffleArray(preguntasFaciles);
-                  shuffleArray(preguntasIntermedias);
-                  shuffleArray(preguntasDificiles);
-                  
-                  // ✅ CORREGIDO: Seleccionar 5 de cada categoría en ORDEN
-                  preguntas = [];
-                  
-                  // Primeras 5: Fáciles (0-4)
-                  for (let i = 0; i < 5 && i < preguntasFaciles.length; i++) {
-                      preguntas.push(preguntasFaciles[i]);
-                  }
-                  
-                  // Siguientes 5: Intermedias (5-9)
-                  for (let i = 0; i < 5 && i < preguntasIntermedias.length; i++) {
-                      preguntas.push(preguntasIntermedias[i]);
-                  }
-                  
-                  // Últimas 5: Difíciles (10-14)
-                  for (let i = 0; i < 5 && i < preguntasDificiles.length; i++) {
-                      preguntas.push(preguntasDificiles[i]);
-                  }
-                  
-                  console.log("✅ Preguntas cargadas en orden:", 
-                      preguntas.map((p, i) => `${i + 1}:${p.dificultad.charAt(0)}`).join(" "));
-                  
-                  // Asegurarse de que hay 15 preguntas en total
-                  if (preguntas.length < 15) {
-                      console.warn("Solo hay", preguntas.length, "preguntas disponibles");
-                      questionTextElement.textContent = `Solo hay ${preguntas.length} preguntas disponibles. Agrega más en el panel de administración.`;
-                  } else {
-                          iniciarJuego(); // ← Sin parámetro
-                      }
-                  
-              } catch (error) {
-                  console.error("Error procesando preguntas:", error);
-                  questionTextElement.textContent = "Error al procesar las preguntas.";
-              }
-          } else {
-              questionTextElement.textContent = "No hay preguntas disponibles. Agrega preguntas en el panel de administración.";
-          }
-      }, (error) => {
-          // Manejar error de conexión
-          clearTimeout(connectionTimeout);
-          console.error("Error de Firebase:", error);
-          questionTextElement.textContent = "Error de conexión con Firebase. Verifica las reglas de la base de datos.";
-      });
-
+                // Barajar cada categoría
+                shuffleArray(preguntasFaciles);
+                shuffleArray(preguntasIntermedias);
+                shuffleArray(preguntasDificiles);
+                
+                // Seleccionar 5 de cada categoría en ORDEN
+                preguntas = [];
+                
+                // Primeras 5: Fáciles (0-4)
+                for (let i = 0; i < 5 && i < preguntasFaciles.length; i++) {
+                    preguntas.push(preguntasFaciles[i]);
+                }
+                
+                // Siguientes 5: Intermedias (5-9)
+                for (let i = 0; i < 5 && i < preguntasIntermedias.length; i++) {
+                    preguntas.push(preguntasIntermedias[i]);
+                }
+                
+                // Últimas 5: Difíciles (10-14)
+                for (let i = 0; i < 5 && i < preguntasDificiles.length; i++) {
+                    preguntas.push(preguntasDificiles[i]);
+                }
+                
+                console.log("✅ Preguntas cargadas en orden:", 
+                    preguntas.map((p, i) => `${i + 1}:${p.dificultad.charAt(0)}`).join(" "));
+                
+                // Asegurarse de que hay 15 preguntas en total
+                if (preguntas.length < 15) {
+                    console.warn("Solo hay", preguntas.length, "preguntas disponibles");
+                    questionTextElement.textContent = `Solo hay ${preguntas.length} preguntas disponibles. Agrega más en el panel de administración.`;
+                } else {
+                    iniciarJuego();
+                }
+                
+            } catch (error) {
+                console.error("Error procesando preguntas:", error);
+                questionTextElement.textContent = "Error al procesar las preguntas.";
+            }
+        } else {
+            questionTextElement.textContent = "No hay preguntas disponibles. Agrega preguntas en el panel de administración.";
+        }
+    }, (error) => {
+        // Manejar error de conexión
+        clearTimeout(connectionTimeout);
+        console.error("Error de Firebase:", error);
+        questionTextElement.textContent = "Error de conexión con Firebase. Verifica las reglas de la base de datos.";
+    });
 
     // Muestra la pantalla de progresión sin temporizador
     function mostrarPantallaProgresion() {
@@ -192,9 +247,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const step = document.createElement('div');
             step.classList.add('progression-step');
             
-            // --- MODIFICACIÓN AQUÍ ---
-           // Añade el emoji de la biblia como marcador del nivel ACTUAL (recientemente alcanzado)
-            const isCurrentLevel = (index === puntuacion - 1 && puntuacion > 0); // <--- ESTA ES LA LÍNEA CORREGIDA
+            const isCurrentLevel = (index === puntuacion - 1 && puntuacion > 0);
             const bibleEmojiMarker = isCurrentLevel ? '<span class="bible-marker">📖</span>' : '';
             step.innerHTML = `${bibleEmojiMarker}<h4>${nivel.title} ${nivel.emoji}</h4><p>${nivel.description}</p>`;
             
@@ -207,7 +260,6 @@ document.addEventListener('DOMContentLoaded', () => {
             if (index === puntuacion - 1) {
                 step.classList.add('newly-completed');
             }
-            // --- FIN DE LA MODIFICACIÓN ---
 
             progressionStepsContainer.appendChild(step);
         });
@@ -249,7 +301,7 @@ document.addEventListener('DOMContentLoaded', () => {
             confirmBtn.textContent = 'Confirmar';
             confirmBtn.disabled = true;
             estadoBotonConfirmar = 'confirmar';
-            esCorrecto = false; // Reinicia el estado de la respuesta
+            esCorrecto = false;
         } else {
             mostrarPantallaFinal();
         }
@@ -267,7 +319,6 @@ document.addEventListener('DOMContentLoaded', () => {
         clearInterval(temporizador);
         const selectedBtn = document.querySelector('.answer-btn.selected');
         
-        // Si no se selecciona ninguna respuesta, no hacer nada (esto debería ser manejado por el botón confirmar)
         if (!selectedBtn) return;
         
         const selectedOptionText = selectedBtn.dataset.textoOpcion;
@@ -280,12 +331,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const textoRespuestaCorrecta = pregunta.opciones[correctaOriginalIndex];
         
         if (selectedOptionText === textoRespuestaCorrecta) {
-            esCorrecto = true; // Actualiza el estado de la respuesta
+            esCorrecto = true;
             puntuacion++;
             scoreDisplay.textContent = `Puntuación: ${puntuacion}`;
             selectedBtn.classList.add('correct');
         } else {
-            esCorrecto = false; // Actualiza el estado de la respuesta
+            esCorrecto = false;
             selectedBtn.classList.add('incorrect');
             const correctButton = Array.from(answerButtons).find(btn => btn.dataset.textoOpcion === textoRespuestaCorrecta);
             if (correctButton) {
@@ -298,49 +349,48 @@ document.addEventListener('DOMContentLoaded', () => {
         estadoBotonConfirmar = 'siguiente';
     }
 
-          function pasarSiguientePregunta() {
-            preguntaActualIndex++;
-            console.log("Índice actual:", preguntaActualIndex, "Total preguntas:", preguntas.length); // Debug
-            
-            if (preguntaActualIndex < preguntas.length) {
-                mostrarPregunta();
-            } else {
-                console.log("Mostrando pantalla final"); // Debug
-                mostrarPantallaFinal();
-            }
+    function pasarSiguientePregunta() {
+        preguntaActualIndex++;
+        console.log("Índice actual:", preguntaActualIndex, "Total preguntas:", preguntas.length);
+        
+        if (preguntaActualIndex < preguntas.length) {
+            mostrarPregunta();
+        } else {
+            console.log("Mostrando pantalla final");
+            mostrarPantallaFinal();
         }
-
-       function mostrarPantallaFinal() {
-    console.log("🔴 EJECUTANDO mostrarPantallaFinal()");
-    
-    clearInterval(temporizador);
-    
-    // Actualizar la UI
-    finalScoreSpan.textContent = puntuacion;
-    questionsAnsweredSpan.textContent = preguntaActualIndex;
-    remainingTimeSpan.textContent = tiempoRestante;
-    
-    // Mostrar mensaje especial si fue partida perfecta
-    if (puntuacion === 15 && preguntaActualIndex === 15) {
-        const perfectMessage = document.createElement('p');
-        perfectMessage.textContent = '🎉 ¡PARTIDA PERFECTA! 🎉';
-        perfectMessage.style.color = '#ffcc00';
-        perfectMessage.style.fontWeight = 'bold';
-        perfectMessage.style.fontSize = '1.5rem';
-        endScreen.insertBefore(perfectMessage, saveScoreForm);
     }
-    
-    // Resetear formulario de ranking
-    playerAliasInput.value = '';
-    saveScoreForm.style.display = 'block';
-    viewRankingBtn.style.display = 'none';
-    
-    // Mostrar/ocultar elementos
-    gameContainer.style.display = 'none';
-    progressionScreen.style.display = 'none';
-    endScreen.style.display = 'flex';
-}
 
+    function mostrarPantallaFinal() {
+        console.log("🔴 EJECUTANDO mostrarPantallaFinal()");
+        
+        clearInterval(temporizador);
+        
+        // Actualizar la UI
+        finalScoreSpan.textContent = puntuacion;
+        questionsAnsweredSpan.textContent = preguntaActualIndex;
+        remainingTimeSpan.textContent = tiempoRestante;
+        
+        // Mostrar mensaje especial si fue partida perfecta
+        if (puntuacion === 15 && preguntaActualIndex === 15) {
+            const perfectMessage = document.createElement('p');
+            perfectMessage.textContent = '🎉 ¡PARTIDA PERFECTA! 🎉';
+            perfectMessage.style.color = '#ffcc00';
+            perfectMessage.style.fontWeight = 'bold';
+            perfectMessage.style.fontSize = '1.5rem';
+            endScreen.insertBefore(perfectMessage, saveScoreForm);
+        }
+        
+        // Resetear formulario de ranking
+        playerAliasInput.value = '';
+        saveScoreForm.style.display = 'block';
+        viewRankingBtn.style.display = 'none';
+        
+        // Mostrar/ocultar elementos
+        gameContainer.style.display = 'none';
+        progressionScreen.style.display = 'none';
+        endScreen.style.display = 'flex';
+    }
 
     function iniciarTemporizador() {
         if (!tiempoPausado) {
@@ -356,12 +406,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function reiniciarTemporizador() {
-    clearInterval(temporizador);
-    tiempoRestante = 30;
-    timeElement.textContent = tiempoRestante;
-    if (!tiempoPausado) {
-        iniciarTemporizador();
-    }
+        clearInterval(temporizador);
+        tiempoRestante = 30;
+        timeElement.textContent = tiempoRestante;
+        if (!tiempoPausado) {
+            iniciarTemporizador();
+        }
     }
 
     function reiniciarComodines() {
@@ -379,16 +429,124 @@ document.addEventListener('DOMContentLoaded', () => {
         modalMessage.textContent = mensaje;
     }
 
-    // Listeners de eventos
+    function iniciarJuego(fromStartScreen = false) {
+        if (fromStartScreen && typeof startScreen !== 'undefined') {
+            startScreen.style.display = 'none';
+        }
+        
+        puntuacion = 0;
+        preguntaActualIndex = 0;
+        scoreDisplay.textContent = `Puntuación: 0`;
+        reiniciarComodines();
+        gameContainer.style.display = 'block';
+        progressionScreen.style.display = 'none';
+        answersContainer.style.display = 'grid';
+        confirmBtn.style.display = 'block';
+        endScreen.style.display = 'none';
+        
+        // SOLO mostrar pregunta si hay preguntas cargadas
+        if (preguntas.length > 0) {
+            mostrarPregunta();
+        } else {
+            questionTextElement.textContent = "No hay preguntas disponibles.";
+        }
+    }
 
+    async function guardarPuntuacion() {
+        const alias = playerAliasInput.value.trim();
+        if (!alias) {
+            mostrarAlerta("Por favor, escribe un alias");
+            return;
+        }
 
+        const partidaPerfecta = (puntuacion === 15 && preguntaActualIndex === 15);
+        
+        const scoreData = {
+            alias: alias,
+            puntuacion: puntuacion,
+            preguntasRespondidas: preguntaActualIndex,
+            tiempoRestante: tiempoRestante,
+            partidaPerfecta: partidaPerfecta,
+            partidasGanadas: partidaPerfecta ? 1 : 0,
+            fecha: new Date().toISOString(),
+            timestamp: Date.now()
+        };
 
+        try {
+            await push(ref(db, 'rankings'), scoreData);
+            mostrarAlerta("✅ Puntuación guardada en el ranking");
+            saveScoreForm.style.display = 'none';
+            viewRankingBtn.style.display = 'block';
+        } catch (error) {
+            console.error("Error al guardar puntuación:", error);
+            mostrarAlerta("Error al guardar puntuación");
+        }
+    }
 
+    function cargarRanking() {
+        const rankingsRef = ref(db, 'rankings');
+        const topRankingsQuery = query(rankingsRef, orderByChild('puntuacion'), limitToLast(20));
+        
+        onValue(topRankingsQuery, (snapshot) => {
+            const data = snapshot.val();
+            rankingList.innerHTML = '';
+            
+            if (data) {
+                const rankingsArray = Object.entries(data)
+                    .map(([key, value]) => ({ id: key, ...value }))
+                    .sort((a, b) => b.puntuacion - a.puntuacion || b.tiempoRestante - a.tiempoRestante);
+                
+                // Contar partidas perfectas por jugador
+                const jugadoresConPerfectas = {};
+                rankingsArray.forEach(score => {
+                    if (score.partidaPerfecta) {
+                        if (!jugadoresConPerfectas[score.alias]) {
+                            jugadoresConPerfectas[score.alias] = 0;
+                        }
+                        jugadoresConPerfectas[score.alias]++;
+                    }
+                });
+                
+                rankingsArray.forEach((score, index) => {
+                    const rankItem = document.createElement('div');
+                    rankItem.className = 'rank-item';
+                    
+                    const partidasPerfectas = jugadoresConPerfectas[score.alias] || 0;
+                    const esPerfecta = score.partidaPerfecta ? '🏆 PERFECTA!' : '';
+                    
+                    rankItem.innerHTML = `
+                        <span class="rank-position">${index + 1}º</span>
+                        <span class="rank-alias">${score.alias}</span>
+                        <span class="rank-score">${score.puntuacion}/15 pts</span>
+                        <span class="rank-perfectas">⭐ ${partidasPerfectas}</span>
+                        <span class="rank-time">⏱️ ${score.tiempoRestante}s</span>
+                        <span class="rank-perfect-badge">${esPerfecta}</span>
+                    `;
+                    
+                    // Destacar partidas perfectas
+                    if (score.partidaPerfecta) {
+                        rankItem.style.background = 'linear-gradient(135deg, #ffd700 0%, #ffb700 100%)';
+                        rankItem.style.color = '#003366';
+                        rankItem.style.fontWeight = 'bold';
+                    }
+                    
+                    rankingList.appendChild(rankItem);
+                });
+            } else {
+                rankingList.innerHTML = '<p>No hay puntuaciones aún</p>';
+            }
+        });
+    }
+
+    // === EVENT LISTENERS ===
+
+    // Configurar el acceso secreto al admin
+    setupSecretAdminAccess();
+
+    // Event listeners de botones de respuesta
     answerButtons.forEach(btn => btn.addEventListener('click', seleccionarRespuesta));
 
-
-
-
+    // Event listener del botón confirmar
     confirmBtn.addEventListener('click', () => {
         if (estadoBotonConfirmar === 'confirmar') {
             const selectedBtn = document.querySelector('.answer-btn.selected');
@@ -408,24 +566,26 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Event listener del modal
     modalOkBtn.addEventListener('click', () => {
         messageModal.style.display = 'none';
     });
 
-          restartBtn.addEventListener('click', () => {
-          endScreen.style.display = 'none'; // Ocultar pantalla final primero
-          iniciarJuego();
-          reiniciarComodines();
-      });
+    // Event listener del botón reiniciar
+    restartBtn.addEventListener('click', () => {
+        endScreen.style.display = 'none';
+        iniciarJuego();
+        reiniciarComodines();
+    });
 
-    // Lógica para que el botón de continuar de la pantalla de progresión avance el juego
+    // Event listener del botón continuar en pantalla de progresión
     continueBtn.addEventListener('click', () => {
         gameContainer.style.display = 'block';
         progressionScreen.style.display = 'none';
         pasarSiguientePregunta();
     });
 
-    // === Lógica de Comodines ===
+    // === EVENT LISTENERS DE COMODINES ===
     fiftyFiftyBtn.addEventListener('click', () => {
         if (!comodin5050Usado) {
             const pregunta = preguntas[preguntaActualIndex];
@@ -441,7 +601,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             opcionesIncorrectas.slice(0, 2).forEach(btn => {
                 btn.disabled = true;
-                btn.textContent = ''; // Limpiar el texto
+                btn.textContent = '';
             });
 
             comodin5050Usado = true;
@@ -471,172 +631,41 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // === EVENT LISTENERS DE PANTALLAS ===
+    startGameBtn.addEventListener('click', () => {
+        startScreen.style.display = 'none';
+        iniciarJuego(true);
+    });
 
-     // Event listeners para la pantalla de inicio
-          startGameBtn.addEventListener('click', () => {
-              startScreen.style.display = 'none';
-              iniciarJuego(true); // ← Pasar true aquí
-          });
+    viewRankingBtnStart.addEventListener('click', () => {
+        startScreen.style.display = 'none';
+        rankingScreen.style.display = 'block';
+        cargarRanking();
+    });
 
+    backToStartBtn.addEventListener('click', () => {
+        rankingScreen.style.display = 'none';
+        startScreen.style.display = 'flex';
+    });
 
-          viewRankingBtnStart.addEventListener('click', () => {
-              startScreen.style.display = 'none';
-              rankingScreen.style.display = 'block';
-              cargarRanking();
-          });
+    // === EVENT LISTENERS DE RANKING ===
+    saveScoreBtn.addEventListener('click', guardarPuntuacion);
 
+    viewRankingBtn.addEventListener('click', () => {
+        endScreen.style.display = 'none';
+        rankingScreen.style.display = 'block';
+        cargarRanking();
+    });
 
+    backToGameBtn.addEventListener('click', () => {
+        rankingScreen.style.display = 'none';
+        endScreen.style.display = 'block';
+    });
 
-          backToStartBtn.addEventListener('click', () => {
-              rankingScreen.style.display = 'none';
-              startScreen.style.display = 'flex';
-          });
-
-                      function iniciarJuego(fromStartScreen = false) {
-                if (fromStartScreen && typeof startScreen !== 'undefined') {
-                    startScreen.style.display = 'none';
-                }
-                
-                puntuacion = 0;
-                preguntaActualIndex = 0;
-                scoreDisplay.textContent = `Puntuación: 0`;
-                reiniciarComodines();
-                gameContainer.style.display = 'block';
-                progressionScreen.style.display = 'none';
-                answersContainer.style.display = 'grid';
-                confirmBtn.style.display = 'block';
-                endScreen.style.display = 'none';
-                
-                // SOLO mostrar pregunta si hay preguntas cargadas
-                if (preguntas.length > 0) {
-                    mostrarPregunta();
-                } else {
-                    questionTextElement.textContent = "No hay preguntas disponibles.";
-                }
-            }
-
-              // AGREGA esta función
-          async function guardarPuntuacion() {
-    const alias = playerAliasInput.value.trim();
-    if (!alias) {
-        mostrarAlerta("Por favor, escribe un alias");
-        return;
-    }
-
-    // Calcular si fue partida perfecta
-        const partidaPerfecta = (puntuacion === 15 && preguntaActualIndex === 15);
-        
-        const scoreData = {
-            alias: alias,
-            puntuacion: puntuacion,
-            preguntasRespondidas: preguntaActualIndex,
-            tiempoRestante: tiempoRestante,
-            partidaPerfecta: partidaPerfecta, // ← NUEVO CAMPO
-            partidasGanadas: partidaPerfecta ? 1 : 0, // ← NUEVO CAMPO
-            fecha: new Date().toISOString(),
-            timestamp: Date.now()
-        };
-
-        try {
-            await push(ref(db, 'rankings'), scoreData);
-            mostrarAlerta("✅ Puntuación guardada en el ranking");
-            saveScoreForm.style.display = 'none';
-            viewRankingBtn.style.display = 'block';
-        } catch (error) {
-            console.error("Error al guardar puntuación:", error);
-            mostrarAlerta("Error al guardar puntuación");
-        }
-    }
-
-
-
-          function cargarRanking() {
-          const rankingsRef = ref(db, 'rankings');
-          const topRankingsQuery = query(rankingsRef, orderByChild('puntuacion'), limitToLast(20));
-          
-          onValue(topRankingsQuery, (snapshot) => {
-              const data = snapshot.val();
-              rankingList.innerHTML = '';
-              
-              if (data) {
-                  const rankingsArray = Object.entries(data)
-                      .map(([key, value]) => ({ id: key, ...value }))
-                      .sort((a, b) => b.puntuacion - a.puntuacion || b.tiempoRestante - a.tiempoRestante);
-                  
-                  // Contar partidas perfectas por jugador
-                  const jugadoresConPerfectas = {};
-                  rankingsArray.forEach(score => {
-                      if (score.partidaPerfecta) {
-                          if (!jugadoresConPerfectas[score.alias]) {
-                              jugadoresConPerfectas[score.alias] = 0;
-                          }
-                          jugadoresConPerfectas[score.alias]++;
-                      }
-                  });
-                  
-                  rankingsArray.forEach((score, index) => {
-                      const rankItem = document.createElement('div');
-                      rankItem.className = 'rank-item';
-                      
-                      const partidasPerfectas = jugadoresConPerfectas[score.alias] || 0;
-                      const esPerfecta = score.partidaPerfecta ? '🏆 PERFECTA!' : '';
-                      
-                      rankItem.innerHTML = `
-                          <span class="rank-position">${index + 1}º</span>
-                          <span class="rank-alias">${score.alias}</span>
-                          <span class="rank-score">${score.puntuacion}/15 pts</span>
-                          <span class="rank-perfectas">⭐ ${partidasPerfectas}</span>
-                          <span class="rank-time">⏱️ ${score.tiempoRestante}s</span>
-                          <span class="rank-perfect-badge">${esPerfecta}</span>
-                      `;
-                      
-                      // Destacar partidas perfectas
-                      if (score.partidaPerfecta) {
-                          rankItem.style.background = 'linear-gradient(135deg, #ffd700 0%, #ffb700 100%)';
-                          rankItem.style.color = '#003366';
-                          rankItem.style.fontWeight = 'bold';
-                      }
-                      
-                      rankingList.appendChild(rankItem);
-                  });
-              } else {
-                  rankingList.innerHTML = '<p>No hay puntuaciones aún</p>';
-              }
-          });
-      }
-
-                saveScoreBtn.addEventListener('click', guardarPuntuacion);
-        viewRankingBtn.addEventListener('click', () => {
-            endScreen.style.display = 'none';
-            rankingScreen.style.display = 'block';
-            cargarRanking();
-        });
-        backToGameBtn.addEventListener('click', () => {
-            rankingScreen.style.display = 'none';
-            endScreen.style.display = 'block';
-        });
-        playerAliasInput.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') {
-                guardarPuntuacion();
-            }
-        });       
-
-
-        function mostrarEstadisticasPerfectas() {
-    const rankingsRef = ref(db, 'rankings');
-    
-    onValue(rankingsRef, (snapshot) => {
-        const data = snapshot.val();
-        if (data) {
-            const rankingsArray = Object.values(data);
-            const partidasPerfectasTotales = rankingsArray.filter(score => score.partidaPerfecta).length;
-            
-            // Mostrar en alguna parte de la UI
-            console.log(`Partidas perfectas totales: ${partidasPerfectasTotales}`);
+    playerAliasInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+            guardarPuntuacion();
         }
     });
-}
-
-// Llamar esta función cuando sea necesario
 
 });

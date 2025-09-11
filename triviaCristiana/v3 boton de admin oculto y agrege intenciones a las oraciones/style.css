@@ -1,0 +1,805 @@
+/* Estilos generales */
+:root {
+    font-size: 16px; /* Base para unidades rem */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #003366, #2c6f8c);
+    color: #ffffff;
+    margin: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+/* Contenedor del juego y admin */
+.game-container, .admin-container {
+    width: 95%;
+    max-width: 900px;
+    background: rgba(0, 51, 102, 0.85);
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.game-container {
+    background-image: url('./fondo de pantalla para una app de trivia al estilo de quien quiere ser millonario con temática cristiana.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-title {
+    font-size: clamp(1.8rem, 5vw, 2.8rem);
+    color: #ffcc00;
+    text-shadow: 2px 2px 4px #000;
+    margin-bottom: 1.5rem;
+}
+
+/* Estilos para el panel de administración */
+.admin-container {
+    background-color: #004d99;
+}
+
+.admin-container h2 {
+    color: #ffcc00;
+    font-size: 1.8rem;
+}
+
+.admin-container input, .admin-container textarea, .admin-container select {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    background-color: #f0f0f0;
+    color: #003366;
+    box-sizing: border-box;
+}
+
+.admin-container button {
+    background-color: #ffcc00;
+    color: #003366;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    margin: 0.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+    font-size: 1rem;
+}
+
+.admin-container button:hover {
+    background-color: #ffb800;
+    transform: translateY(-2px);
+}
+
+.admin-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    table-layout: fixed;
+}
+
+.admin-container th, .admin-container td {
+    border: 1px solid #ffcc00;
+    padding: 0.75rem;
+    text-align: left;
+    word-wrap: break-word;
+}
+
+.admin-container th {
+    background-color: #003366;
+    color: #ffcc00;
+}
+
+/* Estilos para la pantalla de inicio */
+#start-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 2000;
+}
+
+.start-container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 3rem;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    max-width: 90%;
+    width: 400px;
+}
+
+.start-container h1 {
+    color: #2575fc;
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
+}
+
+.start-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.start-btn {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    font-weight: bold;
+}
+
+.start-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Estilos para el texto de la pregunta */
+#question-text {
+    font-size: clamp(1.2rem, 3.5vw, 1.8rem);
+    color: #ffffff;
+    text-shadow: 1px 1px 2px #000;
+    margin: 1.5rem 0;
+}
+
+/* Estilos de botones de respuesta */
+.answer-btn {
+    width: 95%;
+    padding: 1rem 2.5rem; /* Ajuste para hacer el botón más largo */
+    margin: 0.75rem auto;
+    background-color: #003366;
+    color: #ffcc00;
+    border: 2px solid #ffcc00;
+    border-radius: 50px; /* Ajuste para hacer las esquinas más redondeadas */
+    cursor: pointer;
+    font-size: clamp(1rem, 3.5vw, 1.25rem);
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    word-wrap: break-word;
+    min-height: 50px;
+}
+
+.answer-btn:hover {
+    background-color: #ffcc00;
+    color: #003366;
+    transform: translateY(-2px);
+}
+
+.answer-btn.selected {
+    background-color: #ffb800;
+    color: #003366;
+    border-color: #ffb800;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+    transform: scale(1.02);
+}
+
+.answer-btn.correct {
+    background-color: #45a049 !important;
+    color: white !important;
+    border-color: #45a049 !important;
+}
+
+.answer-btn.incorrect {
+    background-color: #dc3545 !important;
+    color: white !important;
+    border-color: #dc3545 !important;
+}
+
+/* Espaciado del nuevo div */
+.button-spacing {
+    margin: 1.5rem;
+}
+
+/* Nuevo estilo para centrar el botón de confirmar */
+.confirm-btn-container {
+    display: flex;
+    justify-content: center; /* Centra el botón horizontalmente */
+    width: 100%;            /* Ocupa el ancho completo del contenedor principal */
+    margin-top: 1.5rem;     /* Agrega el espaciado superior que necesitas */
+    margin-bottom: 1.5rem;  /* Agrega espaciado inferior */
+}
+
+/* Puedes mantener los estilos existentes del botón, solo asegúrate de que no tengan márgenes laterales */
+#confirm-btn {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s, transform 0.2s;
+    /* Elimina cualquier 'margin' que pueda interferir con el centrado */
+}
+
+.confirm-btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem; /* O el valor que prefieras para el espaciado superior */
+}
+
+#confirm-btn:hover {
+    transform: translateY(-2px);
+}
+
+#confirm-btn:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* Estilos de comodines y controles */
+.controls {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+.controls button {
+    flex: 1 1 auto;
+    max-width: 150px;
+    background-color: #005f99;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    font-size: clamp(0.8rem, 2.5vw, 1rem);
+}
+
+.controls button:hover {
+    background-color: #004c80;
+    transform: translateY(-2px);
+}
+
+.controls button:disabled {
+    background-color: #333;
+    color: #999;
+    border-color: #555;
+    cursor: not-allowed;
+}
+
+/* Estilos para el nuevo enlace de administrador */
+#admin-link {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #ffcc00;
+    color: #003366;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s;
+    margin-top: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#admin-link:hover {
+    background-color: #ffb800;
+    transform: translateY(-2px);
+}
+
+/* Estilos de los modales (alerta y confirmación) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #003366;
+    padding: 1.5rem;
+    border: 2px solid #ffcc00;
+    width: 90%;
+    max-width: 450px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+    transform: scale(0.95);
+    animation: pop-up 0.3s forwards;
+}
+
+@keyframes pop-up {
+    100% {
+        transform: scale(1);
+    }
+}
+
+.modal-content p {
+    color: #ffcc00;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.modal-content button {
+    background-color: #ffcc00;
+    color: #003366;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    margin-top: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.modal-content button:hover {
+    background-color: #ffb800;
+    transform: translateY(-2px);
+}
+
+.modal-content .modal-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.modal-content .modal-buttons button {
+    flex-grow: 1;
+}
+
+
+
+/* O si prefieres mantenerlo dentro del contenedor: */
+.game-container {
+    position: relative; /* Añade esto */
+    /* ... resto de estilos ... */
+}
+
+
+
+/* === Nuevos estilos para la pantalla de progresión === */
+#progression-screen {
+    background-color: rgba(0, 51, 102, 0.95);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#progression-screen h2 {
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    color: #ffcc00;
+    margin-bottom: 1rem;
+}
+
+#progression-steps-container {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 0.5rem;
+    width: 100%;
+    max-height: 70vh;
+    overflow-y: auto;
+    /* --- MODIFICACIÓN AQUÍ --- */
+    padding: 1rem 0.5rem 1rem 50px; /* Añade padding a la izquierda para el emoji */
+}
+
+.progression-step {
+    background-color: #004d99;
+    border: 2px solid #003366;
+    border-radius: 10px;
+    padding: 0.75rem;
+    text-align: left;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    /* --- MODIFICACIÓN AQUÍ --- */
+    position: relative; /* Necesario para posicionar el emoji */
+    transition: background-color 0.5s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.progression-step.completed {
+    background-color: #ffcc00;
+    color: #003366;
+    font-weight: bold;
+    transform: scale(1.05);
+}
+
+/* --- NUEVOS ESTILOS AQUÍ --- */
+
+/* Animación para el nivel recién completado */
+.progression-step.newly-completed {
+    animation: level-up 1s forwards ease-out;
+}
+
+@keyframes level-up {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+    50% {
+        transform: scale(1.15); /* Crece más para un efecto "pop" */
+        background-color: #fff3a3; /* Un flash más brillante */
+        color: #003366;
+        box-shadow: 0 8px 25px rgba(255, 204, 0, 0.6);
+    }
+    100% {
+        transform: scale(1.05); /* Se asienta en el estado final de "completado" */
+        background-color: #ffcc00;
+        color: #003366;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    }
+}
+
+/* Estilo y animación para el marcador de la biblia */
+.bible-marker {
+    position: absolute;
+    left: -45px; /* Posición a la izquierda del recuadro */
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2.2rem; /* Tamaño del emoji */
+    text-shadow: 0 0 5px rgba(255,255,255,0.7);
+    animation: bounce-marker 2.5s infinite ease-in-out;
+}
+
+@keyframes bounce-marker {
+    0%, 100% {
+        transform: translateY(-50%) scale(1);
+    }
+    50% {
+        transform: translateY(-50%) scale(1.1);
+    }
+}
+/* --- FIN DE NUEVOS ESTILOS --- */
+
+
+.progression-step h4 {
+    margin: 0;
+    font-size: clamp(1rem, 3vw, 1.2rem);
+}
+
+.progression-step p {
+    margin: 0.25rem 0 0;
+    font-size: clamp(0.8rem, 2.5vw, 1rem);
+    color: #cccccc;
+}
+
+.progression-step.completed p {
+    color: #003366;
+}
+
+#continue-btn {
+    padding: 0.75rem 1.75rem;
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#continue-btn:hover {
+    background-color: #388e3c;
+}
+
+/* Estilo para el nuevo contenedor del botón de confirmar */
+.confirm-btn-container {
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center;     /* (Opcional) Centra el contenido verticalmente si es necesario */
+    width: 100%;             /* Asegura que el contenedor ocupe todo el ancho */
+    margin-top: 2rem;        /* Agrega un poco de espacio sobre el botón */
+}
+
+#end-screen {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 51, 102, 0.95);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+#end-screen h2 {
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    color: #ffcc00;
+    text-shadow: 1px 1px 2px #000;
+    margin-bottom: 1.5rem;
+}
+
+#end-screen p {
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    margin: 0.5rem 0;
+}
+
+#end-screen button {
+    padding: 0.75rem 1.75rem;
+    font-size: 1rem;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 1.5rem;
+}
+
+#end-screen button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+/* AÑADIR al style.css */
+#save-score-form {
+    margin: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+#player-alias {
+    padding: 0.8rem;
+    border-radius: 8px;
+    border: 2px solid #ffcc00;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    width: 200px;
+}
+
+#save-score-btn {
+    background-color: #ffcc00;
+    color: #003366;
+}
+
+.rank-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    border-left: 4px solid #ffcc00;
+}
+
+.rank-position {
+    font-weight: bold;
+    color: #ffcc00;
+    min-width: 40px;
+}
+
+.rank-alias {
+    flex-grow: 1;
+    text-align: left;
+    margin-left: 1rem;
+}
+
+.rank-score {
+    font-weight: bold;
+    color: #4caf50;
+    min-width: 80px;
+}
+
+.rank-time {
+    color: #cccccc;
+    font-size: 0.9rem;
+    min-width: 60px;
+}
+
+/* Estilos para el formulario de alias */
+#save-score-form {
+    margin: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+#player-alias {
+    padding: 0.8rem;
+    border-radius: 8px;
+    border: 2px solid #ffcc00;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    width: 250px;
+}
+
+#player-alias::placeholder {
+    color: #cccccc;
+}
+
+#save-score-btn {
+    background-color: #ffcc00;
+    color: #003366;
+    padding: 0.75rem 1.5rem;
+}
+
+/* Estilos para la pantalla de ranking */
+#ranking-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 51, 102, 0.95);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+.rank-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    border-left: 4px solid #ffcc00;
+    width: 400px;
+    max-width: 90%;
+}
+
+.rank-item {
+    display: grid;
+    grid-template-columns: 50px 1fr 80px 50px 60px;
+    align-items: center;
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    border-left: 4px solid #ffcc00;
+    gap: 0.5rem;
+}
+
+.rank-perfectas {
+    color: #ffcc00;
+    font-weight: bold;
+    text-align: center;
+}
+
+.rank-perfect-badge {
+    color: #ff6b6b;
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* Para partidas perfectas */
+.rank-item.perfect {
+    background: linear-gradient(135deg, #ffd700 0%, #ffb700 100%) !important;
+    color: #003366;
+    border-left: 4px solid #ff6b6b;
+}
+
+/* --- INICIA CÓDIGO DE RESPONSIVIDAD --- */
+
+/* Estilos para pantallas de 600px de ancho o menos (móviles) */
+@media (max-width: 600px) {
+
+    /* 1. Reduce el espacio a la izquierda para el emoji */
+    #progression-steps-container {
+        padding-left: 40px; 
+    }
+
+    /* 2. Acerca el emoji al recuadro y lo hace un poco más pequeño */
+    .bible-marker {
+        left: -35px;
+        font-size: 1.8rem; /* Un poco más pequeño para móviles */
+    }
+
+    /* 3. (Opcional) Reduce un poco el padding general de la pantalla de progresión */
+    #progression-screen {
+        padding: 1.5rem 1rem;
+    }
+}
+
+/* --- TERMINA CÓDIGO DE RESPONSIVIDAD --- */
+
+/* --- INICIA CÓDIGOS PARA PANTALLA DE PROGRESIÓN ADAPTABLE --- */
+
+/* 1. Ajustes generales para el contenedor de los niveles */
+#progression-steps-container {
+    max-height: none; /* Eliminamos la altura máxima para que no genere scroll */
+    overflow-y: visible; /* Desactivamos el scroll interno */
+    gap: 0.3rem;      /* Reducimos el espacio entre niveles */
+    padding-left: 45px; /* Mantenemos el espacio para el emoji de la biblia */
+    width: 100%;
+}
+
+/* 2. Hacemos cada nivel más compacto */
+.progression-step {
+    padding: 0.5rem 0.75rem; /* Reducimos el espacio vertical interno */
+    display: flex;          /* Usamos flexbox para alinear mejor el título */
+    align-items: center;
+    min-height: 40px;       /* Aseguramos una altura mínima consistente */
+}
+
+/* 3. Ocultamos la descripción larga por defecto (Mobile First) */
+.progression-step p {
+    display: none; 
+}
+
+/* 4. Ajustamos el título para que ocupe el espacio disponible */
+.progression-step h4 {
+    font-size: clamp(0.9rem, 3vw, 1.1rem); /* Hacemos la fuente un poco más pequeña */
+    line-height: 1.2;
+    margin-left: 0.5rem; /* Pequeño espacio por si el emoji se sobrepone */
+}
+
+/* 5. Ajustamos la posición y tamaño del marcador de la biblia */
+.bible-marker {
+    left: -40px; /* Lo acercamos un poco */
+    font-size: 2rem;   /* Ajustamos su tamaño */
+}
+
+
+/* 6. (Opcional) Para pantallas más grandes, como tablets o PC, volvemos a mostrar la descripción */
+@media (min-width: 768px) {
+    #progression-steps-container {
+        gap: 0.5rem; /* Devolvemos un poco de espacio en pantallas grandes */
+    }
+
+    .progression-step {
+        display: block; /* Volvemos al display original */
+        padding: 0.75rem;
+    }
+
+    .progression-step p {
+        display: block; /* Mostramos la descripción de nuevo */
+        font-size: 0.8rem; /* Reducimos ligeramente la fuente para que no ocupe tanto */
+        margin-top: 0.25rem;
+    }
+}
+
+/* --- TERMINA CÓDIGO DE PROGRESIÓN ADAPTABLE --- */
