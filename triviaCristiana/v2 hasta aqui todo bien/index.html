@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Juego de preguntas al estilo ¿Quién quiere ser millonario? con niveles, temporizador y comodines.">
+    <title>Juego de Preguntas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- PANTALLA DE INICIO -->
+    <div id="start-screen" style="display: flex;">
+        <div class="start-container">
+            <h1>¿Quién quiere ser Cristiano?</h1>
+            <div class="start-buttons">
+                <button id="start-game-btn" class="start-btn">Comenzar Juego</button>
+                <button id="view-ranking-btn-start" class="start-btn">Ver Ranking</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTENEDOR PRINCIPAL DEL JUEGO -->
+    <div class="game-container" id="game-container" role="main" style="display: none;">
+        <h1 class="game-title">¿Quién quiere ser Cristiano?</h1> 
+        
+        <div class="header-info">
+            <span id="score-display">Puntuación: 0</span>
+            <span id="time">30</span>
+        </div>
+
+        <h2 id="question-text"></h2>
+        
+        <div id="answers">
+            <button class="answer-btn" id="answer1"></button>
+            <button class="answer-btn" id="answer2"></button>
+            <button class="answer-btn" id="answer3"></button>
+            <button class="answer-btn" id="answer4"></button>
+        </div>
+        
+        <div class="confirm-btn-container">
+            <button id="confirm-btn" aria-label="Confirmar respuesta seleccionada" disabled>Confirmar</button>
+        </div>      
+        
+        <div class="controls">
+            <button id="fifty-fifty" aria-label="Usar comodín 50/50">50/50</button>
+            <button id="pause-time" aria-label="Pausar temporizador">Pausar Tiempo</button>
+            <button id="next-question" aria-label="Pasar a la siguiente pregunta">Saltar Pregunta</button>
+        </div>
+        
+        <a href="admin.html" id="admin-link">Ir al Panel de Administración</a>
+
+        <div id="message-modal" class="modal">
+            <div class="modal-content">
+                <p id="modal-message"></p>
+                <button id="modal-ok-btn">OK</button>
+            </div>
+        </div>
+    </div>
+    <!-- FIN DEL CONTENEDOR PRINCIPAL -->
+
+    <!-- PANTALLA DE PROGRESIÓN - FUERA del game-container -->
+    <div id="progression-screen" style="display: none;">
+        <h2>Tu Camino en la Fe</h2>
+        <div id="progression-steps-container"></div>
+        <button id="continue-btn">Continuar</button>
+    </div>
+
+    <!-- PANTALLA FINAL - FUERA del game-container -->
+          <div id="end-screen" style="display: none;">
+              <h2>Juego Terminado</h2>
+              <p>Puntuación final: <span id="final-score">0</span></p>
+              <p>Preguntas respondidas: <span id="questions-answered">0</span></p>
+              <p>Tiempo restante: <span id="remaining-time">0</span></p>
+              
+              <!-- ✅ AGREGAR ESTO: FORMULARIO DE ALIAS -->
+              <div id="save-score-form">
+                  <input type="text" id="player-alias" placeholder="Escribe tu alias (máx. 15 caracteres)" maxlength="15">
+                  <button id="save-score-btn">Guardar Puntuación</button>
+              </div>
+              
+              <button id="restart-btn">Reiniciar Juego</button>
+              <button id="view-ranking-btn" style="display:none;">Ver Ranking</button>
+          </div>
+
+          <div id="ranking-screen" style="display: none;">
+              <h2>🏆 Ranking de Jugadores</h2>
+              <div id="ranking-list"></div>
+              <button id="back-to-game-btn">Volver al Juego</button>
+              <button id="back-to-start-btn">Volver al Inicio</button>
+          </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>

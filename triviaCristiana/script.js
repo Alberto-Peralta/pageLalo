@@ -191,13 +191,24 @@ document.addEventListener('DOMContentLoaded', () => {
         niveles.forEach((nivel, index) => {
             const step = document.createElement('div');
             step.classList.add('progression-step');
-            step.innerHTML = `<h4>${nivel.title} ${nivel.emoji}</h4><p>${nivel.description}</p>`;
+            
+            // --- MODIFICACIÓN AQUÍ ---
+           // Añade el emoji de la biblia como marcador del nivel ACTUAL (recientemente alcanzado)
+            const isCurrentLevel = (index === puntuacion - 1 && puntuacion > 0); // <--- ESTA ES LA LÍNEA CORREGIDA
+            const bibleEmojiMarker = isCurrentLevel ? '<span class="bible-marker">📖</span>' : '';
+            step.innerHTML = `${bibleEmojiMarker}<h4>${nivel.title} ${nivel.emoji}</h4><p>${nivel.description}</p>`;
             
             // Marca el nivel como completado si el índice es menor que la puntuación
             if (index < puntuacion) {
                 step.classList.add('completed');
             }
             
+            // Añade una clase especial al nivel recién completado para la animación
+            if (index === puntuacion - 1) {
+                step.classList.add('newly-completed');
+            }
+            // --- FIN DE LA MODIFICACIÓN ---
+
             progressionStepsContainer.appendChild(step);
         });
     }
@@ -371,12 +382,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // Listeners de eventos
 
 
-     
 
 
     answerButtons.forEach(btn => btn.addEventListener('click', seleccionarRespuesta));
 
-         
+
 
 
     confirmBtn.addEventListener('click', () => {
