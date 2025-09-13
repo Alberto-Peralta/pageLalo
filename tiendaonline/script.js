@@ -2,6 +2,8 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
 import { getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
 import { getDatabase, ref, push, remove, set, onValue, update, get } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-database.js";
+// ===== NUEVAS IMPORTACIONES =====
+import { getStorage, ref as storageRef, uploadBytesResumable, getDownloadURL } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-storage.js";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -18,6 +20,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 const auth = getAuth(app);
+const storage = getStorage(app); // <-- AÑADE ESTA LÍNEA
 
 const appId = 'default-app-id';
 
@@ -57,20 +60,16 @@ let currentUser = null; // Para saber quién está logueado
 let adminClicks = 0;
 let orders = [];
 let coupons = [];
+let currentImageUrls = []; // Array para gestionar las imágenes en el formulario
 
-// script.js
-
-// ... (después de tus variables de estado)
-
-let currentImageUrls = []; // NUEVO: Array para gestionar las imágenes en el formulario
-
+// --- FUNCIONES PARA MANEJO DE IMÁGENES ---
 // NUEVA FUNCIÓN: Actualiza la lista visual de URLs de imágenes en el formulario
 function updateImageUrlsUI() {
     const container = document.getElementById('imageUrlsContainer');
     container.innerHTML = ''; // Limpiar el contenedor
 
     if (currentImageUrls.length === 0) {
-        container.innerHTML = '<p class="text-xs text-gray-500">Aún no hay imágenes. Añade una URL abajo.</p>';
+        container.innerHTML = '<p class="text-xs text-gray-500">Aún no hay imágenes. Sube un archivo o añade una URL abajo.</p>';
         return;
     }
 
@@ -78,7 +77,8 @@ function updateImageUrlsUI() {
         const imageElement = document.createElement('div');
         imageElement.className = 'flex items-center justify-between bg-white p-2 rounded-md text-sm';
         imageElement.innerHTML = `
-            <span class="text-gray-700 truncate">${url}</span>
+            <img src="${url}" class="w-10 h-10 object-cover rounded-md mr-2">
+            <span class="text-gray-700 truncate flex-grow">${url}</span>
             <button type="button" data-index="${index}" class="remove-image-btn text-red-500 hover:text-red-700 font-bold ml-2">&times;</button>
         `;
         container.appendChild(imageElement);
@@ -90,6 +90,12 @@ function setupImageManagementListeners() {
     const addImageBtn = document.getElementById('addImageBtn');
     const newImageUrlInput = document.getElementById('newImageUrl');
     const imageUrlsContainer = document.getElementById('imageUrlsContainer');
+    
+    // NUEVA LÓGICA PARA SUBIR ARCHIVOS
+    const imageUploadInput = document.getElementById('imageUploadInput');
+    if (imageUploadInput) {
+        imageUploadInput.addEventListener('change', handleImageUpload);
+    }
 
     addImageBtn.addEventListener('click', () => {
         const url = newImageUrlInput.value.trim();
@@ -114,13 +120,62 @@ function setupImageManagementListeners() {
     });
 }
 
-// Llama a esta función cuando se cargue el DOM
-document.addEventListener('DOMContentLoaded', () => {
-    // ... tu código existente
-    if (document.getElementById('adminPanel')) {
-        setupImageManagementListeners(); // Asegúrate de llamar a la nueva función
+// NUEVA FUNCIÓN: Maneja la subida de imágenes a Firebase Storage
+function handleImageUpload(e) {
+    const files = e.target.files;
+    if (!files.length) return;
+
+    const progressContainer = document.getElementById('uploadProgressContainer');
+
+    for (const file of files) {
+        // Crear un nombre de archivo único para evitar sobreescribir
+        const fileName = `${Date.now()}-${file.name}`;
+        const sRef = storageRef(storage, `products/${fileName}`);
+
+        const uploadTask = uploadBytesResumable(sRef, file);
+
+        // Crear un elemento visual para la barra de progreso
+        const progressWrapper = document.createElement('div');
+        progressWrapper.className = 'w-full bg-gray-200 rounded-full h-2.5 mb-2';
+        progressWrapper.innerHTML = `
+            <div class="bg-yellow-500 h-2.5 rounded-full transition-all duration-300" style="width: 0%"></div>
+            <p class="text-xs text-gray-600 mt-1 truncate">${file.name}</p>
+        `;
+        progressContainer.appendChild(progressWrapper);
+        const progressBar = progressWrapper.querySelector('div');
+
+        uploadTask.on('state_changed', 
+            (snapshot) => {
+                // Actualizar el progreso
+                const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+                progressBar.style.width = progress + '%';
+            }, 
+            (error) => {
+                // Manejar errores
+                console.error("Error al subir la imagen:", error);
+                showMessage('Error de Subida', 'No se pudo subir la imagen.');
+                progressWrapper.remove(); // Limpiar la barra de progreso
+            }, 
+            () => {
+                // Subida completada
+                getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
+                    console.log('Archivo disponible en', downloadURL);
+
+                    // Añadir la nueva URL a nuestra lista y actualizar la UI
+                    currentImageUrls.push(downloadURL);
+                    updateImageUrlsUI();
+
+                    // Ocultar la barra de progreso después de un momento
+                    setTimeout(() => progressWrapper.remove(), 1000);
+                });
+            }
+        );
     }
-});
+    
+    // Limpiar el input para permitir subir el mismo archivo otra vez
+    e.target.value = '';
+}
+
 
 // --- LÓGICA PRINCIPAL ---
 
@@ -305,6 +360,7 @@ function renderProducts(productList) {
                 // Actualiza la miniatura activa
                 thumbnails.forEach((thumb, idx) => {
                     thumb.classList.toggle('active', idx === currentIndex);
+                    thumb.classList.toggle('border-yellow-500', idx === currentIndex);
                     thumb.classList.toggle('border-gray-200', idx !== currentIndex);
                 });
             };
@@ -388,8 +444,11 @@ function renderAdminTable() {
             document.getElementById('productDescription').value = product.description;
             document.getElementById('productPrice').value = product.price;
             document.getElementById('productOfferPrice').value = product.offerPrice || '';
+            
+            // MODIFICADO: Cargar el array de imágenes en la UI
             currentImageUrls = [...(product.imageUrls || (product.imageUrl ? [product.imageUrl] : []) )];
             updateImageUrlsUI();
+            
             submitBtn.textContent = 'Actualizar Artículo';
             cancelBtn.classList.remove('hidden');
         }
@@ -451,7 +510,6 @@ function renderOrdersList() {
                             <option value="cancelado" ${(order.status || 'pendiente') === 'cancelado' ? 'selected' : ''}>Cancelado</option>
                         </select>
                     </div>
-                    <!-- NUEVOS BOTONES DE ACCIÓN -->
                     <div class="flex justify-end gap-2 mt-2">
                         <button class="view-order-btn bg-blue-500 text-white px-3 py-1 rounded text-sm hover:bg-blue-600 transition-colors" data-order-id="${order.id}">
                             👁️ Ver Detalles
@@ -614,7 +672,7 @@ function renderProductSelection() {
     const productCheckboxes = products.map(product => `
         <label class="flex items-center p-2 bg-gray-50 rounded-lg hover:bg-gray-100 cursor-pointer">
             <input type="checkbox" name="selectedProducts" value="${product.id}" class="mr-3 h-4 w-4 text-yellow-600 focus:ring-yellow-500 border-gray-300 rounded">
-            <img src="${product.imageUrl}" alt="${product.name}" class="w-10 h-10 object-cover rounded-md mr-3">
+            <img src="${(product.imageUrls && product.imageUrls.length > 0) ? product.imageUrls[0] : product.imageUrl}" alt="${product.name}" class="w-10 h-10 object-cover rounded-md mr-3">
             <div class="flex-grow">
                 <p class="text-sm font-medium text-gray-900">${product.name}</p>
                 <p class="text-xs text-gray-500">$${product.price.toFixed(2)}</p>
@@ -952,11 +1010,11 @@ async function toggleCouponStatus(code, currentStatus) {
             });
             showMessage('Éxito', `Cupón "${code}" ${newStatus ? 'activado' : 'desactivado'} exitosamente.`);
         } catch (error) {
-            console.error('Error al cambiar estado del cupón:', error);
-            showMessage('Error', 'No se pudo cambiar el estado del cupón.');
+                console.error('Error al cambiar estado del cupón:', error);
+                showMessage('Error', 'No se pudo cambiar el estado del cupón.');
+            }
         }
     }
-}
 
 // Eliminar cupón
 async function deleteCoupon(code) {
@@ -1019,7 +1077,7 @@ function updateCartUI() {
             const item = document.createElement('li');
             item.className = 'bg-gray-50 p-3 rounded-lg flex items-center gap-4 border border-gray-200';
             item.innerHTML = `
-                <img src="${product.imageUrl}" class="w-16 h-16 object-cover rounded-md">
+                <img src="${(product.imageUrls && product.imageUrls.length > 0) ? product.imageUrls[0] : product.imageUrl}" class="w-16 h-16 object-cover rounded-md">
                 <div class="flex-grow">
                     <h4 class="text-sm font-bold text-gray-800">${product.name}</h4>
                     <p class="text-xs text-gray-600">Cantidad: ${quantity}</p>
@@ -1094,6 +1152,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // AÑADIR ESTO: Llamada a la función para configurar los listeners de imágenes
+    setupImageManagementListeners();
 
     if (searchInput) searchInput.addEventListener('input', () => renderProducts(products.filter(p => p.name.toLowerCase().includes(searchInput.value.toLowerCase()))));
     
