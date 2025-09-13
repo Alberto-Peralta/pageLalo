@@ -70,26 +70,14 @@
                         <label for="productOfferPrice" class="block text-sm font-medium text-gray-600 mb-1">Precio de Oferta (Opcional)</label>
                         <input type="number" id="productOfferPrice" step="0.01" min="0" placeholder="Ej: 89.99" class="w-full rounded-lg border-gray-300 shadow-sm p-2 bg-gray-50 text-gray-900">
                     </div>
-
                     <div class="form-group md:col-span-2 lg:col-span-3">
                         <label for="productDescription" class="block text-sm font-medium text-gray-600 mb-1">Descripción</label>
                         <textarea id="productDescription" rows="3" required class="w-full rounded-lg border-gray-300 shadow-sm p-2 bg-gray-50 text-gray-900"></textarea>
                     </div>
                     <div class="form-group md:col-span-2 lg:col-span-3">
-                        <label class="block text-sm font-medium text-gray-600 mb-1">Imágenes del Artículo</label>
-                        
-                        <div id="imageUrlsContainer" class="space-y-2 mb-2 p-3 bg-gray-100 rounded-lg border">
-                            <p class="text-xs text-gray-500">Aún no hay imágenes. Añade una URL abajo.</p>
-                        </div>
-
-                        <div class="flex gap-2">
-                            <input type="url" id="newImageUrl" placeholder="https://ejemplo.com/imagen.jpg" 
-                                class="w-full rounded-lg border-gray-300 shadow-sm p-2 bg-white text-gray-900 flex-grow">
-                            <button type="button" id="addImageBtn" class="btn-secondary px-4">Añadir</button>
-                        </div>
-                        <p class="text-xs text-gray-500 mt-1">La primera imagen de la lista será la portada del producto.</p>
+                        <label for="productImage" class="block text-sm font-medium text-gray-600 mb-1">URL de Imagen</label>
+                        <input type="url" id="productImage" required class="w-full rounded-lg border-gray-300 shadow-sm p-2 bg-gray-50 text-gray-900">
                     </div>
-                   
                     <div class="form-actions md:col-span-2 lg:col-span-3 flex gap-4 justify-end">
                         <button type="button" id="cancelBtn" class="btn-secondary hidden">Cancelar</button>
                         <button type="submit" id="submitBtn" class="btn-primary">Agregar Artículo</button>
@@ -105,16 +93,20 @@
                 </div>
                 <div id="ordersList" class="space-y-4"></div>
             </div>
-            
+
+            <!-- SECCIÓN ACTUALIZADA DE CUPONES -->
             <div id="couponsContent" class="hidden">
                 <h3 class="text-xl font-bold text-gray-800 mb-4">Gestionar Cupones</h3>
                 <form id="couponForm" class="space-y-6 p-6 bg-gray-50 rounded-lg border">
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <!-- Código del cupón -->
                         <div class="form-group">
                             <label for="couponCode" class="block text-sm font-medium text-gray-600 mb-1">Código del Cupón</label>
                             <input type="text" id="couponCode" required placeholder="EJ: BIENVENIDO10" 
                                    class="w-full rounded-lg border-gray-300 shadow-sm p-2 bg-white text-gray-900 uppercase">
                         </div>
+
+                        <!-- Tipo de descuento -->
                         <div class="form-group">
                             <label for="couponType" class="block text-sm font-medium text-gray-600 mb-1">Tipo de Descuento</label>
                             <select id="couponType" required class="w-full rounded-lg border-gray-300 shadow-sm p-2 bg-white text-gray-900">
@@ -122,11 +114,15 @@
                                 <option value="fixed">Monto Fijo ($)</option>
                             </select>
                         </div>
+
+                        <!-- Valor del descuento -->
                         <div class="form-group">
                             <label for="couponValue" class="block text-sm font-medium text-gray-600 mb-1">Valor</label>
                             <input type="number" id="couponValue" step="0.01" min="0" required placeholder="Ej: 15 o 50" 
                                    class="w-full rounded-lg border-gray-300 shadow-sm p-2 bg-white text-gray-900">
                         </div>
+
+                        <!-- Aplicación del cupón -->
                         <div class="form-group">
                             <label for="couponApplicationType" class="block text-sm font-medium text-gray-600 mb-1">Aplicar a</label>
                             <select id="couponApplicationType" required onchange="toggleProductSelection()" 
@@ -135,23 +131,33 @@
                                 <option value="specific">Productos específicos</option>
                             </select>
                         </div>
+
+                        <!-- Número de usos (opcional) -->
                         <div class="form-group">
                             <label for="couponUses" class="block text-sm font-medium text-gray-600 mb-1">Usos Máximos (opcional)</label>
                             <input type="number" id="couponUses" min="1" placeholder="Ilimitado" 
                                    class="w-full rounded-lg border-gray-300 shadow-sm p-2 bg-white text-gray-900">
                         </div>
                     </div>
+
+                    <!-- Selección de productos específicos -->
                     <div id="productSelection" class="hidden">
                         <label class="block text-sm font-medium text-gray-600 mb-2">Seleccionar Productos</label>
                         <div class="bg-white p-4 rounded-lg border border-gray-300">
+                            <!-- Los checkboxes de productos se generarán dinámicamente aquí -->
                         </div>
                     </div>
+
+                    <!-- Botones de acción -->
                     <div class="flex gap-4 justify-end">
                         <button type="button" id="cancelCouponBtn" class="btn-secondary hidden">Cancelar</button>
                         <button type="submit" id="submitCouponBtn" class="btn-primary">Agregar Cupón</button>
                     </div>
                 </form>
+
+                <!-- Tabla de cupones -->
                 <div id="couponsTableContainer" class="mt-6">
+                    <!-- La tabla se genera dinámicamente aquí -->
                 </div>
             </div>
         </div>
@@ -159,24 +165,23 @@
         <section id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"></section>
     </div>
 
-   <div id="productModal" class="modal">
-    <div class="modal-content max-w-2xl">
-        <span class="close-button">&times;</span>
-        
-        <div>
-            <img id="modalMainImage" class="w-full h-auto max-h-96 object-contain rounded-xl shadow-lg mb-4" src="" alt="Artículo en pantalla completa">
-            
-            <div id="modalThumbnails" class="flex gap-2 justify-center overflow-x-auto p-2">
-                </div>
-        </div>
-
-        <div class="text-center mt-4">
+    <div id="productModal" class="modal">
+        <div class="modal-content text-center">
+            <span class="close-button">&times;</span>
+            <img id="modalImage" class="w-full h-auto rounded-xl shadow-lg mb-4" src="" alt="Artículo en pantalla completa">
             <h3 id="modalName" class="text-3xl font-bold mb-2"></h3>
             <p id="modalDescription" class="text-lg text-gray-600 mb-4"></p>
             <span id="modalPrice" class="text-2xl font-semibold text-yellow-600"></span>
         </div>
     </div>
-</div>
+    
+    <div id="messageBox" class="modal">
+        <div class="modal-content text-center max-w-sm">
+            <h3 id="messageTitle" class="text-xl font-bold mb-2 text-yellow-600"></h3>
+            <p id="messageText" class="text-gray-600 mb-4"></p>
+            <button id="closeMessageBtn" class="bg-gray-200 text-gray-800 font-bold py-2 px-4 rounded-full">Cerrar</button>
+        </div>
+    </div>
 
     <div id="loginModal" class="modal">
         <div class="modal-content text-center max-w-sm">
@@ -213,15 +218,6 @@
         </svg>
         <span id="cartCount" class="absolute top-0 right-0 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-100 transform translate-x-1/2 -translate-y-1/2 bg-red-600 rounded-full">0</span>
     </button>
-    <div id="messageBox" class="modal">
-        <div class="modal-content text-center max-w-sm">
-            <h3 id="messageTitle" class="text-2xl font-bold mb-4 text-gray-900"></h3>
-            <p id="messageText" class="text-gray-600 mb-6"></p>
-            <button id="closeMessageBtn" class="btn-primary w-full">Aceptar</button>
-        </div>
-    </div>
-    <div id="cartPanel" class="fixed top-0 right-0 h-full ...">
-        </div>
 
     <script type="module" src="script.js"></script>
 </body>

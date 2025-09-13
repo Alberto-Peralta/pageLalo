@@ -58,69 +58,6 @@ let adminClicks = 0;
 let orders = [];
 let coupons = [];
 
-// script.js
-
-// ... (después de tus variables de estado)
-
-let currentImageUrls = []; // NUEVO: Array para gestionar las imágenes en el formulario
-
-// NUEVA FUNCIÓN: Actualiza la lista visual de URLs de imágenes en el formulario
-function updateImageUrlsUI() {
-    const container = document.getElementById('imageUrlsContainer');
-    container.innerHTML = ''; // Limpiar el contenedor
-
-    if (currentImageUrls.length === 0) {
-        container.innerHTML = '<p class="text-xs text-gray-500">Aún no hay imágenes. Añade una URL abajo.</p>';
-        return;
-    }
-
-    currentImageUrls.forEach((url, index) => {
-        const imageElement = document.createElement('div');
-        imageElement.className = 'flex items-center justify-between bg-white p-2 rounded-md text-sm';
-        imageElement.innerHTML = `
-            <span class="text-gray-700 truncate">${url}</span>
-            <button type="button" data-index="${index}" class="remove-image-btn text-red-500 hover:text-red-700 font-bold ml-2">&times;</button>
-        `;
-        container.appendChild(imageElement);
-    });
-}
-
-// NUEVA FUNCIÓN: Configura los listeners para los botones de añadir/eliminar imagen
-function setupImageManagementListeners() {
-    const addImageBtn = document.getElementById('addImageBtn');
-    const newImageUrlInput = document.getElementById('newImageUrl');
-    const imageUrlsContainer = document.getElementById('imageUrlsContainer');
-
-    addImageBtn.addEventListener('click', () => {
-        const url = newImageUrlInput.value.trim();
-        if (url) {
-            try {
-                new URL(url); // Validar que sea una URL válida
-                currentImageUrls.push(url);
-                updateImageUrlsUI();
-                newImageUrlInput.value = ''; // Limpiar el input
-            } catch (_) {
-                showMessage('URL Inválida', 'Por favor, ingresa una URL de imagen válida.');
-            }
-        }
-    });
-
-    imageUrlsContainer.addEventListener('click', (e) => {
-        if (e.target.classList.contains('remove-image-btn')) {
-            const indexToRemove = parseInt(e.target.dataset.index, 10);
-            currentImageUrls.splice(indexToRemove, 1);
-            updateImageUrlsUI();
-        }
-    });
-}
-
-// Llama a esta función cuando se cargue el DOM
-document.addEventListener('DOMContentLoaded', () => {
-    // ... tu código existente
-    if (document.getElementById('adminPanel')) {
-        setupImageManagementListeners(); // Asegúrate de llamar a la nueva función
-    }
-});
 
 // --- LÓGICA PRINCIPAL ---
 
@@ -228,7 +165,6 @@ function setupOrderSearch() {
 
 // --- RENDERIZADO ---
 
-
 function renderProducts(productList) {
     if (!productGrid) return;
     productGrid.innerHTML = '';
@@ -253,14 +189,9 @@ function renderProducts(productList) {
             priceHtml = `<span class="text-2xl font-bold text-yellow-600">$${product.price.toFixed(2)}</span>`;
         }
 
-        // Obtener la imagen principal del array (compatible con estructura vieja y nueva)
-        const mainImageUrl = (product.imageUrls && product.imageUrls.length > 0) 
-            ? product.imageUrls[0] 
-            : product.imageUrl || 'https://via.placeholder.com/300';
-
         productCard.innerHTML = `
             ${offerBadgeHtml}
-            <img src="${mainImageUrl}" alt="${product.name}" class="w-full h-48 object-cover rounded-xl mb-4">
+            <img src="${product.imageUrl}" alt="${product.name}" class="w-full h-48 object-cover rounded-xl mb-4">
             <h3 class="text-xl font-bold mb-2 text-gray-800">${product.name}</h3>
             <p class="text-sm text-gray-600 mb-4 flex-grow line-clamp-3">${product.description}</p>
             <div class="mb-4">${priceHtml}</div>
@@ -935,49 +866,11 @@ function updateCartUI() {
 }
 
 // --- MODALES Y MENSAJES ---
-
 function showProductModal(product) {
-    const mainImage = productModal.querySelector('#modalMainImage');
-    const thumbnailsContainer = productModal.querySelector('#modalThumbnails');
-    
-    // Obtener todas las imágenes disponibles
-    const allImages = (product.imageUrls && product.imageUrls.length > 0) 
-        ? product.imageUrls 
-        : [product.imageUrl || 'https://via.placeholder.com/300'];
-
-    // Limpiar contenedores
-    mainImage.src = '';
-    thumbnailsContainer.innerHTML = '';
-    
-    // Establecer la imagen principal inicial
-    mainImage.src = allImages[0];
-
-    // Generar las miniaturas
-    allImages.forEach(url => {
-        const thumb = document.createElement('img');
-        thumb.src = url;
-        thumb.className = 'w-16 h-16 object-cover rounded-md cursor-pointer border-2 border-transparent hover:border-yellow-500 transition-all';
-        thumbnailsContainer.appendChild(thumb);
-
-        // Añadir evento de clic para cambiar la imagen principal
-        thumb.addEventListener('click', () => {
-            mainImage.src = url;
-            // Opcional: Resaltar la miniatura activa
-            document.querySelectorAll('#modalThumbnails img').forEach(t => t.classList.remove('border-yellow-500'));
-            thumb.classList.add('border-yellow-500');
-        });
-    });
-
-    // Resaltar la primera miniatura
-    if (thumbnailsContainer.firstChild) {
-        thumbnailsContainer.firstChild.classList.add('border-yellow-500');
-    }
-    
-    // Llenar el resto de la información del modal
+    productModal.querySelector('#modalImage').src = product.imageUrl;
     productModal.querySelector('#modalName').textContent = product.name;
     productModal.querySelector('#modalDescription').textContent = product.description;
-    productModal.querySelector('#modalPrice').textContent = `$${product.price.toFixed(2)}`;
-    
+    productModal.querySelector('#modalPrice').textContent = `${product.price.toFixed(2)}`;
     productModal.style.display = 'flex';
 }
 function showMessage(title, text) {
@@ -1072,8 +965,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-
-
 function addAdminTableEventListeners() {
     document.querySelectorAll('.edit-btn').forEach(btn => btn.addEventListener('click', (e) => {
         const product = products.find(p => p.id === e.target.dataset.id);
@@ -1083,34 +974,27 @@ function addAdminTableEventListeners() {
             document.getElementById('productDescription').value = product.description;
             document.getElementById('productPrice').value = product.price;
             document.getElementById('productOfferPrice').value = product.offerPrice || '';
-            
-            // MODIFICADO: Cargar el array de imágenes en la UI
-            currentImageUrls = [...(product.imageUrls || [product.imageUrl] || [])]; // Compatible con datos antiguos y nuevos
-            updateImageUrlsUI();
-            
+            document.getElementById('productImage').value = product.imageUrl;
             submitBtn.textContent = 'Actualizar Artículo';
             cancelBtn.classList.remove('hidden');
         }
     }));
-    // ... el resto de la función (delete-btn) sigue igual
+    document.querySelectorAll('.delete-btn').forEach(btn => btn.addEventListener('click', async (e) => {
+        if (confirm('¿Seguro que quieres eliminar este artículo?')) {
+            await remove(ref(db, `/artifacts/${appId}/public/products/${e.target.dataset.id}`));
+            showMessage('Éxito', 'Artículo eliminado.');
+        }
+    }));
 }
-
 
 async function handleProductFormSubmit(e) {
     e.preventDefault();
-
-    // VALIDACIÓN: Asegurarse de que haya al menos una imagen
-    if (currentImageUrls.length === 0) {
-        showMessage('Error', 'Debes agregar al menos una imagen para el artículo.');
-        return;
-    }
-
     const offerPriceValue = document.getElementById('productOfferPrice').value;
     const productData = {
         name: document.getElementById('productName').value,
         description: document.getElementById('productDescription').value,
         price: parseFloat(document.getElementById('productPrice').value),
-        imageUrls: currentImageUrls, // MODIFICADO: Usamos el array de URLs
+        imageUrl: document.getElementById('productImage').value,
         timestamp: Date.now(),
         offerPrice: offerPriceValue ? parseFloat(offerPriceValue) : null 
     };
@@ -1121,16 +1005,9 @@ async function handleProductFormSubmit(e) {
     resetProductForm();
 }
 
-
-
 function resetProductForm() {
     productForm.reset();
     productIdInput.value = '';
-    
-    // MODIFICADO: Limpiar también el array y la UI de imágenes
-    currentImageUrls = [];
-    updateImageUrlsUI();
-    
     submitBtn.textContent = 'Agregar Artículo';
     cancelBtn.classList.add('hidden');
 }
