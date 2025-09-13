@@ -352,9 +352,15 @@ function renderAdminTable() {
             <tr><th>Imagen</th><th>Artículo</th><th>Precio</th><th class="text-center">Acciones</th></tr>
         </thead>
         <tbody>
-            ${products.map(p => `
+            ${products.map(p => {
+                // LÓGICA PARA OBTENER LA IMAGEN PRINCIPAL (NUEVA Y ANTIGUA)
+                const imageUrl = (p.imageUrls && p.imageUrls.length > 0) 
+                    ? p.imageUrls[0] 
+                    : p.imageUrl || 'https://via.placeholder.com/60';
+
+                return `
                 <tr>
-                    <td><img src="${p.imageUrl}" alt="${p.name}"></td>
+                    <td><img src="${imageUrl}" alt="${p.name}"></td>
                     <td>
                         <div class="font-bold text-gray-800">${p.name}</div>
                         <div class="text-sm text-gray-600">${p.description}</div>
@@ -367,11 +373,35 @@ function renderAdminTable() {
                         </div>
                     </td>
                 </tr>
-            `).join('')}
+                `;
+            }).join('')}
         </tbody>`;
     adminTableContainer.innerHTML = '';
     adminTableContainer.appendChild(table);
-    addAdminTableEventListeners();
+
+    // Vuelve a conectar los event listeners para los botones de editar/eliminar
+    document.querySelectorAll('.edit-btn').forEach(btn => btn.addEventListener('click', (e) => {
+        const product = products.find(p => p.id === e.target.dataset.id);
+        if (product) {
+            productIdInput.value = product.id;
+            document.getElementById('productName').value = product.name;
+            document.getElementById('productDescription').value = product.description;
+            document.getElementById('productPrice').value = product.price;
+            document.getElementById('productOfferPrice').value = product.offerPrice || '';
+            currentImageUrls = [...(product.imageUrls || (product.imageUrl ? [product.imageUrl] : []) )];
+            updateImageUrlsUI();
+            submitBtn.textContent = 'Actualizar Artículo';
+            cancelBtn.classList.remove('hidden');
+        }
+    }));
+
+    document.querySelectorAll('.delete-btn').forEach(btn => btn.addEventListener('click', async (e) => {
+        const id = e.target.dataset.id;
+        if (confirm('¿Estás seguro de que quieres eliminar este artículo?')) {
+            await remove(ref(db, `/artifacts/${appId}/public/products/${id}`));
+            showMessage('Éxito', 'Artículo eliminado correctamente.');
+        }
+    }));
 }
 
 // --- FUNCIÓN ACTUALIZADA: Renderizar lista de pedidos con botones de eliminar ---
