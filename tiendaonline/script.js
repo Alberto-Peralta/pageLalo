@@ -232,11 +232,33 @@ function setupOrderSearch() {
 function renderProducts(productList) {
     if (!productGrid) return;
     productGrid.innerHTML = '';
+
     productList.forEach((product, index) => {
         const productCard = document.createElement('div');
-        productCard.className = `product-card relative rounded-3xl shadow-lg p-6 flex flex-col items-center text-center transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 cursor-pointer`;
+        productCard.className = `product-card relative rounded-3xl shadow-lg p-6 flex flex-col items-center text-center transition-all duration-300 hover:shadow-2xl hover:-translate-y-2`;
         productCard.style.animationDelay = `${index * 50}ms`;
 
+        // --- IMAGE LOGIC ---
+        const allImages = (product.imageUrls && product.imageUrls.length > 0) 
+            ? product.imageUrls 
+            : [product.imageUrl || 'https://via.placeholder.com/300'];
+        
+        const mainImageUrl = allImages[0];
+        
+        // Create thumbnails, but only if there is more than one image
+        let thumbnailsHtml = '';
+        if (allImages.length > 1) {
+            thumbnailsHtml = `
+                <div class="flex justify-center gap-2 mt-2">
+                    ${allImages.slice(0, 4).map(url => `
+                        <img src="${url}" class="w-10 h-10 object-cover rounded-md border-2 border-gray-200">
+                    `).join('')}
+                    ${allImages.length > 4 ? `<span class="w-10 h-10 flex items-center justify-center bg-gray-200 text-xs font-bold rounded-md">+${allImages.length - 4}</span>` : ''}
+                </div>
+            `;
+        }
+
+        // --- PRICE LOGIC ---
         const isOnSale = product.offerPrice && product.offerPrice < product.price;
         let priceHtml = '';
         let offerBadgeHtml = '';
@@ -253,24 +275,34 @@ function renderProducts(productList) {
             priceHtml = `<span class="text-2xl font-bold text-yellow-600">$${product.price.toFixed(2)}</span>`;
         }
 
-        // Obtener la imagen principal del array (compatible con estructura vieja y nueva)
-        const mainImageUrl = (product.imageUrls && product.imageUrls.length > 0) 
-            ? product.imageUrls[0] 
-            : product.imageUrl || 'https://via.placeholder.com/300';
-
+        // --- CARD HTML STRUCTURE ---
         productCard.innerHTML = `
             ${offerBadgeHtml}
-            <img src="${mainImageUrl}" alt="${product.name}" class="w-full h-48 object-cover rounded-xl mb-4">
-            <h3 class="text-xl font-bold mb-2 text-gray-800">${product.name}</h3>
-            <p class="text-sm text-gray-600 mb-4 flex-grow line-clamp-3">${product.description}</p>
-            <div class="mb-4">${priceHtml}</div>
-            <button class="add-to-cart-btn btn-primary w-full">Añadir al Carrito</button>
+            <div class="cursor-pointer" data-product-id="${product.id}">
+                <img src="${mainImageUrl}" alt="${product.name}" class="w-full h-48 object-cover rounded-xl mb-2">
+                ${thumbnailsHtml}
+            </div>
+            <div class="flex flex-col flex-grow w-full mt-4">
+                <h3 class="text-xl font-bold mb-2 text-gray-800">${product.name}</h3>
+                <p class="text-sm text-gray-600 mb-4 flex-grow line-clamp-3">${product.description || 'Sin descripción.'}</p>
+                <div class="mt-auto">
+                    <div class="mb-4">${priceHtml}</div>
+                    <button class="add-to-cart-btn btn-primary w-full">Añadir al Carrito</button>
+                </div>
+            </div>
         `;
+        
+        // --- EVENT LISTENERS ---
         productCard.querySelector('.add-to-cart-btn').addEventListener('click', (e) => {
             e.stopPropagation();
             addToCart(product.id);
         });
-        productCard.addEventListener('click', () => showProductModal(product));
+
+        // The whole card (except the button) opens the modal
+        productCard.querySelector('.cursor-pointer').addEventListener('click', () => {
+            showProductModal(product);
+        });
+
         productGrid.appendChild(productCard);
     });
 }
