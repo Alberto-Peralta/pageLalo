@@ -5,16 +5,18 @@ import { getDatabase, ref, push, remove, set, onValue, update, get } from "https
 // ===== NUEVAS IMPORTACIONES =====
 import { getStorage, ref as storageRef, uploadBytesResumable, getDownloadURL } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-storage.js";
 
+
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyCO3FRhSwH1xLABwVGFSd_YYrbFp0lQEv8",
-    authDomain: "pagelalo-1b210.firebaseapp.com",
-    databaseURL: "https://pagelalo-1b210-default-rtdb.firebaseio.com",
-    projectId: "pagelalo-1b210",
-    storageBucket: "pagelalo-1b210.firebasestorage.app",
-    messagingSenderId: "1096735980204",
-    appId: "1:1096735980204:web:8252ddb9fb484c398dfd09"
+apiKey: "AIzaSyCO3FRhSwH1xLABwVGFSd_YYrbFp0lQEv8",
+authDomain: "pagelalo-1b210.firebaseapp.com",
+databaseURL: "https://pagelalo-1b210-default-rtdb.firebaseio.com",
+projectId: "pagelalo-1b210",
+storageBucket: "pagelalo-1b210.firebasestorage.app",
+messagingSenderId: "1096735980204",
+appId: "1:1096735980204:web:8252ddb9fb484c398dfd09"
 };
+
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
@@ -22,8 +24,8 @@ const db = getDatabase(app);
 const auth = getAuth(app);
 const storage = getStorage(app); // <-- AÑADE ESTA LÍNEA
 
-const appId = 'default-app-id';
 
+const appId = 'default-app-id';
 // --- ELEMENTOS DE LA UI ---
 const productGrid = document.getElementById('productGrid');
 const adminPanel = document.getElementById('adminPanel');
