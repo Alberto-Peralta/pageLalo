@@ -690,3 +690,55 @@ input[readonly] {
 .products-without-discount {
     opacity: 0.8;
 }
+
+/* --- ESTILOS PARA NAVEGACIÓN EN CARD DE PRODUCTO --- */
+
+.product-image-container {
+    position: relative;
+    cursor: pointer;
+}
+
+.card-nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    font-size: 20px;
+    line-height: 32px;
+    text-align: center;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    z-index: 10;
+}
+
+.product-image-container:hover .card-nav-arrow {
+    opacity: 1;
+}
+
+.card-nav-arrow.prev {
+    left: 8px;
+}
+
+.card-nav-arrow.next {
+    right: 8px;
+}
+
+.card-thumbnail {
+    cursor: pointer;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.card-thumbnail:hover {
+    transform: scale(1.1);
+}
+
+.card-thumbnail.active {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 5px var(--color-primary);
+}

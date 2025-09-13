@@ -238,50 +238,48 @@ function renderProducts(productList) {
         productCard.className = `product-card relative rounded-3xl shadow-lg p-6 flex flex-col items-center text-center transition-all duration-300 hover:shadow-2xl hover:-translate-y-2`;
         productCard.style.animationDelay = `${index * 50}ms`;
 
-        // --- IMAGE LOGIC ---
+        // --- LÓGICA DE IMÁGENES Y NAVEGACIÓN ---
         const allImages = (product.imageUrls && product.imageUrls.length > 0) 
             ? product.imageUrls 
             : [product.imageUrl || 'https://via.placeholder.com/300'];
         
-        const mainImageUrl = allImages[0];
+        const hasMultipleImages = allImages.length > 1;
         
-        // Create thumbnails, but only if there is more than one image
+        // Crea los thumbnails interactivos
         let thumbnailsHtml = '';
-        if (allImages.length > 1) {
+        if (hasMultipleImages) {
             thumbnailsHtml = `
                 <div class="flex justify-center gap-2 mt-2">
-                    ${allImages.slice(0, 4).map(url => `
-                        <img src="${url}" class="w-10 h-10 object-cover rounded-md border-2 border-gray-200">
+                    ${allImages.map((url, i) => `
+                        <img src="${url}" class="card-thumbnail w-10 h-10 object-cover rounded-md border-2 ${i === 0 ? 'active' : 'border-gray-200'}" data-index="${i}">
                     `).join('')}
-                    ${allImages.length > 4 ? `<span class="w-10 h-10 flex items-center justify-center bg-gray-200 text-xs font-bold rounded-md">+${allImages.length - 4}</span>` : ''}
                 </div>
             `;
         }
+        
+        // Crea las flechas de navegación si hay múltiples imágenes
+        const arrowsHtml = hasMultipleImages ? `
+            <button class="card-nav-arrow prev" data-direction="-1">&#8249;</button>
+            <button class="card-nav-arrow next" data-direction="1">&#8250;</button>
+        ` : '';
 
-        // --- PRICE LOGIC ---
+        // --- LÓGICA DE PRECIOS ---
         const isOnSale = product.offerPrice && product.offerPrice < product.price;
-        let priceHtml = '';
-        let offerBadgeHtml = '';
+        let priceHtml = isOnSale ? `
+            <div class="flex items-center justify-center gap-2">
+                <span class="text-lg text-gray-500 line-through">$${product.price.toFixed(2)}</span>
+                <span class="text-2xl font-bold text-red-600">$${product.offerPrice.toFixed(2)}</span>
+            </div>` : `<span class="text-2xl font-bold text-yellow-600">$${product.price.toFixed(2)}</span>`;
+        let offerBadgeHtml = isOnSale ? `<div class="absolute top-3 right-3 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded-full">OFERTA</div>` : '';
 
-        if (isOnSale) {
-            priceHtml = `
-                <div class="flex items-center justify-center gap-2">
-                    <span class="text-lg text-gray-500 line-through">$${product.price.toFixed(2)}</span>
-                    <span class="text-2xl font-bold text-red-600">$${product.offerPrice.toFixed(2)}</span>
-                </div>
-            `;
-            offerBadgeHtml = `<div class="offer-badge absolute top-3 right-3 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded-full">OFERTA</div>`;
-        } else {
-            priceHtml = `<span class="text-2xl font-bold text-yellow-600">$${product.price.toFixed(2)}</span>`;
-        }
-
-        // --- CARD HTML STRUCTURE ---
+        // --- ESTRUCTURA HTML DE LA TARJETA ---
         productCard.innerHTML = `
             ${offerBadgeHtml}
-            <div class="cursor-pointer" data-product-id="${product.id}">
-                <img src="${mainImageUrl}" alt="${product.name}" class="w-full h-48 object-cover rounded-xl mb-2">
-                ${thumbnailsHtml}
+            <div class="product-image-container w-full" data-product-id="${product.id}">
+                <img src="${allImages[0]}" alt="${product.name}" class="main-product-image w-full h-48 object-cover rounded-xl mb-2">
+                ${arrowsHtml}
             </div>
+            ${thumbnailsHtml}
             <div class="flex flex-col flex-grow w-full mt-4">
                 <h3 class="text-xl font-bold mb-2 text-gray-800">${product.name}</h3>
                 <p class="text-sm text-gray-600 mb-4 flex-grow line-clamp-3">${product.description || 'Sin descripción.'}</p>
@@ -292,18 +290,56 @@ function renderProducts(productList) {
             </div>
         `;
         
-        // --- EVENT LISTENERS ---
+        productGrid.appendChild(productCard);
+
+        // --- LÓGICA DE EVENTOS PARA NAVEGACIÓN ---
+        if (hasMultipleImages) {
+            const imageContainer = productCard.querySelector('.product-image-container');
+            const mainImage = productCard.querySelector('.main-product-image');
+            const thumbnails = productCard.querySelectorAll('.card-thumbnail');
+            let currentIndex = 0;
+
+            const updateImage = (newIndex) => {
+                currentIndex = newIndex;
+                mainImage.src = allImages[currentIndex];
+                // Actualiza la miniatura activa
+                thumbnails.forEach((thumb, idx) => {
+                    thumb.classList.toggle('active', idx === currentIndex);
+                    thumb.classList.toggle('border-gray-200', idx !== currentIndex);
+                });
+            };
+
+            // Eventos para las flechas
+            imageContainer.addEventListener('click', (e) => {
+                if (e.target.classList.contains('card-nav-arrow')) {
+                    e.stopPropagation(); // Evita que se abra el modal
+                    const direction = parseInt(e.target.dataset.direction);
+                    let newIndex = (currentIndex + direction + allImages.length) % allImages.length;
+                    updateImage(newIndex);
+                } else {
+                    // Si se hace clic en la imagen (no en las flechas), abre el modal
+                    showProductModal(product);
+                }
+            });
+
+            // Eventos para las miniaturas
+            thumbnails.forEach(thumb => {
+                thumb.addEventListener('click', (e) => {
+                    e.stopPropagation(); // Evita que se abra el modal
+                    const newIndex = parseInt(e.target.dataset.index);
+                    updateImage(newIndex);
+                });
+            });
+        } else {
+            // Si solo hay una imagen, el clic siempre abre el modal
+            productCard.querySelector('.product-image-container').addEventListener('click', () => showProductModal(product));
+        }
+        
+        // Evento para el botón de añadir al carrito
         productCard.querySelector('.add-to-cart-btn').addEventListener('click', (e) => {
             e.stopPropagation();
             addToCart(product.id);
         });
-
-        // The whole card (except the button) opens the modal
-        productCard.querySelector('.cursor-pointer').addEventListener('click', () => {
-            showProductModal(product);
-        });
-
-        productGrid.appendChild(productCard);
     });
 }
 
