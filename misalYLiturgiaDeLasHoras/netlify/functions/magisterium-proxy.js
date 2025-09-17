@@ -11,9 +11,13 @@ export async function handler(event, context) {
       };
     }
 
-    // Solo permitimos POST además de GET
+    // Solo permitimos POST además de GET, siempre devolviendo JSON
     if (event.httpMethod !== "POST") {
-      return { statusCode: 405, body: "Método no permitido" };
+      return {
+        statusCode: 405,
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ error: "Método no permitido" }),
+      };
     }
 
     // Obtenemos el cuerpo de la solicitud
@@ -23,6 +27,7 @@ export async function handler(event, context) {
     if (!prompt) {
       return {
         statusCode: 400,
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ error: 'El campo "prompt" es requerido.' }),
       };
     }
@@ -60,6 +65,7 @@ export async function handler(event, context) {
     console.error("Error en la función proxy:", error);
     return {
       statusCode: 500,
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ error: error.message || "Error interno del servidor" }),
     };
   }
