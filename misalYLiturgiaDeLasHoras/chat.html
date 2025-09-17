@@ -56,46 +56,6 @@
             z-index: 10;
         }
 
-        /* Contenedor de preguntas sugeridas */
-        .suggested-questions {
-            background-color: var(--chat-bg);
-            padding: 12px 16px;
-            border-bottom: 1px solid var(--border-color);
-            flex-shrink: 0;
-            max-height: 150px;
-            overflow-y: auto;
-        }
-
-        .suggested-questions h4 {
-            margin: 0 0 8px 0;
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-            font-weight: 600;
-        }
-
-        .question-chips {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .question-chip {
-            background-color: var(--message-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            padding: 6px 12px;
-            font-size: 0.85rem;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            white-space: nowrap;
-        }
-
-        .question-chip:hover {
-            background-color: var(--primary-color);
-            border-color: var(--primary-hover);
-            transform: translateY(-1px);
-        }
-
         /* Área de mensajes */
         .chat-box {
             flex: 1;
@@ -181,6 +141,48 @@
                 transform: scale(1);
                 opacity: 1;
             }
+        }
+
+        /* Contenedor de preguntas sugeridas */
+        .suggested-questions {
+            background-color: var(--chat-bg);
+            padding: 12px 16px;
+            border-top: 1px solid var(--border-color);
+            flex-shrink: 0;
+            max-height: 180px;
+            overflow-y: auto;
+            transition: all 0.3s ease;
+        }
+
+        .suggested-questions h4 {
+            margin: 0 0 8px 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            font-weight: 600;
+        }
+
+        .question-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .question-chip {
+            background-color: var(--message-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 6px 12px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+            line-height: 1.3;
+        }
+
+        .question-chip:hover {
+            background-color: var(--primary-color);
+            border-color: var(--primary-hover);
+            transform: translateY(-1px);
         }
 
         /* Área de input */
@@ -301,11 +303,24 @@
             .chat-input-container {
                 padding-bottom: calc(env(safe-area-inset-bottom) + 12px);
             }
+
+            .question-chip {
+                font-size: 0.75rem;
+                padding: 5px 10px;
+            }
         }
 
-        /* Ocultar preguntas sugeridas cuando hay mensajes */
+        /* Ocultar preguntas sugeridas cuando hay mensajes del usuario */
         .chat-container.has-messages .suggested-questions {
-            display: none;
+            max-height: 0;
+            padding: 0 16px;
+            border-top: none;
+            overflow: hidden;
+        }
+
+        /* Animación para mostrar/ocultar preguntas */
+        .suggested-questions {
+            transition: max-height 0.3s ease, padding 0.3s ease;
         }
     </style>
 </head>
@@ -316,6 +331,12 @@
         🏛️ AI Chat - Magisterium Católico
     </div>
     
+    <div class="chat-box" id="chat-box">
+        <div class="message assistant-message">
+            ¡Hola! Soy puedes preguntarme sobre doctrina, encíclicas, documentos pontificios y enseñanzas oficiales de la Iglesia. ¿En qué puedo ayudarte hoy?
+        </div>
+    </div>
+
     <div class="suggested-questions" id="suggested-questions">
         <h4>💬 Preguntas frecuentes:</h4>
         <div class="question-chips">
@@ -327,12 +348,8 @@
             <div class="question-chip">¿Qué dice sobre el celibato sacerdotal?</div>
             <div class="question-chip">¿Cuál es la doctrina social de la Iglesia?</div>
             <div class="question-chip">¿Qué enseña sobre María Santísima?</div>
-        </div>
-    </div>
-
-    <div class="chat-box" id="chat-box">
-        <div class="message assistant-message">
-            ¡Hola! Soy tu asistente especializado en el Magisterium de la Iglesia Católica. Puedes preguntarme sobre doctrina, encíclicas, documentos pontificios y enseñanzas oficiales de la Iglesia. ¿En qué puedo ayudarte hoy?
+            <div class="question-chip">¿Puede salvarse alguien fuera de la Iglesia?</div>
+            <div class="question-chip">¿Qué dice sobre la comunión a divorciados?</div>
         </div>
     </div>
 
@@ -402,14 +419,44 @@
             // Remover mensaje de carga
             removeLoadingMessage(loadingId);
 
+            // Verificar si la respuesta es exitosa
             if (!response.ok) {
-                const errorData = await response.json();
-                console.error('Error al obtener la respuesta:', errorData);
-                addMessage(errorData.error || 'Hubo un error al conectar con la IA. Por favor, inténtalo de nuevo.', 'assistant');
-                throw new Error(errorData.error || 'Something went wrong');
+                let errorMessage = 'Hubo un error al conectar con la IA.';
+                
+                try {
+                    const errorData = await response.json();
+                    errorMessage = errorData.error || errorMessage;
+                } catch (jsonError) {
+                    console.error('Error parsing error response:', jsonError);
+                    if (response.status === 405) {
+                        errorMessage = 'Error 405: Método no permitido. Verifica la configuración de la función Netlify.';
+                    } else {
+                        errorMessage = `Error ${response.status}: ${response.statusText}`;
+                    }
+                }
+                
+                console.error('Error al obtener la respuesta:', errorMessage);
+                addMessage(errorMessage, 'assistant');
+                return;
             }
 
-            const data = await response.json();
+            // Procesar respuesta exitosa
+            let data;
+            try {
+                data = await response.json();
+            } catch (jsonError) {
+                console.error('Error parsing successful response:', jsonError);
+                addMessage('Error: La respuesta del servidor no es válida.', 'assistant');
+                return;
+            }
+
+            // Verificar estructura de la respuesta
+            if (!data.choices || !data.choices[0] || !data.choices[0].message || !data.choices[0].message.content) {
+                console.error('Estructura de respuesta inválida:', data);
+                addMessage('Error: Respuesta del servidor con formato incorrecto.', 'assistant');
+                return;
+            }
+
             const assistantMessage = data.choices[0].message.content;
 
             // 4. Procesar el mensaje para convertir referencias en enlaces
@@ -421,7 +468,16 @@
         } catch (error) {
             console.error('Error en la solicitud:', error);
             removeLoadingMessage(loadingId);
-            addMessage('Hubo un error al conectar con la IA. Por favor, inténtalo de nuevo.', 'assistant');
+            
+            let errorMessage = 'Error de conexión. Verifica tu internet e inténtalo de nuevo.';
+            
+            if (error.name === 'TypeError' && error.message.includes('fetch')) {
+                errorMessage = 'No se pudo conectar con el servidor. Verifica que las funciones Netlify estén activas.';
+            } else if (error.message.includes('JSON')) {
+                errorMessage = 'Error procesando la respuesta del servidor.';
+            }
+            
+            addMessage(errorMessage, 'assistant');
         } finally {
             // 6. Rehabilitar input y botón
             sendButton.disabled = false;
@@ -477,33 +533,40 @@
 
     // Función para procesar referencias y convertirlas en enlaces
     function processReferences(text) {
-        // Patrones para diferentes tipos de referencias
-        const patterns = [
-            // Encíclicas (ej: "Laudato si'", "Humanae Vitae")
-            /\b([A-Z][a-z]+ [A-Z][a-z]+'?|[A-Z][a-z]+ [a-z]+ [A-Z][a-z]+)\b/g,
-            // Documentos del Vaticano II
-            /\b(Lumen Gentium|Gaudium et Spes|Sacrosanctum Concilium|Dei Verbum)\b/gi,
-            // Catecismo
-            /\b(Catecismo de la Iglesia Católica|CIC)\b/gi,
-            // Código de Derecho Canónico
-            /\b(Código de Derecho Canónico|CDD)\b/gi
-        ];
-
         let processedText = text;
 
-        // Convertir referencias conocidas en enlaces (esto es un ejemplo básico)
-        // En una implementación real, tendrías una base de datos de documentos
+        // Base de datos de documentos conocidos con sus URLs
         const knownDocuments = {
+            // Encíclicas recientes
             'Laudato si': 'https://www.vatican.va/content/francesco/es/encyclicals/documents/papa-francesco_20150524_enciclica-laudato-si.html',
+            'Fratelli tutti': 'https://www.vatican.va/content/francesco/es/encyclicals/documents/papa-francesco_20201003_enciclica-fratelli-tutti.html',
+            'Evangelii gaudium': 'https://www.vatican.va/content/francesco/es/apost_exhortations/documents/papa-francesco_esortazione-ap_20131124_evangelii-gaudium.html',
             'Humanae Vitae': 'https://www.vatican.va/content/paul-vi/es/encyclicals/documents/hf_p-vi_enc_25071968_humanae-vitae.html',
+            'Veritatis splendor': 'https://www.vatican.va/content/john-paul-ii/es/encyclicals/documents/hf_jp-ii_enc_06081993_veritatis-splendor.html',
+            'Fides et ratio': 'https://www.vatican.va/content/john-paul-ii/es/encyclicals/documents/hf_jp-ii_enc_14091998_fides-et-ratio.html',
+            
+            // Documentos del Vaticano II
             'Lumen Gentium': 'https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19641121_lumen-gentium_sp.html',
-            'Catecismo de la Iglesia Católica': 'https://www.vatican.va/archive/catechism_sp/index_sp.html'
+            'Gaudium et Spes': 'https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19651207_gaudium-et-spes_sp.html',
+            'Dei Verbum': 'https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19651118_dei-verbum_sp.html',
+            'Sacrosanctum Concilium': 'https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19631204_sacrosanctum-concilium_sp.html',
+            
+            // Otros documentos importantes
+            'Catecismo de la Iglesia Católica': 'https://www.vatican.va/archive/catechism_sp/index_sp.html',
+            'Código de Derecho Canónico': 'https://www.vatican.va/archive/cod-iuris-canonici/spanish/codex-iuris-canonici_sp.pdf'
         };
 
         // Reemplazar documentos conocidos con enlaces
         Object.entries(knownDocuments).forEach(([doc, url]) => {
-            const regex = new RegExp(`\\b${doc}\\b`, 'gi');
-            processedText = processedText.replace(regex, `<a href="${url}" target="_blank" rel="noopener noreferrer">${doc}</a>`);
+            // Crear regex que sea case-insensitive y maneje acentos
+            const regex = new RegExp(`\\b${doc.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'gi');
+            processedText = processedText.replace(regex, `<a href="${url}" target="_blank" rel="noopener noreferrer" title="Ver documento completo">${doc}</a>`);
+        });
+
+        // Detectar y convertir referencias a números del Catecismo (ej: CIC 1234, CCC 1234)
+        processedText = processedText.replace(/\b(CIC|CCC)\s+(\d{1,4})\b/gi, (match, type, number) => {
+            const url = `https://www.vatican.va/archive/catechism_sp/p123a9p4_sp.html#${number}`;
+            return `<a href="${url}" target="_blank" rel="noopener noreferrer" title="Ver en el Catecismo">${match}</a>`;
         });
 
         return processedText;
@@ -536,6 +599,14 @@
             e.target.style.transform = 'scale(1)';
         });
     }
+
+    // Manejar tecla Enter para enviar mensaje
+    userInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' && !e.shiftKey) {
+            e.preventDefault();
+            sendMessage();
+        }
+    });
 </script>
 
 </body>
