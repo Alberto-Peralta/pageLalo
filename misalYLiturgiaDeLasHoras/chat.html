@@ -141,9 +141,14 @@
         const userMessage = userInput.value.trim();
         if (userMessage === '') return;
 
+        // 1. Add user's message
         addMessage(userMessage, 'user');
         userInput.value = '';
         
+        // 2. Add a temporary "thinking" message from the assistant
+        const assistantPlaceholderId = `msg-${Date.now()}`;
+        addMessage('...', 'assistant', assistantPlaceholderId);
+
         try {
             const response = await fetch('/.netlify/functions/magisterium-proxy', {
                 method: 'POST',
@@ -153,24 +158,34 @@
                 body: JSON.stringify({ prompt: userMessage })
             });
 
+            const assistantPlaceholder = document.getElementById(assistantPlaceholderId);
+
             if (!response.ok) {
                 const errorData = await response.json();
+                console.error('Error al obtener la respuesta:', errorData);
+                assistantPlaceholder.textContent = errorData.error || 'Hubo un error al conectar con la IA. Por favor, inténtalo de nuevo.';
                 throw new Error(errorData.error || 'Something went wrong');
             }
 
             const data = await response.json();
             const assistantMessage = data.choices[0].message.content;
-            addMessage(assistantMessage, 'assistant');
+
+            // 3. Update the temporary message with the real response
+            assistantPlaceholder.textContent = assistantMessage;
 
         } catch (error) {
-            console.error('Error al obtener la respuesta:', error);
-            addMessage('Hubo un error al conectar con la IA. Por favor, inténtalo de nuevo.', 'assistant');
+            console.error('Error en la solicitud:', error);
+            const assistantPlaceholder = document.getElementById(assistantPlaceholderId);
+            if (assistantPlaceholder.textContent === '...') {
+                assistantPlaceholder.textContent = 'Hubo un error al conectar con la IA. Por favor, inténtalo de nuevo.';
+            }
         } finally {
+            // Ensure the chat scrolls to the bottom after the process is complete
             chatBox.scrollTop = chatBox.scrollHeight;
         }
     });
 
-    function addMessage(text, sender) {
+    function addMessage(text, sender, id = null) {
         const messageDiv = document.createElement('div');
         messageDiv.classList.add('message');
         if (sender === 'user') {
@@ -179,6 +194,11 @@
             messageDiv.classList.add('assistant-message');
         }
         messageDiv.textContent = text;
+
+        if (id) {
+            messageDiv.id = id;
+        }
+
         chatBox.appendChild(messageDiv);
         chatBox.scrollTop = chatBox.scrollHeight;
     }
