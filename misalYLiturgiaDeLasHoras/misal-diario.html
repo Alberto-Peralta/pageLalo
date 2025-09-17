@@ -8,259 +8,149 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        /* Estilos personalizados y configuración de fuentes */
-        body {
-            font-family: 'Inter', sans-serif;
-            transition: background-color 0.3s, color 0.3s;
-        }
-        .font-serif {
-            font-family: 'Merriweather', serif;
-        }
-        
-        /* Estilo para el contenido de las lecturas generado dinámicamente */
-        .reading-content {
-            font-family: 'Merriweather', serif;
-            line-height: 1.8;
-            transition: color 0.3s;
-        }
-        
-        .reading-content h1, .reading-content h2, .reading-content h3 {
-            font-family: 'Merriweather', serif;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-            font-weight: 700;
-            border-bottom-width: 1px;
-            padding-bottom: 0.5rem;
-            transition: color 0.3s, border-color 0.3s;
-        }
-        
-        .reading-content h1 {
-            font-size: 2.2rem;
-        }
-        
-        .reading-content h2 {
-            font-size: 1.8rem;
-        }
-        
-        .reading-content h3 {
-            font-size: 1.5rem;
-        }
-        
-        .reading-content p {
-            margin-bottom: 1.5rem;
-            text-align: justify;
-        }
-        
-        .reading-content .section-title {
-            font-weight: bold;
-            margin-top: 2.5rem;
-            margin-bottom: 1rem;
-            font-size: 1.4rem;
-            font-family: 'Inter', sans-serif;
-        }
-        
-        .reading-content .verse {
-            margin-bottom: 0.8rem;
-            display: flex;
-        }
-        
-        .reading-content .verse-number {
-            font-weight: bold;
-            min-width: 2rem;
-        }
-        
-        .reading-content .bible-passage {
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin: 1.5rem 0;
-            border-left-width: 4px;
-            transition: background-color 0.3s, border-color 0.3s;
-        }
-        
-        .reading-content .gospel {
-            background-color: #f0f9ff;
-            border-color: #0ea5e9;
-        }
-        
-        .reading-content .first-reading {
-            background-color: #fef7ed;
-            border-color: #f59e0b;
-        }
-        
-        .reading-content .second-reading {
-            background-color: #faf6fe;
-            border-color: #a855f7;
-        }
-        
-        .reading-content .psalm {
-            background-color: #f0fdf4;
-            border-color: #22c55e;
-        }
-        
-        /* Tema claro (por defecto) */
-        :root {
-            --bg-primary: #f9fafb;
-            --bg-secondary: #ffffff;
-            --text-primary: #111827;
-            --text-secondary: #4b5563;
-            --accent: #1e40af;
-            --border: #e5e7eb;
-        }
-        
-        body.light {
-            --bg-primary: #f9fafb;
-            --bg-secondary: #ffffff;
-            --text-primary: #111827;
-            --text-secondary: #4b5563;
-            --accent: #1e40af;
-            --border: #e5e7eb;
-        }
-        
-        /* Tema oscuro */
-        body.dark {
-            --bg-primary: #111827;
-            --bg-secondary: #1f2937;
-            --text-primary: #f3f4f6;
-            --text-secondary: #d1d5db;
-            --accent: #60a5fa;
-            --border: #374151;
-        }
-        
-        body {
-            background-color: var(--bg-primary);
-            color: var(--text-primary);
-        }
-        
-        .bg-secondary {
-            background-color: var(--bg-secondary);
-        }
-        
-        .text-primary {
-            color: var(--text-primary);
-        }
-        
-        .text-secondary {
-            color: var(--text-secondary);
-        }
-        
-        .border-color {
-            border-color: var(--border);
-        }
-        
-        .accent-color {
-            color: var(--accent);
-        }
-        
-        .reading-content h1, .reading-content h2, .reading-content h3 {
-            color: var(--accent);
-            border-color: var(--border);
-        }
-        
-        .reading-content .section-title {
-            color: var(--accent);
-        }
-        
-        .reading-content .verse-number {
-            color: var(--accent);
-        }
-        
-        /* Estilo para el interruptor de tema */
-        .theme-switch {
-            position: relative;
-            display: inline-block;
-            width: 60px;
-            height: 34px;
-        }
-        
-        .theme-switch input {
-            opacity: 0;
-            width: 0;
-            height: 0;
-        }
-        
-        .slider {
-            position: absolute;
-            cursor: pointer;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: #ccc;
-            transition: .4s;
-            border-radius: 34px;
-        }
-        
-        .slider:before {
-            position: absolute;
-            content: "";
-            height: 26px;
-            width: 26px;
-            left: 4px;
-            bottom: 4px;
-            background-color: white;
-            transition: .4s;
-            border-radius: 50%;
-        }
-        
-        input:checked + .slider {
-            background-color: #4b5563;
-        }
-        
-        input:checked + .slider:before {
-            transform: translateX(26px);
-        }
-        
-        .sticky-header {
-            position: sticky;
-            top: 0;
-            z-index: 10;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(8px);
-            transition: background-color 0.3s;
-        }
-        
-        body.dark .sticky-header {
-            background: rgba(17, 24, 39, 0.95);
-        }
-        
-        /* Ajustar colores de botones para tema oscuro */
-        body.dark .btn-light {
-            background-color: #374151;
-            color: #e5e7eb;
-            border-color: #4b5563;
-        }
-        
-        body.dark .btn-light:hover {
-            background-color: #4b5563;
-        }
-        
-        /* Animación de transición suave para el cambio de tema */
-        .theme-transition * {
-            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease !important;
-        }
+   <style>
+/* Estilos personalizados y configuración de fuentes */
+body {
+    font-family: 'Inter', sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+.font-serif {
+    font-family: 'Merriweather', serif;
+}
 
-        /* Ajustes para el tema oscuro en las lecturas */
-        body.dark .reading-content .gospel {
-            background-color: #1e3a8a;
-            border-color: #3b82f6;
-        }
-        
-        body.dark .reading-content .first-reading {
-            background-color: #7c2d12;
-            border-color: #ea580c;
-        }
-        
-        body.dark .reading-content .second-reading {
-            background-color: #581c87;
-            border-color: #a855f7;
-        }
-        
-        body.dark .reading-content .psalm {
-            background-color: #166534;
-            border-color: #22c55e;
-        }
-    </style>
+/* Estilo para el contenido de las lecturas generado dinámicamente */
+.reading-content {
+    font-family: 'Merriweather', serif;
+    line-height: 1.8;
+    transition: color 0.3s;
+}
+
+.reading-content h1, .reading-content h2, .reading-content h3 {
+    font-family: 'Merriweather', serif;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    border-bottom-width: 1px;
+    padding-bottom: 0.5rem;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+.reading-content h1 { font-size: 2.2rem; }
+.reading-content h2 { font-size: 1.8rem; }
+.reading-content h3 { font-size: 1.5rem; }
+
+.reading-content p { margin-bottom: 1.5rem; text-align: justify; }
+
+.reading-content .section-title {
+    font-weight: bold;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.reading-content .verse { margin-bottom: 0.8rem; display: flex; }
+.reading-content .verse-number { font-weight: bold; min-width: 2rem; }
+
+.reading-content .bible-passage {
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    border-left-width: 4px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* Colores de lecturas */
+.reading-content .gospel { background-color: #fff9e5; border-color: #d4a017; }
+.reading-content .first-reading { background-color: #fff6d1; border-color: #f0b429; }
+.reading-content .second-reading { background-color: #fff3b8; border-color: #f59e0b; }
+.reading-content .psalm { background-color: #fff8d6; border-color: #eab308; }
+
+/* Tema claro */
+:root {
+    --bg-primary: #fffbe6;
+    --bg-secondary: #fff6d1;
+    --text-primary: #4b2e05;
+    --text-secondary: #715b3a;
+    --accent: #d4a017;
+    --border: #f0c65e;
+}
+
+body.light {
+    --bg-primary: #fffbe6;
+    --bg-secondary: #fff6d1;
+    --text-primary: #4b2e05;
+    --text-secondary: #715b3a;
+    --accent: #d4a017;
+    --border: #f0c65e;
+}
+
+/* Tema oscuro */
+body.dark {
+    --bg-primary: #4b2e05;
+    --bg-secondary: #715b3a;
+    --text-primary: #fffbe6;
+    --text-secondary: #f9f5e3;
+    --accent: #f0c429;
+    --border: #d4a017;
+}
+
+body { background-color: var(--bg-primary); color: var(--text-primary); }
+.bg-secondary { background-color: var(--bg-secondary); }
+.text-primary { color: var(--text-primary); }
+.text-secondary { color: var(--text-secondary); }
+.border-color { border-color: var(--border); }
+.accent-color { color: var(--accent); }
+
+.reading-content h1, .reading-content h2, .reading-content h3 {
+    color: var(--accent);
+    border-color: var(--border);
+}
+.reading-content .section-title { color: var(--accent); }
+.reading-content .verse-number { color: var(--accent); }
+
+/* Interruptor de tema */
+.theme-switch { position: relative; display: inline-block; width: 60px; height: 34px; }
+.theme-switch input { opacity: 0; width: 0; height: 0; }
+.slider {
+    position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #ccc; transition: .4s; border-radius: 34px;
+}
+.slider:before {
+    position: absolute; content: ""; height: 26px; width: 26px; left: 4px; bottom: 4px;
+    background-color: white; transition: .4s; border-radius: 50%;
+}
+input:checked + .slider { background-color: #715b3a; }
+input:checked + .slider:before { transform: translateX(26px); }
+
+.sticky-header {
+    position: sticky; top: 0; z-index: 10;
+    background: rgba(255, 251, 230, 0.95);
+    backdrop-filter: blur(8px);
+    transition: background-color 0.3s;
+}
+body.dark .sticky-header {
+    background: rgba(75, 46, 5, 0.95);
+}
+
+/* Botones tema oscuro */
+body.dark .btn-light {
+    background-color: #715b3a; color: #fffbe6; border-color: #4b2e05;
+}
+body.dark .btn-light:hover { background-color: #4b2e05; }
+
+/* Transiciones */
+.theme-transition * {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease !important;
+}
+
+/* Lecturas tema oscuro */
+body.dark .reading-content .gospel { background-color: #d4a017; border-color: #f0c429; }
+body.dark .reading-content .first-reading { background-color: #f0b429; border-color: #f59e0b; }
+body.dark .reading-content .second-reading { background-color: #f59e0b; border-color: #d4a017; }
+body.dark .reading-content .psalm { background-color: #eab308; border-color: #fcd34d; }
+</style>
+
 </head>
 <body class="theme-transition light">
     <header class="sticky-header shadow-md border-b border-color">
@@ -270,7 +160,7 @@
                 <p id="liturgical-day" class="text-sm text-secondary mt-1">Cargando...</p>
             </div>
             <div class="flex items-center space-x-4">
-                <a href="index.html" class="text-sm text-secondary hover:text-accent transition-colors">Inicio</a>
+                <a href="../index.html" class="text-sm text-secondary hover:text-accent transition-colors">Inicio</a>
                 <div class="flex items-center space-x-3">
                     <span class="text-sm text-secondary">Claro</span>
                     <label class="theme-switch">
