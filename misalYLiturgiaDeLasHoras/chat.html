@@ -323,17 +323,17 @@
 
 <div class="chat-container" id="chat-container">
     <div class="chat-header">
-        🏛️ AI Chat - Magisterium Católico
+        🏛️ AI Chat - Entrenado con documentos oficiales de la iglecia y el magisterio
     </div>
     
     <div class="chat-box" id="chat-box">
         <div class="message assistant-message">
-            Hola Puedes preguntarme sobre doctrina, encíclicas, documentos pontificios y enseñanzas oficiales de la Iglesia. ¿En qué puedo ayudarte hoy?
+            ¡Hola! puedes preguntarme sobre doctrina, encíclicas, documentos pontificios y enseñanzas oficiales de la Iglesia. ¿En qué puedo ayudarte hoy?
         </div>
     </div>
 
     <div class="suggested-questions" id="suggested-questions">
-        <h4>💬 Preguntas frecuentes:</h4>
+        <h4>📖 Inquietudes habituales sobre la fe:</h4>
         <div class="question-chips">
             <div class="question-chip">¿Qué dice la Iglesia sobre la salvación de Judas?</div>
             <div class="question-chip">¿Cuál es la postura sobre tener amigos de otras religiones?</div>
@@ -351,7 +351,7 @@
     <div class="chat-input-container">
         <form class="chat-input" id="chat-form">
             <div class="input-wrapper">
-                <input type="text" id="user-input" placeholder="Escribe tu pregunta sobre doctrina católica...">
+                <input type="text" id="user-input" placeholder="¿Qué deseas saber sobre nuestra fe católica?...">
             </div>
             <button type="submit" class="send-button" id="send-button" aria-label="Enviar mensaje">
                 ➤
@@ -503,7 +503,7 @@
         const loadingDiv = document.createElement('div');
         loadingDiv.classList.add('loading-message');
         loadingDiv.id = loadingId;
-        loadingDiv.innerHTML = '<span>Procesando tu consulta</span><div class="loading-dots"><div class="loading-dot"></div><div class="loading-dot"></div><div class="loading-dot"></div></div>';
+        loadingDiv.innerHTML = '<span>⛪Fundamentando respuesta</span><div class="loading-dots"><div class="loading-dot"></div><div class="loading-dot"></div><div class="loading-dot"></div></div>';
         
         chatBox.appendChild(loadingDiv);
         scrollToBottom();
