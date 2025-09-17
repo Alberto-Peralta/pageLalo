@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
-    <style>
+       <style>
         /* Estilos personalizados y configuración de fuentes */
         body {
             font-family: 'Inter', sans-serif;
@@ -79,52 +79,52 @@
         }
         
         .reading-content .gospel {
-            background-color: #f0f9ff;
-            border-color: #0ea5e9;
+            background-color: #fff8e1;
+            border-color: #facc15;
         }
         
         .reading-content .first-reading {
-            background-color: #fef7ed;
-            border-color: #f59e0b;
+            background-color: #fff9e5;
+            border-color: #fbbf24;
         }
         
         .reading-content .second-reading {
-            background-color: #faf6fe;
-            border-color: #a855f7;
+            background-color: #fffbea;
+            border-color: #f59e0b;
         }
         
         .reading-content .psalm {
-            background-color: #f0fdf4;
-            border-color: #22c55e;
+            background-color: #fffde7;
+            border-color: #fcd34d;
         }
         
         /* Tema claro (por defecto) */
         :root {
-            --bg-primary: #f9fafb;
-            --bg-secondary: #ffffff;
-            --text-primary: #111827;
-            --text-secondary: #4b5563;
-            --accent: #1e40af;
-            --border: #e5e7eb;
+            --bg-primary: #fff8e1;
+            --bg-secondary: #fff9c4;
+            --text-primary: #4b3f00;
+            --text-secondary: #7c6b00;
+            --accent: #b57f00;
+            --border: #fcd34d;
         }
         
         body.light {
-            --bg-primary: #f9fafb;
-            --bg-secondary: #ffffff;
-            --text-primary: #111827;
-            --text-secondary: #4b5563;
-            --accent: #1e40af;
-            --border: #e5e7eb;
+            --bg-primary: #fff8e1;
+            --bg-secondary: #fff9c4;
+            --text-primary: #4b3f00;
+            --text-secondary: #7c6b00;
+            --accent: #b57f00;
+            --border: #fcd34d;
         }
         
         /* Tema oscuro */
         body.dark {
-            --bg-primary: #111827;
-            --bg-secondary: #1f2937;
-            --text-primary: #f3f4f6;
-            --text-secondary: #d1d5db;
-            --accent: #60a5fa;
-            --border: #374151;
+            --bg-primary: #4b3f00;
+            --bg-secondary: #7c6b00;
+            --text-primary: #fff8e1;
+            --text-secondary: #fff9c4;
+            --accent: #facc15;
+            --border: #b57f00;
         }
         
         body {
@@ -204,7 +204,7 @@
         }
         
         input:checked + .slider {
-            background-color: #4b5563;
+            background-color: #7c6b00;
         }
         
         input:checked + .slider:before {
@@ -215,24 +215,24 @@
             position: sticky;
             top: 0;
             z-index: 10;
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255, 249, 196, 0.95);
             backdrop-filter: blur(8px);
             transition: background-color 0.3s;
         }
         
         body.dark .sticky-header {
-            background: rgba(17, 24, 39, 0.95);
+            background: rgba(75, 63, 0, 0.95);
         }
         
         /* Ajustar colores de botones para tema oscuro */
         body.dark .btn-light {
-            background-color: #374151;
-            color: #e5e7eb;
-            border-color: #4b5563;
+            background-color: #7c6b00;
+            color: #fff8e1;
+            border-color: #b57f00;
         }
         
         body.dark .btn-light:hover {
-            background-color: #4b5563;
+            background-color: #b57f00;
         }
         
         /* Animación de transición suave para el cambio de tema */
@@ -242,23 +242,23 @@
 
         /* Ajustes para el tema oscuro en las lecturas */
         body.dark .reading-content .gospel {
-            background-color: #1e3a8a;
-            border-color: #3b82f6;
+            background-color: #b57f00;
+            border-color: #facc15;
         }
         
         body.dark .reading-content .first-reading {
-            background-color: #7c2d12;
-            border-color: #ea580c;
+            background-color: #7c6b00;
+            border-color: #fbbf24;
         }
         
         body.dark .reading-content .second-reading {
-            background-color: #581c87;
-            border-color: #a855f7;
+            background-color: #6b5500;
+            border-color: #f59e0b;
         }
         
         body.dark .reading-content .psalm {
-            background-color: #166534;
-            border-color: #22c55e;
+            background-color: #4b3f00;
+            border-color: #fcd34d;
         }
     </style>
 </head>
@@ -270,7 +270,7 @@
                 <p id="liturgical-day" class="text-sm text-secondary mt-1">Cargando...</p>
             </div>
             <div class="flex items-center space-x-4">
-                <a href="index.html" class="text-sm text-secondary hover:text-accent transition-colors">Inicio</a>
+                <a href="../index.html" class="text-sm text-secondary hover:text-accent transition-colors">Inicio</a>
                 <div class="flex items-center space-x-3">
                     <span class="text-sm text-secondary">Claro</span>
                     <label class="theme-switch">
