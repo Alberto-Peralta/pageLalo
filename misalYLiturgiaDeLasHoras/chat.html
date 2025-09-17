@@ -5,79 +5,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat con Magisterium AI</title>
    <style>
+    /* Estilos generales para el cuerpo del documento */
     body {
         font-family: sans-serif;
-        background-color: #fcf8e3; /* Un crema muy claro para el fondo general */
+        background-color: #fcf8e3;
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: flex-end; /* Alinea el chat al fondo para el teclado móvil */
         min-height: 100vh;
         margin: 0;
-        padding: 20px;
+        padding: 0;
+        box-sizing: border-box; /* Incluye padding y borde en el tamaño total */
     }
+
+    /* Contenedor principal del chat */
     .chat-container {
-        width: 100%;
+        width: 100%; /* Ocupa todo el ancho en móviles */
         max-width: 600px;
+        height: 100vh; /* Ocupa toda la altura de la ventana en móviles */
         background-color: #ffffff;
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         display: flex;
         flex-direction: column;
         overflow: hidden;
     }
+
+    /* Estilos para el encabezado del chat */
     .chat-header {
-        background-color: #f7b32b; /* Amarillo mostaza principal */
-        color: #333333; /* Texto oscuro para contraste */
+        background-color: #f7b32b;
+        color: #333333;
         padding: 16px;
         text-align: center;
         font-size: 1.25rem;
-        border-top-left-radius: 12px;
-        border-top-right-radius: 12px;
+        flex-shrink: 0; /* Previene que el encabezado se encoja */
     }
+
+    /* Caja de mensajes */
     .chat-box {
-        flex: 1;
-        padding: 24px;
+        flex: 1; /* Permite que la caja crezca y ocupe el espacio disponible */
+        padding: 16px; /* Reducido para móviles */
         overflow-y: auto;
         display: flex;
         flex-direction: column;
-        gap: 16px;
+        gap: 12px; /* Espacio entre mensajes */
     }
+
+    /* Estilos para los mensajes */
     .message {
-        max-width: 80%;
-        padding: 12px 16px;
+        max-width: 85%; /* Aumentado para mejor uso del espacio en móviles */
+        padding: 10px 14px; /* Reducido */
         border-radius: 20px;
         line-height: 1.4;
         word-wrap: break-word;
     }
+
     .user-message {
         align-self: flex-end;
-        background-color: #f7b32b; /* Amarillo mostaza para los mensajes del usuario */
-        color: #333333; /* Texto oscuro para los mensajes del usuario */
-        border-bottom-right-radius: 4px;
+        background-color: #f7b32b;
+        color: #333333;
     }
+
     .assistant-message {
         align-self: flex-start;
-        background-color: #f1e6c3; /* Tono más claro de mostaza/crema para el asistente */
-        color: #2d3748; /* Color de texto más oscuro */
-        border-bottom-left-radius: 4px;
+        background-color: #f1e6c3;
+        color: #2d3748;
     }
+
+    /* Contenedor de entrada y botón */
     .chat-input {
         padding: 16px;
-        border-top: 1px solid #e0e0e0; /* Un gris claro para el borde superior */
+        border-top: 1px solid #e0e0e0;
         display: flex;
         gap: 8px;
+        flex-shrink: 0; /* Evita que el input se encoja */
     }
+
     .chat-input input {
         flex: 1;
-        border: 1px solid #d4c08e; /* Borde más oscuro, tirando a mostaza */
+        border: 1px solid #d4c08e;
         border-radius: 20px;
         padding: 10px 16px;
         font-size: 1rem;
         outline: none;
     }
+
     .chat-input button {
-        background-color: #f7b32b; /* Amarillo mostaza para el botón de enviar */
-        color: #333333; /* Texto oscuro para el botón */
+        background-color: #f7b32b;
+        color: #333333;
         border: none;
         border-radius: 20px;
         padding: 10px 20px;
@@ -85,8 +98,22 @@
         font-size: 1rem;
         transition: background-color 0.2s;
     }
+
     .chat-input button:hover {
-        background-color: #e09f25; /* Un mostaza un poco más oscuro al pasar el ratón */
+        background-color: #e09f25;
+    }
+
+    /* Media query para tabletas y escritorios */
+    @media (min-width: 768px) {
+        body {
+            align-items: center; /* Centra el chat verticalmente en pantallas grandes */
+            padding: 20px;
+        }
+        .chat-container {
+            height: 80vh; /* Altura más moderada en escritorios */
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
     }
 </style>
 </head>
@@ -94,7 +121,7 @@
 
 <div class="chat-container">
     <div class="chat-header">
-        Chat con Magisterium AI
+        AI Chat entrenado con documentos oficiales de la iglecia 
     </div>
     <div class="chat-box" id="chat-box">
         </div>
