@@ -4,150 +4,391 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat con Magisterium AI</title>
-   <style>
-    /* Estilos generales para el cuerpo del documento */
-    body {
-        font-family: sans-serif;
-        background-color: #fcf8e3;
-        display: flex;
-        justify-content: center;
-        align-items: flex-end; /* Alinea el chat al fondo para el teclado móvil */
-        min-height: 100vh;
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box; /* Incluye padding y borde en el tamaño total */
-    }
+    <style>
+        /* Variables CSS para colores consistentes */
+        :root {
+            --primary-color: #f7b32b;
+            --primary-hover: #e09f25;
+            --background-color: #fcf8e3;
+            --chat-bg: #ffffff;
+            --message-bg: #f1e6c3;
+            --border-color: #d4c08e;
+            --text-color: #333333;
+            --text-secondary: #2d3748;
+        }
 
-    /* Contenedor principal del chat */
-    .chat-container {
-        width: 100%; /* Ocupa todo el ancho en móviles */
-        max-width: 600px;
-        height: 100vh; /* Ocupa toda la altura de la ventana en móviles */
-        background-color: #ffffff;
-        display: flex;
-        flex-direction: column;
-        overflow: hidden;
-    }
+        /* Estilos generales */
+        * {
+            box-sizing: border-box;
+        }
 
-    /* Estilos para el encabezado del chat */
-    .chat-header {
-        background-color: #f7b32b;
-        color: #333333;
-        padding: 16px;
-        text-align: center;
-        font-size: 1.25rem;
-        flex-shrink: 0; /* Previene que el encabezado se encoja */
-    }
-
-    /* Caja de mensajes */
-    .chat-box {
-        flex: 1; /* Permite que la caja crezca y ocupe el espacio disponible */
-        padding: 16px; /* Reducido para móviles */
-        overflow-y: auto;
-        display: flex;
-        flex-direction: column;
-        gap: 12px; /* Espacio entre mensajes */
-    }
-
-    /* Estilos para los mensajes */
-    .message {
-        max-width: 85%; /* Aumentado para mejor uso del espacio en móviles */
-        padding: 10px 14px; /* Reducido */
-        border-radius: 20px;
-        line-height: 1.4;
-        word-wrap: break-word;
-    }
-
-    .user-message {
-        align-self: flex-end;
-        background-color: #f7b32b;
-        color: #333333;
-    }
-
-    .assistant-message {
-        align-self: flex-start;
-        background-color: #f1e6c3;
-        color: #2d3748;
-    }
-
-    /* Contenedor de entrada y botón */
-    .chat-input {
-        padding: 16px;
-        border-top: 1px solid #e0e0e0;
-        display: flex;
-        gap: 8px;
-        flex-shrink: 0; /* Evita que el input se encoja */
-    }
-
-    .chat-input input {
-        flex: 1;
-        border: 1px solid #d4c08e;
-        border-radius: 20px;
-        padding: 10px 16px;
-        font-size: 1rem;
-        outline: none;
-    }
-
-    .chat-input button {
-        background-color: #f7b32b;
-        color: #333333;
-        border: none;
-        border-radius: 20px;
-        padding: 10px 20px;
-        cursor: pointer;
-        font-size: 1rem;
-        transition: background-color 0.2s;
-    }
-
-    .chat-input button:hover {
-        background-color: #e09f25;
-    }
-
-    /* Media query para tabletas y escritorios */
-    @media (min-width: 768px) {
         body {
-            align-items: center; /* Centra el chat verticalmente en pantallas grandes */
-            padding: 20px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            overflow: hidden;
         }
+
+        /* Contenedor principal del chat */
         .chat-container {
-            height: 80vh; /* Altura más moderada en escritorios */
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: var(--chat-bg);
+            position: relative;
         }
-    }
-</style>
+
+        /* Encabezado del chat */
+        .chat-header {
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            padding: 12px 16px;
+            text-align: center;
+            font-size: 1.1rem;
+            font-weight: 600;
+            flex-shrink: 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            z-index: 10;
+        }
+
+        /* Contenedor de preguntas sugeridas */
+        .suggested-questions {
+            background-color: var(--chat-bg);
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--border-color);
+            flex-shrink: 0;
+            max-height: 150px;
+            overflow-y: auto;
+        }
+
+        .suggested-questions h4 {
+            margin: 0 0 8px 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            font-weight: 600;
+        }
+
+        .question-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .question-chip {
+            background-color: var(--message-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 6px 12px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .question-chip:hover {
+            background-color: var(--primary-color);
+            border-color: var(--primary-hover);
+            transform: translateY(-1px);
+        }
+
+        /* Área de mensajes */
+        .chat-box {
+            flex: 1;
+            padding: 16px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            min-height: 0;
+            /* Mejoras para iOS Safari */
+            -webkit-overflow-scrolling: touch;
+        }
+
+        /* Estilos de mensajes */
+        .message {
+            max-width: 85%;
+            padding: 12px 16px;
+            border-radius: 18px;
+            line-height: 1.4;
+            word-wrap: break-word;
+            animation: messageSlide 0.3s ease-out;
+        }
+
+        @keyframes messageSlide {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .user-message {
+            align-self: flex-end;
+            background-color: var(--primary-color);
+            color: var(--text-color);
+        }
+
+        .assistant-message {
+            align-self: flex-start;
+            background-color: var(--message-bg);
+            color: var(--text-secondary);
+        }
+
+        /* Animación de carga */
+        .loading-message {
+            align-self: flex-start;
+            background-color: var(--message-bg);
+            color: var(--text-secondary);
+            max-width: 85%;
+            padding: 12px 16px;
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .loading-dots {
+            display: flex;
+            gap: 4px;
+        }
+
+        .loading-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            animation: loadingPulse 1.4s infinite ease-in-out both;
+        }
+
+        .loading-dot:nth-child(1) { animation-delay: -0.32s; }
+        .loading-dot:nth-child(2) { animation-delay: -0.16s; }
+        .loading-dot:nth-child(3) { animation-delay: 0s; }
+
+        @keyframes loadingPulse {
+            0%, 80%, 100% {
+                transform: scale(0.8);
+                opacity: 0.5;
+            }
+            40% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* Área de input */
+        .chat-input-container {
+            flex-shrink: 0;
+            background-color: var(--chat-bg);
+            border-top: 1px solid var(--border-color);
+            padding: 12px 16px;
+            /* Mejoras para dispositivos móviles */
+            padding-bottom: env(safe-area-inset-bottom, 12px);
+        }
+
+        .chat-input {
+            display: flex;
+            gap: 8px;
+            align-items: flex-end;
+        }
+
+        .input-wrapper {
+            flex: 1;
+            position: relative;
+        }
+
+        .chat-input input {
+            width: 100%;
+            border: 2px solid var(--border-color);
+            border-radius: 22px;
+            padding: 12px 16px;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.2s;
+            resize: none;
+            min-height: 44px;
+            max-height: 100px;
+        }
+
+        .chat-input input:focus {
+            border-color: var(--primary-color);
+        }
+
+        .send-button {
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            border: none;
+            border-radius: 50%;
+            width: 44px;
+            height: 44px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .send-button:hover:not(:disabled) {
+            background-color: var(--primary-hover);
+            transform: scale(1.05);
+        }
+
+        .send-button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        /* Enlaces en mensajes */
+        .message a {
+            color: #0066cc;
+            text-decoration: underline;
+        }
+
+        .message a:hover {
+            color: #004499;
+        }
+
+        /* Mejoras para tablets y desktop */
+        @media (min-width: 768px) {
+            body {
+                padding: 20px;
+                height: calc(100vh - 40px);
+            }
+
+            .chat-container {
+                height: 100%;
+                border-radius: 12px;
+                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+                overflow: hidden;
+            }
+
+            .chat-header {
+                font-size: 1.25rem;
+                padding: 16px;
+            }
+
+            .suggested-questions {
+                padding: 16px;
+            }
+
+            .chat-input-container {
+                padding: 16px;
+            }
+        }
+
+        /* Mejoras específicas para móviles */
+        @media (max-width: 767px) {
+            .chat-container {
+                height: 100vh;
+                height: -webkit-fill-available;
+            }
+
+            /* Asegurar que el input sea visible en móviles */
+            .chat-input input {
+                font-size: 16px; /* Previene zoom en iOS */
+            }
+
+            /* Mejoras para el área segura en móviles modernos */
+            .chat-input-container {
+                padding-bottom: calc(env(safe-area-inset-bottom) + 12px);
+            }
+        }
+
+        /* Ocultar preguntas sugeridas cuando hay mensajes */
+        .chat-container.has-messages .suggested-questions {
+            display: none;
+        }
+    </style>
 </head>
 <body>
 
-<div class="chat-container">
+<div class="chat-container" id="chat-container">
     <div class="chat-header">
-        AI Chat entrenado con documentos oficiales de la iglecia 
+        🏛️ AI Chat - Magisterium Católico
     </div>
-    <div class="chat-box" id="chat-box">
+    
+    <div class="suggested-questions" id="suggested-questions">
+        <h4>💬 Preguntas frecuentes:</h4>
+        <div class="question-chips">
+            <div class="question-chip">¿Qué dice la Iglesia sobre la salvación de Judas?</div>
+            <div class="question-chip">¿Cuál es la postura sobre tener amigos de otras religiones?</div>
+            <div class="question-chip">¿Cuál es la encíclica más reciente del Papa?</div>
+            <div class="question-chip">¿Qué enseña sobre el purgatorio?</div>
+            <div class="question-chip">¿Cuál es la posición sobre la evolución?</div>
+            <div class="question-chip">¿Qué dice sobre el celibato sacerdotal?</div>
+            <div class="question-chip">¿Cuál es la doctrina social de la Iglesia?</div>
+            <div class="question-chip">¿Qué enseña sobre María Santísima?</div>
         </div>
-    <form class="chat-input" id="chat-form">
-        <input type="text" id="user-input" placeholder="Escribe tu mensaje...">
-        <button type="submit">Enviar</button>
-    </form>
+    </div>
+
+    <div class="chat-box" id="chat-box">
+        <div class="message assistant-message">
+            ¡Hola! Soy tu asistente especializado en el Magisterium de la Iglesia Católica. Puedes preguntarme sobre doctrina, encíclicas, documentos pontificios y enseñanzas oficiales de la Iglesia. ¿En qué puedo ayudarte hoy?
+        </div>
+    </div>
+
+    <div class="chat-input-container">
+        <form class="chat-input" id="chat-form">
+            <div class="input-wrapper">
+                <input type="text" id="user-input" placeholder="Escribe tu pregunta sobre doctrina católica...">
+            </div>
+            <button type="submit" class="send-button" id="send-button" aria-label="Enviar mensaje">
+                ➤
+            </button>
+        </form>
+    </div>
 </div>
 
 <script>
     const chatForm = document.getElementById('chat-form');
     const userInput = document.getElementById('user-input');
     const chatBox = document.getElementById('chat-box');
+    const sendButton = document.getElementById('send-button');
+    const chatContainer = document.getElementById('chat-container');
+    const suggestedQuestions = document.getElementById('suggested-questions');
 
-    chatForm.addEventListener('submit', async (e) => {
+    // Manejar preguntas sugeridas
+    document.addEventListener('click', (e) => {
+        if (e.target.classList.contains('question-chip')) {
+            const question = e.target.textContent;
+            userInput.value = question;
+            sendMessage();
+        }
+    });
+
+    // Manejar envío de formulario
+    chatForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        const userMessage = userInput.value.trim();
-        if (userMessage === '') return;
+        sendMessage();
+    });
 
-        // 1. Add user's message
+    // Función principal para enviar mensajes
+    async function sendMessage() {
+        const userMessage = userInput.value.trim();
+        if (userMessage === '' || sendButton.disabled) return;
+
+        // Marcar que hay mensajes para ocultar preguntas sugeridas
+        chatContainer.classList.add('has-messages');
+
+        // 1. Agregar mensaje del usuario
         addMessage(userMessage, 'user');
         userInput.value = '';
         
-        // 2. Add a temporary "thinking" message from the assistant
-        const assistantPlaceholderId = `msg-${Date.now()}`;
-        addMessage('...', 'assistant', assistantPlaceholderId);
+        // 2. Deshabilitar input y botón
+        sendButton.disabled = true;
+        userInput.disabled = true;
+        
+        // 3. Agregar animación de carga
+        const loadingId = addLoadingMessage();
 
         try {
             const response = await fetch('/.netlify/functions/magisterium-proxy', {
@@ -158,49 +399,142 @@
                 body: JSON.stringify({ prompt: userMessage })
             });
 
-            const assistantPlaceholder = document.getElementById(assistantPlaceholderId);
+            // Remover mensaje de carga
+            removeLoadingMessage(loadingId);
 
             if (!response.ok) {
                 const errorData = await response.json();
                 console.error('Error al obtener la respuesta:', errorData);
-                assistantPlaceholder.textContent = errorData.error || 'Hubo un error al conectar con la IA. Por favor, inténtalo de nuevo.';
+                addMessage(errorData.error || 'Hubo un error al conectar con la IA. Por favor, inténtalo de nuevo.', 'assistant');
                 throw new Error(errorData.error || 'Something went wrong');
             }
 
             const data = await response.json();
             const assistantMessage = data.choices[0].message.content;
 
-            // 3. Update the temporary message with the real response
-            assistantPlaceholder.textContent = assistantMessage;
+            // 4. Procesar el mensaje para convertir referencias en enlaces
+            const processedMessage = processReferences(assistantMessage);
+            
+            // 5. Agregar respuesta del asistente
+            addMessage(processedMessage, 'assistant', true);
 
         } catch (error) {
             console.error('Error en la solicitud:', error);
-            const assistantPlaceholder = document.getElementById(assistantPlaceholderId);
-            if (assistantPlaceholder.textContent === '...') {
-                assistantPlaceholder.textContent = 'Hubo un error al conectar con la IA. Por favor, inténtalo de nuevo.';
-            }
+            removeLoadingMessage(loadingId);
+            addMessage('Hubo un error al conectar con la IA. Por favor, inténtalo de nuevo.', 'assistant');
         } finally {
-            // Ensure the chat scrolls to the bottom after the process is complete
-            chatBox.scrollTop = chatBox.scrollHeight;
+            // 6. Rehabilitar input y botón
+            sendButton.disabled = false;
+            userInput.disabled = false;
+            userInput.focus();
         }
-    });
+    }
 
-    function addMessage(text, sender, id = null) {
+    // Función para agregar mensajes
+    function addMessage(text, sender, allowHTML = false) {
         const messageDiv = document.createElement('div');
         messageDiv.classList.add('message');
-        if (sender === 'user') {
-            messageDiv.classList.add('user-message');
+        messageDiv.classList.add(sender === 'user' ? 'user-message' : 'assistant-message');
+        
+        if (allowHTML) {
+            messageDiv.innerHTML = text;
         } else {
-            messageDiv.classList.add('assistant-message');
-        }
-        messageDiv.textContent = text;
-
-        if (id) {
-            messageDiv.id = id;
+            messageDiv.textContent = text;
         }
 
         chatBox.appendChild(messageDiv);
-        chatBox.scrollTop = chatBox.scrollHeight;
+        scrollToBottom();
+        return messageDiv;
+    }
+
+    // Función para agregar mensaje de carga
+    function addLoadingMessage() {
+        const loadingId = `loading-${Date.now()}`;
+        const loadingDiv = document.createElement('div');
+        loadingDiv.classList.add('loading-message');
+        loadingDiv.id = loadingId;
+        loadingDiv.innerHTML = `
+            <span>Procesando tu consulta</span>
+            <div class="loading-dots">
+                <div class="loading-dot"></div>
+                <div class="loading-dot"></div>
+                <div class="loading-dot"></div>
+            </div>
+        `;
+        
+        chatBox.appendChild(loadingDiv);
+        scrollToBottom();
+        return loadingId;
+    }
+
+    // Función para remover mensaje de carga
+    function removeLoadingMessage(loadingId) {
+        const loadingElement = document.getElementById(loadingId);
+        if (loadingElement) {
+            loadingElement.remove();
+        }
+    }
+
+    // Función para procesar referencias y convertirlas en enlaces
+    function processReferences(text) {
+        // Patrones para diferentes tipos de referencias
+        const patterns = [
+            // Encíclicas (ej: "Laudato si'", "Humanae Vitae")
+            /\b([A-Z][a-z]+ [A-Z][a-z]+'?|[A-Z][a-z]+ [a-z]+ [A-Z][a-z]+)\b/g,
+            // Documentos del Vaticano II
+            /\b(Lumen Gentium|Gaudium et Spes|Sacrosanctum Concilium|Dei Verbum)\b/gi,
+            // Catecismo
+            /\b(Catecismo de la Iglesia Católica|CIC)\b/gi,
+            // Código de Derecho Canónico
+            /\b(Código de Derecho Canónico|CDD)\b/gi
+        ];
+
+        let processedText = text;
+
+        // Convertir referencias conocidas en enlaces (esto es un ejemplo básico)
+        // En una implementación real, tendrías una base de datos de documentos
+        const knownDocuments = {
+            'Laudato si': 'https://www.vatican.va/content/francesco/es/encyclicals/documents/papa-francesco_20150524_enciclica-laudato-si.html',
+            'Humanae Vitae': 'https://www.vatican.va/content/paul-vi/es/encyclicals/documents/hf_p-vi_enc_25071968_humanae-vitae.html',
+            'Lumen Gentium': 'https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19641121_lumen-gentium_sp.html',
+            'Catecismo de la Iglesia Católica': 'https://www.vatican.va/archive/catechism_sp/index_sp.html'
+        };
+
+        // Reemplazar documentos conocidos con enlaces
+        Object.entries(knownDocuments).forEach(([doc, url]) => {
+            const regex = new RegExp(`\\b${doc}\\b`, 'gi');
+            processedText = processedText.replace(regex, `<a href="${url}" target="_blank" rel="noopener noreferrer">${doc}</a>`);
+        });
+
+        return processedText;
+    }
+
+    // Función para scroll suave al final
+    function scrollToBottom() {
+        setTimeout(() => {
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }, 100);
+    }
+
+    // Manejar redimensión de ventana para móviles
+    let resizeTimeout;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(() => {
+            scrollToBottom();
+        }, 100);
+    });
+
+    // Focus automático en el input al cargar
+    window.addEventListener('load', () => {
+        userInput.focus();
+    });
+
+    // Prevenir zoom en iOS al hacer focus en el input
+    if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
+        userInput.addEventListener('focus', (e) => {
+            e.target.style.transform = 'scale(1)';
+        });
     }
 </script>
 
