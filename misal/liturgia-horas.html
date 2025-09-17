@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liturgia de las Horas (IA)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos personalizados y configuración de fuentes */
+        body {
+            font-family: 'Inter', sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .font-serif {
+            font-family: 'Merriweather', serif;
+        }
+        
+        /* Estilo para el contenido de la oración generado dinámicamente */
+        .prayer-content {
+            font-family: 'Merriweather', serif;
+            line-height: 1.8;
+            transition: color 0.3s;
+        }
+        
+        .prayer-content h1, .prayer-content h2, .prayer-content h3 {
+            font-family: 'Merriweather', serif;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            border-bottom-width: 1px;
+            padding-bottom: 0.5rem;
+            transition: color 0.3s, border-color 0.3s;
+        }
+        
+        .prayer-content h1 {
+            font-size: 2.2rem;
+        }
+        
+        .prayer-content h2 {
+            font-size: 1.8rem;
+        }
+        
+        .prayer-content h3 {
+            font-size: 1.5rem;
+        }
+        
+        .prayer-content p {
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+        
+        .prayer-content .section-title {
+            font-weight: bold;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .prayer-content .antiphon {
+            font-style: italic;
+            padding: 1rem;
+            border-left-width: 4px;
+            margin: 1.5rem 0;
+            border-radius: 0 4px 4px 0;
+            transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+        }
+        
+        .prayer-content .psalm {
+            margin: 1.5rem 0;
+            padding-left: 1rem;
+        }
+        
+        .prayer-content .verse {
+            margin-bottom: 0.8rem;
+            display: flex;
+        }
+        
+        .prayer-content .verse-number {
+            font-weight: bold;
+            min-width: 2rem;
+        }
+        
+        .prayer-content .reading {
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            border-left-width: 4px;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+        
+        .prayer-content .prayer {
+            font-style: italic;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            transition: background-color 0.3s;
+        }
+        
+        .prayer-content .response {
+            font-weight: bold;
+            margin: 1rem 0;
+            transition: color 0.3s;
+        }
+        
+        .prayer-content .doxology {
+            text-align: center;
+            font-weight: bold;
+            margin: 2rem 0;
+            transition: color 0.3s;
+        }
+        
+        /* Tema claro (por defecto) */
+        :root {
+            --bg-primary: #f9fafb;
+            --bg-secondary: #ffffff;
+            --text-primary: #111827;
+            --text-secondary: #4b5563;
+            --accent: #b45309;
+            --border: #e5e7eb;
+            --antiphon-bg: #fef3c7;
+            --antiphon-border: #f59e0b;
+            --reading-bg: #f3f4f6;
+            --prayer-bg: #fef3c7;
+        }
+        
+        body.light {
+            --bg-primary: #f9fafb;
+            --bg-secondary: #ffffff;
+            --text-primary: #111827;
+            --text-secondary: #4b5563;
+            --accent: #b45309;
+            --border: #e5e7eb;
+            --antiphon-bg: #fef3c7;
+            --antiphon-border: #f59e0b;
+            --reading-bg: #f3f4f6;
+            --prayer-bg: #fef3c7;
+        }
+        
+        /* Tema oscuro */
+        body.dark {
+            --bg-primary: #111827;
+            --bg-secondary: #1f2937;
+            --text-primary: #f3f4f6;
+            --text-secondary: #d1d5db;
+            --accent: #f59e0b;
+            --border: #374151;
+            --antiphon-bg: #451a03;
+            --antiphon-border: #ea580c;
+            --reading-bg: #1e293b;
+            --prayer-bg: #451a03;
+        }
+        
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+        }
+        
+        .bg-secondary {
+            background-color: var(--bg-secondary);
+        }
+        
+        .text-primary {
+            color: var(--text-primary);
+        }
+        
+        .text-secondary {
+            color: var(--text-secondary);
+        }
+        
+        .border-color {
+            border-color: var(--border);
+        }
+        
+        .accent-color {
+            color: var(--accent);
+        }
+        
+        .prayer-content h1, .prayer-content h2, .prayer-content h3 {
+            color: var(--accent);
+            border-color: var(--border);
+        }
+        
+        .prayer-content .section-title {
+            color: var(--accent);
+        }
+        
+        .prayer-content .antiphon {
+            color: var(--accent);
+            background-color: var(--antiphon-bg);
+            border-color: var(--antiphon-border);
+        }
+        
+        .prayer-content .verse-number {
+            color: var(--accent);
+        }
+        
+        .prayer-content .reading {
+            background-color: var(--reading-bg);
+            border-color: var(--accent);
+        }
+        
+        .prayer-content .prayer {
+            background-color: var(--prayer-bg);
+        }
+        
+        .prayer-content .response {
+            color: var(--accent);
+        }
+        
+        .prayer-content .doxology {
+            color: var(--accent);
+        }
+        
+        /* Estilo para el interruptor de tema */
+        .theme-switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+        
+        .theme-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 34px;
+        }
+        
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+        
+        input:checked + .slider {
+            background-color: #4b5563;
+        }
+        
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+        
+        .sticky-header {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(8px);
+            transition: background-color 0.3s;
+        }
+        
+        body.dark .sticky-header {
+            background: rgba(17, 24, 39, 0.95);
+        }
+        
+        /* Ajustar colores de botones para tema oscuro */
+        body.dark .btn-light {
+            background-color: #374151;
+            color: #e5e7eb;
+            border-color: #4b5563;
+        }
+        
+        body.dark .btn-light:hover {
+            background-color: #4b5563;
+        }
+        
+        /* Animación de transición suave para el cambio de tema */
+        .theme-transition * {
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease !important;
+        }
+    </style>
+</head>
+<body class="theme-transition light">
+    <header class="sticky-header shadow-md border-b border-color">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div>
+                <h1 class="text-2xl md:text-3xl font-bold text-primary tracking-tight">Liturgia de las Horas</h1>
+                <p id="liturgical-day" class="text-sm text-secondary mt-1">Cargando...</p>
+            </div>
+            <div class="flex items-center space-x-3">
+                <span class="text-sm text-secondary">Claro</span>
+                <label class="theme-switch">
+                    <input type="checkbox" id="theme-toggle">
+                    <span class="slider"></span>
+                </label>
+                <span class="text-sm text-secondary">Oscuro</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4 mt-4">
+        <section class="bg-secondary p-6 rounded-lg shadow-sm mb-6 border border-color">
+            <div class="flex flex-col sm:flex-row items-center justify-between">
+                <h2 id="current-date" class="text-xl font-semibold mb-3 sm:mb-0 text-primary"></h2>
+                <div class="flex items-center space-x-2">
+                    <button id="prev-day-btn" class="px-4 py-2 btn-light text-gray-700 rounded-md transition-colors border">← Anterior</button>
+                    <button id="today-btn" class="px-4 py-2 bg-amber-600 text-white rounded-md hover:bg-amber-700 transition-colors shadow-sm">Hoy</button>
+                    <button id="next-day-btn" class="px-4 py-2 btn-light text-gray-700 rounded-md transition-colors border">Siguiente →</button>
+                </div>
+            </div>
+        </section>
+
+        <nav class="mb-8">
+            <ul id="hours-nav" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-7 gap-3">
+                <!-- Los botones de horas se generarán aquí -->
+            </ul>
+        </nav>
+
+        <article class="bg-secondary p-6 md:p-8 rounded-lg shadow-sm border border-color">
+            <header class="border-b border-amber-200 pb-4 mb-6">
+                <h3 id="prayer-title" class="text-3xl font-serif text-primary mb-2"></h3>
+                <p id="prayer-subtitle" class="text-secondary"></p>
+            </header>
+            <div id="prayer-content" class="prayer-content">
+                <div id="loader" class="flex justify-center items-center p-10">
+                    <div class="animate-spin rounded-full h-16 w-16 border-b-2 border-amber-600"></div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="text-center py-8 text-sm text-secondary mt-8 border-t border-color">
+        <p>Textos litúrgicos generados por la API de Magisterium.</p>
+        <p class="mt-1">Aplicación desarrollada con fines pastorales.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- REFERENCIAS A ELEMENTOS DEL DOM ---
+            const liturgicalDayEl = document.getElementById('liturgical-day');
+            const currentDateEl = document.getElementById('current-date');
+            const prayerTitleEl = document.getElementById('prayer-title');
+            const prayerSubtitleEl = document.getElementById('prayer-subtitle');
+            const prayerContentEl = document.getElementById('prayer-content');
+            const hoursNavEl = document.getElementById('hours-nav');
+            const loaderEl = document.getElementById('loader');
+            const themeToggle = document.getElementById('theme-toggle');
+
+            const prevDayBtn = document.getElementById('prev-day-btn');
+            const todayBtn = document.getElementById('today-btn');
+            const nextDayBtn = document.getElementById('next-day-btn');
+
+            // --- ESTADO DE LA APLICACIÓN ---
+            let state = {
+                date: new Date(),
+                selectedHour: 'laudes',
+                liturgyData: null,
+                isLoading: true,
+                error: null,
+                darkMode: false
+            };
+
+            // --- MAPEO DE HORAS (NOMBRES, ICONOS, ETC.) ---
+            const hoursMap = {
+                'laudes': { name: 'Laudes', icon: '☀️', subtitle: 'Oración de la mañana' },
+                'tierce': { name: 'Tercia', icon: '🌄', subtitle: 'Oración de media mañana' },
+                'sexte': { name: 'Sexta', icon: '☀️', subtitle: 'Oración del mediodía' },
+                'none': { name: 'Nona', icon: '⛅', subtitle: 'Oración de media tarde' },
+                'vepres': { name: 'Vísperas', icon: '🌙', subtitle: 'Oración de la tarde' },
+                'complies': { name: 'Completas', icon: '🌌', subtitle: 'Oración antes del descanso' },
+                'lectures': { name: 'Oficio de Lectura', icon: '📖', subtitle: 'Meditación de la Palabra' }
+            };
+
+            // --- CONFIGURACIÓN DE LA API (AHORA APUNTA A NUESTRA FUNCIÓN NETLIFY) ---
+            const MAGISTERIUM_API_URL = "/.netlify/functions/magisterium-proxy";
+
+            // --- FUNCIONES ---
+
+            /**
+             * Aplica el tema claro u oscuro según la hora del día o preferencia del usuario
+             */
+            const applyTheme = (isDark) => {
+                if (isDark) {
+                    document.body.classList.remove('light');
+                    document.body.classList.add('dark');
+                    state.darkMode = true;
+                    themeToggle.checked = true;
+                } else {
+                    document.body.classList.remove('dark');
+                    document.body.classList.add('light');
+                    state.darkMode = false;
+                    themeToggle.checked = false;
+                }
+            };
+
+            /**
+             * Detecta si es de noche (entre las 18:00 y las 6:00)
+             */
+            const isNightTime = () => {
+                const now = new Date();
+                const hour = now.getHours();
+                return hour >= 18 || hour < 6;
+            };
+
+            /**
+             * Genera un prompt en español para la IA.
+             * @param {Date} date - La fecha seleccionada.
+             * @param {string} hour - La hora litúrgica seleccionada.
+             * @returns {string} El prompt para la IA.
+             */
+            const generatePrompt = (date, hour) => {
+    const hourName = hoursMap[hour].name;
+    const formattedDate = date.toLocaleDateString('es-ES', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+    return `Escribe únicamente el texto completo de la Liturgia de las Horas para ${hourName} del día ${formattedDate}.
+Incluye: invocación inicial, himno, salmodia con antífonas, lectura breve, responsorio, cántico evangélico y oración final.
+No uses introducciones, explicaciones ni frases como "aquí está el texto". 
+Entrega solo el contenido litúrgico formateado.`;
+};
+
+
+            /**
+             * Formatea el contenido devuelto por la API para mejorar su presentación
+             * @param {string} content - El contenido sin formato de la API
+             * @returns {string} - Contenido formateado con HTML
+             */
+            const formatPrayerContent = (content) => {
+                if (!content) return '<p>No hay contenido disponible</p>';
+                
+                // Procesar el contenido para darle formato litúrgico
+                let formattedContent = content;
+                
+                // Detectar y formatear antífonas
+                formattedContent = formattedContent.replace(/"([^"]+)"/g, '<div class="antiphon">$1</div>');
+                
+                // Detectar y formatear respuestas
+                formattedContent = formattedContent.replace(/(R\/|R:)\s*(.+?)(?=\n|$)/g, '<div class="response">R/ $1</div>');
+                
+                // Detectar y formatear versículos de salmos
+                formattedContent = formattedContent.replace(/(\d+)\.\s*(.+?)(?=\n|$)/g, '<div class="verse"><span class="verse-number">$1.</span> <span class="verse-text">$1</span></div>');
+                
+                // Detectar y formatear secciones
+                formattedContent = formattedContent.replace(/(INVOCACIÓN|HIMNO|SALMODIA|LECTURA BREVE|RESPONSORIO|CÁNTICO EVANGÉLICO|ORACIÓN FINAL)/g, '<h3 class="section-title">$1</h3>');
+                
+                // Detectar y formatear títulos principales
+                formattedContent = formattedContent.replace(/^# (.+)$/gm, '<h1>$1</h1>');
+                formattedContent = formattedContent.replace(/^## (.+)$/gm, '<h2>$1</h2>');
+                formattedContent = formattedContent.replace(/^### (.+)$/gm, '<h3>$1af</h3>');
+                
+                // Reemplazar saltos de línea por párrafos
+                formattedContent = formattedContent.split('\n\n').map(paragraph => {
+                    if (!paragraph.startsWith('<') && paragraph.trim() !== '') {
+                        return `<p>${paragraph}</p>`;
+                    }
+                    return paragraph;
+                }).join('');
+                
+                // Añadir doxología final si no está presente
+                if (!formattedContent.includes('Gloria al Padre')) {
+                    formattedContent += '<div class="doxology">Gloria al Padre, al Hijo y al Espíritu Santo.<br>Como era en el principio, ahora y siempre,<br>por los siglos de los siglos. Amén.</div>';
+                }
+                
+                return formattedContent;
+            };
+
+            /**
+             * Obtiene los datos de la liturgia desde la API a través del proxy.
+             */
+            const fetchLiturgy = async () => {
+                state.isLoading = true;
+                state.error = null;
+                render(); // Muestra el loader
+
+                const prompt = generatePrompt(state.date, state.selectedHour);
+
+                try {
+                    const response = await fetch(MAGISTERIUM_API_URL, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ prompt }) // Enviamos el prompt al proxy
+                    });
+
+                    if (!response.ok) {
+                        const errorData = await response.json();
+                        throw new Error(`Error ${response.status}: ${errorData.error || 'No se pudo obtener la liturgia.'}`);
+                    }
+
+                    const data = await response.json();
+                    
+                    if (data && data.choices && data.choices[0] && data.choices[0].message) {
+                        const generatedContent = data.choices[0].message.content;
+                        // Formatear el contenido para mejorar su presentación
+                        const formattedContent = formatPrayerContent(generatedContent);
+                        
+                        // Envuelve el contenido en un objeto similar al de AELF para mantener la estructura de state.liturgyData
+                        state.liturgyData = {
+                            informations: {
+                                jour_liturgique_nom: ""
+                            },
+                            heures: [{
+                                key: state.selectedHour,
+                                content: `<div class="font-serif">${formattedContent}</div>
+                                <div class="text-sm text-secondary mt-8 italic border-t border-color pt-4">
+                                    <p></p>
+                                </div>`
+                            }]
+                        };
+                    } else {
+                        throw new Error('La respuesta de la API no tiene el formato esperado.');
+                    }
+                } catch (err) {
+                    console.error("Error al obtener los datos de la liturgia:", err);
+                    state.error = err.message;
+                    state.liturgyData = null;
+                } finally {
+                    state.isLoading = false;
+                    render(); // Renderiza el contenido o el error
+                }
+            };
+            
+            /**
+             * Renderiza (o actualiza) toda la interfaz de usuario basándose en el estado actual.
+             */
+            const render = () => {
+                // Actualizar la fecha mostrada
+                currentDateEl.textContent = state.date.toLocaleDateString('es-ES', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+
+                // Actualizar información del día litúrgico
+                if (state.liturgyData) {
+                    liturgicalDayEl.textContent = state.liturgyData.informations.jour_liturgique_nom;
+                } else if (!state.isLoading) {
+                     liturgicalDayEl.textContent = "Información no disponible";
+                }
+
+                // Renderizar botones de las horas
+                hoursNavEl.innerHTML = ''; // Limpiar botones existentes
+                Object.keys(hoursMap).forEach(hourKey => {
+                    const hourInfo = hoursMap[hourKey];
+                    const li = document.createElement('li');
+                    const button = document.createElement('button');
+                    
+                    const isActive = state.selectedHour === hourKey;
+                    const activeClasses = 'bg-amber-600 text-white shadow-lg transform -translate-y-1 border-amber-700';
+                    const inactiveClasses = 'bg-secondary text-primary hover:bg-amber-50 hover:shadow-md border-color';
+
+                    button.innerHTML = `<span class="text-lg">${hourInfo.icon}</span> <span class="mt-1">${hourInfo.name}</span>`;
+                    button.dataset.hour = hourKey;
+                    button.className = `w-full flex flex-col items-center justify-center px-3 py-4 text-sm font-medium rounded-md transition-all duration-200 ease-in-out border ${isActive ? activeClasses : inactiveClasses}`;
+                    
+                    li.appendChild(button);
+                    hoursNavEl.appendChild(li);
+                });
+
+                // Actualizar título y contenido de la oración
+                prayerTitleEl.textContent = hoursMap[state.selectedHour].name;
+                prayerSubtitleEl.textContent = hoursMap[state.selectedHour].subtitle;
+                prayerContentEl.innerHTML = ''; // Limpiar contenido anterior
+
+                if (state.isLoading) {
+                    prayerContentEl.appendChild(loaderEl);
+                    loaderEl.style.display = 'flex';
+                } else {
+                    loaderEl.style.display = 'none';
+                    if (state.error) {
+                        prayerContentEl.innerHTML = `<div class="text-center p-10 text-red-600 bg-red-100 rounded-lg border border-red-200">${state.error}</div>`;
+                    } else if (state.liturgyData) {
+                        const hourData = state.liturgyData.heures.find(h => h.key === state.selectedHour);
+                        if (hourData) {
+                            prayerContentEl.innerHTML = hourData.content;
+                        } else {
+                            prayerContentEl.innerHTML = `<div class="text-center p-10">No hay datos disponibles para la hora seleccionada.</div>`;
+                        }
+                    }
+                }
+            };
+
+            // --- MANEJADORES DE EVENTOS ---
+            
+            /**
+             * Cambia la fecha actual sumando o restando días.
+             * @param {number} days - El número de días a cambiar (positivo o negativo).
+             */
+            const changeDate = (days) => {
+                const newDate = new Date(state.date);
+                newDate.setDate(newDate.getDate() + days);
+                state.date = newDate;
+                fetchLiturgy();
+            };
+            
+            prevDayBtn.addEventListener('click', () => changeDate(-1));
+            nextDayBtn.addEventListener('click', () => changeDate(1));
+            todayBtn.addEventListener('click', () => {
+                state.date = new Date();
+                fetchLiturgy();
+            });
+
+            hoursNavEl.addEventListener('click', (e) => {
+                const button = e.target.closest('button');
+                if (button && button.dataset.hour && state.selectedHour !== button.dataset.hour) {
+                    state.selectedHour = button.dataset.hour;
+                    fetchLiturgy(); // Volver a hacer fetch con la nueva hora
+                }
+            });
+
+            // Manejar el cambio de tema
+            themeToggle.addEventListener('change', (e) => {
+                applyTheme(e.target.checked);
+                // Guardar preferencia en localStorage
+                localStorage.setItem('darkMode', e.target.checked);
+            });
+
+            // --- INICIALIZACIÓN ---
+            const init = () => {
+                // Comprobar preferencia de tema guardada o aplicar según la hora
+                const savedDarkMode = localStorage.getItem('darkMode');
+                if (savedDarkMode !== null) {
+                    applyTheme(savedDarkMode === 'true');
+                } else {
+                    // Aplicar tema oscuro automáticamente si es de noche
+                    applyTheme(isNightTime());
+                }
+                
+                fetchLiturgy();
+            };
+
+            init();
+        });
+    </script>
+</body>
+</html>

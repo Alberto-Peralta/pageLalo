@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Misal Diario (IA)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos personalizados y configuración de fuentes */
+        body {
+            font-family: 'Inter', sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .font-serif {
+            font-family: 'Merriweather', serif;
+        }
+        
+        /* Estilo para el contenido de las lecturas generado dinámicamente */
+        .reading-content {
+            font-family: 'Merriweather', serif;
+            line-height: 1.8;
+            transition: color 0.3s;
+        }
+        
+        .reading-content h1, .reading-content h2, .reading-content h3 {
+            font-family: 'Merriweather', serif;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            border-bottom-width: 1px;
+            padding-bottom: 0.5rem;
+            transition: color 0.3s, border-color 0.3s;
+        }
+        
+        .reading-content h1 {
+            font-size: 2.2rem;
+        }
+        
+        .reading-content h2 {
+            font-size: 1.8rem;
+        }
+        
+        .reading-content h3 {
+            font-size: 1.5rem;
+        }
+        
+        .reading-content p {
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+        
+        .reading-content .section-title {
+            font-weight: bold;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .reading-content .verse {
+            margin-bottom: 0.8rem;
+            display: flex;
+        }
+        
+        .reading-content .verse-number {
+            font-weight: bold;
+            min-width: 2rem;
+        }
+        
+        .reading-content .bible-passage {
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            border-left-width: 4px;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+        
+        .reading-content .gospel {
+            background-color: #f0f9ff;
+            border-color: #0ea5e9;
+        }
+        
+        .reading-content .first-reading {
+            background-color: #fef7ed;
+            border-color: #f59e0b;
+        }
+        
+        .reading-content .second-reading {
+            background-color: #faf6fe;
+            border-color: #a855f7;
+        }
+        
+        .reading-content .psalm {
+            background-color: #f0fdf4;
+            border-color: #22c55e;
+        }
+        
+        /* Tema claro (por defecto) */
+        :root {
+            --bg-primary: #f9fafb;
+            --bg-secondary: #ffffff;
+            --text-primary: #111827;
+            --text-secondary: #4b5563;
+            --accent: #1e40af;
+            --border: #e5e7eb;
+        }
+        
+        body.light {
+            --bg-primary: #f9fafb;
+            --bg-secondary: #ffffff;
+            --text-primary: #111827;
+            --text-secondary: #4b5563;
+            --accent: #1e40af;
+            --border: #e5e7eb;
+        }
+        
+        /* Tema oscuro */
+        body.dark {
+            --bg-primary: #111827;
+            --bg-secondary: #1f2937;
+            --text-primary: #f3f4f6;
+            --text-secondary: #d1d5db;
+            --accent: #60a5fa;
+            --border: #374151;
+        }
+        
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+        }
+        
+        .bg-secondary {
+            background-color: var(--bg-secondary);
+        }
+        
+        .text-primary {
+            color: var(--text-primary);
+        }
+        
+        .text-secondary {
+            color: var(--text-secondary);
+        }
+        
+        .border-color {
+            border-color: var(--border);
+        }
+        
+        .accent-color {
+            color: var(--accent);
+        }
+        
+        .reading-content h1, .reading-content h2, .reading-content h3 {
+            color: var(--accent);
+            border-color: var(--border);
+        }
+        
+        .reading-content .section-title {
+            color: var(--accent);
+        }
+        
+        .reading-content .verse-number {
+            color: var(--accent);
+        }
+        
+        /* Estilo para el interruptor de tema */
+        .theme-switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+        
+        .theme-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 34px;
+        }
+        
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+        
+        input:checked + .slider {
+            background-color: #4b5563;
+        }
+        
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+        
+        .sticky-header {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(8px);
+            transition: background-color 0.3s;
+        }
+        
+        body.dark .sticky-header {
+            background: rgba(17, 24, 39, 0.95);
+        }
+        
+        /* Ajustar colores de botones para tema oscuro */
+        body.dark .btn-light {
+            background-color: #374151;
+            color: #e5e7eb;
+            border-color: #4b5563;
+        }
+        
+        body.dark .btn-light:hover {
+            background-color: #4b5563;
+        }
+        
+        /* Animación de transición suave para el cambio de tema */
+        .theme-transition * {
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease !important;
+        }
+
+        /* Ajustes para el tema oscuro en las lecturas */
+        body.dark .reading-content .gospel {
+            background-color: #1e3a8a;
+            border-color: #3b82f6;
+        }
+        
+        body.dark .reading-content .first-reading {
+            background-color: #7c2d12;
+            border-color: #ea580c;
+        }
+        
+        body.dark .reading-content .second-reading {
+            background-color: #581c87;
+            border-color: #a855f7;
+        }
+        
+        body.dark .reading-content .psalm {
+            background-color: #166534;
+            border-color: #22c55e;
+        }
+    </style>
+</head>
+<body class="theme-transition light">
+    <header class="sticky-header shadow-md border-b border-color">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div>
+                <h1 class="text-2xl md:text-3xl font-bold text-primary tracking-tight">Misal Diario</h1>
+                <p id="liturgical-day" class="text-sm text-secondary mt-1">Cargando...</p>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="index.html" class="text-sm text-secondary hover:text-accent transition-colors">Inicio</a>
+                <div class="flex items-center space-x-3">
+                    <span class="text-sm text-secondary">Claro</span>
+                    <label class="theme-switch">
+                        <input type="checkbox" id="theme-toggle">
+                        <span class="slider"></span>
+                    </label>
+                    <span class="text-sm text-secondary">Oscuro</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4 mt-4">
+        <section class="bg-secondary p-6 rounded-lg shadow-sm mb-6 border border-color">
+            <div class="flex flex-col sm:flex-row items-center justify-between">
+                <h2 id="current-date" class="text-xl font-semibold mb-3 sm:mb-0 text-primary"></h2>
+                <div class="flex items-center space-x-2">
+                    <button id="prev-day-btn" class="px-4 py-2 btn-light text-gray-700 rounded-md transition-colors border">← Anterior</button>
+                    <button id="today-btn" class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors shadow-sm">Hoy</button>
+                    <button id="next-day-btn" class="px-4 py-2 btn-light text-gray-700 rounded-md transition-colors border">Siguiente →</button>
+                </div>
+            </div>
+        </section>
+
+        <article class="bg-secondary p-6 md:p-8 rounded-lg shadow-sm border border-color">
+            <div id="reading-content" class="reading-content">
+                <div id="loader" class="flex justify-center items-center p-10">
+                    <div class="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600"></div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="text-center py-8 text-sm text-secondary mt-8 border-t border-color">
+        <p>Misal diario con lecturas bíblicas según el calendario litúrgico</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- REFERENCIAS A ELEMENTOS DEL DOM ---
+            const liturgicalDayEl = document.getElementById('liturgical-day');
+            const currentDateEl = document.getElementById('current-date');
+            const readingContentEl = document.getElementById('reading-content');
+            const loaderEl = document.getElementById('loader');
+            const themeToggle = document.getElementById('theme-toggle');
+
+            const prevDayBtn = document.getElementById('prev-day-btn');
+            const todayBtn = document.getElementById('today-btn');
+            const nextDayBtn = document.getElementById('next-day-btn');
+
+            // --- ESTADO DE LA APLICACIÓN ---
+            let state = {
+                date: new Date(),
+                readingsData: null,
+                isLoading: true,
+                error: null,
+                darkMode: false
+            };
+
+            // --- CONFIGURACIÓN DE LA API ---
+            const MAGISTERIUM_API_URL = "/.netlify/functions/magisterium-proxy";
+
+            // --- FUNCIONES ---
+
+            /**
+             * Aplica el tema claro u oscuro según la hora del día o preferencia del usuario
+             */
+            const applyTheme = (isDark) => {
+                if (isDark) {
+                    document.body.classList.remove('light');
+                    document.body.classList.add('dark');
+                    state.darkMode = true;
+                    themeToggle.checked = true;
+                } else {
+                    document.body.classList.remove('dark');
+                    document.body.classList.add('light');
+                    state.darkMode = false;
+                    themeToggle.checked = false;
+                }
+            };
+
+            /**
+             * Detecta si es de noche (entre las 18:00 y las 6:00)
+             */
+            const isNightTime = () => {
+                const now = new Date();
+                const hour = now.getHours();
+                return hour >= 18 || hour < 6;
+            };
+
+            /**
+             * Genera un prompt en español para la IA para las lecturas del día.
+             * @param {Date} date - La fecha seleccionada.
+             * @returns {string} El prompt para la IA.
+             */
+            const generatePrompt = (date) => {
+    const formattedDate = date.toLocaleDateString('es-MX', { 
+        weekday: 'long', 
+        year: 'numeric', 
+        month: 'long', 
+        day: 'numeric' 
+    });
+
+    return `Proporciona las lecturas litúrgicas de la misa católica correspondientes al día ${formattedDate}, 
+según el calendario litúrgico de la Iglesia Católica en México (Arquidiócesis de Chihuahua).
+
+Incluye SIEMPRE en este orden:
+
+1. Antífona de entrada.  
+2. Oración colecta.  
+3. Primera lectura (con referencia bíblica y texto completo).  
+4. Salmo responsorial (con antífona clara y versículos).  
+5. Segunda lectura si corresponde (con referencia y texto completo).  
+6. Evangelio (con aclamación y texto completo).
+
+Entrega el texto íntegro, sin comentarios, explicaciones ni advertencias.  
+Usa títulos en mayúsculas como: "ANTÍFONA DE ENTRADA", "ORACIÓN COLECTA", "PRIMERA LECTURA", etc.`;  
+};
+
+
+
+            /**
+             * Formatea el contenido devuelto por la API para mejorar su presentación
+             * @param {string} content - El contenido sin formato de la API
+             * @returns {string} - Contenido formateado con HTML
+             */
+            const formatReadingContent = (content) => {
+                if (!content) return '<p>No hay lecturas disponibles para este día.</p>';
+                
+                // Procesar el contenido para darle formato litúrgico
+                let formattedContent = content;
+                
+                // Detectar y formatear referencias bíblicas
+                formattedContent = formattedContent.replace(/(\d?\s?[A-Za-z]+ \d+:\d+-\d+)/g, '<strong class="accent-color">$1</strong>');
+                
+                // Detectar y formatear versículos
+                formattedContent = formattedContent.replace(/(\d+)\.\s*(.+?)(?=\n|$)/g, '<div class="verse"><span class="verse-number">$1.</span> <span class="verse-text">$2</span></div>');
+                
+                // Detectar y formatear secciones de lecturas
+                formattedContent = formattedContent.replace(/(PRIMERA LECTURA|LECTURA DEL ANTIGUO TESTAMENTO)/gi, '<h2 class="section-title">PRIMERA LECTURA</h2><div class="bible-passage first-reading">');
+                formattedContent = formattedContent.replace(/(SALMO RESPONSORIAL|SALMO)/gi, '</div><h2 class="section-title">SALMO RESPONSORIAL</h2><div class="bible-passage psalm">');
+                formattedContent = formattedContent.replace(/(SEGUNDA LECTURA|LECTURA DEL NUEVO TESTAMENTO)/gi, '</div><h2 class="section-title">SEGUNDA LECTURA</h2><div class="bible-passage second-reading">');
+                formattedContent = formattedContent.replace(/(EVANGELIO|ACLAMACIÓN AL EVANGELIO)/gi, '</div><h2 class="section-title">EVANGELIO</h2><div class="bible-passage gospel">');
+                
+                // Cerrar las divs de las lecturas al final
+                formattedContent += '</div>';
+                
+                // Detectar y formatear títulos principales
+                formattedContent = formattedContent.replace(/^# (.+)$/gm, '<h1>$1</h1>');
+                formattedContent = formattedContent.replace(/^## (.+)$/gm, '<h2>$1</h2>');
+                
+                // Reemplazar saltos de línea por párrafos
+                formattedContent = formattedContent.split('\n\n').map(paragraph => {
+                    if (!paragraph.startsWith('<') && paragraph.trim() !== '') {
+                        return `<p>${paragraph}</p>`;
+                    }
+                    return paragraph;
+                }).join('');
+                
+                return formattedContent;
+            };
+
+            /**
+             * Obtiene las lecturas del día desde la API a través del proxy.
+             */
+            const fetchReadings = async () => {
+                state.isLoading = true;
+                state.error = null;
+                render(); // Muestra el loader
+
+                const prompt = generatePrompt(state.date);
+
+                try {
+                    const response = await fetch(MAGISTERIUM_API_URL, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ prompt })
+                    });
+
+                    if (!response.ok) {
+                        const errorData = await response.json();
+                        throw new Error(`Error ${response.status}: ${errorData.error || 'No se pudieron obtener las lecturas.'}`);
+                    }
+
+                    const data = await response.json();
+                    
+                    if (data && data.choices && data.choices[0] && data.choices[0].message) {
+                        const generatedContent = data.choices[0].message.content;
+                        // Formatear el contenido para mejorar su presentación
+                        const formattedContent = formatReadingContent(generatedContent);
+                        
+                        state.readingsData = {
+                            content: `<div class="font-serif">${formattedContent}</div>`
+                        };
+                    } else {
+                        throw new Error('La respuesta de la API no tiene el formato esperado.');
+                    }
+                } catch (err) {
+                    console.error("Error al obtener las lecturas:", err);
+                    state.error = err.message;
+                    state.readingsData = null;
+                } finally {
+                    state.isLoading = false;
+                    render(); // Renderiza el contenido o el error
+                }
+            };
+            
+            /**
+             * Renderiza (o actualiza) toda la interfaz de usuario basándose en el estado actual.
+             */
+            const render = () => {
+                // Actualizar la fecha mostrada
+                currentDateEl.textContent = state.date.toLocaleDateString('es-ES', { 
+                    weekday: 'long', 
+                    year: 'numeric', 
+                    month: 'long', 
+                    day: 'numeric' 
+                });
+
+                // Actualizar información del día litúrgico
+                if (state.readingsData) {
+                    liturgicalDayEl.textContent = "Lecturas del día";
+                } else if (!state.isLoading) {
+                     liturgicalDayEl.textContent = "Información no disponible";
+                }
+
+                // Actualizar contenido de las lecturas
+                readingContentEl.innerHTML = ''; // Limpiar contenido anterior
+
+                if (state.isLoading) {
+                    readingContentEl.appendChild(loaderEl);
+                    loaderEl.style.display = 'flex';
+                } else {
+                    loaderEl.style.display = 'none';
+                    if (state.error) {
+                        readingContentEl.innerHTML = `<div class="text-center p-10 text-red-600 bg-red-100 rounded-lg border border-red-200">${state.error}</div>`;
+                    } else if (state.readingsData) {
+                        readingContentEl.innerHTML = state.readingsData.content;
+                    }
+                }
+            };
+
+            // --- MANEJADORES DE EVENTOS ---
+            
+            /**
+             * Cambia la fecha actual sumando o restando días.
+             * @param {number} days - El número de días a cambiar (positivo o negativo).
+             */
+            const changeDate = (days) => {
+                const newDate = new Date(state.date);
+                newDate.setDate(newDate.getDate() + days);
+                state.date = newDate;
+                fetchReadings();
+            };
+            
+            prevDayBtn.addEventListener('click', () => changeDate(-1));
+            nextDayBtn.addEventListener('click', () => changeDate(1));
+            todayBtn.addEventListener('click', () => {
+                state.date = new Date();
+                fetchReadings();
+            });
+
+            // Manejar el cambio de tema
+            themeToggle.addEventListener('change', (e) => {
+                applyTheme(e.target.checked);
+                // Guardar preferencia en localStorage
+                localStorage.setItem('darkMode', e.target.checked);
+            });
+
+            // --- INICIALIZACIÓN ---
+            const init = () => {
+                // Comprobar preferencia de tema guardada o aplicar según la hora
+                const savedDarkMode = localStorage.getItem('darkMode');
+                if (savedDarkMode !== null) {
+                    applyTheme(savedDarkMode === 'true');
+                } else {
+                    // Aplicar tema oscuro automáticamente si es de noche
+                    applyTheme(isNightTime());
+                }
+                
+                fetchReadings();
+            };
+
+            init();
+        });
+    </script>
+</body>
+</html>
