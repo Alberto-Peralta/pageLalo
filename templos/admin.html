@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Admin - Templos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="templos.css">
+    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- Pantalla de login -->
+    <div id="loginScreen" class="login-screen">
+        <div class="login-container">
+            <div class="login-header">
+                <i class="fas fa-user-shield"></i>
+                <h2>Panel de Administración</h2>
+                <p>Ingresa tus credenciales</p>
+            </div>
+            <form id="loginForm">
+                <div class="form-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="emailLogin" placeholder="Correo electrónico" required>
+                </div>
+                <div class="form-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="passwordLogin" placeholder="Contraseña" required>
+                </div>
+                <button type="submit" class="btn-login">
+                    <i class="fas fa-sign-in-alt"></i> Iniciar Sesión
+                </button>
+                <div id="loginError" class="error-message"></div>
+            </form>
+            <button class="btn-back" onclick="window.location.href='index.html'">
+                <i class="fas fa-arrow-left"></i> Volver a Templos
+            </button>
+        </div>
+    </div>
+
+    <!-- Panel de administración -->
+    <div id="adminPanel" class="admin-panel" style="display: none;">
+        <header>
+            <nav class="navbar">
+                <div class="logo">Panel Admin - Templos</div>
+                <div class="admin-actions">
+                    <span id="userEmail" class="user-email"></span>
+                    <button class="btn-logout" id="btnLogout">
+                        <i class="fas fa-sign-out-alt"></i> Salir
+                    </button>
+                </div>
+            </nav>
+        </header>
+
+        <main class="admin-main">
+            <div class="admin-header">
+                <h1><i class="fas fa-church"></i> Gestión de Templos</h1>
+                <button class="btn-nueva" id="btnNueva">
+                    <i class="fas fa-plus"></i> Nueva Templo
+                </button>
+            </div>
+
+            <!-- Formulario para agregar/editar -->
+            <div id="formulariotemplo" class="form-container" style="display: none;">
+                <div class="form-header">
+                    <h2 id="formTitle">Nueva Templo</h2>
+                    <button class="btn-close" id="btnCloseForm">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <form id="temploForm">
+                    <input type="hidden" id="temploId">
+                    
+                    <div class="form-group">
+                        <label><i class="fas fa-church"></i> Nombre de la Templo</label>
+                        <input type="text" id="nombre" required placeholder="Ej: Templo de Nuestra Señora de Guadalupe">
+                    </div>
+
+                    <div class="form-group">
+                        <label><i class="fas fa-map-marker-alt"></i> Dirección</label>
+                        <input type="text" id="direccion" required placeholder="Calle, número, colonia">
+                        <div style="display: flex; gap: 0.5rem; margin-top: 0.5rem;">
+                            <button type="button" class="btn-ubicacion-auto" id="btnUbicacionAuto">
+                                <i class="fas fa-location-arrow"></i> Usar mi ubicación actual
+                            </button>
+                            <span id="ubicacionStatus" class="ubicacion-status"></span>
+                        </div>
+                    </div>
+
+                    <!-- Campos ocultos para coordenadas -->
+                    <input type="hidden" id="latitud">
+                    <input type="hidden" id="longitud">
+
+                    <div class="form-group">
+                        <label><i class="fas fa-align-left"></i> Descripción</label>
+                        <textarea id="descripcion" rows="4" placeholder="Breve descripción de la Templo"></textarea>
+                    </div>
+
+                    <!-- Sección de Imágenes Múltiples -->
+                    <div class="imagenes-section">
+                        <h3><i class="fas fa-images"></i> Imágenes de la Templo</h3>
+                        <div id="imagenesGrid" class="imagenes-grid"></div>
+                        
+                        <div class="imagen-input-group">
+                            <select id="tipoImagen">
+                                <option value="upload">Subir Imagen</option>
+                                <option value="url">URL Externa</option>
+                            </select>
+                            <input type="file" id="imagenUpload" accept="image/*">
+                            <input type="url" id="imagenUrl" placeholder="https://ejemplo.com/imagen.jpg" style="display: none;">
+                            <button type="button" class="btn-add-imagen" id="btnAddImagen">
+                                <i class="fas fa-plus"></i> Agregar Imagen
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Horarios con múltiples entradas por día -->
+                    <div class="horarios-section">
+                        <h3><i class="fas fa-clock"></i> Horarios de Misa</h3>
+                        
+                        <div class="dia-horarios">
+                            <h4>Lunes</h4>
+                            <div class="horarios-list" id="horariosLunes">
+                                <div class="horario-item-input">
+                                    <input type="text" placeholder="Ej: 7:00 AM">
+                                    <button type="button" class="btn-remove-horario">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <button type="button" class="btn-add-horario" data-dia="Lunes">
+                                <i class="fas fa-plus"></i> Agregar horario
+                            </button>
+                        </div>
+
+                        <div class="dia-horarios">
+                            <h4>Martes</h4>
+                            <div class="horarios-list" id="horariosMartes">
+                                <div class="horario-item-input">
+                                    <input type="text" placeholder="Ej: 7:00 AM">
+                                    <button type="button" class="btn-remove-horario">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <button type="button" class="btn-add-horario" data-dia="Martes">
+                                <i class="fas fa-plus"></i> Agregar horario
+                            </button>
+                        </div>
+
+                        <div class="dia-horarios">
+                            <h4>Miércoles</h4>
+                            <div class="horarios-list" id="horariosMiercoles">
+                                <div class="horario-item-input">
+                                    <input type="text" placeholder="Ej: 7:00 AM">
+                                    <button type="button" class="btn-remove-horario">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <button type="button" class="btn-add-horario" data-dia="Miercoles">
+                                <i class="fas fa-plus"></i> Agregar horario
+                            </button>
+                        </div>
+
+                        <div class="dia-horarios">
+                            <h4>Jueves</h4>
+                            <div class="horarios-list" id="horariosJueves">
+                                <div class="horario-item-input">
+                                    <input type="text" placeholder="Ej: 7:00 AM">
+                                    <button type="button" class="btn-remove-horario">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <button type="button" class="btn-add-horario" data-dia="Jueves">
+                                <i class="fas fa-plus"></i> Agregar horario
+                            </button>
+                        </div>
+
+                        <div class="dia-horarios">
+                            <h4>Viernes</h4>
+                            <div class="horarios-list" id="horariosViernes">
+                                <div class="horario-item-input">
+                                    <input type="text" placeholder="Ej: 7:00 AM">
+                                    <button type="button" class="btn-remove-horario">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <button type="button" class="btn-add-horario" data-dia="Viernes">
+                                <i class="fas fa-plus"></i> Agregar horario
+                            </button>
+                        </div>
+
+                        <div class="dia-horarios">
+                            <h4>Sábado</h4>
+                            <div class="horarios-list" id="horariosSabado">
+                                <div class="horario-item-input">
+                                    <input type="text" placeholder="Ej: 7:00 AM">
+                                    <button type="button" class="btn-remove-horario">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <button type="button" class="btn-add-horario" data-dia="Sabado">
+                                <i class="fas fa-plus"></i> Agregar horario
+                            </button>
+                        </div>
+
+                        <div class="dia-horarios">
+                            <h4>Domingo</h4>
+                            <div class="horarios-list" id="horariosDomingo">
+                                <div class="horario-item-input">
+                                    <input type="text" placeholder="Ej: 8:00 AM">
+                                    <button type="button" class="btn-remove-horario">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <button type="button" class="btn-add-horario" data-dia="Domingo">
+                                <i class="fas fa-plus"></i> Agregar horario
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="avisos-section">
+                        <h3><i class="fas fa-bullhorn"></i> Avisos Parroquiales</h3>
+                        <div id="avisosContainer">
+                            <div class="aviso-input-group">
+                                <input type="text" class="aviso-input" placeholder="Escribe un aviso...">
+                                <button type="button" class="btn-remove-aviso">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <button type="button" class="btn-add-aviso" id="btnAddAviso">
+                            <i class="fas fa-plus"></i> Agregar Aviso
+                        </button>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn-guardar">
+                            <i class="fas fa-save"></i> Guardar
+                        </button>
+                        <button type="button" class="btn-cancelar" id="btnCancelar">
+                            <i class="fas fa-times"></i> Cancelar
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Lista de templos -->
+            <div class="templos-list" id="templosList">
+                <div class="loading">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    <p>Cargando Templos...</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script type="module" src="./admin.js"></script>
+</body>
+</html>

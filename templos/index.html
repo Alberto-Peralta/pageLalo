@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Templos - Lalo Peralta</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="templos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Lalo Peralta</div>
+            <button class="menu-toggle" onclick="window.location.href='../index.html'">
+                <i class="fas fa-home"></i>
+            </button>
+        </nav>
+    </header>
+
+    <main class="templos-main">
+        <section class="hero-templos">
+            <h1><i class="fas fa-church"></i> Templos de Delicias</h1>
+            <p>Encuentra información de los Templos de nuestra ciudad</p>
+        </section>
+
+        <!-- Filtros y búsqueda -->
+        <section class="filtros">
+            <div class="search-container">
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchInput" placeholder="Buscar templo..." onkeyup="filtertemplos()">
+            </div>
+            <button class="btn-admin-secreto" id="btnAdmin" onclick="window.location.href='admin.html'">
+                <i class="fas fa-user-shield"></i> Panel Admin
+            </button>
+        </section>
+
+        <!-- Contenedor de templos -->
+        <section class="templos-container" id="templosContainer">
+            <div class="loading">
+                <i class="fas fa-spinner fa-spin"></i>
+                <p>Cargando Templos...</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-bottom">
+            <p>&copy; 2025 Lalo Peralta. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Modal para ver detalles -->
+    <div id="modalDetalle" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal()">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <script type="module" src="./templos.js"></script>
+</body>
+</html>

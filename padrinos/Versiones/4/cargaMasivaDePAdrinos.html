@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carga Masiva de Padrinos - CSV</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .toast { position: fixed; top: 20px; right: 20px; padding: 12px 20px; border-radius: 8px; z-index: 1000; transform: translateX(400px); transition: transform 0.3s ease; }
+        .toast.show { transform: translateX(0); }
+        .toast.success { background: #10B981; color: white; }
+        .toast.error { background: #EF4444; color: white; }
+        .toast.warning { background: #F59E0B; color: white; }
+        .toast.info { background: #3B82F6; color: white; }
+        .spinner { width: 20px; height: 20px; border: 3px solid #ffffff; border-top: 3px solid transparent; border-radius: 50%; animation: spin 1s linear infinite; display: inline-block; }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        .drop-zone { border: 2px dashed #cbd5e1; border-radius: 12px; padding: 40px; text-align: center; transition: all 0.3s ease; cursor: pointer; background: white; }
+        .drop-zone.dragover { border-color: #3b82f6; background-color: #eff6ff; }
+        .preview-table { max-height: 400px; overflow-y: auto; }
+        .error-row { background-color: #fee2e2; }
+        .success-row { background-color: #d1fae5; }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <div id="toast" class="toast hidden">
+        <div class="flex items-center">
+            <i id="toast-icon" class="mr-2"></i>
+            <span id="toast-message"></span>
+        </div>
+    </div>
+
+    <div id="loginScreen" class="min-h-screen flex items-center justify-center gradient-bg p-4">
+        <div class="bg-white rounded-2xl shadow-2xl p-8 max-w-md w-full">
+            <div class="text-center mb-8">
+                <div class="w-20 h-20 rounded-full bg-purple-100 flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-file-upload text-purple-600 text-3xl"></i>
+                </div>
+                <h1 class="text-3xl font-bold text-gray-800">Carga Masiva</h1>
+                <p class="text-gray-600 mt-2">Importar padrinos desde CSV</p>
+            </div>
+            <form id="loginForm" class="space-y-6">
+                <div>
+                    <label for="loginEmail" class="block text-sm font-medium text-gray-700 mb-1">Correo Electrónico</label>
+                    <input type="email" id="loginEmail" required class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500" placeholder="tu@email.com">
+                </div>
+                <div>
+                    <label for="loginPassword" class="block text-sm font-medium text-gray-700 mb-1">Contraseña</label>
+                    <input type="password" id="loginPassword" required class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500">
+                </div>
+                <div id="loginError" class="hidden bg-red-50 text-red-700 p-3 rounded-lg text-sm"></div>
+                <button type="submit" id="loginBtn" class="w-full gradient-bg text-white py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center">
+                    <span id="loginText">Iniciar Sesión</span>
+                    <div id="loginSpinner" class="spinner hidden ml-2"></div>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <div id="mainScreen" class="hidden min-h-screen">
+        <header class="gradient-bg text-white shadow-lg">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4">
+                <div class="flex justify-between items-center">
+                    <div class="flex items-center space-x-3">
+                        <i class="fas fa-file-upload text-2xl"></i>
+                        <div>
+                            <h1 class="text-xl font-bold">Carga Masiva de Padrinos</h1>
+                            <p class="text-sm text-purple-200">Importar desde CSV</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <span id="userEmail" class="text-sm"></span>
+                        <button id="logoutBtn" class="bg-white text-purple-600 px-4 py-2 rounded-lg text-sm font-semibold hover:bg-purple-50 transition-colors duration-300">
+                            <i class="fas fa-sign-out-alt mr-1"></i>Salir
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="max-w-5xl mx-auto p-4 sm:p-6">
+            <div class="bg-white rounded-2xl shadow-lg p-6 mb-6">
+                <div class="flex items-start mb-4">
+                    <i class="fas fa-info-circle text-blue-500 text-2xl mr-4 mt-1"></i>
+                    <div class="flex-1">
+                        <h3 class="font-semibold text-blue-800 text-lg mb-3">Instrucciones de uso:</h3>
+                        <ol class="space-y-2 text-gray-700">
+                            <li class="flex items-start">
+                                <span class="bg-blue-100 text-blue-800 rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-3 mt-0.5">1</span>
+                                <span>Descarga la plantilla CSV de ejemplo haciendo clic en el botón verde</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="bg-blue-100 text-blue-800 rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-3 mt-0.5">2</span>
+                                <span>Abre el archivo con Excel, Google Sheets o cualquier editor de hojas de cálculo</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="bg-blue-100 text-blue-800 rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-3 mt-0.5">3</span>
+                                <span>Llena cada fila con los datos de tus padrinos</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="bg-blue-100 text-blue-800 rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-3 mt-0.5">4</span>
+                                <span>Guarda el archivo como CSV (separado por comas)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="bg-blue-100 text-blue-800 rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-3 mt-0.5">5</span>
+                                <span>Sube el archivo aquí para importar todos los padrinos</span>
+                            </li>
+                        </ol>
+                        <div class="mt-4 p-4 bg-yellow-50 rounded-lg border-l-4 border-yellow-400">
+                            <p class="text-sm font-semibold text-yellow-800 mb-1">Columnas requeridas:</p>
+                            <p class="text-sm text-yellow-700"><strong>nombre</strong> e **importe** son obligatorios. Las columnas del formato anterior (`numpad`, `tratamiento`, `direccion`, `sector`, `telefono`) están soportadas.</p>
+                            <p class="text-sm text-yellow-700 mt-2">Columnas opcionales: numpad, tratamiento, direccion, telefono, sector, correo, coordenadas, etiqueta, notas</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-lg p-6 mb-6">
+                <button id="downloadTemplateBtn" class="bg-green-600 text-white px-8 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl hover:bg-green-700 transition-all duration-300 flex items-center text-lg">
+                    <i class="fas fa-download mr-3 text-xl"></i>
+                    Descargar Plantilla CSV de Ejemplo
+                </button>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-lg p-6 mb-6">
+                <h2 class="text-xl font-bold text-gray-800 mb-4">Subir archivo CSV</h2>
+                <div id="dropZone" class="drop-zone">
+                    <i class="fas fa-cloud-upload-alt text-6xl text-gray-400 mb-4"></i>
+                    <p class="text-xl font-semibold text-gray-700 mb-2">Arrastra tu archivo CSV aquí</p>
+                    <p class="text-sm text-gray-500 mb-4">o haz clic para seleccionar</p>
+                    <button id="selectFileBtn" class="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                        <i class="fas fa-folder-open mr-2"></i>Seleccionar Archivo
+                    </button>
+                    <input type="file" id="csvFileInput" accept=".csv" class="hidden">
+                    <p class="text-xs text-gray-400 mt-4">Formato aceptado: CSV (separado por comas)</p>
+                </div>
+            </div>
+
+            <div id="previewSection" class="hidden bg-white rounded-2xl shadow-lg p-6 mb-6">
+                <h3 class="text-xl font-bold text-gray-800 mb-4">Previsualización de Datos</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                    <div class="bg-blue-50 rounded-lg p-4 text-center">
+                        <p class="text-sm text-gray-600 mb-1">Total de registros</p>
+                        <p id="totalRecords" class="text-3xl font-bold text-blue-600">0</p>
+                    </div>
+                    <div class="bg-green-50 rounded-lg p-4 text-center">
+                        <p class="text-sm text-gray-600 mb-1">Registros válidos</p>
+                        <p id="validRecords" class="text-3xl font-bold text-green-600">0</p>
+                    </div>
+                    <div class="bg-red-50 rounded-lg p-4 text-center">
+                        <p class="text-sm text-gray-600 mb-1">Con errores</p>
+                        <p id="errorRecords" class="text-3xl font-bold text-red-600">0</p>
+                    </div>
+                </div>
+
+                <div class="preview-table border rounded-lg overflow-hidden mb-4">
+                    <table class="w-full text-sm">
+                        <thead class="bg-gray-200 sticky top-0">
+                            <tr>
+                                <th class="px-4 py-3 text-left">Estado</th>
+                                <th class="px-4 py-3 text-left">Nombre</th>
+                                <th class="px-4 py-3 text-left">Importe</th>
+                                <th class="px-4 py-3 text-left">Dirección</th>
+                                <th class="px-4 py-3 text-left">Teléfono</th>
+                                <th class="px-4 py-3 text-left">Errores</th>
+                            </tr>
+                        </thead>
+                        <tbody id="previewTableBody">
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="flex justify-end space-x-4">
+                    <button id="cancelPreviewBtn" class="bg-gray-300 text-gray-800 px-6 py-3 rounded-lg font-semibold hover:bg-gray-400 transition-colors">
+                        <i class="fas fa-times mr-2"></i>Cancelar
+                    </button>
+                    <button id="confirmUploadBtn" class="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center">
+                        <i class="fas fa-upload mr-2"></i>
+                        <span id="uploadBtnText">Importar Padrinos</span>
+                        <div id="uploadSpinner" class="spinner hidden ml-2"></div>
+                    </button>
+                </div>
+            </div>
+
+            <div id="resultSection" class="hidden bg-white rounded-2xl shadow-lg p-6">
+                <div class="flex items-center justify-center mb-6">
+                    <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center">
+                        <i class="fas fa-check-circle text-green-500 text-4xl"></i>
+                    </div>
+                </div>
+                <h3 class="text-2xl font-bold text-center text-gray-800 mb-2">Importación Exitosa</h3>
+                <p class="text-center text-gray-600 mb-6">
+                    Se importaron <span id="successCount" class="font-bold text-green-600 text-xl">0</span> padrinos correctamente
+                </p>
+                <div class="flex justify-center">
+                    <button id="importMoreBtn" class="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                        <i class="fas fa-plus mr-2"></i>Importar Más Padrinos
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+    <script type="module">
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js';
+        import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut } from 'https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js';
+        import { getDatabase, ref, set } from 'https://www.gstatic.com/firebasejs/9.22.0/firebase-database.js';
+
+        // =====================================================================
+        // CONFIGURACIÓN DE FIREBASE
+        // NOTA: Revisa que esta configuración sea la correcta para tu proyecto.
+        // =====================================================================
+        const firebaseConfig = {
+            apiKey: "AIzaSyC2ElrNIrXrtydpZCe-ysoXfdoyITGjgZU",
+            authDomain: "padrinosmg-30a2f.firebaseapp.com",
+            databaseURL: "https://padrinosmg-30a2f-default-rtdb.firebaseio.com",
+            projectId: "padrinosmg-30a2f",
+            storageBucket: "padrinosmg-30a2f.firebasestorage.app",
+            messagingSenderId: "628189112208",
+            appId: "1:628189112208:web:7044ab9b9b96656a657515"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const database = getDatabase(app);
+
+        let parsedData = [];
+        let validRecords = [];
+        let errorRecords = [];
+        let currentUserId = null;
+
+        // =====================================================================
+        // FUNCIONES DE UTILIDAD (TOAST, TEMPLATE)
+        // =====================================================================
+
+        function showToast(message, type = 'info') {
+            const toast = document.getElementById('toast');
+            const toastIcon = document.getElementById('toast-icon');
+            const toastMessage = document.getElementById('toast-message');
+            
+            toast.className = `toast ${type} show`;
+            const icons = {
+                success: 'fas fa-check-circle',
+                error: 'fas fa-exclamation-circle',
+                warning: 'fas fa-exclamation-triangle',
+                info: 'fas fa-info-circle'
+            };
+            toastIcon.className = `${icons[type]} mr-2`;
+            toastMessage.textContent = message;
+            
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 4000);
+        }
+
+        function downloadTemplate() {
+            const headers = ['numpad', 'tratamiento', 'nombre', 'direccion', 'telefono', 'sector', 'correo', 'importe', 'coordenadas', 'etiqueta', 'notas'];
+            const example1 = ['37144110', 'SR', 'Juan Pérez García', 'Calle Principal 123, Col. Centro', '6391234567', 'Centro', 'juan@email.com', '500.00', '28.1234, -105.5678', 'VIP', 'Cliente frecuente'];
+            const example2 = ['37144111', 'SRA', 'María López Hernández', 'Av. Juárez 456, Col. Norte', '6397654321', 'Norte', 'maria@email.com', '300.50', '', '', 'Nuevo padrino'];
+            const example3 = ['', 'SR', 'Pedro Ramírez', 'Calle 5 de Mayo 789', '6395551234', 'Sur', '', '250.00', '', 'Mensual', ''];
+            
+            const csvContent = headers.join(',') + '\n' + 
+                                example1.map(v => `"${v}"`).join(',') + '\n' +
+                                example2.map(v => `"${v}"`).join(',') + '\n' +
+                                example3.map(v => `"${v}"`).join(',');
+            
+            const blob = new Blob(['\uFEFF' + csvContent], { type: 'text/csv;charset=utf-8;' });
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = 'plantilla_padrinos_ejemplo.csv';
+            link.click();
+            showToast('Plantilla descargada correctamente', 'success');
+        }
+
+        function validateRecord(record, index) {
+            const errors = [];
+            
+            // Revisa que los encabezados del CSV existan en el objeto 'record'
+            const requiredFields = ['nombre', 'importe'];
+            requiredFields.forEach(field => {
+                if (!record[field] || String(record[field]).trim() === '') {
+                    errors.push(`'${field}' es requerido`);
+                }
+            });
+
+            // Validación de importe
+            const importeValue = String(record.importe || '0').replace(/[^0-9.,-]+/g, '').replace(',', '.'); // Limpia y usa punto decimal
+            const importeNum = parseFloat(importeValue);
+
+            if (isNaN(importeNum) || importeNum < 0) {
+                errors.push('Importe debe ser un número válido (> 0)');
+            }
+            
+            // Normaliza el campo importe para su uso posterior si es válido
+            record.importe = isNaN(importeNum) ? 0 : importeNum; 
+
+            // Normaliza los demás campos a string para evitar errores
+            record.numpad = String(record.numpad || '').trim();
+            record.tratamiento = String(record.tratamiento || '').trim();
+            record.nombre = String(record.nombre || '').trim();
+            record.direccion = String(record.direccion || '').trim();
+            record.telefono = String(record.telefono || '').trim();
+            record.sector = String(record.sector || '').trim();
+            record.correo = String(record.correo || '').trim();
+            record.coordenadas = String(record.coordenadas || '').trim();
+            record.etiqueta = String(record.etiqueta || '').trim();
+            record.notas = String(record.notas || '').trim();
+
+            return {
+                valid: errors.length === 0,
+                errors: errors,
+                record: record,
+                index: index
+            };
+        }
+
+        function parseCSV(file) {
+            return new Promise((resolve, reject) => {
+                Papa.parse(file, {
+                    header: true,
+                    skipEmptyLines: true,
+                    dynamicTyping: false,
+                    // Convierte los encabezados a minúsculas y elimina espacios
+                    transformHeader: (header) => header.trim().toLowerCase(),
+                    complete: (results) => resolve(results.data),
+                    error: (error) => reject(error)
+                });
+            });
+        }
+
+        async function processCSVFile(file) {
+            try {
+                showToast('Procesando archivo...', 'info');
+                
+                // Limpiar el input para permitir subir el mismo archivo otra vez
+                document.getElementById('csvFileInput').value = '';
+
+                const data = await parseCSV(file);
+                
+                if (data.length === 0) {
+                    showToast('El archivo CSV está vacío o solo contiene encabezados', 'error');
+                    return;
+                }
+
+                parsedData = data;
+                validRecords = [];
+                errorRecords = [];
+
+                data.forEach((record, index) => {
+                    const validation = validateRecord(record, index);
+                    if (validation.valid) {
+                        validRecords.push(validation);
+                    } else {
+                        errorRecords.push(validation);
+                    }
+                });
+
+                showPreview();
+                showToast('Archivo procesado correctamente', 'success');
+                
+            } catch (error) {
+                console.error('Error al procesar CSV:', error);
+                showToast('Error al procesar el archivo CSV: ' + error.message, 'error');
+            }
+        }
+
+        function showPreview() {
+            document.getElementById('previewSection').classList.remove('hidden');
+            document.getElementById('resultSection').classList.add('hidden');
+            
+            document.getElementById('totalRecords').textContent = parsedData.length;
+            document.getElementById('validRecords').textContent = validRecords.length;
+            document.getElementById('errorRecords').textContent = errorRecords.length;
+
+            const tbody = document.getElementById('previewTableBody');
+            tbody.innerHTML = '';
+
+            // Mostrar errores primero
+            errorRecords.forEach((item) => {
+                const row = createPreviewRow(item, true);
+                tbody.appendChild(row);
+            });
+
+            // Mostrar una muestra de los válidos (máximo 20)
+            const showCount = Math.min(validRecords.length, 20);
+            validRecords.slice(0, showCount).forEach((item) => {
+                const row = createPreviewRow(item, false);
+                tbody.appendChild(row);
+            });
+
+            if (validRecords.length > showCount) {
+                const moreRow = document.createElement('tr');
+                moreRow.innerHTML = `<td colspan="6" class="px-4 py-3 text-center text-gray-500 italic bg-gray-50">... y ${validRecords.length - showCount} registros válidos más</td>`;
+                tbody.appendChild(moreRow);
+            }
+            
+            // Habilita o deshabilita el botón de carga
+            const uploadBtn = document.getElementById('confirmUploadBtn');
+            uploadBtn.disabled = validRecords.length === 0;
+            if (validRecords.length === 0) {
+                showToast('Ningún registro es válido. Revise los errores.', 'warning');
+            }
+        }
+
+        function createPreviewRow(item, isError) {
+            const tr = document.createElement('tr');
+            tr.className = isError ? 'error-row' : 'success-row';
+            
+            const statusIcon = isError 
+                ? '<i class="fas fa-exclamation-circle text-red-600"></i>' 
+                : '<i class="fas fa-check-circle text-green-600"></i>';
+            
+            const errorsText = isError 
+                ? item.errors.join(', ') 
+                : 'OK';
+
+            // El importe ya está normalizado a número o 0 en validateRecord
+            const importeDisplay = `$${(item.record.importe || 0).toFixed(2)}`;
+
+            tr.innerHTML = `
+                <td class="px-4 py-2 text-center">${statusIcon}</td>
+                <td class="px-4 py-2">${item.record.nombre || '-'}</td>
+                <td class="px-4 py-2">${importeDisplay}</td>
+                <td class="px-4 py-2 text-sm">${item.record.direccion || '-'}</td>
+                <td class="px-4 py-2">${item.record.telefono || '-'}</td>
+                <td class="px-4 py-2 text-xs ${isError ? 'text-red-600 font-semibold' : 'text-green-600'}">${errorsText}</td>
+            `;
+            
+            return tr;
+        }
+
+        /**
+         * FUNCIÓN ACTUALIZADA DE CARGA MASIVA (sustituye a bulkAddSponsors)
+         * Itera sobre los registros ya validados y los guarda en Firebase.
+         */
+        async function importSponsors() {
+            if (!currentUserId) {
+                showToast('Debe iniciar sesión primero.', 'error');
+                return;
+            }
+
+            if (validRecords.length === 0) {
+                showToast('No hay registros válidos para importar', 'warning');
+                return;
+            }
+
+            const uploadBtn = document.getElementById('confirmUploadBtn');
+            const uploadBtnText = document.getElementById('uploadBtnText');
+            const uploadSpinner = document.getElementById('uploadSpinner');
+
+            uploadBtnText.textContent = 'Importando...';
+            uploadSpinner.classList.remove('hidden');
+            uploadBtn.disabled = true;
+
+            try {
+                let successCount = 0;
+                const total = validRecords.length;
+                
+                for (const item of validRecords) {
+                    const record = item.record;
+                    
+                    // Genera un ID único para el padrino
+                    const sponsorId = Date.now().toString() + Math.random().toString(36).substr(2, 9);
+                    
+                    // Mapeo al formato del padrino, asegurando que todos los campos existan (como en el código original)
+                    const sponsorData = {
+                        numpad: record.numpad || '',
+                        tratamiento: record.tratamiento || '',
+                        nombre: record.nombre || '',
+                        direccion: record.direccion || '',
+                        telefono: record.telefono || '',
+                        sector: record.sector || '',
+                        correo: record.correo || '',
+                        importe: record.importe || 0, // Ya es un número
+                        coordenadas: record.coordenadas || '',
+                        etiqueta: record.etiqueta || '',
+                        notas: record.notas || ''
+                    };
+
+                    // Guardar en Firebase Realtime Database
+                    await set(ref(database, `users/${currentUserId}/padrinos/${sponsorId}`), sponsorData);
+                    successCount++;
+                    
+                    console.log(`Padrino ${successCount}/${total} agregado: ${record.nombre}`);
+                    
+                    // Pequeña pausa para evitar sobrecargar la base de datos (buenas prácticas de Firebase)
+                    await new Promise(resolve => setTimeout(resolve, 50));
+                }
+
+                document.getElementById('previewSection').classList.add('hidden');
+                document.getElementById('resultSection').classList.remove('hidden');
+                document.getElementById('successCount').textContent = successCount;
+                
+                showToast(`🎉 ¡Éxito! ${successCount} padrinos importados correctamente`, 'success');
+
+            } catch (error) {
+                console.error('Error al importar:', error);
+                showToast('Error al importar padrinos: ' + error.message, 'error');
+            } finally {
+                uploadBtnText.textContent = 'Importar Padrinos';
+                uploadSpinner.classList.add('hidden');
+                uploadBtn.disabled = false;
+            }
+        }
+
+        // =====================================================================
+        // MANEJADORES DE EVENTOS
+        // =====================================================================
+
+        // Control de autenticación
+        document.getElementById('loginForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            // ... (Lógica de inicio de sesión, ya estaba completa)
+            const loginText = document.getElementById('loginText');
+            const loginSpinner = document.getElementById('loginSpinner');
+            const loginError = document.getElementById('loginError');
+            const loginBtn = document.getElementById('loginBtn');
+            
+            loginText.textContent = "Verificando...";
+            loginSpinner.classList.remove('hidden');
+            loginError.classList.add('hidden');
+            loginBtn.disabled = true;
+            
+            try {
+                const email = document.getElementById('loginEmail').value.trim();
+                const password = document.getElementById('loginPassword').value;
+                
+                await signInWithEmailAndPassword(auth, email, password);
+                
+            } catch (error) {
+                let msg = "Error al iniciar sesión";
+                switch (error.code) {
+                    case 'auth/user-not-found': msg = "Usuario no encontrado"; break;
+                    case 'auth/wrong-password': msg = "Contraseña incorrecta"; break;
+                    case 'auth/invalid-email': msg = "Email inválido"; break;
+                    case 'auth/invalid-credential': msg = "Credenciales inválidas"; break;
+                    default: msg = "Error desconocido: " + error.message;
+                }
+                loginError.textContent = msg;
+                loginError.classList.remove('hidden');
+            } finally {
+                loginText.textContent = "Iniciar Sesión";
+                loginSpinner.classList.add('hidden');
+                loginBtn.disabled = false;
+            }
+        });
+
+        document.getElementById('logoutBtn').addEventListener('click', async () => {
+            try {
+                await signOut(auth);
+                showToast('Sesión cerrada correctamente', 'success');
+            } catch (error) {
+                showToast('Error al cerrar sesión', 'error');
+            }
+        });
+
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                currentUserId = user.uid;
+                document.getElementById('userEmail').textContent = user.email;
+                document.getElementById('loginScreen').classList.add('hidden');
+                document.getElementById('mainScreen').classList.remove('hidden');
+            } else {
+                currentUserId = null;
+                document.getElementById('loginScreen').classList.remove('hidden');
+                document.getElementById('mainScreen').classList.add('hidden');
+            }
+        });
+
+        // Manejo de la subida del archivo
+        document.getElementById('downloadTemplateBtn').addEventListener('click', downloadTemplate);
+
+        document.getElementById('selectFileBtn').addEventListener('click', () => {
+            document.getElementById('csvFileInput').click();
+        });
+
+        document.getElementById('csvFileInput').addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (file) {
+                processCSVFile(file);
+            }
+        });
+
+        const dropZone = document.getElementById('dropZone');
+
+        dropZone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            dropZone.classList.add('dragover');
+        });
+
+        dropZone.addEventListener('dragleave', () => {
+            dropZone.classList.remove('dragover');
+        });
+
+        dropZone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            dropZone.classList.remove('dragover');
+            
+            const file = e.dataTransfer.files[0];
+            if (file && file.name.endsWith('.csv')) {
+                processCSVFile(file);
+            } else {
+                showToast('Por favor sube un archivo CSV', 'error');
+            }
+        });
+
+        // Clic en dropZone abre el selector de archivos
+        dropZone.addEventListener('click', (e) => {
+            // Previene que el clic en el botón active el input doblemente
+            if (e.target.id !== 'selectFileBtn') { 
+                 document.getElementById('csvFileInput').click();
+            }
+        });
+
+        document.getElementById('cancelPreviewBtn').addEventListener('click', () => {
+            parsedData = [];
+            validRecords = [];
+            errorRecords = [];
+            document.getElementById('previewSection').classList.add('hidden');
+            showToast('Importación cancelada', 'info');
+        });
+
+        document.getElementById('confirmUploadBtn').addEventListener('click', importSponsors);
+
+        document.getElementById('importMoreBtn').addEventListener('click', () => {
+            document.getElementById('resultSection').classList.add('hidden');
+            document.getElementById('previewSection').classList.add('hidden');
+            parsedData = [];
+            validRecords = [];
+            errorRecords = [];
+            showToast('Puedes importar otro archivo CSV', 'info');
+        });
+    </script>
+</body>
+</html>

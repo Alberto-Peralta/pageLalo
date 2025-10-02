@@ -1,0 +1,707 @@
+/* admin.css */
+
+/* Pantalla de Login */
+.login-screen {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #b8860b 0%, #d4a017 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.login-container {
+    background-color: #8b5e00;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    max-width: 400px;
+    width: 100%;
+    color: #ecf0f1;
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.login-header i {
+    font-size: 3rem;
+    color: #f1d07a;
+    margin-bottom: 1rem;
+}
+
+.login-header h2 {
+    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+}
+
+.login-header p {
+    color: #f1d07a;
+    font-size: 0.95rem;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.form-group i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #b8860b;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.9rem 1rem 0.9rem 2.8rem;
+    border: 2px solid #b8860b;
+    border-radius: 10px;
+    font-size: 1rem;
+    background-color: #fef6e4;
+    color: #5c3a00;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #daa520;
+    box-shadow: 0 0 10px rgba(218, 165, 32, 0.3);
+}
+
+.btn-login {
+    width: 100%;
+    padding: 1rem;
+    background-color: #b8860b;
+    color: #ecf0f1;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.btn-login:hover {
+    background-color: #daa520;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.btn-back {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: transparent;
+    color: #ecf0f1;
+    border: 2px solid #ecf0f1;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+}
+
+.btn-back:hover {
+    background-color: rgba(236, 240, 241, 0.1);
+}
+
+.error-message {
+    color: #ff6b6b;
+    text-align: center;
+    margin-top: 1rem;
+    font-weight: bold;
+    display: none;
+}
+
+/* Panel Admin */
+.admin-panel {
+    min-height: 100vh;
+    background-color: #d4a017;
+}
+
+.admin-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.user-email {
+    color: #ecf0f1;
+    font-size: 0.9rem;
+}
+
+.btn-logout {
+    padding: 0.6rem 1.2rem;
+    background-color: #c1440e;
+    color: #ecf0f1;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-logout:hover {
+    background-color: #a03a0c;
+    transform: translateY(-2px);
+}
+
+.admin-main {
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.admin-header h1 {
+    color: #ecf0f1;
+    font-size: 2rem;
+}
+
+.btn-nueva {
+    padding: 0.8rem 1.5rem;
+    background-color: #8b5e00;
+    color: #ecf0f1;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-nueva:hover {
+    background-color: #5c3a00;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Formulario */
+.form-container {
+    background-color: #8b5e00;
+    padding: 2rem;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    color: #ecf0f1;
+    animation: slideDown 0.3s ease;
+}
+
+.form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.form-header h2 {
+    color: #ecf0f1;
+}
+
+.btn-close {
+    background: none;
+    border: none;
+    color: #ecf0f1;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.btn-close:hover {
+    color: #f1d07a;
+}
+
+#temploForm .form-group {
+    margin-bottom: 1.5rem;
+}
+
+#temploForm label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #f1d07a;
+}
+
+#temploForm input[type="text"],
+#temploForm input[type="file"],
+#temploForm input[type="url"],
+#temploForm textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #b8860b;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #fef6e4;
+    color: #5c3a00;
+    transition: all 0.3s ease;
+}
+
+#temploForm input:focus,
+#temploForm textarea:focus {
+    outline: none;
+    border-color: #daa520;
+    box-shadow: 0 0 10px rgba(218, 165, 32, 0.3);
+}
+
+#temploForm textarea {
+    resize: vertical;
+    font-family: Arial, sans-serif;
+}
+
+/* Sección de Imágenes Múltiples */
+.imagenes-section {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background-color: #b8860b;
+    border-radius: 10px;
+}
+
+.imagenes-section h3 {
+    margin-bottom: 1rem;
+    color: #ecf0f1;
+}
+
+.imagenes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.imagen-item {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.imagen-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+}
+
+.btn-remove-imagen {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.btn-remove-imagen:hover {
+    background-color: #c0392b;
+    transform: scale(1.1);
+}
+
+.imagen-input-group {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    align-items: center;
+}
+
+.imagen-input-group input[type="file"],
+.imagen-input-group input[type="url"] {
+    flex: 1;
+}
+
+.imagen-input-group select {
+    padding: 0.8rem;
+    border: 2px solid #d4a017;
+    border-radius: 8px;
+    background-color: #fef6e4;
+    color: #5c3a00;
+    cursor: pointer;
+}
+
+.btn-add-imagen {
+    padding: 0.6rem 1rem;
+    background-color: #5c3a00;
+    color: #ecf0f1;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-add-imagen:hover {
+    background-color: #3e2b00;
+}
+
+/* Horarios con múltiples entradas por día */
+.horarios-section {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background-color: #b8860b;
+    border-radius: 10px;
+}
+
+.horarios-section h3 {
+    margin-bottom: 1rem;
+    color: #ecf0f1;
+}
+
+.dia-horarios {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: rgba(212, 160, 23, 0.3);
+    border-radius: 8px;
+}
+
+.dia-horarios h4 {
+    color: #ecf0f1;
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.horarios-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.horario-item-input {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.horario-item-input input {
+    flex: 1;
+    padding: 0.6rem;
+    border: 2px solid #d4a017;
+    border-radius: 6px;
+    background-color: #fef6e4;
+    color: #5c3a00;
+}
+
+.btn-remove-horario {
+    padding: 0.5rem 0.8rem;
+    background-color: #c1440e;
+    color: #ecf0f1;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-remove-horario:hover {
+    background-color: #a03a0c;
+}
+
+.btn-add-horario {
+    padding: 0.5rem 1rem;
+    background-color: #5c3a00;
+    color: #ecf0f1;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    margin-top: 0.5rem;
+}
+
+.btn-add-horario:hover {
+    background-color: #3e2b00;
+}
+
+.avisos-section {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background-color: #b8860b;
+    border-radius: 10px;
+}
+
+.avisos-section h3 {
+    margin-bottom: 1rem;
+    color: #ecf0f1;
+}
+
+.aviso-input-group {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.aviso-input {
+    flex: 1;
+    padding: 0.8rem;
+    border: 2px solid #d4a017;
+    border-radius: 8px;
+    background-color: #fef6e4;
+    color: #5c3a00;
+}
+
+.btn-remove-aviso {
+    padding: 0.5rem 1rem;
+    background-color: #c1440e;
+    color: #ecf0f1;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-remove-aviso:hover {
+    background-color: #a03a0c;
+}
+
+.btn-add-aviso {
+    padding: 0.6rem 1rem;
+    background-color: #5c3a00;
+    color: #ecf0f1;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-add-aviso:hover {
+    background-color: #3e2b00;
+}
+
+.form-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.btn-guardar,
+.btn-cancelar {
+    flex: 1;
+    padding: 1rem;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.btn-guardar {
+    background-color: #2ecc71;
+    color: white;
+}
+
+.btn-guardar:hover {
+    background-color: #27ae60;
+    transform: translateY(-2px);
+}
+
+.btn-cancelar {
+    background-color: #c1440e;
+    color: #ecf0f1;
+}
+
+.btn-cancelar:hover {
+    background-color: #a03a0c;
+}
+
+/* Lista de templos en admin */
+.templos-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.admin-templo-card {
+    background-color: #8b5e00;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.admin-templo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.admin-card-imagen {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.admin-card-info {
+    padding: 1.5rem;
+    color: #ecf0f1;
+}
+
+.admin-card-nombre {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.admin-card-direccion {
+    color: #f1d07a;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.admin-card-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.btn-editar,
+.btn-eliminar {
+    flex: 1;
+    padding: 0.7rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+}
+
+.btn-editar {
+    background-color: #3498db;
+    color: white;
+}
+
+.btn-editar:hover {
+    background-color: #2980b9;
+}
+
+.btn-eliminar {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.btn-eliminar:hover {
+    background-color: #c0392b;
+}
+
+/* Estilos para el botón de ubicación automática */
+.btn-ubicacion-auto {
+    padding: 0.6rem 1rem;
+    background-color: #3498db !important;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.btn-ubicacion-auto:hover {
+    background-color: #2980b9 !important;
+    transform: translateY(-2px);
+}
+
+.btn-ubicacion-auto:disabled {
+    background-color: #7f8c8d !important;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.ubicacion-status {
+    font-size: 0.8rem;
+    margin-top: 0.3rem;
+}
+
+.ubicacion-success {
+    color: #2ecc71;
+}
+
+.ubicacion-error {
+    color: #e74c3c;
+}
+
+.ubicacion-loading {
+    color: #f39c12;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .admin-actions {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .admin-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .admin-header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .form-container {
+        padding: 1.5rem;
+    }
+    
+    .imagenes-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+    
+    .form-actions {
+        flex-direction: column;
+    }
+    
+    .templos-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .user-email {
+        display: none;
+    }
+}

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Promotor - Padrinos Misioneros</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .toast { position: fixed; top: 20px; right: 20px; padding: 12px 20px; border-radius: 8px; z-index: 1000; transform: translateX(400px); transition: transform 0.3s ease; }
+        .toast.show { transform: translateX(0); }
+        .toast.success { background: #10B981; color: white; }
+        .toast.error { background: #EF4444; color: white; }
+        .toast.warning { background: #F59E0B; color: white; }
+        .toast.info { background: #3B82F6; color: white; }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <div id="toast" class="toast hidden">
+        <div class="flex items-center">
+            <i id="toast-icon" class="mr-2"></i>
+            <span id="toast-message"></span>
+        </div>
+    </div>
+
+    <div class="min-h-screen flex items-center justify-center gradient-bg p-4">
+        <div class="bg-white rounded-2xl shadow-2xl p-8 max-w-md w-full">
+            <div class="text-center mb-8">
+                <div class="w-20 h-20 rounded-full bg-purple-100 flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-user-plus text-purple-600 text-3xl"></i>
+                </div>
+                <h1 class="text-3xl font-bold text-gray-800">Registro de Promotor</h1>
+                <p class="text-gray-600 mt-2">Completa tu registro para comenzar</p>
+            </div>
+            
+            <div id="inviteStatus" class="hidden mb-6 p-4 rounded-lg text-center">
+                <div id="validInvite" class="hidden bg-green-50 text-green-700 p-4 rounded-lg">
+                    <i class="fas fa-check-circle text-green-500 text-xl mb-2"></i>
+                    <p class="font-semibold">Invitación válida</p>
+                    <p class="text-sm">Completa tu información para registrarte</p>
+                </div>
+                <div id="invalidInvite" class="hidden bg-red-50 text-red-700 p-4 rounded-lg">
+                    <i class="fas fa-exclamation-triangle text-red-500 text-xl mb-2"></i>
+                    <p class="font-semibold">Invitación inválida</p>
+                    <p id="invalidMessage" class="text-sm"></p>
+                </div>
+            </div>
+
+            <form id="registerForm" class="space-y-6">
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Nombre Completo *</label>
+                    <input type="text" id="name" required class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500" placeholder="Tu nombre completo">
+                </div>
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email *</label>
+                    <input type="email" id="email" required class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500" placeholder="tu@email.com">
+                </div>
+                <div>
+                    <label for="password" class="block text-sm font-medium text-gray-700 mb-1">Contraseña *</label>
+                    <input type="password" id="password" required class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500" placeholder="Mínimo 6 caracteres">
+                    <p class="text-xs text-gray-500 mt-1">La contraseña debe tener al menos 6 caracteres</p>
+                </div>
+                <div>
+                    <label for="confirmPassword" class="block text-sm font-medium text-gray-700 mb-1">Confirmar Contraseña *</label>
+                    <input type="password" id="confirmPassword" required class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500" placeholder="Repite tu contraseña">
+                </div>
+                
+                <div id="formError" class="hidden bg-red-50 text-red-700 p-3 rounded-lg text-sm"></div>
+                
+                <button type="submit" id="registerBtn" class="w-full gradient-bg text-white py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center">
+                    <span id="registerText">Completar Registro</span>
+                    <div id="registerSpinner" class="spinner hidden ml-2"></div>
+                </button>
+            </form>
+            
+            <div class="text-center mt-6 pt-6 border-t border-gray-200">
+                <p class="text-gray-600 text-sm">¿Ya tienes una cuenta? <a href="index.html" class="text-purple-600 font-semibold hover:text-purple-700">Inicia sesión aquí</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script type="module">
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js';
+        import { getAuth, createUserWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js';
+        import { getDatabase, ref, get, set, update } from 'https://www.gstatic.com/firebasejs/9.22.0/firebase-database.js';
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyC2ElrNIrXrtydpZCe-ysoXfdoyITGjgZU",
+            authDomain: "padrinosmg-30a2f.firebaseapp.com",
+            databaseURL: "https://padrinosmg-30a2f-default-rtdb.firebaseio.com",
+            projectId: "padrinosmg-30a2f",
+            storageBucket: "padrinosmg-30a2f.firebasestorage.app",
+            messagingSenderId: "628189112208",
+            appId: "1:628189112208:web:7044ab9b9b96656a657515"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const database = getDatabase(app);
+
+        let currentInvite = null;
+
+        // Mostrar toast
+        function showToast(message, type = 'info') {
+            const toast = document.getElementById('toast');
+            const toastIcon = document.getElementById('toast-icon');
+            const toastMessage = document.getElementById('toast-message');
+            
+            toast.className = `toast ${type} show`;
+            const icons = {
+                success: 'fas fa-check-circle',
+                error: 'fas fa-exclamation-circle',
+                warning: 'fas fa-exclamation-triangle',
+                info: 'fas fa-info-circle'
+            };
+            toastIcon.className = `${icons[type]} mr-2`;
+            toastMessage.textContent = message;
+            
+            setTimeout(() => {
+                toast.className = 'toast hidden';
+            }, 4000);
+        }
+
+        // Validar invitación
+        async function validateInvitation(inviteId) {
+            try {
+                const inviteRef = ref(database, `invitations/${inviteId}`);
+                const snapshot = await get(inviteRef);
+                
+                if (!snapshot.exists()) {
+                    return { valid: false, message: 'La invitación no existe' };
+                }
+                
+                const invite = snapshot.val();
+                
+                // Verificar si ya fue usada
+                if (invite.used) {
+                    return { valid: false, message: 'Esta invitación ya fue utilizada' };
+                }
+                
+                // Verificar expiración
+                if (Date.now() > invite.expiresAt) {
+                    return { valid: false, message: 'La invitación ha expirado' };
+                }
+                
+                return { valid: true, invite };
+                
+            } catch (error) {
+                console.error('Error validando invitación:', error);
+                return { valid: false, message: 'Error al validar la invitación' };
+            }
+        }
+
+        // Registrar usuario
+        async function registerUser(userData, inviteId) {
+            try {
+                // Crear usuario en Firebase Auth
+                const userCredential = await createUserWithEmailAndPassword(auth, userData.email, userData.password);
+                const user = userCredential.user;
+                
+                // Guardar datos adicionales en Realtime Database
+                await set(ref(database, `userManagement/users/${user.uid}`), {
+                    name: userData.name,
+                    email: userData.email,
+                    createdAt: Date.now(),
+                    status: 'active',
+                    registeredVia: inviteId
+                });
+                
+                // Asignar rol de promotor
+                await set(ref(database, `userManagement/roles/${user.uid}`), 'promoter');
+                
+                // Marcar invitación como usada
+                await update(ref(database, `invitations/${inviteId}`), {
+                    used: true,
+                    usedBy: user.uid,
+                    usedAt: Date.now()
+                });
+                
+                return user;
+                
+            } catch (error) {
+                throw error;
+            }
+        }
+
+        // Procesar parámetros de URL
+        function getUrlParameter(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        // Inicializar página
+        async function initializePage() {
+            const inviteId = getUrlParameter('invite');
+            
+            if (!inviteId) {
+                showInviteStatus(false, 'No se encontró código de invitación en la URL');
+                document.getElementById('registerForm').classList.add('hidden');
+                return;
+            }
+            
+            // Validar invitación
+            const validation = await validateInvitation(inviteId);
+            
+            if (validation.valid) {
+                currentInvite = validation.invite;
+                showInviteStatus(true);
+                
+                // Si la invitación tiene email predefinido, establecerlo
+                if (currentInvite.email) {
+                    document.getElementById('email').value = currentInvite.email;
+                    document.getElementById('email').readOnly = true;
+                }
+                
+            } else {
+                showInviteStatus(false, validation.message);
+                document.getElementById('registerForm').classList.add('hidden');
+            }
+        }
+
+        function showInviteStatus(valid, message = '') {
+            const inviteStatus = document.getElementById('inviteStatus');
+            const validDiv = document.getElementById('validInvite');
+            const invalidDiv = document.getElementById('invalidInvite');
+            const invalidMessage = document.getElementById('invalidMessage');
+            
+            inviteStatus.classList.remove('hidden');
+            
+            if (valid) {
+                validDiv.classList.remove('hidden');
+                invalidDiv.classList.add('hidden');
+            } else {
+                validDiv.classList.add('hidden');
+                invalidDiv.classList.remove('hidden');
+                invalidMessage.textContent = message;
+            }
+        }
+
+        // Evento de envío del formulario
+        document.getElementById('registerForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const registerBtn = document.getElementById('registerBtn');
+            const registerText = document.getElementById('registerText');
+            const registerSpinner = document.getElementById('registerSpinner');
+            const formError = document.getElementById('formError');
+            
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            
+            // Validaciones
+            if (!name) {
+                formError.textContent = 'El nombre es requerido';
+                formError.classList.remove('hidden');
+                return;
+            }
+            
+            if (password.length < 6) {
+                formError.textContent = 'La contraseña debe tener al menos 6 caracteres';
+                formError.classList.remove('hidden');
+                return;
+            }
+            
+            if (password !== confirmPassword) {
+                formError.textContent = 'Las contraseñas no coinciden';
+                formError.classList.remove('hidden');
+                return;
+            }
+            
+            registerText.textContent = 'Registrando...';
+            registerSpinner.classList.remove('hidden');
+            formError.classList.add('hidden');
+            registerBtn.disabled = true;
+            
+            try {
+                const inviteId = getUrlParameter('invite');
+                await registerUser({ name, email, password }, inviteId);
+                
+                showToast('¡Registro exitoso! Serás redirigido al sistema.', 'success');
+                
+                // Redirigir después de 2 segundos
+                setTimeout(() => {
+                    window.location.href = 'index.html';
+                }, 2000);
+                
+            } catch (error) {
+                let errorMessage = 'Error al registrar usuario';
+                
+                switch (error.code) {
+                    case 'auth/email-already-in-use':
+                        errorMessage = 'Este email ya está registrado';
+                        break;
+                    case 'auth/invalid-email':
+                        errorMessage = 'Email inválido';
+                        break;
+                    case 'auth/weak-password':
+                        errorMessage = 'La contraseña es muy débil';
+                        break;
+                    default:
+                        errorMessage = 'Error: ' + error.message;
+                }
+                
+                formError.textContent = errorMessage;
+                formError.classList.remove('hidden');
+                
+            } finally {
+                registerText.textContent = 'Completar Registro';
+                registerSpinner.classList.add('hidden');
+                registerBtn.disabled = false;
+            }
+        });
+
+        // Inicializar cuando el DOM esté listo
+        document.addEventListener('DOMContentLoaded', initializePage);
+    </script>
+</body>
+</html>
