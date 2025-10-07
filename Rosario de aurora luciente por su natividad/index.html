@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rosario de la Aurora Luciente</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        // Usando Arial como base, según tu CSS
+                        sans: ['Arial', 'sans-serif'],
+                    },
+                    colors: {
+                        // Paleta extraída del styles.css (Mostaza/Dorado)
+                        'primary': '#b8860b',   // Mostaza Oscuro/Botón
+                        'secondary': '#ecf0f1', // Blanco Humo (Texto)
+                        'accent-light': '#d4a017', // Mostaza Claro (Fondo)
+                        'accent-dark': '#daa520', // Dorado Claro (Hover)
+                        'background': '#d4a017', // Fondo Principal
+                        'card-bg': '#8b5e00',    // Caramelo Oscuro (Fondo de Tarjeta)
+                        'text-color': '#ecf0f1', // Texto Blanco Humo
+                        'text-dark': '#5c3a00',  // Marrón Elegante
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Estilos generales y fuente Arial */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #d4a017; /* Mostaza Claro */
+            color: #ecf0f1; /* Blanco Humo */
+        }
+
+        /* Contenedor principal de la aplicación: Fondo de Tarjeta */
+        #rosary-container {
+            background-color: #8b5e00; /* Caramelo Oscuro */
+        }
+
+        /* Estilo para las cuentas de rosario */
+        .bead {
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4); 
+        }
+
+        /* Estilo para la cuenta grande (Pater) - Mostaza Oscuro */
+        .big-bead {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #b8860b; /* Primary/Mostaza Oscuro */
+        }
+
+        /* Estilo para las cuentas pequeñas (Ave) - Mostaza Claro/Fondo */
+        .small-bead {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #d4a017; /* Mostaza Claro */
+        }
+
+        /* Estilo para la cuenta actual (iluminada) */
+        .bead.current {
+            transform: scale(1.2);
+            /* Sombra con Dorado Claro y Marrón Elegante */
+            box-shadow: 0 0 20px rgba(218, 165, 32, 0.8), 0 0 10px rgba(92, 58, 0, 0.5); 
+            border: 3px solid #daa520; /* Dorado Claro */
+        }
+
+        /* Estilo para la cuenta completada */
+        .bead.completed {
+            opacity: 0.5;
+            transform: scale(0.9);
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estilo para el botón principal - Mostaza Oscuro */
+        .main-button {
+            padding: 1rem 2.5rem;
+            border-radius: 5px; /* Usando 5px como el CSS de la card button */
+            font-size: 1.25rem;
+            font-weight: bold;
+            background-color: #b8860b; /* Mostaza Oscuro Botón */
+            color: #ecf0f1; /* Blanco Humo */
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .main-button:hover {
+            transform: scale(1.05);
+            background-color: #daa520; /* Dorado Claro Hover Botón */
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Estilo para el contenedor del texto de la oración - Fondo Mostaza Claro */
+        .prayer-content-container {
+            background-color: #d4a017; /* Mostaza Claro */
+        }
+        
+        /* Estilo para el texto de la oración */
+        #mystery-title {
+            color: #5c3a00; /* Marrón Elegante */
+        }
+        #prayer-text {
+            color: #ecf0f1; /* Blanco Humo */
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4 bg-background text-text-color">
+
+    <div id="rosary-container" class="w-full max-w-lg rounded-3xl shadow-2xl p-6 md:p-8">
+        
+        <header class="mb-6 text-center">
+            <h1 class="text-3xl font-extrabold text-text-dark mb-1" id="main-title">Rosario de la Aurora Luciente</h1>
+            <p class="text-lg text-secondary font-medium" id="step-info">Iniciando la Oración</p>
+        </header>
+
+        <div id="beads-container" class="flex justify-center items-center my-6 space-x-2">
+            </div>
+
+        <main class="text-center mb-8 h-60 overflow-y-auto p-4 prayer-content-container rounded-xl border border-card-bg">
+            <h2 class="text-xl font-bold mb-3" id="mystery-title"></h2>
+            <p class="text-base leading-relaxed whitespace-pre-wrap" id="prayer-text"></p>
+        </main>
+
+        <footer class="text-center">
+            <button id="next-button" class="main-button w-full sm:w-auto">
+                Siguiente Oración
+            </button>
+            <button id="reset-button" class="hidden mt-4 text-sm text-primary font-medium hover:text-accent-dark" onclick="resetRosary()">
+                Reiniciar Rosario
+            </button>
+        </footer>
+
+        <div id="modal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+            <div class="bg-card-bg p-6 rounded-xl shadow-2xl max-w-sm w-full text-center">
+                <h3 id="modal-title" class="text-xl font-bold text-primary mb-3"></h3>
+                <p id="modal-message" class="text-text-color mb-4"></p>
+                <button onclick="document.getElementById('modal').classList.add('hidden')" class="px-4 py-2 bg-primary text-text-color rounded-lg font-semibold hover:bg-accent-dark">Cerrar</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // Variables globales para la navegación y el estado
+        let currentStepIndex = 0;
+        
+        const beadsContainer = document.getElementById('beads-container');
+        const mysteryTitleEl = document.getElementById('mystery-title');
+        const prayerTextEl = document.getElementById('prayer-text');
+        const nextButton = document.getElementById('next-button');
+        const stepInfoEl = document.getElementById('step-info');
+        const resetButton = document.getElementById('reset-button');
+        const mainTitleEl = document.getElementById('main-title');
+
+        // Función para mostrar un modal (sustituto de alert)
+        function showModal(title, message) {
+            document.getElementById('modal-title').textContent = title;
+            document.getElementById('modal-message').textContent = message;
+            document.getElementById('modal').classList.remove('hidden');
+        }
+
+        // Definición de todas las oraciones y pasos del Rosario
+        const rosarySteps = [
+            // --- INICIO ---
+            { title: "INICIO: SEÑAL DE LA CRUZ", text: "En el nombre del Padre, y del Hijo, y del Espíritu Santo. Amén.", isBead: false, isFinal: false },
+            { title: "ROSARIO DE LA AURORA LUCIENTE", text: "POR SU NATIVIDAD.\nDonde María entra el enemigo huye. Cuando María intercede el demonio tiembla.\nLa invocamos para que su presencia materna e inmaculada maternal libre proteja cada uno de los rincones de nuestra casa.\nRézalo cada ves que sientas que el enemigo te quiera robar la paz. Ella hace para que yo renazca.", isBead: false, isFinal: false },
+            { title: "ANTÍFONA DE ENTRADA", text: "María tu nacimiento es anuncio que el mal no tiene la última palabra.\nSanta María, pedimos ante el milagro de tu Natividad. Todos: Que toda potestad contraria sea derribada, Que toda lengua que se levante en juicio sea silenciada. Que toda enfermedad, espiritual sea sanada. Que toda tierra esteril florezca. Que todo corazón, endurecido sea ablandando, Que toda promesa se cumpla en su tiempo.", isBead: false, isFinal: false },
+
+            // --- 1ER MISTERIO: LA NATIVIDAD DE MARÍA (1 Pater + 5 Aves) ---
+            { mystery: 1, title: "1ER MISTERIO: LA NATIVIDAD DE MARÍA", text: "El nacimiento de la guerrera de Dios pro. 8, 22-25. Dice Llave me creó en el comienzo de sus designios, antes que los montes fueran fundados, antes de las colinas fuí yo engendrada. Se medita como nace la mujer vestida de sol, la que fue pensada desde la eternidad para aplastar al enemigo, proclamamos que todo lo que nace en mi vida mis sueños mis proyectos, mis hijos, la salud, la salud de mi familia y de todas las personas... para que su nacimiento sea el inicio de nuestra liberación. Decimos juntos:", isBead: true, beadType: 'big', beadCount: 1, isFinal: false }, // Pater 1
+            { mystery: 1, title: "1ER MISTERIO: LA NATIVIDAD DE MARÍA", text: "Que todo lo que estaba muerto va a resucitar decimos: hoy nace mi victoria. *Todos: María Nació y la serpiente cayo. Mi familia es liberada por su gracia de Amor. (5 V).\n*Porque donde nace María el infierno se retira.", isBead: true, beadType: 'small', beadCount: 1, isFinal: false }, // Ave 1
+            { mystery: 1, title: "1ER MISTERIO: LA NATIVIDAD DE MARÍA", text: "*Todos: María Nació y la serpiente cayo. Mi familia es liberada por su gracia de Amor. (5 V).\n*Porque donde nace María el infierno se retira.", isBead: true, beadType: 'small', beadCount: 2, isFinal: false }, // Ave 2
+            { mystery: 1, title: "1ER MISTERIO: LA NATIVIDAD DE MARÍA", text: "*Todos: María Nació y la serpiente cayo. Mi familia es liberada por su gracia de Amor. (5 V).\n*Porque donde nace María el infierno se retira.", isBead: true, beadType: 'small', beadCount: 3, isFinal: false }, // Ave 3
+            { mystery: 1, title: "1ER MISTERIO: LA NATIVIDAD DE MARÍA", text: "*Todos: María Nació y la serpiente cayo. Mi familia es liberada por su gracia de Amor. (5 V).\n*Porque donde nace María el infierno se retira.", isBead: true, beadType: 'small', beadCount: 4, isFinal: false }, // Ave 4
+            { mystery: 1, title: "FIN 1ER MISTERIO", text: "*Todos: María Nació y la serpiente cayo. Mi familia es liberada por su gracia de Amor. (5 V).\n*Porque donde nace María el infierno se retira.\n\nVen y habita en mi casa como Reina y Escudo.", isBead: true, beadType: 'small', beadCount: 5, isFinal: false }, // Ave 5 y cierre
+
+            // --- 2DO MISTERIO: LA MUJER QUE APLASTA LA CABEZA A LA SERPIENTE (1 Pater + 5 Aves) ---
+            { mystery: 2, title: "2DO MISTERIO: LA MUJER QUE APLASTA LA CABEZA A LA SERPIENTE", text: "Meditamos que María no negocia con el mal, lo aplasta, me uno a su batalla.\n*María Nació... (5) Porque donde nace María.", isBead: true, beadType: 'big', beadCount: 1, isFinal: false }, // Pater 1
+            { mystery: 2, title: "2DO MISTERIO: LA MUJER QUE APLASTA LA CABEZA A LA SERPIENTE", text: "*Porque donde nace María...", isBead: true, beadType: 'small', beadCount: 1, isFinal: false }, // Ave 1
+            { mystery: 2, title: "2DO MISTERIO: LA MUJER QUE APLASTA LA CABEZA A LA SERPIENTE", text: "*Porque donde nace María...", isBead: true, beadType: 'small', beadCount: 2, isFinal: false }, // Ave 2
+            { mystery: 2, title: "2DO MISTERIO: LA MUJER QUE APLASTA LA CABEZA A LA SERPIENTE", text: "*Porque donde nace María...", isBead: true, beadType: 'small', beadCount: 3, isFinal: false }, // Ave 3
+            { mystery: 2, title: "2DO MISTERIO: LA MUJER QUE APLASTA LA CABEZA A LA SERPIENTE", text: "*Porque donde nace María...", isBead: true, beadType: 'small', beadCount: 4, isFinal: false }, // Ave 4
+            { mystery: 2, title: "FIN 2DO MISTERIO", text: "*Porque donde nace María...", isBead: true, beadType: 'small', beadCount: 5, isFinal: false }, // Ave 5 y cierre
+
+            // --- 3ER MISTERIO: MARÍA LA LLENA DE GRACIA (1 Pater + 5 Aves) ---
+            { mystery: 3, title: "3ER MISTERIO: MARÍA LA LLENA DE GRACIA", text: "María la llena de gracia, acompañe Mis planes, proyectos y propósitos. Meditemos María, fue elegida empoderada y enviada Proclamemos que Tu y yo fuimos elegidos para vencer, que la Gracia que cubre a María también cubra nuestros pensamientos.", isBead: true, beadType: 'big', beadCount: 1, isFinal: false }, // Pater 1
+            { mystery: 3, title: "3ER MISTERIO: MARÍA LA LLENA DE GRACIA", text: "*Todos María Nació.... Mi familia es liberada. (5)\n*Porque donde nace María...", isBead: true, beadType: 'small', beadCount: 1, isFinal: false }, // Ave 1
+            { mystery: 3, title: "3ER MISTERIO: MARÍA LA LLENA DE GRACIA", text: "*Todos María Nació.... Mi familia es liberada. (5)\n*Porque donde nace María...", isBead: true, beadType: 'small', beadCount: 2, isFinal: false }, // Ave 2
+            { mystery: 3, title: "3ER MISTERIO: MARÍA LA LLENA DE GRACIA", text: "*Todos María Nació.... Mi familia es liberada. (5)\n*Porque donde nace María...", isBead: true, beadType: 'small', beadCount: 3, isFinal: false }, // Ave 3
+            { mystery: 3, title: "3ER MISTERIO: MARÍA LA LLENA DE GRACIA", text: "*Todos María Nació.... Mi familia es liberada. (5)\n*Porque donde nace María...", isBead: true, beadType: 'small', beadCount: 4, isFinal: false }, // Ave 4
+            { mystery: 3, title: "FIN 3ER MISTERIO", text: "*Todos María Nació.... Mi familia es liberada. (5)\n*Porque donde nace María...", isBead: true, beadType: 'small', beadCount: 5, isFinal: false }, // Ave 5 y cierre
+
+            // --- 4TO MISTERIO: LA VISITACIÓN (1 Pater + 5 Aves) ---
+            { mystery: 4, title: "4TO MISTERIO: LA VISITACIÓN", text: "María lleva la gloria de Dios. Invoco su visita sobre mi casa... Proclamo que donde Ella llega el enemigo huye, que su saludo traiga sanidad...", isBead: true, beadType: 'big', beadCount: 1, isFinal: false }, // Pater 1
+            { mystery: 4, title: "4TO MISTERIO: LA VISITACIÓN", text: "*María Nació... Mi Familia es liberada...\n*Porque donde nace María...", isBead: true, beadType: 'small', beadCount: 1, isFinal: false }, // Ave 1
+            { mystery: 4, title: "4TO MISTERIO: LA VISITACIÓN", text: "*María Nació... Mi Familia es liberada...\n*Porque donde nace María...", isBead: true, beadType: 'small', beadCount: 2, isFinal: false }, // Ave 2
+            { mystery: 4, title: "4TO MISTERIO: LA VISITACIÓN", text: "*María Nació... Mi Familia es liberada...\n*Porque donde nace María...", isBead: true, beadType: 'small', beadCount: 3, isFinal: false }, // Ave 3
+            { mystery: 4, title: "4TO MISTERIO: LA VISITACIÓN", text: "*María Nació... Mi Familia es liberada...\n*Porque donde nace María...", isBead: true, beadType: 'small', beadCount: 4, isFinal: false }, // Ave 4
+            { mystery: 4, title: "FIN 4TO MISTERIO", text: "*María Nació... Mi Familia es liberada...\n*Porque donde nace María...", isBead: true, beadType: 'small', beadCount: 5, isFinal: false }, // Ave 5 y cierre
+
+            // --- 5TO MISTERIO: LA MUJER VESTIDA DE SOL (1 Pater + 5 Aves) ---
+            { mystery: 5, title: "5TO. MISTERIO: LA MUJER VESTIDA DE SOL QUE PROTEGE A SUS HIJOS", text: "Meditamos. Que María no solo brilla Ella protege, decimos, que nos cubrimos con su Luz, y proclamo, que ninguna enfermedad... ni a mí ni a mi familia.", isBead: true, beadType: 'big', beadCount: 1, isFinal: false }, // Pater 1
+            { mystery: 5, title: "5TO. MISTERIO: LA MUJER VESTIDA DE SOL QUE PROTEGE A SUS HIJOS", text: "*María Nació... Mi Familia es liberada... (5).\n*Porque donde nace María...", isBead: true, beadType: 'small', beadCount: 1, isFinal: false }, // Ave 1
+            { mystery: 5, title: "5TO. MISTERIO: LA MUJER VESTIDA DE SOL QUE PROTEGE A SUS HIJOS", text: "*María Nació... Mi Familia es liberada... (5).\n*Porque donde nace María...", isBead: true, beadType: 'small', beadCount: 2, isFinal: false }, // Ave 2
+            { mystery: 5, title: "5TO. MISTERIO: LA MUJER VESTIDA DE SOL QUE PROTEGE A SUS HIJOS", text: "*María Nació... Mi Familia es liberada... (5).\n*Porque donde nace María...", isBead: true, beadType: 'small', beadCount: 3, isFinal: false }, // Ave 3
+            { mystery: 5, title: "5TO. MISTERIO: LA MUJER VESTIDA DE SOL QUE PROTEGE A SUS HIJOS", text: "*María Nació... Mi Familia es liberada... (5).\n*Porque donde nace María...", isBead: true, beadType: 'small', beadCount: 4, isFinal: false }, // Ave 4
+            { mystery: 5, title: "FIN 5TO MISTERIO", text: "*María Nació... Mi Familia es liberada... (5).\n*Porque donde nace María...", isBead: true, beadType: 'small', beadCount: 5, isFinal: false }, // Ave 5 y cierre
+
+            // --- ORACIÓN FINAL ---
+            { title: "ORACIÓN FINAL", text: "QUE SE LEVANTE EL ESTANDARTE DE LA LUZ y que toda sobra retroceda, que tiemblen los principados del abismo, porque ha nacido la mujer vestida de sol, que se rompan las cadenas invisibles porque su Si, ha desatado la redención que se cierre toda puerta al enemigo, porque el vientre que llevo la gloria ha sido consagrado, que se purifiquen los hogares, porque donde ella pisa la serpiente huye. Que se eleven los muros de protección, porque su intercesión es Escudo invencible, que se sellen los portales del alma porque su presencia es fuego que consume la mentira. Que se proclame la victoria del cordero, porque Ella lo ha traído al mundo y ante la Natividad de la llena de Gracia de la Aurora Naciente. Proclamamos: Victoria sobre toda oscuridad Amén.", isBead: false, isFinal: false },
+
+            // --- FIN DEL ROSARIO ---
+            { title: "¡ROSARIO COMPLETADO!", text: "¡Has completado el Rosario de la Aurora Luciente!\nDamos gracias a Dios y a la Santísima Virgen María por los favores recibidos.", isBead: false, isFinal: true }
+        ];
+
+        // Función que actualiza la interfaz (título, texto, cuentas)
+        function updateUI() {
+            const currentStep = rosarySteps[currentStepIndex];
+            const isFinished = currentStep.isFinal;
+            
+            // 1. Actualiza el título y texto principal
+            mysteryTitleEl.textContent = currentStep.title;
+            prayerTextEl.textContent = currentStep.text;
+            
+            // 2. Actualiza la información del paso
+            if (currentStep.mystery) {
+                if (currentStep.beadType === 'big') {
+                    stepInfoEl.textContent = `Misterio ${currentStep.mystery} de 5: Padre Nuestro`;
+                } else {
+                    stepInfoEl.textContent = `Misterio ${currentStep.mystery} de 5: Avemaría ${currentStep.beadCount} de 5`;
+                }
+            } else if (isFinished) {
+                stepInfoEl.textContent = "Rezo Finalizado";
+            } else {
+                stepInfoEl.textContent = "Oración Inicial";
+            }
+
+            // 3. Renderiza las cuentas visuales
+            renderBeads(currentStep.mystery, currentStep.beadCount, currentStep.beadType);
+
+            // 4. Actualiza el botón de navegación
+            if (isFinished) {
+                nextButton.textContent = "Finalizar";
+                nextButton.disabled = true;
+                nextButton.classList.add('opacity-50');
+                resetButton.classList.remove('hidden');
+                mainTitleEl.classList.add('hidden'); // Ocultar título al finalizar
+                
+            } else {
+                nextButton.textContent = "Siguiente Oración";
+                nextButton.disabled = false;
+                nextButton.classList.remove('opacity-50');
+                resetButton.classList.add('hidden');
+                mainTitleEl.classList.remove('hidden');
+            }
+        }
+
+        // Función para renderizar las cuentas del rosario (1 grande y 5 pequeñas)
+        function renderBeads(currentMystery, currentBeadCount, currentBeadType) {
+            beadsContainer.innerHTML = ''; // Limpia el contenedor
+
+            // Solo mostrar las cuentas si estamos dentro de un misterio (del 1 al 5)
+            if (currentMystery >= 1 && currentMystery <= 5) {
+                // 1. Renderizar la Cuenta Grande (Pater)
+                const isPaterCurrent = currentBeadCount === 1 && currentBeadType === 'big';
+                const isPaterCompleted = currentBeadCount > 1 || (currentBeadCount === 1 && currentBeadType === 'small');
+                
+                const bigBead = document.createElement('div');
+                bigBead.className = `bead big-bead ${isPaterCurrent ? 'current' : ''} ${isPaterCompleted ? 'completed' : ''}`;
+                beadsContainer.appendChild(bigBead);
+
+                // 2. Renderizar las 5 Cuentas Pequeñas (Aves)
+                for (let i = 1; i <= 5; i++) {
+                    const isAveCurrent = currentBeadCount === (i + 1) && currentBeadType === 'small';
+                    const isAveCompleted = currentBeadCount > (i + 1) && currentBeadType === 'small';
+
+                    const smallBead = document.createElement('div');
+                    smallBead.className = `bead small-bead ${isAveCurrent ? 'current' : ''} ${isAveCompleted ? 'completed' : ''}`;
+                    beadsContainer.appendChild(smallBead);
+                }
+            }
+        }
+
+        // Manejador del botón de siguiente oración
+        function goToNextStep() {
+            // Asegurarse de no ir más allá del final del array
+            if (currentStepIndex < rosarySteps.length - 1) {
+                currentStepIndex++;
+                updateUI();
+                // Scroll al inicio del texto para mejor experiencia móvil
+                prayerTextEl.scrollTop = 0;
+            } else {
+                showModal("¡Rosario Finalizado!", "Has completado la oración. Toca 'Reiniciar Rosario' para empezar de nuevo.");
+            }
+        }
+
+        // Función para reiniciar el rosario
+        function resetRosary() {
+            currentStepIndex = 0;
+            updateUI();
+        }
+
+        // Inicialización de la aplicación al cargar la ventana
+        window.onload = function() {
+            updateUI();
+            nextButton.addEventListener('click', goToNextStep);
+        };
+    </script>
+</body>
+</html>
