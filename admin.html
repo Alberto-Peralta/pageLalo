@@ -12,16 +12,15 @@
       background: #f8f8f8;
       color: #333;
     }
-    h1 {
-      color: #222;
-      text-align: center;
-    }
-    #form {
+    h1 { color: #222; text-align: center; }
+    #form, #login-box {
       background: white;
       padding: 20px;
       border-radius: 10px;
       box-shadow: 0 0 10px #ccc;
       margin-bottom: 30px;
+      max-width: 600px;
+      margin-inline: auto;
     }
     input, button {
       margin: 8px 0;
@@ -35,9 +34,7 @@
       border-radius: 5px;
       cursor: pointer;
     }
-    button:hover {
-      background: #005bb5;
-    }
+    button:hover { background: #005bb5; }
     table {
       width: 100%;
       border-collapse: collapse;
@@ -50,13 +47,8 @@
       text-align: left;
       border-bottom: 1px solid #ddd;
     }
-    th {
-      background: #0078d7;
-      color: white;
-    }
-    tr:hover {
-      background: #f0f0f0;
-    }
+    th { background: #0078d7; color: white; }
+    tr:hover { background: #f0f0f0; }
     .actions button {
       margin-right: 5px;
       background: none;
@@ -65,67 +57,119 @@
       color: #0078d7;
       font-size: 1.2rem;
     }
-    .actions button:hover {
-      color: red;
+    .actions button:hover { color: red; }
+    #logout-btn {
+      background: crimson;
+      float: right;
     }
   </style>
 </head>
 <body>
   <h1>📚 Panel de Recursos</h1>
 
-  <div id="form">
-    <h3>Subir nuevo recurso</h3>
-    <input type="file" id="fileInput" accept="application/pdf" />
-    <input type="text" id="nombreInput" placeholder="Nombre del recurso (ej: Misal de noviembre 2025)" style="width: 100%;">
-    <button onclick="uploadFile()">Subir</button>
-    <p id="status"></p>
+  <!-- LOGIN -->
+  <div id="login-box">
+    <h3>Acceso Administrador</h3>
+    <input id="email" type="email" placeholder="Correo" style="width: 100%;">
+    <input id="password" type="password" placeholder="Contraseña" style="width: 100%;">
+    <button id="login-btn">Iniciar sesión</button>
+    <p id="login-status" style="color: red;"></p>
   </div>
 
-  <h3>Recursos existentes</h3>
-  <table>
-    <thead>
-      <tr>
-        <th>Nombre</th>
-        <th>Fecha</th>
-        <th>Acciones</th>
-      </tr>
-    </thead>
-    <tbody id="listaRecursos"></tbody>
-  </table>
+  <!-- PANEL (oculto hasta que se inicie sesión) -->
+  <div id="panel" style="display:none;">
+    <button id="logout-btn">Cerrar sesión</button>
+    <div id="form">
+      <h3>Subir nuevo recurso</h3>
+      <input type="file" id="fileInput" accept="application/pdf" />
+      <input type="text" id="nombreInput" placeholder="Nombre del recurso (ej: Misal de noviembre 2025)" style="width: 100%;">
+      <button id="upload-btn">Subir</button>
+      <p id="status"></p>
+    </div>
 
-  <script src="https://www.gstatic.com/firebasejs/11.0.0/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/11.0.0/firebase-storage-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/11.0.0/firebase-firestore-compat.js"></script>
+    <h3>Recursos existentes</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Fecha</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="listaRecursos"></tbody>
+    </table>
+  </div>
 
-  <script>
+  <!-- FIREBASE -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-app.js";
+    import { getFirestore, collection, addDoc, onSnapshot, updateDoc, doc, deleteDoc, orderBy, query } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-firestore.js";
+    import { getStorage, ref, uploadBytes, getDownloadURL, deleteObject } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-storage.js";
+    import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-auth.js";
+
+    // --- Configuración Firebase ---
     const firebaseConfig = {
-      apiKey: "TU_API_KEY",
-      authDomain: "TU_PROYECTO.firebaseapp.com",
-      projectId: "TU_PROYECTO",
-      storageBucket: "TU_PROYECTO.appspot.com",
-      messagingSenderId: "XXX",
-      appId: "XXX"
+      apiKey: "AIzaSyCO3FRhSwH1xLABwVGFSd_YYrbFp0lQEv8",
+      authDomain: "pagelalo-1b210.firebaseapp.com",
+      databaseURL: "https://pagelalo-1b210-default-rtdb.firebaseio.com",
+      projectId: "pagelalo-1b210",
+      storageBucket: "pagelalo-1b210.firebasestorage.app",
+      messagingSenderId: "1096735980204",
+      appId: "1:1096735980204:web:8252ddb9fb484c398dfd09",
+      measurementId: "G-ZD5R3QBH85"
     };
 
-    firebase.initializeApp(firebaseConfig);
-    const storage = firebase.storage();
-    const db = firebase.firestore();
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+    const storage = getStorage(app);
+    const auth = getAuth(app);
 
+    const loginBox = document.getElementById("login-box");
+    const panel = document.getElementById("panel");
+    const loginBtn = document.getElementById("login-btn");
+    const logoutBtn = document.getElementById("logout-btn");
     const status = document.getElementById("status");
     const listaRecursos = document.getElementById("listaRecursos");
 
-    // --- SUBIR NUEVO RECURSO ---
-    async function uploadFile() {
+    // --- LOGIN ---
+    loginBtn.addEventListener("click", async () => {
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+      try {
+        await signInWithEmailAndPassword(auth, email, password);
+        document.getElementById("login-status").textContent = "";
+      } catch (err) {
+        document.getElementById("login-status").textContent = "Error: " + err.message;
+      }
+    });
+
+    logoutBtn.addEventListener("click", async () => {
+      await signOut(auth);
+    });
+
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        loginBox.style.display = "none";
+        panel.style.display = "block";
+        loadRecursos();
+      } else {
+        loginBox.style.display = "block";
+        panel.style.display = "none";
+      }
+    });
+
+    // --- SUBIR RECURSO ---
+    document.getElementById("upload-btn").addEventListener("click", async () => {
       const file = document.getElementById("fileInput").files[0];
       const nombre = document.getElementById("nombreInput").value.trim();
-      if (!file || !nombre) return alert("Selecciona un archivo y escribe un nombre.");
+      if (!file || !nombre) return alert("Selecciona un archivo y un nombre");
 
       status.textContent = "Subiendo...";
-      const ref = storage.ref("recursos/" + file.name);
-      await ref.put(file);
-      const url = await ref.getDownloadURL();
+      const storageRef = ref(storage, "recursos/" + file.name);
+      await uploadBytes(storageRef, file);
+      const url = await getDownloadURL(storageRef);
 
-      await db.collection("recursos").add({
+      await addDoc(collection(db, "recursos"), {
         nombre,
         url,
         fecha: new Date().toISOString(),
@@ -135,46 +179,42 @@
       status.textContent = "✅ Subido correctamente";
       document.getElementById("fileInput").value = "";
       document.getElementById("nombreInput").value = "";
-    }
-
-    // --- MOSTRAR RECURSOS ---
-    db.collection("recursos").orderBy("fecha", "desc").onSnapshot(snapshot => {
-      listaRecursos.innerHTML = "";
-      snapshot.forEach(doc => {
-        const data = doc.data();
-        const tr = document.createElement("tr");
-        tr.innerHTML = `
-          <td><a href="${data.url}" target="_blank">${data.nombre}</a></td>
-          <td>${new Date(data.fecha).toLocaleString()}</td>
-          <td class="actions">
-            <button onclick="editRecurso('${doc.id}', '${data.nombre}')"><i class="fa-solid fa-pen-to-square"></i></button>
-            <button onclick="deleteRecurso('${doc.id}', '${data.archivo}')"><i class="fa-solid fa-trash"></i></button>
-          </td>`;
-        listaRecursos.appendChild(tr);
-      });
     });
 
-    // --- EDITAR RECURSO ---
-    async function editRecurso(id, oldName) {
-      const nuevoNombre = prompt("Nuevo nombre para el recurso:", oldName);
-      if (!nuevoNombre || nuevoNombre === oldName) return;
-
-      await db.collection("recursos").doc(id).update({ nombre: nuevoNombre });
-      alert("✅ Nombre actualizado");
+    // --- LISTAR, EDITAR Y BORRAR ---
+    function loadRecursos() {
+      const q = query(collection(db, "recursos"), orderBy("fecha", "desc"));
+      onSnapshot(q, (snapshot) => {
+        listaRecursos.innerHTML = "";
+        snapshot.forEach((docSnap) => {
+          const data = docSnap.data();
+          const tr = document.createElement("tr");
+          tr.innerHTML = `
+            <td><a href="${data.url}" target="_blank">${data.nombre}</a></td>
+            <td>${new Date(data.fecha).toLocaleString()}</td>
+            <td class="actions">
+              <button onclick="editRecurso('${docSnap.id}', '${data.nombre}')"><i class="fa-solid fa-pen-to-square"></i></button>
+              <button onclick="deleteRecurso('${docSnap.id}', '${data.archivo}')"><i class="fa-solid fa-trash"></i></button>
+            </td>`;
+          listaRecursos.appendChild(tr);
+        });
+      });
     }
 
-    // --- ELIMINAR RECURSO ---
-    async function deleteRecurso(id, archivo) {
-      if (!confirm("¿Seguro que deseas eliminar este recurso?")) return;
-      try {
-        await db.collection("recursos").doc(id).delete();
-        await storage.ref("recursos/" + archivo).delete();
-        alert("🗑️ Recurso eliminado correctamente");
-      } catch (err) {
-        console.error(err);
-        alert("Error al eliminar: " + err.message);
+    window.editRecurso = async (id, oldName) => {
+      const nuevo = prompt("Nuevo nombre:", oldName);
+      if (nuevo && nuevo !== oldName) {
+        await updateDoc(doc(db, "recursos", id), { nombre: nuevo });
+        alert("✅ Actualizado");
       }
-    }
+    };
+
+    window.deleteRecurso = async (id, archivo) => {
+      if (!confirm("¿Seguro que deseas eliminar este recurso?")) return;
+      await deleteDoc(doc(db, "recursos", id));
+      await deleteObject(ref(storage, "recursos/" + archivo));
+      alert("🗑️ Eliminado");
+    };
   </script>
 </body>
 </html>

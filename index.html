@@ -258,5 +258,26 @@
   });
 </script>
 
+
+
+<script>
+  // --- Acceso oculto al panel admin ---
+  let clickCount = 0;
+  const logo = document.querySelector('.logo');
+
+  if (logo) {
+    logo.addEventListener('click', () => {
+      clickCount++;
+      if (clickCount === 5) {        // número de clics necesarios
+        window.location.href = '/admin.html'; // ruta al panel
+      }
+
+      // Reinicia el contador si pasan más de 3 s entre clics
+      setTimeout(() => { clickCount = 0; }, 3000);
+    });
+  }
+</script>
+
+
 </body>
 </html>
