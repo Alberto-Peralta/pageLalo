@@ -83,13 +83,13 @@
         </div>
     </a>
 
-    <a href="./recursos/Misal de octubre de 2025.pdf" download="Misal de Octubre 2025" class="card-link">
-        <div class="card" id="descarga-pdf">
-            <h2>Descarga el Misal Mensual</h2>
-            <p>Descarga el Misal Mensual</p>
-            <img src="./rosario/images/luminosos3.jpg" alt="Icono de descarga PDF" style="width: 100%; height: auto; border-radius: 8px;">
-        </div>
-    </a>
+    <a id="link-misal" href="#" target="_blank" class="card-link">
+  <div class="card" id="descarga-pdf">
+    <h2 id="titulo-misal">Descarga el Misal Mensual</h2>
+    <p>Descarga el Misal actualizado</p>
+    <img src="./rosario/images/luminosos3.jpg" alt="Icono de descarga PDF" style="width: 100%; height: auto; border-radius: 8px;">
+  </div>
+</a>
 <!-- 
      <a href="./misalYLiturgiaDeLasHoras/misal-diario.html" target="_blank" class="card-link">
         <div class="card" id="card-tiktok-link">
@@ -214,5 +214,49 @@
     </footer>
     
     <script src="script.js"></script>
+
+
+    <script type="module">
+  // --- Importa los módulos de Firebase ---
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-app.js";
+  import { getFirestore, doc, onSnapshot } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-firestore.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-analytics.js";
+
+  // --- Configuración de tu app ---
+  const firebaseConfig = {
+    apiKey: "AIzaSyCO3FRhSwH1xLABwVGFSd_YYrbFp0lQEv8",
+    authDomain: "pagelalo-1b210.firebaseapp.com",
+    databaseURL: "https://pagelalo-1b210-default-rtdb.firebaseio.com",
+    projectId: "pagelalo-1b210",
+    storageBucket: "pagelalo-1b210.firebasestorage.app",
+    messagingSenderId: "1096735980204",
+    appId: "1:1096735980204:web:8252ddb9fb484c398dfd09",
+    measurementId: "G-ZD5R3QBH85"
+  };
+
+  // --- Inicializa Firebase ---
+  const app = initializeApp(firebaseConfig);
+  getAnalytics(app);
+  const db = getFirestore(app);
+
+  // --- Referencia al enlace y título en el DOM ---
+  const linkMisal = document.getElementById("link-misal");
+  const tituloMisal = document.getElementById("titulo-misal");
+
+  // --- Escucha cambios en el recurso "misal" (documento Firestore) ---
+  const docRef = doc(db, "recursos", "misal");
+
+  onSnapshot(docRef, (docSnap) => {
+    if (docSnap.exists()) {
+      const data = docSnap.data();
+      linkMisal.href = data.url;
+      linkMisal.download = data.nombre;
+      tituloMisal.textContent = "Descarga el " + data.nombre;
+    } else {
+      tituloMisal.textContent = "No hay misal disponible actualmente";
+    }
+  });
+</script>
+
 </body>
 </html>

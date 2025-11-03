@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel de Recursos</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      margin: 20px;
+      background: #f8f8f8;
+      color: #333;
+    }
+    h1 {
+      color: #222;
+      text-align: center;
+    }
+    #form {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ccc;
+      margin-bottom: 30px;
+    }
+    input, button {
+      margin: 8px 0;
+      padding: 10px;
+      font-size: 1rem;
+    }
+    button {
+      background: #0078d7;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #005bb5;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    th {
+      background: #0078d7;
+      color: white;
+    }
+    tr:hover {
+      background: #f0f0f0;
+    }
+    .actions button {
+      margin-right: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #0078d7;
+      font-size: 1.2rem;
+    }
+    .actions button:hover {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h1>📚 Panel de Recursos</h1>
+
+  <div id="form">
+    <h3>Subir nuevo recurso</h3>
+    <input type="file" id="fileInput" accept="application/pdf" />
+    <input type="text" id="nombreInput" placeholder="Nombre del recurso (ej: Misal de noviembre 2025)" style="width: 100%;">
+    <button onclick="uploadFile()">Subir</button>
+    <p id="status"></p>
+  </div>
+
+  <h3>Recursos existentes</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Fecha</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody id="listaRecursos"></tbody>
+  </table>
+
+  <script src="https://www.gstatic.com/firebasejs/11.0.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/11.0.0/firebase-storage-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/11.0.0/firebase-firestore-compat.js"></script>
+
+  <script>
+    const firebaseConfig = {
+      apiKey: "TU_API_KEY",
+      authDomain: "TU_PROYECTO.firebaseapp.com",
+      projectId: "TU_PROYECTO",
+      storageBucket: "TU_PROYECTO.appspot.com",
+      messagingSenderId: "XXX",
+      appId: "XXX"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+    const storage = firebase.storage();
+    const db = firebase.firestore();
+
+    const status = document.getElementById("status");
+    const listaRecursos = document.getElementById("listaRecursos");
+
+    // --- SUBIR NUEVO RECURSO ---
+    async function uploadFile() {
+      const file = document.getElementById("fileInput").files[0];
+      const nombre = document.getElementById("nombreInput").value.trim();
+      if (!file || !nombre) return alert("Selecciona un archivo y escribe un nombre.");
+
+      status.textContent = "Subiendo...";
+      const ref = storage.ref("recursos/" + file.name);
+      await ref.put(file);
+      const url = await ref.getDownloadURL();
+
+      await db.collection("recursos").add({
+        nombre,
+        url,
+        fecha: new Date().toISOString(),
+        archivo: file.name
+      });
+
+      status.textContent = "✅ Subido correctamente";
+      document.getElementById("fileInput").value = "";
+      document.getElementById("nombreInput").value = "";
+    }
+
+    // --- MOSTRAR RECURSOS ---
+    db.collection("recursos").orderBy("fecha", "desc").onSnapshot(snapshot => {
+      listaRecursos.innerHTML = "";
+      snapshot.forEach(doc => {
+        const data = doc.data();
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+          <td><a href="${data.url}" target="_blank">${data.nombre}</a></td>
+          <td>${new Date(data.fecha).toLocaleString()}</td>
+          <td class="actions">
+            <button onclick="editRecurso('${doc.id}', '${data.nombre}')"><i class="fa-solid fa-pen-to-square"></i></button>
+            <button onclick="deleteRecurso('${doc.id}', '${data.archivo}')"><i class="fa-solid fa-trash"></i></button>
+          </td>`;
+        listaRecursos.appendChild(tr);
+      });
+    });
+
+    // --- EDITAR RECURSO ---
+    async function editRecurso(id, oldName) {
+      const nuevoNombre = prompt("Nuevo nombre para el recurso:", oldName);
+      if (!nuevoNombre || nuevoNombre === oldName) return;
+
+      await db.collection("recursos").doc(id).update({ nombre: nuevoNombre });
+      alert("✅ Nombre actualizado");
+    }
+
+    // --- ELIMINAR RECURSO ---
+    async function deleteRecurso(id, archivo) {
+      if (!confirm("¿Seguro que deseas eliminar este recurso?")) return;
+      try {
+        await db.collection("recursos").doc(id).delete();
+        await storage.ref("recursos/" + archivo).delete();
+        alert("🗑️ Recurso eliminado correctamente");
+      } catch (err) {
+        console.error(err);
+        alert("Error al eliminar: " + err.message);
+      }
+    }
+  </script>
+</body>
+</html>
