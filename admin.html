@@ -3,111 +3,423 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Panel de Recursos</title>
+  <title>Panel del Misal</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: system-ui, sans-serif;
-      margin: 20px;
-      background: #f8f8f8;
-      color: #333;
-    }
-    h1 { color: #222; text-align: center; }
-    #form, #login-box {
-      background: white;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
       padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px #ccc;
-      margin-bottom: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      width: 100%;
       max-width: 600px;
-      margin-inline: auto;
     }
-    input, button {
-      margin: 8px 0;
-      padding: 10px;
+
+    h1 {
+      color: white;
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+
+    /* LOGIN BOX */
+    #login-box {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+    }
+
+    #login-box h3 {
+      color: #667eea;
+      margin-bottom: 25px;
+      text-align: center;
+    }
+
+    .input-group {
+      margin-bottom: 20px;
+    }
+
+    .input-group label {
+      display: block;
+      margin-bottom: 8px;
+      color: #555;
+      font-weight: 600;
+    }
+
+    input[type="email"],
+    input[type="password"],
+    input[type="text"] {
+      width: 100%;
+      padding: 12px;
+      border: 2px solid #e0e0e0;
+      border-radius: 8px;
       font-size: 1rem;
+      transition: border-color 0.3s;
     }
+
+    input:focus {
+      outline: none;
+      border-color: #667eea;
+    }
+
     button {
-      background: #0078d7;
+      width: 100%;
+      padding: 14px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
       color: white;
       border: none;
-      border-radius: 5px;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      font-weight: 600;
       cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
     }
-    button:hover { background: #005bb5; }
-    table {
-      width: 100%;
-      border-collapse: collapse;
+
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+    }
+
+    button:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    #login-status {
+      color: #e74c3c;
+      text-align: center;
+      margin-top: 15px;
+      font-size: 0.9rem;
+    }
+
+    /* PANEL */
+    #panel {
+      display: none;
+    }
+
+    .panel-box {
       background: white;
-      border-radius: 10px;
-      overflow: hidden;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.3);
     }
-    th, td {
-      padding: 10px;
-      text-align: left;
-      border-bottom: 1px solid #ddd;
+
+    .header-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+      padding-bottom: 20px;
+      border-bottom: 2px solid #f0f0f0;
     }
-    th { background: #0078d7; color: white; }
-    tr:hover { background: #f0f0f0; }
-    .actions button {
-      margin-right: 5px;
-      background: none;
-      border: none;
-      cursor: pointer;
-      color: #0078d7;
-      font-size: 1.2rem;
+
+    .user-info {
+      color: #667eea;
+      font-weight: 600;
     }
-    .actions button:hover { color: red; }
+
     #logout-btn {
-      background: crimson;
-      float: right;
+      width: auto;
+      padding: 10px 25px;
+      background: #e74c3c;
+      font-size: 0.9rem;
+    }
+
+    #logout-btn:hover {
+      background: #c0392b;
+    }
+
+    .section-title {
+      color: #667eea;
+      margin-bottom: 20px;
+      font-size: 1.3rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    /* MISAL ACTUAL */
+    .current-misal {
+      background: #f8f9fa;
+      padding: 20px;
+      border-radius: 12px;
+      margin-bottom: 30px;
+      border: 2px solid #e0e0e0;
+    }
+
+    .current-misal.has-file {
+      border-color: #28a745;
+      background: #d4edda;
+    }
+
+    .misal-info {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+
+    .misal-icon {
+      font-size: 2.5rem;
+      color: #667eea;
+    }
+
+    .misal-details h4 {
+      color: #333;
+      margin-bottom: 5px;
+    }
+
+    .misal-details p {
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    .misal-actions {
+      display: flex;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .btn-download,
+    .btn-delete-current {
+      flex: 1;
+      padding: 10px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      text-decoration: none;
+    }
+
+    .btn-download {
+      background: #17a2b8;
+      color: white;
+    }
+
+    .btn-download:hover {
+      background: #138496;
+    }
+
+    .btn-delete-current {
+      background: #dc3545;
+      color: white;
+    }
+
+    .btn-delete-current:hover {
+      background: #c82333;
+    }
+
+    /* UPLOAD SECTION */
+    .upload-section {
+      margin-top: 30px;
+      padding-top: 30px;
+      border-top: 2px solid #f0f0f0;
+    }
+
+    .file-input-wrapper {
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    input[type="file"] {
+      display: none;
+    }
+
+    .file-input-label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 20px;
+      background: #f8f9fa;
+      border: 2px dashed #667eea;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .file-input-label:hover {
+      background: #e8eaf6;
+      border-color: #764ba2;
+    }
+
+    .file-input-label i {
+      font-size: 2rem;
+    }
+
+    .file-name {
+      color: #666;
+      font-size: 0.9rem;
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    #upload-btn {
+      background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+      margin-top: 20px;
+    }
+
+    #upload-btn:hover {
+      box-shadow: 0 5px 20px rgba(40, 167, 69, 0.4);
+    }
+
+    #status {
+      text-align: center;
+      margin-top: 15px;
+      font-weight: 600;
+      padding: 12px;
+      border-radius: 8px;
+    }
+
+    #status.success {
+      background: #d4edda;
+      color: #155724;
+    }
+
+    #status.error {
+      background: #f8d7da;
+      color: #721c24;
+    }
+
+    #status.info {
+      background: #d1ecf1;
+      color: #0c5460;
+    }
+
+    .empty-current {
+      text-align: center;
+      padding: 30px;
+      color: #999;
+    }
+
+    .empty-current i {
+      font-size: 3rem;
+      margin-bottom: 15px;
+      color: #ddd;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      .panel-box,
+      #login-box {
+        padding: 25px;
+      }
+
+      .header-section {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+      }
+
+      #logout-btn {
+        width: 100%;
+      }
+
+      .misal-actions {
+        flex-direction: column;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>📚 Panel de Recursos</h1>
+  <div class="container">
+    <h1><i class="fas fa-book-bible"></i> Panel del Misal</h1>
 
-  <!-- LOGIN -->
-  <div id="login-box">
-    <h3>Acceso Administrador</h3>
-    <input id="email" type="email" placeholder="Correo" style="width: 100%;">
-    <input id="password" type="password" placeholder="Contraseña" style="width: 100%;">
-    <button id="login-btn">Iniciar sesión</button>
-    <p id="login-status" style="color: red;"></p>
-  </div>
-
-  <!-- PANEL (oculto hasta que se inicie sesión) -->
-  <div id="panel" style="display:none;">
-    <button id="logout-btn">Cerrar sesión</button>
-    <div id="form">
-      <h3>Subir nuevo recurso</h3>
-      <input type="file" id="fileInput" accept="application/pdf" />
-      <input type="text" id="nombreInput" placeholder="Nombre del recurso (ej: Misal de noviembre 2025)" style="width: 100%;">
-      <button id="upload-btn">Subir</button>
-      <p id="status"></p>
+    <!-- LOGIN -->
+    <div id="login-box">
+      <h3><i class="fas fa-lock"></i> Acceso Administrador</h3>
+      <div class="input-group">
+        <label for="email">Correo electrónico</label>
+        <input id="email" type="email" placeholder="admin@ejemplo.com">
+      </div>
+      <div class="input-group">
+        <label for="password">Contraseña</label>
+        <input id="password" type="password" placeholder="••••••••">
+      </div>
+      <button id="login-btn"><i class="fas fa-sign-in-alt"></i> Iniciar sesión</button>
+      <p id="login-status"></p>
     </div>
 
-    <h3>Recursos existentes</h3>
-    <table>
-      <thead>
-        <tr>
-          <th>Nombre</th>
-          <th>Fecha</th>
-          <th>Acciones</th>
-        </tr>
-      </thead>
-      <tbody id="listaRecursos"></tbody>
-    </table>
+    <!-- PANEL -->
+    <div id="panel">
+      <div class="panel-box">
+        <div class="header-section">
+          <div class="user-info">
+            <i class="fas fa-user-circle"></i> <span id="user-email"></span>
+          </div>
+          <button id="logout-btn"><i class="fas fa-sign-out-alt"></i> Cerrar sesión</button>
+        </div>
+
+        <!-- MISAL ACTUAL -->
+        <h3 class="section-title">
+          <i class="fas fa-book"></i> Misal Actual
+        </h3>
+        
+        <div id="current-misal-container" class="current-misal">
+          <div class="empty-current">
+            <i class="fas fa-inbox"></i>
+            <p>Cargando información del misal...</p>
+          </div>
+        </div>
+
+        <!-- SUBIR NUEVO MISAL -->
+        <div class="upload-section">
+          <h3 class="section-title">
+            <i class="fas fa-cloud-upload-alt"></i> Subir o Actualizar Misal
+          </h3>
+          
+          <div class="file-input-wrapper">
+            <label for="fileInput" class="file-input-label">
+              <i class="fas fa-file-pdf"></i>
+              <span>Seleccionar archivo PDF</span>
+            </label>
+            <input type="file" id="fileInput" accept="application/pdf" />
+            <div class="file-name" id="fileName">Ningún archivo seleccionado</div>
+          </div>
+
+          <div class="input-group">
+            <label for="nombreInput">Nombre del misal</label>
+            <input type="text" id="nombreInput" placeholder="Ej: Misal de Noviembre 2025">
+          </div>
+
+          <button id="upload-btn" disabled>
+            <i class="fas fa-upload"></i> Subir Misal
+          </button>
+          
+          <div id="status"></div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- FIREBASE -->
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-app.js";
-    import { getFirestore, collection, addDoc, onSnapshot, updateDoc, doc, deleteDoc, orderBy, query } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-firestore.js";
+    import { getFirestore, doc, getDoc, setDoc, onSnapshot } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-firestore.js";
     import { getStorage, ref, uploadBytes, getDownloadURL, deleteObject } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-storage.js";
     import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-auth.js";
 
-    // --- Configuración Firebase ---
     const firebaseConfig = {
       apiKey: "AIzaSyCO3FRhSwH1xLABwVGFSd_YYrbFp0lQEv8",
       authDomain: "pagelalo-1b210.firebaseapp.com",
@@ -129,17 +441,42 @@
     const loginBtn = document.getElementById("login-btn");
     const logoutBtn = document.getElementById("logout-btn");
     const status = document.getElementById("status");
-    const listaRecursos = document.getElementById("listaRecursos");
+    const fileInput = document.getElementById("fileInput");
+    const fileName = document.getElementById("fileName");
+    const nombreInput = document.getElementById("nombreInput");
+    const uploadBtn = document.getElementById("upload-btn");
+    const userEmail = document.getElementById("user-email");
+    const currentMisalContainer = document.getElementById("current-misal-container");
 
-    // --- LOGIN ---
+    let currentMisalData = null;
+
+    // Mostrar nombre del archivo seleccionado
+    fileInput.addEventListener("change", (e) => {
+      if (e.target.files[0]) {
+        fileName.textContent = e.target.files[0].name;
+        uploadBtn.disabled = false;
+      } else {
+        fileName.textContent = "Ningún archivo seleccionado";
+        uploadBtn.disabled = true;
+      }
+    });
+
+    // LOGIN
     loginBtn.addEventListener("click", async () => {
       const email = document.getElementById("email").value;
       const password = document.getElementById("password").value;
+      const loginStatus = document.getElementById("login-status");
+      
+      if (!email || !password) {
+        loginStatus.textContent = "Por favor completa todos los campos";
+        return;
+      }
+
       try {
         await signInWithEmailAndPassword(auth, email, password);
-        document.getElementById("login-status").textContent = "";
+        loginStatus.textContent = "";
       } catch (err) {
-        document.getElementById("login-status").textContent = "Error: " + err.message;
+        loginStatus.textContent = "Error: Credenciales inválidas";
       }
     });
 
@@ -151,71 +488,161 @@
       if (user) {
         loginBox.style.display = "none";
         panel.style.display = "block";
-        loadRecursos();
+        userEmail.textContent = user.email;
+        loadCurrentMisal();
       } else {
         loginBox.style.display = "block";
         panel.style.display = "none";
       }
     });
 
-    // --- SUBIR RECURSO ---
-    document.getElementById("upload-btn").addEventListener("click", async () => {
-      const file = document.getElementById("fileInput").files[0];
-      const nombre = document.getElementById("nombreInput").value.trim();
-      if (!file || !nombre) return alert("Selecciona un archivo y un nombre");
-
-      status.textContent = "Subiendo...";
-      const storageRef = ref(storage, "recursos/" + file.name);
-      await uploadBytes(storageRef, file);
-      const url = await getDownloadURL(storageRef);
-
-      await addDoc(collection(db, "recursos"), {
-        nombre,
-        url,
-        fecha: new Date().toISOString(),
-        archivo: file.name
-      });
-
-      status.textContent = "✅ Subido correctamente";
-      document.getElementById("fileInput").value = "";
-      document.getElementById("nombreInput").value = "";
-    });
-
-    // --- LISTAR, EDITAR Y BORRAR ---
-    function loadRecursos() {
-      const q = query(collection(db, "recursos"), orderBy("fecha", "desc"));
-      onSnapshot(q, (snapshot) => {
-        listaRecursos.innerHTML = "";
-        snapshot.forEach((docSnap) => {
-          const data = docSnap.data();
-          const tr = document.createElement("tr");
-          tr.innerHTML = `
-            <td><a href="${data.url}" target="_blank">${data.nombre}</a></td>
-            <td>${new Date(data.fecha).toLocaleString()}</td>
-            <td class="actions">
-              <button onclick="editRecurso('${docSnap.id}', '${data.nombre}')"><i class="fa-solid fa-pen-to-square"></i></button>
-              <button onclick="deleteRecurso('${docSnap.id}', '${data.archivo}')"><i class="fa-solid fa-trash"></i></button>
-            </td>`;
-          listaRecursos.appendChild(tr);
-        });
+    // CARGAR MISAL ACTUAL
+    function loadCurrentMisal() {
+      const docRef = doc(db, "recursos", "misal");
+      
+      onSnapshot(docRef, (docSnap) => {
+        if (docSnap.exists()) {
+          currentMisalData = docSnap.data();
+          displayCurrentMisal(currentMisalData);
+        } else {
+          currentMisalData = null;
+          displayEmptyMisal();
+        }
       });
     }
 
-    window.editRecurso = async (id, oldName) => {
-      const nuevo = prompt("Nuevo nombre:", oldName);
-      if (nuevo && nuevo !== oldName) {
-        await updateDoc(doc(db, "recursos", id), { nombre: nuevo });
-        alert("✅ Actualizado");
+    function displayCurrentMisal(data) {
+      const fecha = new Date(data.fecha);
+      const fechaFormateada = fecha.toLocaleDateString('es-MX', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit'
+      });
+
+      currentMisalContainer.className = 'current-misal has-file';
+      currentMisalContainer.innerHTML = `
+        <div class="misal-info">
+          <div class="misal-icon">
+            <i class="fas fa-file-pdf"></i>
+          </div>
+          <div class="misal-details">
+            <h4>${data.nombre}</h4>
+            <p><i class="fas fa-clock"></i> Subido el ${fechaFormateada}</p>
+          </div>
+        </div>
+        <div class="misal-actions">
+          <a href="${data.url}" target="_blank" class="btn-download">
+            <i class="fas fa-eye"></i> Ver PDF
+          </a>
+          <button class="btn-delete-current" onclick="deleteMisal()">
+            <i class="fas fa-trash"></i> Eliminar
+          </button>
+        </div>
+      `;
+    }
+
+    function displayEmptyMisal() {
+      currentMisalContainer.className = 'current-misal';
+      currentMisalContainer.innerHTML = `
+        <div class="empty-current">
+          <i class="fas fa-inbox"></i>
+          <p>No hay ningún misal publicado actualmente</p>
+        </div>
+      `;
+    }
+
+    // SUBIR MISAL
+    uploadBtn.addEventListener("click", async () => {
+      const file = fileInput.files[0];
+      const nombre = nombreInput.value.trim();
+
+      if (!file) {
+        showStatus("⚠️ Selecciona un archivo PDF", "error");
+        return;
+      }
+
+      if (!nombre) {
+        showStatus("⚠️ Escribe un nombre para el misal", "error");
+        return;
+      }
+
+      uploadBtn.disabled = true;
+      showStatus("📤 Subiendo archivo...", "info");
+
+      try {
+        // Eliminar archivo anterior si existe
+        if (currentMisalData && currentMisalData.archivo) {
+          try {
+            await deleteObject(ref(storage, "recursos/" + currentMisalData.archivo));
+          } catch (e) {
+            console.log("No se pudo eliminar el archivo anterior:", e);
+          }
+        }
+
+        // Subir nuevo archivo
+        const timestamp = Date.now();
+        const storageRef = ref(storage, `recursos/misal_${timestamp}.pdf`);
+        await uploadBytes(storageRef, file);
+        const url = await getDownloadURL(storageRef);
+
+        // Guardar en Firestore (documento fijo "misal")
+        await setDoc(doc(db, "recursos", "misal"), {
+          nombre,
+          url,
+          fecha: new Date().toISOString(),
+          archivo: `misal_${timestamp}.pdf`
+        });
+
+        showStatus("✅ Misal subido correctamente", "success");
+        fileInput.value = "";
+        nombreInput.value = "";
+        fileName.textContent = "Ningún archivo seleccionado";
+        uploadBtn.disabled = true;
+      } catch (error) {
+        showStatus("❌ Error al subir: " + error.message, "error");
+        uploadBtn.disabled = false;
+      }
+    });
+
+    // ELIMINAR MISAL
+    window.deleteMisal = async () => {
+      if (!confirm("¿Estás seguro de eliminar el misal actual? Esta acción no se puede deshacer.")) return;
+      
+      if (!currentMisalData) return;
+
+      try {
+        showStatus("🗑️ Eliminando...", "info");
+        
+        // Eliminar archivo de Storage
+        await deleteObject(ref(storage, "recursos/" + currentMisalData.archivo));
+        
+        // Eliminar documento de Firestore
+        await setDoc(doc(db, "recursos", "misal"), {
+          nombre: "",
+          url: "",
+          fecha: "",
+          archivo: ""
+        });
+
+        showStatus("✅ Misal eliminado correctamente", "success");
+      } catch (error) {
+        showStatus("❌ Error al eliminar: " + error.message, "error");
       }
     };
 
-    window.deleteRecurso = async (id, archivo) => {
-      if (!confirm("¿Seguro que deseas eliminar este recurso?")) return;
-      await deleteDoc(doc(db, "recursos", id));
-      await deleteObject(ref(storage, "recursos/" + archivo));
-      alert("🗑️ Eliminado");
-    };
+    function showStatus(message, type) {
+      status.textContent = message;
+      status.className = type;
+      
+      if (type === "success") {
+        setTimeout(() => {
+          status.textContent = "";
+          status.className = "";
+        }, 3000);
+      }
+    }
   </script>
 </body>
 </html>
-
