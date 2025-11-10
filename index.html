@@ -17,8 +17,200 @@
 
     <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-  integrity="sha512-k6T9gfC7lLWxrbDpW+xPAygQ1b6RPp9iL3n2vIlR+7c74xnaC0KgUphLUJ0gAacV4PN2z8EdK8Eu4qVtWWl8Cg=="
+  integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
   crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <style>
+    /* Estilos para la sección de recursos */
+    .recursos-section {
+      padding: 3rem 2rem;
+      background-color: #fef6e4;
+      margin: 2rem 0;
+      border-radius: 20px;
+    }
+
+    .recursos-title {
+      text-align: center;
+      color: #5c3a00;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .recursos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .recurso-card {
+      background: white;
+      border-radius: 15px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .recurso-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+      background: linear-gradient(90deg, #667eea, #764ba2);
+    }
+
+    .recurso-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .recurso-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      margin-bottom: 1rem;
+    }
+
+    .recurso-icon-large {
+      font-size: 3rem;
+      color: #667eea;
+      flex-shrink: 0;
+    }
+
+    .recurso-details {
+      flex: 1;
+    }
+
+    .recurso-details h3 {
+      color: #333;
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      line-height: 1.3;
+    }
+
+    .recurso-categoria-badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 12px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: white;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    .recurso-descripcion {
+      color: #666;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+      line-height: 1.5;
+    }
+
+    .recurso-fecha {
+      color: #999;
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin-bottom: 1rem;
+    }
+
+    .recurso-download-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px 20px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      margin-top: auto;
+    }
+
+    .recurso-download-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+    }
+
+    .loading-recursos,
+    .empty-recursos {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 3rem;
+      color: #999;
+    }
+
+    .loading-recursos i,
+    .empty-recursos i {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: #ddd;
+    }
+
+    .empty-recursos p {
+      font-size: 1.1rem;
+    }
+
+    .filter-tabs {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 2rem;
+    }
+
+    .filter-btn {
+      padding: 10px 20px;
+      border: 2px solid #d4a017;
+      background: white;
+      color: #5c3a00;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: #d4a017;
+      color: white;
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+      .recursos-title {
+        font-size: 1.5rem;
+        flex-direction: column;
+      }
+
+      .recursos-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .filter-tabs {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .filter-btn {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -82,22 +274,6 @@
             <img src="https://thumbs.dreamstime.com/b/interior-cl%C3%A1sico-de-la-iglesia-cat%C3%B3lica-97425433.jpg?w=576" alt="imagen relacionada" style="width: 100%; height: auto; border-radius: 8px;">
         </div>
     </a>
-
-    <a id="link-misal" href="#" target="_blank" class="card-link">
-  <div class="card" id="descarga-pdf">
-    <h2 id="titulo-misal">Descarga el Misal Mensual</h2>
-    <p>Descarga el Misal actualizado</p>
-    <img src="./rosario/images/luminosos3.jpg" alt="Icono de descarga PDF" style="width: 100%; height: auto; border-radius: 8px;">
-  </div>
-</a>
-<!-- 
-     <a href="./misalYLiturgiaDeLasHoras/misal-diario.html" target="_blank" class="card-link">
-        <div class="card" id="card-tiktok-link">
-            <h2>Misal Online</h2>
-            <p>Lecturas Diarias</p>
-            <img src="./misalYLiturgiaDeLasHoras/Gemini_Generated_Image_x0m0sx0m0sx0m0sx.png" alt="imagen relacionada" style="width: 100%; height: auto; border-radius: 8px;">
-        </div>
-    </a> -->
 
      <a href="./misalYLiturgiaDeLasHoras/chat.html" target="_blank" class="card-link">
         <div class="card" id="card-tiktok-link">
@@ -181,6 +357,19 @@
     
 </section>
 
+        <!-- NUEVA SECCIÓN DE RECURSOS DESCARGABLES -->
+        <section class="recursos-section">
+          <h2 class="recursos-title">
+            <i class="fas fa-download"></i> Recursos Descargables
+          </h2>
+          <div id="recursos-publicos" class="recursos-grid">
+            <div class="loading-recursos">
+              <i class="fas fa-spinner fa-spin"></i>
+              <p>Cargando recursos...</p>
+            </div>
+          </div>
+        </section>
+
         <section class="donate" id="donar">
             <h2>Apoya nuestra misión</h2>
             <p>Haz click en la tarjeta para copiar el número de cuenta:</p>
@@ -217,66 +406,181 @@
 
 
     <script type="module">
-  // --- Importa los módulos de Firebase ---
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-app.js";
-  import { getFirestore, doc, onSnapshot } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-firestore.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-analytics.js";
+      // --- Importa los módulos de Firebase ---
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-app.js";
+      import { getFirestore, collection, query, orderBy, onSnapshot } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-firestore.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-analytics.js";
 
-  // --- Configuración de tu app ---
-  const firebaseConfig = {
-    apiKey: "AIzaSyCO3FRhSwH1xLABwVGFSd_YYrbFp0lQEv8",
-    authDomain: "pagelalo-1b210.firebaseapp.com",
-    databaseURL: "https://pagelalo-1b210-default-rtdb.firebaseio.com",
-    projectId: "pagelalo-1b210",
-    storageBucket: "pagelalo-1b210.firebasestorage.app",
-    messagingSenderId: "1096735980204",
-    appId: "1:1096735980204:web:8252ddb9fb484c398dfd09",
-    measurementId: "G-ZD5R3QBH85"
-  };
+      // --- Configuración de tu app ---
+      const firebaseConfig = {
+        apiKey: "AIzaSyCO3FRhSwH1xLABwVGFSd_YYrbFp0lQEv8",
+        authDomain: "pagelalo-1b210.firebaseapp.com",
+        databaseURL: "https://pagelalo-1b210-default-rtdb.firebaseio.com",
+        projectId: "pagelalo-1b210",
+        storageBucket: "pagelalo-1b210.firebasestorage.app",
+        messagingSenderId: "1096735980204",
+        appId: "1:1096735980204:web:8252ddb9fb484c398dfd09",
+        measurementId: "G-ZD5R3QBH85"
+      };
 
-  // --- Inicializa Firebase ---
-  const app = initializeApp(firebaseConfig);
-  getAnalytics(app);
-  const db = getFirestore(app);
+      // --- Inicializa Firebase ---
+      const app = initializeApp(firebaseConfig);
+      getAnalytics(app);
+      const db = getFirestore(app);
 
-  // --- Referencia al enlace y título en el DOM ---
-  const linkMisal = document.getElementById("link-misal");
-  const tituloMisal = document.getElementById("titulo-misal");
+      // --- Variables para recursos ---
+      const recursosContainer = document.getElementById("recursos-publicos");
+      let todosLosRecursos = [];
+      let filtroActual = 'todos';
 
-  // --- Escucha cambios en el recurso "misal" (documento Firestore) ---
-  const docRef = doc(db, "recursos", "misal");
+      const categoriaColors = {
+        misal: '#667eea',
+        liturgia: '#764ba2',
+        oracion: '#28a745',
+        formacion: '#17a2b8',
+        catequesis: '#ffc107',
+        otro: '#6c757d'
+      };
 
-  onSnapshot(docRef, (docSnap) => {
-    if (docSnap.exists()) {
-      const data = docSnap.data();
-      linkMisal.href = data.url;
-      linkMisal.download = data.nombre;
-      tituloMisal.textContent = "Descarga el " + data.nombre;
-    } else {
-      tituloMisal.textContent = "No hay misal disponible actualmente";
-    }
-  });
-</script>
+      const categoriaNombres = {
+        misal: 'Misal',
+        liturgia: 'Liturgia',
+        oracion: 'Oración',
+        formacion: 'Formación',
+        catequesis: 'Catequesis',
+        otro: 'Otro'
+      };
 
-
-
-<script>
-  // --- Acceso oculto al panel admin ---
-  let clickCount = 0;
-  const logo = document.querySelector('.logo');
-
-  if (logo) {
-    logo.addEventListener('click', () => {
-      clickCount++;
-      if (clickCount === 5) {        // número de clics necesarios
-        window.location.href = '/admin.html'; // ruta al panel
+      function cargarRecursos() {
+        const q = query(collection(db, "recursos"), orderBy("fecha", "desc"));
+        
+        onSnapshot(q, (snapshot) => {
+          if (snapshot.empty) {
+            mostrarVacio();
+          } else {
+            todosLosRecursos = snapshot.docs.map(doc => ({
+              id: doc.id,
+              ...doc.data()
+            }));
+            crearFiltros();
+            mostrarRecursos(todosLosRecursos);
+          }
+        });
       }
 
-      // Reinicia el contador si pasan más de 3 s entre clics
-      setTimeout(() => { clickCount = 0; }, 3000);
-    });
-  }
-</script>
+      function crearFiltros() {
+        const categorias = [...new Set(todosLosRecursos.map(r => r.categoria))];
+        
+        if (categorias.length > 1 && !document.querySelector('.filter-tabs')) {
+          const filtrosDiv = document.createElement('div');
+          filtrosDiv.className = 'filter-tabs';
+          
+          const btnTodos = document.createElement('button');
+          btnTodos.className = 'filter-btn active';
+          btnTodos.textContent = '📚 Todos';
+          btnTodos.onclick = () => filtrarRecursos('todos', btnTodos);
+          filtrosDiv.appendChild(btnTodos);
+          
+          categorias.forEach(cat => {
+            const btn = document.createElement('button');
+            btn.className = 'filter-btn';
+            btn.textContent = categoriaNombres[cat] || cat;
+            btn.onclick = () => filtrarRecursos(cat, btn);
+            filtrosDiv.appendChild(btn);
+          });
+          
+          recursosContainer.parentElement.insertBefore(filtrosDiv, recursosContainer);
+        }
+      }
+
+      function filtrarRecursos(categoria, buttonElement) {
+        filtroActual = categoria;
+        
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+          btn.classList.remove('active');
+        });
+        buttonElement.classList.add('active');
+        
+        if (categoria === 'todos') {
+          mostrarRecursos(todosLosRecursos);
+        } else {
+          const filtrados = todosLosRecursos.filter(r => r.categoria === categoria);
+          mostrarRecursos(filtrados);
+        }
+      }
+
+      function mostrarRecursos(recursos) {
+        recursosContainer.innerHTML = "";
+        
+        recursos.forEach(recurso => {
+          const fecha = new Date(recurso.fecha);
+          const fechaFormateada = fecha.toLocaleDateString('es-MX', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+          });
+
+          const card = document.createElement('div');
+          card.className = 'recurso-card';
+          card.innerHTML = `
+            <div class="recurso-header">
+              <div class="recurso-icon-large">
+                <i class="fas fa-file-pdf"></i>
+              </div>
+              <div class="recurso-details">
+                <span class="recurso-categoria-badge" style="background: ${categoriaColors[recurso.categoria] || '#6c757d'}">
+                  ${categoriaNombres[recurso.categoria] || recurso.categoria}
+                </span>
+                <h3>${recurso.nombre}</h3>
+              </div>
+            </div>
+            
+            ${recurso.descripcion ? `<p class="recurso-descripcion">${recurso.descripcion}</p>` : ''}
+            
+            <div class="recurso-fecha">
+              <i class="fas fa-calendar"></i>
+              ${fechaFormateada}
+            </div>
+            
+            <a href="${recurso.url}" target="_blank" class="recurso-download-btn" download="${recurso.nombre}">
+              <i class="fas fa-download"></i>
+              Descargar PDF
+            </a>
+          `;
+          
+          recursosContainer.appendChild(card);
+        });
+      }
+
+      function mostrarVacio() {
+        recursosContainer.innerHTML = `
+          <div class="empty-recursos">
+            <i class="fas fa-folder-open"></i>
+            <p>No hay recursos disponibles en este momento</p>
+          </div>
+        `;
+      }
+
+      // Iniciar carga de recursos
+      cargarRecursos();
+    </script>
+
+    <script>
+      // --- Acceso oculto al panel admin ---
+      let clickCount = 0;
+      const logo = document.querySelector('.logo');
+
+      if (logo) {
+        logo.addEventListener('click', () => {
+          clickCount++;
+          if (clickCount === 5) {
+            window.location.href = '/admin.html';
+          }
+
+          setTimeout(() => { clickCount = 0; }, 3000);
+        });
+      }
+    </script>
 
 
 </body>
