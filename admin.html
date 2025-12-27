@@ -16,14 +16,36 @@
 
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      background: linear-gradient(135deg, #1a2a5e 0%, #294197 50%, #3d5bb8 100%);
+      background-attachment: fixed;
       min-height: 100vh;
       padding: 20px;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: -50%;
+      right: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+      animation: shine 15s linear infinite;
+      pointer-events: none;
+    }
+
+    @keyframes shine {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
     }
 
     .container {
       max-width: 900px;
       margin: 0 auto;
+      position: relative;
+      z-index: 1;
     }
 
     h1 {
@@ -31,22 +53,32 @@
       text-align: center;
       margin-bottom: 30px;
       font-size: 2rem;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+      text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
     }
 
     #login-box {
-      background: white;
+      background: linear-gradient(135deg, #ffffff 0%, #f0f4ff 100%);
       padding: 40px;
       border-radius: 20px;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+      box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
       max-width: 500px;
       margin: 0 auto;
+      border: 2px solid rgba(41, 65, 151, 0.2);
     }
 
     #login-box h3 {
-      color: #667eea;
+      color: #294197;
       margin-bottom: 25px;
       text-align: center;
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
     }
 
     .input-group {
@@ -56,7 +88,7 @@
     .input-group label {
       display: block;
       margin-bottom: 8px;
-      color: #555;
+      color: #1a2a5e;
       font-weight: 600;
     }
 
@@ -67,11 +99,12 @@
     textarea {
       width: 100%;
       padding: 12px;
-      border: 2px solid #e0e0e0;
-      border-radius: 8px;
+      border: 2px solid rgba(41, 65, 151, 0.2);
+      border-radius: 10px;
       font-size: 1rem;
-      transition: border-color 0.3s;
+      transition: all 0.3s;
       font-family: inherit;
+      background: white;
     }
 
     textarea {
@@ -83,25 +116,48 @@
     select:focus,
     textarea:focus {
       outline: none;
-      border-color: #667eea;
+      border-color: #294197;
+      box-shadow: 0 0 0 3px rgba(41, 65, 151, 0.1);
     }
 
     button {
       width: 100%;
       padding: 14px;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      background: linear-gradient(135deg, #294197 0%, #3b5bc7 100%);
       color: white;
       border: none;
-      border-radius: 8px;
+      border-radius: 10px;
       font-size: 1.1rem;
       font-weight: 600;
       cursor: pointer;
-      transition: transform 0.2s, box-shadow 0.2s;
+      transition: all 0.3s;
+      box-shadow: 0 4px 15px rgba(41, 65, 151, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    button::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.2);
+      transform: translate(-50%, -50%);
+      transition: width 0.6s, height 0.6s;
+    }
+
+    button:hover::before {
+      width: 300px;
+      height: 300px;
     }
 
     button:hover {
       transform: translateY(-2px);
-      box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+      box-shadow: 0 6px 25px rgba(59, 91, 199, 0.5);
+      background: linear-gradient(135deg, #3b5bc7 0%, #4d6dd8 100%);
     }
 
     button:disabled {
@@ -110,11 +166,16 @@
       transform: none;
     }
 
+    button:disabled:hover {
+      box-shadow: 0 4px 15px rgba(41, 65, 151, 0.3);
+    }
+
     #login-status {
-      color: #e74c3c;
+      color: #c72c41;
       text-align: center;
       margin-top: 15px;
       font-size: 0.9rem;
+      font-weight: 600;
     }
 
     #panel {
@@ -122,11 +183,12 @@
     }
 
     .panel-box {
-      background: white;
+      background: linear-gradient(135deg, #ffffff 0%, #f0f4ff 100%);
       padding: 40px;
       border-radius: 20px;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+      box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
       margin-bottom: 20px;
+      border: 2px solid rgba(41, 65, 151, 0.2);
     }
 
     .header-section {
@@ -135,32 +197,37 @@
       align-items: center;
       margin-bottom: 30px;
       padding-bottom: 20px;
-      border-bottom: 2px solid #f0f0f0;
+      border-bottom: 2px solid rgba(41, 65, 151, 0.1);
     }
 
     .user-info {
-      color: #667eea;
+      color: #294197;
       font-weight: 600;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
 
     #logout-btn {
       width: auto;
       padding: 10px 25px;
-      background: #e74c3c;
+      background: linear-gradient(135deg, #c72c41 0%, #d64554 100%);
       font-size: 0.9rem;
     }
 
     #logout-btn:hover {
-      background: #c0392b;
+      background: linear-gradient(135deg, #d64554 0%, #e65867 100%);
     }
 
     .section-title {
-      color: #667eea;
+      color: #294197;
       margin-bottom: 20px;
       font-size: 1.3rem;
       display: flex;
       align-items: center;
       gap: 10px;
+      text-shadow: 0 2px 5px rgba(41, 65, 151, 0.1);
     }
 
     .recursos-list {
@@ -170,19 +237,28 @@
     }
 
     .recurso-item {
-      background: #f8f9fa;
+      background: linear-gradient(135deg, #ffffff 0%, #f8f9ff 100%);
       padding: 20px;
-      border-radius: 12px;
-      border: 2px solid #e0e0e0;
+      border-radius: 15px;
+      border: 2px solid rgba(41, 65, 151, 0.15);
       display: flex;
       gap: 15px;
       align-items: center;
+      transition: all 0.3s;
+      box-shadow: 0 4px 15px rgba(41, 65, 151, 0.1);
+    }
+
+    .recurso-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(41, 65, 151, 0.2);
+      border-color: rgba(41, 65, 151, 0.3);
     }
 
     .recurso-icon {
       font-size: 2.5rem;
-      color: #667eea;
+      color: #294197;
       flex-shrink: 0;
+      text-shadow: 0 2px 10px rgba(41, 65, 151, 0.2);
     }
 
     .recurso-info {
@@ -190,25 +266,27 @@
     }
 
     .recurso-info h4 {
-      color: #333;
+      color: #1a2a5e;
       margin-bottom: 5px;
+      font-size: 1.1rem;
     }
 
     .recurso-info p {
-      color: #666;
+      color: #4d6dd8;
       font-size: 0.9rem;
       margin-bottom: 5px;
     }
 
     .recurso-categoria {
       display: inline-block;
-      padding: 4px 10px;
-      background: #667eea;
+      padding: 4px 12px;
+      background: linear-gradient(135deg, #294197, #3b5bc7);
       color: white;
       border-radius: 12px;
       font-size: 0.75rem;
       font-weight: 600;
       margin-top: 5px;
+      box-shadow: 0 2px 8px rgba(41, 65, 151, 0.3);
     }
 
     .recurso-actions {
@@ -220,7 +298,7 @@
     .btn-icon {
       width: 40px;
       height: 40px;
-      border-radius: 8px;
+      border-radius: 10px;
       border: none;
       cursor: pointer;
       display: flex;
@@ -229,29 +307,32 @@
       transition: all 0.3s;
       color: white;
       font-size: 1.1rem;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     }
 
     .btn-view {
-      background: #17a2b8;
+      background: linear-gradient(135deg, #3b5bc7 0%, #4d6dd8 100%);
     }
 
     .btn-view:hover {
-      background: #138496;
+      background: linear-gradient(135deg, #4d6dd8 0%, #6084e8 100%);
       transform: scale(1.1);
+      box-shadow: 0 4px 15px rgba(59, 91, 199, 0.5);
     }
 
     .btn-delete {
-      background: #dc3545;
+      background: linear-gradient(135deg, #c72c41 0%, #d64554 100%);
     }
 
     .btn-delete:hover {
-      background: #c82333;
+      background: linear-gradient(135deg, #d64554 0%, #e65867 100%);
       transform: scale(1.1);
+      box-shadow: 0 4px 15px rgba(199, 44, 65, 0.5);
     }
 
     .upload-section {
       padding-top: 30px;
-      border-top: 2px solid #f0f0f0;
+      border-top: 2px solid rgba(41, 65, 151, 0.1);
     }
 
     .file-input-wrapper {
@@ -269,27 +350,30 @@
       justify-content: center;
       gap: 10px;
       padding: 20px;
-      background: #f8f9fa;
-      border: 2px dashed #667eea;
-      border-radius: 12px;
+      background: linear-gradient(135deg, #f8f9ff 0%, #e8eaf6 100%);
+      border: 2px dashed #294197;
+      border-radius: 15px;
       cursor: pointer;
       transition: all 0.3s;
     }
 
     .file-input-label:hover {
-      background: #e8eaf6;
-      border-color: #764ba2;
+      background: linear-gradient(135deg, #e8eaf6 0%, #d4d9f5 100%);
+      border-color: #3b5bc7;
+      box-shadow: 0 4px 15px rgba(41, 65, 151, 0.2);
     }
 
     .file-input-label i {
       font-size: 2rem;
+      color: #294197;
     }
 
     .file-name {
-      color: #666;
+      color: #4d6dd8;
       font-size: 0.9rem;
       margin-top: 10px;
       text-align: center;
+      font-weight: 600;
     }
 
     #upload-btn {
@@ -298,7 +382,8 @@
     }
 
     #upload-btn:hover {
-      box-shadow: 0 5px 20px rgba(40, 167, 69, 0.4);
+      background: linear-gradient(135deg, #20c997 0%, #17d1ac 100%);
+      box-shadow: 0 6px 25px rgba(40, 167, 69, 0.5);
     }
 
     #status {
@@ -306,39 +391,45 @@
       margin-top: 15px;
       font-weight: 600;
       padding: 12px;
-      border-radius: 8px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     }
 
     #status.success {
-      background: #d4edda;
+      background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
       color: #155724;
+      border: 2px solid #c3e6cb;
     }
 
     #status.error {
-      background: #f8d7da;
+      background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%);
       color: #721c24;
+      border: 2px solid #f5c6cb;
     }
 
     #status.info {
-      background: #d1ecf1;
+      background: linear-gradient(135deg, #d1ecf1 0%, #bee5eb 100%);
       color: #0c5460;
+      border: 2px solid #bee5eb;
     }
 
     .empty-state {
       text-align: center;
       padding: 50px 20px;
-      color: #999;
+      color: #7a8fc7;
     }
 
     .empty-state i {
       font-size: 4rem;
       margin-bottom: 20px;
-      color: #ddd;
+      color: #b8c5e8;
     }
 
     @media (max-width: 768px) {
       h1 {
         font-size: 1.5rem;
+        flex-direction: column;
+        gap: 10px;
       }
 
       .panel-box,
@@ -561,12 +652,12 @@
         });
 
         const categoriaColors = {
-          misal: '#667eea',
-          liturgia: '#764ba2',
-          oracion: '#28a745',
-          formacion: '#17a2b8',
-          catequesis: '#ffc107',
-          otro: '#6c757d'
+          misal: 'linear-gradient(135deg, #294197, #3b5bc7)',
+          liturgia: 'linear-gradient(135deg, #3b5bc7, #4d6dd8)',
+          oracion: 'linear-gradient(135deg, #28a745, #20c997)',
+          formacion: 'linear-gradient(135deg, #17a2b8, #138496)',
+          catequesis: 'linear-gradient(135deg, #ffc107, #ffb300)',
+          otro: 'linear-gradient(135deg, #6c757d, #5a6268)'
         };
 
         const item = document.createElement('div');
@@ -579,7 +670,7 @@
             <h4>${data.nombre}</h4>
             ${data.descripcion ? `<p>${data.descripcion}</p>` : ''}
             <p><i class="fas fa-calendar"></i> ${fechaFormateada}</p>
-            <span class="recurso-categoria" style="background: ${categoriaColors[data.categoria] || '#6c757d'}">${data.categoria}</span>
+            <span class="recurso-categoria" style="background: ${categoriaColors[data.categoria] || categoriaColors.otro}">${data.categoria}</span>
           </div>
           <div class="recurso-actions">
             <a href="${data.url}" target="_blank" class="btn-icon btn-view" title="Ver PDF">

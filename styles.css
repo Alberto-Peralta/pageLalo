@@ -7,30 +7,33 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #d4a017; /* Mostaza claro */
-    color: #ecf0f1; /* Blanco humo */
+    background: linear-gradient(135deg, #1a2a5e 0%, #294197 50%, #3d5bb8 100%);
+    background-attachment: fixed;
+    color: #f5f7fa;
 }
 
 /* Logo */
 .logo {
-    color: #ecf0f1;
+    color: #ffffff;
     font-size: 1.5rem;
     font-weight: bold;
     text-align: center;
     flex: 1;
+    text-shadow: 0 2px 10px rgba(255, 255, 255, 0.3);
 }
 
 /* Navbar */
 .navbar {
-    background-color: #b8860b; /* Mostaza oscuro */
+    background: linear-gradient(135deg, #1e3a8a 0%, #294197 50%, #3b5bc7 100%);
     padding: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Menú */
 /* Menú desplegable elegante */
 .menu {
     display: none;
@@ -41,15 +44,14 @@ body {
     top: 60px;
     left: 0;
     width: 100%;
-    background: rgba(212, 160, 23, 0.95); /* Mostaza suave con transparencia */
-    backdrop-filter: blur(5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(135deg, rgba(30, 58, 138, 0.98) 0%, rgba(41, 65, 151, 0.98) 50%, rgba(59, 91, 199, 0.98) 100%);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
     border-radius: 12px;
     animation: slideDown 0.4s ease-out;
     z-index: 999;
     transition: all 0.3s ease;
-    font-family: 'Arial', sans-serif;
-    color: #ecf0f1; /* Blanco humo */
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .menu.show {
@@ -59,16 +61,38 @@ body {
 .menu li {
     padding: 0.8rem 1.2rem;
     text-align: center;
-    color: #5c3a00; /* Marrón elegante */
     font-weight: 600;
-    font-size: 1.1rem; /* Un poco más grande para elegancia */
-    font-family: 'Georgia', serif; /* Fuente elegante */
-    text-transform: uppercase; /* Hace las letras más formales */
-    letter-spacing: 1px; /* Espaciado entre letras */
-    border-bottom: 1px solid rgba(92, 58, 0, 0.1);
-    transition: background 0.3s ease, transform 0.3s ease, color 0.3s ease;
+    font-size: 1.1rem;
+    font-family: 'Georgia', serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
     cursor: pointer;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Sombra sutil en las letras */
+    position: relative;
+    overflow: hidden;
+}
+
+.menu li a {
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.menu li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.menu li:hover::before {
+    left: 100%;
 }
 
 .menu li:last-child {
@@ -76,29 +100,30 @@ body {
 }
 
 .menu li:hover {
-    background-color: #f1d07a; /* Dorado pastel */
-    transform: scale(1.05); /* Suaviza el escalado */
+    background: linear-gradient(135deg, #3b5bc7 0%, #4d6dd8 100%);
+    transform: scale(1.05);
     border-radius: 8px;
-    color: #3e2b00; /* Color más oscuro en el hover */
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3); /* Sombra más fuerte en hover */
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
 }
 
 /* Botón para desplegar menú */
 .menu-toggle {
     display: block;
-    background-color: #b8860b; /* Mostaza oscuro */
-    border: none;
+    background: linear-gradient(135deg, #294197 0%, #3b5bc7 100%);
+    border: 2px solid rgba(255, 255, 255, 0.2);
     font-size: 1.8rem;
     color: #ffffff;
     padding: 0.5rem 1rem;
     border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .menu-toggle:hover {
-    background-color: #daa520; /* Dorado claro */
+    background: linear-gradient(135deg, #3b5bc7 0%, #4d6dd8 100%);
     transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(59, 91, 199, 0.5);
 }
 
 .menu-toggle:focus {
@@ -121,7 +146,7 @@ body {
 .hero {
     width: 100%;
     min-height: calc(100vh - 180px);
-    background-color: #d4a017; /* Mostaza claro */
+    background: linear-gradient(135deg, #1a2a5e 0%, #294197 50%, #3d5bb8 100%);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -131,69 +156,115 @@ body {
     overflow: hidden;
 }
 
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    animation: shine 8s linear infinite;
+}
+
+@keyframes shine {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
 .hero-image {
     width: 100%;
     max-width: 100%;
     margin-bottom: 1rem;
     transition: opacity 1.5s ease, transform 1.5s ease;
     animation: fadeInDown 1.5s ease forwards;
+    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
 }
 
 .hero h1 {
-    color: #ecf0f1;
+    color: #ffffff;
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 1rem;
     animation: fadeInUp 1.5s ease forwards;
     animation-delay: 0.5s;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 1;
 }
 
 /* Cards */
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1rem;
+    gap: 1.5rem;
     padding: 2rem;
 }
 
 .card {
-    background-color: #8b5e00; /* Caramelo oscuro */
+    background: linear-gradient(135deg, #1e3a8a 0%, #294197 100%);
     padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
     text-align: center;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    color: #ecf0f1;
+    transition: all 0.3s ease;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%);
+    transform: rotate(45deg);
+    transition: all 0.6s ease;
+}
+
+.card:hover::before {
+    left: 100%;
 }
 
 .cards .card:hover {
-    background-color: #5c3a00; /* Café profundo */
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(135deg, #294197 0%, #3b5bc7 100%);
+    box-shadow: 0 12px 35px rgba(59, 91, 199, 0.5);
+    transform: translateY(-10px);
 }
 
 .card button {
     margin-top: 1rem;
     padding: 0.5rem 1rem;
     border: none;
-    background-color: #b8860b; /* Mostaza oscuro botón */
-    color: #ecf0f1;
-    border-radius: 5px;
+    background: linear-gradient(135deg, #3b5bc7 0%, #4d6dd8 100%);
+    color: #ffffff;
+    border-radius: 8px;
     cursor: pointer;
     font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .card button:hover {
-    background-color: #daa520; /* Dorado claro hover botón */
-    transform: scale(1.05);
+    background: linear-gradient(135deg, #4d6dd8 0%, #6084e8 100%);
+    transform: scale(1.08);
+    box-shadow: 0 6px 20px rgba(77, 109, 216, 0.5);
 }
 
 /* Donate section */
 .donate {
     text-align: center;
     padding: 2rem;
-    background-color: #fef6e4; /* Fondo suave cálido */
-    color: #5c3a00; /* Texto café profundo */
+    background: linear-gradient(135deg, #f0f4ff 0%, #e1e9ff 100%);
+    color: #1a2a5e;
+    border-radius: 20px;
+    margin: 2rem;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
 }
 
 .card-image {
@@ -201,31 +272,37 @@ body {
     max-width: 80%;
     margin-top: 1rem;
     cursor: pointer;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(41, 65, 151, 0.3);
+    transition: all 0.3s ease;
+}
+
+.card-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 35px rgba(41, 65, 151, 0.5);
 }
 
 #account-number {
     margin-top: 1rem;
     font-weight: bold;
-    color: #c1440e; /* Terracota para destacar */
+    color: #294197;
 }
 
 .card-link {
-    text-decoration: none; /* Quita el subrayado del enlace */
-    color: inherit; /* Hereda el color del texto de su elemento padre */
-    display: block; /* Hace que el enlace ocupe todo el espacio de la tarjeta */
-    height: 100%; /* Asegura que el enlace cubra la altura completa de la tarjeta */
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
 }
 
 .card-link:hover .card {
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Ejemplo: un poco de sombra */
+    box-shadow: 0 12px 40px rgba(59, 91, 199, 0.6);
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .menu {
-        background-color: rgba(184, 134, 11, 0.95); /* Mostaza oscuro semi-transparente */
+        background: linear-gradient(135deg, rgba(30, 58, 138, 0.98) 0%, rgba(41, 65, 151, 0.98) 100%);
         padding: 1rem;
         top: 60px;
         border-radius: 8px;
@@ -274,10 +351,12 @@ body {
 
 /* Estilos generales para el footer */
 .footer {
-    background-color: #d4a017; /* Mostaza claro */
-    color: #ecf0f1; /* Blanco humo */
+    background: linear-gradient(135deg, #1e3a8a 0%, #294197 100%);
+    color: #ffffff;
     padding: 2rem 0;
     text-align: center;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer-content {
@@ -287,14 +366,15 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 1rem;
-    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
+    flex-wrap: wrap;
 }
 
 .footer-logo h2 {
-    font-family: 'Georgia', serif; /* Elegante */
+    font-family: 'Georgia', serif;
     font-size: 2rem;
     color: #ffffff;
     margin-bottom: 1rem;
+    text-shadow: 0 2px 10px rgba(255, 255, 255, 0.3);
 }
 
 .footer-links ul {
@@ -302,7 +382,7 @@ body {
     display: flex;
     gap: 1.5rem;
     padding: 0;
-    flex-wrap: wrap; /* Los elementos se ajustan cuando la pantalla es pequeña */
+    flex-wrap: wrap;
     justify-content: center;
 }
 
@@ -313,13 +393,15 @@ body {
 }
 
 .footer-links ul li a {
-    color: #ecf0f1;
+    color: #ffffff;
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .footer-links ul li a:hover {
-    color: #f1d07a; /* Dorado pastel */
+    color: #a0c4ff;
+    text-shadow: 0 0 15px rgba(160, 196, 255, 0.8);
 }
 
 .footer-social {
@@ -330,21 +412,24 @@ body {
 }
 
 .social-icon {
-    color: #ecf0f1;
+    color: #ffffff;
     font-size: 1.2rem;
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .social-icon:hover {
-    color: #f1d07a; /* Dorado pastel */
+    color: #a0c4ff;
+    transform: scale(1.1);
+    text-shadow: 0 0 15px rgba(160, 196, 255, 0.8);
 }
 
 .footer-bottom {
-    background-color: #b8860b; /* Mostaza oscuro */
+    background: linear-gradient(135deg, #142251 0%, #1e3a8a 100%);
     padding: 1rem 0;
     font-size: 0.9rem;
-    color: #ecf0f1;
+    color: #ffffff;
+    margin-top: 1rem;
 }
 
 .footer-bottom p {
@@ -378,42 +463,40 @@ body {
         font-size: 0.8rem;
     }
 }
-/* --- ESTILOS PARA LAS CARDS DESPLEGABLES --- */
 
-/* Estilo para la tarjeta principal que se puede hacer clic */
+/* --- ESTILOS PARA LAS CARDS DESPLEGABLES --- */
 .collapsible-card {
     cursor: pointer;
     position: relative;
     transition: all 0.3s ease;
 }
 
-/* Contenedor de los enlaces, oculto por defecto */
 .collapsible-content {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.5s ease-out; /* Animación un poco más lenta para acomodar las imágenes */
+    transition: max-height 0.5s ease-out;
     margin-top: 0;
 }
 
-/* Cuando la tarjeta está activa, muestra el contenido */
 .collapsible-card.active .collapsible-content {
-    max-height: 300px; /* Aumentamos la altura máxima para dar espacio a las imágenes */
+    max-height: 300px;
     margin-top: 1rem;
 }
 
-/* Estilo de los enlaces dentro del desplegable */
 .collapsible-link {
-    display: flex; /* <-- CLAVE: Para alinear imagen y texto */
-    align-items: center; /* <-- CLAVE: Para centrar verticalmente */
-    gap: 15px; /* Espacio entre la imagen y el texto */
-    background-color: #b8860b;
-    color: #ecf0f1;
-    padding: 0.6rem 1rem; /* Ajustamos el padding */
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: linear-gradient(135deg, #3b5bc7 0%, #4d6dd8 100%);
+    color: #ffffff;
+    padding: 0.6rem 1rem;
     margin-bottom: 0.5rem;
-    border-radius: 8px; /* Un poco más redondeado */
+    border-radius: 10px;
     text-decoration: none;
     font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .collapsible-link:last-child {
@@ -421,16 +504,17 @@ body {
 }
 
 .collapsible-link:hover {
-    background-color: #daa520;
+    background: linear-gradient(135deg, #4d6dd8 0%, #6084e8 100%);
     transform: scale(1.03);
-    color: #ecf0f1;
+    box-shadow: 0 6px 20px rgba(77, 109, 216, 0.5);
 }
 
-/* Estilo para la imagen miniatura dentro del enlace */
 .collapsible-link .link-image {
-    width: 80px;  /* Ancho fijo para la miniatura */
-    height: 50px; /* Altura fija para la miniatura */
-    object-fit: cover; /* Asegura que la imagen cubra el espacio sin deformarse */
-    border-radius: 5px; /* Bordes redondeados para la imagen */
-    flex-shrink: 0; /* Evita que la imagen se encoja */
+    width: 80px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.2);
 }

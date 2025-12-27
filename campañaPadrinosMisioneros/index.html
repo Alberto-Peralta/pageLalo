@@ -5,79 +5,144 @@
   <title>Campaña Temporal Padrinos</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
-  body { font-family: Arial, sans-serif; margin:0; }
+  body { 
+    font-family: Arial, sans-serif; 
+    margin:0;
+    background: linear-gradient(135deg, #1a2a5e 0%, #294197 50%, #3d5bb8 100%);
+  }
 
   /* Banner */
   .campana-padrinos {
-  /* Nueva imagen de fondo con una capa semitransparente para mejor legibilidad */
-  background: linear-gradient(rgba(255, 204, 128, 0.8), rgba(255, 224, 128, 0.8)),
-              url('./Gemini_Generated_Image_ap8di7ap8di7ap8d.png') no-repeat center center;
-  background-size: cover;
-  color: #4e342e;
-  text-align: center;
-  padding: 2em 1em;
-  border-bottom: 4px solid #ff9800;
-  animation: fadeIn 1s ease-in-out;
-}
-  .contenedor-campana { max-width: 800px; margin:auto; }
-  .campana-padrinos h2 { font-size: 2em; margin-bottom:0.5em; cursor:pointer; }
-  .campana-padrinos p { font-size:1.2em; margin-bottom:1.5em; }
+    background: linear-gradient(rgba(30, 58, 138, 0.75), rgba(41, 65, 151, 0.85)),
+                url('./Gemini_Generated_Image_ap8di7ap8di7ap8d.png') no-repeat center center;
+    background-size: cover;
+    color: #ffffff;
+    text-align: center;
+    padding: 2em 1em;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.2);
+    animation: fadeIn 1s ease-in-out;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .campana-padrinos::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, transparent 70%);
+    animation: shine 10s linear infinite;
+  }
+  
+  @keyframes shine {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .contenedor-campana { 
+    max-width: 800px; 
+    margin:auto;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .campana-padrinos h2 { 
+    font-size: 2em; 
+    margin-bottom:0.5em; 
+    cursor:pointer;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  }
+  
+  .campana-padrinos p { 
+    font-size:1.2em; 
+    margin-bottom:1.5em;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  }
 
   /* Testimonios - Carrusel */
   .testimonios {
-    background-color: #fff8e1;
+    background: linear-gradient(135deg, #e1e9ff 0%, #f0f4ff 100%);
     padding: 3em 1em;
     text-align: center;
     position: relative;
     overflow: hidden;
   }
+  
   .testimonios h2 {
-    color: #4e342e;
+    color: #1a2a5e;
     font-size: 2em;
     margin-bottom: 1.5em;
     position: relative;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
+  
   .testimonios h2:after {
     content: '';
     display: block;
     width: 80px;
     height: 3px;
-    background: #ff6f00;
+    background: linear-gradient(90deg, #294197, #3b5bc7);
     margin: 10px auto 0;
+    border-radius: 2px;
   }
+  
   .carrusel-contenedor {
     position: relative;
     max-width: 1000px;
     margin: 0 auto;
     overflow: hidden;
   }
+  
   .carrusel {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    padding-bottom: 10px; /* Espacio para la barra de scroll */
+    padding-bottom: 10px;
   }
+  
   .testimonio-tarjeta {
-    background: white;
-    border-radius: 10px;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9ff 100%);
+    border-radius: 15px;
     padding: 1.5rem;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 25px rgba(41, 65, 151, 0.2);
     min-width: 300px;
     max-width: 300px;
     margin: 0 15px;
     flex: 0 0 auto;
     position: relative;
     overflow: hidden;
+    border: 1px solid rgba(41, 65, 151, 0.1);
+    transition: all 0.3s ease;
   }
-  .testimonio-tarjeta:before {
+  
+  .testimonio-tarjeta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #294197, #3b5bc7, #4d6dd8);
+  }
+  
+  .testimonio-tarjeta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(41, 65, 151, 0.3);
+  }
+  
+  .testimonio-tarjeta::after {
     content: '"';
     position: absolute;
     top: 10px;
     left: 15px;
     font-size: 4rem;
-    color: #ffcc80;
+    color: rgba(41, 65, 151, 0.1);
     font-family: Georgia, serif;
     line-height: 1;
   }
+  
   .testimonio-tarjeta p {
     font-style: italic;
     margin-bottom: 1.5rem;
@@ -85,31 +150,40 @@
     z-index: 1;
     text-align: left;
     padding-left: 1.5rem;
+    color: #1a2a5e;
   }
+  
   .testimonio-tarjeta footer {
     font-weight: bold;
-    color: #4e342e;
+    color: #294197;
     text-align: right;
     font-size: 0.9rem;
   }
+  
   .testimonio-fuente {
     display: block;
     font-weight: normal;
     font-size: 0.75rem;
-    color: #8d6e63;
+    color: #4d6dd8;
     margin-top: 0.3rem;
   }
+  
   .testimonio-icono {
     font-size: 1.2rem;
     margin-right: 0.3rem;
     vertical-align: middle;
+    color: #294197;
   }
+  
   .testimonio-enlace {
-    color: #ff6f00;
+    color: #3b5bc7;
     text-decoration: none;
+    transition: all 0.3s ease;
   }
+  
   .testimonio-enlace:hover {
     text-decoration: underline;
+    color: #294197;
   }
   
   /* Mejoras para el Carrusel */
@@ -119,8 +193,9 @@
     justify-content: center;
     gap: 15px;
   }
+  
   .carrusel-control {
-    background: #ff6f00;
+    background: linear-gradient(135deg, #294197, #3b5bc7);
     border: none;
     width: 14px;
     height: 14px;
@@ -128,23 +203,27 @@
     cursor: pointer;
     opacity: 0.5;
     transition: all 0.3s ease;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 8px rgba(41, 65, 151, 0.3);
   }
+  
   .carrusel-control.active {
     opacity: 1;
     transform: scale(1.2);
+    box-shadow: 0 4px 15px rgba(41, 65, 151, 0.5);
   }
+  
   .carrusel-control:hover {
     opacity: 0.8;
     transform: scale(1.1);
   }
+  
   .carrusel-nav {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(255, 111, 0, 0.9);
+    background: linear-gradient(135deg, #294197 0%, #3b5bc7 100%);
     color: white;
-    border: none;
+    border: 2px solid rgba(255, 255, 255, 0.3);
     width: 45px;
     height: 45px;
     border-radius: 50%;
@@ -155,52 +234,128 @@
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
   }
+  
   .carrusel-nav:hover {
-    background: rgba(230, 81, 0, 0.9);
+    background: linear-gradient(135deg, #3b5bc7 0%, #4d6dd8 100%);
     transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 8px 25px rgba(59, 91, 199, 0.5);
   }
+  
   .carrusel-prev {
     left: 10px;
   }
+  
   .carrusel-next {
     right: 10px;
   }
 
   /* Botones */
-  .botones-campana { display:flex; justify-content:center; gap:1em; flex-wrap:wrap; margin-top:1em; }
+  .botones-campana { 
+    display:flex; 
+    justify-content:center; 
+    gap:1em; 
+    flex-wrap:wrap; 
+    margin-top:1em; 
+  }
+  
   .btn-campana {
-    background-color:#ff6f00; color:white;
-    padding:0.8em 1.5em; font-weight:bold;
-    border-radius:5px; text-decoration:none;
-    display:inline-flex; align-items:center; justify-content:center;
-    transition:0.3s; border:none; cursor:pointer;
+    background: linear-gradient(135deg, #294197 0%, #3b5bc7 100%);
+    color:white;
+    padding:0.8em 1.5em; 
+    font-weight:bold;
+    border-radius:10px; 
+    text-decoration:none;
+    display:inline-flex; 
+    align-items:center; 
+    justify-content:center;
+    transition: all 0.3s ease; 
+    border:none; 
+    cursor:pointer;
+    box-shadow: 0 4px 15px rgba(41, 65, 151, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    overflow: hidden;
   }
-  .btn-campana:hover { background-color:#e65100; }
+  
+  .btn-campana::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+  }
+  
+  .btn-campana:hover::before {
+    width: 300px;
+    height: 300px;
+  }
+  
+  .btn-campana:hover { 
+    background: linear-gradient(135deg, #3b5bc7 0%, #4d6dd8 100%);
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(59, 91, 199, 0.5);
+  }
+  
   .btn-campana.secundario {
-    background-color:transparent; color:#4e342e; border:2px solid #ff6f00;
+    background: transparent;
+    color: #ffffff;
+    border: 2px solid rgba(255, 255, 255, 0.5);
   }
-  .btn-campana.secundario:hover { background-color:#ffcc80; color:#4e342e; }
-  .btn-campana i { margin-right:0.5em; }
+  
+  .btn-campana.secundario:hover { 
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .btn-campana i { 
+    margin-right:0.5em;
+    position: relative;
+    z-index: 1;
+  }
+  
   .btn-accion {
     padding: 0.5em 1em;
     border: none;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 8px;
     font-size: 0.8em;
+    transition: all 0.3s ease;
+    font-weight: 600;
   }
+  
   .btn-editar {
-    background-color: #4CAF50;
+    background: linear-gradient(135deg, #3b5bc7 0%, #4d6dd8 100%);
     color: white;
+    box-shadow: 0 2px 10px rgba(59, 91, 199, 0.3);
   }
+  
+  .btn-editar:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(59, 91, 199, 0.5);
+  }
+  
   .btn-eliminar {
-    background-color: #f44336;
+    background: linear-gradient(135deg, #c72c41 0%, #d64554 100%);
     color: white;
+    box-shadow: 0 2px 10px rgba(199, 44, 65, 0.3);
   }
-  .btn-accion:hover { opacity: 0.8; }
+  
+  .btn-eliminar:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(199, 44, 65, 0.5);
+  }
 
-  @keyframes fadeIn { from {opacity:0; transform:translateY(-20px);} to {opacity:1; transform:translateY(0);} }
+  @keyframes fadeIn { 
+    from {opacity:0; transform:translateY(-20px);} 
+    to {opacity:1; transform:translateY(0);} 
+  }
 
   /* Modal */
   .modal { 
@@ -211,37 +366,154 @@
     top: 0; 
     width: 100%; 
     height: 100%; 
-    background: rgba(0,0,0,0.5); 
+    background: rgba(26, 42, 94, 0.85);
+    backdrop-filter: blur(5px);
     justify-content: center; 
     align-items: center; 
   }
+  
   .modal-content {
-    background-color:#fff3e0; 
+    background: linear-gradient(135deg, #f0f4ff 0%, #e1e9ff 100%);
     padding:2em; 
-    border-radius:10px;
+    border-radius:15px;
     max-width:500px; 
     width:90%; 
     position:relative;
     max-height: 90vh; 
     overflow-y: auto;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(41, 65, 151, 0.2);
   }
-  .close { position:absolute; top:10px; right:15px; font-size:1.5em; cursor:pointer; }
-  .modal-content input, .modal-content textarea { width:100%; padding:0.8em; margin-bottom:1em; border:1px solid #ccc; border-radius:5px; font-size:1em; }
-  .modal-content textarea { resize:vertical; min-height:80px; }
-  .mensaje-exito, .mensaje-error { font-weight:bold; margin-top:1em; display:none; }
+  
+  .modal-content h2 {
+    color: #1a2a5e;
+    margin-top: 0;
+  }
+  
+  .close { 
+    position:absolute; 
+    top:10px; 
+    right:15px; 
+    font-size:1.5em; 
+    cursor:pointer;
+    color: #294197;
+    transition: all 0.3s ease;
+  }
+  
+  .close:hover {
+    color: #1a2a5e;
+    transform: scale(1.2);
+  }
+  
+  .modal-content input, 
+  .modal-content textarea { 
+    width:100%; 
+    padding:0.8em; 
+    margin-bottom:1em; 
+    border:2px solid rgba(41, 65, 151, 0.2);
+    border-radius:8px; 
+    font-size:1em;
+    transition: all 0.3s ease;
+    background: white;
+  }
+  
+  .modal-content input:focus,
+  .modal-content textarea:focus {
+    outline: none;
+    border-color: #294197;
+    box-shadow: 0 0 0 3px rgba(41, 65, 151, 0.1);
+  }
+  
+  .modal-content textarea { 
+    resize:vertical; 
+    min-height:80px; 
+  }
+  
+  .mensaje-exito, 
+  .mensaje-error { 
+    font-weight:bold; 
+    margin-top:1em; 
+    display:none;
+    padding: 1em;
+    border-radius: 8px;
+  }
+  
+  .mensaje-exito {
+    background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+    color: #155724;
+    border: 1px solid #c3e6cb;
+  }
+  
+  .mensaje-error {
+    background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%);
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+  }
+  
   .form-group-flex {
     display: flex;
     align-items: flex-start;
     gap: 0.5em;
     margin-bottom: 1em;
   }
+  
+  .form-group-flex label {
+    color: #1a2a5e;
+  }
+  
+  .form-group-flex a {
+    color: #294197;
+    font-weight: 600;
+  }
 
   /* Panel administrador */
-  .panel-admin { display:none; padding:2em; background:#f5f5f5; }
-  .panel-admin h2 { margin-top:0; }
-  table { width:100%; border-collapse: collapse; margin-top:1em; }
-  table, th, td { border:1px solid #ccc; }
-  th, td { padding:0.5em; text-align:left; }
+  .panel-admin { 
+    display:none; 
+    padding:2em; 
+    background: linear-gradient(135deg, #e1e9ff 0%, #f0f4ff 100%);
+    min-height: 50vh;
+  }
+  
+  .panel-admin h2 { 
+    margin-top:0;
+    color: #1a2a5e;
+  }
+  
+  table { 
+    width:100%; 
+    border-collapse: collapse; 
+    margin-top:1em;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(41, 65, 151, 0.15);
+  }
+  
+  table, th, td { 
+    border:1px solid rgba(41, 65, 151, 0.2);
+  }
+  
+  th, td { 
+    padding:0.8em; 
+    text-align:left; 
+  }
+  
+  th {
+    background: linear-gradient(135deg, #294197 0%, #3b5bc7 100%);
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85em;
+    letter-spacing: 0.5px;
+  }
+  
+  tr:nth-child(even) {
+    background: rgba(41, 65, 151, 0.05);
+  }
+  
+  tr:hover {
+    background: rgba(41, 65, 151, 0.1);
+  }
 
   /* Estilos responsivos para el panel administrador */
   @media (max-width: 768px) {
@@ -267,6 +539,12 @@
       max-width: 250px;
       margin: 0 10px;
     }
+    .campana-padrinos h2 {
+      font-size: 1.6em;
+    }
+    .campana-padrinos p {
+      font-size: 1em;
+    }
   }
 
   /* Estilo para hacer la barra de scroll más visible en Webkit (Chrome, Safari) */
@@ -274,15 +552,21 @@
     width: 8px;
   }
   .modal-content::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: rgba(41, 65, 151, 0.1);
     border-radius: 10px;
   }
   .modal-content::-webkit-scrollbar-thumb {
-    background: #ff6f00;
+    background: linear-gradient(135deg, #294197, #3b5bc7);
     border-radius: 10px;
   }
   .modal-content::-webkit-scrollbar-thumb:hover {
-    background: #e65100;
+    background: linear-gradient(135deg, #3b5bc7, #4d6dd8);
+  }
+  
+  .testimonio-tarjeta img {
+    margin-top: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(41, 65, 151, 0.2);
   }
 </style>
 </head>
@@ -305,7 +589,7 @@
         </a>
       </div>
       <div class="botones-campana" style="margin-top: 0.5em;">
-      <a href="faq.html" target="_blank" rel="noopener noreferrer" style="color: #4e342e; font-size: 0.9em;">Preguntas Frecuentes</a>
+      <a href="faq.html" target="_blank" rel="noopener noreferrer" style="color: #ffffff; font-size: 0.9em;">Preguntas Frecuentes</a>
       </div>
     </div>
   </section>
@@ -313,9 +597,6 @@
   <section class="testimonios">
     <div class="contenedor-campana">
       <h2>Historias que inspiran</h2>
- <!--   <p style="color: #6d4c41; margin-bottom: 20px; font-style: italic;">
-        Utiliza los botones o desliza para ver más testimonios
-      </p>  -->
       
       <div class="carrusel-contenedor">
         <button class="carrusel-nav carrusel-prev" aria-label="Anterior">
@@ -330,7 +611,6 @@
               <span class="testimonio-fuente"><i class="fas fa-link testimonio-icono"></i>Fuente: <a href="https://yucatan.com.mx/mexico/75-anos-de-obras-misioneros-de-guadalupe/" class="testimonio-enlace" target="_blank">Yucatán.com.mx - 75 años de obras</a></span>
             </footer>
             <img src="./1.png" alt="imagen relacionada" style="width: 100%; height: auto; border-radius: 8px;">
-
           </div>
           
           <div class="testimonio-tarjeta">
@@ -340,7 +620,6 @@
               <span class="testimonio-fuente"><i class="fas fa-link testimonio-icono"></i>Fuente: <a href="https://yucatan.com.mx/mexico/misioneros-de-guadalupe-abren-mision-en-indonesia/" class="testimonio-enlace" target="_blank">Yucatán.com.mx - Nuevas misiones</a></span>
             </footer>
             <img src="./2.png" alt="imagen relacionada" style="width: 100%; height: auto; border-radius: 8px;">
-
           </div>
           
           <div class="testimonio-tarjeta">
@@ -350,7 +629,6 @@
               <span class="testimonio-fuente"><i class="fas fa-link testimonio-icono"></i>Fuente: <a href="https://diocesisdequeretaro.com.mx/encuentro-infantil-missionero/" class="testimonio-enlace" target="_blank">Diócesis de Querétaro</a></span>
             </footer>
             <img src="./3.png" alt="imagen relacionada" style="width: 100%; height: auto; border-radius: 8px;">
-
           </div>
           
           <div class="testimonio-tarjeta">
@@ -360,9 +638,7 @@
               <span class="testimonio-fuente"><i class="fas fa-link testimonio-icono"></i>Fuente: <a href="https://misionerosdeguadalupe.org/25-anos-del-padre-antonio-camacho/" class="testimonio-enlace" target="_blank">misionerosdeguadalupe.org</a></span>
             </footer>
             <img src="./4.png" alt="imagen relacionada" style="width: 100%; height: auto; border-radius: 8px;">
-
           </div>
-
         </div>
         
         <button class="carrusel-nav carrusel-next" aria-label="Siguiente">
@@ -386,7 +662,7 @@
     </div>
 
     <div class="botones-campana" style="margin-top: 0.5em;">
-      <a href="faq.html" target="_blank" rel="noopener noreferrer" style="color: #4e342e; font-size: 0.9em;">Preguntas Frecuentes</a>
+      <a href="faq.html" target="_blank" rel="noopener noreferrer" style="color: #1a2a5e; font-size: 0.9em;">Preguntas Frecuentes</a>
       </div>
 
   </section>
@@ -404,7 +680,7 @@
         <div class="form-group-flex">
             <input type="checkbox" id="aceptar-terminos" required style="width: auto; margin-top: 0.2em;">
             <label for="aceptar-terminos" style="font-size: 0.9em;">
-                Acepto el <a href="terminos.html" target="_blank" rel="noopener noreferrer" style="color: #ff6f00;">Aviso de Privacidad</a>.
+                Acepto el <a href="terminos.html" target="_blank" rel="noopener noreferrer">Aviso de Privacidad</a>.
             </label>
         </div>
         <button type="submit" class="btn-campana">Enviar</button>

@@ -5,17 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat con Magisterium AI</title>
     <style>
-            :root {
-            --background-color: #fff8e1;      /* fondo general, suave amarillo claro */
-            --chat-bg: #fff3c4;               /* fondo del chat, amarillo más pálido */
-            --bot-message-bg: #ffecb3;        /* mensaje del bot, amarillo muy claro */
-            --user-message-bg: #d4a017;       /* mensaje del usuario, mostaza intenso */
-            --user-message-text: #ffffff;     /* texto de usuario, mantiene blanco para contraste */
-            --input-bg: #fff3c4;              /* fondo del input, amarillo suave */
-            --input-text: #333333;            /* texto del input, mantiene gris oscuro para legibilidad */
-            --border-color: #e6d29c;          /* bordes, tono mostaza claro */
+        :root {
+            --background-color: #1a2a5e;
+            --chat-bg: linear-gradient(135deg, #1e3a8a 0%, #294197 100%);
+            --bot-message-bg: linear-gradient(135deg, #f0f4ff 0%, #e1e9ff 100%);
+            --bot-message-text: #1a2a5e;
+            --user-message-bg: linear-gradient(135deg, #3b5bc7 0%, #4d6dd8 100%);
+            --user-message-text: #ffffff;
+            --input-bg: linear-gradient(135deg, #ffffff 0%, #f0f4ff 100%);
+            --input-text: #1a2a5e;
+            --border-color: rgba(255, 255, 255, 0.2);
+            --header-bg: linear-gradient(135deg, #294197 0%, #3b5bc7 100%);
         }
-
 
         * {
             box-sizing: border-box;
@@ -23,12 +24,31 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background-color: var(--background-color);
+            background: linear-gradient(135deg, #1a2a5e 0%, #294197 50%, #3d5bb8 100%);
+            background-attachment: fixed;
             margin: 0;
             padding: 0;
             height: 100vh;
-            height: 100dvh; /* Soporte moderno para móviles */
+            height: 100dvh;
             overflow: hidden;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+            animation: shine 15s linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes shine {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
 
         /* Contenedor principal */
@@ -40,19 +60,43 @@
             width: 100%;
             max-width: 600px;
             margin: 0 auto;
-            background-color: var(--chat-bg);
+            background: linear-gradient(135deg, #1e3a8a 0%, #294197 100%);
             position: relative;
+            box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+            border-left: 2px solid rgba(255, 255, 255, 0.1);
+            border-right: 2px solid rgba(255, 255, 255, 0.1);
         }
 
         /* Cabecera */
         .chat-header {
-            background-color: var(--user-message-bg);
+            background: linear-gradient(135deg, #294197 0%, #3b5bc7 100%);
             color: white;
             padding: 12px 16px;
             text-align: center;
             font-weight: bold;
             font-size: 16px;
             flex-shrink: 0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .chat-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            animation: headerShine 3s infinite;
+        }
+
+        @keyframes headerShine {
+            0% { left: -100%; }
+            100% { left: 100%; }
         }
 
         /* Caja de chat */
@@ -65,6 +109,26 @@
             gap: 10px;
             scroll-behavior: smooth;
             -webkit-overflow-scrolling: touch;
+            background: transparent;
+        }
+
+        /* Scrollbar personalizada */
+        .chat-box::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .chat-box::-webkit-scrollbar-track {
+            background: rgba(41, 65, 151, 0.2);
+            border-radius: 10px;
+        }
+
+        .chat-box::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, #3b5bc7, #4d6dd8);
+            border-radius: 10px;
+        }
+
+        .chat-box::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(135deg, #4d6dd8, #6084e8);
         }
 
         /* Estilos de mensajes */
@@ -75,26 +139,43 @@
             word-wrap: break-word;
             font-size: 14px;
             line-height: 1.4;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            animation: messageAppear 0.3s ease;
+        }
+
+        @keyframes messageAppear {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .assistant-message {
-            background-color: var(--bot-message-bg);
+            background: linear-gradient(135deg, #f0f4ff 0%, #e1e9ff 100%);
+            color: #1a2a5e;
             align-self: flex-start;
             border-bottom-left-radius: 4px;
         }
 
         .user-message {
-            background-color: var(--user-message-bg);
-            color: var(--user-message-text);
+            background: linear-gradient(135deg, #3b5bc7 0%, #4d6dd8 100%);
+            color: #ffffff;
             align-self: flex-end;
             border-bottom-right-radius: 4px;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
         }
 
         /* Preguntas sugeridas */
         .suggested-questions {
             padding: 16px;
-            border-bottom: 1px solid var(--border-color);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
             flex-shrink: 0;
+            background: rgba(30, 58, 138, 0.3);
         }
 
         .chat-container.has-messages .suggested-questions {
@@ -104,7 +185,8 @@
         .suggested-questions h4 {
             margin: 0 0 12px 0;
             font-size: 14px;
-            color: #666;
+            color: #a0c4ff;
+            font-weight: 600;
         }
 
         .question-chips {
@@ -114,19 +196,23 @@
         }
 
         .question-chip {
-            background-color: #f8f9fa;
-            border: 1px solid var(--border-color);
+            background: linear-gradient(135deg, rgba(59, 91, 199, 0.3) 0%, rgba(77, 109, 216, 0.3) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.3);
             border-radius: 20px;
             padding: 8px 12px;
             font-size: 12px;
             cursor: pointer;
-            transition: all 0.2s;
+            transition: all 0.3s ease;
             user-select: none;
+            color: #ffffff;
+            backdrop-filter: blur(5px);
         }
 
         .question-chip:hover {
-            background-color: #e9ecef;
-            border-color: var(--user-message-bg);
+            background: linear-gradient(135deg, #3b5bc7 0%, #4d6dd8 100%);
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(59, 91, 199, 0.4);
         }
 
         .question-chip:active {
@@ -141,11 +227,11 @@
             transform: translateX(-50%);
             width: 100%;
             max-width: 600px;
-            background-color: var(--chat-bg);
-            border-top: 1px solid var(--border-color);
+            background: linear-gradient(135deg, #1e3a8a 0%, #294197 100%);
+            border-top: 2px solid rgba(255, 255, 255, 0.2);
             padding: 12px 16px;
             z-index: 1000;
-            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
         }
 
         /* Formulario */
@@ -165,25 +251,31 @@
             width: 100%;
             padding: 12px 16px;
             border-radius: 25px;
-            border: 1px solid var(--border-color);
-            background-color: var(--input-bg);
-            color: var(--input-text);
-            font-size: 16px; /* Evita zoom en iOS */
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            background: linear-gradient(135deg, #ffffff 0%, #f0f4ff 100%);
+            color: #1a2a5e;
+            font-size: 16px;
             outline: none;
             resize: none;
             font-family: inherit;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
         }
 
         #user-input:focus {
-            border-color: var(--user-message-bg);
-            box-shadow: 0 0 0 2px rgba(0,123,255,0.2);
+            border-color: #3b5bc7;
+            box-shadow: 0 0 0 3px rgba(59, 91, 199, 0.3);
+        }
+
+        #user-input::placeholder {
+            color: #7a8fc7;
         }
 
         /* Botón de enviar */
         .send-button {
-            background-color: var(--user-message-bg);
+            background: linear-gradient(135deg, #3b5bc7 0%, #4d6dd8 100%);
             color: white;
-            border: none;
+            border: 2px solid rgba(255, 255, 255, 0.3);
             border-radius: 50%;
             width: 44px;
             height: 44px;
@@ -192,13 +284,15 @@
             justify-content: center;
             cursor: pointer;
             font-size: 18px;
-            transition: all 0.2s;
+            transition: all 0.3s ease;
             flex-shrink: 0;
+            box-shadow: 0 4px 15px rgba(59, 91, 199, 0.4);
         }
 
         .send-button:hover {
-            background-color: #0056b3;
+            background: linear-gradient(135deg, #4d6dd8 0%, #6084e8 100%);
             transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(77, 109, 216, 0.6);
         }
 
         .send-button:active {
@@ -206,9 +300,10 @@
         }
 
         .send-button:disabled {
-            background-color: #ccc;
+            background: linear-gradient(135deg, #6c757d 0%, #7f8c8d 100%);
             cursor: not-allowed;
             transform: none;
+            border-color: rgba(255, 255, 255, 0.2);
         }
 
         /* Mensaje de carga */
@@ -217,13 +312,15 @@
             align-items: center;
             gap: 8px;
             padding: 12px 16px;
-            background-color: var(--bot-message-bg);
+            background: linear-gradient(135deg, #f0f4ff 0%, #e1e9ff 100%);
             border-radius: 18px;
             border-bottom-left-radius: 4px;
             align-self: flex-start;
             max-width: 85%;
             font-size: 14px;
-            color: #666;
+            color: #4d6dd8;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .loading-dots {
@@ -234,7 +331,7 @@
         .loading-dot {
             width: 4px;
             height: 4px;
-            background-color: #999;
+            background: linear-gradient(135deg, #3b5bc7, #4d6dd8);
             border-radius: 50%;
             animation: loadingPulse 1.4s infinite ease-in-out;
         }
@@ -267,7 +364,13 @@
         }
 
         .assistant-message a {
-            color: #0066cc;
+            color: #294197;
+            font-weight: 600;
+        }
+
+        .user-message a {
+            color: #ffffff;
+            text-decoration: underline;
         }
 
         /* Responsive para desktop */
@@ -533,7 +636,7 @@
         // 1. Procesar referencias en formato [^1], [^2], etc.
         processedText = processedText.replace(/\[\^(\d+)\]/g, function(match, number) {
             const url = 'https://www.vatican.va/archive/catechism_sp/index_sp.html';
-            const style = 'color: #0066cc; font-weight: bold; text-decoration: none; background-color: #f0f8ff; padding: 2px 4px; border-radius: 3px; font-size: 0.8em;';
+            const style = 'color: #294197; font-weight: bold; text-decoration: none; background-color: #e1e9ff; padding: 2px 4px; border-radius: 3px; font-size: 0.8em;';
             return '<a href="' + url + '" target="_blank" rel="noopener noreferrer" title="Ver fuente" style="' + style + '">' + match + '</a>';
         });
 
@@ -552,13 +655,13 @@
                 url = 'https://www.vatican.va/archive/catechism_sp/p4_sp.html';
             }
             
-            return '<a href="' + url + '" target="_blank" rel="noopener noreferrer" title="Ver Catecismo párrafo ' + number + '" style="color: #0066cc; font-weight: bold; text-decoration: underline;">' + match + '</a>';
+            return '<a href="' + url + '" target="_blank" rel="noopener noreferrer" title="Ver Catecismo párrafo ' + number + '" style="color: #294197; font-weight: bold; text-decoration: underline;">' + match + '</a>';
         });
 
         // 3. Procesar referencias bíblicas básicas
         processedText = processedText.replace(/\b(\d+\s+)?([A-Za-z]+)\s+(\d+):(\d+)/g, function(match) {
             const url = 'https://www.vatican.va/archive/bible/index_sp.htm';
-            return '<a href="' + url + '" target="_blank" rel="noopener noreferrer" title="Ver Sagrada Escritura" style="color: #8b4513; font-weight: bold; text-decoration: underline;">' + match + '</a>';
+            return '<a href="' + url + '" target="_blank" rel="noopener noreferrer" title="Ver Sagrada Escritura" style="color: #3b5bc7; font-weight: bold; text-decoration: underline;">' + match + '</a>';
         });
 
         // 4. Procesar documentos conocidos por nombre
@@ -566,7 +669,7 @@
             const url = knownDocuments[doc];
             const regex = new RegExp('\\b' + doc.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\b', 'gi');
             processedText = processedText.replace(regex, function(match) {
-                return '<a href="' + url + '" target="_blank" rel="noopener noreferrer" title="Ver documento completo" style="color: #0066cc; font-weight: bold; text-decoration: underline;">' + match + '</a>';
+                return '<a href="' + url + '" target="_blank" rel="noopener noreferrer" title="Ver documento completo" style="color: #294197; font-weight: bold; text-decoration: underline;">' + match + '</a>';
             });
         }
 
