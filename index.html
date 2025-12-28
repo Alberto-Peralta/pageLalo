@@ -20,24 +20,27 @@
   integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
   crossorigin="anonymous" referrerpolicy="no-referrer" />
   
-  <style>
+ <style>
     /* Estilos para la sección de recursos */
     .recursos-section {
       padding: 3rem 2rem;
-      background-color: #fef6e4;
+      /* Fondo crema muy suave para resaltar el azul */
+      background-color: #f8f9fa; 
       margin: 2rem 0;
       border-radius: 20px;
     }
 
     .recursos-title {
       text-align: center;
-      color: #5c3a00;
+      /* Usando el azul oscuro de la credencial */
+      color: #1A2D70; 
       font-size: 2rem;
       margin-bottom: 2rem;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 15px;
+      font-weight: 700;
     }
 
     .recursos-grid {
@@ -49,10 +52,13 @@
     }
 
     .recurso-card {
-      background: white;
+      background: rgba(255, 255, 255, 0.9);
       border-radius: 15px;
       padding: 1.5rem;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      /* Efecto de sombra suave y moderna */
+      box-shadow: 0 10px 30px rgba(26, 45, 112, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(10px); /* Efecto difuminado moderno */
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       display: flex;
       flex-direction: column;
@@ -67,12 +73,13 @@
       left: 0;
       right: 0;
       height: 5px;
-      background: linear-gradient(90deg, #667eea, #764ba2);
+      /* Degradado basado en los dos azules de la imagen */
+      background: linear-gradient(90deg, #1A2D70, #294197);
     }
 
     .recurso-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      transform: translateY(-8px);
+      box-shadow: 0 15px 35px rgba(26, 45, 112, 0.15);
     }
 
     .recurso-header {
@@ -84,19 +91,18 @@
 
     .recurso-icon-large {
       font-size: 3rem;
-      color: #667eea;
+      /* Azul vibrante para los iconos */
+      color: #294197;
       flex-shrink: 0;
     }
 
-    .recurso-details {
-      flex: 1;
-    }
-
     .recurso-details h3 {
-      color: #333;
+      /* Azul oscuro para títulos de tarjetas */
+      color: #1A2D70;
       font-size: 1.2rem;
       margin-bottom: 0.5rem;
       line-height: 1.3;
+      font-weight: 600;
     }
 
     .recurso-categoria-badge {
@@ -106,24 +112,17 @@
       font-size: 0.75rem;
       font-weight: 600;
       color: white;
+      /* Fondo azul institucional */
+      background-color: #1A2D70;
       text-transform: uppercase;
       margin-bottom: 0.5rem;
     }
 
     .recurso-descripcion {
-      color: #666;
+      color: #4a5568;
       font-size: 0.9rem;
       margin-bottom: 1rem;
       line-height: 1.5;
-    }
-
-    .recurso-fecha {
-      color: #999;
-      font-size: 0.85rem;
-      display: flex;
-      align-items: center;
-      gap: 5px;
-      margin-bottom: 1rem;
     }
 
     .recurso-download-btn {
@@ -132,37 +131,23 @@
       justify-content: center;
       gap: 10px;
       padding: 12px 20px;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      /* Degradado moderno con efecto brillo */
+      background: linear-gradient(135deg, #294197 0%, #1A2D70 100%);
       color: white;
       text-decoration: none;
       border-radius: 10px;
       font-weight: 600;
       transition: all 0.3s ease;
       margin-top: auto;
+      border: none;
+      box-shadow: 0 4px 15px rgba(26, 45, 112, 0.3);
     }
 
     .recurso-download-btn:hover {
-      transform: scale(1.05);
-      box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
-    }
-
-    .loading-recursos,
-    .empty-recursos {
-      grid-column: 1 / -1;
-      text-align: center;
-      padding: 3rem;
-      color: #999;
-    }
-
-    .loading-recursos i,
-    .empty-recursos i {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-      color: #ddd;
-    }
-
-    .empty-recursos p {
-      font-size: 1.1rem;
+      transform: scale(1.03);
+      /* Brillo más intenso al pasar el mouse */
+      box-shadow: 0 8px 25px rgba(41, 65, 151, 0.5);
+      filter: brightness(1.1);
     }
 
     .filter-tabs {
@@ -174,10 +159,11 @@
     }
 
     .filter-btn {
-      padding: 10px 20px;
-      border: 2px solid #d4a017;
-      background: white;
-      color: #5c3a00;
+      padding: 10px 25px;
+      /* Borde con el azul vibrante */
+      border: 2px solid #294197;
+      background: transparent;
+      color: #294197;
       border-radius: 25px;
       cursor: pointer;
       font-weight: 600;
@@ -186,31 +172,17 @@
 
     .filter-btn:hover,
     .filter-btn.active {
-      background: #d4a017;
+      background: #294197;
       color: white;
-      transform: scale(1.05);
+      box-shadow: 0 5px 15px rgba(41, 65, 151, 0.3);
     }
 
     @media (max-width: 768px) {
-      .recursos-title {
-        font-size: 1.5rem;
-        flex-direction: column;
-      }
-
-      .recursos-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .filter-tabs {
-        flex-direction: column;
-        align-items: stretch;
-      }
-
-      .filter-btn {
-        width: 100%;
-      }
+      .recursos-title { font-size: 1.5rem; }
+      .recursos-grid { grid-template-columns: 1fr; }
+      .filter-btn { width: 100%; }
     }
-  </style>
+</style>
 </head>
 <body>
 
