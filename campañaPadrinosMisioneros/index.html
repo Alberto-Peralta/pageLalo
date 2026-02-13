@@ -2,25 +2,41 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Campaña Temporal Padrinos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campaña Padrinos Misioneros de Guadalupe</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 <style>
-  body { 
-    font-family: Arial, sans-serif; 
-    margin:0;
-    background: linear-gradient(135deg, #1a2a5e 0%, #294197 50%, #3d5bb8 100%);
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
 
-  /* Banner */
+  body { 
+    font-family: 'Open Sans', Arial, sans-serif;
+    margin: 0;
+    background: linear-gradient(135deg, #1a2a5e 0%, #294197 50%, #3d5bb8 100%);
+    color: #333;
+    line-height: 1.6;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  /* Banner Principal */
   .campana-padrinos {
-    background: linear-gradient(rgba(30, 58, 138, 0.75), rgba(41, 65, 151, 0.85)),
+    background: linear-gradient(rgba(26, 42, 94, 0.85), rgba(41, 65, 151, 0.90)),
                 url('./Gemini_Generated_Image_ap8di7ap8di7ap8d.png') no-repeat center center;
     background-size: cover;
     color: #ffffff;
     text-align: center;
-    padding: 2em 1em;
+    padding: 4em 2em;
     border-bottom: 3px solid rgba(255, 255, 255, 0.2);
-    animation: fadeIn 1s ease-in-out;
+    animation: fadeIn 0.8s ease-in-out;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
     position: relative;
     overflow: hidden;
@@ -34,7 +50,7 @@
     width: 200%;
     height: 200%;
     background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, transparent 70%);
-    animation: shine 10s linear infinite;
+    animation: shine 15s linear infinite;
   }
   
   @keyframes shine {
@@ -43,78 +59,100 @@
   }
   
   .contenedor-campana { 
-    max-width: 800px; 
-    margin:auto;
+    max-width: 900px; 
+    margin: auto;
     position: relative;
     z-index: 1;
   }
   
   .campana-padrinos h2 { 
-    font-size: 2em; 
-    margin-bottom:0.5em; 
-    cursor:pointer;
-    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    font-size: 2.8em; 
+    margin-bottom: 0.5em; 
+    cursor: pointer;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    transition: transform 0.3s ease;
+  }
+
+  .campana-padrinos h2:hover {
+    transform: scale(1.02);
   }
   
   .campana-padrinos p { 
-    font-size:1.2em; 
-    margin-bottom:1.5em;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+    font-size: 1.25em; 
+    margin-bottom: 1em;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    line-height: 1.6;
+    opacity: 0.95;
   }
 
-  /* Testimonios - Carrusel */
+  /* Sección de Testimonios */
   .testimonios {
-    background: linear-gradient(135deg, #e1e9ff 0%, #f0f4ff 100%);
-    padding: 3em 1em;
+    background: linear-gradient(135deg, #e8f0ff 0%, #f5f8ff 100%);
+    padding: 4em 1.5em;
     text-align: center;
     position: relative;
     overflow: hidden;
   }
   
+  .testimonios::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #294197, #3b5bc7, #4d6dd8);
+  }
+  
   .testimonios h2 {
     color: #1a2a5e;
-    font-size: 2em;
+    font-size: 2.5em;
     margin-bottom: 1.5em;
     position: relative;
+    font-weight: 700;
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
   
   .testimonios h2:after {
     content: '';
     display: block;
-    width: 80px;
-    height: 3px;
+    width: 100px;
+    height: 4px;
     background: linear-gradient(90deg, #294197, #3b5bc7);
-    margin: 10px auto 0;
+    margin: 15px auto 0;
     border-radius: 2px;
   }
   
+  /* Carrusel de Testimonios */
   .carrusel-contenedor {
     position: relative;
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
     overflow: hidden;
+    padding: 0 60px;
   }
   
   .carrusel {
     display: flex;
-    transition: transform 0.5s ease-in-out;
-    padding-bottom: 10px;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    padding-bottom: 20px;
   }
   
   .testimonio-tarjeta {
-    background: linear-gradient(135deg, #ffffff 0%, #f8f9ff 100%);
-    border-radius: 15px;
-    padding: 1.5rem;
-    box-shadow: 0 8px 25px rgba(41, 65, 151, 0.2);
-    min-width: 300px;
-    max-width: 300px;
+    background: linear-gradient(135deg, #ffffff 0%, #fafcff 100%);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 40px rgba(41, 65, 151, 0.15);
+    min-width: 320px;
+    max-width: 320px;
     margin: 0 15px;
     flex: 0 0 auto;
     position: relative;
     overflow: hidden;
-    border: 1px solid rgba(41, 65, 151, 0.1);
-    transition: all 0.3s ease;
+    border: 2px solid rgba(41, 65, 151, 0.08);
+    transition: all 0.4s ease;
   }
   
   .testimonio-tarjeta::before {
@@ -123,24 +161,26 @@
     top: 0;
     left: 0;
     right: 0;
-    height: 4px;
+    height: 5px;
     background: linear-gradient(90deg, #294197, #3b5bc7, #4d6dd8);
   }
   
   .testimonio-tarjeta:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 35px rgba(41, 65, 151, 0.3);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 50px rgba(41, 65, 151, 0.25);
+    border-color: rgba(41, 65, 151, 0.2);
   }
   
   .testimonio-tarjeta::after {
     content: '"';
     position: absolute;
-    top: 10px;
-    left: 15px;
-    font-size: 4rem;
-    color: rgba(41, 65, 151, 0.1);
+    top: 15px;
+    left: 20px;
+    font-size: 5rem;
+    color: rgba(41, 65, 151, 0.08);
     font-family: Georgia, serif;
     line-height: 1;
+    font-weight: bold;
   }
   
   .testimonio-tarjeta p {
@@ -150,35 +190,39 @@
     z-index: 1;
     text-align: left;
     padding-left: 1.5rem;
-    color: #1a2a5e;
+    color: #2c3e50;
+    font-size: 1.05em;
+    line-height: 1.7;
   }
   
   .testimonio-tarjeta footer {
-    font-weight: bold;
+    font-weight: 600;
     color: #294197;
     text-align: right;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
   }
   
   .testimonio-fuente {
     display: block;
     font-weight: normal;
-    font-size: 0.75rem;
-    color: #4d6dd8;
-    margin-top: 0.3rem;
+    font-size: 0.8rem;
+    color: #5a7fc0;
+    margin-top: 0.5rem;
+    line-height: 1.5;
   }
   
   .testimonio-icono {
-    font-size: 1.2rem;
-    margin-right: 0.3rem;
+    font-size: 0.9rem;
+    margin-right: 0.4rem;
     vertical-align: middle;
-    color: #294197;
+    color: #3b5bc7;
   }
   
   .testimonio-enlace {
     color: #3b5bc7;
     text-decoration: none;
     transition: all 0.3s ease;
+    font-weight: 500;
   }
   
   .testimonio-enlace:hover {
@@ -186,35 +230,48 @@
     color: #294197;
   }
   
-  /* Mejoras para el Carrusel */
+  .testimonio-tarjeta img {
+    margin-top: 1.2rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(41, 65, 151, 0.2);
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+
+  .testimonio-tarjeta:hover img {
+    transform: scale(1.02);
+  }
+  
+  /* Controles del Carrusel */
   .carrusel-controls {
-    margin-top: 25px;
+    margin-top: 35px;
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 12px;
   }
   
   .carrusel-control {
     background: linear-gradient(135deg, #294197, #3b5bc7);
     border: none;
-    width: 14px;
-    height: 14px;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
     cursor: pointer;
-    opacity: 0.5;
+    opacity: 0.4;
     transition: all 0.3s ease;
     box-shadow: 0 2px 8px rgba(41, 65, 151, 0.3);
   }
   
   .carrusel-control.active {
     opacity: 1;
-    transform: scale(1.2);
-    box-shadow: 0 4px 15px rgba(41, 65, 151, 0.5);
+    transform: scale(1.4);
+    box-shadow: 0 4px 15px rgba(41, 65, 151, 0.6);
   }
   
   .carrusel-control:hover {
-    opacity: 0.8;
-    transform: scale(1.1);
+    opacity: 0.7;
+    transform: scale(1.2);
   }
   
   .carrusel-nav {
@@ -224,10 +281,10 @@
     background: linear-gradient(135deg, #294197 0%, #3b5bc7 100%);
     color: white;
     border: 2px solid rgba(255, 255, 255, 0.3);
-    width: 45px;
-    height: 45px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     cursor: pointer;
     z-index: 10;
     display: flex;
@@ -240,43 +297,48 @@
   .carrusel-nav:hover {
     background: linear-gradient(135deg, #3b5bc7 0%, #4d6dd8 100%);
     transform: translateY(-50%) scale(1.1);
-    box-shadow: 0 8px 25px rgba(59, 91, 199, 0.5);
+    box-shadow: 0 8px 30px rgba(59, 91, 199, 0.6);
+  }
+  
+  .carrusel-nav:active {
+    transform: translateY(-50%) scale(0.95);
   }
   
   .carrusel-prev {
-    left: 10px;
+    left: 0;
   }
   
   .carrusel-next {
-    right: 10px;
+    right: 0;
   }
 
   /* Botones */
   .botones-campana { 
-    display:flex; 
-    justify-content:center; 
-    gap:1em; 
-    flex-wrap:wrap; 
-    margin-top:1em; 
+    display: flex; 
+    justify-content: center; 
+    gap: 1.2em; 
+    flex-wrap: wrap; 
+    margin-top: 1.5em; 
   }
   
   .btn-campana {
     background: linear-gradient(135deg, #294197 0%, #3b5bc7 100%);
-    color:white;
-    padding:0.8em 1.5em; 
-    font-weight:bold;
-    border-radius:10px; 
-    text-decoration:none;
-    display:inline-flex; 
-    align-items:center; 
-    justify-content:center;
+    color: white;
+    padding: 1em 2.2em; 
+    font-weight: 700;
+    font-size: 1.05em;
+    border-radius: 50px; 
+    text-decoration: none;
+    display: inline-flex; 
+    align-items: center; 
+    justify-content: center;
     transition: all 0.3s ease; 
-    border:none; 
-    cursor:pointer;
-    box-shadow: 0 4px 15px rgba(41, 65, 151, 0.3);
-    border: 2px solid rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.3); 
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(41, 65, 151, 0.4);
     position: relative;
     overflow: hidden;
+    font-family: 'Montserrat', sans-serif;
   }
   
   .btn-campana::before {
@@ -293,68 +355,71 @@
   }
   
   .btn-campana:hover::before {
-    width: 300px;
-    height: 300px;
+    width: 350px;
+    height: 350px;
   }
   
   .btn-campana:hover { 
     background: linear-gradient(135deg, #3b5bc7 0%, #4d6dd8 100%);
-    transform: scale(1.05);
-    box-shadow: 0 6px 20px rgba(59, 91, 199, 0.5);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(59, 91, 199, 0.6);
+  }
+
+  .btn-campana:active {
+    transform: translateY(-1px);
   }
   
   .btn-campana.secundario {
     background: transparent;
     color: #ffffff;
-    border: 2px solid rgba(255, 255, 255, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.6);
   }
   
   .btn-campana.secundario:hover { 
-    background: rgba(255, 255, 255, 0.2);
-    border-color: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.9);
+    color: white;
   }
   
   .btn-campana i { 
-    margin-right:0.5em;
+    margin-right: 0.6em;
     position: relative;
     z-index: 1;
+    font-size: 1.2em;
   }
   
   .btn-accion {
-    padding: 0.5em 1em;
+    padding: 0.65em 1.3em;
     border: none;
     cursor: pointer;
     border-radius: 8px;
-    font-size: 0.8em;
+    font-size: 0.85em;
     transition: all 0.3s ease;
     font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
   }
   
   .btn-editar {
     background: linear-gradient(135deg, #3b5bc7 0%, #4d6dd8 100%);
     color: white;
-    box-shadow: 0 2px 10px rgba(59, 91, 199, 0.3);
+    box-shadow: 0 3px 12px rgba(59, 91, 199, 0.3);
+    margin-right: 0.5em;
   }
   
   .btn-editar:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 15px rgba(59, 91, 199, 0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 18px rgba(59, 91, 199, 0.5);
   }
   
   .btn-eliminar {
     background: linear-gradient(135deg, #c72c41 0%, #d64554 100%);
     color: white;
-    box-shadow: 0 2px 10px rgba(199, 44, 65, 0.3);
+    box-shadow: 0 3px 12px rgba(199, 44, 65, 0.3);
   }
   
   .btn-eliminar:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 15px rgba(199, 44, 65, 0.5);
-  }
-
-  @keyframes fadeIn { 
-    from {opacity:0; transform:translateY(-20px);} 
-    to {opacity:1; transform:translateY(0);} 
+    transform: translateY(-2px);
+    box-shadow: 0 5px 18px rgba(199, 44, 65, 0.5);
   }
 
   /* Modal */
@@ -366,136 +431,193 @@
     top: 0; 
     width: 100%; 
     height: 100%; 
-    background: rgba(26, 42, 94, 0.85);
-    backdrop-filter: blur(5px);
+    background: rgba(26, 42, 94, 0.9);
+    backdrop-filter: blur(8px);
     justify-content: center; 
-    align-items: center; 
+    align-items: center;
+    animation: fadeInModal 0.3s ease;
+  }
+
+  @keyframes fadeInModal {
+    from { opacity: 0; }
+    to { opacity: 1; }
   }
   
   .modal-content {
-    background: linear-gradient(135deg, #f0f4ff 0%, #e1e9ff 100%);
-    padding:2em; 
-    border-radius:15px;
-    max-width:500px; 
-    width:90%; 
-    position:relative;
+    background: linear-gradient(135deg, #f8fafe 0%, #edf3ff 100%);
+    padding: 2.5em; 
+    border-radius: 20px;
+    max-width: 550px; 
+    width: 90%; 
+    position: relative;
     max-height: 90vh; 
     overflow-y: auto;
-    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
-    border: 2px solid rgba(41, 65, 151, 0.2);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(59, 91, 199, 0.2);
+    animation: slideUp 0.3s ease;
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
   
   .modal-content h2 {
     color: #1a2a5e;
     margin-top: 0;
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 0.3em;
+  }
+
+  .modal-content h6 {
+    color: #5a7fc0;
+    margin-bottom: 1.5em;
+    font-weight: 400;
+    font-size: 0.95em;
+    line-height: 1.5;
   }
   
   .close { 
-    position:absolute; 
-    top:10px; 
-    right:15px; 
-    font-size:1.5em; 
-    cursor:pointer;
-    color: #294197;
+    position: absolute; 
+    top: 15px; 
+    right: 20px; 
+    font-size: 2em; 
+    cursor: pointer;
+    color: #5a7fc0;
     transition: all 0.3s ease;
+    line-height: 1;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
   }
   
   .close:hover {
     color: #1a2a5e;
-    transform: scale(1.2);
+    background: rgba(41, 65, 151, 0.1);
+    transform: rotate(90deg);
   }
   
   .modal-content input, 
   .modal-content textarea { 
-    width:100%; 
-    padding:0.8em; 
-    margin-bottom:1em; 
-    border:2px solid rgba(41, 65, 151, 0.2);
-    border-radius:8px; 
-    font-size:1em;
+    width: 100%; 
+    padding: 1em; 
+    margin-bottom: 1.2em; 
+    border: 2px solid rgba(41, 65, 151, 0.15);
+    border-radius: 10px; 
+    font-size: 1em;
     transition: all 0.3s ease;
     background: white;
+    font-family: 'Open Sans', sans-serif;
   }
   
   .modal-content input:focus,
   .modal-content textarea:focus {
     outline: none;
-    border-color: #294197;
-    box-shadow: 0 0 0 3px rgba(41, 65, 151, 0.1);
+    border-color: #3b5bc7;
+    box-shadow: 0 0 0 4px rgba(59, 91, 199, 0.1);
   }
   
   .modal-content textarea { 
-    resize:vertical; 
-    min-height:80px; 
+    resize: vertical; 
+    min-height: 100px; 
   }
   
   .mensaje-exito, 
   .mensaje-error { 
-    font-weight:bold; 
-    margin-top:1em; 
-    display:none;
-    padding: 1em;
-    border-radius: 8px;
+    font-weight: 600; 
+    margin-top: 1.2em; 
+    display: none;
+    padding: 1.2em;
+    border-radius: 10px;
+    text-align: center;
   }
   
   .mensaje-exito {
     background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
     color: #155724;
-    border: 1px solid #c3e6cb;
+    border: 2px solid #c3e6cb;
   }
   
   .mensaje-error {
     background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%);
     color: #721c24;
-    border: 1px solid #f5c6cb;
+    border: 2px solid #f5c6cb;
   }
   
   .form-group-flex {
     display: flex;
     align-items: flex-start;
-    gap: 0.5em;
-    margin-bottom: 1em;
+    gap: 0.7em;
+    margin-bottom: 1.5em;
   }
   
   .form-group-flex label {
-    color: #1a2a5e;
+    color: #2c3e50;
+    font-size: 0.9em;
+    line-height: 1.5;
+  }
+
+  .form-group-flex input[type="checkbox"] {
+    width: auto;
+    margin-top: 0.2em;
+    cursor: pointer;
   }
   
   .form-group-flex a {
-    color: #294197;
+    color: #3b5bc7;
     font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
   }
 
-  /* Panel administrador */
+  .form-group-flex a:hover {
+    color: #294197;
+    text-decoration: underline;
+  }
+
+  /* Panel de Administrador */
   .panel-admin { 
-    display:none; 
-    padding:2em; 
-    background: linear-gradient(135deg, #e1e9ff 0%, #f0f4ff 100%);
+    display: none; 
+    padding: 3em 2em; 
+    background: linear-gradient(135deg, #e8f0ff 0%, #f5f8ff 100%);
     min-height: 50vh;
   }
   
   .panel-admin h2 { 
-    margin-top:0;
+    margin-top: 0;
     color: #1a2a5e;
+    font-size: 2.2em;
+    font-weight: 700;
+    margin-bottom: 1.5em;
   }
   
   table { 
-    width:100%; 
+    width: 100%; 
     border-collapse: collapse; 
-    margin-top:1em;
+    margin-top: 1.5em;
     background: white;
-    border-radius: 10px;
+    border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(41, 65, 151, 0.15);
+    box-shadow: 0 6px 25px rgba(41, 65, 151, 0.15);
   }
   
   table, th, td { 
-    border:1px solid rgba(41, 65, 151, 0.2);
+    border: 1px solid rgba(41, 65, 151, 0.1);
   }
   
   th, td { 
-    padding:0.8em; 
-    text-align:left; 
+    padding: 1em; 
+    text-align: left; 
   }
   
   th {
@@ -505,95 +627,232 @@
     text-transform: uppercase;
     font-size: 0.85em;
     letter-spacing: 0.5px;
+    font-family: 'Montserrat', sans-serif;
   }
   
-  tr:nth-child(even) {
-    background: rgba(41, 65, 151, 0.05);
+  tbody tr {
+    transition: background-color 0.3s ease;
+  }
+
+  tbody tr:nth-child(even) {
+    background: rgba(41, 65, 151, 0.03);
   }
   
-  tr:hover {
-    background: rgba(41, 65, 151, 0.1);
+  tbody tr:hover {
+    background: rgba(41, 65, 151, 0.08);
   }
 
-  /* Estilos responsivos para el panel administrador */
-  @media (max-width: 768px) {
-    .panel-admin {
-      padding: 1em;
-    }
-    table {
-      font-size: 0.9em;
-      display: block;
-      overflow-x: auto;
-      white-space: nowrap;
-    }
-    th, td {
-      padding: 0.4em;
-    }
-    .carrusel-nav {
-      width: 35px;
-      height: 35px;
-      font-size: 1.1rem;
-    }
-    .testimonio-tarjeta {
-      min-width: 250px;
-      max-width: 250px;
-      margin: 0 10px;
-    }
-    .campana-padrinos h2 {
-      font-size: 1.6em;
-    }
-    .campana-padrinos p {
-      font-size: 1em;
-    }
+  /* Animaciones */
+  @keyframes fadeIn { 
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    } 
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    } 
   }
 
-  /* Estilo para hacer la barra de scroll más visible en Webkit (Chrome, Safari) */
+  /* Enlaces en texto */
+  a {
+    color: inherit;
+    transition: all 0.3s ease;
+  }
+
+  .botones-campana + .botones-campana a {
+    font-size: 0.95em;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s ease;
+  }
+
+  .botones-campana + .botones-campana a:hover {
+    border-bottom-color: currentColor;
+  }
+
+  /* Mejoras de Scrollbar */
   .modal-content::-webkit-scrollbar {
-    width: 8px;
+    width: 10px;
   }
+  
   .modal-content::-webkit-scrollbar-track {
     background: rgba(41, 65, 151, 0.1);
     border-radius: 10px;
   }
+  
   .modal-content::-webkit-scrollbar-thumb {
     background: linear-gradient(135deg, #294197, #3b5bc7);
     border-radius: 10px;
   }
+  
   .modal-content::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(135deg, #3b5bc7, #4d6dd8);
   }
-  
-  .testimonio-tarjeta img {
-    margin-top: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(41, 65, 151, 0.2);
+
+  /* Estilos Responsivos */
+  @media (max-width: 768px) {
+    .campana-padrinos {
+      padding: 3em 1.5em;
+    }
+
+    .campana-padrinos h2 {
+      font-size: 2em;
+    }
+    
+    .campana-padrinos p {
+      font-size: 1.1em;
+    }
+
+    .testimonios {
+      padding: 3em 1em;
+    }
+
+    .testimonios h2 {
+      font-size: 2em;
+    }
+
+    .carrusel-contenedor {
+      padding: 0 50px;
+    }
+
+    .carrusel-nav {
+      width: 40px;
+      height: 40px;
+      font-size: 1.2rem;
+    }
+    
+    .testimonio-tarjeta {
+      min-width: 280px;
+      max-width: 280px;
+      margin: 0 10px;
+      padding: 1.5rem;
+    }
+
+    .modal-content {
+      padding: 2em 1.5em;
+      max-height: 85vh;
+    }
+
+    .modal-content h2 {
+      font-size: 1.6em;
+    }
+
+    .panel-admin {
+      padding: 2em 1em;
+    }
+
+    .panel-admin h2 {
+      font-size: 1.8em;
+    }
+    
+    table {
+      font-size: 0.85em;
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    
+    th, td {
+      padding: 0.7em 0.5em;
+    }
+
+    .btn-campana {
+      padding: 0.9em 1.8em;
+      font-size: 1em;
+    }
+
+    .botones-campana {
+      gap: 1em;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .campana-padrinos h2 {
+      font-size: 1.7em;
+    }
+
+    .btn-accion {
+      padding: 0.5em 0.8em;
+      font-size: 0.75em;
+    }
+
+    .carrusel-contenedor {
+      padding: 0 45px;
+    }
+
+    .testimonio-tarjeta {
+      min-width: 250px;
+      max-width: 250px;
+    }
+  }
+
+  /* Loader */
+  .loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255,255,255,.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s ease-in-out infinite;
+  }
+
+  @keyframes spin {
+    to { transform: rotate(360deg); }
   }
 </style>
 </head>
 <body>
 
+  <!-- Banner Principal -->
   <section class="campana-padrinos">
     <div class="contenedor-campana">
       <h2>Conviértete en Padrino de un Misionero</h2>
       <p>Tu generosidad puede llevar el Evangelio y la ayuda a donde más se necesita. Sé parte del cambio.</p>
-      <p>-Lalo Peralta <br>Promotor autorizado de Misioneros de Guadalupe</p>
+      <p style="margin-bottom: 2em;"><strong>-Lalo Peralta</strong><br>Promotor autorizado de Misioneros de Guadalupe</p>
+      
+      <!-- Video de TikTok -->
+      <div style="margin: 2em auto; max-width: 605px;">
+        <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@laloperalta77/video/7521638141946629394" data-video-id="7521638141946629394" style="max-width: 605px; min-width: 325px; margin: 0 auto;">
+          <section>
+            <a target="_blank" title="@laloperalta77" href="https://www.tiktok.com/@laloperalta77?refer=embed">@laloperalta77</a>
+            <a title="creatorsearchinsights" target="_blank" href="https://www.tiktok.com/tag/creatorsearchinsights?refer=embed">#creatorsearchinsights</a>
+            <a title="dios" target="_blank" href="https://www.tiktok.com/tag/dios?refer=embed">#Dios</a>
+            Dios, los que no lo conocen y los Misioneros de Guadalupe
+            <a title="paratiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii" target="_blank" href="https://www.tiktok.com/tag/paratiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii?refer=embed">#paratiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii</a>
+            <a title="fe" target="_blank" href="https://www.tiktok.com/tag/fe?refer=embed">#Fe</a>
+            <a title="viralvideos" target="_blank" href="https://www.tiktok.com/tag/viralvideos?refer=embed">#viralvideos</a>
+            <a title="iglesia" target="_blank" href="https://www.tiktok.com/tag/iglesia?refer=embed">#iglesia</a>
+            <a title="cristianos" target="_blank" href="https://www.tiktok.com/tag/cristianos?refer=embed">#cristianos</a>
+            <a target="_blank" title="♬ Eternity - Instrumental Worship and Prayer" href="https://www.tiktok.com/music/Eternity-7262431348681279489?refer=embed">♬ Eternity - Instrumental Worship and Prayer</a>
+          </section>
+        </blockquote>
+        <script async src="https://www.tiktok.com/embed.js"></script>
+      </div>
+      
       <div class="botones-campana">
         <a href="https://wa.me/526393992678?text=Hola,%20quiero%20información%20sobre%20cómo%20convertirme%20en%20padrino" 
            class="btn-campana" target="_blank" rel="noopener noreferrer">
           <i class="fab fa-whatsapp"></i> Quiero información por WhatsApp
         </a>
 
-    <a href="https://www.misionerosdeguadalupe.org" 
+        <a href="https://www.misionerosdeguadalupe.org" 
            class="btn-campana secundario" target="_blank" rel="noopener noreferrer">
-          Conocer Más
+          <i class="fas fa-info-circle"></i> Conocer Más
         </a>
       </div>
-      <div class="botones-campana" style="margin-top: 0.5em;">
-      <a href="faq.html" target="_blank" rel="noopener noreferrer" style="color: #ffffff; font-size: 0.9em;">Preguntas Frecuentes</a>
+      
+      <div class="botones-campana" style="margin-top: 1em;">
+        <a href="faq.html" target="_blank" rel="noopener noreferrer" 
+           style="color: #ffffff; font-size: 0.95em; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.5); padding-bottom: 2px;">
+          <i class="fas fa-question-circle"></i> Preguntas Frecuentes
+        </a>
       </div>
     </div>
   </section>
 
+  <!-- Sección de Testimonios -->
   <section class="testimonios">
     <div class="contenedor-campana">
       <h2>Historias que inspiran</h2>
@@ -604,40 +863,76 @@
         </button>
         
         <div class="carrusel">
+          <!-- Testimonio 1 -->
           <div class="testimonio-tarjeta">
             <p>"Cuando los misioneros llegaron a mi aldea en la Sierra Tarahumara, no traían oro ni medicinas... pero traían algo que curó mi alma: tiempo, escucha y compañía. Antes, nadie venía. Ahora sé que Dios sí llega, incluso en rarámuri."</p>
             <footer>— Damián, joven de Norogachi, Chihuahua.
-              <span class="testimonio-fuente"><i class="fas fa-map-marker-alt testimonio-icono"></i>Inspirado en: La apertura de misiones de Misioneros de Guadalupe en la Sierra Tarahumara (2024).</span>
-              <span class="testimonio-fuente"><i class="fas fa-link testimonio-icono"></i>Fuente: <a href="https://yucatan.com.mx/mexico/75-anos-de-obras-misioneros-de-guadalupe/" class="testimonio-enlace" target="_blank">Yucatán.com.mx - 75 años de obras</a></span>
+              <span class="testimonio-fuente">
+                <i class="fas fa-map-marker-alt testimonio-icono"></i>Inspirado en: La apertura de misiones de Misioneros de Guadalupe en la Sierra Tarahumara (2024).
+              </span>
+              <span class="testimonio-fuente">
+                <i class="fas fa-link testimonio-icono"></i>Fuente: 
+                <a href="https://yucatan.com.mx/mexico/75-anos-de-obras-misioneros-de-guadalupe/" 
+                   class="testimonio-enlace" target="_blank" rel="noopener noreferrer">
+                  Yucatán.com.mx - 75 años de obras
+                </a>
+              </span>
             </footer>
-            <img src="./1.png" alt="imagen relacionada" style="width: 100%; height: auto; border-radius: 8px;">
+            <img src="./1.png" alt="Misioneros en la Sierra Tarahumara" loading="lazy">
           </div>
           
+          <!-- Testimonio 2 -->
           <div class="testimonio-tarjeta">
             <p>"Yo no entendía por qué ese sacerdote mexicano dejó todo para estar aquí, en mi aldea de Indonesia. Hasta que lo vi cargar sacos de arroz para los más viejos sin que nadie se lo pidiera. Ese día entendí el Evangelio sin palabras."</p>
             <footer>— Rini, joven catequista en la isla de Flores.
-              <span class="testimonio-fuente"><i class="fas fa-map-marker-alt testimonio-icono"></i>Inspirado en: Misión abierta por los Misioneros de Guadalupe en Indonesia en 2024.</span>
-              <span class="testimonio-fuente"><i class="fas fa-link testimonio-icono"></i>Fuente: <a href="https://yucatan.com.mx/mexico/misioneros-de-guadalupe-abren-mision-en-indonesia/" class="testimonio-enlace" target="_blank">Yucatán.com.mx - Nuevas misiones</a></span>
+              <span class="testimonio-fuente">
+                <i class="fas fa-map-marker-alt testimonio-icono"></i>Inspirado en: Misión abierta por los Misioneros de Guadalupe en Indonesia en 2024.
+              </span>
+              <span class="testimonio-fuente">
+                <i class="fas fa-link testimonio-icono"></i>Fuente: 
+                <a href="https://yucatan.com.mx/mexico/misioneros-de-guadalupe-abren-mision-en-indonesia/" 
+                   class="testimonio-enlace" target="_blank" rel="noopener noreferrer">
+                  Yucatán.com.mx - Nuevas misiones
+                </a>
+              </span>
             </footer>
-            <img src="./2.png" alt="imagen relacionada" style="width: 100%; height: auto; border-radius: 8px;">
+            <img src="./2.png" alt="Misioneros en Indonesia" loading="lazy">
           </div>
           
+          <!-- Testimonio 3 -->
           <div class="testimonio-tarjeta">
             <p>"Nos dijeron que cada globo representaba un continente. Oramos por niños que no conocemos, pero que también necesitan a Dios. Yo no sabía que con mi oración puedo ayudar. Ahora sé que puedo ser misionera desde mi ciudad."</p>
             <footer>— Andrea, 9 años, Querétaro.
-              <span class="testimonio-fuente"><i class="fas fa-map-marker-alt testimonio-icono"></i>Inspirado en: Encuentro Infantil Misionero de Querétaro con los Misioneros de Guadalupe.</span>
-              <span class="testimonio-fuente"><i class="fas fa-link testimonio-icono"></i>Fuente: <a href="https://diocesisdequeretaro.com.mx/encuentro-infantil-missionero/" class="testimonio-enlace" target="_blank">Diócesis de Querétaro</a></span>
+              <span class="testimonio-fuente">
+                <i class="fas fa-map-marker-alt testimonio-icono"></i>Inspirado en: Encuentro Infantil Misionero de Querétaro con los Misioneros de Guadalupe.
+              </span>
+              <span class="testimonio-fuente">
+                <i class="fas fa-link testimonio-icono"></i>Fuente: 
+                <a href="https://diocesisdequeretaro.com.mx/encuentro-infantil-missionero/" 
+                   class="testimonio-enlace" target="_blank" rel="noopener noreferrer">
+                  Diócesis de Querétaro
+                </a>
+              </span>
             </footer>
-            <img src="./3.png" alt="imagen relacionada" style="width: 100%; height: auto; border-radius: 8px;">
+            <img src="./3.png" alt="Encuentro Infantil Misionero" loading="lazy">
           </div>
           
+          <!-- Testimonio 4 -->
           <div class="testimonio-tarjeta">
             <p>"En 25 años de misión, lo más difícil no ha sido dejar mi país, sino dejar de amar. Cada rostro que he conocido es un recordatorio de que Dios sigue viajando con nosotros."</p>
             <footer>— P. Antonio del Carmen Camacho Muñoz, Misionero de Guadalupe.
-              <span class="testimonio-fuente"><i class="fas fa-map-marker-alt testimonio-icono"></i>Basado en: Celebración de los 25 años de entrega misionera del P. Antonio.</span>
-              <span class="testimonio-fuente"><i class="fas fa-link testimonio-icono"></i>Fuente: <a href="https://misionerosdeguadalupe.org/25-anos-del-padre-antonio-camacho/" class="testimonio-enlace" target="_blank">misionerosdeguadalupe.org</a></span>
+              <span class="testimonio-fuente">
+                <i class="fas fa-map-marker-alt testimonio-icono"></i>Basado en: Celebración de los 25 años de entrega misionera del P. Antonio.
+              </span>
+              <span class="testimonio-fuente">
+                <i class="fas fa-link testimonio-icono"></i>Fuente: 
+                <a href="https://misionerosdeguadalupe.org/25-anos-del-padre-antonio-camacho/" 
+                   class="testimonio-enlace" target="_blank" rel="noopener noreferrer">
+                  misionerosdeguadalupe.org
+                </a>
+              </span>
             </footer>
-            <img src="./4.png" alt="imagen relacionada" style="width: 100%; height: auto; border-radius: 8px;">
+            <img src="./4.png" alt="Padre Antonio Camacho" loading="lazy">
           </div>
         </div>
         
@@ -646,96 +941,128 @@
         </button>
       </div>
       
+      <!-- Controles del Carrusel -->
       <div class="carrusel-controls">
-        <button class="carrusel-control active" data-index="0"></button>
-        <button class="carrusel-control" data-index="1"></button>
-        <button class="carrusel-control" data-index="2"></button>
-        <button class="carrusel-control" data-index="3"></button>
+        <button class="carrusel-control active" data-index="0" aria-label="Ver testimonio 1"></button>
+        <button class="carrusel-control" data-index="1" aria-label="Ver testimonio 2"></button>
+        <button class="carrusel-control" data-index="2" aria-label="Ver testimonio 3"></button>
+        <button class="carrusel-control" data-index="3" aria-label="Ver testimonio 4"></button>
       </div>
     </div>
 
-    <div  class="botones-campana">
-          <a href="https://wa.me/526393992678?text=Hola,%20quiero%20información%20sobre%20cómo%20convertirme%20en%20padrino" 
-           class="btn-campana" target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-whatsapp"></i> Quiero información por WhatsApp
-          </a>
+    <!-- Botones de Acción -->
+    <div class="botones-campana" style="margin-top: 3em;">
+      <a href="https://wa.me/526393992678?text=Hola,%20quiero%20información%20sobre%20cómo%20convertirme%20en%20padrino" 
+         class="btn-campana" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i> Quiero información por WhatsApp
+      </a>
     </div>
 
-    <div class="botones-campana" style="margin-top: 0.5em;">
-      <a href="faq.html" target="_blank" rel="noopener noreferrer" style="color: #1a2a5e; font-size: 0.9em;">Preguntas Frecuentes</a>
-      </div>
-
+    <div class="botones-campana" style="margin-top: 1em;">
+      <a href="faq.html" target="_blank" rel="noopener noreferrer" 
+         style="color: #1a2a5e; font-size: 0.95em; text-decoration: none; border-bottom: 1px solid rgba(26, 42, 94, 0.3); padding-bottom: 2px;">
+        <i class="fas fa-question-circle"></i> Preguntas Frecuentes
+      </a>
+    </div>
   </section>
 
+  <!-- Modal Formulario -->
   <div class="modal" id="modal-formulario">
     <div class="modal-content">
       <span class="close" id="cerrar-modal">&times;</span>
-      <h2>Deja tus datos para contactarte</h2>
-      <h6>En caso de que aceptes una visita deja tu direccion en la seccion de comentarios con alguna referencia</h6>
+      <h2>Deja tus datos</h2>
+      <h6>En caso de que aceptes una visita, deja tu dirección en la sección de comentarios con alguna referencia</h6>
       <form id="form-padrinos">
-        <input type="text" name="nombre" placeholder="Tu nombre" required>
-        <input type="email" name="correo" placeholder="Tu correo" required>
+        <input type="text" name="nombre" placeholder="Tu nombre completo" required>
+        <input type="email" name="correo" placeholder="Tu correo electrónico" required>
         <input type="tel" name="telefono" placeholder="Tu teléfono" required>
         <textarea name="mensaje" placeholder="Comentario (opcional)"></textarea>
         <div class="form-group-flex">
-            <input type="checkbox" id="aceptar-terminos" required style="width: auto; margin-top: 0.2em;">
-            <label for="aceptar-terminos" style="font-size: 0.9em;">
-                Acepto el <a href="terminos.html" target="_blank" rel="noopener noreferrer">Aviso de Privacidad</a>.
-            </label>
+          <input type="checkbox" id="aceptar-terminos" required>
+          <label for="aceptar-terminos">
+            Acepto el <a href="terminos.html" target="_blank" rel="noopener noreferrer">Aviso de Privacidad</a>.
+          </label>
         </div>
-        <button type="submit" class="btn-campana">Enviar</button>
+        <button type="submit" class="btn-campana" style="width: 100%;">
+          <i class="fas fa-paper-plane"></i> Enviar
+        </button>
       </form>
-      <p class="mensaje-exito" id="mensaje-exito">¡Gracias! Te contactaremos pronto.</p>
+      <p class="mensaje-exito" id="mensaje-exito">
+        <i class="fas fa-check-circle"></i> ¡Gracias! Te contactaremos pronto.
+      </p>
     </div>
   </div>
 
+  <!-- Modal Login Admin -->
   <div class="modal" id="modal-login">
     <div class="modal-content">
       <span class="close" id="cerrar-login">&times;</span>
       <h2>Acceso Administrador</h2>
       <form id="form-login">
-        <input type="email" name="correo" placeholder="Correo" required>
+        <input type="email" name="correo" placeholder="Correo electrónico" required>
         <input type="password" name="password" placeholder="Contraseña" required>
-        <button type="submit" class="btn-campana">Ingresar</button>
+        <button type="submit" class="btn-campana" style="width: 100%;">
+          <i class="fas fa-sign-in-alt"></i> Ingresar
+        </button>
       </form>
-      <p class="mensaje-error" id="mensaje-error">Correo o contraseña incorrectos</p>
+      <p class="mensaje-error" id="mensaje-error">
+        <i class="fas fa-exclamation-circle"></i> Correo o contraseña incorrectos
+      </p>
     </div>
   </div>
 
+  <!-- Modal Editar -->
   <div class="modal" id="modal-editar">
     <div class="modal-content">
       <span class="close" id="cerrar-editar">&times;</span>
       <h2>Editar Prospecto</h2>
       <form id="form-editar">
         <input type="hidden" id="edit-key">
-        <input type="text" name="nombre" id="edit-nombre" placeholder="Tu nombre" required>
-        <input type="email" name="correo" id="edit-correo" placeholder="Tu correo" required>
-        <input type="tel" name="telefono" id="edit-telefono" placeholder="Tu teléfono" required>
+        <input type="text" name="nombre" id="edit-nombre" placeholder="Nombre completo" required>
+        <input type="email" name="correo" id="edit-correo" placeholder="Correo electrónico" required>
+        <input type="tel" name="telefono" id="edit-telefono" placeholder="Teléfono" required>
         <textarea name="mensaje" id="edit-mensaje" placeholder="Comentario (opcional)"></textarea>
-        <button type="submit" class="btn-campana">Guardar Cambios</button>
+        <button type="submit" class="btn-campana" style="width: 100%;">
+          <i class="fas fa-save"></i> Guardar Cambios
+        </button>
       </form>
-      <p class="mensaje-exito" id="mensaje-exito-editar">¡Cambios guardados con éxito!</p>
+      <p class="mensaje-exito" id="mensaje-exito-editar">
+        <i class="fas fa-check-circle"></i> ¡Cambios guardados con éxito!
+      </p>
     </div>
   </div>
 
+  <!-- Panel Admin -->
   <section class="panel-admin" id="panel-admin">
-    <h2>Panel de Administrador</h2>
-    <button id="btn-logout" class="btn-campana secundario">Cerrar sesión</button>
-    <table id="tabla-prospectos">
-      <thead>
-        <tr><th>Nombre</th><th>Correo</th><th>Teléfono</th><th>Mensaje</th><th>Fecha</th><th>Acciones</th></tr>
-      </thead>
-      <tbody></tbody>
-    </table>
+    <h2><i class="fas fa-users-cog"></i> Panel de Administrador</h2>
+    <button id="btn-logout" class="btn-campana secundario" style="background: white; color: #294197; border-color: #294197;">
+      <i class="fas fa-sign-out-alt"></i> Cerrar sesión
+    </button>
+    <div style="overflow-x: auto;">
+      <table id="tabla-prospectos">
+        <thead>
+          <tr>
+            <th><i class="fas fa-user"></i> Nombre</th>
+            <th><i class="fas fa-envelope"></i> Correo</th>
+            <th><i class="fas fa-phone"></i> Teléfono</th>
+            <th><i class="fas fa-comment"></i> Mensaje</th>
+            <th><i class="fas fa-calendar"></i> Fecha</th>
+            <th><i class="fas fa-cog"></i> Acciones</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
   </section>
 
+  <!-- Scripts de Firebase -->
   <script type="module">
-    // 1. IMPORTACIONES: Todas las funciones necesarias de Firebase en una sola línea.
+    // 1. IMPORTACIONES
     import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
     import { getDatabase, ref, push, onValue, remove, update } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js";
     import { getAuth, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
 
-    // 2. CONFIGURACIÓN DE FIREBASE Y VARIABLES GLOBALES
+    // 2. CONFIGURACIÓN DE FIREBASE
     const firebaseConfig = {
       apiKey: "AIzaSyCO3FRhSwH1xLABwVGFSd_YYrbFp0lQEv8",
       authDomain: "pagelalo-1b210.firebaseapp.com",
@@ -749,23 +1076,25 @@
     const database = getDatabase(app);
     const auth = getAuth(app);
 
-    // 3. VARIABLES Y EVENTOS DE LOS MODALES Y FORMULARIOS
-    // Modal Formulario
+    // 3. VARIABLES Y EVENTOS DE MODALES
     const modal = document.getElementById('modal-formulario');
     const btnMostrar = document.getElementById('btn-mostrar-formulario');
     const cerrarModal = document.getElementById('cerrar-modal');
+    
     if (btnMostrar) {
       btnMostrar.addEventListener('click', () => {
         modal.style.display = 'flex';
         enviarAltura();
       });
     }
+    
     if (cerrarModal) {
       cerrarModal.addEventListener('click', () => {
         modal.style.display = 'none';
         enviarAltura();
       });
     }
+    
     window.addEventListener('click', (e) => { 
       if (e.target == modal) {
         modal.style.display = 'none'; 
@@ -773,29 +1102,53 @@
       }
     });
 
-    // Guardar datos en Firebase
+    // 4. GUARDAR DATOS EN FIREBASE
     const form = document.getElementById('form-padrinos');
     const mensajeExito = document.getElementById('mensaje-exito');
+    
     if (form) {
       form.addEventListener('submit', (e) => {
         e.preventDefault();
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const originalText = submitBtn.innerHTML;
+        submitBtn.innerHTML = '<span class="loading"></span> Enviando...';
+        submitBtn.disabled = true;
+
         const datos = {
           nombre: form.nombre.value,
           correo: form.correo.value,
           telefono: form.telefono.value,
           mensaje: form.mensaje.value,
-          fecha: new Date().toLocaleString()
+          fecha: new Date().toLocaleString('es-MX', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit'
+          })
         };
+        
         push(ref(database, 'padrinos'), datos)
           .then(() => { 
             mensajeExito.style.display = 'block'; 
-            form.reset(); 
+            form.reset();
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+            setTimeout(() => {
+              mensajeExito.style.display = 'none';
+              modal.style.display = 'none';
+              enviarAltura();
+            }, 3000);
           })
-          .catch(err => alert('Error: ' + err));
+          .catch(err => {
+            alert('Error al enviar: ' + err.message);
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+          });
       });
     }
 
-    // Modal Login Admin
+    // 5. MODAL LOGIN ADMIN
     const modalLogin = document.getElementById('modal-login');
     const cerrarLogin = document.getElementById('cerrar-login');
     const tituloBanner = document.querySelector('.campana-padrinos h2');
@@ -815,12 +1168,14 @@
         }
       });
     }
+    
     if (cerrarLogin) {
       cerrarLogin.addEventListener('click', () => {
         modalLogin.style.display = 'none';
         enviarAltura();
       });
     }
+    
     window.addEventListener('click', (e) => { 
       if (e.target == modalLogin) {
         modalLogin.style.display = 'none';
@@ -828,7 +1183,7 @@
       }
     });
 
-    // Login con Firebase Authentication
+    // 6. LOGIN CON FIREBASE
     if (formLogin) {
       formLogin.addEventListener('submit', async (e) => {
         e.preventDefault();
@@ -848,7 +1203,7 @@
       });
     }
 
-    // Logout admin
+    // 7. LOGOUT ADMIN
     const btnLogout = document.getElementById('btn-logout');
     if (btnLogout) {
       btnLogout.addEventListener('click', async () => {
@@ -863,25 +1218,35 @@
       });
     }
 
-    // 4. FUNCIONES DEL PANEL DE ADMINISTRACIÓN
+    // 8. MOSTRAR DATOS EN PANEL ADMIN
     function mostrarDatosAdmin() {
       const tablaBody = document.querySelector('#tabla-prospectos tbody');
       const padrinosRef = ref(database, 'padrinos');
+      
       onValue(padrinosRef, snapshot => {
         tablaBody.innerHTML = '';
+        if (!snapshot.exists()) {
+          tablaBody.innerHTML = '<tr><td colspan="6" style="text-align: center; color: #999; padding: 2em;">No hay registros aún</td></tr>';
+          return;
+        }
+        
         snapshot.forEach(child => {
           const key = child.key;
           const data = child.val();
           const tr = document.createElement('tr');
           tr.innerHTML = `
-            <td>${data.nombre}</td>
+            <td><strong>${data.nombre}</strong></td>
             <td>${data.correo}</td>
             <td>${data.telefono}</td>
-            <td>${data.mensaje}</td>
+            <td>${data.mensaje || '<em style="color: #999;">Sin mensaje</em>'}</td>
             <td>${data.fecha}</td>
-            <td>
-              <button class="btn-accion btn-editar" data-key="${key}">Editar</button>
-              <button class="btn-accion btn-eliminar" data-key="${key}">Eliminar</button>
+            <td style="white-space: nowrap;">
+              <button class="btn-accion btn-editar" data-key="${key}">
+                <i class="fas fa-edit"></i> Editar
+              </button>
+              <button class="btn-accion btn-eliminar" data-key="${key}">
+                <i class="fas fa-trash"></i> Eliminar
+              </button>
             </td>
           `;
           tablaBody.appendChild(tr);
@@ -890,34 +1255,31 @@
       });
     }
 
-    // 5. LÓGICA DE EDICIÓN AND ELIMINACIÓN
-    // Modal de edición
+    // 9. MODAL DE EDICIÓN
     const modalEditar = document.getElementById('modal-editar');
     const cerrarEditar = document.getElementById('cerrar-editar');
     const formEditar = document.getElementById('form-editar');
     const mensajeExitoEditar = document.getElementById('mensaje-exito-editar');
 
-    // Abrir el modal de edición y llenar el formulario
     document.addEventListener('click', (e) => {
-      if (e.target.classList.contains('btn-editar')) {
-        const key = e.target.dataset.key;
+      if (e.target.classList.contains('btn-editar') || e.target.closest('.btn-editar')) {
+        const btn = e.target.classList.contains('btn-editar') ? e.target : e.target.closest('.btn-editar');
+        const key = btn.dataset.key;
         const padrinoRef = ref(database, `padrinos/${key}`);
+        
         onValue(padrinoRef, (snapshot) => {
           const data = snapshot.val();
           document.getElementById('edit-key').value = key;
           document.getElementById('edit-nombre').value = data.nombre;
           document.getElementById('edit-correo').value = data.correo;
           document.getElementById('edit-telefono').value = data.telefono;
-          document.getElementById('edit-mensaje').value = data.mensaje;
+          document.getElementById('edit-mensaje').value = data.mensaje || '';
           modalEditar.style.display = 'flex';
           enviarAltura();
-        }, {
-          onlyOnce: true
-        });
+        }, { onlyOnce: true });
       }
     });
 
-    // Enviar formulario de edición
     if (formEditar) {
       formEditar.addEventListener('submit', (e) => {
         e.preventDefault();
@@ -943,10 +1305,26 @@
       });
     }
 
-    // Lógica de eliminación
+    if (cerrarEditar) {
+      cerrarEditar.addEventListener('click', () => {
+        modalEditar.style.display = 'none';
+        enviarAltura();
+      });
+    }
+    
+    window.addEventListener('click', (e) => {
+      if (e.target == modalEditar) {
+        modalEditar.style.display = 'none';
+        enviarAltura();
+      }
+    });
+
+    // 10. ELIMINAR REGISTRO
     document.addEventListener('click', (e) => {
-      if (e.target.classList.contains('btn-eliminar')) {
-        const key = e.target.dataset.key;
+      if (e.target.classList.contains('btn-eliminar') || e.target.closest('.btn-eliminar')) {
+        const btn = e.target.classList.contains('btn-eliminar') ? e.target : e.target.closest('.btn-eliminar');
+        const key = btn.dataset.key;
+        
         if (confirm('¿Estás seguro de que quieres eliminar este registro?')) {
           const padrinoRef = ref(database, `padrinos/${key}`);
           remove(padrinoRef)
@@ -960,24 +1338,10 @@
         }
       }
     });
-
-    // Cierre del modal de edición
-    if (cerrarEditar) {
-      cerrarEditar.addEventListener('click', () => {
-        modalEditar.style.display = 'none';
-        enviarAltura();
-      });
-    }
-    window.addEventListener('click', (e) => {
-      if (e.target == modalEditar) {
-        modalEditar.style.display = 'none';
-        enviarAltura();
-      }
-    });
   </script>
 
+  <!-- Script del Carrusel -->
   <script>
-    // Funcionalidad del carrusel
     document.addEventListener('DOMContentLoaded', function() {
       const carrusel = document.querySelector('.carrusel');
       const cards = document.querySelectorAll('.testimonio-tarjeta');
@@ -985,16 +1349,16 @@
       const nextBtn = document.querySelector('.carrusel-next');
       const controls = document.querySelectorAll('.carrusel-control');
       
-      let currentIndex = 0;
-      const cardWidth = cards[0].offsetWidth + 30; // Ancho de la card + margen
-      let startX, endX; // Variables para el control táctil
+      if (!carrusel || cards.length === 0) return;
 
-      // Función para mover el carrusel
+      let currentIndex = 0;
+      const cardWidth = cards[0].offsetWidth + 30;
+      let startX, endX;
+
       function moveCarousel(index) {
         currentIndex = index;
         carrusel.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
         
-        // Actualizar controles
         controls.forEach((control, i) => {
           if (i === currentIndex) {
             control.classList.add('active');
@@ -1004,7 +1368,6 @@
         });
       }
       
-      // Event listeners para los botones de navegación
       if (prevBtn) {
         prevBtn.addEventListener('click', () => {
           let prevIndex = (currentIndex - 1 + cards.length) % cards.length;
@@ -1019,14 +1382,13 @@
         });
       }
       
-      // Event listeners para los controles
       controls.forEach((control, index) => {
         control.addEventListener('click', () => {
           moveCarousel(index);
         });
       });
       
-      // Lógica para deslizar con el dedo en dispositivos táctiles
+      // Soporte táctil
       carrusel.addEventListener('touchstart', (e) => {
         startX = e.touches[0].clientX;
       });
@@ -1037,28 +1399,40 @@
       });
 
       function handleSwipe() {
-        const swipeThreshold = 50; // Mínimo de píxeles para considerar un deslizamiento
+        const swipeThreshold = 50;
         
         if (startX - endX > swipeThreshold) {
-          // Deslizamiento a la izquierda - siguiente
           let nextIndex = (currentIndex + 1) % cards.length;
           moveCarousel(nextIndex);
         } else if (endX - startX > swipeThreshold) {
-          // Deslizamiento a la derecha - anterior
           let prevIndex = (currentIndex - 1 + cards.length) % cards.length;
           moveCarousel(prevIndex);
         }
       }
+
+      // Auto-ajustar al cambiar tamaño de ventana
+      window.addEventListener('resize', () => {
+        const newCardWidth = cards[0].offsetWidth + 30;
+        carrusel.style.transform = `translateX(-${currentIndex * newCardWidth}px)`;
+      });
     });
 
     function enviarAltura() {
-      const altura = document.body.scrollHeight;
-      window.parent.postMessage({ height: altura }, "*");
+      setTimeout(() => {
+        const altura = document.body.scrollHeight;
+        window.parent.postMessage({ height: altura }, "*");
+      }, 100);
     }
 
-    // Enviar altura al cargar y al cambiar tamaño
     window.addEventListener('load', enviarAltura);
     window.addEventListener('resize', enviarAltura);
+
+    const observer = new MutationObserver(enviarAltura);
+    observer.observe(document.body, { 
+      childList: true, 
+      subtree: true, 
+      attributes: true 
+    });
   </script>
 </body>
 </html>
