@@ -142,6 +142,145 @@ body {
     }
 }
 
+
+
+
+
+
+
+
+ /*radio guadalupana*/
+
+
+
+
+
+
+
+ /* Contenedor principal para centrar la card en la pantalla */
+.main-container {
+    display: flex;
+    justify-content: center; /* Centrado horizontal */
+    align-items: center;     /* Centrado vertical (opcional) */
+    padding: 40px 20px;      /* Espacio alrededor para que no toque los bordes */
+    width: 100%;
+}
+
+.radio-guadalupana-card {
+    width: 100%;
+    max-width: 380px;        /* Ancho ideal para que se vea profesional */
+    background: #ffffff;
+    border-radius: 24px;     /* Bordes más redondeados para un look moderno */
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15); /* Sombra más profunda y suave */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Borde sutil */
+    transition: transform 0.3s ease; /* Efecto amigable al pasar el mouse */
+}
+
+/* Efecto sutil al pasar el mouse (moderno) */
+.radio-guadalupana-card:hover {
+    transform: translateY(-5px);
+}
+
+.clipping-container {
+    width: 100%;
+    height: 480px; /* Ajustado para que se vea bien el Top 10 */
+    position: relative;
+    overflow: hidden;
+    background: #1a1a1a; /* Fondo oscuro para que combine con el reproductor */
+}
+
+.clipping-container iframe {
+    position: absolute;
+    width: 1200px;
+    height: 2000px;
+    top: -385px;   /* Tu ajuste perfecto */
+    left: -48px;   /* Tu ajuste perfecto */
+    border: none;
+}
+
+.radio-info {
+    padding: 20px;
+    background: #ffffff;
+    text-align: center; /* Texto centrado para mayor armonía */
+}
+
+.radio-info h4 {
+    margin: 0;
+    color: #4c1d95; /* Morado que combina con tu header */
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.radio-info p {
+    margin: 8px 0 0;
+    color: #6b7280;
+    font-size: 0.9rem;
+}
+
+
+
+
+
+
+
+
+.radio-guadalupana-card {
+    width: 350px; /* Ancho de tu tarjeta */
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border: 1px solid #eee;
+    font-family: sans-serif;
+}
+
+.clipping-container {
+    width: 100%;
+    height: 400px; /* Ajusta esta altura para ver más o menos canciones */
+    position: relative;
+    overflow: hidden;
+}
+
+.clipping-container iframe {
+    position: absolute;
+    width: 1200px; /* Mantenemos el ancho para la versión de escritorio */
+    height: 2000px;
+    
+    /* AJUSTE FINAL */
+    top: -310px;   /* Aumentamos de -360px a -385px para que suba más la página */
+    left: -48px;   /* Ajuste fino para centrar el borde izquierdo */
+    
+    border: none;
+    pointer-events: auto;
+}
+
+.radio-info {
+    padding: 15px;
+    text-align: left;
+}
+
+.radio-info h4 {
+    margin: 0;
+    color: #5d3fd3; /* Un color moderno para el título */
+    font-size: 1.1rem;
+}
+
+.radio-info p {
+    margin: 5px 0 0;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+
+
+
+
+
+
+
+
+
 /* Hero section */
 .hero {
     width: 100%;
