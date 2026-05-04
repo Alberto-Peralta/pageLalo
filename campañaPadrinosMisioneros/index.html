@@ -230,19 +230,105 @@
     color: #294197;
   }
   
+  /* ESTILOS MEJORADOS PARA LAS IMÁGENES */
+  .testimonio-tarjeta .img-container {
+    margin-top: 1.5rem;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(135deg, #f0f4ff, #e8edf8);
+    cursor: pointer;
+  }
+
   .testimonio-tarjeta img {
-    margin-top: 1.2rem;
-    border-radius: 12px;
-    box-shadow: 0 6px 20px rgba(41, 65, 151, 0.2);
     width: 100%;
     height: auto;
-    transition: transform 0.3s ease;
+    min-height: 180px;
+    max-height: 220px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    filter: brightness(0.98) contrast(1.02);
   }
 
   .testimonio-tarjeta:hover img {
-    transform: scale(1.02);
+    transform: scale(1.05);
+    filter: brightness(1.02) contrast(1.05);
   }
-  
+
+  /* Overlay de información en imagen */
+  .img-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(26, 42, 94, 0.85), transparent);
+    padding: 20px 12px 10px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    text-align: center;
+  }
+
+  .testimonio-tarjeta:hover .img-overlay {
+    transform: translateY(0);
+  }
+
+  .img-overlay span {
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+
+  /* Badge de ubicación */
+  .img-location-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(26, 42, 94, 0.85);
+    backdrop-filter: blur(4px);
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    color: white;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    z-index: 2;
+    opacity: 0;
+    transform: translateX(10px);
+    transition: all 0.3s ease;
+  }
+
+  .testimonio-tarjeta:hover .img-location-badge {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .img-location-badge i {
+    font-size: 0.65rem;
+  }
+
+  /* Efecto de carga de imágenes */
+  .testimonio-tarjeta img {
+    opacity: 0;
+    animation: fadeInImage 0.6s ease forwards;
+  }
+
+  @keyframes fadeInImage {
+    from {
+      opacity: 0;
+      transform: scale(0.98);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
   /* Controles del Carrusel */
   .carrusel-controls {
     margin-top: 35px;
@@ -729,6 +815,11 @@
       padding: 1.5rem;
     }
 
+    .testimonio-tarjeta img {
+      min-height: 150px;
+      max-height: 180px;
+    }
+
     .modal-content {
       padding: 2em 1.5em;
       max-height: 85vh;
@@ -784,6 +875,11 @@
     .testimonio-tarjeta {
       min-width: 250px;
       max-width: 250px;
+    }
+
+    .testimonio-tarjeta img {
+      min-height: 130px;
+      max-height: 160px;
     }
   }
 
@@ -852,7 +948,7 @@
     </div>
   </section>
 
-  <!-- Sección de Testimonios -->
+  <!-- Sección de Testimonios con imágenes mejoradas -->
   <section class="testimonios">
     <div class="contenedor-campana">
       <h2>Historias que inspiran</h2>
@@ -878,7 +974,15 @@
                 </a>
               </span>
             </footer>
-            <img src="./1.png" alt="Misioneros en la Sierra Tarahumara" loading="lazy">
+            <div class="img-container">
+              <div class="img-location-badge">
+                <i class="fas fa-mountain"></i> Sierra Tarahumara
+              </div>
+              <img src="./1.png" alt="Misioneros en la Sierra Tarahumara" loading="lazy">
+              <div class="img-overlay">
+                <span><i class="fas fa-camera"></i> Misión Tarahumara 2024</span>
+              </div>
+            </div>
           </div>
           
           <!-- Testimonio 2 -->
@@ -896,7 +1000,15 @@
                 </a>
               </span>
             </footer>
-            <img src="./2.png" alt="Misioneros en Indonesia" loading="lazy">
+            <div class="img-container">
+              <div class="img-location-badge">
+                <i class="fas fa-globe-asia"></i> Isla de Flores, Indonesia
+              </div>
+              <img src="./2.png" alt="Misioneros en Indonesia" loading="lazy">
+              <div class="img-overlay">
+                <span><i class="fas fa-camera"></i> Misión Indonesia 2024</span>
+              </div>
+            </div>
           </div>
           
           <!-- Testimonio 3 -->
@@ -914,7 +1026,15 @@
                 </a>
               </span>
             </footer>
-            <img src="./3.png" alt="Encuentro Infantil Misionero" loading="lazy">
+            <div class="img-container">
+              <div class="img-location-badge">
+                <i class="fas fa-child"></i> Querétaro, México
+              </div>
+              <img src="./3.png" alt="Encuentro Infantil Misionero" loading="lazy">
+              <div class="img-overlay">
+                <span><i class="fas fa-camera"></i> Encuentro Infantil Misionero</span>
+              </div>
+            </div>
           </div>
           
           <!-- Testimonio 4 -->
@@ -932,7 +1052,15 @@
                 </a>
               </span>
             </footer>
-            <img src="./4.png" alt="Padre Antonio Camacho" loading="lazy">
+            <div class="img-container">
+              <div class="img-location-badge">
+                <i class="fas fa-church"></i> Misiones Internacionales
+              </div>
+              <img src="./4.png" alt="Padre Antonio Camacho" loading="lazy">
+              <div class="img-overlay">
+                <span><i class="fas fa-camera"></i> 25 años de misión</span>
+              </div>
+            </div>
           </div>
         </div>
         
@@ -1226,7 +1354,7 @@
       onValue(padrinosRef, snapshot => {
         tablaBody.innerHTML = '';
         if (!snapshot.exists()) {
-          tablaBody.innerHTML = '<tr><td colspan="6" style="text-align: center; color: #999; padding: 2em;">No hay registros aún</td></tr>';
+          tablaBody.innerHTML = '<tr><td colspan="6" style="text-align: center; color: #999; padding: 2em;">No hay registros aún</td>'至少要';
           return;
         }
         

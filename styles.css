@@ -181,12 +181,15 @@ body {
  
 .hero-image {
   width: 100%;
-  aspect-ratio: 16 / 7;
-  object-fit: cover;
-  object-position: center top;
+  /* Elimina el aspect-ratio fijo */
+  height: auto;
+  /* Cambia de 'cover' a 'contain' para ver toda la imagen */
+  object-fit: contain;
   border-radius: var(--radio-card);
   display: block;
   margin-bottom: 1.5rem;
+  /* Opcional: fondo para espacios vacíos */
+  background: var(--fondo-sec);
 }
  
 .hero-actions {
@@ -351,18 +354,26 @@ body {
   background: var(--fondo-sec);
 }
  
+.card-img-wrap {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--fondo-sec);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .card-img-wrap img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain; /* Cambia de 'cover' a 'contain' */
   display: block;
   transition: transform 0.3s;
 }
- 
+
 .card:hover .card-img-wrap img {
-  transform: scale(1.04);
+  transform: scale(1.02); /* Reducido para no distorsionar */
 }
- 
 .card-body {
   padding: 10px 12px 12px;
 }
