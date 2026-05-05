@@ -234,20 +234,20 @@
     </section>
  
     <!-- DONAR -->
-    <section class="donate" id="donar">
-      <h2>Apóyanos</h2>
-      <p>Haz clic en la tarjeta para copiar el número de cuenta:</p>
-      <img
+<section class="donate" id="donar">
+    <h2>Apóyanos</h2>
+    <p>Haz clic en la tarjeta para copiar el número de cuenta:</p>
+    <img
         src="./images/card.jpeg"
         alt="Tarjeta de donación"
         class="card-image"
         onclick="copyAccount()">
-      <input type="text" id="account-number" value="002150701883169386" readonly
+    <input type="text" id="account-number" value="002150701883169386" readonly
         style="position:absolute;left:-9999px;">
-      <small id="copied-message" style="display:none;color:#185FA5;font-weight:500;margin-top:0.5rem;display:block">
-        <br>¡Número copiado!
-      </small>
-    </section>
+    <small id="copied-message" style="display: none; color: #185FA5; font-weight: 500; margin-top: 0.5rem;">
+        ¡Número copiado!
+    </small>
+</section>
  
   </main>
  
@@ -432,13 +432,19 @@
     }
  
     function copyAccount() {
-      const input = document.getElementById('account-number');
-      input.select();
-      document.execCommand('copy');
-      const msg = document.getElementById('copied-message');
-      msg.style.display = 'block';
-      setTimeout(() => { msg.style.display = 'none'; }, 3000);
-    }
+    const input = document.getElementById('account-number');
+    input.select();
+    input.setSelectionRange(0, 99999); // Para móviles
+    document.execCommand('copy');
+    
+    const msg = document.getElementById('copied-message');
+    msg.style.display = 'block';
+    
+    // Ocultar después de 3 segundos
+    setTimeout(() => {
+        msg.style.display = 'none';
+    }, 3000);
+}
   </script>
  
 </body>

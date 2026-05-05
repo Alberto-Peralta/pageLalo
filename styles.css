@@ -1,6 +1,6 @@
 /* =============================================
    styles.css — Rediseño modernizado
-   Lalo Peralta
+   Lalo Peralta (Versión Corregida)
    ============================================= */
  
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap');
@@ -181,14 +181,11 @@ body {
  
 .hero-image {
   width: 100%;
-  /* Elimina el aspect-ratio fijo */
   height: auto;
-  /* Cambia de 'cover' a 'contain' para ver toda la imagen */
   object-fit: contain;
   border-radius: var(--radio-card);
   display: block;
   margin-bottom: 1.5rem;
-  /* Opcional: fondo para espacios vacíos */
   background: var(--fondo-sec);
 }
  
@@ -280,7 +277,7 @@ body {
   width: 1200px;
   height: 2000px;
   top: -310px;
-  left: -23px;
+  left: -28px;
   border: none;
   pointer-events: auto;
 }
@@ -352,12 +349,6 @@ body {
   aspect-ratio: 4 / 3;
   overflow: hidden;
   background: var(--fondo-sec);
-}
- 
-.card-img-wrap {
-  aspect-ratio: 4 / 3;
-  overflow: hidden;
-  background: var(--fondo-sec);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -366,13 +357,13 @@ body {
 .card-img-wrap img {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* Cambia de 'cover' a 'contain' */
+  object-fit: contain;
   display: block;
   transition: transform 0.3s;
 }
 
 .card:hover .card-img-wrap img {
-  transform: scale(1.02); /* Reducido para no distorsionar */
+  transform: scale(1.02);
 }
 .card-body {
   padding: 10px 12px 12px;
@@ -404,10 +395,11 @@ body {
   letter-spacing: 0.03em;
 }
  
-/* ---- COLAPSABLES ---- */
+/* ---- COLAPSABLES (Corregido: Centrado y sin fugas) ---- */
 .collapsible-section {
   background: var(--fondo);
   border-bottom: 1px solid var(--borde);
+  width: 100%;
 }
  
 .collapsible-header {
@@ -630,7 +622,7 @@ body {
   font-size: 0.9rem;
 }
  
-/* ---- DONAR ---- */
+/* ---- DONAR (Corregido: Mensaje oculto por defecto) ---- */
 .donate {
   background: var(--fondo);
   border-bottom: 1px solid var(--borde);
@@ -664,6 +656,14 @@ body {
 .card-image:hover {
   transform: scale(1.03);
   box-shadow: 0 8px 24px rgba(24, 95, 165, 0.15);
+}
+
+/* Mensaje de copiado - Aparece solo tras hacer clic */
+#copied-message {
+  display: none;
+  margin-top: 0.5rem;
+  color: var(--azul);
+  font-weight: 500;
 }
  
 /* ---- FOOTER ---- */
@@ -777,26 +777,38 @@ body {
     background: var(--fondo-sec);
   }
  
-  .hero {
-    padding: 3rem 2rem 2.5rem;
-    max-width: 960px;
-    margin: 0 auto;
-  }
- 
-  .main-container {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 40px 20px;
-  }
- 
+  /* --- REGLAS DE CENTRADO GENERAL CORREGIDAS --- */
+  /* Todas las secciones principales se centran aquí */
+  .hero,
   .section,
-  .collapsible-header,
+  .collapsible-section,
   .recursos-section,
   .donate,
   .footer {
     max-width: 960px;
     margin-left: auto;
     margin-right: auto;
+  }
+ 
+  /* Ajuste específico para las cabeceras colapsables que tienen su propio padding */
+  .collapsible-header {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  /* El contenido interior mantiene su margen pero se centra dentro de su contenedor */
+  .collapsible-content {
+    padding-left: 0;
+    padding-right: 0;
+  }
+ 
+  .main-container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 40px 20px;
   }
  
   .cards {
