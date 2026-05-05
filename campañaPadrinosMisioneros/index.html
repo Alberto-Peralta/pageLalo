@@ -962,7 +962,7 @@
           <!-- Testimonio 1 -->
           <div class="testimonio-tarjeta">
             <p>"Cuando los misioneros llegaron a mi aldea en la Sierra Tarahumara, no traían oro ni medicinas... pero traían algo que curó mi alma: tiempo, escucha y compañía. Antes, nadie venía. Ahora sé que Dios sí llega, incluso en rarámuri."</p>
-            <footer>— Damián, joven de Norogachi, Chihuahua.
+            <footer>&mdash; Damián, joven de Norogachi, Chihuahua.
               <span class="testimonio-fuente">
                 <i class="fas fa-map-marker-alt testimonio-icono"></i>Inspirado en: La apertura de misiones de Misioneros de Guadalupe en la Sierra Tarahumara (2024).
               </span>
@@ -988,7 +988,7 @@
           <!-- Testimonio 2 -->
           <div class="testimonio-tarjeta">
             <p>"Yo no entendía por qué ese sacerdote mexicano dejó todo para estar aquí, en mi aldea de Indonesia. Hasta que lo vi cargar sacos de arroz para los más viejos sin que nadie se lo pidiera. Ese día entendí el Evangelio sin palabras."</p>
-            <footer>— Rini, joven catequista en la isla de Flores.
+            <footer>&mdash; Rini, joven catequista en la isla de Flores.
               <span class="testimonio-fuente">
                 <i class="fas fa-map-marker-alt testimonio-icono"></i>Inspirado en: Misión abierta por los Misioneros de Guadalupe en Indonesia en 2024.
               </span>
@@ -1014,7 +1014,7 @@
           <!-- Testimonio 3 -->
           <div class="testimonio-tarjeta">
             <p>"Nos dijeron que cada globo representaba un continente. Oramos por niños que no conocemos, pero que también necesitan a Dios. Yo no sabía que con mi oración puedo ayudar. Ahora sé que puedo ser misionera desde mi ciudad."</p>
-            <footer>— Andrea, 9 años, Querétaro.
+            <footer>&mdash; Andrea, 9 años, Querétaro.
               <span class="testimonio-fuente">
                 <i class="fas fa-map-marker-alt testimonio-icono"></i>Inspirado en: Encuentro Infantil Misionero de Querétaro con los Misioneros de Guadalupe.
               </span>
@@ -1040,7 +1040,7 @@
           <!-- Testimonio 4 -->
           <div class="testimonio-tarjeta">
             <p>"En 25 años de misión, lo más difícil no ha sido dejar mi país, sino dejar de amar. Cada rostro que he conocido es un recordatorio de que Dios sigue viajando con nosotros."</p>
-            <footer>— P. Antonio del Carmen Camacho Muñoz, Misionero de Guadalupe.
+            <footer>&mdash; P. Antonio del Carmen Camacho Muñoz, Misionero de Guadalupe.
               <span class="testimonio-fuente">
                 <i class="fas fa-map-marker-alt testimonio-icono"></i>Basado en: Celebración de los 25 años de entrega misionera del P. Antonio.
               </span>
@@ -1354,7 +1354,7 @@
       onValue(padrinosRef, snapshot => {
         tablaBody.innerHTML = '';
         if (!snapshot.exists()) {
-          tablaBody.innerHTML = '<tr><td colspan="6" style="text-align: center; color: #999; padding: 2em;">No hay registros aún</td>'至少要';
+          tablaBody.innerHTML = '<tr><td colspan="6" style="text-align: center; color: #999; padding: 2em;">No hay registros aún</td></tr>';
           return;
         }
         
@@ -1485,7 +1485,7 @@
 
       function moveCarousel(index) {
         currentIndex = index;
-        carrusel.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+        carrusel.style.transform = 'translateX(-' + (currentIndex * cardWidth) + 'px)';
         
         controls.forEach((control, i) => {
           if (i === currentIndex) {
@@ -1541,7 +1541,7 @@
       // Auto-ajustar al cambiar tamaño de ventana
       window.addEventListener('resize', () => {
         const newCardWidth = cards[0].offsetWidth + 30;
-        carrusel.style.transform = `translateX(-${currentIndex * newCardWidth}px)`;
+        carrusel.style.transform = 'translateX(-' + (currentIndex * newCardWidth) + 'px)';
       });
     });
 
