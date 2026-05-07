@@ -269,7 +269,6 @@
     <div class="selectores">
       <select id="idioma-select">
         <option value="es">🇪🇸 Español</option>
-        <!-- Puedes añadir italiano y latín después -->
       </select>
       <select id="misterio-select">
         <option value="joyful">🌹 Misterios Gozosos (Lun/Sáb)</option>
@@ -313,75 +312,339 @@
         final_sign_of_cross: "En el nombre del Padre, y del Hijo, y del Espíritu Santo. Amén."
       },
       mysteries: {
-        joyful: {
-          title: "Misterios Gozosos",
-          fragments: [
-            "1. La Anunciación: «He aquí la esclava del Señor; hágase en mí según tu palabra.» (Lucas 1,38)",
-            "2. La Visitación: «Bendita tú entre las mujeres y bendito el fruto de tu vientre... Feliz la que ha creído.» (Lucas 1,42-45)",
-            "3. El Nacimiento de Jesús: «Os ha nacido hoy un Salvador, que es el Cristo Señor.» (Lucas 2,11)",
-            "4. La Presentación en el Templo: «Mis ojos han visto tu salvación, luz para iluminar a las naciones.» (Lucas 2,30-32)",
-            "5. El Niño perdido y hallado: «¿No sabíais que yo debía estar en la casa de mi Padre?» (Lucas 2,49)",
-            "6. (1ª Avemaría) María guardaba todas estas cosas en su corazón. (Lucas 2,19)",
-            "7. (2ª Avemaría) Jesús crecía en sabiduría, en estatura y en gracia. (Lucas 2,52)",
-            "8. (3ª Avemaría) El Espíritu Santo vendrá sobre ti. (Lucas 1,35)",
-            "9. (4ª Avemaría) Dichosa la que ha creído. (Lucas 1,45)",
-            "10. (5ª Avemaría) Mi espíritu se alegra en Dios mi Salvador. (Lucas 1,47)",
-            "11. (6ª Avemaría) Su misericordia llega a sus fieles de generación en generación. (Lucas 1,50)"
-          ]
-        },
-        luminous: {
-          title: "Misterios Luminosos",
-          fragments: [
-            "1. El Bautismo de Jesús: «Este es mi Hijo amado, en quien me complazco.» (Mateo 3,17)",
-            "2. Las Bodas de Caná: «Haced lo que Él os diga.» (Juan 2,5)",
-            "3. El anuncio del Reino: «Convertíos y creed en la Buena Nueva.» (Marcos 1,15)",
-            "4. La Transfiguración: «Se transfiguró delante de ellos, su rostro brilló como el sol.» (Mateo 17,2)",
-            "5. La Institución de la Eucaristía: «Tomad y comed, esto es mi Cuerpo.» (Mateo 26,26)",
-            "6. (1ª Avemaría) La luz verdadera que ilumina a todo hombre. (Juan 1,9)",
-            "7. (2ª Avemaría) Yo soy la luz del mundo. (Juan 8,12)",
-            "8. (3ª Avemaría) Vosotros sois la sal de la tierra. (Mateo 5,13)",
-            "9. (4ª Avemaría) Dejad que los niños vengan a mí. (Marcos 10,14)",
-            "10. (5ª Avemaría) El que me sigue no andará en tinieblas. (Juan 8,12)",
-            "11. (6ª Avemaría) Yo he venido para que tengan vida. (Juan 10,10)"
-          ]
-        },
-        sorrowful: {
-          title: "Misterios Dolorosos",
-          fragments: [
-            "1. La Oración en el Huerto: «Padre, si quieres, aparta de mí esta copa; pero no se haga mi voluntad, sino la tuya.» (Lucas 22,42)",
-            "2. La Flagelación: «Tomó Pilato a Jesús y mandó azotarle.» (Juan 19,1)",
-            "3. La Coronación de espinas: «¡Salve, Rey de los judíos!» (Juan 19,3)",
-            "4. El Camino del Calvario: «Cargando su cruz, salió al Gólgota.» (Juan 19,17)",
-            "5. La Crucifixión y muerte: «Padre, en tus manos encomiendo mi espíritu.» (Lucas 23,46)",
-            "6. (1ª Avemaría) Por tus llagas fuimos curados. (Isaías 53,5)",
-            "7. (2ª Avemaría) Jesús, acuérdate de mí cuando llegues a tu Reino. (Lucas 23,42)",
-            "8. (3ª Avemaría) Mujer, ahí tienes a tu hijo. (Juan 19,26)",
-            "9. (4ª Avemaría) Todo está cumplido. (Juan 19,30)",
-            "10. (5ª Avemaría) La tierra tembló y las rocas se partieron. (Mateo 27,51)",
-            "11. (6ª Avemaría) Verdaderamente este era Hijo de Dios. (Mateo 27,54)"
-          ]
-        },
-        glorious: {
-          title: "Misterios Gloriosos",
-          fragments: [
-            "1. La Resurrección: «Ha resucitado, no está aquí.» (Marcos 16,6)",
-            "2. La Ascensión: «Fue elevado al cielo y está sentado a la derecha de Dios.» (Marcos 16,19)",
-            "3. Pentecostés: «Quedaron todos llenos del Espíritu Santo.» (Hechos 2,4)",
-            "4. La Asunción de María: «Ha hecho en mí maravillas el Poderoso.» (Lucas 1,49)",
-            "5. La Coronación de María: «Una gran señal apareció en el cielo: una Mujer vestida de sol.» (Apocalipsis 12,1)",
-            "6. (1ª Avemaría) Alégrate, llena de gracia, el Señor está contigo. (Lucas 1,28)",
-            "7. (2ª Avemaría) Dichoso el vientre que te llevó. (Lucas 11,27)",
-            "8. (3ª Avemaría) María conservaba todas estas cosas en su corazón. (Lucas 2,51)",
-            "9. (4ª Avemaría) Tú eres la gloria de Jerusalén. (Judit 15,9)",
-            "10. (5ª Avemaría) ¡Bendita eres entre las mujeres! (Lucas 1,42)",
-            "11. (6ª Avemaría) Ruega por nosotros, Santa Madre de Dios."
-          ]
-        }
+        joyful: [
+          { // Misterio 1: La Anunciación
+            title: "1. La Anunciación",
+            fragments: [
+              "📖 El ángel Gabriel fue enviado por Dios a una ciudad de Galilea, llamada Nazaret, a una virgen desposada con un hombre llamado José, de la casa de David; el nombre de la virgen era María. (Lc 1,26-27)",
+              "📖 Y entrando el ángel donde ella estaba, dijo: «¡Alégrate, llena de gracia! El Señor está contigo.» (Lc 1,28)",
+              "📖 Ella se turbó por estas palabras y pensaba qué significaría aquel saludo. (Lc 1,29)",
+              "📖 El ángel le dijo: «No temas, María, porque has hallado gracia delante de Dios.» (Lc 1,30)",
+              "📖 «Concebirás en tu seno y darás a luz un hijo, y le pondrás por nombre Jesús.» (Lc 1,31)",
+              "📖 «Será grande y será llamado Hijo del Altísimo, y el Señor Dios le dará el trono de David, su padre.» (Lc 1,32)",
+              "📖 María respondió: «¿Cómo será esto, puesto que no conozco varón?» (Lc 1,34)",
+              "📖 El ángel le contestó: «El Espíritu Santo vendrá sobre ti y el poder del Altísimo te cubrirá con su sombra.» (Lc 1,35)",
+              "📖 «Por eso el Santo que nacerá será llamado Hijo de Dios.» (Lc 1,35)",
+              "📖 Entonces María dijo: «He aquí la esclava del Señor; hágase en mí según tu palabra.» (Lc 1,38)",
+              "📖 Y el ángel se retiró de su presencia. (Lc 1,38)"
+            ]
+          },
+          { // Misterio 2: La Visitación
+            title: "2. La Visitación",
+            fragments: [
+              "📖 En aquellos días, María se levantó y fue de prisa a la montaña, a una ciudad de Judá. (Lc 1,39)",
+              "📖 Entró en casa de Zacarías y saludó a Isabel. (Lc 1,40)",
+              "📖 Y aconteció que, al oír Isabel el saludo de María, la criatura saltó de gozo en su seno. (Lc 1,41)",
+              "📖 Isabel quedó llena del Espíritu Santo y exclamó: «¡Bendita tú entre las mujeres y bendito el fruto de tu vientre!» (Lc 1,42)",
+              "📖 «¿Quién soy yo para que la madre de mi Señor venga a verme?» (Lc 1,43)",
+              "📖 «Porque apenas llegó tu saludo a mis oídos, la criatura saltó de alegría en mi seno.» (Lc 1,44)",
+              "📖 «Dichosa la que ha creído que se cumplirán las cosas que le fueron dichas de parte del Señor.» (Lc 1,45)",
+              "📖 María dijo: «Mi alma glorifica al Señor, y mi espíritu se alegra en Dios mi Salvador.» (Lc 1,46-47)",
+              "📖 «Porque ha puesto los ojos en la humildad de su esclava, por eso desde ahora todas las generaciones me llamarán bienaventurada.» (Lc 1,48)",
+              "📖 «Ha hecho en mí maravillas el Poderoso, Santo es su nombre.» (Lc 1,49)",
+              "📖 «Su misericordia alcanza de generación en generación a los que le temen.» (Lc 1,50)"
+            ]
+          },
+          { // Misterio 3: El Nacimiento
+            title: "3. El Nacimiento de Jesús",
+            fragments: [
+              "📖 Sucedió que mientras estaban en Belén, se le cumplieron los días del alumbramiento. (Lc 2,6)",
+              "📖 Y dio a luz a su hijo primogénito, lo envolvió en pañales y lo acostó en un pesebre. (Lc 2,7)",
+              "📖 Porque no había lugar para ellos en la posada. (Lc 2,7)",
+              "📖 Había en la misma comarca unos pastores que velaban por la noche guardando sus rebaños. (Lc 2,8)",
+              "📖 El ángel del Señor se les presentó y la gloria del Señor los envolvió de claridad. (Lc 2,9)",
+              "📖 El ángel les dijo: «No temáis, pues os anuncio una gran alegría: os ha nacido hoy un Salvador, que es el Cristo Señor.» (Lc 2,10-11)",
+              "📖 «Esto os servirá de señal: encontraréis a un niño envuelto en pañales y acostado en un pesebre.» (Lc 2,12)",
+              "📖 Y de repente apareció con el ángel una multitud del ejército celestial, alabando a Dios y diciendo: (Lc 2,13)",
+              "📖 «¡Gloria a Dios en el cielo, y en la tierra paz a los hombres que Él ama!» (Lc 2,14)",
+              "📖 Y los pastores fueron a toda prisa y encontraron a María, a José y al niño acostado en el pesebre. (Lc 2,16)",
+              "📖 Al verlo, dieron a conocer lo que se les había dicho de aquel niño. (Lc 2,17)"
+            ]
+          },
+          { // Misterio 4: La Presentación
+            title: "4. La Presentación en el Templo",
+            fragments: [
+              "📖 Cuando se cumplieron los días de la purificación de María, llevaron a Jesús a Jerusalén para presentarlo al Señor. (Lc 2,22)",
+              "📖 Como está escrito en la ley del Señor: «Todo varón primogénito será consagrado al Señor.» (Lc 2,23)",
+              "📖 También para ofrecer en sacrificio un par de tórtolas o dos pichones. (Lc 2,24)",
+              "📖 Había en Jerusalén un hombre llamado Simeón, justo y piadoso, que esperaba el consuelo de Israel. (Lc 2,25)",
+              "📖 El Espíritu Santo le había revelado que no vería la muerte antes de ver al Cristo del Señor. (Lc 2,26)",
+              "📖 Simeón fue al Templo, tomó al niño en sus brazos y bendijo a Dios: (Lc 2,28)",
+              "📖 «Ahora, Señor, puedes dejar que tu siervo muera en paz, según tu palabra.» (Lc 2,29)",
+              "📖 «Porque han visto mis ojos tu salvación, preparada ante todos los pueblos.» (Lc 2,30-31)",
+              "📖 «Luz para iluminar a las naciones y gloria de tu pueblo Israel.» (Lc 2,32)",
+              "📖 También estaba Ana, la profetisa, que daba gracias a Dios y hablaba del niño a todos. (Lc 2,36-38)",
+              "📖 Y después de cumplir todo lo prescrito, regresaron a Nazaret. (Lc 2,39)"
+            ]
+          },
+          { // Misterio 5: El Niño perdido
+            title: "5. El Niño perdido y hallado",
+            fragments: [
+              "📖 Sus padres iban todos los años a Jerusalén a la fiesta de la Pascua. (Lc 2,41)",
+              "📖 Cuando Jesús cumplió doce años, subieron a la fiesta según la costumbre. (Lc 2,42)",
+              "📖 Pasados los días, al regresar, el niño Jesús se quedó en Jerusalén sin que sus padres lo supieran. (Lc 2,43)",
+              "📖 Creyendo que iba en la caravana, caminaron todo un día y lo buscaron entre parientes y conocidos. (Lc 2,44)",
+              "📖 Al no encontrarlo, regresaron a Jerusalén para buscarlo. (Lc 2,45)",
+              "📖 Al cabo de tres días lo hallaron en el Templo, sentado entre los maestros, escuchándoles y preguntándoles. (Lc 2,46)",
+              "📖 Todos los que le oían estaban asombrados de su inteligencia y respuestas. (Lc 2,47)",
+              "📖 Al verle, sus padres se quedaron maravillados, y su madre le dijo: «Hijo, ¿por qué nos has hecho esto? Tu padre y yo te buscábamos angustiados.» (Lc 2,48)",
+              "📖 Él les respondió: «¿Por qué me buscabais? ¿No sabíais que yo debía estar en la casa de mi Padre?» (Lc 2,49)",
+              "📖 Pero ellos no comprendieron lo que les decía. (Lc 2,50)",
+              "📖 Volvió con ellos a Nazaret y estaba sujeto a sus padres. Su madre conservaba todo esto en su corazón. (Lc 2,51)"
+            ]
+          }
+        ],
+        luminous: [
+          { // Misterio 1: Bautismo
+            title: "1. El Bautismo en el Jordán",
+            fragments: [
+              "📖 En aquel tiempo, Jesús vino desde Galilea al Jordán para ser bautizado por Juan. (Mt 3,13)",
+              "📖 Juan intentaba disuadirlo diciendo: «Soy yo quien necesita ser bautizado por ti, ¿y tú vienes a mí?» (Mt 3,14)",
+              "📖 Jesús le respondió: «Déjalo ahora, porque conviene que así cumplamos toda justicia.» (Mt 3,15)",
+              "📖 Entonces Juan consintió. (Mt 3,15)",
+              "📖 Apenas fue bautizado, Jesús salió del agua y los cielos se abrieron. (Mt 3,16)",
+              "📖 Y vio al Espíritu de Dios descender como paloma y venir sobre Él. (Mt 3,16)",
+              "📖 Y una voz desde los cielos decía: «Este es mi Hijo amado, en quien tengo complacencia.» (Mt 3,17)",
+              "📖 El Espíritu descendió sobre Él para ungirle como Mesías. (Lc 4,18)",
+              "📖 Jesús, lleno del Espíritu Santo, volvió del Jordán. (Lc 4,1)",
+              "📖 Este es el inicio de su vida pública. (Mt 4,17)",
+              "📖 Nos invita a renacer del agua y del Espíritu. (Jn 3,5)"
+            ]
+          },
+          { // Misterio 2: Bodas de Caná
+            title: "2. Las Bodas de Caná",
+            fragments: [
+              "📖 Hubo una boda en Caná de Galilea y estaba allí la madre de Jesús. (Jn 2,1)",
+              "📖 Jesús fue invitado a la boda con sus discípulos. (Jn 2,2)",
+              "📖 Y faltó el vino, porque se había terminado. (Jn 2,3)",
+              "📖 La madre de Jesús le dijo: «No tienen vino.» (Jn 2,3)",
+              "📖 Jesús le respondió: «Mujer, ¿qué tengo yo que ver contigo? Todavía no ha llegado mi hora.» (Jn 2,4)",
+              "📖 Ella dijo a los sirvientes: «Haced lo que Él os diga.» (Jn 2,5)",
+              "📖 Había allí seis tinajas de piedra para las purificaciones. (Jn 2,6)",
+              "📖 Jesús les dijo: «Llenad las tinajas de agua.» Y las llenaron hasta el borde. (Jn 2,7)",
+              "📖 «Sacad ahora y llevad al maestresala.» Así lo hicieron. (Jn 2,8)",
+              "📖 El agua se había convertido en vino, y el maestresala alabó al novio. (Jn 2,9-10)",
+              "📖 Así manifestó Jesús su gloria y sus discípulos creyeron en Él. (Jn 2,11)"
+            ]
+          },
+          { // Misterio 3: Reino de Dios
+            title: "3. El anuncio del Reino",
+            fragments: [
+              "📖 Jesús fue a Galilea predicando el Evangelio de Dios. (Mc 1,14)",
+              "📖 Decía: «El tiempo se ha cumplido y el Reino de Dios está cerca.» (Mc 1,15)",
+              "📖 «Convertíos y creed en el Evangelio.» (Mc 1,15)",
+              "📖 Y recorría todas las ciudades y aldeas, enseñando en las sinagogas. (Mt 9,35)",
+              "📖 Proclamaba la buena noticia del Reino y sanaba toda enfermedad. (Mt 4,23)",
+              "📖 «Bienaventurados los pobres de espíritu, porque de ellos es el Reino de los Cielos.» (Mt 5,3)",
+              "📖 «Buscad primero el Reino de Dios y su justicia.» (Mt 6,33)",
+              "📖 El Reino de los Cielos es semilla que crece hasta dar fruto. (Mt 13,31-32)",
+              "📖 Es un tesoro escondido y una perla preciosa. (Mt 13,44-46)",
+              "📖 Jesús nos enseña a orar: «Venga a nosotros tu Reino.» (Lc 11,2)",
+              "📖 Por eso nos envió a anunciar el Reino con su misma autoridad. (Lc 10,9)"
+            ]
+          },
+          { // Misterio 4: Transfiguración
+            title: "4. La Transfiguración",
+            fragments: [
+              "📖 Jesús tomó a Pedro, Santiago y Juan, y los subió a un monte alto, aparte. (Mc 9,2)",
+              "📖 Allí se transfiguró delante de ellos. (Mc 9,2)",
+              "📖 Su rostro resplandecía como el sol y sus vestidos se volvieron blancos como la luz. (Mt 17,2)",
+              "📖 Aparecieron Moisés y Elías conversando con Él. (Mc 9,4)",
+              "📖 Pedro dijo: «Señor, qué bien se está aquí. Si quieres, hagamos tres tiendas.» (Mt 17,4)",
+              "📖 Mientras hablaba, una nube luminosa los cubrió. (Mt 17,5)",
+              "📖 Y de la nube salió una voz: «Este es mi Hijo amado, escuchadlo.» (Mc 9,7)",
+              "📖 Al oírla, los discípulos cayeron de bruces, llenos de miedo. (Mt 17,6)",
+              "📖 Jesús se acercó, los tocó y dijo: «Levantaos, no temáis.» (Mt 17,7)",
+              "📖 Alzando los ojos, no vieron a nadie más que a Jesús solo. (Mt 17,8)",
+              "📖 Bajando del monte, Jesús les mandó no contar la visión hasta su resurrección. (Mt 17,9)"
+            ]
+          },
+          { // Misterio 5: Eucaristía
+            title: "5. La Institución de la Eucaristía",
+            fragments: [
+              "📖 El jueves santo, Jesús se sentó a la mesa con sus apóstoles. (Lc 22,14)",
+              "📖 Les dijo: «Cuánto he deseado comer esta Pascua con vosotros antes de padecer.» (Lc 22,15)",
+              "📖 Tomó pan, dio gracias, lo partió y se lo dio diciendo: «Esto es mi Cuerpo, que se entrega por vosotros.» (Lc 22,19)",
+              "📖 «Haced esto en memoria mía.» (Lc 22,19)",
+              "📖 Después, tomando el cáliz, dio gracias y lo entregó diciendo: «Esta copa es la nueva alianza en mi Sangre.» (Lc 22,20)",
+              "📖 «La Sangre que se derrama por vosotros.» (Lc 22,20)",
+              "📖 «Quien come mi Carne y bebe mi Sangre tiene vida eterna.» (Jn 6,54)",
+              "📖 «El que me come vivirá por mí.» (Jn 6,57)",
+              "📖 «Como el Padre me envió y yo vivo por el Padre, así el que me come vivirá por mí.» (Jn 6,57)",
+              "📖 Y añadió: «No os dejaré huérfanos, volveré a vosotros.» (Jn 14,18)",
+              "📖 Por eso la Eucaristía es el sacramento del amor, signo de unidad y vínculo de caridad."
+            ]
+          }
+        ],
+        sorrowful: [
+          { // Misterio 1: Oración en el huerto
+            title: "1. La Oración en el Huerto",
+            fragments: [
+              "📖 Jesús fue con sus discípulos al huerto llamado Getsemaní. (Mt 26,36)",
+              "📖 Les dijo: «Quedaos aquí, mientras voy allá a orar.» (Mt 26,36)",
+              "📖 Tomó a Pedro, Santiago y Juan, y comenzó a entristecerse y angustiarse. (Mt 26,37)",
+              "📖 Les dijo: «Mi alma está muy triste, hasta la muerte. Quedaos y velad conmigo.» (Mt 26,38)",
+              "📖 Se adelantó un poco, cayó rostro en tierra y oraba: «Padre mío, si es posible, que pase de mí esta copa.» (Mt 26,39)",
+              "📖 «Pero no se haga como yo quiero, sino como quieres Tú.» (Mt 26,39)",
+              "📖 Volvió a los discípulos y los encontró dormidos. Dijo a Pedro: «¿Ni una hora pudisteis velar conmigo?» (Mt 26,40)",
+              "📖 «Velad y orad para no caer en tentación; el espíritu está dispuesto, pero la carne es débil.» (Mt 26,41)",
+              "📖 Por segunda vez se apartó y oró: «Padre mío, si no puede pasar esta copa sin que la beba, hágase tu voluntad.» (Mt 26,42)",
+              "📖 Y oró por tercera vez, repitiendo las mismas palabras. (Mt 26,44)",
+              "📖 Luego dijo: «Levantaos, vamos; ya está cerca el que me va a entregar.» (Mt 26,46)"
+            ]
+          },
+          { // Misterio 2: Flagelación
+            title: "2. La Flagelación",
+            fragments: [
+              "📖 Pilato mandó que azotaran a Jesús. (Juan 19,1)",
+              "📖 La flagelación era un castigo cruel que solía preceder a la crucifixión. (Mc 15,15)",
+              "📖 Los soldados lo desnudaron y lo ataron a una columna. (Mt 27,26)",
+              "📖 Utilizaban látigos con puntas de hueso o plomo. (Cfr. documentos históricos)",
+              "📖 Así se cumplió la profecía: «Por sus llagas hemos sido curados.» (Is 53,5)",
+              "📖 Jesús cargó con nuestros dolores y soportó nuestros sufrimientos. (Is 53,4)",
+              "📖 El castigo que nos trae la paz cayó sobre Él. (Is 53,5)",
+              "📖 Con sus heridas fuimos sanados. (1 Pe 2,24)",
+              "📖 Fue entregado por nuestros pecados y resucitado para nuestra justificación. (Rm 4,25)",
+              "📖 En su flagelación, Él manifestó su amor hasta el extremo. (Jn 13,1)",
+              "📖 Nos enseña a ofrecer nuestro cuerpo como sacrificio vivo, santo y agradable a Dios. (Rm 12,1)"
+            ]
+          },
+          { // Misterio 3: Coronación de espinas
+            title: "3. La Coronación de espinas",
+            fragments: [
+              "📖 Los soldados trenzaron una corona de espinas y se la pusieron en la cabeza. (Mt 27,29)",
+              "📖 Le vistieron con un manto púrpura y, acercándose a Él, le decían: «¡Salve, Rey de los judíos!» (Jn 19,2-3)",
+              "📖 Le golpeaban en la cabeza con una caña y le escupían. (Mc 15,19)",
+              "📖 Se arrodillaban y se burlaban de Él. (Mt 27,29)",
+              "📖 La corona de espinas es símbolo de la humillación real. (Jn 19,5)",
+              "📖 También es signo de que Cristo vino a reinar por el amor y el servicio. (Jn 18,36)",
+              "📖 Así se cumplió la profecía del Siervo doliente. (Is 53,3)",
+              "📖 El Rey del universo aceptaba la burla para liberarnos de la soberbia. (Flp 2,6-8)",
+              "📖 Las espinas representan nuestros pecados que Él cargó. (Gn 3,18)",
+              "📖 Jesús nos enseña que el verdadero reino no es de este mundo. (Jn 18,36)",
+              "📖 Por eso el Padre lo exaltó y le dio un nombre sobre todo nombre. (Flp 2,9)"
+            ]
+          },
+          { // Misterio 4: Camino del Calvario
+            title: "4. Jesús con la cruz a cuestas",
+            fragments: [
+              "📖 Jesús salió cargando su propia cruz hacia el lugar de la Calavera, llamado Gólgota. (Jn 19,17)",
+              "📖 Obligaron a un hombre de Cirene, Simón, a que le ayudara a llevar la cruz. (Mc 15,21)",
+              "📖 Lo seguía una gran multitud del pueblo y mujeres que se lamentaban. (Lc 23,27)",
+              "📖 Jesús se volvió hacia ellas y dijo: «Hijas de Jerusalén, no lloréis por mí, llorad por vosotras y por vuestros hijos.» (Lc 23,28)",
+              "📖 La cruz pesaba sobre sus hombros, pero más pesaban nuestros pecados. (Is 53,6)",
+              "📖 Cada paso era un anuncio de redención. (1 Pe 2,21)",
+              "📖 El camino de la cruz es el camino del discípulo. (Lc 9,23)",
+              "📖 Quien quiera seguir a Jesús, tome su cruz cada día. (Lc 9,23)",
+              "📖 Jesús cayó varias veces bajo el peso de la cruz, enseñándonos a levantarnos. (Tradición)",
+              "📖 Al llegar al Gólgota, lo desnudaron y le ofrecieron vino mezclado con mirra, pero no lo tomó. (Mc 15,23)",
+              "📖 Allí lo crucificaron. (Jn 19,18)"
+            ]
+          },
+          { // Misterio 5: Crucifixión
+            title: "5. La Crucifixión y muerte",
+            fragments: [
+              "📖 Fue crucificado a la hora tercera (nueve de la mañana). (Mc 15,25)",
+              "📖 Sobre su cabeza pusieron el motivo de la condena: «Jesús de Nazaret, Rey de los judíos.» (Jn 19,19)",
+              "📖 Los soldados se repartieron sus vestiduras. (Jn 19,23)",
+              "📖 Los jefes de los sacerdotes se burlaban diciendo: «A otros salvó, sálvese a sí mismo.» (Lc 23,35)",
+              "📖 Jesús dijo: «Padre, perdónalos porque no saben lo que hacen.» (Lc 23,34)",
+              "📖 Uno de los malhechores le pidió: «Acuérdate de mí cuando llegues a tu Reino.» (Lc 23,42)",
+              "📖 Jesús le respondió: «Hoy estarás conmigo en el Paraíso.» (Lc 23,43)",
+              "📖 Desde la cruz, Jesús le dijo a su madre: «Mujer, ahí tienes a tu hijo.» Y al discípulo: «Ahí tienes a tu madre.» (Jn 19,26-27)",
+              "📖 A la hora nona, Jesús exclamó: «Dios mío, Dios mío, ¿por qué me has abandonado?» (Mt 27,46)",
+              "📖 Después, dijo: «Todo está cumplido.» E inclinando la cabeza, entregó el espíritu. (Jn 19,30)",
+              "📖 El velo del Templo se rasgó en dos, la tierra tembló, y el centurión dijo: «Verdaderamente este era Hijo de Dios.» (Mt 27,51-54)"
+            ]
+          }
+        ],
+        glorious: [
+          { // Misterio 1: Resurrección
+            title: "1. La Resurrección",
+            fragments: [
+              "📖 Pasado el sábado, María Magdalena, María la de Santiago y Salomé fueron al sepulcro. (Mc 16,1)",
+              "📖 Muy de mañana, al salir el sol, llegaron al sepulcro. (Mc 16,2)",
+              "📖 Se preguntaban: «¿Quién nos removerá la piedra de la entrada?» (Mc 16,3)",
+              "📖 Al mirar, vieron que la piedra ya estaba removida; era muy grande. (Mc 16,4)",
+              "📖 Entraron y vieron a un joven vestido de blanco sentado a la derecha. (Mc 16,5)",
+              "📖 Él les dijo: «No os asustéis. Buscáis a Jesús Nazareno, el crucificado; ha resucitado, no está aquí.» (Mc 16,6)",
+              "📖 «Mirad el lugar donde lo pusieron. Id, decid a sus discípulos y a Pedro que irá delante de vosotros a Galilea.» (Mc 16,6-7)",
+              "📖 Ellas salieron huyendo del sepulcro, temblando de asombro. (Mc 16,8)",
+              "📖 Jesús se apareció primero a María Magdalena. (Mc 16,9)",
+              "📖 Luego se apareció a los discípulos que iban de camino a Emaús. (Lc 24,13-15)",
+              "📖 Después se manifestó a los once y les dijo: «Id por todo el mundo y predicad el Evangelio.» (Mc 16,15)"
+            ]
+          },
+          { // Misterio 2: Ascensión
+            title: "2. La Ascensión",
+            fragments: [
+              "📖 Jesús se apareció a los apóstoles durante cuarenta días, hablándoles del Reino de Dios. (Hch 1,3)",
+              "📖 Les mandó no salir de Jerusalén, sino esperar la promesa del Padre. (Hch 1,4)",
+              "📖 «Juan bautizó con agua, pero vosotros seréis bautizados con el Espíritu Santo dentro de pocos días.» (Hch 1,5)",
+              "📖 Ellos le preguntaron si restauraría el reino de Israel en aquel momento. (Hch 1,6)",
+              "📖 Él respondió: «No os toca saber los tiempos que el Padre ha fijado con su autoridad.» (Hch 1,7)",
+              "📖 «Recibiréis la fuerza del Espíritu Santo y seréis mis testigos hasta el confín de la tierra.» (Hch 1,8)",
+              "📖 Dicho esto, fue levantado mientras le miraban, y una nube lo ocultó. (Hch 1,9)",
+              "📖 Estaban con los ojos fijos en el cielo cuando dos hombres con vestiduras blancas se pusieron a su lado. (Hch 1,10)",
+              "📖 Les dijeron: «Galileos, ¿por qué estáis mirando al cielo? Este Jesús que ha sido tomado volverá como le habéis visto ir.» (Hch 1,11)",
+              "📖 Entonces regresaron a Jerusalén con gran alegría. (Lc 24,52)",
+              "📖 Y alababan y bendecían a Dios en el Templo. (Lc 24,53)"
+            ]
+          },
+          { // Misterio 3: Pentecostés
+            title: "3. La Venida del Espíritu Santo",
+            fragments: [
+              "📖 Llegado el día de Pentecostés, estaban todos juntos en el mismo lugar. (Hch 2,1)",
+              "📖 De repente vino del cielo un ruido como de viento impetuoso que llenó toda la casa. (Hch 2,2)",
+              "📖 Aparecieron lenguas como de fuego que se repartieron y se posaron sobre cada uno. (Hch 2,3)",
+              "📖 Todos quedaron llenos del Espíritu Santo y comenzaron a hablar en otras lenguas. (Hch 2,4)",
+              "📖 Habitaban en Jerusalén judíos devotos de todas las naciones. (Hch 2,5)",
+              "📖 Al oír el ruido, se congregaron y quedaron desconcertados porque cada uno les oía hablar en su propia lengua. (Hch 2,6)",
+              "📖 Pedro, de pie con los once, levantó la voz y les explicó las Escrituras. (Hch 2,14)",
+              "📖 Les anunció que Jesús había resucitado y que Dios lo había constituido Señor y Mesías. (Hch 2,36)",
+              "📖 Al oír esto, se compungieron de corazón y preguntaron: «¿Qué tenemos que hacer?» (Hch 2,37)",
+              "📖 Pedro les dijo: «Convertíos y bautizaos en el nombre de Jesucristo.» (Hch 2,38)",
+              "📖 Ese día se bautizaron unas tres mil personas. (Hch 2,41)"
+            ]
+          },
+          { // Misterio 4: Asunción de María
+            title: "4. La Asunción de María",
+            fragments: [
+              "📖 María, cumplido el curso de su vida terrena, fue llevada en cuerpo y alma a la gloria del cielo. (Constitución Munificentissimus Deus, Pío XII)",
+              "📖 Es la Mujer vestida de sol, con la luna bajo sus pies. (Ap 12,1)",
+              "📖 El arca de la alianza, hecha de madera incorruptible, prefiguraba a la Virgen asunta al cielo. (CIC 966)",
+              "📖 Ella es la nueva Eva asociada plenamente a la victoria de su Hijo. (CIC 966)",
+              "📖 La Asunción es una verdad de fe definida por la Iglesia en 1950. (Munificentissimus Deus)",
+              "📖 «Ha hecho en mí maravillas el Poderoso, Santo es su nombre.» (Lc 1,49)",
+              "📖 Desde el cielo, María es madre de todos los que viven en Cristo. (Ap 12,17)",
+              "📖 Su cuerpo y alma glorificados anticipan la resurrección de todos los justos. (CIC 966)",
+              "📖 Elevada a la gloria, intercede por nosotros como abogada y auxiliadora. (CIC 969)",
+              "📖 La Asunción es signo de esperanza cierta para el pueblo de Dios en peregrinación. (CIC 974)",
+              "📖 «Todas las generaciones me llamarán bienaventurada.» (Lc 1,48)"
+            ]
+          },
+          { // Misterio 5: Coronación de María
+            title: "5. La Coronación de María",
+            fragments: [
+              "📖 Mujer vestida de sol, con la luna bajo sus pies y una corona de doce estrellas sobre su cabeza. (Ap 12,1)",
+              "📖 La corona de doce estrellas simboliza su reinado sobre los doce patriarcas y los doce apóstoles. (CIC)",
+              "📖 Reina de ángeles, patriarcas, profetas, apóstoles, mártires y todos los santos. (Letanías)",
+              "📖 Ha sido exaltada por encima de todos los coros angélicos. (Santo Tomás de Aquino)",
+              "📖 María es Reina en virtud de su excelsa dignidad de Madre de Dios. (CIC 966)",
+              "📖 «Alégrate, Reina del cielo, aleluya.» (Secuencia)",
+              "📖 Desde su trono, dispensa gracias y misericordia. (San Bernardo)",
+              "📖 Por eso la invocamos como Madre de misericordia, vida, dulzura y esperanza nuestra. (Salve Regina)",
+              "📖 Su corona es también la de una madre que intercede por sus hijos. (Jn 19,27)",
+              "📖 Santa María, Reina del Santísimo Rosario, ruega por nosotros. (Letanías)",
+              "📖 Y al final del camino, ella nos espera para mostrarnos a Jesús, fruto bendito de su vientre. (Salve Regina)"
+            ]
+          }
+        ]
       }
     }
   };
 
-  // ==================== LÓGICA DEL ROSARIO ====================
+  // ==================== LÓGICA DE SECUENCIA ====================
   let idiomaActual = 'es';
   let misterioActual = 'joyful';
   let secuencia = [];
@@ -401,7 +664,7 @@
 
   function construirSecuencia() {
     const lang = rosarioContent[idiomaActual];
-    const misterioData = lang.mysteries[misterioActual];
+    const misteriosList = lang.mysteries[misterioActual];
     const seq = [];
 
     // Oraciones iniciales
@@ -412,14 +675,15 @@
     seq.push({ tipo: 'oracion', key: 'gloria', titulo: 'Gloria', texto: lang.prayers.gloria });
 
     // 5 misterios
-    for (let m = 0; m < 5; m++) {
+    for (let m = 0; m < misteriosList.length; m++) {
+      const misterio = misteriosList[m];
       // Anuncio del misterio
-      seq.push({ tipo: 'anuncio', misterioIdx: m, titulo: `${m+1}° ${misterioData.title} - ${misterioData.fragments[m].split(':')[0]}` });
-      // Padre Nuestro (fragmento índice 0 del misterio)
-      seq.push({ tipo: 'oracion', key: 'our_father', titulo: 'Padre Nuestro', texto: lang.prayers.our_father, fragmento: misterioData.fragments[0] });
-      // 10 Avemarías (fragmentos 1..10)
+      seq.push({ tipo: 'anuncio', titulo: misterio.title });
+      // Padre Nuestro (fragmento 0)
+      seq.push({ tipo: 'oracion', key: 'our_father', titulo: 'Padre Nuestro', texto: lang.prayers.our_father, fragmento: misterio.fragments[0] });
+      // 10 Avemarías (fragmentos 1 a 10)
       for (let a = 1; a <= 10; a++) {
-        seq.push({ tipo: 'oracion', key: 'hail_mary', titulo: 'Ave María', texto: lang.prayers.hail_mary, fragmento: misterioData.fragments[a] });
+        seq.push({ tipo: 'oracion', key: 'hail_mary', titulo: 'Ave María', texto: lang.prayers.hail_mary, fragmento: misterio.fragments[a] });
       }
       seq.push({ tipo: 'oracion', key: 'gloria', titulo: 'Gloria', texto: lang.prayers.gloria });
       seq.push({ tipo: 'oracion', key: 'fatima_prayer', titulo: 'Oración de Fátima', texto: lang.prayers.fatima_prayer });
@@ -524,7 +788,8 @@
     secuencia = construirSecuencia();
     indiceActual = -1;
     actualizarUI();
-    infoMisterio.textContent = rosarioContent[idiomaActual].mysteries[misterioActual].title;
+    const misterioNombre = rosarioContent[idiomaActual].mysteries[misterioActual][0]?.title.split('.')[0] || '';
+    infoMisterio.textContent = `Misterios ${misterioActual === 'joyful' ? 'Gozosos' : misterioActual === 'luminous' ? 'Luminosos' : misterioActual === 'sorrowful' ? 'Dolorosos' : 'Gloriosos'}`;
   }
 
   // Eventos
