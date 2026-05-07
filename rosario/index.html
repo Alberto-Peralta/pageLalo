@@ -1,805 +1,1299 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rosario Interactivo · Lalo Peralta</title>
-  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <style>
-    /* ========== ESTILOS (igual al index principal) ========== */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santo Rosario — Lalo Peralta</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    :root {
-      --azul:       #185FA5;
-      --azul-claro: #E6F1FB;
-      --azul-mid:   #378ADD;
-      --texto:      #1a1a1a;
-      --texto-muted:#6b7280;
-      --borde:      rgba(0,0,0,0.08);
-      --borde-hover:rgba(0,0,0,0.18);
-      --fondo:      #ffffff;
-      --fondo-sec:  #f8f9fa;
-      --radio-card: 12px;
-      --radio-sm:   8px;
-    }
+    <style>
+        /* =============================================
+           DESIGN TOKENS — Idénticos al index principal
+           ============================================= */
+        :root {
+            --azul:       #185FA5;
+            --azul-claro: #E6F1FB;
+            --azul-mid:   #378ADD;
+            --azul-dark:  #0d4d8a;
+            --texto:      #1a1a1a;
+            --texto-muted:#6b7280;
+            --borde:      rgba(0,0,0,0.08);
+            --borde-hover:rgba(0,0,0,0.18);
+            --fondo:      #ffffff;
+            --fondo-sec:  #f8f9fa;
+            --radio-card: 12px;
+            --radio-sm:   8px;
+            --oro:        #c9a84c;
+            --oro-claro:  #f5e9c8;
+        }
 
-    body {
-      font-family: 'DM Sans', sans-serif;
-      background: linear-gradient(135deg, #1a2a5e 0%, #294197 50%, #3d5bb8 100%);
-      background-attachment: fixed;
-      color: var(--texto);
-      -webkit-font-smoothing: antialiased;
-      min-height: 100vh;
-      position: relative;
-    }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
-    body::before {
-      content: '';
-      position: fixed;
-      top: -50%;
-      right: -50%;
-      width: 200%;
-      height: 200%;
-      background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
-      animation: shine 15s linear infinite;
-      pointer-events: none;
-    }
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--fondo-sec);
+            color: var(--texto);
+            -webkit-font-smoothing: antialiased;
+            min-height: 100vh;
+        }
 
-    @keyframes shine {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
+        /* ---- NAVBAR (igual que index) ---- */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 1.25rem;
+            background: var(--fondo);
+            border-bottom: 1px solid var(--borde);
+        }
+        .logo {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--texto);
+            letter-spacing: 0.01em;
+            text-decoration: none;
+        }
+        .logo span { color: var(--azul); }
 
-    .navbar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 1rem 1.25rem;
-      background: var(--fondo);
-      border-bottom: 1px solid var(--borde);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
+        .menu-toggle {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 5px;
+            width: 36px;
+            height: 36px;
+            background: none;
+            border: 1px solid var(--borde);
+            border-radius: var(--radio-sm);
+            cursor: pointer;
+            padding: 8px;
+        }
+        .menu-toggle span {
+            display: block;
+            height: 1.5px;
+            background: var(--texto);
+            border-radius: 2px;
+            transition: all 0.2s;
+        }
+        .menu-toggle span:last-child { width: 65%; }
 
-    .logo {
-      font-family: 'Crimson Pro', serif;
-      font-size: 1.3rem;
-      font-weight: 600;
-      color: var(--texto);
-    }
-    .logo span { color: var(--azul); }
+        .menu {
+            display: none;
+            list-style: none;
+            position: absolute;
+            top: calc(100% + 4px);
+            left: 0;
+            width: 100%;
+            background: var(--fondo);
+            border-bottom: 1px solid var(--borde);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+            z-index: 999;
+            animation: slideDown 0.2s ease-out;
+        }
+        .menu.show { display: block; }
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-6px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+        .menu li { border-bottom: 1px solid var(--borde); }
+        .menu li:last-child { border-bottom: none; }
+        .menu li a {
+            display: block;
+            padding: 0.85rem 1.25rem;
+            color: var(--texto);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 400;
+            transition: background 0.15s;
+        }
+        .menu li a:hover { background: var(--fondo-sec); }
 
-    .btn-volver {
-      background: transparent;
-      border: 1px solid var(--borde-hover);
-      padding: 0.4rem 1rem;
-      border-radius: 30px;
-      font-size: 0.85rem;
-      font-weight: 500;
-      text-decoration: none;
-      color: var(--texto);
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      transition: all 0.2s;
-    }
-    .btn-volver:hover {
-      background: var(--fondo-sec);
-      border-color: var(--azul);
-      color: var(--azul);
-    }
+        /* =============================================
+           HERO DEL ROSARIO
+           ============================================= */
+        .rosary-hero {
+            background: var(--fondo);
+            border-bottom: 1px solid var(--borde);
+            padding: 2rem 1.25rem 1.5rem;
+        }
+        .hero-eyebrow {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.7rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--azul);
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+        .hero-eyebrow::before {
+            content: '';
+            display: block;
+            width: 20px;
+            height: 1px;
+            background: var(--azul);
+        }
+        .rosary-hero h1 {
+            font-family: 'Crimson Pro', serif;
+            font-size: 2.2rem;
+            font-weight: 300;
+            line-height: 1.15;
+            color: var(--texto);
+            margin-bottom: 0.4rem;
+        }
+        .rosary-hero h1 em {
+            font-style: italic;
+            color: var(--azul);
+        }
 
-    .rosario-container {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 1rem;
-      position: relative;
-      z-index: 1;
-    }
-    .rosario-card {
-      background: linear-gradient(135deg, #ffffff 0%, #f0f4ff 100%);
-      border-radius: 28px;
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
-      padding: 1.8rem;
-      border: 1px solid rgba(41, 65, 151, 0.2);
-    }
-    .rosario-header {
-      text-align: center;
-      margin-bottom: 1.5rem;
-    }
-    .rosario-header h1 {
-      font-family: 'Crimson Pro', serif;
-      font-size: 2rem;
-      color: var(--azul);
-    }
-    .misterio-actual {
-      font-size: 0.85rem;
-      color: var(--texto-muted);
-      margin-top: 0.3rem;
-    }
-    .selectores {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      margin-bottom: 1rem;
-    }
-    .selectores select {
-      background: var(--fondo);
-      border: 1px solid var(--borde-hover);
-      border-radius: 30px;
-      padding: 0.4rem 1rem;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.8rem;
-      color: var(--texto);
-    }
-    .oracion-area {
-      background: var(--fondo-sec);
-      border-radius: 20px;
-      padding: 1.5rem;
-      margin: 1rem 0;
-      min-height: 320px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-    .oracion-title {
-      font-family: 'Crimson Pro', serif;
-      font-size: 1.5rem;
-      color: var(--azul);
-      margin-bottom: 1rem;
-      text-align: center;
-    }
-    .oracion-texto {
-      font-family: 'Crimson Pro', serif;
-      font-size: 1.2rem;
-      line-height: 1.6;
-      text-align: center;
-      white-space: pre-wrap;
-      color: var(--texto);
-    }
-    .reflexion {
-      margin-top: 1rem;
-      padding-top: 1rem;
-      border-top: 2px solid rgba(41, 65, 151, 0.15);
-      font-size: 0.95rem;
-      font-style: italic;
-      color: var(--azul-mid);
-      text-align: center;
-    }
-    .cuentas-area {
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin: 1rem 0;
-    }
-    .cuenta {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background: rgba(41, 65, 151, 0.1);
-      border: 2px solid var(--azul);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      color: var(--azul);
-      transition: all 0.3s;
-    }
-    .cuenta.active {
-      background: var(--azul);
-      color: white;
-      transform: scale(1.1);
-      box-shadow: 0 0 10px rgba(24, 95, 165, 0.5);
-    }
-    .cuenta.completada {
-      background: var(--azul-claro);
-      border-color: var(--azul-mid);
-      color: var(--azul-mid);
-      opacity: 0.7;
-    }
-    .controles-rosario {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin-top: 1.5rem;
-    }
-    .btn-rosario {
-      padding: 0.7rem 1.5rem;
-      border-radius: 40px;
-      font-weight: 600;
-      font-size: 0.9rem;
-      border: none;
-      cursor: pointer;
-      transition: all 0.2s;
-      font-family: 'DM Sans', sans-serif;
-    }
-    .btn-primary-rosario {
-      background: var(--azul);
-      color: white;
-      box-shadow: 0 4px 10px rgba(24, 95, 165, 0.3);
-    }
-    .btn-primary-rosario:hover {
-      background: #0d4d8a;
-      transform: translateY(-2px);
-    }
-    .btn-secundario {
-      background: transparent;
-      border: 1px solid var(--azul);
-      color: var(--azul);
-    }
-    .btn-secundario:hover {
-      background: var(--azul-claro);
-    }
-    .mensaje {
-      text-align: center;
-      margin-top: 0.5rem;
-      font-size: 0.85rem;
-      color: var(--texto-muted);
-    }
-    @media (max-width: 640px) {
-      .rosario-card { padding: 1.2rem; }
-      .oracion-texto { font-size: 1rem; }
-      .oracion-title { font-size: 1.2rem; }
-      .cuenta { width: 32px; height: 32px; font-size: 0.8rem; }
-      .btn-rosario { padding: 0.5rem 1rem; }
-    }
-  </style>
+        /* =============================================
+           IMAGEN DE FONDO DEL MISTERIO (solo imagen, sin full-screen)
+           ============================================= */
+        .mystery-image-wrap {
+            position: relative;
+            width: 100%;
+            height: 220px;
+            overflow: hidden;
+            background: var(--fondo-sec);
+        }
+        .mystery-image-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+            transition: opacity 0.7s ease, transform 6s ease;
+        }
+        .mystery-image-wrap::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, transparent 40%, rgba(255,255,255,0.95) 100%);
+        }
+
+        /* =============================================
+           SELECTORES DE IDIOMA Y MISTERIO
+           ============================================= */
+        .controls-bar {
+            background: var(--fondo);
+            border-bottom: 1px solid var(--borde);
+            padding: 0.75rem 1.25rem;
+            display: flex;
+            gap: 10px;
+        }
+        .controls-bar select {
+            flex: 1;
+            padding: 8px 10px;
+            border: 1px solid var(--borde-hover);
+            border-radius: var(--radio-sm);
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.82rem;
+            color: var(--texto);
+            background: var(--fondo);
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236b7280' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            padding-right: 28px;
+        }
+        .controls-bar select:focus { outline: none; border-color: var(--azul); }
+
+        /* =============================================
+           ÁREA PRINCIPAL DEL ROSARIO
+           ============================================= */
+        .rosary-main {
+            padding: 0 1.25rem 6rem;
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        /* Barra de progreso */
+        .progress-wrap {
+            padding: 1rem 0 0.25rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .progress-track {
+            flex: 1;
+            height: 3px;
+            background: var(--borde-hover);
+            border-radius: 99px;
+            overflow: hidden;
+        }
+        .progress-fill {
+            height: 100%;
+            background: var(--azul);
+            border-radius: 99px;
+            transition: width 0.5s ease;
+            width: 0%;
+        }
+        .progress-label {
+            font-size: 0.7rem;
+            color: var(--texto-muted);
+            white-space: nowrap;
+        }
+
+        /* Tarjeta de oración */
+        .prayer-card {
+            background: var(--fondo);
+            border: 1px solid var(--borde);
+            border-radius: var(--radio-card);
+            margin-top: 1rem;
+            overflow: hidden;
+            transition: box-shadow 0.3s;
+        }
+
+        .prayer-card-header {
+            padding: 1rem 1.25rem 0.75rem;
+            border-bottom: 1px solid var(--borde);
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        .prayer-type-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            background: var(--azul-claro);
+            color: var(--azul);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        .prayer-type-icon.gold {
+            background: var(--oro-claro);
+            color: var(--oro);
+        }
+        .prayer-card-title {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--texto);
+            line-height: 1.2;
+        }
+        .prayer-card-subtitle {
+            font-size: 0.72rem;
+            color: var(--texto-muted);
+            margin-top: 2px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        .prayer-card-body {
+            padding: 1.25rem;
+        }
+
+        /* Texto de la oración */
+        #prayer-text {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.2rem;
+            line-height: 1.75;
+            color: var(--texto);
+            white-space: pre-wrap;
+        }
+
+        /* Bloque del misterio: anuncio completo */
+        .mystery-block { }
+        .mystery-citation {
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: var(--azul);
+            margin-bottom: 0.5rem;
+        }
+        .mystery-verse {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.25rem;
+            font-style: italic;
+            line-height: 1.55;
+            color: var(--texto);
+            border-left: 3px solid var(--azul);
+            padding-left: 1rem;
+            margin-bottom: 1rem;
+        }
+        .mystery-reflection {
+            font-size: 0.88rem;
+            line-height: 1.65;
+            color: var(--texto-muted);
+        }
+
+        /* Fragmento durante las oraciones */
+        .fragment-wrap {
+            margin-top: 1.25rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--borde);
+        }
+        .fragment-label {
+            font-size: 0.68rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--oro);
+            font-weight: 500;
+            margin-bottom: 0.4rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .fragment-label::before {
+            content: '';
+            display: block;
+            width: 14px;
+            height: 1px;
+            background: var(--oro);
+        }
+        .fragment-text {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.05rem;
+            font-style: italic;
+            line-height: 1.6;
+            color: var(--texto);
+        }
+
+        /* Contador de cuentas */
+        .beads-wrap {
+            padding: 0 1.25rem 1rem;
+        }
+        .bead-counter {
+            font-size: 0.72rem;
+            color: var(--texto-muted);
+            letter-spacing: 0.05em;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+        .beads-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 6px;
+        }
+        .bead {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: var(--fondo-sec);
+            border: 1.5px solid var(--borde-hover);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            color: var(--texto-muted);
+            transition: all 0.25s;
+            flex-shrink: 0;
+        }
+        .bead.completed {
+            background: var(--azul-claro);
+            border-color: var(--azul);
+            color: var(--azul);
+        }
+        .bead.active {
+            background: var(--azul);
+            border-color: var(--azul);
+            color: #fff;
+            transform: scale(1.2);
+            box-shadow: 0 2px 8px rgba(24,95,165,0.35);
+        }
+        .bead.heart.active { background: #c0392b; border-color: #c0392b; }
+        .bead.heart.completed { background: #fdecea; border-color: #e57373; color: #c0392b; }
+
+        /* Pantalla de bienvenida */
+        .welcome-card {
+            background: var(--fondo);
+            border: 1px solid var(--borde);
+            border-radius: var(--radio-card);
+            margin-top: 1.25rem;
+            padding: 2rem 1.5rem;
+            text-align: center;
+        }
+        .welcome-card .icon {
+            font-size: 2.5rem;
+            color: var(--azul);
+            margin-bottom: 1rem;
+        }
+        .welcome-card h2 {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.6rem;
+            font-weight: 400;
+            margin-bottom: 0.75rem;
+        }
+        .welcome-card p {
+            font-size: 0.9rem;
+            color: var(--texto-muted);
+            line-height: 1.65;
+            max-width: 320px;
+            margin: 0 auto 1.5rem;
+        }
+
+        /* Pantalla final */
+        .end-card {
+            background: var(--azul-claro);
+            border: 1px solid rgba(24,95,165,0.2);
+            border-radius: var(--radio-card);
+            margin-top: 1.25rem;
+            padding: 2rem 1.5rem;
+            text-align: center;
+        }
+        .end-card .icon { font-size: 2.5rem; margin-bottom: 0.75rem; }
+        .end-card h2 {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--azul);
+            margin-bottom: 0.5rem;
+        }
+        .end-card p {
+            font-size: 0.88rem;
+            color: var(--azul);
+            opacity: 0.8;
+        }
+
+        /* =============================================
+           BARRA DE NAVEGACIÓN FLOTANTE
+           ============================================= */
+        .nav-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--fondo);
+            border-top: 1px solid var(--borde);
+            padding: 0.75rem 1.25rem;
+            display: flex;
+            gap: 10px;
+            z-index: 50;
+            max-width: 680px;
+            margin: 0 auto;
+        }
+        /* Para centrar la barra en pantallas grandes */
+        @media (min-width: 680px) {
+            .nav-bar {
+                left: 50%;
+                transform: translateX(-50%);
+                border-radius: 0;
+                border-left: 1px solid var(--borde);
+                border-right: 1px solid var(--borde);
+            }
+        }
+
+        .btn-nav {
+            flex: 1;
+            padding: 11px 16px;
+            border-radius: var(--radio-sm);
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.88rem;
+            font-weight: 500;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+        .btn-prev {
+            background: transparent;
+            color: var(--texto-muted);
+            border: 1px solid var(--borde-hover);
+        }
+        .btn-prev:hover:not(:disabled) {
+            border-color: var(--azul);
+            color: var(--azul);
+        }
+        .btn-prev:disabled { opacity: 0.35; cursor: not-allowed; }
+        .btn-next {
+            background: var(--azul);
+            color: #fff;
+        }
+        .btn-next:hover { background: var(--azul-dark); }
+        .btn-next.restart { background: #2d7a2d; }
+        .btn-next.restart:hover { background: #1e5c1e; }
+
+        /* =============================================
+           STATES
+           ============================================= */
+        .hidden { display: none !important; }
+
+        /* animación de entrada */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+        .prayer-card, .welcome-card, .end-card {
+            animation: fadeUp 0.3s ease-out;
+        }
+
+        @media (max-width: 480px) {
+            .rosary-hero h1 { font-size: 1.8rem; }
+            #prayer-text { font-size: 1.1rem; }
+            .mystery-verse { font-size: 1.1rem; }
+        }
+    </style>
 </head>
 <body>
 
-<nav class="navbar">
-  <div class="logo">Lalo <span>Peralta</span></div>
-  <a href="../index.html" class="btn-volver"><i class="fas fa-arrow-left"></i> Volver al inicio</a>
-</nav>
+    <!-- NAVBAR (igual que el index) -->
+    <header>
+        <nav class="navbar">
+            <a href="../index.html" class="logo">Lalo <span>Peralta</span></a>
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Abrir menú">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="menu" id="menu">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="#">Rosario</a></li>
+                <li><a href="../coronilla/index.html">Coronilla</a></li>
+                <li><a href="../biblia/index.html">Biblia</a></li>
+                <li><a href="../intenciones/index.html">Intenciones</a></li>
+                <li><a href="../misalYLiturgiaDeLasHoras/chat.html">Chat</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<div class="rosario-container">
-  <div class="rosario-card">
-    <div class="rosario-header">
-      <h1><i class="fas fa-praying-hands"></i> Santo Rosario</h1>
-      <div class="misterio-actual" id="info-misterio"></div>
+    <!-- IMAGEN DEL MISTERIO -->
+    <div class="mystery-image-wrap" id="mystery-image-wrap">
+        <img id="mystery-img" src="images/default.jpg" alt="Misterio" />
     </div>
 
-    <div class="selectores">
-      <select id="idioma-select">
-        <option value="es">🇪🇸 Español</option>
-      </select>
-      <select id="misterio-select">
-        <option value="joyful">🌹 Misterios Gozosos (Lun/Sáb)</option>
-        <option value="luminous">💡 Misterios Luminosos (Jue)</option>
-        <option value="sorrowful">✝️ Misterios Dolorosos (Mar/Vie)</option>
-        <option value="glorious">👑 Misterios Gloriosos (Mié/Dom)</option>
-      </select>
+    <!-- HERO -->
+    <div class="rosary-hero">
+        <div class="hero-eyebrow">Oración contemplativa</div>
+        <h1>Santo <em>Rosario</em></h1>
     </div>
 
-    <div id="oracion-area" class="oracion-area">
-      <div id="oracion-title" class="oracion-title"></div>
-      <div id="oracion-texto" class="oracion-texto"></div>
-      <div id="reflexion-fragmento" class="reflexion"></div>
+    <!-- SELECTORES -->
+    <div class="controls-bar" id="controls-bar">
+        <select id="language-select">
+            <option value="es">Español</option>
+            <option value="it">Italiano</option>
+            <option value="la">Latín</option>
+        </select>
+        <select id="mystery-select">
+            <option value="joyful">Gozosos (Lun, Sáb)</option>
+            <option value="luminous">Luminosos (Jue)</option>
+            <option value="sorrowful">Dolorosos (Mar, Vie)</option>
+            <option value="glorious">Gloriosos (Mié, Dom)</option>
+        </select>
     </div>
 
-    <div id="cuentas-container" class="cuentas-area"></div>
-    <div id="contador-texto" class="mensaje"></div>
+    <!-- MAIN -->
+    <div class="rosary-main">
 
-    <div class="controles-rosario">
-      <button id="btn-anterior" class="btn-rosario btn-secundario"><i class="fas fa-chevron-left"></i> Anterior</button>
-      <button id="btn-siguiente" class="btn-rosario btn-primary-rosario">Siguiente <i class="fas fa-chevron-right"></i></button>
-      <button id="btn-reiniciar" class="btn-rosario btn-secundario"><i class="fas fa-sync-alt"></i> Reiniciar</button>
+        <!-- Progreso -->
+        <div class="progress-wrap" id="progress-wrap">
+            <div class="progress-track">
+                <div class="progress-fill" id="progress-fill"></div>
+            </div>
+            <span class="progress-label" id="progress-label">0%</span>
+        </div>
+
+        <!-- Contenido dinámico -->
+        <div id="content-area"></div>
+
+        <!-- Cuentas -->
+        <div class="beads-wrap" id="beads-wrap">
+            <div class="bead-counter" id="bead-counter"></div>
+            <div class="beads-row" id="beads-row"></div>
+        </div>
+
     </div>
-  </div>
-</div>
 
+    <!-- NAVEGACIÓN FLOTANTE -->
+    <div class="nav-bar">
+        <button class="btn-nav btn-prev" id="prev-btn">
+            <i class="fas fa-chevron-left"></i> Anterior
+        </button>
+        <button class="btn-nav btn-next" id="next-btn">
+            Siguiente <i class="fas fa-chevron-right"></i>
+        </button>
+    </div>
+
+<!-- =============================================
+     DATOS Y LÓGICA
+     ============================================= -->
 <script>
-  // ==================== CONTENIDO COMPLETO EN ESPAÑOL ====================
-  const rosarioContent = {
+// ------------------------------------------------
+// DATOS DEL ROSARIO
+// ------------------------------------------------
+const rosaryContent = {
     es: {
-      prayers: {
-        sign_of_cross: "Por la señal de la Santa Cruz, de nuestros enemigos, líbranos Señor, Dios nuestro.\nEn el nombre del Padre, y del Hijo, y del Espíritu Santo. Amén.",
-        versicle: "V. Dios mío, ven en mi auxilio.\nR. Señor, date prisa en socorrerme.",
-        creed: "Creo en Dios, Padre todopoderoso, Creador del cielo y de la tierra.\nCreo en Jesucristo, su único Hijo, nuestro Señor, que fue concebido por obra y gracia del Espíritu Santo, nació de Santa María Virgen, padeció bajo el poder de Poncio Pilato, fue crucificado, muerto y sepultado, descendió a los infiernos, al tercer día resucitó de entre los muertos, subió a los cielos y está sentado a la derecha de Dios, Padre todopoderoso. Desde allí ha de venir a juzgar a vivos y muertos.\nCreo en el Espíritu Santo, la santa Iglesia católica, la comunión de los santos, el perdón de los pecados, la resurrección de la carne y la vida eterna. Amén.",
-        our_father: "Padre nuestro, que estás en el cielo, santificado sea tu Nombre; venga a nosotros tu reino; hágase tu voluntad, en la tierra como en el cielo.\nDanos hoy nuestro pan de cada día; perdona nuestras ofensas, como también nosotros perdonamos a los que nos ofenden; no nos dejes caer en la tentación y líbranos del mal. Amén.",
-        hail_mary: "Dios te salve, María, llena eres de gracia; el Señor es contigo. Bendita Tú eres entre todas las mujeres, y bendito es el fruto de tu vientre, Jesús.\nSanta María, Madre de Dios, ruega por nosotros, pecadores, ahora y en la hora de nuestra muerte. Amén.",
-        gloria: "Gloria al Padre, y al Hijo, y al Espíritu Santo.\nComo era en el principio, ahora y siempre, por los siglos de los siglos. Amén.",
-        fatima_prayer: "Oh, Jesús mío, perdona nuestros pecados, líbranos del fuego del infierno, lleva al cielo a todas las almas, especialmente a las más necesitadas de tu divina misericordia.",
-        salve_regina: "Dios te salve, Reina y Madre de misericordia, vida, dulzura y esperanza nuestra; Dios te salve.\nA Ti llamamos los desterrados hijos de Eva; a Ti suspiramos, gimiendo y llorando, en este valle de lágrimas.\nEa, pues, Señora, abogada nuestra, vuelve a nosotros esos tus ojos misericordiosos; y después de este destierro, muéstranos a Jesús, fruto bendito de tu vientre.\n¡Oh clemente, oh piadosa, oh dulce siempre Virgen María!\nRuega por nosotros, Santa Madre de Dios, para que seamos dignos de alcanzar las promesas de Nuestro Señor Jesucristo. Amén.",
-        pope_intentions: "Por las intenciones del Santo Padre, por la Santa Iglesia y por nuestras necesidades.",
-        final_sign_of_cross: "En el nombre del Padre, y del Hijo, y del Espíritu Santo. Amén."
-      },
-      mysteries: {
-        joyful: [
-          { // Misterio 1: La Anunciación
-            title: "1. La Anunciación",
-            fragments: [
-              "📖 El ángel Gabriel fue enviado por Dios a una ciudad de Galilea, llamada Nazaret, a una virgen desposada con un hombre llamado José, de la casa de David; el nombre de la virgen era María. (Lc 1,26-27)",
-              "📖 Y entrando el ángel donde ella estaba, dijo: «¡Alégrate, llena de gracia! El Señor está contigo.» (Lc 1,28)",
-              "📖 Ella se turbó por estas palabras y pensaba qué significaría aquel saludo. (Lc 1,29)",
-              "📖 El ángel le dijo: «No temas, María, porque has hallado gracia delante de Dios.» (Lc 1,30)",
-              "📖 «Concebirás en tu seno y darás a luz un hijo, y le pondrás por nombre Jesús.» (Lc 1,31)",
-              "📖 «Será grande y será llamado Hijo del Altísimo, y el Señor Dios le dará el trono de David, su padre.» (Lc 1,32)",
-              "📖 María respondió: «¿Cómo será esto, puesto que no conozco varón?» (Lc 1,34)",
-              "📖 El ángel le contestó: «El Espíritu Santo vendrá sobre ti y el poder del Altísimo te cubrirá con su sombra.» (Lc 1,35)",
-              "📖 «Por eso el Santo que nacerá será llamado Hijo de Dios.» (Lc 1,35)",
-              "📖 Entonces María dijo: «He aquí la esclava del Señor; hágase en mí según tu palabra.» (Lc 1,38)",
-              "📖 Y el ángel se retiró de su presencia. (Lc 1,38)"
+        default_image: "default.jpg",
+        btn_prev: "Anterior",
+        btn_next: "Siguiente",
+        btn_finish: "Finalizar",
+        btn_restart: "🔄 Reiniciar",
+        mysteries: {
+            joyful: [
+                {
+                    title: "La Anunciación",
+                    image: "gozosos1.jpg",
+                    citation_text: "Evangelio según San Lucas (1, 28-38)",
+                    fragments: [
+                        "El ángel Gabriel fue enviado por Dios a una ciudad de Galilea llamada Nazaret, a una virgen desposada con un hombre llamado José, de la casa de David; el nombre de la virgen era María.",
+                        "El ángel, entrando a donde ella estaba, le dijo: «¡Alégrate, llena de gracia, el Señor está contigo!»",
+                        "Ella quedó desconcertada ante estas palabras y se preguntaba qué significaba tal saludo.",
+                        "El ángel le dijo: «No temas, María, porque has hallado gracia ante Dios. Concebirás y darás a luz un hijo, y le pondrás por nombre Jesús.»",
+                        "«Será grande y será llamado Hijo del Altísimo; el Señor Dios le dará el trono de David, su padre, y reinará sobre la casa de Jacob para siempre; su reino no tendrá fin.»",
+                        "María dijo al ángel: «¿Cómo podrá ser esto, si no conozco varón?»",
+                        "El ángel le contestó: «El Espíritu Santo vendrá sobre ti, y el poder del Altísimo te cubrirá con su sombra; por eso el Santo que va a nacer de ti será llamado Hijo de Dios.»",
+                        "«Porque nada hay imposible para Dios.»",
+                        "María dijo: «He aquí la esclava del Señor; hágase en mí según tu palabra.»",
+                        "Y el ángel se retiró de su presencia.",
+                        "Reflexión: La Anunciación inaugura la plenitud de los tiempos. María es llamada a concebir a Aquel en quien habita 'corporalmente la plenitud de la divinidad'. Su 'sí' abre las puertas de la salvación para toda la humanidad. (CIC, 484)"
+                    ]
+                },
+                {
+                    title: "La Visitación",
+                    image: "gozosos2.jpg",
+                    citation_text: "Evangelio según San Lucas (1, 41-45)",
+                    fragments: [
+                        "En aquellos días, María se puso en camino y fue a toda prisa a la ciudad de Judá, a la montaña.",
+                        "Entró en casa de Zacarías y saludó a Isabel.",
+                        "En cuanto Isabel oyó el saludo de María, saltó de gozo el niño en su seno.",
+                        "Isabel quedó llena del Espíritu Santo y exclamó en voz alta: «¡Bendita tú entre las mujeres, y bendito el fruto de tu vientre!»",
+                        "«¿Quién soy yo para que me visite la madre de mi Señor?»",
+                        "«Porque, en cuanto tu saludo llegó a mis oídos, saltó de gozo el niño en mi seno.»",
+                        "«¡Feliz la que ha creído que se cumplirían las cosas que le fueron dichas de parte del Señor!»",
+                        "Entonces María proclamó: «Engrandece mi alma al Señor, y mi espíritu se alegra en Dios, mi Salvador.»",
+                        "«Porque ha puesto los ojos en la humildad de su esclava; por eso todas las generaciones me llamarán bienaventurada.»",
+                        "«Porque el Poderoso ha hecho en mi favor maravillas; Santo es su nombre.»",
+                        "Reflexión: La visitación de María a Isabel se convirtió en visita de Dios a su pueblo. Isabel, 'llena de Espíritu Santo', es la primera en la larga serie de generaciones que llaman bienaventurada a María. (CIC, 717, 489)"
+                    ]
+                },
+                {
+                    title: "El Nacimiento de Jesús",
+                    image: "gozosos3.jpg",
+                    citation_text: "Evangelio según San Lucas (2, 6-11)",
+                    fragments: [
+                        "Mientras estaban en Belén, se le cumplió el tiempo del parto.",
+                        "Y dio a luz a su hijo primogénito, lo envolvió en pañales y lo acostó en un pesebre.",
+                        "No había lugar para ellos en el mesón.",
+                        "Había en aquella región unos pastores que dormían al raso y vigilaban por turno su rebaño durante la noche.",
+                        "El ángel del Señor se les apareció, y la gloria del Señor les envolvió con su luz; y se llenaron de un gran temor.",
+                        "El ángel les dijo: «No temáis, pues os anuncio una gran alegría, que lo será para todo el pueblo.»",
+                        "«Os ha nacido hoy, en la ciudad de David, un Salvador, que es el Cristo Señor.»",
+                        "«Y esto os servirá de señal: encontraréis un niño envuelto en pañales y acostado en un pesebre.»",
+                        "De pronto se juntó con el ángel una multitud del ejército celestial, que alababa a Dios diciendo: «¡Gloria a Dios en las alturas, y en la tierra paz a los hombres que Él ama!»",
+                        "Los pastores fueron a toda prisa, y encontraron a María y a José, y al niño acostado en el pesebre.",
+                        "Reflexión: Jesús nació en la humildad de un establo. En esta pobreza se manifiesta la gloria del cielo. Hacerse niño, pobre y obediente revela el amor de Dios que viene a salvar a la humanidad. (CIC, 525)"
+                    ]
+                },
+                {
+                    title: "La Presentación en el Templo",
+                    image: "gozosos4.jpg",
+                    citation_text: "Evangelio según San Lucas (2, 22-35)",
+                    fragments: [
+                        "Cuando llegaron los días de la purificación, según la ley de Moisés, llevaron a Jesús a Jerusalén para presentarle al Señor.",
+                        "Como está escrito en la ley del Señor: «Todo varón primogénito será consagrado al Señor.»",
+                        "Había en Jerusalén un hombre llamado Simeón, hombre justo y piadoso, que esperaba la consolación de Israel, y el Espíritu Santo estaba sobre él.",
+                        "Le había revelado el Espíritu Santo que no vería la muerte antes de haber visto al Cristo del Señor.",
+                        "Movido por el Espíritu, fue al Templo; y cuando los padres de Jesús le llevaron para cumplir lo que prescribía la Ley, él le tomó en brazos.",
+                        "Y bendijo a Dios diciendo: «Ahora, Señor, puedes dejar a tu siervo marcharse en paz, según tu palabra.»",
+                        "«Porque mis ojos han visto tu salvación, que has preparado ante todos los pueblos.»",
+                        "«Luz para iluminar a las naciones y gloria de tu pueblo Israel.»",
+                        "Simeón los bendijo y dijo a María su madre: «Mira, éste está puesto para caída y elevación de muchos en Israel.»",
+                        "«Y a ti misma una espada te atravesará el alma, para que queden al descubierto las intenciones de muchos corazones.»",
+                        "Reflexión: La Presentación de Jesús en el Templo lo muestra como el Primogénito que pertenece al Señor. La espada de dolor predicha a María anuncia otra oblación, perfecta y única, la de la Cruz. (CIC, 527, 529)"
+                    ]
+                },
+                {
+                    title: "El Niño Perdido y Hallado",
+                    image: "gozosos5.jpg",
+                    citation_text: "Evangelio según San Lucas (2, 41-50)",
+                    fragments: [
+                        "Sus padres iban todos los años a Jerusalén en la fiesta de la Pascua.",
+                        "Cuando Jesús tenía doce años, subieron como de costumbre a la fiesta.",
+                        "Al volver, el niño Jesús se quedó en Jerusalén, sin saberlo sus padres.",
+                        "Creyendo que estaba en la caravana, hicieron un día de camino, y le buscaban entre los parientes y conocidos.",
+                        "Al no encontrarle, volvieron a Jerusalén en su busca.",
+                        "Al tercer día le encontraron en el Templo, sentado en medio de los maestros.",
+                        "Les escuchaba y les hacía preguntas; todos los que le oían quedaban asombrados de su inteligencia y de sus respuestas.",
+                        "Al verle, quedaron sorprendidos, y su madre le dijo: «Hijo, ¿por qué nos has hecho esto? Mira, tu padre y yo te buscábamos angustiados.»",
+                        "Él les respondió: «¿Por qué me buscabais? ¿No sabíais que yo debo estar en las cosas de mi Padre?»",
+                        "Ellos no comprendieron la respuesta que les dio. Bajó con ellos y vino a Nazaret, y vivía sujeto a ellos.",
+                        "Reflexión: El hallazgo de Jesús en el Templo rompe el silencio de los Evangelios sobre los años ocultos de Jesús, revelando el misterio de su consagración total a la misión derivada de su filiación divina. (CIC, 534)"
+                    ]
+                }
+            ],
+            luminous: [
+                {
+                    title: "El Bautismo en el Jordán",
+                    image: "luminosos1.jpg",
+                    citation_text: "Evangelio según San Mateo (3, 13-17)",
+                    fragments: [
+                        "En aquel tiempo, Jesús vino desde Galilea al Jordán a ver a Juan para ser bautizado por él.",
+                        "Juan intentaba impedírselo, diciendo: «Soy yo quien necesita ser bautizado por ti, ¿y tú vienes a mí?»",
+                        "Jesús le contestó: «Déjalo ahora, pues conviene que cumplamos así toda justicia.» Entonces le dejó.",
+                        "Bautizado Jesús, salió luego del agua; y en esto se abrieron los cielos.",
+                        "Vio al Espíritu de Dios que bajaba en forma de paloma y venía sobre él.",
+                        "Y una voz que salía de los cielos decía: «Éste es mi Hijo amado, en quien me complazco.»",
+                        "El bautismo de Jesús es la aceptación y la inauguración de su misión de Siervo doliente.",
+                        "Se deja contar entre los pecadores; es ya 'el Cordero de Dios que quita el pecado del mundo'.",
+                        "El Espíritu desciende sobre Cristo como preludio de la nueva creación.",
+                        "El Padre manifiesta a Jesús como su 'Hijo amado', confirmando su identidad divina.",
+                        "Reflexión: Este misterio nos invita a renovar las gracias de nuestro propio bautismo y a vivir como hijos amados de Dios, siguiendo el ejemplo de Jesús. (CIC, 536)"
+                    ]
+                },
+                {
+                    title: "Las Bodas de Caná",
+                    image: "luminosos2.jpg",
+                    citation_text: "Evangelio según San Juan (2, 1-11)",
+                    fragments: [
+                        "Hubo una boda en Caná de Galilea, y la madre de Jesús estaba allí.",
+                        "Fue invitado también Jesús con sus discípulos a la boda.",
+                        "Y como el vino se acabara, la madre de Jesús le dijo: «No tienen vino.»",
+                        "Jesús le respondió: «¿Qué nos importa eso a mí y a ti? Todavía no ha llegado mi hora.»",
+                        "Su madre dijo a los sirvientes: «Haced lo que él os diga.»",
+                        "Había allí seis tinajas de piedra, destinadas a la purificación de los judíos, con una capacidad de dos o tres medidas cada una.",
+                        "Jesús les dijo: «Llenad las tinajas de agua.» Y las llenaron hasta arriba.",
+                        "Él les dijo: «Sacad ahora y llevadlo al maestresala.» Y ellos lo llevaron.",
+                        "El maestresala probó el agua convertida en vino y llamó al novio diciéndole: «Has guardado el vino bueno hasta ahora.»",
+                        "Así, en Caná de Galilea, Jesús comenzó sus señales, y manifestó su gloria, y creyeron en él sus discípulos.",
+                        "Reflexión: La Iglesia ve en este milagro la confirmación de la bondad del matrimonio y el anuncio de que en adelante será un signo eficaz de la presencia de Cristo. (CIC, 1613)"
+                    ]
+                },
+                {
+                    title: "El Anuncio del Reino",
+                    image: "luminosos3.jpg",
+                    citation_text: "Evangelio según San Marcos (1, 14-15) y San Lucas (17, 20-21)",
+                    fragments: [
+                        "Después de que Juan fue entregado, Jesús fue a Galilea predicando el Evangelio de Dios.",
+                        "Decía: «El tiempo se ha cumplido y el Reino de Dios está cerca.»",
+                        "«Convertíos y creed en la Buena Nueva.»",
+                        "Todos los hombres están llamados a entrar en el Reino, anunciado primero a los hijos de Israel.",
+                        "Este reino mesiánico está destinado a acoger a los hombres de todas las naciones.",
+                        "Para entrar en él, es necesario acoger la palabra de Jesús.",
+                        "«Bienaventurados los pobres de espíritu, porque de ellos es el Reino de los Cielos.»",
+                        "El Reino de Dios llega en la persona de Cristo y crece misteriosamente en el corazón de los que le son incorporados.",
+                        "Preguntado por los fariseos cuándo llegaría el Reino de Dios, les respondió: «El Reino de Dios no vendrá con apariencia llamativa.»",
+                        "«Ni dirán: ¡Vedlo aquí, o allá! porque el Reino de Dios está en medio de vosotros.»",
+                        "Reflexión: El Reino de Dios crece misteriosamente en el corazón de los fieles hasta su plenitud escatológica. La conversión y la fe son la puerta de entrada. (CIC, 543, 541)"
+                    ]
+                },
+                {
+                    title: "La Transfiguración",
+                    image: "luminosos4.jpg",
+                    citation_text: "Evangelio según San Mateo (17, 1-8)",
+                    fragments: [
+                        "Seis días después, Jesús tomó consigo a Pedro, a Santiago y a Juan, su hermano, y los llevó aparte, a un monte elevado.",
+                        "Y se transfiguró delante de ellos: su rostro se puso brillante como el sol.",
+                        "Y sus vestidos se volvieron blancos como la luz.",
+                        "Y se les aparecieron Moisés y Elías conversando con él.",
+                        "Pedro tomó la palabra y dijo a Jesús: «Señor, ¡qué bien se está aquí! Si quieres, haré aquí tres chozas.»",
+                        "Todavía estaba hablando cuando una nube luminosa les cubrió con su sombra.",
+                        "Y de la nube salió una voz que decía: «Éste es mi Hijo amado, en quien me complazco; escuchadle.»",
+                        "Al oírlo, los discípulos cayeron rostro en tierra, y quedaron llenos de gran temor.",
+                        "Jesús se acercó y, tocándoles, dijo: «Levantaos, no temáis.»",
+                        "Al alzar los ojos, no vieron a nadie más que a Jesús solo.",
+                        "Reflexión: La Transfiguración nos concede una prueba de la vida nueva: 'como Él, seremos nosotros'. Pero nos recuerda que es necesario pasar por la Cruz para entrar en gloria. (CIC, 554, 556)"
+                    ]
+                },
+                {
+                    title: "La Institución de la Eucaristía",
+                    image: "luminosos5.jpg",
+                    citation_text: "Primera Carta a los Corintios (11, 23-26) y San Lucas (22, 19-20)",
+                    fragments: [
+                        "Yo recibí del Señor lo que os he transmitido: que el Señor Jesús, la noche en que fue entregado, tomó pan.",
+                        "Y, dando gracias, lo partió y dijo: «Esto es mi cuerpo, que se entrega por vosotros.»",
+                        "«Haced esto en memoria mía.»",
+                        "De la misma manera tomó el cáliz después de cenar, diciendo: «Este cáliz es la nueva alianza en mi sangre.»",
+                        "«Haced esto, cada vez que lo bebáis, en memoria mía.»",
+                        "«Porque cada vez que coméis este pan y bebéis esta copa, proclamáis la muerte del Señor hasta que vuelva.»",
+                        "Jesús dio su sentido definitivo a la Pascua judía: su paso al Padre es anticipado en la Cena.",
+                        "La Eucaristía es la cumbre de toda la vida cristiana y la fuente de toda santidad.",
+                        "En ella, el sacrificio de Cristo se hace presente, se actualizan todas las gracias de la Pasión.",
+                        "Con la Eucaristía, Cristo nos alimenta con su propio Cuerpo y Sangre para que tengamos vida eterna.",
+                        "Reflexión: La Eucaristía, anticipada en la Última Cena, es el centro y cima de la vida cristiana, anticipo de la Pascua final de la Iglesia en la gloria del Reino. (CIC, 1340)"
+                    ]
+                }
+            ],
+            sorrowful: [
+                {
+                    title: "La Oración en el Huerto",
+                    image: "dolorosos1.jpg",
+                    citation_text: "Evangelio según San Lucas (22, 39-46)",
+                    fragments: [
+                        "Saliendo, Jesús fue, como de costumbre, al Monte de los Olivos; y los discípulos le siguieron.",
+                        "Llegado al lugar, les dijo: «Orad para que no entréis en tentación.»",
+                        "Él se alejó de ellos como un tiro de piedra, y puesto de rodillas, oraba.",
+                        "Decía: «Padre, si quieres, aparta de mí esta copa; pero no se haga mi voluntad, sino la tuya.»",
+                        "Se le apareció un ángel del cielo que le confortaba.",
+                        "Sumido en agonía, insistía más en su oración. Su sudor se hizo como gotas espesas de sangre que caían en tierra.",
+                        "Levantándose de la oración, fue a sus discípulos y los encontró dormidos de tristeza.",
+                        "Y les dijo: «¿Por qué dormís? Levantaos y orad para que no entréis en tentación.»",
+                        "La agonía de Jesús en Getsemaní representa la lucha de su voluntad humana contra la voluntad divina del Padre.",
+                        "Jesús, aun siendo Dios, experimenta el horror de la muerte y la angustia de la separación.",
+                        "Reflexión: Su oración nos enseña a conformar nuestra voluntad con la de Dios, especialmente en medio de la prueba y el sufrimiento. (CIC, 612)"
+                    ]
+                },
+                {
+                    title: "La Flagelación",
+                    image: "dolorosos2.jpg",
+                    citation_text: "Evangelio según San Juan (19, 1) e Isaías (53, 5)",
+                    fragments: [
+                        "Entonces Pilato tomó a Jesús y mandó azotarle.",
+                        "Los soldados lo llevaron al interior del palacio y reunieron a toda la cohorte.",
+                        "La flagelación fue un castigo brutal que formaba parte de la Pasión de Cristo, predicha por los profetas.",
+                        "El profeta Isaías había escrito siglos antes: «Él ha sido herido por nuestras rebeliones, molido por nuestras culpas.»",
+                        "«El castigo que nos trae la paz cayó sobre él, por sus llagas hemos sido curados.»",
+                        "«Como oveja fue llevado al matadero, como cordero mudo ante el que lo esquila, no abrió la boca.»",
+                        "A través de este sufrimiento físico extremo, Jesús carga sobre sí los pecados y dolores de toda la humanidad.",
+                        "Él soportó la ignominia de ser tratado como un criminal, siendo el Santo de Dios.",
+                        "«Llevó nuestras enfermedades y cargó con nuestros dolores.»",
+                        "Este misterio nos invita a unir nuestros propios sufrimientos a los de Cristo para la redención del mundo.",
+                        "Reflexión: Por sus llagas hemos sido curados (Is 53,5). El sufrimiento de Cristo tiene un valor redentor inmenso para toda la humanidad. (CIC, 614)"
+                    ]
+                },
+                {
+                    title: "La Coronación de Espinas",
+                    image: "dolorosos3.jpg",
+                    citation_text: "Evangelio según San Mateo (27, 27-31)",
+                    fragments: [
+                        "Los soldados del gobernador llevaron a Jesús al pretorio y reunieron en torno a él a toda la cohorte.",
+                        "Le desnudaron y le pusieron encima un manto de púrpura.",
+                        "Y trenzando una corona de espinas, se la pusieron sobre su cabeza, y en su mano derecha una caña.",
+                        "Y doblando la rodilla delante de él, le escarnecían diciendo: «¡Salve, Rey de los judíos!»",
+                        "Y escupiéndole, le quitaban la caña y le golpeaban en la cabeza con ella.",
+                        "La coronación de espinas es una burla cruel a la realeza de Cristo.",
+                        "Sin embargo, en esta humillación se revela la verdadera naturaleza de su Reino.",
+                        "Un reino no de poder terrenal, sino de amor, humildad y servicio.",
+                        "Jesús acepta la corona de dolor, transformando un símbolo de escarnio en un signo de su amor redentor.",
+                        "Después de haberle escarnecido, le quitaron el manto y le pusieron sus vestidos y le llevaron para crucificarle.",
+                        "Reflexión: La corona de espinas transforma el escarnio en símbolo del amor redentor y de la soberanía de Cristo sobre el pecado y la muerte. (CIC, 478)"
+                    ]
+                },
+                {
+                    title: "Jesús con la Cruz a Cuestas",
+                    image: "dolorosos4.jpg",
+                    citation_text: "Evangelio según San Juan (19, 17) y San Lucas (23, 27-31)",
+                    fragments: [
+                        "Él, cargando su cruz, salió al lugar llamado de la Calavera, que en hebreo se llama Gólgota.",
+                        "Le seguía una gran muchedumbre del pueblo y mujeres que se lamentaban y se dolían por él.",
+                        "Jesús, volviéndose a ellas, les dijo: «Hijas de Jerusalén, no lloréis por mí; llorad más bien por vosotras y por vuestros hijos.»",
+                        "Jesús carga con la cruz, en la que se encuentran todos nuestros pecados.",
+                        "El camino del Calvario es el camino de la obediencia y del amor hasta el extremo.",
+                        "Al abrazar la cruz, Jesús nos enseña que el sufrimiento, aceptado con amor, tiene un valor redentor.",
+                        "«El que no carga su cruz y me sigue no puede ser discípulo mío.»",
+                        "Nos invita a tomar nuestra propia cruz cada día y seguirle.",
+                        "Participa así en su obra de salvación todo aquel que une su sufrimiento al de Cristo.",
+                        "Como Simón de Cirene fue obligado a cargar la cruz, también nosotros somos llamados a ayudar a los que sufren.",
+                        "Reflexión: Al cargar la cruz, Jesús nos invita a tomar la nuestra cada día y seguirle, participando así en su obra de salvación. (CIC, 618)"
+                    ]
+                },
+                {
+                    title: "La Crucifixión y Muerte",
+                    image: "dolorosos5.jpg",
+                    citation_text: "Evangelio según San Lucas (23, 33-46)",
+                    fragments: [
+                        "Cuando llegaron al lugar llamado 'La Calavera', le crucificaron allí, y a los malhechores, uno a la derecha y otro a la izquierda.",
+                        "Jesús decía: «Padre, perdónales, porque no saben lo que hacen.»",
+                        "El pueblo estaba mirando; y los jefes se burlaban de él diciendo: «A otros salvó; que se salve a sí mismo, si él es el Cristo de Dios, el Elegido.»",
+                        "Uno de los malhechores crucificados le insultaba diciendo: «¿No eres tú el Cristo? Sálvate a ti mismo y a nosotros.»",
+                        "El otro, en cambio, le decía: «Jesús, acuérdate de mí cuando llegues a tu reino.»",
+                        "Y Jesús le dijo: «En verdad te digo: hoy estarás conmigo en el paraíso.»",
+                        "Era ya alrededor de la hora sexta cuando se produjo una oscuridad sobre toda la tierra hasta la hora nona.",
+                        "Jesús, clamando con voz fuerte, dijo: «Padre, en tus manos encomiendo mi espíritu.»",
+                        "Y, dicho esto, expiró.",
+                        "La muerte de Cristo es el sacrificio único y definitivo que reconcilia a la humanidad con Dios.",
+                        "Reflexión: En la cruz, Jesús nos entrega a su Madre y nos da el don del Espíritu Santo, abriendo las puertas de la vida eterna. (CIC, 606, 616)"
+                    ]
+                }
+            ],
+            glorious: [
+                {
+                    title: "La Resurrección",
+                    image: "gloriosos1.jpg",
+                    citation_text: "Evangelio según San Marcos (16, 1-8)",
+                    fragments: [
+                        "Pasado el sábado, María Magdalena, María la de Santiago y Salomé compraron aromas para ir a embalsamarle.",
+                        "Muy de mañana, el primer día de la semana, fueron al sepulcro, a la salida del sol.",
+                        "Decían entre sí: «¿Quién nos apartará la piedra de la entrada del sepulcro?»",
+                        "Pero al mirar vieron que la piedra —que era muy grande— había sido ya corrida.",
+                        "Entrando en el sepulcro, vieron a un joven sentado a la derecha, vestido con una túnica blanca, y se asustaron.",
+                        "Pero él les dijo: «No os asustéis. Buscáis a Jesús de Nazaret, el crucificado. Ha resucitado, no está aquí.»",
+                        "«Mirad el lugar donde le pusieron. Pero id, decid a sus discípulos y a Pedro que irá por delante de vosotros a Galilea.»",
+                        "«Allí le veréis, como os dijo.»",
+                        "La Resurrección de Jesús es la verdad culminante de nuestra fe en Cristo.",
+                        "Es la obra trascendente de Dios mismo; confirma la divinidad de Cristo.",
+                        "Reflexión: La Resurrección es la promesa de nuestra propia resurrección, fundamento de nuestra esperanza cristiana. (CIC, 638, 651)"
+                    ]
+                },
+                {
+                    title: "La Ascensión",
+                    image: "gloriosos2.jpg",
+                    citation_text: "Hechos de los Apóstoles (1, 9-11)",
+                    fragments: [
+                        "Dicho esto, fue levantado en presencia de ellos, y una nube le ocultó a sus ojos.",
+                        "Estaban mirando fijamente al cielo mientras él se iba, cuando se les aparecieron dos hombres vestidos de blanco.",
+                        "Y les dijeron: «Hombres de Galilea, ¿qué hacéis mirando al cielo?»",
+                        "«Este mismo Jesús que ha sido llevado de entre vosotros al cielo, volverá de la misma manera que le habéis visto ir al cielo.»",
+                        "La Ascensión de Cristo al cielo marca la entrada definitiva de la humanidad de Jesús en el dominio celestial de Dios.",
+                        "Desde allí ha de volver al fin de los tiempos para juzgar a vivos y muertos.",
+                        "Jesucristo, cabeza de la Iglesia, nos precede en el Reino glorioso del Padre.",
+                        "Para que nosotros, miembros de su cuerpo, vivamos en la esperanza de estar un día con Él eternamente.",
+                        "Jesús ascendió al cielo no para alejarse de nosotros, sino para estar más cerca de todos.",
+                        "Su cuerpo glorificado es ahora el puente entre el cielo y la tierra.",
+                        "Reflexión: La Ascensión nos recuerda que nuestra verdadera patria es el cielo; somos peregrinos en este mundo. (CIC, 665)"
+                    ]
+                },
+                {
+                    title: "La Venida del Espíritu Santo",
+                    image: "gloriosos3.jpg",
+                    citation_text: "Hechos de los Apóstoles (2, 1-4)",
+                    fragments: [
+                        "Al llegar el día de Pentecostés, estaban todos reunidos en un mismo lugar.",
+                        "De repente se produjo desde el cielo un ruido como el de una ráfaga de viento impetuoso, que llenó toda la casa en que se encontraban.",
+                        "Se les aparecieron unas lenguas como de fuego que se repartieron y se posaron sobre cada uno de ellos.",
+                        "Quedaron todos llenos del Espíritu Santo y se pusieron a hablar en otras lenguas, según el Espíritu les concedía expresarse.",
+                        "En el día de Pentecostés, la Pascua de Cristo se consuma con la efusión del Espíritu Santo.",
+                        "El Espíritu Santo se manifiesta, da y comunica como Persona divina.",
+                        "Desde su plenitud, Cristo, el Señor, derrama profusamente el Espíritu sobre la Iglesia.",
+                        "El Espíritu Santo viene a santificar a la Iglesia y a capacitar a los apóstoles.",
+                        "Pedro, lleno del Espíritu, se puso en pie y anunció con valentía a Cristo resucitado.",
+                        "Aquel día se añadieron a los discípulos unas tres mil personas: así nació la Iglesia.",
+                        "Reflexión: El Espíritu Santo, prometido por Cristo, es el alma de la Iglesia. Mora en nosotros y nos transforma en testigos del Evangelio. (CIC, 731)"
+                    ]
+                },
+                {
+                    title: "La Asunción de María",
+                    image: "gloriosos4.jpg",
+                    citation_text: "Evangelio según San Lucas (1, 46-55) y Apocalipsis (12, 1)",
+                    fragments: [
+                        "«Engrandece mi alma al Señor, y mi espíritu se alegra en Dios, mi Salvador.»",
+                        "«Porque ha puesto los ojos en la humildad de su esclava; por eso desde ahora todas las generaciones me llamarán bienaventurada.»",
+                        "«Porque ha hecho en mi favor maravillas el Poderoso; Santo es su nombre.»",
+                        "La Santísima Virgen María, cumplido el curso de su vida terrena, fue llevada en cuerpo y alma a la gloria del cielo.",
+                        "En donde participa ya en la gloria de la Resurrección de su Hijo.",
+                        "Anticipando la resurrección de todos los miembros del Cuerpo de Cristo.",
+                        "María fue preservada de toda mancha de pecado original, para ser digna Madre del Salvador.",
+                        "Su Asunción corporal al cielo es el fruto maduro de la Redención de Cristo.",
+                        "Es señal de esperanza cierta para la Iglesia peregrina en este mundo.",
+                        "Donde ella está, allí iremos también nosotros, sus hijos, al final de nuestro camino.",
+                        "Reflexión: La Asunción de María es señal de esperanza cierta para la Iglesia: adonde ella fue, nosotros también esperamos ir. (CIC, 966)"
+                    ]
+                },
+                {
+                    title: "La Coronación de María",
+                    image: "gloriosos5.jpg",
+                    citation_text: "Apocalipsis (12, 1) y Salmo (45, 10-12)",
+                    fragments: [
+                        "Una gran señal apareció en el cielo: una Mujer, vestida del sol, con la luna bajo sus pies.",
+                        "Y una corona de doce estrellas sobre su cabeza.",
+                        "La Virgen Inmaculada fue preservada de toda mancha de pecado original.",
+                        "Terminado el curso de su vida en la tierra, fue asunta en cuerpo y alma a la gloria del cielo.",
+                        "Y enaltecida por el Señor como Reina de todos los vivientes.",
+                        "Para que se asemejara más plenamente a su Hijo, Señor de señores y vencedor del pecado y de la muerte.",
+                        "El salmista anunciaba: «Está la reina a tu derecha, ataviada con oro de Ofir.»",
+                        "María, como Reina del cielo y de la tierra, intercede por todos sus hijos.",
+                        "Es nuestra abogada, auxilio de los cristianos, refugio de los pecadores.",
+                        "Ella, que dijo 'sí' a Dios, nos enseña a decir también 'sí' en nuestra propia vida.",
+                        "Reflexión: María Reina es la imagen y comienzo de la Iglesia que será consumada en el siglo futuro, signo de esperanza para el pueblo de Dios. (CIC, 966)"
+                    ]
+                }
             ]
-          },
-          { // Misterio 2: La Visitación
-            title: "2. La Visitación",
-            fragments: [
-              "📖 En aquellos días, María se levantó y fue de prisa a la montaña, a una ciudad de Judá. (Lc 1,39)",
-              "📖 Entró en casa de Zacarías y saludó a Isabel. (Lc 1,40)",
-              "📖 Y aconteció que, al oír Isabel el saludo de María, la criatura saltó de gozo en su seno. (Lc 1,41)",
-              "📖 Isabel quedó llena del Espíritu Santo y exclamó: «¡Bendita tú entre las mujeres y bendito el fruto de tu vientre!» (Lc 1,42)",
-              "📖 «¿Quién soy yo para que la madre de mi Señor venga a verme?» (Lc 1,43)",
-              "📖 «Porque apenas llegó tu saludo a mis oídos, la criatura saltó de alegría en mi seno.» (Lc 1,44)",
-              "📖 «Dichosa la que ha creído que se cumplirán las cosas que le fueron dichas de parte del Señor.» (Lc 1,45)",
-              "📖 María dijo: «Mi alma glorifica al Señor, y mi espíritu se alegra en Dios mi Salvador.» (Lc 1,46-47)",
-              "📖 «Porque ha puesto los ojos en la humildad de su esclava, por eso desde ahora todas las generaciones me llamarán bienaventurada.» (Lc 1,48)",
-              "📖 «Ha hecho en mí maravillas el Poderoso, Santo es su nombre.» (Lc 1,49)",
-              "📖 «Su misericordia alcanza de generación en generación a los que le temen.» (Lc 1,50)"
-            ]
-          },
-          { // Misterio 3: El Nacimiento
-            title: "3. El Nacimiento de Jesús",
-            fragments: [
-              "📖 Sucedió que mientras estaban en Belén, se le cumplieron los días del alumbramiento. (Lc 2,6)",
-              "📖 Y dio a luz a su hijo primogénito, lo envolvió en pañales y lo acostó en un pesebre. (Lc 2,7)",
-              "📖 Porque no había lugar para ellos en la posada. (Lc 2,7)",
-              "📖 Había en la misma comarca unos pastores que velaban por la noche guardando sus rebaños. (Lc 2,8)",
-              "📖 El ángel del Señor se les presentó y la gloria del Señor los envolvió de claridad. (Lc 2,9)",
-              "📖 El ángel les dijo: «No temáis, pues os anuncio una gran alegría: os ha nacido hoy un Salvador, que es el Cristo Señor.» (Lc 2,10-11)",
-              "📖 «Esto os servirá de señal: encontraréis a un niño envuelto en pañales y acostado en un pesebre.» (Lc 2,12)",
-              "📖 Y de repente apareció con el ángel una multitud del ejército celestial, alabando a Dios y diciendo: (Lc 2,13)",
-              "📖 «¡Gloria a Dios en el cielo, y en la tierra paz a los hombres que Él ama!» (Lc 2,14)",
-              "📖 Y los pastores fueron a toda prisa y encontraron a María, a José y al niño acostado en el pesebre. (Lc 2,16)",
-              "📖 Al verlo, dieron a conocer lo que se les había dicho de aquel niño. (Lc 2,17)"
-            ]
-          },
-          { // Misterio 4: La Presentación
-            title: "4. La Presentación en el Templo",
-            fragments: [
-              "📖 Cuando se cumplieron los días de la purificación de María, llevaron a Jesús a Jerusalén para presentarlo al Señor. (Lc 2,22)",
-              "📖 Como está escrito en la ley del Señor: «Todo varón primogénito será consagrado al Señor.» (Lc 2,23)",
-              "📖 También para ofrecer en sacrificio un par de tórtolas o dos pichones. (Lc 2,24)",
-              "📖 Había en Jerusalén un hombre llamado Simeón, justo y piadoso, que esperaba el consuelo de Israel. (Lc 2,25)",
-              "📖 El Espíritu Santo le había revelado que no vería la muerte antes de ver al Cristo del Señor. (Lc 2,26)",
-              "📖 Simeón fue al Templo, tomó al niño en sus brazos y bendijo a Dios: (Lc 2,28)",
-              "📖 «Ahora, Señor, puedes dejar que tu siervo muera en paz, según tu palabra.» (Lc 2,29)",
-              "📖 «Porque han visto mis ojos tu salvación, preparada ante todos los pueblos.» (Lc 2,30-31)",
-              "📖 «Luz para iluminar a las naciones y gloria de tu pueblo Israel.» (Lc 2,32)",
-              "📖 También estaba Ana, la profetisa, que daba gracias a Dios y hablaba del niño a todos. (Lc 2,36-38)",
-              "📖 Y después de cumplir todo lo prescrito, regresaron a Nazaret. (Lc 2,39)"
-            ]
-          },
-          { // Misterio 5: El Niño perdido
-            title: "5. El Niño perdido y hallado",
-            fragments: [
-              "📖 Sus padres iban todos los años a Jerusalén a la fiesta de la Pascua. (Lc 2,41)",
-              "📖 Cuando Jesús cumplió doce años, subieron a la fiesta según la costumbre. (Lc 2,42)",
-              "📖 Pasados los días, al regresar, el niño Jesús se quedó en Jerusalén sin que sus padres lo supieran. (Lc 2,43)",
-              "📖 Creyendo que iba en la caravana, caminaron todo un día y lo buscaron entre parientes y conocidos. (Lc 2,44)",
-              "📖 Al no encontrarlo, regresaron a Jerusalén para buscarlo. (Lc 2,45)",
-              "📖 Al cabo de tres días lo hallaron en el Templo, sentado entre los maestros, escuchándoles y preguntándoles. (Lc 2,46)",
-              "📖 Todos los que le oían estaban asombrados de su inteligencia y respuestas. (Lc 2,47)",
-              "📖 Al verle, sus padres se quedaron maravillados, y su madre le dijo: «Hijo, ¿por qué nos has hecho esto? Tu padre y yo te buscábamos angustiados.» (Lc 2,48)",
-              "📖 Él les respondió: «¿Por qué me buscabais? ¿No sabíais que yo debía estar en la casa de mi Padre?» (Lc 2,49)",
-              "📖 Pero ellos no comprendieron lo que les decía. (Lc 2,50)",
-              "📖 Volvió con ellos a Nazaret y estaba sujeto a sus padres. Su madre conservaba todo esto en su corazón. (Lc 2,51)"
-            ]
-          }
-        ],
-        luminous: [
-          { // Misterio 1: Bautismo
-            title: "1. El Bautismo en el Jordán",
-            fragments: [
-              "📖 En aquel tiempo, Jesús vino desde Galilea al Jordán para ser bautizado por Juan. (Mt 3,13)",
-              "📖 Juan intentaba disuadirlo diciendo: «Soy yo quien necesita ser bautizado por ti, ¿y tú vienes a mí?» (Mt 3,14)",
-              "📖 Jesús le respondió: «Déjalo ahora, porque conviene que así cumplamos toda justicia.» (Mt 3,15)",
-              "📖 Entonces Juan consintió. (Mt 3,15)",
-              "📖 Apenas fue bautizado, Jesús salió del agua y los cielos se abrieron. (Mt 3,16)",
-              "📖 Y vio al Espíritu de Dios descender como paloma y venir sobre Él. (Mt 3,16)",
-              "📖 Y una voz desde los cielos decía: «Este es mi Hijo amado, en quien tengo complacencia.» (Mt 3,17)",
-              "📖 El Espíritu descendió sobre Él para ungirle como Mesías. (Lc 4,18)",
-              "📖 Jesús, lleno del Espíritu Santo, volvió del Jordán. (Lc 4,1)",
-              "📖 Este es el inicio de su vida pública. (Mt 4,17)",
-              "📖 Nos invita a renacer del agua y del Espíritu. (Jn 3,5)"
-            ]
-          },
-          { // Misterio 2: Bodas de Caná
-            title: "2. Las Bodas de Caná",
-            fragments: [
-              "📖 Hubo una boda en Caná de Galilea y estaba allí la madre de Jesús. (Jn 2,1)",
-              "📖 Jesús fue invitado a la boda con sus discípulos. (Jn 2,2)",
-              "📖 Y faltó el vino, porque se había terminado. (Jn 2,3)",
-              "📖 La madre de Jesús le dijo: «No tienen vino.» (Jn 2,3)",
-              "📖 Jesús le respondió: «Mujer, ¿qué tengo yo que ver contigo? Todavía no ha llegado mi hora.» (Jn 2,4)",
-              "📖 Ella dijo a los sirvientes: «Haced lo que Él os diga.» (Jn 2,5)",
-              "📖 Había allí seis tinajas de piedra para las purificaciones. (Jn 2,6)",
-              "📖 Jesús les dijo: «Llenad las tinajas de agua.» Y las llenaron hasta el borde. (Jn 2,7)",
-              "📖 «Sacad ahora y llevad al maestresala.» Así lo hicieron. (Jn 2,8)",
-              "📖 El agua se había convertido en vino, y el maestresala alabó al novio. (Jn 2,9-10)",
-              "📖 Así manifestó Jesús su gloria y sus discípulos creyeron en Él. (Jn 2,11)"
-            ]
-          },
-          { // Misterio 3: Reino de Dios
-            title: "3. El anuncio del Reino",
-            fragments: [
-              "📖 Jesús fue a Galilea predicando el Evangelio de Dios. (Mc 1,14)",
-              "📖 Decía: «El tiempo se ha cumplido y el Reino de Dios está cerca.» (Mc 1,15)",
-              "📖 «Convertíos y creed en el Evangelio.» (Mc 1,15)",
-              "📖 Y recorría todas las ciudades y aldeas, enseñando en las sinagogas. (Mt 9,35)",
-              "📖 Proclamaba la buena noticia del Reino y sanaba toda enfermedad. (Mt 4,23)",
-              "📖 «Bienaventurados los pobres de espíritu, porque de ellos es el Reino de los Cielos.» (Mt 5,3)",
-              "📖 «Buscad primero el Reino de Dios y su justicia.» (Mt 6,33)",
-              "📖 El Reino de los Cielos es semilla que crece hasta dar fruto. (Mt 13,31-32)",
-              "📖 Es un tesoro escondido y una perla preciosa. (Mt 13,44-46)",
-              "📖 Jesús nos enseña a orar: «Venga a nosotros tu Reino.» (Lc 11,2)",
-              "📖 Por eso nos envió a anunciar el Reino con su misma autoridad. (Lc 10,9)"
-            ]
-          },
-          { // Misterio 4: Transfiguración
-            title: "4. La Transfiguración",
-            fragments: [
-              "📖 Jesús tomó a Pedro, Santiago y Juan, y los subió a un monte alto, aparte. (Mc 9,2)",
-              "📖 Allí se transfiguró delante de ellos. (Mc 9,2)",
-              "📖 Su rostro resplandecía como el sol y sus vestidos se volvieron blancos como la luz. (Mt 17,2)",
-              "📖 Aparecieron Moisés y Elías conversando con Él. (Mc 9,4)",
-              "📖 Pedro dijo: «Señor, qué bien se está aquí. Si quieres, hagamos tres tiendas.» (Mt 17,4)",
-              "📖 Mientras hablaba, una nube luminosa los cubrió. (Mt 17,5)",
-              "📖 Y de la nube salió una voz: «Este es mi Hijo amado, escuchadlo.» (Mc 9,7)",
-              "📖 Al oírla, los discípulos cayeron de bruces, llenos de miedo. (Mt 17,6)",
-              "📖 Jesús se acercó, los tocó y dijo: «Levantaos, no temáis.» (Mt 17,7)",
-              "📖 Alzando los ojos, no vieron a nadie más que a Jesús solo. (Mt 17,8)",
-              "📖 Bajando del monte, Jesús les mandó no contar la visión hasta su resurrección. (Mt 17,9)"
-            ]
-          },
-          { // Misterio 5: Eucaristía
-            title: "5. La Institución de la Eucaristía",
-            fragments: [
-              "📖 El jueves santo, Jesús se sentó a la mesa con sus apóstoles. (Lc 22,14)",
-              "📖 Les dijo: «Cuánto he deseado comer esta Pascua con vosotros antes de padecer.» (Lc 22,15)",
-              "📖 Tomó pan, dio gracias, lo partió y se lo dio diciendo: «Esto es mi Cuerpo, que se entrega por vosotros.» (Lc 22,19)",
-              "📖 «Haced esto en memoria mía.» (Lc 22,19)",
-              "📖 Después, tomando el cáliz, dio gracias y lo entregó diciendo: «Esta copa es la nueva alianza en mi Sangre.» (Lc 22,20)",
-              "📖 «La Sangre que se derrama por vosotros.» (Lc 22,20)",
-              "📖 «Quien come mi Carne y bebe mi Sangre tiene vida eterna.» (Jn 6,54)",
-              "📖 «El que me come vivirá por mí.» (Jn 6,57)",
-              "📖 «Como el Padre me envió y yo vivo por el Padre, así el que me come vivirá por mí.» (Jn 6,57)",
-              "📖 Y añadió: «No os dejaré huérfanos, volveré a vosotros.» (Jn 14,18)",
-              "📖 Por eso la Eucaristía es el sacramento del amor, signo de unidad y vínculo de caridad."
-            ]
-          }
-        ],
-        sorrowful: [
-          { // Misterio 1: Oración en el huerto
-            title: "1. La Oración en el Huerto",
-            fragments: [
-              "📖 Jesús fue con sus discípulos al huerto llamado Getsemaní. (Mt 26,36)",
-              "📖 Les dijo: «Quedaos aquí, mientras voy allá a orar.» (Mt 26,36)",
-              "📖 Tomó a Pedro, Santiago y Juan, y comenzó a entristecerse y angustiarse. (Mt 26,37)",
-              "📖 Les dijo: «Mi alma está muy triste, hasta la muerte. Quedaos y velad conmigo.» (Mt 26,38)",
-              "📖 Se adelantó un poco, cayó rostro en tierra y oraba: «Padre mío, si es posible, que pase de mí esta copa.» (Mt 26,39)",
-              "📖 «Pero no se haga como yo quiero, sino como quieres Tú.» (Mt 26,39)",
-              "📖 Volvió a los discípulos y los encontró dormidos. Dijo a Pedro: «¿Ni una hora pudisteis velar conmigo?» (Mt 26,40)",
-              "📖 «Velad y orad para no caer en tentación; el espíritu está dispuesto, pero la carne es débil.» (Mt 26,41)",
-              "📖 Por segunda vez se apartó y oró: «Padre mío, si no puede pasar esta copa sin que la beba, hágase tu voluntad.» (Mt 26,42)",
-              "📖 Y oró por tercera vez, repitiendo las mismas palabras. (Mt 26,44)",
-              "📖 Luego dijo: «Levantaos, vamos; ya está cerca el que me va a entregar.» (Mt 26,46)"
-            ]
-          },
-          { // Misterio 2: Flagelación
-            title: "2. La Flagelación",
-            fragments: [
-              "📖 Pilato mandó que azotaran a Jesús. (Juan 19,1)",
-              "📖 La flagelación era un castigo cruel que solía preceder a la crucifixión. (Mc 15,15)",
-              "📖 Los soldados lo desnudaron y lo ataron a una columna. (Mt 27,26)",
-              "📖 Utilizaban látigos con puntas de hueso o plomo. (Cfr. documentos históricos)",
-              "📖 Así se cumplió la profecía: «Por sus llagas hemos sido curados.» (Is 53,5)",
-              "📖 Jesús cargó con nuestros dolores y soportó nuestros sufrimientos. (Is 53,4)",
-              "📖 El castigo que nos trae la paz cayó sobre Él. (Is 53,5)",
-              "📖 Con sus heridas fuimos sanados. (1 Pe 2,24)",
-              "📖 Fue entregado por nuestros pecados y resucitado para nuestra justificación. (Rm 4,25)",
-              "📖 En su flagelación, Él manifestó su amor hasta el extremo. (Jn 13,1)",
-              "📖 Nos enseña a ofrecer nuestro cuerpo como sacrificio vivo, santo y agradable a Dios. (Rm 12,1)"
-            ]
-          },
-          { // Misterio 3: Coronación de espinas
-            title: "3. La Coronación de espinas",
-            fragments: [
-              "📖 Los soldados trenzaron una corona de espinas y se la pusieron en la cabeza. (Mt 27,29)",
-              "📖 Le vistieron con un manto púrpura y, acercándose a Él, le decían: «¡Salve, Rey de los judíos!» (Jn 19,2-3)",
-              "📖 Le golpeaban en la cabeza con una caña y le escupían. (Mc 15,19)",
-              "📖 Se arrodillaban y se burlaban de Él. (Mt 27,29)",
-              "📖 La corona de espinas es símbolo de la humillación real. (Jn 19,5)",
-              "📖 También es signo de que Cristo vino a reinar por el amor y el servicio. (Jn 18,36)",
-              "📖 Así se cumplió la profecía del Siervo doliente. (Is 53,3)",
-              "📖 El Rey del universo aceptaba la burla para liberarnos de la soberbia. (Flp 2,6-8)",
-              "📖 Las espinas representan nuestros pecados que Él cargó. (Gn 3,18)",
-              "📖 Jesús nos enseña que el verdadero reino no es de este mundo. (Jn 18,36)",
-              "📖 Por eso el Padre lo exaltó y le dio un nombre sobre todo nombre. (Flp 2,9)"
-            ]
-          },
-          { // Misterio 4: Camino del Calvario
-            title: "4. Jesús con la cruz a cuestas",
-            fragments: [
-              "📖 Jesús salió cargando su propia cruz hacia el lugar de la Calavera, llamado Gólgota. (Jn 19,17)",
-              "📖 Obligaron a un hombre de Cirene, Simón, a que le ayudara a llevar la cruz. (Mc 15,21)",
-              "📖 Lo seguía una gran multitud del pueblo y mujeres que se lamentaban. (Lc 23,27)",
-              "📖 Jesús se volvió hacia ellas y dijo: «Hijas de Jerusalén, no lloréis por mí, llorad por vosotras y por vuestros hijos.» (Lc 23,28)",
-              "📖 La cruz pesaba sobre sus hombros, pero más pesaban nuestros pecados. (Is 53,6)",
-              "📖 Cada paso era un anuncio de redención. (1 Pe 2,21)",
-              "📖 El camino de la cruz es el camino del discípulo. (Lc 9,23)",
-              "📖 Quien quiera seguir a Jesús, tome su cruz cada día. (Lc 9,23)",
-              "📖 Jesús cayó varias veces bajo el peso de la cruz, enseñándonos a levantarnos. (Tradición)",
-              "📖 Al llegar al Gólgota, lo desnudaron y le ofrecieron vino mezclado con mirra, pero no lo tomó. (Mc 15,23)",
-              "📖 Allí lo crucificaron. (Jn 19,18)"
-            ]
-          },
-          { // Misterio 5: Crucifixión
-            title: "5. La Crucifixión y muerte",
-            fragments: [
-              "📖 Fue crucificado a la hora tercera (nueve de la mañana). (Mc 15,25)",
-              "📖 Sobre su cabeza pusieron el motivo de la condena: «Jesús de Nazaret, Rey de los judíos.» (Jn 19,19)",
-              "📖 Los soldados se repartieron sus vestiduras. (Jn 19,23)",
-              "📖 Los jefes de los sacerdotes se burlaban diciendo: «A otros salvó, sálvese a sí mismo.» (Lc 23,35)",
-              "📖 Jesús dijo: «Padre, perdónalos porque no saben lo que hacen.» (Lc 23,34)",
-              "📖 Uno de los malhechores le pidió: «Acuérdate de mí cuando llegues a tu Reino.» (Lc 23,42)",
-              "📖 Jesús le respondió: «Hoy estarás conmigo en el Paraíso.» (Lc 23,43)",
-              "📖 Desde la cruz, Jesús le dijo a su madre: «Mujer, ahí tienes a tu hijo.» Y al discípulo: «Ahí tienes a tu madre.» (Jn 19,26-27)",
-              "📖 A la hora nona, Jesús exclamó: «Dios mío, Dios mío, ¿por qué me has abandonado?» (Mt 27,46)",
-              "📖 Después, dijo: «Todo está cumplido.» E inclinando la cabeza, entregó el espíritu. (Jn 19,30)",
-              "📖 El velo del Templo se rasgó en dos, la tierra tembló, y el centurión dijo: «Verdaderamente este era Hijo de Dios.» (Mt 27,51-54)"
-            ]
-          }
-        ],
-        glorious: [
-          { // Misterio 1: Resurrección
-            title: "1. La Resurrección",
-            fragments: [
-              "📖 Pasado el sábado, María Magdalena, María la de Santiago y Salomé fueron al sepulcro. (Mc 16,1)",
-              "📖 Muy de mañana, al salir el sol, llegaron al sepulcro. (Mc 16,2)",
-              "📖 Se preguntaban: «¿Quién nos removerá la piedra de la entrada?» (Mc 16,3)",
-              "📖 Al mirar, vieron que la piedra ya estaba removida; era muy grande. (Mc 16,4)",
-              "📖 Entraron y vieron a un joven vestido de blanco sentado a la derecha. (Mc 16,5)",
-              "📖 Él les dijo: «No os asustéis. Buscáis a Jesús Nazareno, el crucificado; ha resucitado, no está aquí.» (Mc 16,6)",
-              "📖 «Mirad el lugar donde lo pusieron. Id, decid a sus discípulos y a Pedro que irá delante de vosotros a Galilea.» (Mc 16,6-7)",
-              "📖 Ellas salieron huyendo del sepulcro, temblando de asombro. (Mc 16,8)",
-              "📖 Jesús se apareció primero a María Magdalena. (Mc 16,9)",
-              "📖 Luego se apareció a los discípulos que iban de camino a Emaús. (Lc 24,13-15)",
-              "📖 Después se manifestó a los once y les dijo: «Id por todo el mundo y predicad el Evangelio.» (Mc 16,15)"
-            ]
-          },
-          { // Misterio 2: Ascensión
-            title: "2. La Ascensión",
-            fragments: [
-              "📖 Jesús se apareció a los apóstoles durante cuarenta días, hablándoles del Reino de Dios. (Hch 1,3)",
-              "📖 Les mandó no salir de Jerusalén, sino esperar la promesa del Padre. (Hch 1,4)",
-              "📖 «Juan bautizó con agua, pero vosotros seréis bautizados con el Espíritu Santo dentro de pocos días.» (Hch 1,5)",
-              "📖 Ellos le preguntaron si restauraría el reino de Israel en aquel momento. (Hch 1,6)",
-              "📖 Él respondió: «No os toca saber los tiempos que el Padre ha fijado con su autoridad.» (Hch 1,7)",
-              "📖 «Recibiréis la fuerza del Espíritu Santo y seréis mis testigos hasta el confín de la tierra.» (Hch 1,8)",
-              "📖 Dicho esto, fue levantado mientras le miraban, y una nube lo ocultó. (Hch 1,9)",
-              "📖 Estaban con los ojos fijos en el cielo cuando dos hombres con vestiduras blancas se pusieron a su lado. (Hch 1,10)",
-              "📖 Les dijeron: «Galileos, ¿por qué estáis mirando al cielo? Este Jesús que ha sido tomado volverá como le habéis visto ir.» (Hch 1,11)",
-              "📖 Entonces regresaron a Jerusalén con gran alegría. (Lc 24,52)",
-              "📖 Y alababan y bendecían a Dios en el Templo. (Lc 24,53)"
-            ]
-          },
-          { // Misterio 3: Pentecostés
-            title: "3. La Venida del Espíritu Santo",
-            fragments: [
-              "📖 Llegado el día de Pentecostés, estaban todos juntos en el mismo lugar. (Hch 2,1)",
-              "📖 De repente vino del cielo un ruido como de viento impetuoso que llenó toda la casa. (Hch 2,2)",
-              "📖 Aparecieron lenguas como de fuego que se repartieron y se posaron sobre cada uno. (Hch 2,3)",
-              "📖 Todos quedaron llenos del Espíritu Santo y comenzaron a hablar en otras lenguas. (Hch 2,4)",
-              "📖 Habitaban en Jerusalén judíos devotos de todas las naciones. (Hch 2,5)",
-              "📖 Al oír el ruido, se congregaron y quedaron desconcertados porque cada uno les oía hablar en su propia lengua. (Hch 2,6)",
-              "📖 Pedro, de pie con los once, levantó la voz y les explicó las Escrituras. (Hch 2,14)",
-              "📖 Les anunció que Jesús había resucitado y que Dios lo había constituido Señor y Mesías. (Hch 2,36)",
-              "📖 Al oír esto, se compungieron de corazón y preguntaron: «¿Qué tenemos que hacer?» (Hch 2,37)",
-              "📖 Pedro les dijo: «Convertíos y bautizaos en el nombre de Jesucristo.» (Hch 2,38)",
-              "📖 Ese día se bautizaron unas tres mil personas. (Hch 2,41)"
-            ]
-          },
-          { // Misterio 4: Asunción de María
-            title: "4. La Asunción de María",
-            fragments: [
-              "📖 María, cumplido el curso de su vida terrena, fue llevada en cuerpo y alma a la gloria del cielo. (Constitución Munificentissimus Deus, Pío XII)",
-              "📖 Es la Mujer vestida de sol, con la luna bajo sus pies. (Ap 12,1)",
-              "📖 El arca de la alianza, hecha de madera incorruptible, prefiguraba a la Virgen asunta al cielo. (CIC 966)",
-              "📖 Ella es la nueva Eva asociada plenamente a la victoria de su Hijo. (CIC 966)",
-              "📖 La Asunción es una verdad de fe definida por la Iglesia en 1950. (Munificentissimus Deus)",
-              "📖 «Ha hecho en mí maravillas el Poderoso, Santo es su nombre.» (Lc 1,49)",
-              "📖 Desde el cielo, María es madre de todos los que viven en Cristo. (Ap 12,17)",
-              "📖 Su cuerpo y alma glorificados anticipan la resurrección de todos los justos. (CIC 966)",
-              "📖 Elevada a la gloria, intercede por nosotros como abogada y auxiliadora. (CIC 969)",
-              "📖 La Asunción es signo de esperanza cierta para el pueblo de Dios en peregrinación. (CIC 974)",
-              "📖 «Todas las generaciones me llamarán bienaventurada.» (Lc 1,48)"
-            ]
-          },
-          { // Misterio 5: Coronación de María
-            title: "5. La Coronación de María",
-            fragments: [
-              "📖 Mujer vestida de sol, con la luna bajo sus pies y una corona de doce estrellas sobre su cabeza. (Ap 12,1)",
-              "📖 La corona de doce estrellas simboliza su reinado sobre los doce patriarcas y los doce apóstoles. (CIC)",
-              "📖 Reina de ángeles, patriarcas, profetas, apóstoles, mártires y todos los santos. (Letanías)",
-              "📖 Ha sido exaltada por encima de todos los coros angélicos. (Santo Tomás de Aquino)",
-              "📖 María es Reina en virtud de su excelsa dignidad de Madre de Dios. (CIC 966)",
-              "📖 «Alégrate, Reina del cielo, aleluya.» (Secuencia)",
-              "📖 Desde su trono, dispensa gracias y misericordia. (San Bernardo)",
-              "📖 Por eso la invocamos como Madre de misericordia, vida, dulzura y esperanza nuestra. (Salve Regina)",
-              "📖 Su corona es también la de una madre que intercede por sus hijos. (Jn 19,27)",
-              "📖 Santa María, Reina del Santísimo Rosario, ruega por nosotros. (Letanías)",
-              "📖 Y al final del camino, ella nos espera para mostrarnos a Jesús, fruto bendito de su vientre. (Salve Regina)"
-            ]
-          }
-        ]
-      }
+        },
+        prayers: {
+            welcome: "Bienvenido al Santo Rosario.\n\nTe invitamos a ofrecer esta oración por tus intenciones particulares, por las necesidades del mundo y por todos quienes te han pedido oraciones.",
+            sign_of_cross: "Por la señal de la Santa Cruz,\nde nuestros enemigos líbranos, Señor Dios nuestro.\n\nEn el nombre del Padre y del Hijo\ny del Espíritu Santo.\n\nAmén.",
+            versicle: "V. Dios mío, ven en mi auxilio.\nR. Señor, date prisa en socorrerme.\n\nGloria al Padre y al Hijo y al Espíritu Santo.\nComo era en el principio, ahora y siempre,\npor los siglos de los siglos. Amén.",
+            creed: "Creo en Dios, Padre todopoderoso,\nCreador del cielo y de la tierra.\n\nCreo en Jesucristo, su único Hijo, nuestro Señor,\nque fue concebido por obra y gracia del Espíritu Santo,\nnació de santa María Virgen,\npadeció bajo el poder de Poncio Pilato,\nfue crucificado, muerto y sepultado,\ndescendió a los infiernos,\nal tercer día resucitó de entre los muertos,\nsubió a los cielos\ny está sentado a la derecha de Dios, Padre todopoderoso.\nDesde allí ha de venir a juzgar a vivos y muertos.\n\nCreo en el Espíritu Santo,\nla santa Iglesia católica,\nla comunión de los santos,\nel perdón de los pecados,\nla resurrección de la carne\ny la vida eterna.\n\nAmén.",
+            our_father: "Padre nuestro que estás en el cielo,\nsantificado sea tu Nombre;\nvenga a nosotros tu Reino;\nhágase tu voluntad en la tierra como en el cielo.\n\nDanos hoy nuestro pan de cada día;\nperdona nuestras ofensas,\ncomo también nosotros perdonamos\na los que nos ofenden;\nno nos dejes caer en la tentación\ny líbranos del mal.\n\nAmén.",
+            hail_mary: "Dios te salve, María,\nllena eres de gracia;\nel Señor es contigo.\nBendita tú eres entre todas las mujeres,\ny bendito es el fruto de tu vientre, Jesús.\n\nSanta María, Madre de Dios,\nruega por nosotros, pecadores,\nahora y en la hora de nuestra muerte.\n\nAmén.",
+            gloria: "Gloria al Padre y al Hijo\ny al Espíritu Santo.\nComo era en el principio,\nahora y siempre,\npor los siglos de los siglos.\nAmén.",
+            fatima_prayer: "Oh Jesús mío,\nperdona nuestros pecados,\nlíbranos del fuego del infierno,\nlleva al cielo a todas las almas,\nespecialmente a las más necesitadas\nde tu misericordia.",
+            salve_regina: "Dios te salve, Reina y Madre de misericordia,\nvida, dulzura y esperanza nuestra.\nDios te salve.\n\nA ti llamamos los desterrados hijos de Eva,\na ti suspiramos gimiendo y llorando\nen este valle de lágrimas.\n\nEa, pues, Señora, abogada nuestra,\nvuelve a nosotros esos tus ojos misericordiosos.\nY después de este destierro,\nmuéstranos a Jesús, fruto bendito de tu vientre.\n\nOh clemente, oh piadosa,\noh dulce Virgen María.\n\nRuega por nosotros, Santa Madre de Dios,\npara que seamos dignos de alcanzar las promesas de Jesucristo.\nAmén.",
+            final_sign_of_cross: "En el nombre del Padre y del Hijo\ny del Espíritu Santo.\n\nAmén.",
+            end: "Has completado el Santo Rosario.\n\nQue la Santísima Virgen María interceda por ti y por todas las personas por quienes has rezado.",
+        }
     }
-  };
+};
 
-  // ==================== LÓGICA DE SECUENCIA ====================
-  let idiomaActual = 'es';
-  let misterioActual = 'joyful';
-  let secuencia = [];
-  let indiceActual = -1;
+// ------------------------------------------------
+// ESTADO DE LA APLICACIÓN
+// ------------------------------------------------
+let currentLanguage = 'es';
+let currentMysteryKey = 'joyful';
+let prayerSequence = [];
+let currentStep = -1;
 
-  const oracionTitle = document.getElementById('oracion-title');
-  const oracionTexto = document.getElementById('oracion-texto');
-  const reflexionDiv = document.getElementById('reflexion-fragmento');
-  const cuentasContainer = document.getElementById('cuentas-container');
-  const contadorTexto = document.getElementById('contador-texto');
-  const btnAnterior = document.getElementById('btn-anterior');
-  const btnSiguiente = document.getElementById('btn-siguiente');
-  const btnReiniciar = document.getElementById('btn-reiniciar');
-  const idiomaSelect = document.getElementById('idioma-select');
-  const misterioSelect = document.getElementById('misterio-select');
-  const infoMisterio = document.getElementById('info-misterio');
+// ------------------------------------------------
+// CONSTRUCCIÓN DE LA SECUENCIA
+// ------------------------------------------------
+function buildPrayerSequence() {
+    const sequence = [];
 
-  function construirSecuencia() {
-    const lang = rosarioContent[idiomaActual];
-    const misteriosList = lang.mysteries[misterioActual];
-    const seq = [];
+    const addPrayer = (key, count = 1, icon, label) => {
+        if (count > 1) {
+            for (let i = 0; i < count; i++) {
+                sequence.push({ type: 'prayer', prayerKey: key, totalBeads: count, currentBead: i, icon, label });
+            }
+        } else {
+            sequence.push({ type: 'prayer', prayerKey: key, totalBeads: 1, currentBead: 0, icon, label });
+        }
+    };
 
-    // Oraciones iniciales
-    seq.push({ tipo: 'oracion', key: 'sign_of_cross', titulo: 'Señal de la Cruz', texto: lang.prayers.sign_of_cross });
-    seq.push({ tipo: 'oracion', key: 'versicle', titulo: 'Versículo inicial', texto: lang.prayers.versicle });
-    seq.push({ tipo: 'oracion', key: 'creed', titulo: 'Credo', texto: lang.prayers.creed });
-    for (let i = 0; i < 3; i++) seq.push({ tipo: 'oracion', key: 'hail_mary', titulo: 'Ave María', texto: lang.prayers.hail_mary });
-    seq.push({ tipo: 'oracion', key: 'gloria', titulo: 'Gloria', texto: lang.prayers.gloria });
+    // Inicio
+    addPrayer('sign_of_cross', 1, '✠', 'Señal de la Cruz');
+    addPrayer('versicle', 1, 'V', 'Versículo Inicial');
+    addPrayer('creed', 1, 'C', 'Credo Apostólico');
+    addPrayer('our_father', 1, '†', 'Padre Nuestro');
+    addPrayer('hail_mary', 3, '♥', 'Ave María');
+    addPrayer('gloria', 1, 'G', 'Gloria');
 
     // 5 misterios
-    for (let m = 0; m < misteriosList.length; m++) {
-      const misterio = misteriosList[m];
-      // Anuncio del misterio
-      seq.push({ tipo: 'anuncio', titulo: misterio.title });
-      // Padre Nuestro (fragmento 0)
-      seq.push({ tipo: 'oracion', key: 'our_father', titulo: 'Padre Nuestro', texto: lang.prayers.our_father, fragmento: misterio.fragments[0] });
-      // 10 Avemarías (fragmentos 1 a 10)
-      for (let a = 1; a <= 10; a++) {
-        seq.push({ tipo: 'oracion', key: 'hail_mary', titulo: 'Ave María', texto: lang.prayers.hail_mary, fragmento: misterio.fragments[a] });
-      }
-      seq.push({ tipo: 'oracion', key: 'gloria', titulo: 'Gloria', texto: lang.prayers.gloria });
-      seq.push({ tipo: 'oracion', key: 'fatima_prayer', titulo: 'Oración de Fátima', texto: lang.prayers.fatima_prayer });
-    }
-
-    // Oraciones finales
-    seq.push({ tipo: 'oracion', key: 'salve_regina', titulo: 'Salve Regina', texto: lang.prayers.salve_regina });
-    seq.push({ tipo: 'oracion', key: 'pope_intentions', titulo: 'Intenciones del Papa', texto: lang.prayers.pope_intentions });
-    seq.push({ tipo: 'oracion', key: 'our_father', titulo: 'Padre Nuestro', texto: lang.prayers.our_father });
-    seq.push({ tipo: 'oracion', key: 'hail_mary', titulo: 'Ave María', texto: lang.prayers.hail_mary });
-    seq.push({ tipo: 'oracion', key: 'gloria', titulo: 'Gloria', texto: lang.prayers.gloria });
-    seq.push({ tipo: 'oracion', key: 'final_sign_of_cross', titulo: 'Señal de la Cruz final', texto: lang.prayers.final_sign_of_cross });
-
-    return seq;
-  }
-
-  function actualizarUI() {
-    if (indiceActual < 0 || indiceActual >= secuencia.length) {
-      oracionTitle.textContent = "Santo Rosario";
-      oracionTexto.textContent = "Presiona 'Siguiente' para comenzar.";
-      reflexionDiv.textContent = "";
-      cuentasContainer.innerHTML = "";
-      contadorTexto.textContent = "Inicio";
-      btnSiguiente.textContent = "Comenzar";
-      btnAnterior.disabled = true;
-      if (indiceActual >= secuencia.length) {
-        oracionTitle.textContent = "¡Rosario completado!";
-        oracionTexto.textContent = "Has rezado todas las oraciones. Que Dios te bendiga.";
-        btnSiguiente.textContent = "Reiniciar";
-      }
-      return;
-    }
-
-    const paso = secuencia[indiceActual];
-    if (paso.tipo === 'anuncio') {
-      oracionTitle.textContent = paso.titulo;
-      oracionTexto.textContent = "Medita este misterio mientras rezas...";
-      reflexionDiv.textContent = `📖 ${secuencia[indiceActual+1]?.fragmento || ''}`;
-      cuentasContainer.innerHTML = "";
-      contadorTexto.textContent = "";
-    } else if (paso.tipo === 'oracion') {
-      oracionTitle.textContent = paso.titulo;
-      oracionTexto.textContent = paso.texto;
-      reflexionDiv.textContent = paso.fragmento ? `📖 ${paso.fragmento}` : "";
-
-      // Mostrar cuentas para Padre Nuestro y Avemarías dentro de un misterio
-      if (paso.key === 'our_father' || paso.key === 'hail_mary') {
-        const total = 11; // 1 Padre + 10 Avemarías
-        let actual = 0;
-        if (paso.key === 'our_father') actual = 1;
-        else {
-          let cont = 0;
-          for (let i = indiceActual; i >= 0; i--) {
-            if (secuencia[i].key === 'our_father') break;
-            if (secuencia[i].key === 'hail_mary') cont++;
-          }
-          actual = cont + 1;
+    for (let i = 0; i < 5; i++) {
+        // Anuncio del misterio
+        sequence.push({ type: 'mystery_announcement', mysteryIndex: i });
+        // Padre Nuestro → fragmento 0
+        sequence.push({ type: 'prayer', prayerKey: 'our_father', totalBeads: 1, currentBead: 0, icon: '†', label: 'Padre Nuestro', fragmentIndex: 0, mysteryIndex: i });
+        // 10 Ave Marías → fragmentos 1-10
+        for (let j = 0; j < 10; j++) {
+            sequence.push({ type: 'prayer', prayerKey: 'hail_mary', totalBeads: 10, currentBead: j, icon: '♥', label: 'Ave María', fragmentIndex: j + 1, mysteryIndex: i });
         }
-        cuentasContainer.innerHTML = '';
-        for (let i = 1; i <= total; i++) {
-          const div = document.createElement('div');
-          div.className = 'cuenta';
-          if (i === actual) div.classList.add('active');
-          else if (i < actual) div.classList.add('completada');
-          div.textContent = i === 1 ? 'P' : i-1;
-          cuentasContainer.appendChild(div);
-        }
-        contadorTexto.textContent = `${actual} de ${total}`;
-      } else {
-        cuentasContainer.innerHTML = '';
-        contadorTexto.textContent = '';
-      }
+        addPrayer('gloria', 1, 'G', 'Gloria');
+        addPrayer('fatima_prayer', 1, 'J', 'Oración de Fátima');
     }
 
-    btnAnterior.disabled = (indiceActual === 0);
-    btnSiguiente.textContent = (indiceActual === secuencia.length-1) ? "Finalizar" : "Siguiente";
-  }
+    // Final
+    addPrayer('salve_regina', 1, 'S', 'Salve Regina');
+    addPrayer('final_sign_of_cross', 1, '✠', 'Señal de la Cruz');
+    sequence.push({ type: 'end' });
 
-  function avanzar() {
-    if (indiceActual < secuencia.length - 1) {
-      indiceActual++;
-      actualizarUI();
-    } else if (indiceActual === secuencia.length - 1) {
-      indiceActual = -1;
-      actualizarUI();
+    return sequence;
+}
+
+// ------------------------------------------------
+// NOMBRES DE LOS MISTERIOS
+// ------------------------------------------------
+function getMysteryTypeName() {
+    const names = { joyful: 'Gozoso', luminous: 'Luminoso', sorrowful: 'Doloroso', glorious: 'Glorioso' };
+    return `Misterio ${names[currentMysteryKey]}`;
+}
+
+// ------------------------------------------------
+// RENDER
+// ------------------------------------------------
+function renderStep() {
+    const content = rosaryContent[currentLanguage] || rosaryContent.es;
+    const contentArea = document.getElementById('content-area');
+    const beadsRow = document.getElementById('beads-row');
+    const beadCounter = document.getElementById('bead-counter');
+    const beadsWrap = document.getElementById('beads-wrap');
+    const progressFill = document.getElementById('progress-fill');
+    const progressLabel = document.getElementById('progress-label');
+    const imgEl = document.getElementById('mystery-img');
+    const nextBtn = document.getElementById('next-btn');
+    const prevBtn = document.getElementById('prev-btn');
+    const controlsBar = document.getElementById('controls-bar');
+
+    beadsRow.innerHTML = '';
+    beadCounter.textContent = '';
+    beadsWrap.classList.add('hidden');
+    controlsBar.style.display = currentStep < 0 ? 'flex' : 'none';
+
+    // Progreso
+    const progress = currentStep < 0 ? 0 : Math.round((currentStep / (prayerSequence.length - 1)) * 100);
+    progressFill.style.width = `${progress}%`;
+    progressLabel.textContent = `${progress}%`;
+
+    // Botones
+    prevBtn.disabled = currentStep <= 0;
+    if (currentStep >= prayerSequence.length - 1) {
+        nextBtn.textContent = '🔄 Reiniciar';
+        nextBtn.className = 'btn-nav btn-next restart';
     } else {
-      indiceActual = 0;
-      actualizarUI();
+        nextBtn.innerHTML = 'Siguiente <i class="fas fa-chevron-right"></i>';
+        nextBtn.className = 'btn-nav btn-next';
     }
-  }
-  function retroceder() {
-    if (indiceActual > 0) {
-      indiceActual--;
-      actualizarUI();
+
+    // Pantalla de bienvenida
+    if (currentStep < 0) {
+        imgEl.src = `images/${content.default_image}`;
+        contentArea.innerHTML = `
+            <div class="welcome-card">
+                <div class="icon"><i class="fas fa-pray"></i></div>
+                <h2>Santo Rosario Interactivo</h2>
+                <p>${content.prayers.welcome}</p>
+                <p style="font-size:0.78rem; color:var(--texto-muted); margin-top:0.5rem;">Selecciona el idioma y los misterios arriba, luego pulsa <strong>Comenzar</strong>.</p>
+            </div>`;
+        nextBtn.innerHTML = 'Comenzar <i class="fas fa-play"></i>';
+        return;
     }
-  }
-  function reiniciar() {
-    indiceActual = -1;
-    actualizarUI();
-  }
-  function cargarTodo() {
-    secuencia = construirSecuencia();
-    indiceActual = -1;
-    actualizarUI();
-    const misterioNombre = rosarioContent[idiomaActual].mysteries[misterioActual][0]?.title.split('.')[0] || '';
-    infoMisterio.textContent = `Misterios ${misterioActual === 'joyful' ? 'Gozosos' : misterioActual === 'luminous' ? 'Luminosos' : misterioActual === 'sorrowful' ? 'Dolorosos' : 'Gloriosos'}`;
-  }
 
-  // Eventos
-  idiomaSelect.addEventListener('change', (e) => { idiomaActual = e.target.value; cargarTodo(); });
-  misterioSelect.addEventListener('change', (e) => { misterioActual = e.target.value; cargarTodo(); });
-  btnSiguiente.addEventListener('click', avanzar);
-  btnAnterior.addEventListener('click', retroceder);
-  btnReiniciar.addEventListener('click', reiniciar);
+    const step = prayerSequence[currentStep];
 
-  cargarTodo();
+    // --- ANUNCIO DEL MISTERIO ---
+    if (step.type === 'mystery_announcement') {
+        const mystery = content.mysteries[currentMysteryKey][step.mysteryIndex];
+        imgEl.src = `images/${mystery.image}`;
+        contentArea.innerHTML = `
+            <div class="prayer-card">
+                <div class="prayer-card-header">
+                    <div class="prayer-type-icon gold"><i class="fas fa-star"></i></div>
+                    <div>
+                        <div class="prayer-card-subtitle">${step.mysteryIndex + 1}° ${getMysteryTypeName()}</div>
+                        <div class="prayer-card-title">${mystery.title}</div>
+                    </div>
+                </div>
+                <div class="prayer-card-body mystery-block">
+                    <div class="mystery-citation">${mystery.citation_text}</div>
+                </div>
+            </div>`;
+        return;
+    }
+
+    // --- ORACIÓN NORMAL (no en misterio) ---
+    if (step.type === 'prayer') {
+        const prayerText = content.prayers[step.prayerKey] || '';
+        const isHeartBead = step.icon === '♥';
+        const iconClass = step.prayerKey === 'our_father' ? 'fas fa-cross' :
+                          step.prayerKey === 'hail_mary' ? 'fas fa-heart' :
+                          step.prayerKey === 'gloria' || step.prayerKey === 'versicle' ? 'fas fa-sun' :
+                          step.prayerKey === 'fatima_prayer' ? 'fas fa-fire' :
+                          step.prayerKey === 'salve_regina' ? 'fas fa-crown' :
+                          'fas fa-cross';
+        const iconGold = ['fatima_prayer','salve_regina','final_sign_of_cross'].includes(step.prayerKey);
+
+        // Fragmento del misterio (si aplica)
+        let fragmentHTML = '';
+        if (step.mysteryIndex !== undefined && step.fragmentIndex !== undefined) {
+            const mystery = content.mysteries[currentMysteryKey][step.mysteryIndex];
+            const fragment = mystery.fragments[step.fragmentIndex] || '';
+            if (fragment) {
+                fragmentHTML = `
+                    <div class="fragment-wrap">
+                        <div class="fragment-label">Contemplación del misterio</div>
+                        <p class="fragment-text">${fragment}</p>
+                    </div>`;
+            }
+        }
+
+        // Cuentas
+        if (step.totalBeads > 1) {
+            beadsWrap.classList.remove('hidden');
+            beadCounter.textContent = `${step.currentBead + 1} de ${step.totalBeads}`;
+            for (let i = 0; i < step.totalBeads; i++) {
+                const bead = document.createElement('div');
+                bead.className = 'bead' + (isHeartBead ? ' heart' : '');
+                if (i < step.currentBead) bead.classList.add('completed');
+                else if (i === step.currentBead) bead.classList.add('active');
+                bead.textContent = step.icon;
+                beadsRow.appendChild(bead);
+            }
+        }
+
+        contentArea.innerHTML = `
+            <div class="prayer-card">
+                <div class="prayer-card-header">
+                    <div class="prayer-type-icon ${iconGold ? 'gold' : ''}"><i class="${iconClass}"></i></div>
+                    <div>
+                        <div class="prayer-card-subtitle">Oración</div>
+                        <div class="prayer-card-title">${step.label || step.prayerKey}</div>
+                    </div>
+                </div>
+                <div class="prayer-card-body">
+                    <p id="prayer-text">${prayerText}</p>
+                    ${fragmentHTML}
+                </div>
+            </div>`;
+        return;
+    }
+
+    // --- FIN ---
+    if (step.type === 'end') {
+        imgEl.src = `images/${content.default_image}`;
+        contentArea.innerHTML = `
+            <div class="end-card">
+                <div class="icon">🌹</div>
+                <h2>Rosario Completado</h2>
+                <p>${content.prayers.end}</p>
+            </div>`;
+    }
+}
+
+// ------------------------------------------------
+// EVENTOS
+// ------------------------------------------------
+function handleNext() {
+    if (currentStep >= prayerSequence.length - 1) {
+        currentStep = -1;
+    } else {
+        currentStep++;
+    }
+    renderStep();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function handlePrev() {
+    if (currentStep > 0) currentStep--;
+    renderStep();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function setMysteryForToday() {
+    const day = new Date().getDay();
+    const map = { 1: 'joyful', 6: 'joyful', 4: 'luminous', 2: 'sorrowful', 5: 'sorrowful', 3: 'glorious', 0: 'glorious' };
+    currentMysteryKey = map[day] || 'joyful';
+}
+
+function toggleMenu() {
+    document.getElementById('menu').classList.toggle('show');
+}
+
+// ------------------------------------------------
+// INICIALIZACIÓN
+// ------------------------------------------------
+document.addEventListener('DOMContentLoaded', () => {
+    const mysterySelect = document.getElementById('mystery-select');
+    const languageSelect = document.getElementById('language-select');
+    const nextBtn = document.getElementById('next-btn');
+    const prevBtn = document.getElementById('prev-btn');
+
+    setMysteryForToday();
+    mysterySelect.value = currentMysteryKey;
+
+    prayerSequence = buildPrayerSequence();
+    renderStep();
+
+    nextBtn.addEventListener('click', handleNext);
+    prevBtn.addEventListener('click', handlePrev);
+
+    mysterySelect.addEventListener('change', e => {
+        currentMysteryKey = e.target.value;
+        currentStep = -1;
+        prayerSequence = buildPrayerSequence();
+        renderStep();
+    });
+
+    languageSelect.addEventListener('change', e => {
+        currentLanguage = e.target.value;
+        // Solo español disponible por ahora (latín e italiano en versión completa)
+        if (!rosaryContent[currentLanguage]) currentLanguage = 'es';
+        currentStep = -1;
+        prayerSequence = buildPrayerSequence();
+        renderStep();
+    });
+
+    // Soporte teclado (flecha der/izq)
+    document.addEventListener('keydown', e => {
+        if (e.key === 'ArrowRight') handleNext();
+        else if (e.key === 'ArrowLeft' && !prevBtn.disabled) handlePrev();
+    });
+});
 </script>
+
 </body>
 </html>
