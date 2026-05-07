@@ -1,814 +1,540 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Santo Rosario Interactivo</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary-color: #DAA520;
-            --primary-light-color: #FFDB58;
-            --accent-color: #B8860B;
-            --font-heading: 'Crimson Text', serif;
-            --font-body: 'Lato', sans-serif;
-            --text-light-color: #f0f0f0;
-            --bg-overlay: rgba(0, 0, 0, 0.6);
-            --active-bead-color: var(--primary-light-color);
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rosario Interactivo · Lalo Peralta</title>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    /* ========== ESTILOS (igual al index principal) ========== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        body, html {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            font-family: var(--font-body);
-            background-color: #000;
-        }
+    :root {
+      --azul:       #185FA5;
+      --azul-claro: #E6F1FB;
+      --azul-mid:   #378ADD;
+      --texto:      #1a1a1a;
+      --texto-muted:#6b7280;
+      --borde:      rgba(0,0,0,0.08);
+      --borde-hover:rgba(0,0,0,0.18);
+      --fondo:      #ffffff;
+      --fondo-sec:  #f8f9fa;
+      --radio-card: 12px;
+      --radio-sm:   8px;
+    }
 
-        #rosary-container {
-            position: relative;
-            width: 100%;
-            height: 100vh;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: linear-gradient(135deg, #1a2a5e 0%, #294197 50%, #3d5bb8 100%);
+      background-attachment: fixed;
+      color: var(--texto);
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+      position: relative;
+    }
 
-        #background-image {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-            transition: background-image 1.5s ease-in-out;
-            transform: scale(1.05);
-        }
+    body::before {
+      content: '';
+      position: fixed;
+      top: -50%;
+      right: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+      animation: shine 15s linear infinite;
+      pointer-events: none;
+    }
 
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: var(--bg-overlay);
-        }
+    @keyframes shine {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
 
-        .main-content {
-            position: relative;
-            z-index: 2;
-            color: var(--text-light-color);
-            text-align: center;
-            padding: 20px;
-            max-width: 900px;
-            width: 90%;
-            height: 95vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            background: rgba(0,0,0,0.1);
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.5);
-        }
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 1.25rem;
+      background: var(--fondo);
+      border-bottom: 1px solid var(--borde);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
 
-    .controls {
-            display: flex;
-            justify-content: center;
-            gap: 20px; /* Mantén este espacio o ajústalo si es necesario */
-            margin-bottom: 15px;
-            flex-wrap: nowrap; /* ¡IMPORTANTE! Asegura que permanezcan en una sola línea en pantallas grandes */
-            transition: opacity 0.5s ease, height 0.5s ease, margin 0.5s ease;
-        }
+    .logo {
+      font-family: 'Crimson Pro', serif;
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--texto);
+    }
+    .logo span { color: var(--azul); }
 
-       
+    .btn-volver {
+      background: transparent;
+      border: 1px solid var(--borde-hover);
+      padding: 0.4rem 1rem;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      text-decoration: none;
+      color: var(--texto);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+    .btn-volver:hover {
+      background: var(--fondo-sec);
+      border-color: var(--azul);
+      color: var(--azul);
+    }
 
-        .controls select {
-            background: rgba(255, 255, 255, 0.1);
-            color: var(--text-light-color);
-            border: 1px solid var(--accent-color);
-            border-radius: 5px;
-            padding: 5px;
-            font-family: var(--font-body);
-            width: 200px; /* Agrega un ancho fijo para que ambos tengan el mismo tamaño */
-            max-width: 45vw; /* Opcional: para que no sean excesivamente anchos en pantallas muy grandes */
-            box-sizing: border-box; /* Asegura que padding y border se incluyan en el ancho */
-        }
-
-      
-
-
-
-        .controls label {
-            font-size: 0.9em;
-        }
-
-
-        #prayer-area {
-            flex-grow: 1;
-            overflow-y: auto;
-            padding: 0 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        #prayer-area::-webkit-scrollbar { width: 8px; }
-        #prayer-area::-webkit-scrollbar-track { background: rgba(0,0,0,0.2); border-radius: 4px; }
-        #prayer-area::-webkit-scrollbar-thumb { background: var(--accent-color); border-radius: 4px; }
-        #prayer-area::-webkit-scrollbar-thumb:hover { background: var(--text-light-color); }
-
-        #mystery-title {
-            font-family: var(--font-heading);
-            font-size: 2.2em;
-            font-weight: 700;
-            margin: 10px 0 0 0;
-            color: var(--primary-color);
-            text-shadow: 2px 2px 4px #000;
-        }
-        
-        #prayer-text {
-            font-family: var(--font-heading);
-            font-size: 1.5em;
-            line-height: 1.6;
-            margin: 10px 0;
-            white-space: pre-wrap;
-            color: var(--text-light-color);
-        }
-
-        .citation {
-            margin-top: 20px;
-            margin-bottom: 5px;
-            font-family: var(--font-body);
-            font-weight: bold;
-            font-size: 1.1em;
-            color: var(--accent-color);
-        }
-
-        .verse {
-            margin-top: 0;
-            margin-bottom: 15px;
-            font-family: var(--font-heading);
-            font-style: italic;
-            font-size: 1.2em;
-        }
-
-        .reflection {
-            margin-top: 0;
-            padding: 0 20px;
-            font-family: var(--font-body);
-            font-size: 1em;
-            line-height: 1.5;
-            text-align: justify;
-        }
-
-        #bead-counter-text {
-            font-family: var(--font-body);
-            font-size: 1.2em;
-            font-weight: bold;
-            color: var(--primary-light-color);
-            margin-bottom: 10px;
-            height: 20px;
-            transition: opacity 0.3s ease;
-        }
-
-        #bead-container {
-            display: flex;
-            flex-wrap: nowrap; /* Asegura que las cuentas no se dividan en varias líneas */
-            justify-content: center;
-            align-items: center;
-            gap: 8px; /* Espacio reducido para que quepan más cuentas */
-            padding: 15px 0;
-            min-height: 50px;
-            overflow-x: auto; /* Permite scroll horizontal si no caben */
-            -webkit-overflow-scrolling: touch;
-            scrollbar-width: none;
-        }
-        
-        #bead-container::-webkit-scrollbar {
-            display: none; /* Oculta la barra de scroll */
-        }
-
-        .bead {
-            width: 30px; /* Tamaño reducido */
-            height: 30px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.15);
-            border: 2px solid var(--primary-color);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 1.5em; /* Tamaño de ícono ajustado */
-            font-weight: bold;
-            transition: all 0.3s ease;
-            flex-shrink: 0; /* Evita que las cuentas se encojan */
-        }
-
-        .bead.heart {
-            font-size: 1.2em;
-        }
-
-        .bead.active {
-            background-color: var(--active-bead-color);
-            border-color: var(--active-bead-color);
-            color: #000;
-            transform: scale(1.1);
-        }
-
-        .navigation {
-            padding: 15px 0;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        #next-btn, #prev-btn {
-            padding: 12px 30px;
-            font-size: 1.1em;
-            border: 2px solid var(--accent-color);
-            border-radius: 50px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        #next-btn { color: #000; background-color: var(--accent-color); }
-        #next-btn:hover { background-color: var(--primary-light-color); border-color: var(--primary-light-color); transform: scale(1.05); }
-
-        #prev-btn { color: var(--accent-color); background-color: transparent; }
-        #prev-btn:hover { background-color: var(--accent-color); color: #000; transform: scale(1.05); }
-        #prev-btn:disabled { opacity: 0.4; cursor: not-allowed; transform: scale(1); }
-        #prev-btn:disabled:hover { background-color: transparent; color: var(--accent-color); }
-
-        .controls.hidden {
-            opacity: 0;
-            visibility: hidden;
-            height: 0;
-            margin-bottom: 0;
-            overflow: hidden;
-        }
-
-        .progress-bar-container {
-            width: 100%;
-            background-color: rgba(255, 255, 255, 0.2);
-            border-radius: 5px;
-            height: 8px;
-            margin-top: 10px;
-        }
-
-        #progress-bar {
-            width: 0%;
-            height: 100%;
-            background-color: var(--accent-color);
-            border-radius: 5px;
-            transition: width 0.5s ease-in-out;
-        }
-
-        @media (max-width: 768px) {
-            #mystery-title { font-size: 1.8em; }
-            #prayer-text { font-size: 1.2em; }
-            .bead { width: 28px; height: 28px; font-size: 1.3em; }
-        }
-
-        @media (max-width: 480px) {
-            .main-content { padding: 10px; width: 95%; height: 95vh; }
-            .controls { flex-direction: column; gap: 8px; }
-            #mystery-title { font-size: 1.5em; }
-            #prayer-text { font-size: 1.1em; }
-            .reflection { font-size: 0.9em; padding: 0 10px; }
-            .bead { width: 24px; height: 24px; font-size: 1.1em; }
-            #bead-container { gap: 6px; }
-            #next-btn, #prev-btn { padding: 10px 25px; font-size: 1em; }
-        }
-
-
-
-        @media (max-width: 480px) {
-            .main-content { padding: 10px; width: 95%; height: 95vh; }
-            .controls {
-                flex-direction: column; /* Esto hace que se apilen verticalmente */
-                gap: 8px;
-                flex-wrap: wrap;
-            }
-            .controls select {
-                width: 100%; /* En móviles, que ocupen todo el ancho disponible del control-group */
-                max-width: none; /* Elimina cualquier max-width que los restrinja */
-            }
-            }
-
-
-    </style>
+    .rosario-container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1rem;
+      position: relative;
+      z-index: 1;
+    }
+    .rosario-card {
+      background: linear-gradient(135deg, #ffffff 0%, #f0f4ff 100%);
+      border-radius: 28px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+      padding: 1.8rem;
+      border: 1px solid rgba(41, 65, 151, 0.2);
+    }
+    .rosario-header {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    .rosario-header h1 {
+      font-family: 'Crimson Pro', serif;
+      font-size: 2rem;
+      color: var(--azul);
+    }
+    .misterio-actual {
+      font-size: 0.85rem;
+      color: var(--texto-muted);
+      margin-top: 0.3rem;
+    }
+    .selectores {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+    .selectores select {
+      background: var(--fondo);
+      border: 1px solid var(--borde-hover);
+      border-radius: 30px;
+      padding: 0.4rem 1rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.8rem;
+      color: var(--texto);
+    }
+    .oracion-area {
+      background: var(--fondo-sec);
+      border-radius: 20px;
+      padding: 1.5rem;
+      margin: 1rem 0;
+      min-height: 320px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .oracion-title {
+      font-family: 'Crimson Pro', serif;
+      font-size: 1.5rem;
+      color: var(--azul);
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .oracion-texto {
+      font-family: 'Crimson Pro', serif;
+      font-size: 1.2rem;
+      line-height: 1.6;
+      text-align: center;
+      white-space: pre-wrap;
+      color: var(--texto);
+    }
+    .reflexion {
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 2px solid rgba(41, 65, 151, 0.15);
+      font-size: 0.95rem;
+      font-style: italic;
+      color: var(--azul-mid);
+      text-align: center;
+    }
+    .cuentas-area {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin: 1rem 0;
+    }
+    .cuenta {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(41, 65, 151, 0.1);
+      border: 2px solid var(--azul);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: var(--azul);
+      transition: all 0.3s;
+    }
+    .cuenta.active {
+      background: var(--azul);
+      color: white;
+      transform: scale(1.1);
+      box-shadow: 0 0 10px rgba(24, 95, 165, 0.5);
+    }
+    .cuenta.completada {
+      background: var(--azul-claro);
+      border-color: var(--azul-mid);
+      color: var(--azul-mid);
+      opacity: 0.7;
+    }
+    .controles-rosario {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .btn-rosario {
+      padding: 0.7rem 1.5rem;
+      border-radius: 40px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-family: 'DM Sans', sans-serif;
+    }
+    .btn-primary-rosario {
+      background: var(--azul);
+      color: white;
+      box-shadow: 0 4px 10px rgba(24, 95, 165, 0.3);
+    }
+    .btn-primary-rosario:hover {
+      background: #0d4d8a;
+      transform: translateY(-2px);
+    }
+    .btn-secundario {
+      background: transparent;
+      border: 1px solid var(--azul);
+      color: var(--azul);
+    }
+    .btn-secundario:hover {
+      background: var(--azul-claro);
+    }
+    .mensaje {
+      text-align: center;
+      margin-top: 0.5rem;
+      font-size: 0.85rem;
+      color: var(--texto-muted);
+    }
+    @media (max-width: 640px) {
+      .rosario-card { padding: 1.2rem; }
+      .oracion-texto { font-size: 1rem; }
+      .oracion-title { font-size: 1.2rem; }
+      .cuenta { width: 32px; height: 32px; font-size: 0.8rem; }
+      .btn-rosario { padding: 0.5rem 1rem; }
+    }
+  </style>
 </head>
 <body>
 
-    <div id="rosary-container">
-        <div id="background-image"></div>
-        <div class="overlay"></div>
+<nav class="navbar">
+  <div class="logo">Lalo <span>Peralta</span></div>
+  <a href="../index.html" class="btn-volver"><i class="fas fa-arrow-left"></i> Volver al inicio</a>
+</nav>
 
-        <div class="main-content">
-           <div class="controls">
-                <div class="control-group">
-                    <select id="language-select">
-                        <option value="" disabled selected hidden>Idioma:</option> <option value="es">Español</option>
-                        <option value="it">Italiano</option>
-                        <option value="la">Latín</option>
-                    </select>
-                </div>
-                <div class="control-group">
-                    <select id="mystery-select">
-                        <option value="" disabled selected hidden>Misterios:</option> <option value="joyful">Gozosos (Lunes, Sábado)</option>
-                        <option value="luminous">Luminosos (Jueves)</option>
-                        <option value="sorrowful">Dolorosos (Martes, Viernes)</option>
-                        <option value="glorious">Gloriosos (Miércoles, Domingo)</option>
-                    </select>
-                </div>
-            </div>
-
-
-            <div id="prayer-area">
-                <h1 id="mystery-title"></h1>
-                <p id="prayer-text"></p>
-                <p id="citation-text" class="citation"></p>
-                <p id="verse-text" class="verse"></p>
-                <p id="reflection-text" class="reflection"></p>
-            </div>
-
-            <div>
-                <div id="bead-counter-text"></div>
-                <div id="bead-container"></div>
-            </div>
-
-            <div class="navigation">
-                <button id="prev-btn">Anterior</button>
-                <button id="next-btn">Siguiente</button>
-            </div>
-            
-            <div class="progress-bar-container">
-                <div id="progress-bar"></div>
-            </div>
-        </div>
+<div class="rosario-container">
+  <div class="rosario-card">
+    <div class="rosario-header">
+      <h1><i class="fas fa-praying-hands"></i> Santo Rosario</h1>
+      <div class="misterio-actual" id="info-misterio"></div>
     </div>
 
+    <div class="selectores">
+      <select id="idioma-select">
+        <option value="es">🇪🇸 Español</option>
+        <!-- Puedes añadir italiano y latín después -->
+      </select>
+      <select id="misterio-select">
+        <option value="joyful">🌹 Misterios Gozosos (Lun/Sáb)</option>
+        <option value="luminous">💡 Misterios Luminosos (Jue)</option>
+        <option value="sorrowful">✝️ Misterios Dolorosos (Mar/Vie)</option>
+        <option value="glorious">👑 Misterios Gloriosos (Mié/Dom)</option>
+      </select>
+    </div>
+
+    <div id="oracion-area" class="oracion-area">
+      <div id="oracion-title" class="oracion-title"></div>
+      <div id="oracion-texto" class="oracion-texto"></div>
+      <div id="reflexion-fragmento" class="reflexion"></div>
+    </div>
+
+    <div id="cuentas-container" class="cuentas-area"></div>
+    <div id="contador-texto" class="mensaje"></div>
+
+    <div class="controles-rosario">
+      <button id="btn-anterior" class="btn-rosario btn-secundario"><i class="fas fa-chevron-left"></i> Anterior</button>
+      <button id="btn-siguiente" class="btn-rosario btn-primary-rosario">Siguiente <i class="fas fa-chevron-right"></i></button>
+      <button id="btn-reiniciar" class="btn-rosario btn-secundario"><i class="fas fa-sync-alt"></i> Reiniciar</button>
+    </div>
+  </div>
+</div>
+
 <script>
-const rosaryContent = {
+  // ==================== CONTENIDO COMPLETO EN ESPAÑOL ====================
+  const rosarioContent = {
     es: {
-        default_image: "default.jpg",
-        prev_btn: "Anterior",
-        next_btn: "Siguiente",
-        mysteries: {
-            joyful: [
-                { title: "La Anunciación", image: "gozosos1.jpg", citation_text: "Lectura del Santo Evangelio según San Lucas (1, 28-38)", verse_text: '"He aquí la esclava del Señor; hágase en mí según tu palabra."', reflection_text: "La Anunciación a María inaugura la plenitud de los tiempos, es decir, el cumplimiento de las promesas y de las preparaciones. María es llamada a concebir a Aquel en quien habitará 'corporalmente la plenitud de la divinidad'. La respuesta divina a su '¿cómo será esto, puesto que no conozco varón?' se dio por el poder del Espíritu: 'El Espíritu Santo vendrá sobre ti'. (CIC, 484)" },
-                { title: "La Visitación", image: "gozosos2.jpg", citation_text: "Lectura del Santo Evangelio según San Lucas (1, 41-45)", verse_text: '"Bendita tú entre las mujeres y bendito el fruto de tu vientre... ¡Feliz la que ha creído que se cumplirían las cosas que le fueron dichas de parte del Señor!"', reflection_text: "La visitación de María a Isabel se convirtió así en visita de Dios a su pueblo. Isabel, 'llena de Espíritu Santo', es la primera en la larga serie de generaciones que llaman bienaventurada a María. (CIC, 717, 489)" },
-                { title: "El Nacimiento de Jesús", image: "gozosos3.jpg", citation_text: "Lectura del Santo Evangelio según San Lucas (2, 6-11)", verse_text: '"Y dio a luz a su hijo primogénito, lo envolvió en pañales y lo acostó en un pesebre... Os ha nacido hoy, en la ciudad de David, un salvador, que es el Cristo Señor."', reflection_text: "Jesús nació en la humildad de un establo, de una familia pobre; unos sencillos pastores son los primeros testigos del acontecimiento. En esta pobreza se manifiesta la gloria del cielo. Hacerse niño, pobre, y obediente hasta la muerte en cruz, revela el amor de Dios que viene a salvar a la humanidad. (CIC, 525)" },
-                { title: "La Presentación en el Templo", image: "gozosos4.jpg", citation_text: "Lectura del Santo Evangelio según San Lucas (2, 22-35)", verse_text: '"Mis ojos han visto tu salvación... luz para iluminar a las naciones y gloria de tu pueblo Israel... Y a ti misma una espada te atravesará el alma."', reflection_text: "La Presentación de Jesús en el Templo lo muestra como el Primogénito que pertenece al Señor. Con Simeón y Ana, toda la expectación de Israel es la que viene al Encuentro de su Salvador. Jesús es reconocido como el Mesías tan esperado, 'luz de las naciones' y 'gloria de Israel', pero también 'signo de contradicción'. La espada de dolor predicha a María anuncia otra oblación, perfecta y única, la de la Cruz. (CIC, 527, 529)" },
-                { title: "El Niño Perdido y Hallado", image: "gozosos5.jpg", citation_text: "Lectura del Santo Evangelio según San Lucas (2, 41-50)", verse_text: '"¿Por qué me buscabais? ¿No sabíais que yo debía estar en la casa de mi Padre?"', reflection_text: "El hallazgo de Jesús en el Templo es el único suceso que rompe el silencio de los Evangelios sobre los años ocultos de Jesús. Jesús deja entrever en ello el misterio de su consagración total a una misión derivada de su filiación divina. María y José 'no comprendieron' esta palabra, pero la acogieron en la fe. (CIC, 534)" }
-            ],
-            luminous: [
-                { title: "El Bautismo en el Jordán", image: "luminosos1.jpg", citation_text: "Lectura del Santo Evangelio según San Mateo (3, 16-17)", verse_text: '"Y una voz que salía de los cielos decía: Éeste es mi Hijo amado, en quien me complazco."', reflection_text: "El bautismo de Jesús es, por su parte, la aceptación y la inauguración de su misión de Siervo doliente. Se deja contar entre los pecadores; es ya 'el Cordero de Dios que quita el pecado del mundo'. El Espíritu que había cernido sobre las aguas de la primera creación desciende entonces sobre Cristo, como preludio de la nueva creación, y el Padre manifiesta a Jesús como su 'Hijo amado'. (CIC, 536)" },
-                { title: "Las Bodas de Caná", image: "luminosos2.jpg", citation_text: "Lectura del Santo Evangelio según San Juan (2, 1-11)", verse_text: '"Haced lo que él os diga... Así, en Caná de Galilea, Jesús comenzó sus señales, manifestó su gloria y creció la fe de sus discípulos en él."', reflection_text: "En el umbral de su vida pública, Jesús realiza su primer signo —a petición de su Madre— con ocasión de un banquete de bodas. La Iglesia concede una gran importancia a la presencia de Jesús en las bodas de Caná. Ve en ella la confirmación de la bondad del matrimonio y el anuncio de que en adelante el matrimonio será un signo eficaz de la presencia de Cristo. (CIC, 1613)" },
-                { title: "El Anuncio del Reino", image: "luminosos3.jpg", citation_text: "Lectura del Santo Evangelio según San Marcos (1, 14-15)", verse_text: '"El tiempo se ha cumplido y el Reino de Dios está cerca; convertíos y creed en la Buena Nueva."', reflection_text: "Todos los hombres están llamados a entrar en el Reino. Anunciado primero a los hijos de Israel, este reino mesiánico está destinado a acoger a los hombres de todas las naciones. Para entrar en él, es necesario acoger la palabra de Jesús. El Reino de Dios llega en la persona de Cristo y crece misteriosamente en el corazón de los que le son incorporados hasta su plenitud escatológica. (CIC, 543, 541)" },
-                { title: "La Transfiguración", image: "luminosos4.jpg", citation_text: "Lectura del Santo Evangelio según San Mateo (17, 1-8)", verse_text: '"Y se transfiguró delante de ellos: su rostro se puso brillante como el sol y sus vestidos se volvieron blancos como la luz... Señor, ¡qué bien se está aquí!"', reflection_text: "Por un instante, Jesús muestra su gloria divina, confirmando así la confesión de Pedro. Muestra también que para 'entrar en su gloria' es necesario pasar por la Cruz en Jerusalén. La Transfiguración nos concede una prueba de la vida nueva: 'como Él, seremos nosotros'. Pero nos recuerda también que 'es necesario que pasemos por muchas tribulaciones para entrar en el Reino de Dios'. (CIC, 554, 556)" },
-                { title: "La Institución de la Eucaristía", image: "luminosos5.jpg", citation_text: "Lectura de la Primera Carta de San Pablo a los Corintios (11, 23-26)", verse_text: '"Porque cada vez que coméis este pan y bebéis esta copa, proclamáis la muerte del Señor hasta que vuelva."', reflection_text: "Al celebrar la última Cena con sus apóstoles en el transcurso del banquete pascual, Jesús dio su sentido definitivo a la pascua judía. En efecto, el paso de Jesús a su Padre por su Muerte y su Resurrección, la Pascua nueva, es anticipado en la Cena y celebrado en la Eucaristía que da cumplimiento a la pascua judía y anticipa la pascua final de la Iglesia en la gloria del Reino. (CIC, 1340)" }
-            ],
-            sorrowful: [
-                { title: "La Oración en el Huerto", image: "dolorosos1.jpg", citation_text: "Lectura del Santo Evangelio según San Lucas (22, 39-46)", verse_text: '"Padre, si quieres, aparta de mí esta copa; pero no se haga mi voluntad, sino la tuya."', reflection_text: "La agonía de Jesús en Getsemaní representa la lucha de la voluntad humana de Jesús contra la voluntad divina del Padre. Jesús, aun siendo Dios, experimenta el horror de la muerte y la angustia de la separación, pero su obediencia filial lo lleva a aceptar la misión redentora. Su oración nos enseña a conformar nuestra voluntad con la de Dios en medio de la prueba. (CIC, 612)" },
-                { title: "La Flagelación", image: "dolorosos2.jpg", citation_text: "Lectura del Santo Evangelio según San Juan (19, 1)", verse_text: '"Entonces Pilato tomó a Jesús y mandó azotarle."', reflection_text: "La flagelación fue un castigo brutal que formaba parte de la Pasión de Cristo, predicha por los profetas. A través de este sufrimiento físico extremo, Jesús carga sobre sí los pecados y dolores de toda la humanidad. 'Por sus llagas hemos sido curados' (Isaías 53,5). Este misterio nos invita a unir nuestros propios sufrimientos a los de Cristo para la redención del mundo. (CIC, 614)" },
-                { title: "La Coronación de Espinas", image: "dolorosos3.jpg", citation_text: "Lectura del Santo Evangelio según San Mateo (27, 27-31)", verse_text: '"Y trenzando una corona de espinas, se la pusieron sobre su cabeza, y en su mano derecha una caña; y doblando la rodilla delante de él, le escarnecían, diciendo: ¡Salve, Rey de los judíos!"', reflection_text: "La coronación de espinas es una burla cruel a la realeza de Cristo. Sin embargo, en esta humillación se revela la verdadera naturaleza de su Reino: un reino no de poder terrenal, sino de amor, humildad y servicio. Jesús acepta la corona de dolor, transformando un símbolo de escarnio en un signo de su amor redentor y de su soberanía sobre el pecado y la muerte. (CIC, 478)" },
-                { title: "Jesús con la Cruz a Cuestas", image: "dolorosos4.jpg", citation_text: "Lectura del Santo Evangelio según San Juan (19, 17)", verse_text: '"Y él, cargando su cruz, salió al lugar llamado de la Calavera, que en hebreo se llama Gólgota."', reflection_text: "Jesús carga con la cruz, en la que se encuentran todos nuestros pecados. El camino del Calvario es el camino de la obediencia y del amor hasta el extremo. Al abrazar la cruz, Jesús nos enseña que el sufrimiento, aceptado con amor, tiene un valor redentor. Nos invita a tomar nuestra propia cruz cada día y seguirle, participando así en su obra de salvación. (CIC, 618)" },
-                { title: "La Crucifixión y Muerte", image: "dolorosos5.jpg", citation_text: "Lectura del Santo Evangelio según San Lucas (23, 44-46)", verse_text: '"Padre, en tus manos encomiendo mi espíritu. Y habiendo dicho esto, expiró."', reflection_text: "La muerte de Cristo es el sacrificio único y definitivo que reconcilia a la humanidad con Dios. En la cruz, Jesús experimenta el abandono para que nosotros nunca seamos abandonados por Dios. Su entrega total es la máxima prueba de amor. Desde la cruz, nos entrega a su Madre y nos da el don del Espíritu Santo, abriendo las puertas de la vida eterna. (CIC, 606, 616)" }
-            ],
-            glorious: [
-                { title: "La Resurrección", image: "gloriosos1.jpg", citation_text: "Lectura del Santo Evangelio según San Marcos (16, 1-7)", verse_text: '"No os asustéis. Buscáis a Jesús de Nazaret, el crucificado. Ha resucitado, no está aquí."', reflection_text: "La Resurrección de Jesús es la verdad culminante de nuestra fe en Cristo, creída y vivida por la primera comunidad cristiana como verdad central. Es la obra trascendente de Dios mismo. Confirma la divinidad de Cristo y es la promesa de nuestra propia resurrección. (CIC, 638, 651)" },
-                { title: "La Ascensión", image: "gloriosos2.jpg", citation_text: "Lectura de los Hechos de los Apóstoles (1, 9-11)", verse_text: '"Dicho esto, fue levantado en presencia de ellos, y una nube le ocultó a sus ojos... Este mismo Jesús, que ha sido tomado de vosotros al cielo, vendrá de la misma manera que le habéis visto ir al cielo."', reflection_text: "La Ascensión de Cristo al cielo marca la entrada definitiva de la humanidad de Jesús en el dominio celestial de Dios, de donde ha de volver. Jesucristo, cabeza de la Iglesia, nos precede en el Reino glorioso del Padre para que nosotros, miembros de su cuerpo, vivamos en la esperanza de estar un día con Él eternamente. (CIC, 665)" },
-                { title: "La Venida del Espíritu Santo", image: "gloriosos3.jpg", citation_text: "Lectura de los Hechos de los Apóstoles (2, 1-4)", verse_text: '"Se les aparecieron unas lenguas como de fuego que se repartieron y se posaron sobre cada uno de ellos; quedaron todos llenos del Espíritu Santo y se pusieron a hablar en otras lenguas."', reflection_text: "En el día de Pentecostés, la Pascua de Cristo se consuma con la efusión del Espíritu Santo que se manifiesta, da y comunica como Persona divina: desde su plenitud, Cristo, el Señor, derrama profusamente el Espíritu. El Espíritu Santo viene a santificar a la Iglesia y a capacitar a los apóstoles para anunciar con valentía el Evangelio. (CIC, 731)" },
-                { title: "La Asunción de María", image: "gloriosos4.jpg", citation_text: "Lectura del Santo Evangelio según San Lucas (1, 48-49)", verse_text: '"Porque ha puesto los ojos en la humildad de su esclava, por eso desde ahora todas las generaciones me llamarán bienaventurada, porque ha hecho en mi favor maravillas el Poderoso."', reflection_text: "La Santísima Virgen María, cumplido el curso de su vida terrena, fue llevada en cuerpo y alma a la gloria del cielo, en donde participa ya en la gloria de la Resurrección de su Hijo, anticipando la resurrección de todos los miembros de su Cuerpo. Es signo de esperanza cierta para la Iglesia peregrina. (CIC, 966)" },
-                { title: "La Coronación de María", image: "gloriosos5.jpg", citation_text: "Lectura del Libro del Apocalipsis (12, 1)", verse_text: '"Una gran señal apareció en el cielo: una Mujer, vestida del sol, con la luna bajo sus pies, y una corona de doce estrellas sobre su cabeza."', reflection_text: "Finalmente, la Virgen Inmaculada, preservada inmune de toda mancha de pecado original, terminado el curso de su vida en la tierra, fue asunta en cuerpo y alma a la gloria del cielo y enaltecida por el Señor como Reina de todos los vivientes, para que se asemejara más plenamente a su Hijo, Señor de señores y vencedor del pecado y de la muerte. (CIC, 966)" }
-            ]
+      prayers: {
+        sign_of_cross: "Por la señal de la Santa Cruz, de nuestros enemigos, líbranos Señor, Dios nuestro.\nEn el nombre del Padre, y del Hijo, y del Espíritu Santo. Amén.",
+        versicle: "V. Dios mío, ven en mi auxilio.\nR. Señor, date prisa en socorrerme.",
+        creed: "Creo en Dios, Padre todopoderoso, Creador del cielo y de la tierra.\nCreo en Jesucristo, su único Hijo, nuestro Señor, que fue concebido por obra y gracia del Espíritu Santo, nació de Santa María Virgen, padeció bajo el poder de Poncio Pilato, fue crucificado, muerto y sepultado, descendió a los infiernos, al tercer día resucitó de entre los muertos, subió a los cielos y está sentado a la derecha de Dios, Padre todopoderoso. Desde allí ha de venir a juzgar a vivos y muertos.\nCreo en el Espíritu Santo, la santa Iglesia católica, la comunión de los santos, el perdón de los pecados, la resurrección de la carne y la vida eterna. Amén.",
+        our_father: "Padre nuestro, que estás en el cielo, santificado sea tu Nombre; venga a nosotros tu reino; hágase tu voluntad, en la tierra como en el cielo.\nDanos hoy nuestro pan de cada día; perdona nuestras ofensas, como también nosotros perdonamos a los que nos ofenden; no nos dejes caer en la tentación y líbranos del mal. Amén.",
+        hail_mary: "Dios te salve, María, llena eres de gracia; el Señor es contigo. Bendita Tú eres entre todas las mujeres, y bendito es el fruto de tu vientre, Jesús.\nSanta María, Madre de Dios, ruega por nosotros, pecadores, ahora y en la hora de nuestra muerte. Amén.",
+        gloria: "Gloria al Padre, y al Hijo, y al Espíritu Santo.\nComo era en el principio, ahora y siempre, por los siglos de los siglos. Amén.",
+        fatima_prayer: "Oh, Jesús mío, perdona nuestros pecados, líbranos del fuego del infierno, lleva al cielo a todas las almas, especialmente a las más necesitadas de tu divina misericordia.",
+        salve_regina: "Dios te salve, Reina y Madre de misericordia, vida, dulzura y esperanza nuestra; Dios te salve.\nA Ti llamamos los desterrados hijos de Eva; a Ti suspiramos, gimiendo y llorando, en este valle de lágrimas.\nEa, pues, Señora, abogada nuestra, vuelve a nosotros esos tus ojos misericordiosos; y después de este destierro, muéstranos a Jesús, fruto bendito de tu vientre.\n¡Oh clemente, oh piadosa, oh dulce siempre Virgen María!\nRuega por nosotros, Santa Madre de Dios, para que seamos dignos de alcanzar las promesas de Nuestro Señor Jesucristo. Amén.",
+        pope_intentions: "Por las intenciones del Santo Padre, por la Santa Iglesia y por nuestras necesidades.",
+        final_sign_of_cross: "En el nombre del Padre, y del Hijo, y del Espíritu Santo. Amén."
+      },
+      mysteries: {
+        joyful: {
+          title: "Misterios Gozosos",
+          fragments: [
+            "1. La Anunciación: «He aquí la esclava del Señor; hágase en mí según tu palabra.» (Lucas 1,38)",
+            "2. La Visitación: «Bendita tú entre las mujeres y bendito el fruto de tu vientre... Feliz la que ha creído.» (Lucas 1,42-45)",
+            "3. El Nacimiento de Jesús: «Os ha nacido hoy un Salvador, que es el Cristo Señor.» (Lucas 2,11)",
+            "4. La Presentación en el Templo: «Mis ojos han visto tu salvación, luz para iluminar a las naciones.» (Lucas 2,30-32)",
+            "5. El Niño perdido y hallado: «¿No sabíais que yo debía estar en la casa de mi Padre?» (Lucas 2,49)",
+            "6. (1ª Avemaría) María guardaba todas estas cosas en su corazón. (Lucas 2,19)",
+            "7. (2ª Avemaría) Jesús crecía en sabiduría, en estatura y en gracia. (Lucas 2,52)",
+            "8. (3ª Avemaría) El Espíritu Santo vendrá sobre ti. (Lucas 1,35)",
+            "9. (4ª Avemaría) Dichosa la que ha creído. (Lucas 1,45)",
+            "10. (5ª Avemaría) Mi espíritu se alegra en Dios mi Salvador. (Lucas 1,47)",
+            "11. (6ª Avemaría) Su misericordia llega a sus fieles de generación en generación. (Lucas 1,50)"
+          ]
         },
-        prayers: {
-            welcome_invitation: "Bienvenido.\n\nTe invitamos a tomar un momento para ofrecer este Santo Rosario por tus intenciones particulares, por las necesidades del mundo y por todos aquellos que han pedido tus oraciones.",
-            sign_of_cross: "Por la señal de la Santa Cruz, de nuestros enemigos, líbranos Señor, Dios nuestro.\nEn el nombre del Padre, y del Hijo, y del Espíritu Santo. Amén.",
-            versicle: "V. Dios mío, ven en mi auxilio.\nR. Señor, date prisa en socorrerme.",
-            creed: "Creo en Dios, Padre todopoderoso, Creador del cielo y de la tierra. Creo en Jesucristo, su único Hijo, nuestro Señor, que fue concebido por obra y gracia del Espíritu Santo, nació de Santa María Virgen, padeció bajo el poder de Poncio Pilato, fue crucificado, muerto y sepultado, descendió a los infiernos, al tercer día resucitó de entre los muertos, subió a los cielos y está sentado a la derecha de Dios, Padre todopoderoso. Desde allí ha de venir a juzgar a vivos y muertos. Creo en el Espíritu Santo, la santa Iglesia católica, la comunión de los santos, el perdón de los pecados, la resurrección de la carne y la vida eterna. Amén.",
-            our_father: "Padre nuestro, que estás en el cielo, santificado sea tu Nombre; venga a nosotros tu reino; hágase tu voluntad, en la tierra como en el cielo. Danos hoy nuestro pan de cada día; perdona nuestras ofensas, como también nosotros perdonamos a los que nos ofenden; no nos dejes caer en la tentación y líbranos del mal. Amén.",
-            hail_mary: "Dios te salve, María, llena eres de gracia; el Señor es contigo. Bendita Tú eres entre todas las mujeres, y bendito es el fruto de tu vientre, Jesús. Santa María, Madre de Dios, ruega por nosotros, pecadores, ahora y en la hora de nuestra muerte. Amén.",
-            gloria: "Gloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.",
-            fatima_prayer: "Oh, Jesús mío, perdona nuestros pecados, líbranos del fuego del infierno, lleva al cielo a todas las almas, especialmente a las más necesitadas de tu divina misericordia.",
-            mary_mother: "María, Madre de gracia, Madre de piedad y misericordia, defiéndenos de nuestros enemigos y ampáranos ahora y en la hora de nuestra muerte. Amén.",
-            salve_regina: "Dios te salve, Reina y Madre de misericordia, vida, dulzura y esperanza nuestra. ¡Dios te salve! A Ti llamamos los desterrados hijos de Eva; a Ti suspiramos, gimiendo y llorando, en este valle de lágrimas. Ea, pues, Señora, abogada nuestra, vuelve a nosotros esos tus ojos misericordiosos; y después de este destierro, muéstranos a Jesús, fruto bendito de tu vientre. ¡Oh, clemente, oh, piadosa, oh, dulce siempre Virgen María! Ruega por nosotros, Santa Madre de Dios, para que seamos dignos de alcanzar las promesas de Nuestro Señor Jesucristo. Amén.",
-            litany: {
-                intro: `Señor, ten piedad\nCristo, ten piedad\nSeñor, ten piedad.\nCristo, óyenos.\nCristo, escúchanos.\n\nDios, Padre celestial, ten piedad de nosotros.\nDios, Hijo, Redentor del mundo, ten piedad de nosotros.\nDios, Espíritu Santo, ten piedad de nosotros.\nSantísima Trinidad, un solo Dios, ten piedad de nosotros.`,
-                invocations: [
-                    "Santa María, ruega por nosotros.\nSanta Madre de Dios, ruega por nosotros.\nSanta Virgen de las Vírgenes, ruega por nosotros.\nMadre de Cristo, ruega por nosotros.\nMadre de la Iglesia, ruega por nosotros.\nMadre de la misericordia, ruega por nosotros.\nMadre de la divina gracia, ruega por nosotros.\nMadre de la esperanza, ruega por nosotros.",
-                    "Madre purísima, ruega por nosotros.\nMadre castísima, ruega por nosotros.\nMadre siempre virgen, ruega por nosotros.\nMadre inmaculada, ruega por nosotros.\nMadre amable, ruega por nosotros.\nMadre admirable, ruega por nosotros.\nMadre del buen consejo, ruega por nosotros.\nMadre del Creador, ruega por nosotros.\nMadre del Salvador, ruega por nosotros.",
-                    "Virgen prudentísima, ruega por nosotros.\nVirgen digna de veneración, ruega por nosotros.\nVirgen digna de alabanza, ruega por nosotros.\nVirgen poderosa, ruega por nosotros.\nVirgen clemente, ruega por nosotros.\nVirgen fiel, ruega por nosotros.\nEspejo de justicia, ruega por nosotros.\nTrono de la sabiduría, ruega por nosotros.",
-                    "Causa de nuestra alegría, ruega por nosotros.\nVaso espiritual, ruega por nosotros.\nVaso digno de honor, ruega por nosotros.\nVaso de insigne devoción, ruega por nosotros.\nRosa mística, ruega por nosotros.\nTorre de David, ruega por nosotros.\nTorre de marfil, ruega por nosotros.\nCasa de oro, ruega por nosotros.",
-                    "Arca de la Alianza, ruega por nosotros.\nPuerta del cielo, ruega por nosotros.\nEstrella de la mañana, ruega por nosotros.\nSalud de los enfermos, ruega por nosotros.\nRefugio de los pecadores, ruega por nosotros.\nConsuelo de los migrantes, ruega por nosotros.\nConsoladora de los afligidos, ruega por nosotros.\nAuxilio de los cristianos, ruega por nosotros.",
-                    "Reina de los Ángeles, ruega por nosotros.\nReina de los Patriarcas, ruega por nosotros.\nReina de los Profetas, ruega por nosotros.\nReina de los Apóstoles, ruega por nosotros.\nReina de los Mártires, ruega por nosotros.\nReina de los Confesores, ruega por nosotros.\nReina de las Vírgenes, ruega por nosotros.\nReina de todos los Santos, ruega por nosotros.",
-                    "Reina concebida sin pecado original, ruega por nosotros.\nReina asunta al Cielo, ruega por nosotros.\nReina del Santísimo Rosario, ruega por nosotros.\nReina de la familia, ruega por nosotros.\nReina de la paz, ruega por nosotros."
-                ],
-                conclusion: `Cordero de Dios, que quitas el pecado del mundo, perdónanos, Señor.\nCordero de Dios, que quitas el pecado del mundo, escúchanos, Señor.\nCordero de Dios, que quitas el pecado del mundo, ten misericordia de nosotros.\n\nV. Ruega por nosotros, Santa Madre de Dios.\nR. Para que seamos dignos de alcanzar las promesas de Nuestro Señor Jesucristo.`
-            },
-            pope_intentions: "Por las intenciones del Santo Padre, por la Santa Iglesia y por nuestras necesidades.",
-            final_sign_of_cross: "En el nombre del Padre, y del Hijo, y del Espíritu Santo. Amén."
-        }
-    },
-
-
-    it: {
-        default_image: "default.jpg",
-        prev_btn: "Indietro",
-        next_btn: "Avanti",
-        mysteries: {
-            joyful: [
-                { title: "L'Annunciazione", image: "gozosos1.jpg", citation_text: "Lettura del Vangelo secondo Luca (1, 28-38)", verse_text: '"Ecco la serva del Signore: avvenga per me secondo la tua parola."', reflection_text: "L'Annunciazione a Maria inaugura la pienezza dei tempi, cioè il compimento delle promesse e delle preparazioni. Maria è chiamata a concepire Colui in cui abiterà 'corporeamente tutta la pienezza della divinità'. La risposta divina al suo 'Come è possibile? Non conosco uomo' è stata data per la potenza dello Spirito Santo: 'Lo Spirito Santo scenderà su di te'. (CIC, 484)" },
-                { title: "La Visitazione", image: "gozosos2.jpg", citation_text: "Lettura del Vangelo secondo Luca (1, 41-45)", verse_text: '"Benedetta tu fra le donne e benedetto il frutto del tuo grembo... Beata colei che ha creduto nell’adempimento di ciò che il Signore le ha detto."', reflection_text: "La visitazione di Maria a Elisabetta diventa così visita di Dio al suo popolo. Elisabetta, 'piena di Spirito Santo', è la prima della lunga serie di generazioni che chiamano Maria beata. (CIC, 717, 489)" },
-                { title: "La Nascita di Gesù", image: "gozosos3.jpg", citation_text: "Lettura del Vangelo secondo Luca (2, 6-11)", verse_text: '"Diede alla luce il suo figlio primogenito, lo avvolse in fasce e lo depose in una mangiatoia... Oggi vi è nato nella città di Davide un Salvatore, che è il Cristo Signore."', reflection_text: "Gesù è nato nell'umiltà di una stalla, da una famiglia povera; dei semplici pastori sono i primi testimoni dell'evento. In questa povertà si manifesta la gloria del cielo. Diventare bambino, povero, e obbediente fino alla morte di croce, rivela l'amore di Dio che viene a salvare l'umanità. (CIC, 525)" },
-                { title: "La Presentazione al Tempio", image: "gozosos4.jpg", citation_text: "Lettura del Vangelo secondo Luca (2, 22-35)", verse_text: '"I miei occhi hanno visto la tua salvezza... luce per illuminare le genti e gloria del tuo popolo, Israele... E anche a te una spada trafiggerà l’anima."', reflection_text: "La Presentazione di Gesù al Tempio lo mostra come il Primogenito che appartiene al Signore. Con Simeone e Anna, tutta l'attesa di Israele è quella che incontra il suo Salvatore. Gesù è riconosciuto come il Messia tanto atteso, 'luce delle genti' e 'gloria d'Israele', ma anche 'segno di contraddizione'. La spada di dolore predetta a Maria annuncia un'altra oblazione, perfetta e unica, quella della Croce. (CIC, 527, 529)" },
-                { title: "Gesù Ritrovato nel Tempio", image: "gozosos5.jpg", citation_text: "Lettura del Vangelo secondo Luca (2, 41-50)", verse_text: '"Perché mi cercavate? Non sapevate che io devo essere nella casa del Padre mio?"', reflection_text: "Il ritrovamento di Gesù nel Tempio è l'unico avvenimento che rompe il silenzio dei Vangeli sugli anni nascosti di Gesù. Gesù vi lascia intravedere il mistero della sua totale consacrazione a una missione derivante dalla sua filiazione divina. Maria e Giuseppe 'non compresero' questa parola, ma l'accolsero nella fede. (CIC, 534)" }
-            ],
-            luminous: [
-                { title: "Il Battesimo nel Giordano", image: "luminosos1.jpg", citation_text: "Lettura del Vangelo secondo Matteo (3, 16-17)", verse_text: '"Ed ecco una voce dal cielo che diceva: Questo è il Figlio mio, l’amato: in lui ho posto il mio compiacimento."', reflection_text: "Il battesimo di Gesù è, da parte sua, l'accettazione e l'inaugurazione della sua missione di Servo sofferente. Si lascia annoverare tra i peccatori; è già 'l'Agnello di Dio che toglie il peccato del mondo'. Lo Spirito che aveva librato sulle acque della prima creazione discende allora su Cristo, come preludio della nuova creazione, e il Padre manifesta Gesù come il suo 'Figlio amato'. (CIC, 536)" },
-                { title: "Le Nozze di Cana", image: "luminosos2.jpg", citation_text: "Lettura del Vangelo secondo Giovanni (2, 1-11)", verse_text: '"Qualsiasi cosa vi dica, fatela... Così, a Cana di Galilea, Gesù diede inizio ai suoi segni, manifestò la sua gloria e i suoi discepoli credettero in lui."', reflection_text: "Sulla soglia della sua vita pubblica, Gesù compie il suo primo segno — su richiesta di sua Madre — in occasione di un banchetto nuziale. La Chiesa attribuisce grande importanza alla presenza di Gesù alle nozze di Cana. Vi vede la conferma della bontà del matrimonio e l'annuncio che d'ora in poi il matrimonio sarà un segno efficace della presenza di Cristo. (CIC, 1613)" },
-                { title: "L'Annuncio del Regno", image: "luminosos3.jpg", citation_text: "Lettura del Vangelo secondo Marco (1, 14-15)", verse_text: '"Il tempo è compiuto e il regno di Dio è vicino; convertitevi e credete nel Vangelo."', reflection_text: "Tutti gli uomini sono chiamati a entrare nel Regno. Annunciato prima ai figli di Israele, questo regno messianico è destinato ad accogliere gli uomini di tutte le nazioni. Per entrarvi, è necessario accogliere la parola di Gesù. Il Regno di Dio giunge nella persona di Cristo e cresce misteriosamente nel cuore di coloro che gli sono incorporati fino alla sua pienezza escatologica. (CIC, 543, 541)" },
-                { title: "La Trasfigurazione", image: "luminosos4.jpg", citation_text: "Lettura del Vangelo secondo Matteo (17, 1-8)", verse_text: '"E fu trasfigurato davanti a loro; il suo volto brillò come il sole e le sue vesti divennero candide come la luce... Signore, è bello per noi stare qui!"', reflection_text: "Per un istante, Gesù mostra la sua gloria divina, confermando così la confessione di Pietro. Mostra anche che per 'entrare nella sua gloria' è necessario passare per la Croce a Gerusalemme. La Trasfigurazione ci concede un assaggio della vita nuova: 'come Lui, saremo anche noi'. Ma ci ricorda anche che 'è necessario passare per molte tribolazioni per entrare nel Regno di Dio'. (CIC, 554, 556)" },
-                { title: "L'Istituzione dell'Eucaristia", image: "luminosos5.jpg", citation_text: "Lettura della Prima Lettera di San Paolo ai Corinzi (11, 23-26)", verse_text: '"Ogni volta infatti che mangiate questo pane e bevete a questo calice, voi annunciate la morte del Signore, finché egli venga."', reflection_text: "Celebrando l'ultima Cena con i suoi apostoli nel corso del banchetto pasquale, Gesù diede il suo significato definitivo alla pasqua ebraica. Infatti, il passaggio di Gesù al Padre attraverso la sua Morte e Risurrezione, la Pasqua nuova, è anticipato nella Cena e celebrato nell'Eucaristia che compie la pasqua ebraica e anticipa la pasqua finale della Chiesa nella gloria del Regno. (CIC, 1340)" }
-            ],
-            sorrowful: [
-                { title: "L'Orazione nell'Orto", image: "dolorosos1.jpg", citation_text: "Lettura del Vangelo secondo Luca (22, 39-46)", verse_text: '"Padre, se vuoi, allontana da me questo calice! Tuttavia non sia fatta la mia, ma la tua volontà."', reflection_text: "L'agonia di Gesù nel Getsemani rappresenta la lotta della volontà umana di Gesù contro la volontà divina del Padre. Gesù, pur essendo Dio, sperimenta l'orrore della morte e l'angoscia della separazione, ma la sua obbedienza filiale lo porta ad accettare la missione redentrice. La sua preghiera ci insegna a conformare la nostra volontà a quella di Dio nel mezzo della prova. (CIC, 612)" },
-                { title: "La Flagellazione", image: "dolorosos2.jpg", citation_text: "Lettura del Vangelo secondo Giovanni (19, 1)", verse_text: '"Allora Pilato fece prendere Gesù e lo fece flagellare."', reflection_text: "La flagellazione fu un castigo brutale che faceva parte della Passione di Cristo, predetta dai profeti. Attraverso questa sofferenza fisica estrema, Gesù carica su di sé i peccati e i dolori di tutta l'umanità. 'Per le sue piaghe noi siamo stati guariti' (Isaia 53,5). Questo mistero ci invita a unire le nostre sofferenze a quelle di Cristo per la redenzione del mondo. (CIC, 614)" },
-                { title: "L'Incoronazione di Spine", image: "dolorosos3.jpg", citation_text: "Lettura del Vangelo secondo Matteo (27, 27-31)", verse_text: '"Intrecciarono una corona di spine, gliela posero sul capo e gli misero una canna nella mano destra. Poi, inginocchiandosi davanti a lui, lo deridevano dicendo: Salve, re dei Giudei!"', reflection_text: "L'incoronazione di spine è un' crudele derisione della regalità di Cristo. Tuttavia, in questa umiliazione si rivela la vera natura del suo Regno: un regno non di potere terreno, ma di amore, umiltà e servizio. Gesù accetta la corona di dolore, trasformando un simbolo di scherno in un segno del suo amore redentore e della sua sovranità sul peccato e sulla morte. (CIC, 478)" },
-                { title: "Gesù Carica la Croce", image: "dolorosos4.jpg", citation_text: "Lectura del Vangelo secondo Giovanni (19, 17)", verse_text: '"Egli, portando la croce, si avviò verso il luogo detto del Teschio, in ebraico Gòlgota."', reflection_text: "Gesù porta la croce, nella quale si trovano tutti i nostri peccati. Il cammino del Calvario è il cammino dell'obbedienza e dell'amore fino all'estremo. Abbracciando la croce, Gesù ci insegna che la sofferenza, accettata con amore, ha un valore redentore. Ci invita a prendere la nostra croce ogni giorno e a seguirlo, partecipando così alla sua opera di salvezza. (CIC, 618)" },
-                { title: "La Crocifissione e Morte", image: "dolorosos5.jpg", citation_text: "Lettura del Vangelo secondo Luca (23, 44-46)", verse_text: '"Padre, nelle tue mani consegno il mio spirito. Dette queste parole, spirò."', reflection_text: "La morte di Cristo è il sacrificio unico e definitivo che riconcilia l'umanità con Dio. Sulla croce, Gesù sperimenta l'abbandono affinché noi non siamo mai abbandonati da Dio. La sua totale dedizione è la massima prova d'amore. Dalla croce, ci affida sua Madre e ci dà il dono dello Spirito Santo, aprendo le porte della vita eterna. (CIC, 606, 616)" }
-            ],
-            glorious: [
-                { title: "La Resurrezione", image: "gloriosos1.jpg", citation_text: "Lettura del Vangelo secondo Marco (16, 1-7)", verse_text: '"Non abbiate paura! Voi cercate Gesù Nazareno, il crocifisso. È risorto, non è qui."', reflection_text: "La Risurrezione di Gesù è la verità culminante della nostra fede in Cristo, creduta e vissuta dalla prima comunità cristiana come verità centrale. È l'opera trascendente di Dio stesso. Conferma la divinità di Cristo ed è la promessa della nostra stessa risurrezione. (CIC, 638, 651)" },
-                { title: "L'Ascensione", image: "gloriosos2.jpg", citation_text: "Lettura degli Atti degli Apostoli (1, 9-11)", verse_text: '"Detto questo, sotto i loro occhi fu elevato in alto e una nube lo sottrasse al loro sguardo... Questo Gesù, che è stato di tra voi assunto in cielo, tornerà allo stesso modo in cui l’avete visto andare in cielo."', reflection_text: "L'Ascensione di Cristo al cielo segna l'ingresso definitivo dell'umanità di Gesù nel dominio celeste di Dio, da cui deve tornare. Gesù Cristo, capo della Chiesa, ci precede nel Regno glorioso del Padre affinché noi, membri del suo corpo, viviamo nella speranza di essere un giorno con Lui eternamente. (CIC, 665)" },
-                { title: "La Venuta dello Spirito Santo", image: "gloriosos3.jpg", citation_text: "Lettura degli Atti degli Apostoli (2, 1-4)", verse_text: '"Apparvero loro lingue come di fuoco che si dividevano e si posarono su ciascuno di loro; ed essi furono tutti pieni di Spirito Santo e cominciarono a parlare in altre lingue."', reflection_text: "Nel giorno di Pentecoste, la Pasqua di Cristo si compie con l'effusione dello Spirito Santo che si manifesta, dà e comunica come Persona divina: dalla sua pienezza, Cristo, il Signore, effonde abbondantemente lo Spirito. Lo Spirito Santo viene a santificare la Chiesa e a rendere gli apostoli capaci di annunciare con coraggio il Vangelo. (CIC, 731)" },
-                { title: "L'Assunzione di Maria", image: "gloriosos4.jpg", citation_text: "Lettura del Vangelo secondo Luca (1, 48-49)", verse_text: '"Perché ha guardato l’umiltà della sua serva. D’ora in poi tutte le generazioni mi chiameranno beata. Grandi cose ha fatto per me l’Onnipotente."', reflection_text: "La Beata Vergine Maria, terminato il corso della sua vita terrena, fu assunta in anima e corpo alla gloria celeste, dove già partecipa alla gloria della Risurrezione di suo Figlio, anticipando la risurrezione di tutti i membri del suo Corpo. È segno di sicura speranza per la Chiesa pellegrina. (CIC, 966)" },
-                { title: "L'Incoronazione di Maria", image: "gloriosos5.jpg", citation_text: "Lettura del Libro dell'Apocalisse (12, 1)", verse_text: '"Un segno grandioso apparve nel cielo: una Donna vestita di sole, con la luna sotto i suoi piedi e sul capo una corona di dodici stelle."', reflection_text: "Infine, l'Immacolata Vergine, preservata immune da ogni macchia di peccato originale, terminato il corso della sua vita sulla terra, fu assunta in anima e corpo alla gloria del cielo ed esaltata dal Signore quale Regina dell’universo, perché fosse più pienamente conformata al Figlio suo, Signore dei signori e vincitore del peccato e della morte. (CIC, 966)" }
-            ]
+        luminous: {
+          title: "Misterios Luminosos",
+          fragments: [
+            "1. El Bautismo de Jesús: «Este es mi Hijo amado, en quien me complazco.» (Mateo 3,17)",
+            "2. Las Bodas de Caná: «Haced lo que Él os diga.» (Juan 2,5)",
+            "3. El anuncio del Reino: «Convertíos y creed en la Buena Nueva.» (Marcos 1,15)",
+            "4. La Transfiguración: «Se transfiguró delante de ellos, su rostro brilló como el sol.» (Mateo 17,2)",
+            "5. La Institución de la Eucaristía: «Tomad y comed, esto es mi Cuerpo.» (Mateo 26,26)",
+            "6. (1ª Avemaría) La luz verdadera que ilumina a todo hombre. (Juan 1,9)",
+            "7. (2ª Avemaría) Yo soy la luz del mundo. (Juan 8,12)",
+            "8. (3ª Avemaría) Vosotros sois la sal de la tierra. (Mateo 5,13)",
+            "9. (4ª Avemaría) Dejad que los niños vengan a mí. (Marcos 10,14)",
+            "10. (5ª Avemaría) El que me sigue no andará en tinieblas. (Juan 8,12)",
+            "11. (6ª Avemaría) Yo he venido para que tengan vida. (Juan 10,10)"
+          ]
         },
-        prayers: {
-            welcome_invitation: "Benvenuto.\n\nTi invitiamo a prendere un momento per offrire questo Santo Rosario per le tue intenzioni particolari, per i bisogni del mondo e per tutti coloro che hanno chiesto le tue preghiere.",
-            initial_prayer: "O Dio, il cui unigenito Figlio con la sua vita, morte e risurrezione ci ha acquistato i premi della vita eterna; concedi a noi, che con il Santo Rosario della Beata Vergine Maria meditiamo questi misteri, di imitare ciò che contengono e di raggiungere ciò che promettono. Per Cristo nostro Signore. Amen.",
-            sign_of_cross: "Nel nome del Padre e del Figlio e dello Spirito Santo. Amen.",
-            versicle: "V. O Dio, vieni a salvarmi.\nR. Signore, vieni presto in mio aiuto.",
-            creed: "Io credo in Dio, Padre onnipotente, Creatore del cielo e della terra; e in Gesù Cristo, suo unico Figlio, nostro Signore, il quale fu concepito di Spirito Santo, nacque da Maria Vergine, patì sotto Ponzio Pilato, fu crocifisso, morì e fu sepolto; discese agli inferi; il terzo giorno risuscitò da morte; salì al cielo, siede alla destra di Dio Padre onnipotente; di là verrà a giudicare i vivi e i morti. Credo nello Spirito Santo, la santa Chiesa cattolica, la comunione dei santi, la remissione dei peccati, la risurrezione della carne, la vita eterna. Amen.",
-            our_father: "Padre nostro, che sei nei cieli, sia santificato il tuo nome, venga il tuo regno, sia fatta la tua volontà, come in cielo così in terra. Dacci oggi il nostro pane quotidiano, e rimetti a noi i nostri debiti, come anche noi li rimettiamo ai nostri debitori, e non abbandonarci alla tentazione, ma liberaci dal male. Amen.",
-            hail_mary: "Ave, o Maria, piena di grazia, il Signore è con te. Tu sei benedetta fra le donne e benedetto è il frutto del tuo seno, Gesù. Santa Maria, Madre di Dio, prega per noi peccatori, adesso e nell'ora della nostra morte. Amen.",
-            gloria: "Gloria al Padre e al Figlio e allo Spirito Santo. Come era nel principio, e ora e sempre, nei secoli dei secoli. Amen.",
-            fatima_prayer: "O Gesù, perdona le nostre colpe, preservaci dal fuoco dell'inferno, porta in cielo tutte le anime, specialmente le più bisognose della tua misericordia.",
-            jaculatories: `<b>1.</b> O Signore, per il tuo prezioso sangue con cui l'hai redento, ti prego di perdonarlo per la tua dolorosa Passione.<br><br><b>2.</b> L'eterno riposo dona a lui, o Signore, e splenda a lui la luce perpetua.<br><br><b>3.</b> Che per la tua infinita misericordia l'anima di N. e di tutti i fedeli defunti riposino in pace. Amen.`,
-            mary_mother: "O Maria, Madre di grazia, Madre di misericordia, proteggici dal nemico e accoglici nell'ora della nostra morte. Amen.",
-            salve_regina: "Salve, Regina, Madre di misericordia, vita, dolcezza e speranza nostra, salve. A te ricorriamo, esuli figli di Eva; a te sospiriamo, gementi e piangenti in questa valle di lacrime. Orsù, dunque, avvocata nostra, rivolgi a noi quegli occhi tuoi misericordiosi. E mostraci, dopo questo esilio, Gesù, il frutto benedetto del tuo seno. O clemente, o pia, o dolce Vergine Maria. Prega per noi, Santa Madre di Dio, affinché siamo resi degni delle promesse di Cristo. Amen.",
-            litany: {
-                intro: `Signore, pietà\nCristo, pietà\nSignore, pietà.\nCristo, ascoltaci.\nCristo, esaudiscici.\n\nPadre del cielo, Dio, abbi pietà di noi.\nFiglio, Redentore del mondo, Dio, abbi pietà di noi.\nSpirito Santo, Dio, abbi pietà di noi.\nSanta Trinità, un solo Dio, abbi pietà di noi.`,
-                invocations: [
-                    "Santa Maria, prega per noi.\nSanta Madre di Dio, prega per noi.\nSanta Vergine delle vergini, prega per noi.\nMadre di Cristo, prega per noi.\nMadre della Chiesa, prega per noi.\nMadre della misericordia, prega per noi.\nMadre della divina grazia, prega per noi.\nMadre della speranza, prega per noi.",
-                    "Madre purissima, prega per noi.\nMadre castissima, prega per noi.\nMadre sempre vergine, prega per noi.\nMadre immacolata, prega per noi.\nMadre amabile, prega per noi.\nMadre ammirabile, prega per noi.\nMadre del buon consiglio, prega per noi.\nMadre del Creatore, prega per noi.\nMadre del Salvatore, prega per noi.",
-                    "Vergine prudentissima, prega per noi.\nVergine degna di venerazione, prega per noi.\nVergine degna di lode, prega per noi.\nVergine potente, prega per noi.\nVergine clemente, prega per noi.\nVergine fedele, prega per noi.\nSpecchio di giustizia, prega per noi.\nSede della sapienza, prega per noi.",
-                    "Causa della nostra letizia, prega per noi.\nVaso spirituale, prega per noi.\nVaso onorabile, prega per noi.\nVaso insigne di devozione, prega per noi.\nRosa mistica, prega per noi.\nTorre di Davide, prega per noi.\nTorre d'avorio, prega per noi.\nCasa d'oro, prega per noi.",
-                    "Arca dell'alleanza, prega per noi.\nVergine della Porta del cielo, prega per noi.\nStella del mattino, prega per noi.\nSalute degli infermi, prega per noi.\nRefugio dei peccatori, prega per noi.\nConsolatrice degli afflitti, prega per noi.\nAiuto dei cristiani, prega per noi.",
-                    "Regina degli Angeli, prega per noi.\nRegina dei Patriarchi, prega per noi.\nRegina dei Profeti, prega per noi.\nRegina degli Apostoli, prega per noi.\nRegina dei Martiri, prega per noi.\nRegina dei Confessori, prega per noi.\nRegina delle Vergini, prega per noi.\nRegina di tutti i Santi, prega per noi.",
-                    "Regina concepita senza peccato originale, prega per noi.\nRegina assunta in cielo, prega per noi.\nRegina del santo Rosario, prega per noi.\nRegina della famiglia, prega per noi.\nRegina della pace, prega per noi."
-                ],
-                conclusion: `Agnello di Dio, che togli i peccati del mondo, perdonaci, Signore.\nAgnello di Dio, che togli i peccati del mondo, esaudiscici, Signore.\nAgnello di Dio, che togli i peccati del mondo, abbi pietà di noi.\n\nPrega per noi, Santa Madre di Dio,\naffinché siamo resi degni delle promesse di Cristo.`
-            },
-            pope_intentions: "Preghiamo per il nostro Pontefice, per la Santa Chiesa e per le nostre necessità.",
-            final_sign_of_cross: "Nel nome del Padre e del Figlio e dello Spirito Santo. Amen."
-        }
-    },
-
-    // Contenido en otros idiomas (italiano, latín) se mantiene aquí...
-    la: {
-        default_image: "default.jpg",
-        prev_btn: "Prior",
-        next_btn: "Sequens",
-        mysteries: {
-            joyful: [
-                { title: "Annuntiatio", image: "gozosos1.jpg", citation_text: "Lectio sancti Evangelii secundum Lucam (1, 28-38)", verse_text: '"Ecce ancilla Domini; fiat mihi secundum verbum tuum."', reflection_text: "Annuntiatio Mariae inaugurat plenitudinem temporum, id est, adimpletionem promissionum et praeparationum. Maria vocatur ad concipiendum Illum in quo habitabit 'corporaliter plenitudo divinitatis'. Responsum divinum ad eius 'quomodo fiet istud, quoniam virum non cognosco?' datum est per potentiam Spiritus: 'Spiritus Sanctus superveniet in te'. (CCC, 484)" },
-                { title: "Visitatio", image: "gozosos2.jpg", citation_text: "Lectio sancti Evangelii secundum Lucam (1, 41-45)", verse_text: '"Benedicta tu inter mulieres, et benedictus fructus ventris tui... Beata quae credidit, quoniam perficientur ea, quae dicta sunt ei a Domino!"', reflection_text: "Visitatio Mariae ad Elisabeth sic facta est visitatio Dei ad populum suum. Elisabeth, 'repleta Spiritu Sancto', prima est in longa serie generationum quae Mariam beatam dicunt. (CCC, 717, 489)" },
-                { title: "Nativitas Iesu", image: "gozosos3.jpg", citation_text: "Lectio sancti Evangelii secundum Lucam (2, 6-11)", verse_text: '"Et peperit filium suum primogenitum, et pannis eum involvit, et reclinavit eum in praesepio... Natus est vobis hodie Salvator, qui est Christus Dominus, in civitate David."', reflection_text: "Iesus in humilitate stabuli natus est, ex familia paupere; simplices pastores primi testes eventus sunt. In hac paupertate gloria caeli manifestatur. Fieri puerum, pauperem et obedientem usque ad mortem crucis, amorem Dei revelat qui venit ad salvandam humanitatem. (CCC, 525)" },
-                { title: "Praesentatio in Templo", image: "gozosos4.jpg", citation_text: "Lectio sancti Evangelii secundum Lucam (2, 22-35)", verse_text: '"Viderunt oculi mei salutare tuum... lumen ad revelationem gentium et gloriam plebis tuae Israel... Et tuam ipsius animam pertransibit gladius."', reflection_text: "Praesentatio Iesu in Templo Eum ostendit ut Primogenitum qui ad Dominum pertinet. Cum Simeone et Anna, tota exspectatio Israel venit ad Salvatorem suum. Iesus agnoscitur ut Messias exspectatus, 'lumen gentium' et 'gloria Israel', sed etiam 'signum contradictionis'. Gladius doloris Mariae praedictus aliam oblationem, perfectam et unicam, Crucis annuntiat. (CCC, 527, 529)" },
-                { title: "Inventio in Templo", image: "gozosos5.jpg", citation_text: "Lectio sancti Evangelii secundum Lucam (2, 41-50)", verse_text: '"Quid est quod me quaerebatis? Nesciebatis quia in his quae Patris mei sunt, oportet me esse?"', reflection_text: "Inventio Iesu in Templo unicus est eventus qui silentium Evangeliorum de annis Iesu absconditis frangit. Iesus in eo mysterium suae totalis consecrationis missioni ex filiatione divina derivatae revelat. Maria et Ioseph 'non intellexerunt' verbum hoc, sed in fide illud acceperunt. (CCC, 534)" }
-            ],
-            luminous: [
-                { title: "Baptisma in Iordane", image: "luminosos1.jpg", citation_text: "Lectio sancti Evangelii secundum Matthaeum (3, 16-17)", verse_text: '"Et vox de caelis dicens: Hic est Filius meus dilectus, in quo mihi complacui."', reflection_text: "Baptisma Iesu est, ex parte sua, acceptatio et inauguratio missionis suae Servi patientis. Se inter peccatores numerari sinit; iam est 'Agnus Dei, qui tollit peccatum mundi'. Spiritus, qui super aquas primae creationis ferebatur, tunc super Christum descendit, tamquam praeludium novae creationis, et Pater Iesum ut 'Filium suum dilectum' manifestat. (CCC, 536)" },
-                { title: "Nuptiae in Cana", image: "luminosos2.jpg", citation_text: "Lectio sancti Evangelii secundum Ioannem (2, 1-11)", verse_text: '"Quodcumque dixerit vobis, facite... Hoc fecit initium signorum Iesus in Cana Galilaeae et manifestavit gloriam suam, et crediderunt in eum discipuli eius."', reflection_text: "In limine vitae suae publicae, Iesus primum suum signum facit — rogatu Matris suae — in convivio nuptiali. Ecclesia magnam tribuit momentum praesentiae Iesu in nuptiis Canensibus. In ea videt confirmationem bonitatis matrimonii et annuntiationem quod matrimonium posthac signum efficax praesentiae Christi erit. (CCC, 1613)" },
-                { title: "Proclamatio Regni", image: "luminosos3.jpg", citation_text: "Lectio sancti Evangelii secundum Marcum (1, 14-15)", verse_text: '"Impletum est tempus, et appropinquavit regnum Dei; paenitemini et credite Evangelio."', reflection_text: "Omnes homines vocantur ad intrandum in Regnum. Primum filiis Israel annuntiatum, hoc regnum messianicum destinatur ad accipiendos homines omnium gentium. Ut in illud intretur, necesse est verbum Iesu accipere. Regnum Dei venit in persona Christi et mysteriose crescit in cordibus eorum qui Ei incorporantur usque ad plenitudinem eschatologicam. (CCC, 543, 541)" },
-                { title: "Transfiguratio", image: "luminosos4.jpg", citation_text: "Lectio sancti Evangelii secundum Matthaeum (17, 1-8)", verse_text: '"Et transfiguratus est ante eos, et resplenduit facies eius sicut sol, vestimenta autem eius facta sunt alba sicut nix... Domine, bonum est nos hic esse!"', reflection_text: "Ad momentum, Iesus gloriam suam divinam ostendit, ita confessionem Petri confirmans. Ostendit etiam quod ad 'intrandum in gloriam suam' necesse est per Crucem Ierosolymis transire. Transfiguratio nobis praegustatum vitae novae concedit: 'similes ei erimus'. Sed nos admonet etiam quod 'per multas tribulationes oportet nos intrare in regnum Dei'. (CCC, 554, 556)" },
-                { title: "Institutio Eucharistiae", image: "luminosos5.jpg", citation_text: "Ex prima Epistula beati Pauli Apostoli ad Corinthios (11, 23-26)", verse_text: '"Quotiescumque enim manducabitis panem hunc et calicem bibetis, mortem Domini annuntiatis, donec veniat."', reflection_text: "Celebrans ultimam Cenam cum apostolis suis in convivio paschali, Iesus paschae iudaicae sensum suum definitivum dedit. Etenim transitus Iesu ad Patrem suum per Mortem et Resurrectionem suam, Pascha novum, in Cena anticipatur et in Eucharistia celebratur, quae pascha iudaicum adimplet et pascha finale Ecclesiae in gloria Regni anticipat. (CCC, 1340)" }
-            ],
-            sorrowful: [
-                { title: "Oratio in Horto", image: "dolorosos1.jpg", citation_text: "Lectio sancti Evangelii secundum Lucam (22, 39-46)", verse_text: '"Pater, si vis, transfer calicem istum a me; verumtamen non mea voluntas, sed tua fiat."', reflection_text: "Agonia Iesu in Gethsemani certamen voluntatis humanae Iesu contra voluntatem divinam Patris repraesentat. Iesus, licet Deus, horrorem mortis et angustiam separationis experitur, sed oboedientia filialis Eum ad missionem redemptricem acceptandam ducit. Oratio Eius nos docet voluntatem nostram cum Dei voluntate in media probatione conformare. (CCC, 612)" },
-                { title: "Flagellatio", image: "dolorosos2.jpg", citation_text: "Lectio sancti Evangelii secundum Ioannem (19, 1)", verse_text: '"Tunc ergo apprehendit Pilatus Iesum et flagellavit."', reflection_text: "Flagellatio poena crudelis fuit quae partem Passionis Christi, a prophetis praedictae, formabat. Per hanc extremam passionem physicam, Iesus peccata et dolores totius humanitatis in seipsum portat. 'Livore eius sanati sumus' (Isaias 53,5). Hoc mysterium nos invitat ut passiones nostras cum Christi passionibus pro redemptione mundi coniungamus. (CCC, 614)" },
-                { title: "Coronatio Spinis", image: "dolorosos3.jpg", citation_text: "Lectio sancti Evangelii secundum Matthaeum (27, 27-31)", verse_text: '"Et plectentes coronam de spinis, posuerunt super caput eius, et arundinem in dextera eius; et genu flexo ante eum, illudebant ei, dicentes: Ave, Rex Iudaeorum!"', reflection_text: "Coronatio spinis est crudelis irrisio regalis Christi. Tamen, in hac humiliatione vera natura Regni Eius revelatur: regnum non terrenae potentiae, sed amoris, humilitatis et servitii. Iesus coronam doloris accipit, signum irrisionis in signum amoris sui redemptoris et dominationis suae super peccatum et mortem transformans. (CCC, 478)" },
-                { title: "Baiulatio Crucis", image: "dolorosos4.jpg", citation_text: "Lectio sancti Evangelii secundum Ioannem (19, 17)", verse_text: '"Et baiulans sibi crucem, exivit in eum, qui dicitur Calvariae, locum, qui hebraice dicitur Golgotha."', reflection_text: "Iesus crucem portat, in qua omnia peccata nostra continentur. Via Calvariae est via oboedientiae et amoris usque ad finem. Crucem amplectendo, Iesus nos docet passionem, cum amore acceptam, valorem redemptricem habere. Nos invitat ut crucem nostram quotidie tollamus et Eum sequamur, sic in opere salutis Eius participando. (CCC, 618)" },
-                { title: "Crucifixio et Mors", image: "dolorosos5.jpg", citation_text: "Lectio sancti Evangelii secundum Lucam (23, 44-46)", verse_text: '"Pater, in manus tuas commendo spiritum meum. Et haec dicens, exspiravit."', reflection_text: "Mors Christi est unicum et definitivum sacrificium quod humanitatem cum Deo reconciliat. In cruce, Iesus derelictionem experitur ut nos a Deo numquam derelinquamur. Eius totalis deditio est maxima probatio amoris. De cruce, Matrem suam nobis tradit et donum Spiritus Sancti nobis dat, portas vitae aeternae aperiens. (CCC, 606, 616)" }
-            ],
-            glorious: [
-                { title: "Resurrectio", image: "gloriosos1.jpg", citation_text: "Lectio sancti Evangelii secundum Marcum (16, 1-7)", verse_text: '"Nolite expavescere. Iesum quaeritis Nazarenum, crucifixum. Surrexit, non est hic."', reflection_text: "Resurrectio Iesu est culmen fidei nostrae in Christum, a prima communitate christiana ut veritas centralis credita et vissuta. Est opus transcendens Dei ipsius. Divinitatem Christi confirmat et est promissio resurrectionis nostrae. (CCC, 638, 651)" },
-                { title: "Ascensio", image: "gloriosos2.jpg", citation_text: "Lectio libri Actuum Apostolorum (1, 9-11)", verse_text: '"Et cum haec dixisset, videntibus illis, elevatus est, et nubes suscepit eum ab oculis eorum... Hic Iesus, qui assumptus est a vobis in caelum, sic veniet, quemadmodum vidistis eum euntem in caelum."', reflection_text: "Ascensio Christi in caelum significat introitum definitivum humanitatis Iesu in dominium caeleste Dei, unde venturus est. Iesus Christus, caput Ecclesiae, nos praecedit in gloriosum Regnum Patris, ut nos, membra corporis Eius, in spe vivamus ut aliquando cum Illo aeternaliter simus. (CCC, 665)" },
-                { title: "Descensus Spiritus Sancti", image: "gloriosos3.jpg", citation_text: "Lectio libri Actuum Apostolorum (2, 1-4)", verse_text: '"Et apparuerunt illis dispertitae linguae tamquam ignis, seditque supra singulos eorum; et repleti sunt omnes Spiritu Sancto et coeperunt loqui aliis linguis."', reflection_text: "Die Pentecostes, Pascha Christi consummatur effusione Spiritus Sancti qui se manifestat, dat et communicat ut Persona divina: ex plenitudine sua, Christus Dominus abundanter Spiritum effundit. Spiritus Sanctus venit ad sanctificandam Ecclesiam et ad apostolos idoneos reddendos ad Evangelium audacter annuntiandum. (CCC, 731)" },
-                { title: "Assumptio Mariae", image: "gloriosos4.jpg", citation_text: "Lectio sancti Evangelii secundum Lucam (1, 48-49)", verse_text: '"Quia respexit humilitatem ancillae suae; ecce enim ex hoc beatam me dicent omnes generationes. Quia fecit mihi magna qui potens est."', reflection_text: "Beatissima Virgo Maria, expleto terrestris vitae cursu, corpore et anima ad caelestem gloriam assumpta est, ubi iam participat gloriam Resurrectionis Filii sui, resurrectionem omnium membrorum Corporis Eius anticipans. Est signum certae spei pro Ecclesia peregrinanti. (CCC, 966)" },
-                { title: "Coronatio Mariae", image: "gloriosos5.jpg", citation_text: "Lectio libri Apocalypsis (12, 1)", verse_text: '"Et signum magnum apparuit in caelo: Mulier amicta sole, et luna sub pedibus eius, et in capite eius corona stellarum duodecim."', reflection_text: "Denique Immaculata Virgo, ab omni originalis culpae labe praeservata, expleto terrestris vitae cursu, corpore et anima ad caelestem gloriam est assumpta; a Domino autem exaltata est ut Regina universorum, ut plene conformis esset Filio suo, Domino dominantium ac victori peccati et mortis. (CCC, 966)" }
-            ]
+        sorrowful: {
+          title: "Misterios Dolorosos",
+          fragments: [
+            "1. La Oración en el Huerto: «Padre, si quieres, aparta de mí esta copa; pero no se haga mi voluntad, sino la tuya.» (Lucas 22,42)",
+            "2. La Flagelación: «Tomó Pilato a Jesús y mandó azotarle.» (Juan 19,1)",
+            "3. La Coronación de espinas: «¡Salve, Rey de los judíos!» (Juan 19,3)",
+            "4. El Camino del Calvario: «Cargando su cruz, salió al Gólgota.» (Juan 19,17)",
+            "5. La Crucifixión y muerte: «Padre, en tus manos encomiendo mi espíritu.» (Lucas 23,46)",
+            "6. (1ª Avemaría) Por tus llagas fuimos curados. (Isaías 53,5)",
+            "7. (2ª Avemaría) Jesús, acuérdate de mí cuando llegues a tu Reino. (Lucas 23,42)",
+            "8. (3ª Avemaría) Mujer, ahí tienes a tu hijo. (Juan 19,26)",
+            "9. (4ª Avemaría) Todo está cumplido. (Juan 19,30)",
+            "10. (5ª Avemaría) La tierra tembló y las rocas se partieron. (Mateo 27,51)",
+            "11. (6ª Avemaría) Verdaderamente este era Hijo de Dios. (Mateo 27,54)"
+          ]
         },
-        prayers: {
-            welcome_invitation: "Gratus advenisti.\n\nTe invitamus ut hoc Sanctum Rosarium pro tuis intentionibus particularibus, pro necessitatibus mundi, et pro omnibus qui tuas preces petiverunt, offerre velis.",
-            sign_of_cross: "Per signum Crucis de inimicis nostris libera nos, Deus noster.\nIn nomine Patris, et Filii, et Spiritus Sancti. Amen.",
-            versicle: "V. Deus, in adiutorium meum intende.\nR. Domine, ad adiuvandum me festina.",
-            creed: "Credo in Deum Patrem omnipotentem, Creatorem caeli et terrae. Et in Iesum Christum, Filium eius unicum, Dominum nostrum, qui conceptus est de Spiritu Sancto, natus ex Maria Virgine, passus sub Pontio Pilato, crucifixus, mortuus, et sepultus, descendit ad inferos, tertia die resurrexit a mortuis, ascendit ad caelos, sedet ad dexteram Dei Patris omnipotentis, inde venturus est iudicare vivos et mortuos. Credo in Spiritum Sanctum, sanctam Ecclesiam catholicam, sanctorum communionem, remissionem peccatorum, carnis resurrectionem, vitam aeternam. Amen.",
-            our_father: "Pater noster, qui es in caelis, sanctificetur nomen tuum. Adveniat regnum tuum. Fiat voluntas tua, sicut in caelo et in terra. Panem nostrum quotidianum da nobis hodie, et dimitte nobis debita nostra sicut et nos dimittimus debitoribus nostris. Et ne nos inducas in tentationem, sed libera nos a malo. Amen.",
-            hail_mary: "Ave Maria, gratia plena, Dominus tecum. Benedicta tu in mulieribus, et benedictus fructus ventris tui, Iesus. Sancta Maria, Mater Dei, ora pro nobis peccatoribus, nunc, et in hora mortis nostrae. Amen.",
-            gloria: "Gloria Patri, et Filio, et Spiritui Sancto. Sicut erat in principio, et nunc, et semper, et in saecula saeculorum. Amen.",
-            fatima_prayer: "Domine Iesu, dimitte nobis debita nostra, salva nos ab igne inferiori, perduc in caelum omnes animas, praesertim eas, quae misericordiae tuae maxime indigent.",
-            mary_mother: "Maria, Mater gratiae, Mater misericordiae, tu nos ab hoste protege et hora mortis suscipe. Amen.",
-            salve_regina: "Salve, Regina, Mater misericordiae, vita, dulcedo, et spes nostra, salve. Ad te clamamus exsules filii Hevae. Ad te suspiramus, gementes et flentes in hac lacrimarum valle. Eia, ergo, advocata nostra, illos tuos misericordes oculos ad nos converte. Et Iesum, benedictum fructum ventris tui, nobis post hoc exsilium ostende. O clemens, o pia, o dulcis Virgo Maria. Ora pro nobis, Sancta Dei Genetrix, ut digni efficiamur promissionibus Christi. Amen.",
-            litany: {
-                intro: `LITANIAE LAURETANAE\n\nKyrie, eleison\nChriste, eleison\nKyrie, eleison\nChriste, audi nos\nChriste, exaudi nos\n\nPater de caelis, Deus, miserere nobis.\nFili, Redemptor mundi, Deus, miserere nobis.\nSpiritus Sancte, Deus, miserere nobis.\nSancta Trinitas, unus Deus, miserere nobis.\n\nSancta Maria, ora pro nobis.\nSancta Dei Genetrix, ora pro nobis.\nSancta Virgo virginum, ora pro nobis.\nMater Christi, ora pro nobis.\nMater Ecclesiae, ora pro nobis.\nMater misericordiae, ora pro nobis.\nMater divinae gratiae, ora pro nobis.\nMater spei, ora pro nobis.\nMater purissima, ora pro nobis.\nMater castissima, ora pro nobis.\nMater semper Virgo, ora pro nobis.\nMater immaculata, ora pro nobis.\nMater amabilis, ora pro nobis.\nMater admirabilis, ora pro nobis.\nMater boni consilii, ora pro nobis.\nMater Creatoris, ora pro nobis.\nMater Salvatoris, ora pro nobis.\nVirgo prudentissima, ora pro nobis.\nVirgo veneranda, ora pro nobis.\nVirgo praedicanda, ora pro nobis.\nVirgo potens, ora pro nobis.\nVirgo clemens, ora pro nobis.\nVirgo fidelis, ora pro nobis.\nSpeculum iustitiae, ora pro nobis.\nSedes sapientiae, ora pro nobis.\nCausa nostrae laetitiae, ora pro nobis.\nVas spirituale, ora pro nobis.\nVas honorabile, ora pro nobis.\nVas insigne devotionis, ora pro nobis.\nRosa mystica, ora pro nobis.\nTurris Davidica, ora pro nobis.\nTurris eburnea, ora pro nobis.\nDomus aurea, ora pro nobis.\nFoederis arca, ora pro nobis.\nIanua caeli, ora pro nobis.\nStella matutina, ora pro nobis.\nSalus infirmorum, ora pro nobis.\nRefugium peccatorum, ora pro nobis.\nSolacium migrantium, ora pro nobis.\nConsolatrix afflictorum, ora pro nobis.\nAuxilium Christianorum, ora pro nobis.\nRegina Angelorum, ora pro nobis.\nRegina Patriarcharum, ora pro nobis.\nRegina Prophetarum, ora pro nobis.\nRegina Apostolorum, ora pro nobis.\nRegina Martyrum, ora pro nobis.\nRegina Confessorum, ora pro nobis.\nRegina Virginum, ora pro nobis.\nRegina Sanctorum omnium, ora pro nobis.\nRegina sine labe originali concepta, ora pro nobis.\nRegina in caelum assumpta, ora pro nobis.\nRegina sacratissimi Rosarii, ora pro nobis.\nRegina familiae, ora pro nobis.\nRegina pacis, ora pro nobis.\n\nAgnus Dei, qui tollis peccata mundi, parce nobis, Domine.\nAgnus Dei, qui tollis peccata mundi, exaudi nos, Domine.\nAgnus Dei, qui tollis peccata mundi, miserere nobis.\n\nV. Ora pro nobis, Sancta Dei Genetrix.\nR. Ut digni efficiamur promissionibus Christi.`,
-                invocations: [], // El contenido completo ya está en `intro` para Latín
-                conclusion: ``
-            },
-            pope_intentions: "Oremus pro Pontifice nostro, pro Sancta Ecclesia, et pro necessitatibus nostris.",
-            final_sign_of_cross: "In nomine Patris, et Filii, et Spiritus Sancti. Amen."
+        glorious: {
+          title: "Misterios Gloriosos",
+          fragments: [
+            "1. La Resurrección: «Ha resucitado, no está aquí.» (Marcos 16,6)",
+            "2. La Ascensión: «Fue elevado al cielo y está sentado a la derecha de Dios.» (Marcos 16,19)",
+            "3. Pentecostés: «Quedaron todos llenos del Espíritu Santo.» (Hechos 2,4)",
+            "4. La Asunción de María: «Ha hecho en mí maravillas el Poderoso.» (Lucas 1,49)",
+            "5. La Coronación de María: «Una gran señal apareció en el cielo: una Mujer vestida de sol.» (Apocalipsis 12,1)",
+            "6. (1ª Avemaría) Alégrate, llena de gracia, el Señor está contigo. (Lucas 1,28)",
+            "7. (2ª Avemaría) Dichoso el vientre que te llevó. (Lucas 11,27)",
+            "8. (3ª Avemaría) María conservaba todas estas cosas en su corazón. (Lucas 2,51)",
+            "9. (4ª Avemaría) Tú eres la gloria de Jerusalén. (Judit 15,9)",
+            "10. (5ª Avemaría) ¡Bendita eres entre las mujeres! (Lucas 1,42)",
+            "11. (6ª Avemaría) Ruega por nosotros, Santa Madre de Dios."
+          ]
         }
+      }
     }
-};
+  };
 
-document.addEventListener('DOMContentLoaded', () => {
-    // Elementos del DOM
-    const languageSelect = document.getElementById('language-select');
-    const mysterySelect = document.getElementById('mystery-select');
-    const prevBtn = document.getElementById('prev-btn');
-    const nextBtn = document.getElementById('next-btn');
-    const mysteryTitleElem = document.getElementById('mystery-title');
-    const prayerTextElem = document.getElementById('prayer-text');
-    const beadContainer = document.getElementById('bead-container');
-    const backgroundImageElem = document.getElementById('background-image');
-    const progressBar = document.getElementById('progress-bar');
-    const prayerArea = document.getElementById('prayer-area');
-    const citationElem = document.getElementById('citation-text');
-    const verseElem = document.getElementById('verse-text');
-    const reflectionElem = document.getElementById('reflection-text');
-    const controlsContainer = document.querySelector('.controls');
-    const beadCounterElem = document.getElementById('bead-counter-text');
+  // ==================== LÓGICA DEL ROSARIO ====================
+  let idiomaActual = 'es';
+  let misterioActual = 'joyful';
+  let secuencia = [];
+  let indiceActual = -1;
 
-    // Estado de la aplicación
-    let currentLanguage = 'es';
-    let currentMysteryKey = 'joyful';
-    let prayerSequence = [];
-    let currentStep = -1;
-    let currentBgImage = '';
+  const oracionTitle = document.getElementById('oracion-title');
+  const oracionTexto = document.getElementById('oracion-texto');
+  const reflexionDiv = document.getElementById('reflexion-fragmento');
+  const cuentasContainer = document.getElementById('cuentas-container');
+  const contadorTexto = document.getElementById('contador-texto');
+  const btnAnterior = document.getElementById('btn-anterior');
+  const btnSiguiente = document.getElementById('btn-siguiente');
+  const btnReiniciar = document.getElementById('btn-reiniciar');
+  const idiomaSelect = document.getElementById('idioma-select');
+  const misterioSelect = document.getElementById('misterio-select');
+  const infoMisterio = document.getElementById('info-misterio');
 
-    // --- CONSTRUCCIÓN DE LA SECUENCIA DE ORACIONES ---
-    const buildPrayerSequence = () => {
-        const sequence = [];
-        const addPrayer = (key, count = 1, icon) => {
-            if (count > 1) {
-                for (let i = 0; i < count; i++) {
-                    sequence.push({ type: 'prayer', prayerKey: key, totalBeads: count, currentBead: i, icon: icon });
-                }
-            } else {
-                sequence.push({ type: 'prayer', prayerKey: key, totalBeads: 1, currentBead: 0, icon: icon });
-            }
-        };
-        
-        addPrayer('sign_of_cross', 1, '✠');
-        addPrayer('versicle', 1, 'V');
-        // El Credo es una sola oración
-        addPrayer('creed', 1, 'C');
-        addPrayer('our_father', 1, '†');
-        addPrayer('hail_mary', 3, '♥');
-        addPrayer('gloria', 1, 'G');
-        
-        for (let i = 0; i < 5; i++) {
-            sequence.push({ type: 'mystery_announcement', mysteryIndex: i });
-            addPrayer('our_father', 1, '†');
-            addPrayer('hail_mary', 10, '♥');
-            addPrayer('gloria', 1, 'G');
-            addPrayer('fatima_prayer', 1, 'J');
-            // La oración "María Madre" se puede incluir aquí si se desea para cada misterio
+  function construirSecuencia() {
+    const lang = rosarioContent[idiomaActual];
+    const misterioData = lang.mysteries[misterioActual];
+    const seq = [];
+
+    // Oraciones iniciales
+    seq.push({ tipo: 'oracion', key: 'sign_of_cross', titulo: 'Señal de la Cruz', texto: lang.prayers.sign_of_cross });
+    seq.push({ tipo: 'oracion', key: 'versicle', titulo: 'Versículo inicial', texto: lang.prayers.versicle });
+    seq.push({ tipo: 'oracion', key: 'creed', titulo: 'Credo', texto: lang.prayers.creed });
+    for (let i = 0; i < 3; i++) seq.push({ tipo: 'oracion', key: 'hail_mary', titulo: 'Ave María', texto: lang.prayers.hail_mary });
+    seq.push({ tipo: 'oracion', key: 'gloria', titulo: 'Gloria', texto: lang.prayers.gloria });
+
+    // 5 misterios
+    for (let m = 0; m < 5; m++) {
+      // Anuncio del misterio
+      seq.push({ tipo: 'anuncio', misterioIdx: m, titulo: `${m+1}° ${misterioData.title} - ${misterioData.fragments[m].split(':')[0]}` });
+      // Padre Nuestro (fragmento índice 0 del misterio)
+      seq.push({ tipo: 'oracion', key: 'our_father', titulo: 'Padre Nuestro', texto: lang.prayers.our_father, fragmento: misterioData.fragments[0] });
+      // 10 Avemarías (fragmentos 1..10)
+      for (let a = 1; a <= 10; a++) {
+        seq.push({ tipo: 'oracion', key: 'hail_mary', titulo: 'Ave María', texto: lang.prayers.hail_mary, fragmento: misterioData.fragments[a] });
+      }
+      seq.push({ tipo: 'oracion', key: 'gloria', titulo: 'Gloria', texto: lang.prayers.gloria });
+      seq.push({ tipo: 'oracion', key: 'fatima_prayer', titulo: 'Oración de Fátima', texto: lang.prayers.fatima_prayer });
+    }
+
+    // Oraciones finales
+    seq.push({ tipo: 'oracion', key: 'salve_regina', titulo: 'Salve Regina', texto: lang.prayers.salve_regina });
+    seq.push({ tipo: 'oracion', key: 'pope_intentions', titulo: 'Intenciones del Papa', texto: lang.prayers.pope_intentions });
+    seq.push({ tipo: 'oracion', key: 'our_father', titulo: 'Padre Nuestro', texto: lang.prayers.our_father });
+    seq.push({ tipo: 'oracion', key: 'hail_mary', titulo: 'Ave María', texto: lang.prayers.hail_mary });
+    seq.push({ tipo: 'oracion', key: 'gloria', titulo: 'Gloria', texto: lang.prayers.gloria });
+    seq.push({ tipo: 'oracion', key: 'final_sign_of_cross', titulo: 'Señal de la Cruz final', texto: lang.prayers.final_sign_of_cross });
+
+    return seq;
+  }
+
+  function actualizarUI() {
+    if (indiceActual < 0 || indiceActual >= secuencia.length) {
+      oracionTitle.textContent = "Santo Rosario";
+      oracionTexto.textContent = "Presiona 'Siguiente' para comenzar.";
+      reflexionDiv.textContent = "";
+      cuentasContainer.innerHTML = "";
+      contadorTexto.textContent = "Inicio";
+      btnSiguiente.textContent = "Comenzar";
+      btnAnterior.disabled = true;
+      if (indiceActual >= secuencia.length) {
+        oracionTitle.textContent = "¡Rosario completado!";
+        oracionTexto.textContent = "Has rezado todas las oraciones. Que Dios te bendiga.";
+        btnSiguiente.textContent = "Reiniciar";
+      }
+      return;
+    }
+
+    const paso = secuencia[indiceActual];
+    if (paso.tipo === 'anuncio') {
+      oracionTitle.textContent = paso.titulo;
+      oracionTexto.textContent = "Medita este misterio mientras rezas...";
+      reflexionDiv.textContent = `📖 ${secuencia[indiceActual+1]?.fragmento || ''}`;
+      cuentasContainer.innerHTML = "";
+      contadorTexto.textContent = "";
+    } else if (paso.tipo === 'oracion') {
+      oracionTitle.textContent = paso.titulo;
+      oracionTexto.textContent = paso.texto;
+      reflexionDiv.textContent = paso.fragmento ? `📖 ${paso.fragmento}` : "";
+
+      // Mostrar cuentas para Padre Nuestro y Avemarías dentro de un misterio
+      if (paso.key === 'our_father' || paso.key === 'hail_mary') {
+        const total = 11; // 1 Padre + 10 Avemarías
+        let actual = 0;
+        if (paso.key === 'our_father') actual = 1;
+        else {
+          let cont = 0;
+          for (let i = indiceActual; i >= 0; i--) {
+            if (secuencia[i].key === 'our_father') break;
+            if (secuencia[i].key === 'hail_mary') cont++;
+          }
+          actual = cont + 1;
         }
-        
-        addPrayer('salve_regina', 1, 'S');
-        
-        // Añadir letanías
-        sequence.push({ type: 'litany', part: 'intro' });
-        // En latín, las letanías están completas en 'intro', no se necesita el bucle.
-        if (currentLanguage !== 'la') {
-            const invocations = rosaryContent[currentLanguage].prayers.litany.invocations || [];
-            for (let i = 0; i < invocations.length; i++) {
-                sequence.push({ type: 'litany', part: 'invocation', index: i });
-            }
-            sequence.push({ type: 'litany', part: 'conclusion' });
+        cuentasContainer.innerHTML = '';
+        for (let i = 1; i <= total; i++) {
+          const div = document.createElement('div');
+          div.className = 'cuenta';
+          if (i === actual) div.classList.add('active');
+          else if (i < actual) div.classList.add('completada');
+          div.textContent = i === 1 ? 'P' : i-1;
+          cuentasContainer.appendChild(div);
         }
-        
-        addPrayer('pope_intentions', 1, 'P');
-        addPrayer('our_father', 1, '†');
-        addPrayer('hail_mary', 1, '♥');
-        addPrayer('gloria', 1, 'G');
-        addPrayer('final_sign_of_cross', 1, '✠');
-        sequence.push({ type: 'end' });
-        
-        return sequence;
-    };
+        contadorTexto.textContent = `${actual} de ${total}`;
+      } else {
+        cuentasContainer.innerHTML = '';
+        contadorTexto.textContent = '';
+      }
+    }
 
-    // --- MANEJO DEL ESTADO DE LOS BOTONES ---
-    const updateButtonStates = () => {
-        const langContent = rosaryContent[currentLanguage] || rosaryContent.es;
-        prevBtn.disabled = (currentStep <= -1);
-        prevBtn.textContent = langContent.prev_btn;
-        
-        if (currentStep >= prayerSequence.length - 1) {
-            nextBtn.textContent = "Reiniciar";
-        } else if (currentStep === prayerSequence.length - 2) {
-            nextBtn.textContent = "Finalizar";
-        } else {
-            nextBtn.textContent = langContent.next_btn;
-        }
-    };
-    
-    // --- OBTENER NOMBRE DEL TIPO DE MISTERIO ---
-    const getMysteryTypeName = () => {
-        if (currentLanguage === 'la') {
-            const names = { 'joyful': 'Gaudii', 'luminous': 'Lucis', 'sorrowful': 'Doloris', 'glorious': 'Gloriae' };
-            return `Mysterium ${names[currentMysteryKey]}` || '';
-        }
-        const names = { 'joyful': 'Gozoso', 'luminous': 'Luminoso', 'sorrowful': 'Doloroso', 'glorious': 'Glorioso' };
-        return `Misterio ${names[currentMysteryKey]}` || '';
-    };
-    
-    // --- RENDERIZADO EN PANTALLA ---
-    const renderStep = () => {
-        prayerArea.scrollTop = 0;
-        const content = rosaryContent[currentLanguage];
+    btnAnterior.disabled = (indiceActual === 0);
+    btnSiguiente.textContent = (indiceActual === secuencia.length-1) ? "Finalizar" : "Siguiente";
+  }
 
-        // Limpiar elementos
-        mysteryTitleElem.textContent = '';
-        prayerTextElem.textContent = '';
-        citationElem.textContent = '';
-        verseElem.textContent = '';
-        reflectionElem.textContent = '';
-        beadContainer.innerHTML = '';
-        beadCounterElem.textContent = '';
+  function avanzar() {
+    if (indiceActual < secuencia.length - 1) {
+      indiceActual++;
+      actualizarUI();
+    } else if (indiceActual === secuencia.length - 1) {
+      indiceActual = -1;
+      actualizarUI();
+    } else {
+      indiceActual = 0;
+      actualizarUI();
+    }
+  }
+  function retroceder() {
+    if (indiceActual > 0) {
+      indiceActual--;
+      actualizarUI();
+    }
+  }
+  function reiniciar() {
+    indiceActual = -1;
+    actualizarUI();
+  }
+  function cargarTodo() {
+    secuencia = construirSecuencia();
+    indiceActual = -1;
+    actualizarUI();
+    infoMisterio.textContent = rosarioContent[idiomaActual].mysteries[misterioActual].title;
+  }
 
-        if (currentStep < 0) { // Pantalla de bienvenida
-            controlsContainer.classList.remove('hidden');
-            mysteryTitleElem.textContent = "Santo Rosario Interactivo";
-            prayerTextElem.textContent = content.prayers.welcome_invitation;
-            currentBgImage = content.default_image;
-        } else {
-            controlsContainer.classList.add('hidden');
-            const step = prayerSequence[currentStep];
+  // Eventos
+  idiomaSelect.addEventListener('change', (e) => { idiomaActual = e.target.value; cargarTodo(); });
+  misterioSelect.addEventListener('change', (e) => { misterioActual = e.target.value; cargarTodo(); });
+  btnSiguiente.addEventListener('click', avanzar);
+  btnAnterior.addEventListener('click', retroceder);
+  btnReiniciar.addEventListener('click', reiniciar);
 
-            if (step.type === 'mystery_announcement') {
-                const mystery = content.mysteries[currentMysteryKey][step.mysteryIndex];
-                mysteryTitleElem.textContent = `${step.mysteryIndex + 1}° ${getMysteryTypeName()} - ${mystery.title}`;
-                prayerTextElem.textContent = "";
-                citationElem.textContent = mystery.citation_text;
-                verseElem.textContent = mystery.verse_text;
-                reflectionElem.textContent = mystery.reflection_text;
-                currentBgImage = mystery.image;
-            } 
-            else if (step.type === 'prayer') {
-                const prayerTitles = {
-                    'sign_of_cross': "Señal de la Cruz", 'versicle': "Versículo Inicial", 'creed': "Credo",
-                    'our_father': "Padre Nuestro", 'hail_mary': "Ave María", 'gloria': "Gloria",
-                    'fatima_prayer': "Oración de Fátima", 'salve_regina': "Salve Regina",
-                    'pope_intentions': "Por las Intenciones del Papa", 'final_sign_of_cross': "Señal de la Cruz Final"
-                };
-                 const prayerTitlesLa = {
-                    'sign_of_cross': "Signum Crucis", 'versicle': "Versiculum Initialem", 'creed': "Symbolum Apostolorum",
-                    'our_father': "Pater Noster", 'hail_mary': "Ave Maria", 'gloria': "Gloria Patri",
-                    'fatima_prayer': "Oratio Fatimae", 'salve_regina': "Salve Regina",
-                    'pope_intentions': "Pro Intentionibus Summi Pontificis", 'final_sign_of_cross': "Signum Crucis Finale"
-                };
-
-                mysteryTitleElem.textContent = currentLanguage === 'la' ? prayerTitlesLa[step.prayerKey] : prayerTitles[step.prayerKey];
-                prayerTextElem.textContent = content.prayers[step.prayerKey];
-                renderBeads(step.totalBeads, step.currentBead, step.icon);
-                
-                if (step.totalBeads > 1) {
-                    beadCounterElem.textContent = `${step.currentBead + 1} / ${step.totalBeads}`;
-                }
-                
-                
-            } 
-            else if (step.type === 'litany') {
-                 mysteryTitleElem.textContent = currentLanguage === 'la' ? "Litaniae Lauretanae" : "Letanías Lauretanas";
-                if (step.part === 'intro') {
-                    prayerTextElem.textContent = content.prayers.litany.intro;
-                } else if (step.part === 'invocation') {
-                    prayerTextElem.textContent = content.prayers.litany.invocations[step.index];
-                } else if (step.part === 'conclusion') {
-                    prayerTextElem.textContent = content.prayers.litany.conclusion;
-                }
-                currentBgImage = content.default_image;
-            } 
-            else if (step.type === 'end') {
-                mysteryTitleElem.textContent = "Fin del Rosario";
-                prayerTextElem.textContent = "Has completado el Santo Rosario.";
-                currentBgImage = content.default_image;
-            }
-        }
-
-        backgroundImageElem.style.backgroundImage = `url('images/${currentBgImage}')`;
-        const progress = (currentStep < 0) ? 0 : (currentStep / (prayerSequence.length - 1)) * 100;
-        progressBar.style.width = `${progress}%`;
-        
-        updateButtonStates();
-    };
-
-    const renderBeads = (total, activeIndex, icon) => {
-        for (let i = 0; i < total; i++) {
-            const bead = document.createElement('div');
-            bead.classList.add('bead');
-            if (icon === '♥') bead.classList.add('heart');
-            if (i === activeIndex) {
-                bead.classList.add('active');
-            }
-            bead.textContent = icon;
-            beadContainer.appendChild(bead);
-        }
-    };
-    
-    const findCurrentMysteryIndex = (stepIndex) => {
-        // La secuencia inicial tiene 7 pasos antes del primer misterio
-        let mysteryBlockStart = 7; 
-        // Cada bloque de misterio tiene: anuncio(1) + Padre Nuestro(1) + 10 Ave Marías(10) + Gloria(1) + Or.Fátima(1) = 14 pasos
-        const stepsPerMystery = 14; 
-
-        for (let i = 0; i < 5; i++) {
-            const mysteryBlockEnd = mysteryBlockStart + stepsPerMystery;
-            if (stepIndex >= mysteryBlockStart && stepIndex < mysteryBlockEnd) {
-                return i;
-            }
-            mysteryBlockStart = mysteryBlockEnd;
-        }
-        return null;
-    };
-
-    // --- MANEJADORES DE EVENTOS ---
-    const handleNext = () => {
-        if (currentStep >= prayerSequence.length - 1) {
-            currentStep = -1; // Reiniciar
-        } else {
-            currentStep++;
-        }
-        renderStep();
-    };
-    
-    const handlePrevious = () => {
-        if (currentStep > 0) { // No permitir retroceder a la pantalla de bienvenida
-            currentStep--;
-        }
-        renderStep();
-    };
-
-    const resetAndStart = () => {
-        currentStep = -1;
-        prayerSequence = buildPrayerSequence();
-        renderStep();
-    };
-
-    const handleLanguageChange = (e) => {
-        currentLanguage = e.target.value;
-        resetAndStart();
-    };
-
-    const handleMysteryChange = (e) => {
-        currentMysteryKey = e.target.value;
-        resetAndStart();
-    };
-    
-    // --- INICIALIZACIÓN ---
-    const setMysteryForToday = () => {
-        const day = new Date().getDay(); // Domingo = 0, Lunes = 1, etc.
-        switch (day) {
-            case 1: case 6: currentMysteryKey = 'joyful'; break;    // Lunes, Sábado
-            case 4: currentMysteryKey = 'luminous'; break;  // Jueves
-            case 2: case 5: currentMysteryKey = 'sorrowful'; break; // Martes, Viernes
-            case 3: case 0: currentMysteryKey = 'glorious'; break;  // Miércoles, Domingo
-        }
-        mysterySelect.value = currentMysteryKey;
-    };
-
-    // Configurar eventos
-    setMysteryForToday();
-    prevBtn.addEventListener('click', handlePrevious);
-    nextBtn.addEventListener('click', handleNext);
-    languageSelect.addEventListener('change', handleLanguageChange);
-    mysterySelect.addEventListener('change', handleMysteryChange);
-    
-    // Iniciar aplicación
-    resetAndStart();
-});
+  cargarTodo();
 </script>
-
 </body>
 </html>
