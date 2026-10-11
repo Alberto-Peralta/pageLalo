@@ -830,3 +830,31 @@ body {
     grid-template-columns: repeat(4, 1fr);
   }
 }
+/* ---- RECURSOS: ajuste móvil ---- */
+@media (max-width: 599px) {
+  .recurso-card {
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .recurso-details {
+    flex: 1 1 calc(100% - 44px);
+  }
+
+  .recurso-details h3 {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+    overflow-wrap: anywhere;
+  }
+
+  .recurso-descripcion {
+    overflow-wrap: anywhere;
+  }
+
+  .recurso-download-btn {
+    flex: 1 1 100%;
+    justify-content: center;
+    padding: 10px 14px;
+  }
+}
