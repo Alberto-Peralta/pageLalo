@@ -4,7 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lalo Peralta</title>
- 
+  <meta name="description" content="Sitio de Lalo Peralta: biblia, rosario, coronilla, liturgia y más.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Lalo Peralta">
+  <meta property="og:title" content="Lalo Peralta">
+  <meta property="og:description" content="Biblia, rosario, coronilla, liturgia de las horas y más.">
+  <meta property="og:url" content="https://laloperalta.netlify.app/">
+  <meta property="og:image" content="https://laloperalta.netlify.app/icons/android-chrome-512x512.png">
+  <meta property="og:image:width" content="512">
+  <meta property="og:image:height" content="512">
+  <meta name="twitter:card" content="summary">
+
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta name="apple-mobile-web-app-title" content="Lalo Peralta">
@@ -23,12 +33,13 @@
   <!-- NAVBAR -->
   <header>
     <nav class="navbar">
-      <div class="logo">Lalo <span>Peralta</span></div>
+      <a href="./" class="logo"><img src="./icons/android-chrome-192x192.png" alt="Logo de Lalo Peralta" class="logo-img"><span class="logo-texto">Lalo <span>Peralta</span></span></a>
       <button class="menu-toggle" onclick="toggleMenu()" aria-label="Abrir menú">
         <span></span><span></span><span></span>
       </button>
       <ul class="menu" id="menu">
         <li><a href="./rosario/index.html">Rosario</a></li>
+        <li><a href="./rosario_difuntos/index.html">Exequias</a></li>
         <li><a href="./coronilla/index.html">Coronilla</a></li>
         <li><a href="./triviaCristiana/index.html">¿Cristiano?</a></li>
         <li><a href="./criptograma_biblico/index.html">Criptograma</a></li>
@@ -191,6 +202,10 @@
         <a href="./coronilla/index.html" class="collapsible-link">
           <img src="./coronilla/1.png" alt="Coronilla" class="link-image">
           <span>Rezar la Coronilla de la Misericordia</span>
+        </a>
+        <a href="./rosario_difuntos/index.html" class="collapsible-link">
+          <img src="./rosario_difuntos/images/default.jpg" alt="Rosario de Exequias" class="link-image">
+          <span>Rosario de Exequias</span>
         </a>
         <a href="./Rosario de aurora luciente por su natividad/index.html" class="collapsible-link">
           <img src="./rosario/images/image.png" alt="Rosario de Aurora" class="link-image">
@@ -411,7 +426,8 @@
     let clickCount = 0;
     const logo = document.querySelector('.logo');
     if (logo) {
-      logo.addEventListener('click', () => {
+      logo.addEventListener('click', (e) => {
+        e.preventDefault();
         clickCount++;
         if (clickCount === 5) window.location.href = '/admin.html';
         setTimeout(() => { clickCount = 0; }, 3000);

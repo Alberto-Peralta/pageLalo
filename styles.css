@@ -52,10 +52,25 @@ body {
   font-weight: 600;
   color: var(--texto);
   letter-spacing: 0.01em;
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  text-decoration: none;
 }
- 
+
 .logo span {
   color: var(--azul);
+}
+
+.logo .logo-texto {
+  color: inherit;
+}
+
+.navbar .logo-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  object-fit: contain;
 }
  
 .menu-toggle {
