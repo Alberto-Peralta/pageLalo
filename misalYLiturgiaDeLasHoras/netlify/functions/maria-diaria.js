@@ -97,7 +97,7 @@ exports.handler = async function (event) {
         throw new Error('Respuesta vacía de Magisterium');
       }
 
-      var resultado = { fecha: fecha, tema: tema, texto: texto, citas: data.citations || null };
+      var citasLimpias = Array.isArray(data.citations) ? data.citations.map(function (c) { return { titulo: c.document_title, autor: c.document_author, anio: c.document_year, referencia: c.document_reference, url: c.source_url }; }) : null; var resultado = { fecha: fecha, tema: tema, texto: texto, citas: citasLimpias };
       cache.fecha = fecha;
       cache.data = resultado;
 
