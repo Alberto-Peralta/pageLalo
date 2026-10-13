@@ -814,3 +814,21 @@ body {
     padding: 10px 14px;
   }
 }
+
+/* ===== INICIO: logo completo de Notica (prueba; revertir con el tag logo-v1-emblema) ===== */
+.navbar .logo { min-width: 0; }
+.navbar .logo-img.logo-img-full {
+  width: auto;
+  height: clamp(30px, 8vw, 44px);
+  max-width: 62vw;
+  border-radius: 0;
+  object-fit: contain;
+}
+.footer-logo .footer-logo-img {
+  display: block;
+  width: auto;
+  height: clamp(36px, 9vw, 52px);
+  max-width: 100%;
+  object-fit: contain;
+}
+/* ===== FIN: logo completo de Notica ===== */
