@@ -6,6 +6,13 @@
 <title>5 minutos con María | Notica</title>
 <meta name="description" content="Una enseñanza, una reflexión y una oración mariana cada día, basadas en documentos de la Iglesia. Notica.">
 <link rel="canonical" href="https://noticaapp.com/cinco-minutos-maria/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Notica">
+<meta property="og:title" content="5 minutos con María | Notica">
+<meta property="og:description" content="Una enseñanza, una reflexión y una oración mariana cada día, basadas en documentos de la Iglesia.">
+<meta property="og:url" content="https://noticaapp.com/cinco-minutos-maria/">
+<meta property="og:image" content="https://noticaapp.com/cinco-minutos-maria/portada-maria.webp">
+<meta name="twitter:card" content="summary">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -118,12 +125,15 @@ button.reintentar {
   font-size: 15px;
   cursor: pointer;
 }
+.portada { display: block; width: 100%; max-width: 480px; height: auto; margin: 0 auto 12px; border-radius: var(--radio-card); }
+.solo-lectores { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 </style>
 </head>
 <body>
 <div class="barra"><a href="/">&larr; Inicio</a></div>
 <main>
-  <h1>5 minutos con María</h1>
+  <img src="./portada-maria.webp" alt="5 minutos con María" class="portada" width="800" height="800">
+  <h1 class="solo-lectores">5 minutos con María</h1>
   <p class="fecha" id="fecha"></p>
   <div id="contenido">
     <div class="estado" id="cargando">
