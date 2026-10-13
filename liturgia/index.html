@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Liturgia del día | Notica</title>
+<meta name="description" content="La liturgia de cada día, para leer y compartir. Notica.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "a7d50e2cf06445848a47c594610014ed"}'></script>
+<style>
+:root {
+  --azul: #185FA5;
+  --azul-claro: #E6F1FB;
+  --azul-mid: #378ADD;
+  --texto: #1a1a1a;
+  --texto-muted: #6b7280;
+  --borde: rgba(0,0,0,0.08);
+  --fondo: #ffffff;
+  --fondo-sec: #f8f9fa;
+  --radio-card: 12px;
+  --radio-sm: 8px;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: 'DM Sans', sans-serif;
+  color: var(--texto);
+  background: var(--fondo-sec);
+  line-height: 1.6;
+}
+.barra {
+  background: var(--fondo);
+  border-bottom: 1px solid var(--borde);
+  padding: 12px 16px;
+  padding-top: max(12px, env(safe-area-inset-top));
+}
+.barra a { color: var(--azul); text-decoration: none; font-weight: 500; font-size: 15px; }
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 16px;
+  padding-bottom: max(40px, env(safe-area-inset-bottom));
+}
+h1 {
+  font-family: 'Crimson Pro', serif;
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin: 0 0 4px;
+  color: var(--azul);
+}
+.fecha { color: var(--texto-muted); font-size: 14px; margin: 0 0 12px; text-transform: capitalize; }
+.dias { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px 12px; margin-bottom: 16px; font-size: 14px; }
+.dias a { color: var(--azul); text-decoration: none; font-weight: 500; }
+.dias input[type="date"] {
+  font-family: inherit;
+  font-size: 14px;
+  color: var(--texto);
+  background: var(--fondo);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio-sm);
+  padding: 5px 8px;
+}
+.dia-titulo {
+  font-family: 'Crimson Pro', serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 0 0 12px;
+}
+.misa-cab { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin: 22px 0 10px; }
+.misa-cab h2 {
+  font-family: 'Crimson Pro', serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--azul);
+}
+.color-lit { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: var(--texto-muted); }
+.color-lit i {
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  border: 1px solid rgba(0,0,0,0.2);
+  display: inline-block;
+}
+.tarjeta {
+  background: var(--fondo);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio-card);
+  padding: 20px;
+  margin-bottom: 14px;
+  scroll-margin-top: 16px;
+}
+.tarjeta.resaltada { border-color: var(--azul-mid); box-shadow: 0 0 0 3px var(--azul-claro); }
+.titulo-dia { font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--azul); font-weight: 600; margin: 0 0 6px; }
+.cita { font-family: 'Crimson Pro', serif; font-size: 1.35rem; font-weight: 600; margin: 0 0 6px; }
+.resumen { color: var(--texto-muted); font-size: 14px; font-style: italic; margin: 0 0 14px; }
+.cita + .lectura { margin-top: 8px; }
+.titulo-dia + .lectura { margin-top: 8px; }
+.lectura p { font-family: 'Crimson Pro', serif; font-size: 1.25rem; line-height: 1.7; margin: 0 0 14px; }
+.lectura p:last-child { margin-bottom: 0; }
+.lectura p.respuesta { font-weight: 600; }
+.parte-cab { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+.parte-cab > div:first-child { min-width: 0; }
+.acciones { display: flex; gap: 2px; flex-shrink: 0; margin: -6px -10px 0 0; }
+button.compartir, button.copiar {
+  background: transparent;
+  color: var(--texto-muted);
+  border: 0;
+  border-radius: var(--radio-sm);
+  padding: 6px 10px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+}
+button.compartir:hover, button.copiar:hover { background: var(--azul-claro); color: var(--azul); }
+button.reintentar {
+  background: var(--azul);
+  color: #fff;
+  border: 0;
+  border-radius: var(--radio-sm);
+  padding: 10px 18px;
+  font-family: inherit;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: 12px;
+}
+button:focus-visible, a:focus-visible { outline: 3px solid var(--azul-mid); outline-offset: 2px; }
+.estado { text-align: center; color: var(--texto-muted); padding: 40px 0; }
+.estado.error { color: #b42318; }
+.girar {
+  width: 28px; height: 28px;
+  margin: 0 auto 12px;
+  border: 3px solid var(--azul-claro);
+  border-top-color: var(--azul);
+  border-radius: 50%;
+  animation: giro 0.9s linear infinite;
+}
+@keyframes giro { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .girar { animation-duration: 3s; } }
+</style>
+</head>
+<body>
+<div class="barra"><a href="/">&larr; Inicio</a></div>
+<main>
+  <h1>Liturgia del día</h1>
+  <p class="fecha" id="fecha"></p>
+  <div class="dias" id="dias"></div>
+  <div id="contenido">
+    <div class="estado"><div class="girar"></div>Cargando la liturgia...</div>
+  </div>
+</main>
+
+<script>
+(function () {
+  var BASE = 'https://pagelalo-1b210-default-rtdb.firebaseio.com/liturgia/';
+  var URL_PUBLICA = 'https://noticaapp.com/liturgia/';
+  var ZONA = 'America/Mexico_City';
+  var contenedor = document.getElementById('contenido');
+  var elFecha = document.getElementById('fecha');
+  var elDias = document.getElementById('dias');
+
+  function fechaReal(s) {
+    if (/^\d{4}-\d{2}-\d{2}$/.test(s) === false) { return false; }
+    var d = new Date(s + 'T00:00:00Z');
+    return isNaN(d.getTime()) === false && d.toISOString().slice(0, 10) === s;
+  }
+
+  function hoy() {
+    return new Intl.DateTimeFormat('en-CA', { timeZone: ZONA, year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date());
+  }
+
+  function sumarDias(s, n) {
+    var d = new Date(s + 'T00:00:00Z');
+    d.setUTCDate(d.getUTCDate() + n);
+    return d.toISOString().slice(0, 10);
+  }
+
+  function fechaBonita(s) {
+    return new Intl.DateTimeFormat('es-MX', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' })
+      .format(new Date(s + 'T00:00:00Z'));
+  }
+
+  function lista(x) {
+    if (!x) { return []; }
+    if (Array.isArray(x)) { return x.filter(function (e) { return e; }); }
+    return Object.keys(x).sort(function (a, b) { return Number(a) - Number(b); }).map(function (k) { return x[k]; });
+  }
+
+  function colorHex(nombre) {
+    var s = (nombre || '').toLowerCase();
+    if (s.indexOf('verde') > -1) { return '#2e8b57'; }
+    if (s.indexOf('blanco') > -1) { return '#ffffff'; }
+    if (s.indexOf('rojo') > -1) { return '#c0392b'; }
+    if (s.indexOf('morado') > -1 || s.indexOf('violeta') > -1) { return '#6b3fa0'; }
+    if (s.indexOf('rosa') > -1) { return '#e58fb0'; }
+    if (s.indexOf('negro') > -1) { return '#222222'; }
+    if (s.indexOf('azul') > -1) { return '#378ADD'; }
+    return '';
+  }
+
+  var parametro = new URLSearchParams(window.location.search).get('fecha');
+  var fecha = (parametro && fechaReal(parametro)) ? parametro : hoy();
+  var esHoy = (fecha === hoy());
+
+  function enlace(texto, f) {
+    var a = document.createElement('a');
+    a.textContent = texto;
+    a.href = window.location.pathname + '?fecha=' + f;
+    return a;
+  }
+
+  function pintarNavegacion() {
+    elFecha.textContent = fechaBonita(fecha);
+    elDias.innerHTML = '';
+    elDias.appendChild(enlace('← Anterior', sumarDias(fecha, -1)));
+
+    var sel = document.createElement('input');
+    sel.type = 'date';
+    sel.value = fecha;
+    sel.setAttribute('aria-label', 'Elegir fecha');
+    sel.onchange = function () {
+      if (fechaReal(sel.value) === false) { return; }
+      window.location.href = (sel.value === hoy())
+        ? window.location.pathname
+        : window.location.pathname + '?fecha=' + sel.value;
+    };
+    elDias.appendChild(sel);
+
+    if (esHoy === false) {
+      var h = document.createElement('a');
+      h.textContent = 'Hoy';
+      h.href = window.location.pathname;
+      elDias.appendChild(h);
+    }
+    elDias.appendChild(enlace('Siguiente →', sumarDias(fecha, 1)));
+  }
+
+  function mensaje(texto, esError) {
+    contenedor.innerHTML = '';
+    var d = document.createElement('div');
+    d.className = 'estado' + (esError ? ' error' : '');
+    d.appendChild(document.createTextNode(texto));
+    if (esError) {
+      d.appendChild(document.createElement('br'));
+      var b = document.createElement('button');
+      b.className = 'reintentar';
+      b.textContent = 'Reintentar';
+      b.onclick = cargar;
+      d.appendChild(b);
+    }
+    contenedor.appendChild(d);
+  }
+
+  function idParte(i, j) { return 'm' + (i + 1) + '-p' + (j + 1); }
+
+  function enlaceParte(i, j) {
+    return URL_PUBLICA + '?fecha=' + fecha + '#' + idParte(i, j);
+  }
+
+  function textoParaCompartir(parte, i, j) {
+    var t = '📖 *' + (parte.tipo || 'Liturgia') + '*';
+    if (parte.cita) { t += '\n' + parte.cita; }
+    t += '\n\n' + (parte.texto || '');
+    t += '\n\nLa liturgia de cada día: ' + enlaceParte(i, j);
+    return t;
+  }
+
+  var puedeCompartir = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent) && !!navigator.share;
+
+  function compartir(parte, i, j) {
+    var texto = textoParaCompartir(parte, i, j);
+    if (puedeCompartir) {
+      navigator.share({ text: texto }).catch(function () {});
+    } else {
+      window.open('https://wa.me/?text=' + encodeURIComponent(texto), '_blank', 'noopener');
+    }
+  }
+
+  function copiar(boton, parte, i, j) {
+    var texto = textoParaCompartir(parte, i, j);
+    function listo() {
+      var original = boton.textContent;
+      boton.textContent = '¡Copiado!';
+      setTimeout(function () { boton.textContent = original; }, 1800);
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(texto).then(listo).catch(function () { window.prompt('Copia el texto:', texto); });
+    } else {
+      window.prompt('Copia el texto:', texto);
+    }
+  }
+
+  function pintarParte(parte, i, j) {
+    var card = document.createElement('section');
+    card.className = 'tarjeta';
+    card.id = idParte(i, j);
+
+    var cab = document.createElement('div');
+    cab.className = 'parte-cab';
+    var izq = document.createElement('div');
+
+    var t = document.createElement('p');
+    t.className = 'titulo-dia';
+    t.textContent = parte.tipo || '';
+    izq.appendChild(t);
+
+    if (parte.cita) {
+      var c = document.createElement('p');
+      c.className = 'cita';
+      c.textContent = parte.cita;
+      izq.appendChild(c);
+    }
+    cab.appendChild(izq);
+
+    var acciones = document.createElement('div');
+    acciones.className = 'acciones';
+    var b = document.createElement('button');
+    b.className = 'compartir';
+    b.textContent = puedeCompartir ? 'Compartir' : 'WhatsApp';
+    b.onclick = function () { compartir(parte, i, j); };
+    var k = document.createElement('button');
+    k.className = 'copiar';
+    k.textContent = 'Copiar';
+    k.onclick = function () { copiar(k, parte, i, j); };
+    acciones.appendChild(b);
+    acciones.appendChild(k);
+    cab.appendChild(acciones);
+    card.appendChild(cab);
+
+    if (parte.resumen) {
+      var r = document.createElement('p');
+      r.className = 'resumen';
+      r.textContent = parte.resumen;
+      card.appendChild(r);
+    }
+
+    var lectura = document.createElement('div');
+    lectura.className = 'lectura';
+    String(parte.texto || '').split('\n\n').forEach(function (par) {
+      if (par.trim() === '') { return; }
+      var p = document.createElement('p');
+      if (/^R\.\s/.test(par.trim()) && par.length < 160) { p.className = 'respuesta'; }
+      p.textContent = par;
+      lectura.appendChild(p);
+    });
+    card.appendChild(lectura);
+    return card;
+  }
+
+  function pintar(d) {
+    contenedor.innerHTML = '';
+    var misas = lista(d.misas);
+
+    if (d.titulo) {
+      var h = document.createElement('p');
+      h.className = 'dia-titulo';
+      h.textContent = d.titulo;
+      contenedor.appendChild(h);
+    }
+
+    misas.forEach(function (misa, i) {
+      var cab = document.createElement('div');
+      cab.className = 'misa-cab';
+      if (misas.length > 1) {
+        var h2 = document.createElement('h2');
+        h2.textContent = misa.titulo || ('Misa ' + (i + 1));
+        cab.appendChild(h2);
+      }
+      if (misa.color) {
+        var col = document.createElement('span');
+        col.className = 'color-lit';
+        var punto = document.createElement('i');
+        var hex = colorHex(misa.color);
+        if (hex) { punto.style.background = hex; }
+        col.appendChild(punto);
+        col.appendChild(document.createTextNode('Color: ' + misa.color));
+        cab.appendChild(col);
+      }
+      if (cab.childNodes.length) { contenedor.appendChild(cab); }
+
+      lista(misa.partes).forEach(function (parte, j) {
+        contenedor.appendChild(pintarParte(parte, i, j));
+      });
+    });
+
+    if (misas.length === 0) {
+      mensaje('Este día no tiene contenido cargado.', false);
+      return;
+    }
+    irAlAncla();
+  }
+
+  function irAlAncla() {
+    var id = window.location.hash.replace('#', '');
+    if (!id) { return; }
+    var el = document.getElementById(id);
+    if (!el) { return; }
+    el.classList.add('resaltada');
+    el.scrollIntoView({ behavior: 'auto', block: 'start' });
+  }
+
+  function cargar() {
+    pintarNavegacion();
+    contenedor.innerHTML = '';
+    var c = document.createElement('div');
+    c.className = 'estado';
+    var g = document.createElement('div');
+    g.className = 'girar';
+    c.appendChild(g);
+    c.appendChild(document.createTextNode('Cargando la liturgia...'));
+    contenedor.appendChild(c);
+
+    fetch(BASE + fecha + '.json')
+      .then(function (r) {
+        if (r.ok === false) { throw new Error('HTTP ' + r.status); }
+        return r.json();
+      })
+      .then(function (d) {
+        if (d === null) {
+          mensaje('Todavía no está cargada la liturgia de este día.', false);
+        } else if (typeof d !== 'object' || !d.misas) {
+          throw new Error('Datos incompletos');
+        } else {
+          pintar(d);
+        }
+      })
+      .catch(function (e) {
+        console.error(e);
+        mensaje('No se pudo cargar la liturgia. Intenta de nuevo en unos minutos.', true);
+      });
+  }
+
+  cargar();
+})();
+</script>
+</body>
+</html>

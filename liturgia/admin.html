@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Panel de liturgia | Notica</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --azul: #185FA5;
+  --azul-claro: #E6F1FB;
+  --azul-mid: #378ADD;
+  --texto: #1a1a1a;
+  --muted: #6b7280;
+  --borde: rgba(0,0,0,0.08);
+  --borde-campo: rgba(0,0,0,0.18);
+  --fondo: #ffffff;
+  --fondo-sec: #f8f9fa;
+  --radio-card: 12px;
+  --radio-sm: 8px;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: 'DM Sans', sans-serif;
+  color: var(--texto);
+  background: var(--fondo-sec);
+  line-height: 1.6;
+}
+.cabecera {
+  background: var(--fondo);
+  border-bottom: 1px solid var(--borde);
+  padding: 12px 16px;
+  padding-top: max(12px, env(safe-area-inset-top));
+}
+.cabecera a { color: var(--azul); text-decoration: none; font-weight: 500; font-size: 15px; }
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px 16px;
+  padding-bottom: max(60px, env(safe-area-inset-bottom));
+}
+h1 {
+  font-family: 'Crimson Pro', serif;
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin: 0 0 16px;
+  color: var(--azul);
+}
+.caja {
+  background: var(--fondo);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio-card);
+  padding: 20px;
+  margin-bottom: 14px;
+}
+#pantallaLogin { max-width: 420px; }
+label { display: block; font-size: 14px; font-weight: 500; margin: 12px 0 4px; }
+label:first-child { margin-top: 0; }
+input[type=email], input[type=password] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--borde-campo);
+  border-radius: var(--radio-sm);
+  font-family: inherit;
+  font-size: 16px;
+  background: var(--fondo);
+  color: var(--texto);
+}
+input[type=file] { font-family: inherit; font-size: 14px; max-width: 100%; }
+input[type=file]::file-selector-button {
+  background: var(--azul-claro);
+  color: var(--azul);
+  border: 0;
+  border-radius: var(--radio-sm);
+  padding: 9px 16px;
+  margin-right: 12px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+input:focus-visible, button:focus-visible, a:focus-visible, input[type=file]:focus-visible {
+  outline: 3px solid var(--azul-mid);
+  outline-offset: 2px;
+}
+button {
+  background: var(--azul);
+  color: #fff;
+  border: 0;
+  border-radius: var(--radio-sm);
+  padding: 11px 20px;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 14px;
+}
+button:disabled { opacity: 0.5; cursor: not-allowed; }
+button.claro {
+  background: var(--fondo);
+  color: var(--azul);
+  border: 1px solid var(--azul);
+  margin-top: 0;
+  padding: 8px 16px;
+  font-size: 14px;
+}
+#subir { margin-top: 16px; }
+.error { color: #b42318; font-size: 14px; margin: 10px 0 0; }
+.nota { font-size: 13px; color: var(--muted); margin: 12px 0 0; }
+.barra {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  margin-bottom: 14px;
+  font-size: 14px;
+  color: var(--muted);
+}
+.barra strong { color: var(--texto); font-weight: 600; }
+.aviso {
+  background: #fff7e6;
+  border: 1px solid #f5d28a;
+  border-radius: var(--radio-sm);
+  padding: 10px 14px;
+  font-size: 14px;
+  margin-top: 12px;
+}
+.aviso ul { margin: 6px 0 0; padding-left: 20px; }
+#resumen { font-size: 16px; font-weight: 500; margin: 0; }
+.tabla {
+  overflow: auto;
+  max-height: 420px;
+  border: 1px solid var(--borde);
+  border-radius: var(--radio-card);
+  background: var(--fondo);
+}
+table { border-collapse: collapse; width: 100%; font-size: 13px; }
+th, td { text-align: left; padding: 8px 12px; border-bottom: 1px solid var(--borde); vertical-align: top; }
+th {
+  background: var(--azul-claro);
+  color: var(--azul);
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+}
+tr:last-child td { border-bottom: 0; }
+td:nth-child(1) { white-space: nowrap; }
+#resultado { margin-top: 14px; font-size: 14px; }
+</style>
+</head>
+<body>
+<div class="cabecera"><a href="/liturgia/">&larr; Ver la página pública</a></div>
+<main>
+  <h1>Panel de liturgia</h1>
+
+  <div id="pantallaLogin" class="caja" style="display:none">
+    <form id="formLogin">
+      <label for="email">Correo</label>
+      <input type="email" id="email" required autocomplete="username">
+      <label for="clave">Contraseña</label>
+      <input type="password" id="clave" required autocomplete="current-password">
+      <button type="submit">Entrar</button>
+      <p class="error" id="errorLogin"></p>
+    </form>
+  </div>
+
+  <div id="panel" style="display:none">
+    <div class="barra">
+      <span>Sesión: <strong id="correo"></strong></span>
+      <button class="claro" id="salir" type="button">Salir</button>
+    </div>
+
+    <div class="caja">
+      <label for="archivo">Misal del mes (.md)</label>
+      <input type="file" id="archivo" accept=".md,.txt,text/markdown,text/plain">
+      <p class="nota">Formato: cada día empieza con ## AAAA-MM-DD, cada misa con ### título y cada parte con #### tipo. Es el archivo que genera convertir_misal.py.</p>
+    </div>
+
+    <div id="vistaPrevia" style="display:none">
+      <div class="caja">
+        <p id="resumen"></p>
+        <div class="aviso" id="bloqueAvisos" style="display:none"><strong>Revisa esto antes de subir:</strong><ul id="avisos"></ul></div>
+      </div>
+      <div class="tabla">
+        <table>
+          <thead><tr><th>Fecha</th><th>Título</th><th>Misas</th><th>Partes</th><th>Letras</th></tr></thead>
+          <tbody id="filas"></tbody>
+        </table>
+      </div>
+      <button id="subir" type="button" disabled>Subir</button>
+    </div>
+    <p id="resultado"></p>
+  </div>
+</main>
+<script type="module" src="admin.js"></script>
+</body>
+</html>
