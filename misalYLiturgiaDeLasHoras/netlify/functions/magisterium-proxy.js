@@ -1,33 +1,41 @@
 // netlify/functions/magisterium-proxy.js
+// Acepta { messages: [{role, content}, ...] } (historial de la conversación)
+// o, por compatibilidad con otras páginas, { prompt: "texto" }.
 
-// Importa la biblioteca de 'node-fetch' para hacer peticiones HTTP en Node.js
-// Si no la tienes instalada, puedes hacerlo con 'npm install node-fetch'
-// Pero Netlify Functions ya incluye muchas dependencias comunes.
+const MAX_MESSAGES = 12;   // últimos mensajes del historial que se reenvían
+const MAX_CHARS = 6000;    // máximo de caracteres por mensaje del historial
 
 exports.handler = async (event, context) => {
-    // Solo permitimos solicitudes POST para este endpoint
     if (event.httpMethod !== 'POST') {
         return { statusCode: 405, body: 'Método no permitido' };
     }
 
     try {
-        // Obtenemos el cuerpo de la solicitud JSON de nuestro frontend
         const body = JSON.parse(event.body);
-        const { prompt } = body;
+        let messages;
 
-        // Validar que el prompt existe
-        if (!prompt) {
+        if (Array.isArray(body.messages)) {
+            messages = body.messages
+                .filter(m => m && (m.role === 'user' || m.role === 'assistant')
+                    && typeof m.content === 'string' && m.content.trim() !== '')
+                .map(m => ({ role: m.role, content: m.content.slice(0, MAX_CHARS) }))
+                .slice(-MAX_MESSAGES);
+            // El historial debe empezar y terminar con un mensaje del usuario
+            while (messages.length && messages[0].role !== 'user') messages.shift();
+        } else if (typeof body.prompt === 'string' && body.prompt.trim() !== '') {
+            messages = [{ role: 'user', content: body.prompt }];
+        }
+
+        if (!messages || messages.length === 0 || messages[messages.length - 1].role !== 'user') {
             return {
                 statusCode: 400,
-                body: JSON.stringify({ error: 'El campo "prompt" es requerido.' }),
+                body: JSON.stringify({ error: 'Se requiere "messages" (terminando con un mensaje del usuario) o "prompt".' }),
             };
         }
 
-        // Accedemos a la clave de la API de forma segura desde las variables de entorno de Netlify
         const MAGISTERIUM_API_KEY = process.env.MAGISTERIUM_API_KEY;
         const MAGISTERIUM_API_URL = "https://www.magisterium.com/api/v1/chat/completions";
 
-        // Realizamos la solicitud a la API de Magisterium
         const apiResponse = await fetch(MAGISTERIUM_API_URL, {
             method: 'POST',
             headers: {
@@ -36,11 +44,10 @@ exports.handler = async (event, context) => {
             },
             body: JSON.stringify({
                 model: 'magisterium-1',
-                messages: [{ role: 'user', content: prompt }]
+                messages: messages
             })
         });
 
-        // Verificamos si la respuesta de la API fue exitosa
         if (!apiResponse.ok) {
             const errorData = await apiResponse.json();
             throw new Error(errorData.error.message || 'Error en la API de Magisterium');
@@ -48,13 +55,9 @@ exports.handler = async (event, context) => {
 
         const data = await apiResponse.json();
 
-        // Devolvemos la respuesta de la API de Magisterium a nuestro frontend
         return {
             statusCode: 200,
-            headers: {
-                'Content-Type': 'application/json',
-                // Netlify Functions maneja CORS automáticamente para este tipo de respuesta
-            },
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)
         };
 

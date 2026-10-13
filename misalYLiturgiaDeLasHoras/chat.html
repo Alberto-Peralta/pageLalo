@@ -482,6 +482,10 @@
         sendMessage();
     });
 
+    // Historial de la conversación (se reenvía a la IA en cada pregunta)
+    let conversationHistory = [];
+    const MAX_HISTORY = 20;
+
     // Función principal para enviar mensajes
     async function sendMessage() {
         const userMessage = userInput.value.trim();
@@ -507,7 +511,7 @@
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ prompt: userMessage })
+                body: JSON.stringify({ messages: conversationHistory.concat([{ role: 'user', content: userMessage }]) })
             });
 
             // Remover mensaje de carga
@@ -552,6 +556,13 @@
             }
 
             const assistantMessage = data.choices[0].message.content;
+
+            // Guardar el turno en el historial (solo si la respuesta fue exitosa)
+            conversationHistory.push({ role: 'user', content: userMessage });
+            conversationHistory.push({ role: 'assistant', content: assistantMessage });
+            if (conversationHistory.length > MAX_HISTORY) {
+                conversationHistory = conversationHistory.slice(-MAX_HISTORY);
+            }
 
             // 4. Procesar el mensaje para convertir referencias en enlaces
             const processedMessage = processReferences(assistantMessage);
