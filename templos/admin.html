@@ -87,9 +87,15 @@
                         </div>
                     </div>
 
-                    <!-- Campos ocultos para coordenadas -->
-                    <input type="hidden" id="latitud">
-                    <input type="hidden" id="longitud">
+                    <!-- Coordenadas (editables a mano o con el botón de ubicación actual) -->
+                    <div class="form-group">
+                        <label><i class="fas fa-crosshairs"></i> Coordenadas (opcional)</label>
+                        <div style="display: flex; gap: 0.5rem;">
+                            <input type="text" id="latitud" inputmode="decimal" placeholder="Latitud: 28.1935">
+                            <input type="text" id="longitud" inputmode="decimal" placeholder="Longitud: -105.4712">
+                        </div>
+                        <small style="display:block; margin-top:0.35rem; opacity:0.75;">En Google Maps: clic derecho sobre el templo y copia los dos números (latitud, longitud).</small>
+                    </div>
 
                     <div class="form-group">
                         <label><i class="fas fa-align-left"></i> Descripción</label>
