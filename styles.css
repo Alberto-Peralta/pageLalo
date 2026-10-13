@@ -637,49 +637,6 @@ body {
   font-size: 0.9rem;
 }
  
-/* ---- DONAR (Corregido: Mensaje oculto por defecto) ---- */
-.donate {
-  background: var(--fondo);
-  border-bottom: 1px solid var(--borde);
-  padding: 2rem 1.25rem;
-  text-align: center;
-}
- 
-.donate h2 {
-  font-family: 'Crimson Pro', serif;
-  font-size: 1.6rem;
-  font-weight: 400;
-  color: var(--texto);
-  margin-bottom: 6px;
-}
- 
-.donate > p {
-  font-size: 0.85rem;
-  color: var(--texto-muted);
-  margin-bottom: 1.25rem;
-}
- 
-.card-image {
-  width: 200px;
-  max-width: 80%;
-  border-radius: var(--radio-card);
-  cursor: pointer;
-  border: 1px solid var(--borde);
-  transition: transform 0.2s, box-shadow 0.2s;
-}
- 
-.card-image:hover {
-  transform: scale(1.03);
-  box-shadow: 0 8px 24px rgba(24, 95, 165, 0.15);
-}
-
-/* Mensaje de copiado - Aparece solo tras hacer clic */
-#copied-message {
-  display: none;
-  margin-top: 0.5rem;
-  color: var(--azul);
-  font-weight: 500;
-}
  
 /* ---- FOOTER ---- */
 .footer {
@@ -798,7 +755,6 @@ body {
   .section,
   .collapsible-section,
   .recursos-section,
-  .donate,
   .footer {
     max-width: 960px;
     margin-left: auto;

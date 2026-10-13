@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lalo Peralta</title>
-  <meta name="description" content="Sitio de Lalo Peralta: biblia, rosario, coronilla, liturgia y más.">
+  <title>Notica</title>
+  <meta name="description" content="Sitio de Notica: biblia, rosario, coronilla, liturgia y más.">
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Lalo Peralta">
-  <meta property="og:title" content="Lalo Peralta">
+  <meta property="og:site_name" content="Notica">
+  <meta property="og:title" content="Notica">
   <meta property="og:description" content="Biblia, rosario, coronilla, liturgia de las horas y más.">
   <meta property="og:url" content="https://laloperalta.netlify.app/">
   <meta property="og:image" content="https://laloperalta.netlify.app/icons/android-chrome-512x512.png">
@@ -17,7 +17,7 @@
 
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  <meta name="apple-mobile-web-app-title" content="Lalo Peralta">
+  <meta name="apple-mobile-web-app-title" content="Notica">
  
   <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
   <link rel="manifest" href="/manifest.json">
@@ -33,7 +33,7 @@
   <!-- NAVBAR -->
   <header>
     <nav class="navbar">
-      <a href="./" class="logo"><img src="./icons/android-chrome-192x192.png" alt="Logo de Lalo Peralta" class="logo-img"><span class="logo-texto">Lalo <span>Peralta</span></span></a>
+      <a href="./" class="logo"><img src="./icons/android-chrome-192x192.png" alt="Logo de Notica" class="logo-img"><span class="logo-texto">Noti<span>ca</span></span></a>
       <button class="menu-toggle" onclick="toggleMenu()" aria-label="Abrir menú">
         <span></span><span></span><span></span>
       </button>
@@ -44,29 +44,13 @@
         <li><a href="./triviaCristiana/index.html">¿Cristiano?</a></li>
         <li><a href="./criptograma_biblico/index.html">Criptograma</a></li>
         <li><a href="./biblia/index.html">Biblia</a></li>
-        <li><a href="https://www.misionerosdeguadalupe.org/">Misioneros</a></li>
-        <li><a href="#donar">Donar</a></li>
         <li><a href="./intenciones/index.html">Intenciones</a></li>
-        <li><a href="./tiendaonline/index.html">Tienda</a></li>
         <li><a href="./misalYLiturgiaDeLasHoras/misal-diario.html">Misal</a></li>
         <li><a href="./misalYLiturgiaDeLasHoras/chat.html">Chat</a></li>
       </ul>
     </nav>
   </header>
  
-  <!-- CAMPAÑA (iframe sin cambios) -->
-  <iframe id="iframe-campaña"
-    src="campañaPadrinosMisioneros/index.html"
-    style="width:100%; border:none;"
-    title="Campaña Padrinos Misioneros"></iframe>
-  <script>
-    const iframe = document.getElementById('iframe-campaña');
-    window.addEventListener('message', (event) => {
-      if (event.data.height) {
-        iframe.style.height = event.data.height + 'px';
-      }
-    });
-  </script>
  
   <main>
  
@@ -159,31 +143,7 @@
           </div>
         </a>
  
-        <a href="https://www.misionerosdeguadalupe.org/" class="card-link">
-          <div class="card">
-            <div class="card-img-wrap">
-              <img src="./images/mg.webp" alt="Misioneros">
-            </div>
-            <div class="card-body">
-              <h2>Misioneros</h2>
-              <p>De Guadalupe</p>
-              <span class="card-tag">Misión</span>
-            </div>
-          </div>
-        </a>
  
-        <a href="./tiendaonline/index.html" class="card-link">
-          <div class="card">
-            <div class="card-img-wrap">
-              <img src="./Imagen de WhatsApp 2025-09-07 a las 17.45.22_b86e8fb0.jpg" alt="Tienda">
-            </div>
-            <div class="card-body">
-              <h2>Tienda</h2>
-              <p>Rosarios y artículos</p>
-              <span class="card-tag">Tienda</span>
-            </div>
-          </div>
-        </a>
  
       </div>
     </section>
@@ -248,28 +208,13 @@
       </div>
     </section>
  
-    <!-- DONAR -->
-<section class="donate" id="donar">
-    <h2>Apóyanos</h2>
-    <p>Haz clic en la tarjeta para copiar el número de cuenta:</p>
-    <img
-        src="./images/card.jpeg"
-        alt="Tarjeta de donación"
-        class="card-image"
-        onclick="copyAccount()">
-    <input type="text" id="account-number" value="002150701883169386" readonly
-        style="position:absolute;left:-9999px;">
-    <small id="copied-message" style="display: none; color: #185FA5; font-weight: 500; margin-top: 0.5rem;">
-        ¡Número copiado!
-    </small>
-</section>
  
   </main>
  
   <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-content">
-      <div class="footer-logo">Lalo <span>Peralta</span></div>
+      <div class="footer-logo">Noti<span>ca</span></div>
       <div class="footer-links">
         <ul>
           <li><a href="#">Inicio</a></li>
@@ -285,7 +230,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 Lalo Peralta. Evangelizando desde el medio digital.</p>
+      <p>&copy; 2026 Notica. Evangelizando desde el medio digital.</p>
     </div>
   </footer>
  
@@ -447,20 +392,6 @@
       arrow.style.transform = isOpen ? '' : 'rotate(180deg)';
     }
  
-    function copyAccount() {
-    const input = document.getElementById('account-number');
-    input.select();
-    input.setSelectionRange(0, 99999); // Para móviles
-    document.execCommand('copy');
-    
-    const msg = document.getElementById('copied-message');
-    msg.style.display = 'block';
-    
-    // Ocultar después de 3 segundos
-    setTimeout(() => {
-        msg.style.display = 'none';
-    }, 3000);
-}
   </script>
  
 </body>

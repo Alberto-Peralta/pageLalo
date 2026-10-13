@@ -10,18 +10,3 @@ function toggleCollapse(element) {
     element.classList.toggle('active');
 }
 
-// Copiar el número de cuenta
-function copyAccount() {
-    const accountInput = document.getElementById("account-number");
-    accountInput.select();
-    accountInput.setSelectionRange(0, 99999); // Para móviles también
-    document.execCommand("copy");
-
-    const copiedMessage = document.getElementById("copied-message");
-    copiedMessage.style.display = "inline";
-
-    // Opcional: esconder el mensaje después de 2 segundos
-    setTimeout(() => {
-        copiedMessage.style.display = "none";
-    }, 2000);
-}
