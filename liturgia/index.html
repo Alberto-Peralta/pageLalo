@@ -434,6 +434,15 @@ button:focus-visible, a:focus-visible { outline: 3px solid var(--azul-mid); outl
       });
   }
 
+  var toques = 0;
+  var reinicio;
+  document.querySelector("h1").addEventListener("click", function () {
+    toques += 1;
+    clearTimeout(reinicio);
+    reinicio = setTimeout(function () { toques = 0; }, 1500);
+    if (toques >= 5) { window.location.href = "admin.html"; }
+  });
+
   cargar();
 })();
 </script>
