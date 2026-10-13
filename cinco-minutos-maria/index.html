@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>5 minutos con María | Notica</title>
+<meta name="description" content="Una enseñanza, una reflexión y una oración mariana cada día, basadas en documentos de la Iglesia. Notica.">
+<link rel="canonical" href="https://noticaapp.com/cinco-minutos-maria/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "a7d50e2cf06445848a47c594610014ed"}'></script>
+<style>
+:root {
+  --azul: #185FA5;
+  --azul-claro: #E6F1FB;
+  --azul-mid: #378ADD;
+  --texto: #1a1a1a;
+  --texto-muted: #6b7280;
+  --borde: rgba(0,0,0,0.08);
+  --fondo: #ffffff;
+  --fondo-sec: #f8f9fa;
+  --radio-card: 12px;
+  --radio-sm: 8px;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: 'DM Sans', sans-serif;
+  color: var(--texto);
+  background: var(--fondo-sec);
+  line-height: 1.6;
+}
+.barra {
+  background: var(--fondo);
+  border-bottom: 1px solid var(--borde);
+  padding: 12px 16px;
+  padding-top: max(12px, env(safe-area-inset-top));
+}
+.barra a {
+  color: var(--azul);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 15px;
+}
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 16px;
+  padding-bottom: max(40px, env(safe-area-inset-bottom));
+}
+h1 {
+  font-family: 'Crimson Pro', serif;
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin: 0 0 4px;
+  color: var(--azul);
+}
+.fecha { color: var(--texto-muted); font-size: 14px; margin: 0 0 4px; }
+.tema {
+  font-family: 'Crimson Pro', serif;
+  font-size: 1.25rem;
+  margin: 0 0 20px;
+}
+.tarjeta {
+  background: var(--fondo);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio-card);
+  padding: 18px 20px;
+  margin-bottom: 14px;
+}
+.tarjeta h2 {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--azul);
+  margin: 0 0 8px;
+  font-weight: 600;
+}
+.tarjeta p {
+  font-family: 'Crimson Pro', serif;
+  font-size: 1.2rem;
+  margin: 0;
+  white-space: pre-line;
+}
+.tarjeta.oracion { background: var(--azul-claro); border-color: transparent; }
+.fuentes ul { margin: 0; padding-left: 18px; font-size: 14px; }
+.fuentes li { margin-bottom: 4px; }
+.fuentes a { color: var(--azul); }
+.aviso {
+  font-size: 13px;
+  color: var(--texto-muted);
+  margin-top: 20px;
+  padding: 12px 14px;
+  border-radius: var(--radio-sm);
+  background: var(--fondo);
+  border: 1px solid var(--borde);
+}
+.estado { text-align: center; color: var(--texto-muted); padding: 40px 0; }
+.estado.error { color: #b42318; }
+.girar {
+  width: 28px; height: 28px;
+  margin: 0 auto 12px;
+  border: 3px solid var(--azul-claro);
+  border-top-color: var(--azul);
+  border-radius: 50%;
+  animation: giro 0.9s linear infinite;
+}
+@keyframes giro { to { transform: rotate(360deg); } }
+button.reintentar {
+  margin-top: 12px;
+  background: var(--azul);
+  color: #fff;
+  border: 0;
+  border-radius: var(--radio-sm);
+  padding: 10px 18px;
+  font-family: inherit;
+  font-size: 15px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+<div class="barra"><a href="/">&larr; Inicio</a></div>
+<main>
+  <h1>5 minutos con María</h1>
+  <p class="fecha" id="fecha"></p>
+  <div id="contenido">
+    <div class="estado" id="cargando">
+      <div class="girar"></div>
+      Preparando la reflexión de hoy. La primera visita del día puede tardar unos segundos.
+    </div>
+  </div>
+  <p class="aviso">Este contenido es generado con inteligencia artificial a partir de documentos de la Iglesia. Puede contener errores y no sustituye la guía de un sacerdote ni la lectura de las fuentes originales.</p>
+</main>
+
+<script>
+(function () {
+  var contenedor = document.getElementById('contenido');
+  var elFecha = document.getElementById('fecha');
+
+  var SECCIONES = [
+    { clave: 'ENSENANZA', titulo: 'Enseñanza' },
+    { clave: 'REFLEXION', titulo: 'Reflexión' },
+    { clave: 'ORACION', titulo: 'Oración' },
+    { clave: 'PARA MEDITAR', titulo: 'Para meditar' }
+  ];
+
+  function normalizar(s) {
+    return s.replace(/\*/g, '').replace(/#/g, '').trim().toUpperCase()
+      .replace(/Ñ/g, 'N').replace(/Ó/g, 'O').replace(/É/g, 'E');
+  }
+
+  function limpiar(s) {
+    return s.replace(/\s*\[\^\d+\]/g, '').replace(/[ \t]+\n/g, '\n').trim();
+  }
+
+  function agregarConCursiva(padre, texto) {
+    var partes = texto.split(/\*([^*]+)\*/);
+    for (var i = 0; i < partes.length; i++) {
+      if (i % 2 === 1) {
+        var em = document.createElement('em');
+        em.textContent = partes[i];
+        padre.appendChild(em);
+      } else if (partes[i] !== '') {
+        padre.appendChild(document.createTextNode(partes[i]));
+      }
+    }
+  }
+
+  function dividir(texto) {
+    var lineas = texto.split('\n');
+    var mapa = {};
+    var actual = null;
+    for (var i = 0; i < lineas.length; i++) {
+      var n = normalizar(lineas[i]);
+      var esTitulo = false;
+      for (var j = 0; j < SECCIONES.length; j++) {
+        if (n === SECCIONES[j].clave) { actual = SECCIONES[j].clave; mapa[actual] = []; esTitulo = true; break; }
+      }
+      if (!esTitulo && actual) { mapa[actual].push(lineas[i]); }
+    }
+    return mapa;
+  }
+
+  function fechaBonita(iso) {
+    var p = iso.split('-');
+    var meses = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+    return parseInt(p[2], 10) + ' de ' + meses[parseInt(p[1], 10) - 1] + ' de ' + p[0];
+  }
+
+  function mostrarError() {
+    contenedor.innerHTML = '';
+    var d = document.createElement('div');
+    d.className = 'estado error';
+    d.appendChild(document.createTextNode('No se pudo cargar la reflexión de hoy. Intenta de nuevo en unos minutos.'));
+    d.appendChild(document.createElement('br'));
+    var b = document.createElement('button');
+    b.className = 'reintentar';
+    b.textContent = 'Reintentar';
+    b.onclick = cargar;
+    d.appendChild(b);
+    contenedor.appendChild(d);
+  }
+
+  function pintar(datos) {
+    contenedor.innerHTML = '';
+    if (datos.fecha) { elFecha.textContent = fechaBonita(datos.fecha); }
+
+    if (datos.tema) {
+      var t = document.createElement('p');
+      t.className = 'tema';
+      t.textContent = datos.tema;
+      contenedor.appendChild(t);
+    }
+
+    var mapa = dividir(datos.texto || '');
+    var hubo = false;
+    SECCIONES.forEach(function (sec) {
+      if (!mapa[sec.clave]) { return; }
+      var cuerpo = limpiar(mapa[sec.clave].join('\n'));
+      if (cuerpo === '') { return; }
+      hubo = true;
+      var card = document.createElement('section');
+      card.className = 'tarjeta' + (sec.clave === 'ORACION' ? ' oracion' : '');
+      var h = document.createElement('h2');
+      h.textContent = sec.titulo;
+      var p = document.createElement('p');
+      agregarConCursiva(p, cuerpo);
+      card.appendChild(h);
+      card.appendChild(p);
+      contenedor.appendChild(card);
+    });
+
+    if (hubo === false) {
+      var card2 = document.createElement('section');
+      card2.className = 'tarjeta';
+      var p2 = document.createElement('p');
+      p2.textContent = limpiar(datos.texto || '');
+      card2.appendChild(p2);
+      contenedor.appendChild(card2);
+    }
+
+    if (datos.citas && datos.citas.length) {
+      var f = document.createElement('section');
+      f.className = 'tarjeta fuentes';
+      var hf = document.createElement('h2');
+      hf.textContent = 'Fuentes consultadas';
+      var ul = document.createElement('ul');
+      var vistas = {};
+      datos.citas.forEach(function (c) {
+        if (!c || !c.url || vistas[c.url]) { return; }
+        vistas[c.url] = true;
+        var li = document.createElement('li');
+        var a = document.createElement('a');
+        var etiqueta = c.titulo || 'Documento';
+        if (c.referencia) { etiqueta += ', ' + c.referencia; }
+        if (c.anio) { etiqueta += ' (' + String(c.anio).substring(0, 4) + ')'; }
+        a.textContent = etiqueta;
+        if (/^https:\/\//.test(c.url)) {
+          a.href = c.url;
+          a.target = '_blank';
+          a.rel = 'noopener noreferrer';
+        }
+        li.appendChild(a);
+        ul.appendChild(li);
+      });
+      f.appendChild(hf);
+      f.appendChild(ul);
+      contenedor.appendChild(f);
+    }
+  }
+
+  function cargar() {
+    contenedor.innerHTML = '';
+    var c = document.createElement('div');
+    c.className = 'estado';
+    var g = document.createElement('div');
+    g.className = 'girar';
+    c.appendChild(g);
+    c.appendChild(document.createTextNode('Preparando la reflexión de hoy. La primera visita del día puede tardar unos segundos.'));
+    contenedor.appendChild(c);
+
+    fetch('/.netlify/functions/maria-diaria')
+      .then(function (r) {
+        if (r.ok === false) { throw new Error('HTTP ' + r.status); }
+        return r.json();
+      })
+      .then(function (datos) {
+        if (!datos || !datos.texto) { throw new Error('Respuesta vacía'); }
+        pintar(datos);
+      })
+      .catch(function (e) {
+        console.error(e);
+        mostrarError();
+      });
+  }
+
+  cargar();
+})();
+</script>
+</body>
+</html>
