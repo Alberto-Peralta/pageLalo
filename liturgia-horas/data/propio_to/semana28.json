@@ -1,0 +1,323 @@
+{
+ "dom": {
+  "visperas1": [
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "",
+    "ant_ciclo": {
+     "A": "Dios ha preparado para todos los pueblos un festín. Aleluya.",
+     "B": "¡Qué difícilmente entrarán en el reino de Dios los que poseen riquezas!",
+     "C": "¿No ha vuelto ninguno a dar gloria a Dios, sino este extranjero? Levántate y vete; tu fe te ha salvado."
+    }
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Te pedimos, Señor, que tu gracia continuamente nos preceda y acompañe, de manera\nque estemos dispuestos a obrar siempre el bien. Por nuestro Señor Jesucristo."
+   }
+  ],
+  "oficio": [
+   {
+    "tipo": "lectura1",
+    "texto": "Del libro del profeta Sofonías 3, 8-20\n\nCONVERSIÓN DE TODOS LOS PUEBLOS Y EXALTACIÓN DE ISRAEL\n\nEsto dice el Señor:\n«Esperadme el día en que me levantaré como testigo, pues he decidido reunir a los\n\npueblos, congregar a las naciones, para derramar sobre ellos mi cólera, el incendio de mi\nira; pues en el fuego de mi celo se consumirá la tierra entera.\n\nEntonces daré a los pueblos labios puros, para que invoquen todos el nombre del Señor,\npara que le sirvan unánimes. Desde más allá de los ríos de Etiopía, mis fieles dispersos me\ntraerán ofrendas.\n\nAquel día no tendrás ya que avergonzarte de las obras con que me ofendiste, porque\narrancaré de en medio de ti a tus soberbios fanfarrones, y no volverás a engreírte sobre\nmi monte santo. Dejaré en medio de ti un pueblo pobre y humilde, que confiará en el\nnombre del Señor. El resto de Israel no cometerá maldades, ni dirá mentiras, ni se hallará\nen su boca una lengua embustera: pastarán y reposarán sin sobresaltos.\n\nRegocíjate, hija de Sión; grita de júbilo, Israel; alégrate y gózate de todo corazón,\nJerusalén. El Señor ha cancelado tu condena, ha expulsado a tus enemigos. El Señor será\nel rey de Israel, en medio de ti, y ya no temerás ningún mal. Aquel día dirán a Jerusalén:\n\n\"No temas, Sión, no desfallezcan tus manos. El Señor, tu Dios, está en medio de ti, es un\npoderoso salvador. Él se goza y se complace en ti, te ama y se alegra con júbilo, danza por\nti con gritos de alegría, como en los días de fiesta.\"\n\nYo apartaré de tu lado la desgracia, el oprobio que pesa sobre ti. Entonces destruiré a\ntus enemigos, salvaré a los inválidos, reuniré a los dispersos; les daré fama y renombre en\ntodos los países donde fueron despreciados. Entonces os traeré y os congregaré. Os haré\nrenombrados y famosos entre todos los pueblos de la tierra, cuando cambie vuestra suerte\nante sus ojos. —Lo ha dicho el Señor—.»",
+    "anio": "I"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Dejaré en medio de ti un pueblo pobre y humilde, * y este resto de Israel confiará en\n\nel Señor.\nV. Entonces daré a los pueblos labios puros, para que invoquen todos el nombre del\n\nSeñor.\nR. Y este resto de Israel confiará en el Señor.",
+    "anio": "I",
+    "ref": "So 3, 12. 13. 9"
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "Del libro de Ben Sirá 10, 6-22\n\nCONTRA LA SOBERBIA\n\nPor ninguna ofensa devuelvas mal al prójimo, no marches por el camino de la soberbia;\nla soberbia es odiosa al Señor y a los hombres, para los dos es delito de opresión; el\nimperio pasa de nación a nación a causa de la violencia y la soberbia. ¿Por qué se\nensoberbece el polvo y ceniza si aún en vida se pudren sus entrañas? Un achaque ligero, y\nel médico queda perplejo: hoy es rey mañana será cadáver. Muere el hombre y hereda\ngusanos, lombrices, orugas e insectos.\n\nComienzo de la soberbia es el poder humano que aleja el corazón de su Hacedor; pues\nel pecador es aljibe de insolencia y fuente que mana planes perversos; por eso Dios le\nenvía terribles plagas y lo castiga hasta acabar con él.\n\nDios derribó del trono a los soberbios y sentó sobre él a los oprimidos; el Señor arrancó\nlas raíces de los pueblos y plantó en su lugar a los oprimidos; el Señor borró las huellas de\nlos pueblos y los destruyó hasta los cimientos; los borró del suelo y los aniquiló y acabó su\napellido en la tierra. No es digna del hombre la insolencia, ni la crueldad del nacido de\nmujer.",
+    "anio": "II"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. El Señor derriba del trono a los poderosos y enaltece a los humildes. * Dispersa a los\n\nsoberbios de corazón.\nV. El Señor arrancó las raíces de los pueblos y plantó en su lugar a los oprimidos.\nR. Dispersa a los soberbios de corazón.",
+    "anio": "II",
+    "ref": "Lc 1, 52. 51; Sir 10, 18"
+   },
+   {
+    "tipo": "lectura2",
+    "texto": "Del comentario de san Cirilo de Alejandría, obispo, sobre el libro del profeta Ageo\n(Cap. 14: PG 71, 1047-1050)\n\nES GRANDE MI NOMBRE ENTRE LAS NACIONES\n\nLa venida de nuestro Salvador en el tiempo fue como la edificación de un templo\nsobremanera glorioso; este templo, si se compara con el antiguo, es tanto más excelente\n\ny preclaro cuanto el culto evangélico de Cristo aventaja al culto de la ley o cuanto la\nrealidad sobrepasa a sus figuras.\n\nCon referencia a ello, creo que puede también afirmarse lo siguiente: El templo antiguo\nera uno solo, estaba edificado en un solo lugar, y sólo un pueblo podía ofrecer en él sus\nsacrificios. En cambio, cuando el Unigénito se hizo semejante a nosotros, como el Señor\nes Dios: él nos ilumina, según dice la Escritura, la tierra se llenó de templos santos y de\nadoradores innumerables, que veneran sin cesar al Señor del universo con sus sacrificios\nespirituales y sus oraciones. Esto es, según mi opinión, lo que anunció Malaquías en\nnombre de Dios, cuando dijo: Yo soy el Gran Rey -dice el Señor-, y mi nombre es\nrespetado en las naciones; en todo lugar ofrecerán incienso a mi nombre, una ofrenda\npura.\n\nEn verdad, la gloria del nuevo templo, es decir, la Iglesia, es mucho mayor que la del\nantiguo. Quienes se desviven y trabajan solícitamente en su edificación obtendrán, como\npremio del Salvador y don del cielo, al mismo Cristo, que es la paz de todos, por quien\npodemos acercarnos al Padre con un mismo Espíritu; así lo declara el mismo Señor,\ncuando dice: En este sitio daré la paz a cuantos trabajen en la edificación de mi templo.\nDe manera parecida, dice también Cristo en otro lugar: Mi paz os doy. Y Pablo, por su\nparte, explica en qué consiste esta paz que se da a los que aman, cuando dice: La paz de\nDios, que sobrepasa todo juicio, custodiará vuestros corazones y vuestros pensamientos\nen Cristo Jesús. También oraba en este mismo sentido el sabio profeta Isaías, cuando\ndecía: Señor, tú nos darás la paz, porque todas nuestras empresas nos las realizas tú.\nEnriquecidos con la paz de Cristo, fácilmente conservaremos la vida del alma y podremos\nencaminar nuestra voluntad a la consecución de una vida virtuosa.\n\nPor tanto, podemos decir que se promete la paz a todos los que se consagran a la\nedificación de este templo, ya sea que su trabajo consista en edificar la Iglesia en el oficio\nde catequistas de los sagrados misterios, es decir, colocados al frente de la casa de Dios\ncomo mistagogos, ya sea que se entreguen a la santificación de sus propias almas, para\nque resulten piedras vivas y espirituales en la construcción del templo santo, morada de\nDios por el Espíritu. Todos estos esfuerzos lograrán, sin duda, su finalidad, y quienes\nactúen de esta forma alcanzarán sin dificultad la salvación de su alma."
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Me buscaréis y me encontraréis si me buscáis de todo corazón. * Me invocaréis y yo\n\nos escucharé.\nV. Yo tengo designios de paz y no de aflicción, para daros un porvenir y una esperanza.\nR. Me invocaréis y yo os escucharé.",
+    "ref": "Jr 29, 13. 12. 11"
+   },
+   {
+    "tipo": "te_deum"
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Te pedimos, Señor, que tu gracia continuamente nos preceda y acompañe, de manera\nque estemos dispuestos a obrar siempre el bien. Por nuestro Señor Jesucristo."
+   }
+  ],
+  "laudes": [
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "",
+    "ant_ciclo": {
+     "A": "Salid a las encrucijadas, y a todos cuantos encontréis invitadlos a las bodas.",
+     "B": "Invoqué y vino a mí un espíritu de sabiduría; todos los bienes me vinieron con ella.",
+     "C": "Si tenemos constancia en el sufrir, reinaremos con Cristo; si le somos infieles, él permanece fiel."
+    }
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Te pedimos, Señor, que tu gracia continuamente nos preceda y acompañe, de manera\nque estemos dispuestos a obrar siempre el bien. Por nuestro Señor Jesucristo."
+   }
+  ],
+  "visperas2": [
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "",
+    "ant_ciclo": {
+     "A": "A la hora de la cena el Señor llama a todos los invitados: «Venid, que ya está todo preparado.» Aleluya.",
+     "B": "Vosotros, que lo habéis dejado todo y me habéis seguido, recibiréis el ciento por uno y poseeréis la vida eterna.",
+     "C": "Uno de los leprosos curados por Jesús volvió sobre sus pasos, glorificando a Dios a grandes voces."
+    }
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Te pedimos, Señor, que tu gracia continuamente nos preceda y acompañe, de manera\nque estemos dispuestos a obrar siempre el bien. Por nuestro Señor Jesucristo."
+   }
+  ]
+ },
+ "lun": {
+  "oficio": [
+   {
+    "tipo": "lectura1",
+    "texto": "Comienza el libro del profeta Jeremías 1, 1-49\n\nVOCACIÓN DEL PROFETA JEREMÍAS\n\nPalabras de Jeremías, hijo de Helcías, de los sacerdotes residentes en Anatot, territorio\nde Benjamín.\n\nRecibió Jeremías la palabra del Señor en tiempo de Josías, hijo de Amón, rey de Judá,\nel año trece de su reinado, y en tiempo de Joaquín, hijo de Josías, rey de Judá, hasta el\nfinal del año once de Sedecías, hijo de Josías, rey de Judá; hasta la deportación de\nJerusalén en el quinto mes.\n\nRecibí esta palabra del Señor:\n«Antes de formarte en el vientre, te escogí; antes de que salieras del seno materno, te\n\nconsagré: te nombré profeta de los gentiles.»\nYo repuse:\n«¡Ay, Señor mío! Mira que no sé hablar, que soy un muchacho.»\nEl Señor me contestó:\n«No digas: \"Soy un muchacho\", que adonde yo te envíe irás, y lo que yo te mande lo\n\ndirás. No les tengas miedo, que yo estoy contigo para librarte -oráculo del Señor-.»\nEl Señor extendió la mano y me tocó la boca; y me dijo:\n«Mira: yo pongo mis palabras en tu boca, hoy te establezco sobre pueblos y reyes, para\n\narrancar y arrasar, para destruir y demoler, para edificar y plantar.»\nRecibí entonces esta palabra del Señor:\n«¿Qué ves, Jeremías?»\nRespondió:\n«Veo una rama de almendro.»\nEl Señor me dijo:\n«Bien visto, porque yo velo para cumplir mi palabra.» Recibí luego otra palabra del\n\nSeñor:\n«¿Qué ves?»\nRespondí:\n«Veo una olla hirviendo que se vuelca de norte a sur.» Me dijo el Señor:\n«Desde el norte se derramará la desgracia sobre todos los habitantes del país. Pues yo\n\nhe de convocar a todos los reinos del norte -oráculo del Señor-, vendrán y pondrá cada\nuno su trono junto a las puertas de Jerusalén, en torno a sus murallas y frente a las\nciudades de Judá, contra las que yo entablaré juicio por todas sus maldades: porque me\nabandonaron, quemaron incienso a dioses extranjeros, y se postraron ante las obras de\nsus manos.\n\nPero tú cíñete los lomos, ponte en pie y diles lo que yo te mando. No les tengas miedo,\nque yo no te haré desmayar delante de ellos. Mira: Yo te convierto hoy en plaza fuerte, en\ncolumna de hierro, en muralla de bronce, frente a todo el país: frente a los reyes y\npríncipes de Judá, frente a los sacerdotes y la gente del pueblo; lucharán contra ti, pero\nno podrán contigo, porque yo estoy contigo para librarte -oráculo del Señor-.»",
+    "anio": "I"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Antes de formarte en el seno materno, te escogí; antes de que  nacieses, te consagré.*\nY puse mis palabras en tu boca.\nV. Yo, el Señor, te he llamado en la justicia y te he puesto como alianza del pueblo y luz de\nlas naciones.\nR. Y puse mis palabras en tu boca.",
+    "anio": "I",
+    "ref": "Jr 1, 5. 9; Is 42, 6"
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "Del libro de Ben Sirá 11, 12-28\n\nPONGAMOS SÓLO EN DIOS NUESTRA CONFIANZA\n\nSuele haber alguien que es débil, necesitado de apoyo, falto de bienes y sobrado de\npobreza, pero el Señor se fija en él para hacerle bien y lo levanta del polvo, le hace\nlevantar la cabeza y muchos se asombran al verlo.\n\nBien y mal, vida y muerte, pobreza y riqueza, todo viene del Señor; el don del Señor es\npara el justo, y su favor le asegura el éxito.\n\nHay quien se hace rico a fuerza de afanes y avaricia, y se cree con esto ya bien pagado,\nY dice para sí: «Ahora puedo descansar; ahora comeré de mis rentas.» Pero no sabe\ncuánto tiempo le queda para morir y dejar a otros todo lo suyo.\n\nHijo mío, cumple tu deber, ocúpate de él, envejece en tu tarea; no admires las acciones\ndel perverso, confía en el Señor y aguarda su luz; porque es cosa fácil para el Señor\nenriquecer en un instante al pobre.\n\nLa bendición del Señor es la recompensa del justo, y a su tiempo florece su esperanza.\nNo digas: «He despachado mis asuntos y, ahora, ¿qué puede ya hacerme falta?» No\n\ndigas: «Ya tengo bastante, ¿qué mal me puede suceder?» En el día dichoso se olvida la\ndesgracia, en el día desgraciado se olvida la dicha. Fácil es para Dios, a la hora de la\nmuerte, pagar al hombre su conducta.\n\nUn mal momento hace olvidar de los placeres.\nCuando llega el fin del hombre, se revela su historia. Antes del fin, no declares feliz a\n\nnadie: su desenlace mostrará si es dichoso; pues sólo a su término es conocido el hombre.",
+    "anio": "II"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Cuando el rico dice para sí: «Ahora puedo descansar; ahora comeré de mis rentas», *\nno sabe cuánto tiempo le queda para morir y dejar a otros todo lo suyo.\nV. Piensa el rico para sí: «Derribaré mis graneros para hacer otros más grandes, y\nalmacenaré allí todos mis bienes.»\nR. No sabe cuánto tiempo le queda para morir y dejar a otros todo lo suyo.",
+    "anio": "II",
+    "ref": "Sir 11, 19. 20; Lc 12, 17. 18"
+   },
+   {
+    "tipo": "lectura2",
+    "texto": "Del tratado de san Fulgencio de Ruspe, obispo, contra Fabiano\n(Cap. 28,16-19: CCL 91 A, 813-814)\n\nLA PARTICIPACIÓN DEL CUERPO Y SANGRE DE CRISTO NOS SANTIFICA\n\nCuando ofrecemos nuestro sacrificio, realizamos aquello mismo que nos mandó el\nSalvador; así nos lo atestigua el Apóstol, al decir: El Señor Jesús, en la noche en que iban\na entregarlo, tomó pan y, pronunciando la acción de gracias, lo partió y dijo: \"Esto es mi\ncuerpo, que se entrega por vosotros. Haced esto en memoria mía\". Lo mismo hizo con el\ncáliz, después de cenar, diciendo: \"Este cáliz es la nueva alianza sellada con mi sangre;\nhaced esto cada vez que lo bebáis, en memoria mía\". Por eso, cada vez que coméis de\neste pan y bebéis del cáliz, proclamáis la muerte del Señor, hasta que vuelva.\n\nNuestro sacrificio, por tanto, se ofrece para proclamar la muerte del Señor y para\nreavivar, con esta conmemoración, la memoria de aquel que por nosotros entregó su\npropia vida. Ha sido el mismo Señor quien ha dicho: Nadie tiene amor más grande que el\nque da la vida por sus amigos. Y, porque Cristo murió por nuestro amor, cuando hacemos\nconmemoración de su muerte en nuestro sacrificio, pedimos que venga el Espíritu Santo y\nnos comunique el amor; suplicamos fervorosamente que aquel mismo amor que impulsó a\nCristo a dejarse crucificar por nosotros sea infundido por el Espíritu Santo en nuestros\npropios corazones, con objeto de que consideremos al mundo como crucificado para\nnosotros, y nosotros sepamos vivir crucificados para el mundo; así, imitando la muerte de\nnuestro Señor, como Cristo murió al pecado de una vez para siempre, y su vivir es un vivir\npara Dios, también nosotros andemos en una vida nueva, y, llenos de caridad, muertos\npara el pecado vivamos para Dios.\n\nEl amor de Dios ha sido derramado en nuestros corazones con el Espíritu Santo que se\nnos ha dado, y la participación del cuerpo y sangre de Cristo, cuando comemos el pan y\nbebemos el cáliz, nos lo recuerda, insinuándonos, con ello, que también nosotros debemos\n\nmorir al mundo y tener nuestra vida escondida con la de Cristo en Dios, crucificando\nnuestra carne con sus concupiscencias y pecados.\n\nDebemos decir, pues, que todos los fieles que aman a Dios y a su prójimo, aunque no\nlleguen a beber el cáliz de una muerte corporal, deben beber, sin embargo, el cáliz del\namor del Señor, embriagados con el cual, mortificarán sus miembros en la tierra y,\nrevestidos de nuestro Señor Jesucristo, no se entregarán ya a los deseos y placeres de la\ncarne ni vivirán dedicados a los bienes visibles, sino a los invisibles. De este modo,\nbeberán el cáliz del Señor y alimentarán con él la caridad, sin la cual, aunque haya quien\nentregue su propio cuerpo a las llamas, de nada le aprovechará. En cambio, cuando\nposeemos el don de esta caridad, llegamos a convertirnos realmente en aquello mismo\nque sacramentalmente celebramos en nuestro sacrificio."
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Señor, Dios mío, de día te pido auxilio, de noche grito en tu presencia; * llegue hasta ti\nmi súplica.\nV. Ansío tu nombre y tu recuerdo.\nR. Llegue hasta ti mi súplica.",
+    "ref": "Sal 87, 2-3; I-s 26, 8"
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Te pedimos, Señor, que tu gracia continuamente nos preceda y acompañe, de manera\nque estemos dispuestos a obrar siempre el bien. Por nuestro Señor Jesucristo."
+   }
+  ]
+ },
+ "mar": {
+  "oficio": [
+   {
+    "tipo": "lectura1",
+    "texto": "Del libro del profeta Jeremías 2, 1-13. 20-25\n\nINFIDELIDAD DEL PUEBLO DE DIOS\n\nEn aquellos días, recibí esta palabra del Señor: «Ve y grita a los oídos de Jerusalén:\n\"Así dice el Señor: Recuerdo el cariño de tu juventud, tu amor de novia, cuando me\n\nseguías por el desierto, por tierra yerma. Israel era sagrada para el Señor, primicia de su\ncosecha: quien se atrevía a comer de ella lo pagaba, la desgracia caía sobre él —oráculo\ndel Señor—. Escucha la palabra del Señor, casa de Jacob, tribus todas de Israel. Así dice el\nSeñor: ¿Qué falta encontraron en mí vuestros padres, para alejarse de mí? Siguieron\nvaciedades y se quedaron vacíos, en vez de preguntar: «¿Dónde está el Señor que nos\nsacó de Egipto, que nos guió por el desierto, por estepas y barrancos por tierra sedienta y\noscura, tierra que nadie atraviesa: que el hombre no habita?» Yo os conduje a un país de\nhuertos, para que comieseis sus buenos frutos; pero entrasteis y profanasteis mi tierra,\nhicisteis abominable mi heredad. Los sacerdotes no preguntaban: «¿Dónde está el\nSeñor?», los doctores de la ley no me reconocían, los pastores se rebelaron contra mí, los\nprofetas profetizaban por Baal, siguiendo dioses que de nada sirven.\n\nPor eso vuelvo a pleitear con vosotros, y con vuestros nietos pleitearé —oráculo del\nSeñor—. Navegad hasta las costas de Chipre, y mirad, despachad gente a Cadar, y\n\nconsiderad a ver si ha sucedido cosa semejante: ¿Cambia de dioses un pueblo?, y eso que\nno son dioses. Pero mi pueblo cambió su Gloria por los que no sirven.\n\nEspantaos, cielos, de ello, horrorizaos y pasmaos —oráculo del Señor—. Porque dos\nmaldades ha cometido mi pueblo: Me han abandonado a mí, la fuente de aguas vivas,\npara excavarse cisternas agrietadas, incapaces de retener el agua.\n\nDesde antiguo has roto el yugo, has hecho saltar las correas, diciendo: «No quiero\nservir». En todo alto collado, bajo todo árbol frondoso, te echabas y te prostituías.\n\nYo te había plantado, viña elegida, de cepas legítimas, ¿cómo te has convertido en\nespino y en viña bastarda. Aunque te laves con sosa y con lejía abundante, queda aún\nante mí la mancha de tu pecado —oráculo del Señor—. ¿Cómo te atreves a decir: «No me\nhe profanado, no he ido detrás de ídolos? Observa tu camino por el valle, reconoce lo que\nhas hecho, camella liviana de extraviados caminos, asna salvaje criada en la estepa,\ncuando está en celo otea el viento, ¿quién domará sus deseos? Los que la buscan no\nnecesitan cansarse, en su tiempo de celo la encuentran. Ahórrales calzado a tus pies, sed\na tu garganta». Pero tú respondías: «No quiero; yo amo a los extranjeros e iré detrás de\nellos.»",
+    "anio": "I"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Yo te había plantado, viña elegida, de cepas legítimas; ¿cómo te has convertido en\nespino y en viña bastarda? * Por eso se os quitará el reino de Dios y se entregará a un\npueblo que le haga dar sus frutos.\nV. Esperaba de ellos justicia, y ahí tenéis: asesinatos; esperé honradez, y sólo hay\nlamentos.\nR. Por eso se os quitará el reino de Dios y se entregará a un pueblo que le haga dar sus\nfrutos.",
+    "anio": "I",
+    "ref": "Jr  2, 21; Mt  21, 43; Is 5, 7"
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "Del libro de Ben Sirá 14, 22-15,10\n\nFELICIDAD DEL HOMBRE SABIO\n\nDichoso el hombre que piensa en la sabiduría y pretende la prudencia, el que presta\natención a sus caminos y se fija en sus sendas; sale tras ella a espiarla y acecha junto a\nsu portal, mira por sus ventanas y escucha a su puerta, acampa junto a su casa y clava\nsus estacas junto a su pared, pone su tienda junto a ella y se acomoda como un buen\nvecino, pone nido en su ramaje y mora entre su fronda, se protege del bochorno a su\nsombra y habita en su morada.\n\nEl que teme al Señor obrará así; observando la ley, alcanzará la sabiduría. Ella le saldrá\nal encuentro como una madre y lo recibirá como la esposa de la juventud; lo alimentará\ncon pan de sensatez y le dará a beber agua de prudencia; apoyado en ella no vacilará y\nconfiado en ella no fracasará; en la asamblea le da la palabra, y lo llena de espíritu,\nsabiduría e inteligencia; alcanzará gozo y alegría, le dará un nombre perdurable.\n\nNo la alcanzan los hombres falsos ni la verán los arrogantes, se queda lejos de los\ncínicos y los embusteros no se acuerdan de ella; su alabanza desdice en boca del\nmalvado, porque no se la otorga Dios; la boca del sabio la pronuncia y el que la posee la\nenseña.",
+    "anio": "II"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. El que teme al Señor obrará el bien; observando la ley, alcanzará la sabiduría. * Porque\nes Dios quien la otorga.\nV. Nosotros predicamos a Cristo crucificado, que es fuerza de Dios y sabiduría de Dios.\n\nR. Porque es Dios quien la otorga.",
+    "anio": "II",
+    "ref": "Cf. Sir 15, 1.10; 1Co 1, 23.24"
+   },
+   {
+    "tipo": "lectura2",
+    "texto": "De las instrucciones de san Columbano, abad\n(Instrucción 12, Sobre la compunción, 2-3: Opera, Dublín 1957, pp. 112-114)\n\nLUZ PERENNE EN EL TEMPLO DEL PONTÍFICE ETERNO\n\n¡Cuán dichosos son los criados a quienes el Señor, al llegar, los encuentra en vela! Feliz\naquella vigilia en la cual se espera al mismo Dios y Creador del universo, que todo lo llena\ny todo lo supera.\n\n¡Ojalá se dignara el Señor despertarme del sueño de mi desidia, a mí, que, aun siendo\nvil, soy su siervo. Ojalá me inflamara en el deseo de su amor inconmensurable y me\nencendiera con el fuego de su divina caridad!; resplandeciente con ella, brillaría más que\nlos astros, y todo mi interior ardería continuamente con este divino fuego.\n\n¡Ojalá mis méritos fueran tan abundantes que mi lámpara ardiera sin cesar, durante la\nnoche, en el templo de mi Señor e iluminara a cuantos penetran en la casa de mi Dios!\nConcédeme, Señor, te lo suplico en nombre de Jesucristo, tu Hijo y mi Dios, un amor que\nnunca mengüe, para que con él brille siempre mi lámpara y no se apague nunca, y sus\nllamas sean para mí fuego ardiente y para los demás luz brillante.\n\nSeñor Jesucristo, dulcísimo Salvador nuestro, dígnate encender tú mismo nuestras\nlámparas, para que brillen sin cesar en tu templo y de ti, que eres la luz perenne, reciban\nellas la luz indeficiente con la cual se ilumine nuestra oscuridad, y se alejen de nosotros\nlas tinieblas del mundo.\n\nTe ruego, Jesús mío, que enciendas tan intensamente mi lámpara con tu resplandor\nque, a la luz de una claridad tan intensa, pueda contemplar el santo de los santos que\nestá en el interior de aquel gran templo, en el cual tú, Pontífice eterno de los bienes\neternos, has penetrado; que allí, Señor, te contemple continuamente y pueda así desearte,\namarte y quererte solamente a ti, para que mi lámpara, en tu presencia, esté siempre\nluciente y ardiente.\n\nTe pido, Salvador amantísimo, que te manifiestes a nosotros, que llamamos a tu puerta,\npara que, conociéndote te amemos sólo a ti y únicamente a ti; que seas tú nuestro único\ndeseo, que día y noche meditemos sólo en ti, y en ti únicamente pensemos. Alumbra en\nnosotros un amor inmenso hacia ti, cual corresponde a la caridad con la que Dios debe ser\namado y querido; que esta nuestra dilección hacia ti invada todo nuestro interior y nos\npenetre totalmente, y, hasta tal punto inunde todos nuestros sentimientos, que nada\npodamos ya amar fuera de ti, el único eterno. Así, por muchas que sean las aguas de la\ntierra y del firmamento, nunca llegarán a extinguir en nosotros la caridad, según aquello\nque dice la Escritura: Las aguas torrenciales no podrán apagar el amor.\n\nQue esto llegue a realizarse, al menos parcialmente, por don tuyo, Señor Jesucristo, a\nquien pertenece la gloria por los siglos de los siglos. Amén."
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Que el Señor escuche vuestras súplicas y se reconcilie con vosotros, * y que no os\nabandone en tiempo de tribulación.\nV. Que os dé a todos corazón para adorarlo y hacer su voluntad.\nR. Y que no os abandone en tiempo de tribulación.",
+    "ref": "2 M 1, 5. 3"
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Te pedimos, Señor, que tu gracia continuamente nos preceda y acompañe, de manera\nque estemos dispuestos a obrar siempre el bien. Por nuestro Señor Jesucristo."
+   }
+  ]
+ },
+ "mie": {
+  "oficio": [
+   {
+    "tipo": "lectura1",
+    "texto": "Del libro del profeta Jeremías 3, l-5.19-4, 4\n\nINVITACIÓN A LA CONVERSIÓN\n\nEn aquellos días, el Señor dijo estas palabras:\n«Cuando un hombre repudia a su mujer, y ella se separa de él y se casa con otro,\n\n¿podrá volver al primero? ¿No ha quedado profanada esa mujer? Tú has fornicado con\nmuchos amantes, ¿podrás volver a mí? -Oráculo del Señor-. Levanta los ojos a las colinas\ny mira: ¿Dónde no has hecho el amor? Salías a los caminos a ofrecerte, como un nómada\npor el desierto. Profanaste la tierra con tus fornicaciones y maldades. Las lluvias\ntempranas se rehusaban, no llegaban las tardías; entonces mostrabas frente de ramera, te\nnegabas a avergonzarte.\n\nPero ¿no me gritas ahora mismo: \"Padre mío, tú eres el amigo de mi juventud? ¿Se\nirritará para siempre, eternizará su rencor?\" Así decías obrando maldades, y te sentías\nfuerte para seguirlas continuando.\n\nYo había pensado: \"Te contaré entre mis hijos, te daré una tierra envidiable, en heredad\nla perla de las naciones\"; diciéndome: \"Me llamará 'padre mío', no se apartará de mí.\"\nPero igual que una mujer que traiciona a su marido, así me traicionó Israel.»\n\nSe escucha un clamor en las colinas, llanto afligido de los hijos de Israel, que han\nextraviado el camino, olvidados de su Dios.\n\n«Volved, hijos apóstatas, y os curaré de la apostasía. «Aquí estamos, hemos venido a ti,\nporque tú ,Señor, eres nuestro Dios. Cierto, son mentira los collados y el estrépito de los\nmontes; sólo en el Señor, nuestro Dios, está la salvación de Israel. La ignominia devoró los\nahorros de nuestros padres, desde nuestra juventud: ovejas y vacas, sus hijos e hijas. Nos\nacostamos sobre nuestra vergüenza, nos tapamos con nuestro sonrojo; porque pecamos\ncontra el Señor, nuestro Dios, nosotros y nuestros padres, desde la juventud hasta el día\nde hoy, y no escuchamos la voz del Señor, nuestro Dios.»\n\nEsto dice el Señor:\n«Si quieres volver, Israel, vuélvete a mí; si apartas de mis ojos las ignominias, no irás\n\nerrante. Si juras con verdad por el Señor, con justicia y derecho, las naciones se\nbendecirán por ti.»\n\nPorque así dice el Señor a los habitantes de Judá y Jerusalén:\n«Roturad los campos, y no sembréis entre espinos; circuncidaos para el Señor y quitad\n\nel prepucio de vuestros corazones, habitantes de Judá y Jerusalén; no sea que brote como\nfuego mi cólera, y arda inextinguible, por culpa de vuestras perversidades.»",
+    "anio": "I"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Si nuestros pecados hablan contra nosotros, tú, Señor, obra por el honor de tu nombre;\n* pues nuestras rebeldías han sido numerosas, hemos pecado contra ti.\n\nV. Si llevas cuenta de los delitos, Señor, ¿quién podrá resistir?\nR. Pues nuestras rebeldías han sido numerosas, hemos pecado contra ti.",
+    "anio": "I",
+    "ref": "Jr 14, 7; Sal 129, 3"
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "Del libro de Ben Sirá 15, 11-22\n\nLIBERTAD DEL HOMBRE\n\nNo digas: «Mi pecado viene de Dios», porque él no hace lo que odia; no digas: «Él me\nha extraviado», porque no necesita de hombres inicuos; el Señor odia toda abominación, y\ntambién es ésta odiosa para los que lo temen a él. El Señor creó al hombre al principio y\nlo entregó en poder de su albedrío; si quieres, guardarás sus mandatos, porque es\nprudencia cumplir su voluntad; ante ti están puestos fuego y agua: echa mano a lo que\nquieras; delante del hombre están muerte y vida: le darán lo que él escoja.\n\nEs inmensa la sabiduría del Señor, es grande su poder y lo ve todo; los ojos de Dios ven\nlas acciones, él conoce todas las obras del hombre; no mandó pecar al hombre, ni deja\nimpunes a los mentirosos.",
+    "anio": "II"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Nadie, cuando es tentado, diga: «Soy tentado por Dios.»  *  porque Dios no tienta a\n\nnadie.\nV. El Señor creó al hombre al principio y lo entregó en poder de su albedrío.\nR. Porque Dios no tienta a nadie.",
+    "anio": "II",
+    "ref": "St 1, 13; Sir 15,14"
+   },
+   {
+    "tipo": "lectura2",
+    "texto": "De las Cuestiones de san Máximo Confesor, abad, a Talasio\n(Cuestión 63: PG 90, 667-670)\n\nLA LUZ QUE ALUMBRA A TODO HOMBRE\n\nLa lámpara colocada sobre el candelero, de la que habla la Escritura, es nuestro Señor\nJesucristo, luz verdadera del Padre, que, viniendo a este mundo, alumbra a todo hombre;\nal tomar nuestra carne, el Señor se ha convertido en lámpara y por esto es llamado \"luz\",\nes decir, Sabiduría y Palabra del Padre y de su misma naturaleza. Como tal es proclamado\nen la Iglesia por la fe y por la piedad de los fieles. Glorificado y manifestado ante las\nnaciones por su vida santa y por la observancia de los mandamientos, alumbra a todos los\nque están en la casa (es decir, en este mundo), tal como lo afirma en cierto lugar esta\nmisma Palabra de Dios: No se enciende una lámpara para meterla debajo el celemín, sino\npara ponerla en el candelero y que alumbre a todos los de casa. Se llama a sí mismo\nclaramente lámpara, como quiera que, siendo Dios por naturaleza, quiso hacerse hombre\npor una dignación de su amor.\n\nSegún mi parecer, también el gran David se refiere a esto cuando, hablando del Señor,\ndice: Lámpara es tu palabra para mis pasos, luz en mi sendero. Con razón, pues, la\nEscritura llama lámpara a nuestro Dios y Salvador, ya que él nos libra de las tinieblas de la\nignorancia y del mal.\n\nÉl, en efecto, al disipar, a semejanza de una lámpara, la oscuridad de nuestra\nignorancia y las tinieblas de nuestro pecado, ha venido a ser como un camino de salvación\npara todos los hombres: con la fuerza que comunica y con el conocimiento que otorga, el\nSeñor conduce hacia el Padre a quienes con él quieren avanzar por el camino de la justicia\ny seguir la senda de los mandatos divinos. En cuanto al candelero, hay que decir que\nsignifica la santa Iglesia, la cual, con su predicación, hace que la palabra luminosa de Dios\n\nbrille e ilumine a los hombres del mundo entero, como si fueran los moradores de la casa,\ny sean llevados de este modo al conocimiento de Dios con los fulgores de la verdad.\n\nLa palabra de Dios no puede, en modo alguno, quedar oculta bajo el celemín; al\ncontrario, debe ser colocada en lo más alto de la Iglesia, como el mejor de sus adornos. Si\nla palabra quedara disimulada bajo la letra de la ley, como bajo un celemín, dejaría de\niluminar con su luz eterna a los hombres. Escondida bajo el celemín, la palabra ya no sería\nfuente de contemplación espiritual para los que desean librarse de la seducción de los\nsentidos, que, con su engaño, nos inclinan a captar solamente las cosas pasajeras y\nmateriales; puesta, en cambio, sobre el candelero de la Iglesia, es decir, interpretada por\nel culto en espíritu y verdad, la palabra de Dios ilumina a todos los hombres.\n\nLa letra, en efecto, si no se interpreta según su sentido espiritual, no tiene más valor\nque el sensible y está limitada a lo que significan materialmente sus palabras, sin que el\nalma llegue a comprender el sentido de lo que está escrito.\n\nNo coloquemos, pues, bajo el celemín, con nuestros pensamientos racionales, la\nlámpara encendida (es decir, la palabra que ilumina la inteligencia), a fin de que no se nos\npueda culpar de haber colocado bajo la materialidad de la letra la fuerza incomprensible\nde la sabiduría; coloquémosla, más bien, sobre el candelero (es decir, sobre la\ninterpretación que le da la Iglesia), en lo más elevado de la genuina contemplación; así\niluminará a todos los hombres con los fulgores de la revelación divina."
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Señor, escucha mi oración, que mi grito llegue hasta ti; * porque tú, Dios mío, no\ndesprecias las peticiones de los desamparados.\nV. Estén tus oídos atentos a la voz de mi súplica.\nR. Porque tú, Dios mío, no desprecias las peticiones de los desamparados.",
+    "ref": "Sal 101, 2. cf. 18; 129, 2"
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Te pedimos, Señor, que tu gracia continuamente nos preceda y acompañe, de manera\nque estemos dispuestos a obrar siempre el bien. Por nuestro Señor Jesucristo."
+   }
+  ]
+ },
+ "jue": {
+  "oficio": [
+   {
+    "tipo": "lectura1",
+    "texto": "Del libro del profeta Jeremías 4, 5-8.13-28\n\nEL DEVASTADOR VENDRÁ DEL NORTE\n\nEsto dice el Señor:\n«Anunciadlo en Judá, publicadlo en Jerusalén. Tocad la trompeta en el país, gritad a\n\nplena voz: \"Congregaos para marchar a la ciudad fortificada. Avisad con la bandera hacia\nSión: huid, no os paréis; que yo traigo del norte la desgracia, una gran ruina.\"\n\nSale el león de la maleza, está en marcha el asesino de naciones, ha dejado su cubil,\npara arrasar tu tierra e incendiar tus ciudades, hasta no dejar habitantes. Por eso vestíos\nde saco, llorad y gemid, porque no cede el incendio de la ira del Señor.\n\nMiradlo subir como una nube, sus carros como un huracán, sus caballos más veloces\nque águilas.»\n\n¡Ay de nosotros que nos destrozan!\nLava tu corazón de maldades, Jerusalén, para salvarte.\n¿Hasta cuándo anidarán en tu pecho planes desatinados?\nEscucha, un mensajero de Dan anuncia desgracias desde la montaña de Efraím.\n«Proclamadlo en Judá, anunciadlo en Jerusalén, llegan enemigos de tierra lejana;\n\nalzarán el grito de guerra contra las ciudades de Judá. Como guardas de campo te rodean,\nporque te rebelaste contra mí -oráculo del Señor-. Tu conducta y tus perversidades te lo\nhan traído: ésta es tu maldad que te llega a amargar el corazón.»\n\n¡Ay, mis entrañas, mis entrañas! Me destrozan las paredes del pecho, tengo el corazón\nturbado, no puedo callar. Porque escucho yo mismo el son de la trompeta, el alarido de\nguerra. Un golpe llama a otro golpe, el país está desolado; de repente, son desoladas las\ntiendas, súbitamente, los pabellones. ¿Hasta cuándo he de ver banderas y escuchar\ntrompetas a rebato?\n\n«Mi pueblo es insensato, no me reconoce, son hijos necios que no reflexionan; son\nsabios para hacer el mal, pero ignorantes para hacer el bien.»\n\nMiro a la tierra: es un caos; a los cielos: no tiene luz; miro a los montes: se agitan; a\nlos collados: danzan, están temblando; miro, y no hay hombres, los pájaros del cielo han\nvolado; miro: el vergel es un desierto, las ciudades están incendiadas por el Señor, por el\nincendio de su ira.\n\nAsí dice el Señor:\n«La tierra será una desolación, pero no la aniquilaré.\nPor eso se lamentará la tierra, se oscurecerá arriba el cielo. Lo dije y no me arrepiento,\n\nlo pensé y no me vuelvo atrás.»",
+    "anio": "I"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Toda la tierra está desolada, Señor, por el incendio de tu ira; pero tú, Señor, * ten\nmisericordia y no nos aniquiles.\nV. Restáuranos, Dios salvador nuestro, cesa en tu cólera contra nosotros.\nR. Ten misericordia y no nos aniquiles.",
+    "anio": "I",
+    "ref": "Cf. Jr 4, 24-26; Sal 84, 5"
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "Del libro de Ben Sirá 16, 24-27,12\n\nEL HOMBRE CUMBRE DE LA CREACIÓN\n\nEscuchadme y aprended sabiduría, prestad atención a mis palabras, voy a exponer con\nponderación mi pensamiento y con modestia mi doctrina.\n\nCuando al principio creó Dios sus obras y las hizo existir, les asignó sus funciones;\ndeterminó para siempre su actividad y sus dominios por todas las edades; no desfallecen\nni se cansan ni faltan a su obligación. Ninguna estorba a su compañera, nunca\ndesobedecen las órdenes de Dios. Después el Señor se fijó en la tierra la colmó de sus\nbienes; cubrió su faz con toda clase de vivientes, que han de volver a ella.\n\nEl Señor formó al hombre de tierra y le hizo volver de nuevo a ella; le concedió un plazo\nde días contados y le dio dominio sobre la tierra; lo revistió de un poder como el suyo y lo\nhizo a su propia imagen; impuso su temor a todo viviente, para que dominara a bestias y\naves.\n\nLes formó boca, lengua, ojos, oídos y mente para entender; los colmó de inteligencia y\nsabiduría y les enseñó el bien y el mal; les mostró sus maravillas, para que se fijaran en\nellas, para que alaben el santo nombre y cuenten sus grandes hazañas.\n\nLes concedió inteligencia y en herencia una ley que da vida; hizo con ellos alianza\neterna enseñándoles sus mandamientos. Sus ojos vieron la grandeza de su gloria, y sus\noídos oyeron la majestad de su voz. Les ordenó abstenerse de toda idolatría y les dio\npreceptos acerca del prójimo.",
+    "anio": "II"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. El primer hombre, hecho de tierra, era terreno; el segundo es del cielo. * Nosotros, que\nsomos imagen del hombre terreno, seremos también imagen del hombre celestial.\nV. El Señor formó al hombre de tierra y lo hizo a su propia imagen.\nR. Nosotros, que somos imagen del hombre terreno, seremos, también imagen del\nhombre celestial.",
+    "anio": "II",
+    "ref": "1 Co 15, 47. 49; cf. Sir 17, 1"
+   },
+   {
+    "tipo": "lectura2",
+    "texto": "De los tratados de san Agustín, obispo, sobre el evangelio de san Juan\n(Tratado 26, 4-6: CCL 36, 261-263)\n\nYO SALVARÉ A MI PUEBLO\n\nNadie puede venir a mí, si no lo atrae el Padre. No vayas a creer que eres atraído\ncontra tu voluntad; el alma es atraída también por el amor. Ni debemos temer el reproche\nque, en razón de estas palabras evangélicas de la Escritura, pudieran hacernos algunos\nhombres, los cuales, fijándose sólo en la materialidad de las palabras, están muy ajenos al\nverdadero sentido de las cosas divinas. En efecto, tal vez nos dirán: \"¿Cómo puedo creer\nlibremente si soy atraído?\", Y yo les respondo: \"Me parece poco decir que somos atraídos\nlibremente; hay que decir que somos atraídos incluso con placer.\"\n\n¿Qué significa ser atraídos con placer? Sea el Señor tu delicia, y él te dará lo que pide\ntu corazón. Existe un apetito en el alma al que este pan del cielo le sabe dulcísimo. Por\notra parte, si el poeta pudo decir: \"Cada cual va en pos de su apetito\", no por necesidad,\nsino por placer, no por obligación, sino por gusto, ¿no podremos decir nosotros, con mayor\nrazón, que el hombre se siente atraído por Cristo si sabemos que el deleite del hombre es\nla verdad, la justicia, la vida sin fin, y todo esto es Cristo?\n\n¿Acaso tendrán los sentidos su deleite y dejará de tenerlos el alma? Si el alma no\ntuviera sus deleites, ¿cómo podría decirse: Los humanos se acogen a la sombra de tus\nalas; se nutren de lo sabroso de tu casa, les das a beber del torrente de tus delicias,\nporque en ti está la fuente viva, y tu luz nos hace ver la luz?\n\nPreséntame un corazón amante, y comprenderá lo que digo. Preséntame un corazón\ninflamado en deseos, un corazón hambriento, un corazón que, sintiéndose solo y\ndesterrado en este mundo, esté sediento y suspire por las fuentes de la patria eterna,\npreséntame un tal corazón, y asentirá en lo que digo. Si, por el contrario, hablo a un\ncorazón frío, éste nada sabe, nada comprende de lo que estoy diciendo.\n\nMuestra una rama verde a una oveja, y verás cómo atraes a la oveja; enséñale nueces\na un niño, y verás cómo lo atraes también, y viene corriendo hacia el lugar a donde es\natraído; es atraído por el amor, es atraído sin que se violente su cuerpo, es atraído por\naquello que desea. Si, pues, estos objetos, que no son más que deleites y aficiones\nterrenas, atraen, por su simple contemplación, a los que tales cosas aman, porque es\ncierto que \"cada cual es atraído por su deseo\" ¿no va a atraernos Cristo revelado por el\nPadre? ¿Qué otra cosa desea nuestra alma con más vehemencia que la verdad? ¿De qué\notra cosa el hombre está más hambriento? Y ¿para qué desea tener sano el paladar de la\ninteligencia sino para descubrir y juzgar lo que es verdadero, para comer y beber la\nsabiduría, la justicia, la verdad y la eternidad?\n\n\"Dichosos, por tanto -dice-, los que tienen hambre y sed de la justicia -entiende, aquí\nen la tierra-, porque -allí, en el cielo- ellos quedarán saciados. Les doy ya lo que aman, les\ndoy ya lo que desean; después verán aquello en lo que creyeron aun sin haberlo visto;\ncomerán y se saciarán de aquellos bienes de los que estuvieron hambrientos y sedientos.\n¿Dónde? En la resurrección de los muertos, porque yo los resucitaré en el último día.\""
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Pedid y se os dará, * pues todo el que pide recibe y el que busca halla y al que llama se\nle abrirá.\nV. Cerca está el Señor de los que lo invocan sinceramente.\nR. Pues todo el que pide recibe y el que busca halla y al que llama se le abrirá.",
+    "ref": "Mi 7, 7. 8; Sal 144, 18"
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Te pedimos, Señor, que tu gracia continuamente nos preceda y acompañe, de manera\nque estemos dispuestos a obrar siempre el bien. Por nuestro Señor Jesucristo."
+   }
+  ]
+ },
+ "vie": {
+  "oficio": [
+   {
+    "tipo": "lectura1",
+    "texto": "Del libro del profeta Jeremías 7, 1-20\n\nLA CONFIANZA EN EL TEMPLO ES VANA, SI NO HAY FIDELIDAD A DIOS Y JUSTICIA CON\nEL PRÓJIMO\n\nPalabra del Señor que recibió Jeremías:\n«Ponte a la puerta del templo, y grita allí esta palabra: \"¡Escucha, Judá, la palabra del\n\nSeñor, los que entráis por estas puertas para adorar al Señor! Así dice el Señor de los\nejércitos, Dios de Israel: Enmendad vuestra conducta y vuestras acciones, y habitaré con\nvosotros en este lugar. No os creáis seguros con palabras engañosas repitiendo: Es el\ntemplo del Señor, el templo del Señor, el templo del Señor. Si enmendáis vuestra conducta\ny vuestras acciones, si juzgáis rectamente entre un hombre y su prójimo, si no explotáis al\nforastero, al huérfano y a la viuda, si no derramáis sangre inocente en este lugar, si no\nseguís a dioses extranjeros, para vuestro mal, entonces habitaré con vosotros en este\nlugar, en la tierra que di a vuestros padres, desde hace tanto tiempo y para siempre.\nMirad: Vosotros os fiáis de palabras engañosas que no sirven de nada. Vosotros robáis,\nmatáis, adulteráis, juráis en falso, quemáis incienso a Baal, seguís a dioses extranjeros y\ndesconocidos, ¡y después entráis a presentaros ante mí en este templo, que lleva mi\nnombre, y os decís: 'Estamos salvos', para seguir cometiendo esas abominaciones! ¿Creéis\nacaso que es una cueva de bandidos este templo que lleva mi nombre? Atención, que yo\nlo he visto, -oráculo del Señor-.\n\nId a mi templo de Silo, donde hice habitar mi nombre en otro tiempo, y mirad lo que\nhice con él, por la maldad de Israel mi pueblo. Pues ahora, ya que habéis cometido tales\nacciones -dice el Señor-, que os hablé sin cesar y no me escuchasteis, que os llamé y no\nme respondisteis; por eso, con el templo que lleva mi nombre, en el que confiáis, con el\n\nlugar que di a vuestros padres y a vosotros, haré lo mismo que hice con Silo: os arrojaré\nde mi presencia, como arrojé a vuestros hermanos, la estirpe de Efraín.\"\n\nY tú no intercedas por este pueblo, no alces por ellos súplicas ni clamores, porque no te\nescucharé. ¿No ves lo que están haciendo en las ciudades de Judá, en las calles de\nJerusalén? Los hijos recogen leña, los padres encienden fuego, las mujeres preparan la\nmasa para hacer tortas en honor de la Reina del cielo; y hacen libaciones a dioses\nextranjeros, para irritarme. ¿Es a mí a quien hieren, o más bien a sí mismos, para su\nconfusión? Por eso así dice el Señor: Mirad, mi ira y mi cólera se derraman sobre este\nlugar, sobre el hombre y el ganado, sobre el árbol del campo, sobre el fruto del suelo,\nardiendo sin cesar.»",
+    "anio": "I"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. ¿Creéis acaso que es una cueva de bandidos este templo que lleva mi nombre? * Mí\ncasa es casa de oración y así la llamarán todos los pueblos.\nV. No hagáis de la casa de mi Padre un mercado.\nR. Mi casa es casa de oración y así la llamarán todos los pueblos.",
+    "anio": "I",
+    "ref": "Jr 7, 11; Is 56, 7; Jn 2, 16"
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "Del libro de Ben Sirá 17, 13-31\n\nEXHORTACIÓN A LA CONVERSIÓN\n\nLos caminos del hombre están siempre en la presencia de Dios, no se ocultan a sus\nojos. Sus caminos desde la niñez se inclinan al mal, no son capaces de transformar en\ncorazones de carne los de piedra. Cuando dividió sobre la tierra las naciones, puso un jefe\nsobre cada nación, pero Israel es la porción del Señor. Por ser su primogénito lo educa, y\nporque le dio la luz de su amor no le perdona. Todas sus obras están ante él como el sol,\nsus ojos observan siempre sus caminos; no se le ocultan sus injusticias, todos sus pecados\nestán a su vista.\n\nEl Señor, que es bueno y conoce a su criatura, no los rechaza ni abandona, sino que los\nperdona. El Señor guarda, como sello suyo, la limosna del hombre, y su caridad, como la\nniña del ojo. Después se levantará para retribuirlas y hará recaer sobre ellos lo que\nmerecen. A los que se arrepienten los deja volver y reanima a los que pierden la\npaciencia. Vuelve al Señor, abandona el pecado, suplica en su presencia y disminuye tus\nfaltas. Retorna al Altísimo, aléjate de la injusticia y detesta de corazón la idolatría. En el\nabismo, ¿quién alaba al Señor como los vivos que le dan gracias? El muerto, como si no\nexistiera, deja de alabarlo, el que está vivo y sano alaba al Señor. ¡Qué grande es la\nmisericordia del Señor y su perdón para los que vuelven a él!\n\nEl hombre no es como Dios, pues ningún hijo de Adán es inmortal; ¿qué hay más\nbrillante que el sol? Pues también tiene eclipses. Carne y sangre maquinan el mal. Dios\npasa revista al ejército celeste, cuanto más a los hombres de polvo y ceniza.",
+    "anio": "II"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Bienaventurados desde ahora los muertos que mueren en el Señor. Sí -dice el Espíritu-,\nque descansen ya de sus fatigas, * pues sus obras los acompañan.\nV. ¡Qué grande es la misericordia del Señor y su perdón para los que vuelven a él!\nR. Pues sus obras los acompañan.",
+    "anio": "II",
+    "ref": "Ap 14, 13; Sir 17, 28"
+   },
+   {
+    "tipo": "lectura2",
+    "texto": "De los libros de San Agustín, obispo, sobre la Ciudad de Dios\n(Libro 10, 6: CCL. 47, 278-279)\n\nEN TODO LUGAR OFRECERÁN INCIENSO A MI NOMBRE Y UNA OFRENDA PURA\n\nVerdadero sacrificio es toda obra que se hace con el fin de unirnos a Dios en santa\nsociedad, es decir, toda obra relacionada con aquel supremo bien, mediante el cual\nllegamos a la verdadera felicidad. Por ello, incluso la misma misericordia que nos mueve a\nsocorrer al hermano, si no se hace por Dios no puede llamarse sacrificio. Porque, aun\nsiendo el hombre quien hace o quien ofrece el sacrificio, éste sin embargo, es una acción\ndivina, como nos lo indica la misma palabra con la cual llamaban los antiguos latinos a\nesta acción. Por ello, puede afirmarse que incluso el hombre es verdadero sacrificio\ncuando está consagrado a Dios por el bautismo y está dedicado al Señor, ya que entonces\nmuere al mundo y vive para Dios. Esto, en efecto, forma parte de aquella misericordia que\ncada cual debe tener para consigo mismo, según está escrito: Ten compasión de tu alma\nagradando a Dios.\n\nSi, pues, las obras de misericordia para con nosotros mismos o para con el prójimo,\ncuando están referidas a Dios, son verdadero sacrificio, y, por otra parte solo son obras de\nmisericordia aquellas que se hacen con el fin de librarnos de nuestra miseria y hacernos\nfelices (cosa que no se obtiene sino por medio de aquel bien, del cual se ha dicho: Para mí\nlo bueno es estar junto a Dios), resulta claro que toda la ciudad redimida, es decir, la\ncongregación o asamblea de los santos, debe ser ofrecida a Dios como un sacrificio\nuniversal por mediación de aquel gran sacerdote que se entregó a sí mismo por nosotros,\ntomando la condición de esclavo, para que nosotros llegáramos a ser cuerpo de tan\nsublime cabeza. Ofreció esta forma de esclavo y bajo ella se entregó a sí mismo, porque\nsólo según ella pudo ser mediador, sacerdote, sacrificio.\n\nPor esto, nos exhorta el Apóstol a que ofrezcamos nuestros cuerpos como hostia viva,\nsanta, agradable a Dios; éste es vuestro culto razonable, y a que no nos conformemos con\neste siglo, sino que nos reformemos en la novedad de nuestro espíritu. Y para probar cuál\nes la voluntad de Dios y cuál el bien y el beneplácito y la perfección, ya que todo este\nsacrificio somos nosotros, dice: Por la gracia de Dios que me ha sido dada os digo a todos\ny a cada uno de vosotros: No os estiméis en más de lo que conviene, sino estimaos\nmoderadamente, según la medida de la fe que Dios otorgó a cada uno. Pues así como\nnuestro cuerpo, en unidad, posee muchos miembros, y no desempeñan todos los\nmiembros la misma función, así nosotros, siendo muchos, somos un solo cuerpo en Cristo,\npero cada miembro está al servicio de los otros miembros. Los dones que poseemos son\ndiferentes, según la gracia que se nos ha dado.\n\nÉste es el sacrificio de los cristianos: la reunión de muchos, que formamos un solo\ncuerpo en Cristo. Este misterio es celebrado también por la Iglesia en el sacramento del\naltar, del todo familiar a los fieles, donde se demuestra que la Iglesia, en la misma\noblación que hace, se ofrece a sí misma."
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Nosotros no sabemos pedir lo que nos conviene, pero * el Espíritu mismo intercede por\nnosotros con gemidos inefables.\nV. En aquel día -dice el Señor- derramaré sobre la casa de David y sobre los habitantes de\nJerusalén un espíritu de gracia y de oración.\nR. El Espíritu mismo intercede por nosotros con gemidos inefables.",
+    "ref": "Rm 8, 26; Za 12, 10"
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Te pedimos, Señor, que tu gracia continuamente nos preceda y acompañe, de manera\nque estemos dispuestos a obrar siempre el bien. Por nuestro Señor Jesucristo."
+   }
+  ]
+ },
+ "sab": {
+  "oficio": [
+   {
+    "tipo": "lectura1",
+    "texto": "Del libro del profeta Jeremías 9, 2-12. 17-22\n\nDIOS REPRUEBA LAS MALDADES DEL PUEBLO. LAMENTACIÓN\n\nEsto dice el Señor:\nQuién me diera posada en el desierto para abandonar a mi pueblo y alejarme de él;\n\npues todos son adúlteros, una caterva de bandidos. Tensan las lenguas como arcos,\ndominan el país con la mentira y no con la verdad; avanzan de maldad en maldad, y a mí\nno me reconocen -oráculo del Señor-. Guárdese cada uno del prójimo no os fiéis del\nhermano, porque el hermano pone zancadillas y el prójimo anda calumniando; se estafan\nunos a otros y nadie dice la verdad; entrenan sus lenguas en la mentira, están\npervertidos, incapaces de convertirse: fraude sobre fraude, engaño sobre engaño, y\nrechazan mi conocimiento -oráculo del Señor-.»\n\nPor eso, así dice el Señor de los ejércitos:\n«Yo mismo los fundiré y probaré, si no, ¿qué hacer con la Hija de mi pueblo? Su lengua\n\nes una flecha afilada, dice mentiras su boca; saludan deseando paz al prójimo, y por\ndentro le traman asechanzas. Y de esto ¿no os pediré cuentas? -oráculo del Señor-; de un\npueblo semejante ¿no he de vengarme yo mismo? Sobre los montes alzaré llanto y\ngemido, en las dehesas una elegía: Están requemadas las dehesas, nadie transita, no se\noye mugir el rebaño; pájaros y bestias huyeron, marcharon. Convertiré a Jerusalén en\nescombros, en guarida de chacales; arrasaré las ciudades de Judá hasta dejar sin\nhabitantes.»\n\n¿Quién es el sabio que lo entienda? ¿A quién le habló el Señor?, que lo explique: ¿Por\nqué perece la tierra, se quema como desierto sin caminantes? Llamad, vengan plañideras,\nenviad por mujeres expertas; que vengan aprisa y entonen el canto fúnebre sobre\nnosotros para que se deshagan en lágrimas nuestros ojos, nuestros párpados destilen\nagua.\n\nSe escucha la elegía desde Sión «¡Ay! Estamos deshechos, qué terrible vergüenza.\nTuvimos que abandonar el país, nos echaron de nuestros hogares\n\nEscuchad, mujeres, la palabra del Señor, vuestros oídos reciban la palabra de su boca:\nensayad a vuestras hijas un canto fúnebre, cada una a su vecina, una lamentación: Subió\nla muerte por nuestras ventanas, entró en nuestros palacios, arrebatando en la calle a los\nmuchachos, a los jóvenes en las plazas.»\n\nEl Señor dice su oráculo:\n«Yacen cadáveres humanos como estiércol en el campo, como gavillas detrás del\n\nsegador, que nadie recoge.»",
+    "anio": "I"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Se escucha la elegía desde Sión Estamos deshechos, qué terrible vergüenza. *\n¡Acuérdate, Señor, de lo que nos ha sobrevenido, mira y ve nuestro oprobio!\nV. El amor del Señor no se ha acabado ni se ha agotado su ternura.\nR. ¡Acuérdate, Señor, de lo que nos ha sobrevenido, mira y ve nuestro oprobio!",
+    "anio": "I",
+    "ref": "Jr 9, 19; Lm 5, l; 3, 22"
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "Del libro de Ben Sirá 24 1-33\n\nLA SABIDURÍA EN LA CREACIÓN Y EN LA HISTORIA DE ISRAEL\n\nLa sabiduría hace su propio elogio, en medio de su pueblo se gloría, abre su boca en la\nasamblea del Altísimo y se gloría delante de sus huestes:\n\n«Yo salí de la boca del Altísimo y como niebla cubrí la tierra; habité en el cielo y puse\nmi trono sobre columna de nubes. Yo sola recorrí la redondez del cielo y me paseé por la\nhondura del abismo; regí las olas del mar y los continentes y todos los pueblos y naciones.\n\nPor todas estas partes busqué reposo y una heredad para instalarme. Entonces el\nCreador del universo me dio una orden, el Hacedor estableció el lugar de mi morada:\n\"Habita en Jacob, sea Israel tu heredad.\"\n\nYo fui creada por él desde el principio, desde antes de los siglos, y jamás dejaré de\nexistir. En la mansión sagrada, en su presencia, ofrecí el culto y, así, en Sión me establecí;\nen la ciudad predilecta me hizo descansar, en Jerusalén reside mi poder.\n\nEché raíces entre un pueblo glorioso, en la porción de Señor, en su heredad. Crecí como\ncedro del Líbano y como ciprés del monte Hermón, me he elevado como palmera de\nEngadí y como rosal de Jericó, como gallardo olivo en la llanura y como plátano junto al\nagua.\n\nExhalé fragancia como el cinamomo y la retama y di aroma como mirra exquisita, como\nresina perfumada, como el ámbar y el bálsamo, como nube de incienso en el santuario. Yo\nextendí mis ramas como el terebinto, un ramaje bello y frondoso. Como vid hermosa\nretoñé, haciendo brotar sarmientos floridos, y mis flores y frutos son bellos y abundantes.\n\nYo soy la madre del amor hermoso, del temor de Dios, del conocimiento y de la santa\nesperanza. Yo he sido dada a todos mis hijos desde la eternidad, a aquellos que han sido\npor él designados.\n\nVenid a mí los que me amáis, y saciaos de mis frutos; mi nombre es más dulce que la\nmiel, y mi herencia mejor que los panales. El que me come tendrá más hambre de mí, el\nque me bebe tendrá más sed de mí, el que me escucha no fracasará, el que me pone en\npráctica no llegará a pecar.»\n\nTodo esto no es otra cosa que el libro de la alianza del Altísimo, la ley que nos dio\nMoisés como herencia para la comunidad de Jacob.",
+    "anio": "II"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Yo soy el camino, la verdad y la vida. Nadie va al Padre sino por mí.\nV. Yo, la sabiduría, fui creada por Dios desde el principio, desde antes de los siglos, y\njamás dejaré de existir.\nR. Nadie va al Padre sino por mí.",
+    "anio": "II",
+    "ref": "Jn 14,6; Sir 24,14"
+   },
+   {
+    "tipo": "lectura2",
+    "texto": "De la Constitución pastoral Gaudium et spes, sobre la Iglesia en el mundo actual, del\nConcilio Vaticano segundo\n(Núms. 40. 45)\n\nYO SOY EL ALFA Y LA OMEGA, EL PRIMERO Y EL ÚLTIMO\n\nLa compenetración de la ciudad terrestre con la ciudad celeste sólo es perceptible por la\nfe: más aún, es el misterio permanente de la historia humana, que, hasta el día de la\nplena revelación de la gloria de los hijos de Dios, seguirá perturbada por el pecado.\n\nLa Iglesia, persiguiendo la finalidad salvífica que es propia de ella, no sólo comunica al\nhombre la participación en la vida divina, sino que también difunde, de alguna manera,\n\nsobre el mundo entero la luz que irradia esta vida divina, principalmente sanando y\nelevando la dignidad de la persona humana, afianzando la cohesión de la sociedad y\nprocurando a la actividad cotidiana del hombre un sentido más profundo, al impregnarla\nde una significación más elevada. Así la Iglesia, por cada uno de sus miembros y por toda\nsu comunidad, cree poder contribuir ampliamente a humanizar cada vez más la familia\nhumana y toda su historia.\n\nTanto si ayuda al mundo como si recibe ayuda de él, la Iglesia no tiene más que una\nsola finalidad: que venga el reino de Dios y que se establezca la salvación de todo el\ngénero humano. Por otra parte, todo el bien que el pueblo de Dios, durante su\nperegrinación terrena, puede procurar a la familia humana procede del hecho de que la\nIglesia es el sacramento universal de la salvación, manifestando y actualizando, al mismo\ntiempo, el misterio del amor de Dios hacia el hombre.\n\nPues el Verbo de Dios, por quien todo fue hecho, se encarnó, a fin de salvar, siendo él\nmismo hombre perfecto, a todos los hombres y para hacer que todas las cosas tuviesen a\nél por cabeza. El Señor es el término de la historia humana, el punto hacia el cual\nconvergen los deseos de la historia y de la civilización, el centro del género humano, el\ngozo de todos los corazones y la plena satisfacción de todos sus deseos. Él es aquel a\nquien el Padre resucitó de entre los muertos, ensalzó e hizo sentar a su derecha,\nconstituyéndolo juez de los vivos y de los muertos. Vivificados y congregados en su\nEspíritu, peregrinamos hacia la consumación de la historia humana, que corresponde\nplenamente a su designio de amor: Recapitular en Cristo todas las cosas del cielo y de la\ntierra.\n\nEl mismo Señor ha dicho: Mira, llego en seguida y traigo conmigo mi salario, para pagar\na cada uno su propio trabajo. Yo soy el alfa y la omega, el primero y el último, el principio\ny el fin."
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Dios envió su palabra, anunciando la paz que traería Jesucristo; * Jesús es el Señor de\ntodos y en ningún otro se encuentra la salud.\nV. Él ha sido constituido por Dios juez de vivos y muertos.\nR. Jesús es el Señor de todos y en ningún otro se encuentra la salud.",
+    "ref": "Hch 10, 36; 4, 12; 10, 42"
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Te pedimos, Señor, que tu gracia continuamente nos preceda y acompañe, de manera\nque estemos dispuestos a obrar siempre el bien. Por nuestro Señor Jesucristo."
+   }
+  ]
+ }
+}

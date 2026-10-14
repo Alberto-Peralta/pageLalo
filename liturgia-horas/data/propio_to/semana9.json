@@ -1,0 +1,392 @@
+{
+ "dom": {
+  "visperas1": [
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "",
+    "ant_ciclo": {
+     "A": "No todo el que me dice «Señor, Señor» entrará en el reino de los cielos, sino el que cumple la voluntad de mi Padre que está en el cielo, ése entrará en el reino de los cielos.",
+     "B": "El sábado se hizo para el hombre, y no el hombre para el sábado.",
+     "C": "Un centurión, al oír hablar de Jesús, le envió unos ancianos de los judíos para rogarle que fuera a curar a su criado."
+    }
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Señor, nos acogemos confiadamente a tu providencia, que nunca se"
+   }
+  ],
+  "oficio": [
+   {
+    "tipo": "lectura1",
+    "texto": "Del libro de Job 28, 1-28\n\nLA SABIDURÍA PROVIENE SÓLO DE DIOS\n\nJob tomó la palabra y dijo:\n«Tiene la plata un venero, el oro un lugar donde se afina, el hierro se extrae\n\nde la tierra y al fundirse la piedra sale el bronce.\nUn límite pone el hombre a las tinieblas, sondea, hasta los últimos rincones,\n\nlas grutas más lóbregas y oscuras, perfora galerías inaccesibles, olvidadas del\nviajero, y oscila suspendido, lejos de los hombres.\n\nLa tierra que da pan se trastorna con fuego subterráneo; sus piedras son\nyacimientos de zafiros, almendras  de oro contienen sus terrones. Su sendero\nes ignorado por el buitre, no lo divisa el ojo del halcón, no lo huellan las fieras\narrogantes, no lo pisa el león.\n\nEl hombre echa mano al pedernal, descuaja las montañas de raíz; y abre\ngalerías en la roca, atenta la mirada a todo lo precioso; explora los hontanares\nde los ríos y saca a luz riquezas escondidas.\n\nPero la sabiduría, ¿de dónde se saca?, ¿dónde está el yacimiento de la\nprudencia?\n\nEl hombre no conoce su precio, no se la encuentra en la tierra de los vivos.\nDice el abismo: \"No está en mí\", y el mar responde: \"Conmigo no se\nencuentra.\"\n\nNo se da a cambio de oro ni se le pesa la plata como precio, no se paga con\nel oro de Ofir, con ónices preciosos o zafiros; el oro y el vidrio no la igualan ni\nse paga con vasos de oro fino; no cuentan el cristal ni los corales y adquirirla\ncuesta más que las perlas; no la iguala el topacio de Etiopía ni se compara con\nel oro más puro.\n\n¿De dónde se saca la sabiduría?, ¿dónde está el yacimiento de la prudencia?\nSe oculta a los ojos de las fieras y se esconde a los pájaros del cielo. La\n\nmuerte y el abismo lo confiesan: \"Sólo de oídas su fama conocemos.\"\nSólo Dios conoce su camino y el lugar donde está su yacimiento, pues él\n\ncontempla los límites del orbe y ve cuanto existe bajo el cielo. Cuando al\nviento señaló su peso y definió la medida de las aguas, cuando impuso sus\nleyes a la lluvia y su ruta al relámpago y al trueno, entonces la vio y la calculó,\ny la escrutó hasta el fondo.\n\nY dijo al hombre: \"Temer al Señor es sabiduría, y apartarse del mal,\ninteligencia.\"»",
+    "anio": "anual"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Nosotros enseñamos una sabiduría divina, misteriosa, escondida, *\npredestinada por Dios antes de los siglos para nuestra gloria.\nV. Vosotros sois en Cristo Jesús, en este Cristo que Dios ha hecho para\nnosotros sabiduría.\nR. Predestinada por Dios antes de los siglos para nuestra gloria.\n\nCiclo bienal:",
+    "ref": "1 Co 2, 7; 1, 30",
+    "anio": "anual"
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "De la carta del apóstol Santiago 2, 1-13\n\nHAY QUE EVITAR LA ACEPCIÓN DE PERSONAS\n\nHermanos míos, no entre la acepción de personas en la fe que tenéis en\nnuestro Señor Jesucristo glorificado. Supongamos que entra en vuestra\nasamblea un hombre con un anillo de oro y un vestido espléndido; y entra\ntambién un pobre con un vestido sucio; y que dirigís vuestra mirada al que\nlleva el vestido espléndido y le decís: «Tú, siéntate aquí, en un buen lugar»; y\nen cambio al pobre le decís: «Tú, quédate ahí de pie», o «Siéntate a mis pies».\n¿No sería esto hacer distinciones entre vosotros y ser jueces con criterios\nmalos? Escuchad, hermanos míos queridos: ¿Acaso no ha escogido Dios a los\npobres según el mundo como ricos en la fe y herederos del Reino que prometió\na los que le aman? ¡En cambio vosotros habéis menospreciado al pobre! ¿No\nson acaso los ricos los que os oprimen y os arrastran a los tribunales? ¿No son\nellos los que blasfeman el hermoso Nombre que ha sido invocado sobre\nvosotros? Si cumplís plenamente la Ley regia según la Escritura: “Amarás a tu\nprójimo como a ti mismo”, obráis bien; pero si tenéis acepción de personas,\ncometéis pecado y quedáis convictos de transgresión por la Ley. Porque quien\nobserva toda la Ley, pero falta en un solo precepto, se hace reo de todos. Pues\nel que dijo: “No adulteres”, dijo también: “No mates”. Si no adulteras, pero\nmatas, eres transgresor de la Ley. Hablad y obrad tal como corresponde a los\nque han de ser juzgados por la Ley de la libertad. Porque tendrá un juicio sin\nmisericordia el que no tuvo misericordia; pero la misericordia se siente\nsuperior al juicio.",
+    "anio": "I"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Dios ha elegido a los pobres del mundo para hacerlos ricos en la fe y\nherederos del reino * que prometió a los que lo aman.\nV. Dichosos los pobres de espíritu, porque de ellos es el reino de los cielos.\nR. Que prometió a los que lo aman.",
+    "anio": "I",
+    "ref": "Cf. St 2, 5b; Mt 5, 3"
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "Comienza la carta del apóstol san Pablo a los Gálatas 1, 1-12\n\nCERCANA VISITA DEL APÓSTOL PARA CORREGIR A LOS CORINTIOS\n\nPablo, apóstol no de parte de los hombres ni por mediación de hombre\nalguno, sino por Jesucristo y por Dios Padre, que lo resucitó de entre los\nmuertos, y todos los hermanos que están conmigo, a las Iglesias de Galacia:\ngracia y paz a vosotros de parte de Dios, nuestro Padre, y de Jesucristo, el\nSeñor, que se entregó a sí mismo por nuestros pecados, para librarnos del\npervertido mundo presente, según la voluntad de nuestro Dios y Padre, a\nquien sea la gloria por los siglos de los siglos. Amén.\n\nMe maravillo de que tan pronto os estéis pasando a otro evangelio,\nabandonando a Dios, que os convocó por la gracia de Cristo. Y no es que exista\notro evangelio, sino que hay algunos que siembran la confusión entre vosotros\ny quieren volver de arriba abajo el Evangelio de Cristo. Pues bien, aunque\nnosotros mismos o un ángel del cielo os predicáramos un evangelio distinto del\nque os hemos anunciado, tened por anatema al que tal cosa hiciere. Os lo\ndijimos antes y os lo repito ahora: Si alguno os predica un evangelio distinto\ndel que habéis recibido, tened por anatema al que tal cosa hiciere. ¿Es que\ntrato ahora con esto de congraciarme con los hombres o con Dios? ¿Busco\nagradar a los hombres? Si todavía buscare agradar a los hombres, no sería\nsiervo de Cristo.\n\nOs hago saber, hermanos, que el Evangelio anunciado por mí no es cosa\nhumana; y no lo recibí de hombre alguno, sino por revelación de Jesucristo.",
+    "anio": "II"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Gracia y paz a vosotros de parte de Dios, nuestro Padre, y de Jesucristo, el\nSeñor, * que se entregó a sí mismo por nuestros pecados.\nV. Si todavía buscare agradar a los hombres, no sería siervo de Cristo.\nR. Que se entregó a sí mismo por nuestros pecados.",
+    "anio": "II",
+    "ref": "Ga 1, 3-4. 10"
+   },
+   {
+    "tipo": "lectura2",
+    "texto": "Del libro de las Confesiones de san Agustín, obispo\n\n(Libro 1,1,1—2, 2; 5, 5: CSEL 33,1—5)\n\nNUESTRO CORAZÓN NO HALLA SOSIEGO HASTA QUE DESCANSA EN TI\n\nGrande eres, Señor, y muy digno de alabanza; eres grande y poderoso, tu\nsabiduría no tiene medida. Y el hombre, parte de tu creación, desea alabarte;\nel hombre, que arrastra consigo su condición mortal, la convicción de su\npecado y la convicción de que tú resistes a los soberbios. Y, con todo, el\nhombre, parte de tu creación, desea alabarte. De ti proviene esta atracción a\ntu alabanza porque nos has hecho para ti, y nuestro corazón no halla sosiego\nhasta que descansa en ti.\n\nHaz, Señor, que llegue a saber y entender qué es primero, si invocarte o\nalabarte, qué es antes, conocerte o invocarte. Pero, ¿quién podrá invocarte sin\nconocerte? Pues el que te desconoce se expone a invocar una cosa por otra.\n¿Será más bien que hay que invocarte para conocerte? Pero, ¿cómo van a\ninvocar a aquel en quien no han creído? Y ¿cómo van a creer sin alguien que\nproclame?\n\nAlabarán al Señor los que lo buscan. Porque los que lo buscan lo encuentran\ny, al encontrarlo, lo alaban. Haz, Señor, que te busque invocándote, y que te\ninvoque creyendo en ti, ya que nos has sido predicado. Te invoca, Señor, mi fe,\nla que tú me has dado, la que tú me has inspirado por tu Hijo hecho hombre,\npor el ministerio de tu predicador.\n\nY ¿cómo invocaré a mi Dios, a mi Dios y Señor? Porque, al invocarlo, lo\nllamo para que venga a mí. Y ¿a qué lugar de mi persona puede venir mi Dios?\n¿A qué parte de mi ser puede venir el Dios que ha hecho el cielo y la tierra?\n¿Es que hay algo en mí, Señor, Dios mío, capaz de abarcarte? ¿Es que pueden\nabarcarte el cielo y la tierra que tú hiciste en los cuales me hiciste a mí? O ¿por\n\nventura el hecho de que todo lo que existe no existiría sin ti hace que todo lo\nque existe pueda abarcarte?\n\n¿Cómo, pues, yo, que efectivamente existo, pido que vengas a mí, si, por el\nhecho de existir, ya estás en mí? Porque yo no estoy ya en el abismo sin\nembargo, tú estás también allí. Pues, si me acuesto en el abismo, allí te\nencuentro. Por tanto, Dios mío, yo no existiría, no existiría en absoluto, si tú no\nestuvieras en mí. O ¿será más acertado decir que yo no existiría si no\nestuviera en ti, origen, guía y meta del universo? También esto Señor, es\nverdad. ¿A dónde invocarte que vengas si estoy en ti? Desde dónde puedes\nvenir a mí? ¿A dónde puedo ir fuera del cielo y de la tierra, para que desde\nellos venga a mí el Señor, que ha dicho: No lleno yo el cielo y la tierra?\n\n¿Quién me dará que pueda descansar en ti? ¿Quién me dará que vengas a\nmi corazón y lo embriagues con tu presencia, para que olvide mis males y te\nabrace a ti mi único bien? ¿Quién eres tú para mí? Sé condescendiente\nconmigo, y permite que te hable. ¿Qué soy yo para ti, que me mandas amarte\ny que, si no lo hago, te enojas conmigo y me amenazas con ingentes\ninfortunios? No es ya suficiente infortunio el hecho de no amarte?\n\n¡Ay de mí! Dime, Señor, Dios mío, por tu misericordia qué eres tú para mí.\nDi a mi alma: \"Yo soy tu victoria\". Díselo de manera que lo oiga. Mira, Señor:\nlos oídos de mi corazón están ante ti; ábrelos y di a mi alma: \"Yo soy tu\nvictoria.\" Correré tras estas palabras tuyas y me aferraré a ti. No me escondas\ntu rostro: muera yo, para que no muera, y pueda así contemplarlo."
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. La ley fue nuestro ayo para llevarnos a Cristo, a fin de ser justificados por la\nfe. * Pero, una vez llegada la era de la fe, no estamos más bajo la potestad del\nayo.\nV. Antes de venir la economía de la fe, estábamos encerrados bajo la custodia\nde la ley, en espera de la fe que había de revelarse.\nR. Pero, una vez llegada la era de la fe, no estamos más bajo la potestad del\nayo.\nSi se hace una celebración más extensa de la vigilia del domingo.",
+    "ref": "Ga 3, 24-25. 23"
+   },
+   {
+    "tipo": "te_deum"
+   }
+  ],
+  "laudes": [
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "",
+    "ant_ciclo": {
+     "A": "«El que escucha estas palabras mías y las pone en práctica, -dice el Señor- se parece a aquel hombre prudente que edificó su casa sobre roca.»",
+     "B": "Jesús dice: «El Hijo del hombre es señor también del sábado.»",
+     "C": "Señor, no soy yo quién para que entres bajo mi techo; dilo de palabra, y mi criado quedará sano."
+    }
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Señor, nos acogemos confiadamente a tu providencia, que nunca se"
+   }
+  ],
+  "visperas2": [
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "",
+    "ant_ciclo": {
+     "A": "Los ríos y los vientos descargaron contra la casa dd prudente, pero no se hundió, porque estaba cimentada sobre roca.",
+     "B": "Jesús le dijo al que tenía parálisis en un brazo: «Extiende el brazo.» Lo extendió y quedó restablecido.",
+     "C": "Jesús se admiró del centurión y dijo: «Os digo que ni en Israel he encontrado tanta fe.» Y, al volver a casa, los enviados encontraron al siervo sano."
+    }
+   }
+  ]
+ },
+ "lun": {
+  "oficio": [
+   {
+    "tipo": "lectura1",
+    "texto": "Del libro de Job 29, 1-11; 30, 1. 9-23\n\nLAMENTACIÓN DE JOB EN SU AFLICCIÓN\n\nVolvió Job a tomar la palabra, diciendo:\n«¡Quién me diera volver a los antiguos días, cuando Dios velaba sobre mí,\n\ncuando su lámpara brillaba sobre mi cabeza y su luz cruzaba las tinieblas.\nAquellos días de mi otoño, cuando Dios era un íntimo en mi tienda, el\nTodopoderoso estaba aún conmigo y mis hijos me rodeaban. Cuando mis pies\nen leche se bañaban y arroyos de aceite la roca me vertía.\n\nCuando salía a la puerta de la ciudad y mi asiento en la plaza colocaba, los\njóvenes, al verme, se apartaban, los ancianos en pie permanecían, los jefes\nsuspendían sus palabras y la mano ponían sobre su boca, enmudecía la voz de\nlos notables y su lengua se pegaba al paladar.\n\nAhora, en cambio, se burlan de mí muchachos más jóvenes que yo, a cuyos\npadres nunca juzgué dignos ni de mezclarse con los perros de mi grey. Ahora,\nen cambio, soy el tema de sus coplas, soy el blanco de su burlas, me\naborrecen, se alejan de mí, y aun se atreven a escupirme hasta en la cara.\nDios ha aflojado la cuerda de mi arco, y me humillan, rompiendo todo freno en\nmi presencia.\n\nA mi derecha se levanta una canalla que prepara el camino a mi exterminio;\ndeshacen mi sendero, trabajan en mi ruina y nadie los detiene; irrumpen al\nasalto por una ancha brecha, en medio del estruendo. Los terrores se vuelven\ncontra mí, mi dignidad se disipa como el aire y pasa como nube mi ventura.\n\nY ahora desfallece en mí mi alma: de día me amenaza la aflicción, la noche\nme taladra hasta los huesos pues no duermen las llagas que me roen. Él me\naferra con violencia por la ropa, me sujeta por el cuello de la túnica, me ha\ntirado en el fango y me confundo con el barro y la ceniza.\n\nGrito hacia ti y tú no me respondes, espero en ti y tú no me haces caso. Te\nhas vuelto mi verdugo y me atacas con brazo vigoroso. Me levantas en vilo\nsobre el viento y en medio del ciclón me zarandeas. Sí, ya sé que a la muerte\nme conduces, a la cita de todos los vivientes.»",
+    "anio": "anual"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. La noche me taladra hasta los huesos, pues no duermen las llagas que me\nroen. * Me ha tirado en el fango y me confundo con el barro y la ceniza.\nV. Déjame, Señor, que mis días son un soplo.\nR. Me ha tirado en el fango y me confundo con el barro y la ceniza.\n\nCiclo bienal:",
+    "ref": "Jb 30, 17. 19; 7, 16",
+    "anio": "anual"
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "De la carta del apóstol Santiago 2, 14-26\n\nLA FE SIN OBRAS ESTÁ MUERTA\n\nHermanos: ¿De qué sirve, hermanos míos, que alguien diga: «Tengo fe», si\nno tiene obras? ¿Acaso podrá salvarle la fe? Si un hermano o una hermana\nestán desnudos y carecen del sustento diario, y alguno de vosotros les dice:\n«Idos en paz, calentaos y hartaos», pero no les dais lo necesario para el\ncuerpo, ¿de qué sirve? Así también la fe, si no tiene obras, está realmente\nmuerta. Y al contrario, alguno podrá decir: «¿Tú tienes fe?; pues yo tengo\nobras. Pruébame tu fe sin obras y yo te probaré por las obras mi fe. ¿Tú crees\nque hay un solo Dios? Haces bien. También los demonios lo creen y tiemblan.\n¿Quieres saber tú, insensato, que la fe sin obras es estéril? Abraham nuestro\npadre ¿no alcanzó la justificación por las obras cuando “ofreció a su hijo Isaac\nsobre el altar?” ¿Ves cómo la fe cooperaba con sus obras y, por las obras, la fe\nalcanzó su perfección? Y alcanzó pleno cumplimiento la Escritura que dice:\n“Creyó Abraham en Dios y le fue reputado como justicia” y fue llamado amigo\nde Dios.» Ya veis cómo el hombre es justificado por las obras y no por la fe\nsolamente. Del mismo modo Rajab, la prostituta, ¿no quedó justificada por las\nobras dando hospedaje a los mensajeros y haciéndoles marchar por otro\ncamino? Porque así como el cuerpo sin espíritu está muerto, así también la fe\nsin obras está muerta.",
+    "anio": "I"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. No todo el que me diga: «¡Señor, Señor!» entrará en el reino de los cielos; *\nel que cumpla la voluntad de mi Padre celestial, ése entrara en el reino de los\ncielos.\nV. La fe, si no va acompañada de las obras, está muerta en su soledad.\nR. El que cumpla la voluntad de mi Padre celestial ése entrará en el reino de\nlos cielos.",
+    "anio": "I",
+    "ref": "Mt 7, 21; St 2, 17"
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "De la carta a los Gálatas 1, 13-2, 10\n\nVOCACIÓN Y APOSTOLADO DE PABLO\n\nHermanos: Habéis oído hablar de cómo me portaba yo en otro tiempo en el\njudaísmo: cómo perseguía encarnizadamente a la Iglesia de Dios y la\ndevastaba; cómo, en el celo por el judaísmo, iba más allá que muchos\ncompatriotas de mi edad y me mostraba celoso partidario de las tradiciones\npaternas.\n\nPero, cuando aquel que me eligió desde el seno de mi madre me llamó por\nsu gracia y tuvo a bien revelarme a su Hijo para que lo anunciara a los\ngentiles, en seguida, sin pedir consejo a hombre alguno y sin subir a Jerusalén\n\npara hablar con los que eran apóstoles antes que yo, partí hacia Arabia, de\ndonde luego volví a Damasco. Tres años más tarde, subí a Jerusalén a visitar a\nCefas, y estuve con él quince días. No vi a ningún otro de los apóstoles, fuera\nde Santiago, el hermano del Señor. Por el Dios que me está viendo que no\nmiento en lo que os escribo.\n\nDespués vine a las regiones de Siria y de Cilicia pero las iglesias de Judea,\nque están en Cristo, no me conocían personalmente. Sólo oían decir: «El que\nantaño nos perseguía ahora va anunciando la Buena Nueva de la fe, que en\notro tiempo quería destruir.» Y glorificaban a Dios, reconociendo su obra en mí.\n\nLuego, al cabo de catorce años, subí otra vez a Jerusalén con Bernabé,\nllevando también a Tito. Y subí por  motivo de una revelación. Les expuse el\nEvangelio que predico entre los gentiles y traté en particular con los más\ncalificados, no fuera a ser que hubiese corrido en vano.\n\nPues bien, ni siquiera a Tito, mi compañero, con todo y que era griego, lo\nobligaron a circuncidarse. Y esto a pesar de los intrusos, de los falsos\nhermanos, que solapadamente se habían infiltrado, para espiar arteramente la\nlibertad de que gozamos en Cristo Jesús, y que querían esclavizarnos. Pero\nnosotros ni por un momento cedimos terreno para someternos a ellos, a fin de\nsalvaguardar firmemente para vosotros la verdad del Evangelio.\n\nLas personas de más consideración -nada me interesa lo que hubieran sido\nantes, pues en Dios no hay acepción de personas- no me impusieron ninguna\nnueva obligación.\n\nAl contrario, reconocieron que yo había recibido la misión de predicar el\nEvangelio a los gentiles, como Pedro la de predicarlo a los judíos; porque aquel\nque dio poder a Pedro para ejercer el apostolado entre los judíos me lo dio a\nmí para ejercerlo entre los gentiles. De este modo reconocieron que Dios me\nhabía dado esa gracia. Y Santiago, Cefas y Juan, los considerados como\ncolumnas, nos dieron la mano a Bernabé y a mí en señal de comunión y\nconformidad: nosotros nos dirigiríamos a los gentiles, ellos a los judíos. Sólo\nnos pidieron que nos acordásemos de los pobres, cosa que he procurado yo\ncumplir con toda solicitud.",
+    "anio": "II"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Por la gracia de Dios, soy lo que soy; * y la gracia que él me concedió no\nquedó infecunda en mí, y permanece siempre en mí.\nV. Aquel que dio poder a Pedro para ejercer el apostolado entre los judíos me\nlo dio a mí para ejercerlo entre los gentiles.\nR. Y la gracia que él me concedió no quedó infecunda en mí, y permanece\nsiempre en mí.",
+    "anio": "II",
+    "ref": "1 Co 15, 10; Ga 2, 8"
+   },
+   {
+    "tipo": "lectura2",
+    "texto": "De las instrucciones de san Doroteo, abad\n\n(Instrucción 7, Sobre la acusación de sí mismo, 1-2: PG 88, 1695-1699)\n\nLA CAUSA DE TODA PERTURBACIÓN CONSISTE EN QUE NADIE SE ACUSA A SÍ\nMISMO\n\nTratemos de averiguar, hermanos, cuál es el motivo principal de un hecho\nque acontece con frecuencia, a saber, que a veces uno escucha una palabra\n\ndesagradable y se comporta como si no la hubiera oído, sin sentirse molesto, y\nen cambio, otras veces, así que la oye, se siente turbado y afligido. ¿Cuál, me\npregunto, es la causa de esta diversa reacción? ¿Hay una o varias\nexplicaciones? Yo distingo diversas causas y explicaciones y sobre todo una,\nque es origen de todas las otras, como ha dicho alguien: \"Muchas veces esto\nproviene del estado de ánimo en que se halla cada uno.\"\n\nEn efecto, quien está fortalecido por la oración o la meditación tolerará\nfácilmente, sin perder la calma, a un hermano que lo insulta. Otras veces\nsoportará con paciencia a su hermano, porque se trata de alguien a quien\nprofesa gran afecto. A veces también por desprecio, porque tiene en nada al\nque quiere perturbarlo y no se digna tomarlo en consideración, como si se\ntratara del más despreciable de los hombres, ni se digna responderle palabra,\nni mencionar a los demás sus maldiciones e injurias.\n\nDe ahí proviene, como he dicho, el que uno no se turbe ni se aflija, si\ndesprecia y tiene en nada lo que dicen. En cambio, la turbación o aflicción por\nlas palabras de un hermano proviene de una mala disposición momentánea o\ndel odio hacia el hermano. También pueden aducirse otras causas. Pero, si\nexaminamos atentamente la cuestión, veremos que la causa de toda\nperturbación consiste en que nadie se acusa a sí mismo.\n\nDe ahí deriva toda molestia y aflicción, de ahí deriva el que nunca hallemos\ndescanso; y ello no debe extrañarnos, ya que los santos nos enseñan que esta\nacusación de sí mismo es el único camino que nos puede llevar a la paz. Que\nesto es verdad, lo hemos comprobado en múltiples ocasiones; y nosotros, con\ntodo, esperamos con anhelo hallar el descanso, a pesar de nuestra desidia, o\npensamos andar por el camino recto, a pesar de nuestras repetidas\nimpaciencias y de nuestra resistencia en acusarnos a nosotros mismos.\n\nAsí son las cosas. Por más virtudes que posea un hombre, aunque sean\ninnumerables, si se aparta de este camino, nunca hallará el reposo, sino que\nestará siempre afligido o afligirá a los demás, perdiendo así el mérito de todas\nsus fatigas."
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Si decimos que no tenemos pecado, nos engañamos a nosotros mismos; *\npero si confesamos nuestros pecados, fiel y bondadoso es Dios para\nperdonarnos y purificarnos de toda iniquidad.\nV. Al que oculta sus crímenes no le irá bien en sus cosas.\nR. Pero si confesamos nuestros pecados, fiel y bondadoso es Dios para\nperdonarnos y purificarnos de toda iniquidad.",
+    "ref": "1 Jn 1, 8. 9; Pr 28, 13"
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Señor, nos acogemos confiadamente a tu providencia, que nunca se"
+   }
+  ]
+ },
+ "mar": {
+  "oficio": [
+   {
+    "tipo": "lectura1",
+    "texto": "Del libro de Job  31, 1-8. 13-23. 35-37\n\nCONDUCTA LIMPIA Y RECTA DE JOB\n\nPronunció Job estas palabras:\n«Yo hice un pacto con mis ojos de no fijarme en doncellas. Mas Dios ¿qué\n\nsuerte me reserva desde el cielo?, ¿qué herencia el Poderoso desde lo alto?\n¿No es acaso la desgracia para el hombre que es injusto, y el fracaso para el\nque obra iniquidad?\n\n¿No contempla él mis caminos? ¿No me lleva la cuenta de mis pasos? ¿He\ncaminado yo con embusteros, o han corrido mis pies tras la mentira? Péseme\nDios en balanza no alterada y entonces mi honradez comprobará.\n\nSi aparté mis pasos del camino, siguiendo los caprichos de mis ojos, o si a\nmis manos mancha alguna se adhirió, ¡que otro coma lo que yo sembrare y\narranque los retoños de mis campos!\n\nSi negué su derecho al esclavo o a la esclava en litigio surgido contra mí,\n¿qué podría yo hacer cuando Dios se levantase, o qué respondería, si me\nllegase a interrogar? El que me hizo a mí en el vientre ¿no lo hizo también a\nél?, ¿no nos hizo él a todos igualmente?\n\nSi al pobre negué lo que deseaba o dejé bañarse en llanto los ojos de la\nviuda, si comí yo solo mi pan, sin compartirlo con el huérfano -yo que desde\njoven los he cuidado como un padre, yo que los he guiado desde niño-, si vi al\npobre o al vagabundo sin ropa con qué cubrirse, y no me dieron las gracias sus\ncuerpos, calientes con el vellón de mis ovejas, si contra el inocente alcé la\nmano, por saber que el tribunal su apoyo me brindaba, ¡que mi espalda se\narranque de mi nuca y mi brazo del hombro se desgaje!\n\nPues el terror de mi Dios me invadiría y no sería capaz de resistir el\nesplendor de tanta majestad.\n\n¡Ojalá que él me escuchara! ¡Yo estampo aquí mi firma! Que me responda el\nTodopoderoso, que mi rival escriba su alegato: Yo lo llevaría sobre mis\nhombros, lo ceñiría sobre mi frente igual que una diadema, de cada uno de mis\npasos cuenta le daría, y avanzaría hacia él igual que un príncipe.»",
+    "anio": "anual"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. ¿No es acaso la desgracia para el hombre que es injusto, y el fracaso para el\nque obra iniquidad? * En todo lugar están los ojos del Señor observando a los\nmalos y a los buenos.\nV. ¿No contempla él mis caminos? ¿No me lleva la cuenta de mis pasos?\n\nR. En todo lugar están los ojos del Señor observando a los malos y a los\nbuenos.\n\nCiclo bienal:",
+    "ref": "Jb 31, 3; Pr 15, 3; Jb 31. 4",
+    "anio": "anual"
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "De la carta del apóstol Santiago 3, 1-12\n\nMODERACIÓN EN EL USO DE LA LENGUA\n\nHermanos, no pretendáis ser todos maestros; sabed que tendremos un\njuicio más severo, porque todos tenemos muchos tropiezos.\n\nQuien no peca en sus palabras es hombre perfecto, que puede poner freno a\ntoda su persona. Mirad: a los caballos, les ponemos freno en la boca para que\nnos obedezcan, y así gobernamos todo su cuerpo.\n\nVed también cómo las naves, con ser tan grandes e impulsadas por tan\nfuertes vientos, son gobernadas por un pequeño timón, a voluntad del piloto.\nAsí también, la lengua es un pequeño miembro y se gloría de grandes hazañas.\n\nVed cómo un poco de fuego incendia grandes bosques. También la lengua es\nun fuego, un mundo de iniquidad; colocada entre nuestros miembros, la\nlengua contamina todo el cuerpo y, encendida por el infierno, incendia a su vez\ntoda nuestra vida.\n\nSe pueden domar, y de hecho han sido domadas por el hombre, toda clase\nde fieras, de aves, de reptiles y de animales marinos. Pero ningún hombre\npuede domar su lengua: es un mal que trabaja incansable; está llena de\nveneno mortal. Con ella bendecimos al Señor y Padre, y con ella maldecimos a\nlos hombres, creados a imagen de Dios.\n\nDe la misma boca salen la bendición y la maldición. Hermanos, esto no debe\nser así. ¿Acaso la fuente mana por el mismo caño agua dulce y amarga?\nHermanos, ¿puede acaso la higuera dar aceitunas, o higos la vid? Tampoco un\nmanantial de agua salada puede dar agua dulce.",
+    "anio": "I"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Quien no peca en sus palabras es hombre perfecto, * que puede poner\nfreno a toda su persona.\nV. En el mucho hablar no faltará pecado; el que frena sus labios es sensato.\nR. Que puede poner freno a toda su persona.",
+    "anio": "I",
+    "ref": "St 3, 2b; Pr 10, 19"
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "De la carta a los Gálatas 2, 11-3, 14\n\nEL JUSTO VIVE POR LA FE\n\nHermanos: Cuando Cefas fue a Antioquía, yo me opuse a él en su misma\ncara, porque era digno de reprensión. En efecto, antes que viniesen algunos de\nparte de Santiago, comía con los gentiles convertidos; pero, en cuanto llegaron\naquéllos, se retraía y apartaba, por temor a aquéllos, judíos circuncisos. Y lo\nsiguieron en su simulación los demás judíos convertidos, tanto que hasta\nBernabé se dejó arrastrar por su simulación.\n\nPero, cuando vi que no caminaban rectamente, conforme a la verdad del\nEvangelio, dije a Cefas delante de todos: «Tú, siendo judío, has acomodado tu\nvida a la de los gentiles convertidos; ¿cómo quieres ahora obligar a éstos a\nque se atengan a las prácticas judías?»\n\nNosotros somos judíos de nacimiento, no pecadores venidos de la gentilidad.\nY, sabiendo que el hombre no se justifica por cumplir la ley, sino por creer en\nCristo Jesús, también nosotros hemos creído en Cristo Jesús, para ser\njustificados por la fe en Cristo y no por las obras de la ley. Por las obras de la\nley no se justificará nadie.\n\nMas, si buscando ser justificados en Cristo, nos salen con que aun así\nseguimos en el pecado, ¿será que Cristo está al servicio del pecado? ¡De\nninguna manera! Si vuelvo a edificar lo que una vez destruí, yo mismo me\ndeclaro transgresor. En virtud de la misma ley he muerto a la ley, a fin de vivir\npara Dios. Estoy crucificado con Cristo; vivo yo, pero no soy yo, es Cristo quien\nvive en mí. Y, mientras vivo en esta carne, vivo de la fe en el Hijo de Dios, que\nme amó hasta entregarse por mí. No tengo por inútil esta gracia de Dios: Si la\njustificación nos viniera por la ley, entonces deberíamos concluir que Cristo\nmurió inútilmente.\n\n¡Oh, insensatos gálatas! ¿Quién os fascinó, después que ante vuestros ojos\npresentamos a Jesucristo muerto en la cruz? Sólo quiero que me digáis una\ncosa: ¿Cómo habéis recibido el Espíritu, en virtud de las obras de la ley o por\nvuestra sumisión a la fe? ¿Tan insensatos sois, que, habiendo comenzado por\nespíritu, termináis ahora en carne? ¿Habrá sido en vano para vosotros el haber\nexperimentado tan grandes dones? Pues, ¡de veras que habría sido en vano! El\nque os da el Espíritu y obra prodigios entre vosotros ¿lo hace porque observáis\nla ley o por vuestra aceptación de la fe?\n\nAsí se dice: «Abraham creyó a Dios, y Dios estimó su fe como justificación.»\nEntended, pues, que los hijos de Abraham son sólo aquellos que viven según la\nfe. Previendo de antemano la Escritura que Dio justificaría a los gentiles por la\nfe, predijo a Abraham: «En ti serán bendecidas todas las naciones.» Por\nconsiguiente, los que viven según la fe son bendecidos, junto con el creyente\nAbraham.\n\nEn cambio, los partidarios de las obras de la ley se hallan bajo la maldición,\npues ya lo dice la Escritura: «Maldito todo el que no se mantiene fiel en el\ncumplimiento de todos los preceptos escritos en el libro de la ley.» Y que la ley\nno justifica a nadie ante Dios es evidente, porque: «El justo vivirá por la fe.»\nLa ley no procede de la fe, sino que, como dice la Escritura: «Quien cumpla sus\npreceptos por ellos vivirá.» Cristo nos redimió de la maldición de la ley,\nhaciéndose maldición por nosotros. Así lo dice la Escritura: «Maldito sea aquel\nque cuelga del madero.» De ese modo la bendición de Abraham alcanza a\ntodas las naciones por Cristo Jesús, para que recibamos por la fe el Espíritu\nprometido por Dios.",
+    "anio": "II"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. El hombre no se justifica por cumplir la ley, sino por creer en Cristo Jesús. *\nNosotros hemos creído en Cristo Jesús, para ser justificados por la fe en Cristo\ny no por las obras de la ley.\nV. Pues si la justificación nos viniera por la ley, entonces deberíamos concluir\nque Cristo murió inútilmente.\n\nR. Nosotros hemos creído en Cristo Jesús, para ser justificados por la fe en\nCristo y no por las obras de la ley.",
+    "anio": "II",
+    "ref": "Ga 2, 16. 21"
+   },
+   {
+    "tipo": "lectura2",
+    "texto": "De las instrucciones de san Doroteo, abad\n\n(Instrucción 7, Sobre la acusación de sí mismo, 2-3: PG 88, 1699)\n\nLA FALSA PAZ DE ESPÍRITU\n\nEl que se acusa a sí mismo acepta con alegría toda clase de molestias,\ndaños, ultrajes, ignominias y otra aflicción cualquiera que haya de soportar,\npues se considera merecedor de todo ello, y en modo alguno pierde la paz.\nNada hay más apacible que un hombre de ese temple.\n\nPero quizá alguien me objetará: \"Si un hermano me aflige, y yo,\nexaminándome a mí mismo, no encuentro que le haya dado ocasión alguna,\n¿por qué tengo que acusarme?\"\n\nEn realidad, el que se examina con diligencia y con temor de Dios nunca se\nhallará del todo inocente, y se dará cuenta de que ha dado alguna ocasión, ya\nsea de obra, de palabra o con el pensamiento. Y, si en nada de esto se halla\nculpable, seguro que en otro tiempo habrá sido motivo de aflicción para aquel\nhermano, por la misma o por diferente causa; o quizá habrá causado molestia\na algún otro hermano. Por esto, sufre ahora en justa compensación, o también\npor otros pecados que haya podido cometer en muchas otras ocasiones.\n\nOtro preguntará por qué deba acusarse si, estando sentado con toda paz y\ntranquilidad, viene un hermano y lo molesta con alguna palabra desagradable\no ignominiosa y, sintiéndose incapaz de aguantarla, cree que tiene razón en\nalterarse y enfadarse con su hermano; porque, si éste no hubiese venido a\nmolestarlo, él no hubiera pecado.\n\nEste modo de pensar es, en verdad, ridículo y carente de toda razón. En\nefecto, no es que al decirle aquella palabra haya puesto en él la pasión de la\nira, sino que más bien ha puesto al descubierto la pasión de que se hallaba\naquejado; con ello, le ha proporcionado ocasión de enmendarse, si quiere. Este\ntal es semejante a un trigo nítido y brillante que, al ser roto, pone al\ndescubierto la suciedad que contenía.\n\nAsí también el que está sentado en paz y tranquilidad, según cree, esconde,\nsin embargo, en su interior una pasión que él no ve. Viene el hermano, le dice\nalguna palabra molesta y, al momento, aquél echa fuera todo el pus y la\nsuciedad escondidos en su interior. Por lo cual, si quiere alcanzar misericordia,\nmire de enmendarse, purifíquese, procure perfeccionarse, y verá que, más que\natribuirle una injuria, lo que tenía que haber hecho era dar gracias a aquel\nhermano, ya que le ha sido motivo de tan gran provecho. Y, en lo sucesivo,\nestas pruebas no le causarán tanta aflicción, sino que, cuanto más se vaya\nperfeccionando, más leves le parecerán. Pues el alma, cuanto más avanza en\nla perfección, tanto más fuerte y valerosa se vuelve en orden a soportar las\npenalidades que le puedan sobrevenir."
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Sé muy bien que el hombre no puede tener razón contra Dios. * ¿Quién soy\nyo para replicarle y rebuscar argumentos contra él?\n\nV. Ni aun a sus ángeles los encuentra totalmente fieles, y ni el cielo es\nenteramente puro a sus ojos.\nR. ¿Quién soy yo para replicarle y rebuscar argumentos contra él?",
+    "ref": "Jb 9, 2. 14; 15, 15"
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Señor, nos acogemos confiadamente a tu providencia, que nunca se"
+   }
+  ]
+ },
+ "mie": {
+  "oficio": [
+   {
+    "tipo": "lectura1",
+    "texto": "Del libro de Job 32, 1-6; 33, 1-22\n\nHABLA ELIÚ ACERCA DEL MISTERIO DE DIOS\n\nLos tres hombres no respondieron más a Job, convencidos de que era\ninocente. Pero Elihú, hijo de Baraquel, de la familia de Ram, natural de Buz, se\nindignó contra Job, porque pretendía justificarse frente a Dios. También se\nindignó contra los tres compañeros, porque al no hallar respuesta, habían\ndejado a Dios como culpable. Elihú había esperado, mientras ellos hablaban\ncon Job, porque eran mayores que él; pero, viendo que ninguno de los tres\nrespondía, Elihú, hijo de Baraquel, de Buz, indignado, intervino, diciendo:\n\n«Escucha mis palabras, Job, presta oído a mi discurso, mira que ya abro la\nboca y mi lengua forma palabras con el paladar; hablo con un corazón sincero,\nmis labios expresan un saber acendrado.\n\nEl soplo de Dios me hizo, el aliento del Todopoderoso me dio vida.\nContéstame, si puedes, prepárate, ponte frente a mí. Mira: igual que tú soy\nante Dios, también yo fui plasmado de la arcilla. No te espantará mi terror ni\npesará mi mano sobre ti.\n\nTú has dicho esto en mi presencia, yo te he escuchado: \"Yo soy puro, no\ntengo delito, soy inocente, no hay culpa en mí, pero él encuentra pretextos\ncontra mí, me considera su enemigo, mete mis pies en el cepo y espía todos\nmis pasos.\"\n\nProtesto: en eso no tienes razón, porque Dios es más grande que el hombre.\n¿Cómo te atreves a acusarlo de que no responda a todas tus razones? Dios\nsabe hablar de un modo o de otro, y uno no lo advierte.\n\nEn sueños o visiones nocturnas, cuando el letargo caía sobre el hombre que\nestá durmiendo en su cama: entonces le abre el oído y lo estremece con\navisos, para apartarlo de sus malas obras y corregir su orgullo, para librar su\nvida de la fosa y de cruzar el Canal.\n\nOtras veces lo corrige con una enfermedad, con la agonía incesante de sus\nmiembros, cuando hasta la comida le repugna y le asquean sus manjares\nfavoritos, cuando su carne se consume y desvanece y sus huesos a la vista se\ndescubren, cuando su alma a la fosa se aproxima y su vida a la morada de los\nmuertos.»",
+    "anio": "anual"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. ¡Qué abismo de riqueza es la sabiduría y ciencia de Dios! * ¡Qué\ninsondables son sus juicios y qué irrastreables sus caminos!\nV. ¿Quién ha conocido jamás la mente del Señor? ¿Quién ha sido su consejero?\nR. ¡Qué insondables son sus juicios y qué irrastreables sus caminos!\n\nCiclo bienal:",
+    "ref": "Rm 11, 33-34",
+    "anio": "anual"
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "De la carta del apóstol Santiago 3, 13-18\n\nLA VERDADERA Y LA FALSA SABIDURÍA\n\n¿Hay entre vosotros quien tenga sabiduría o experiencia? Que muestre por\nsu buena conducta las obras hechas con la dulzura de la sabiduría. Pero si\ntenéis en vuestro corazón amarga envidia y espíritu de contienda, no os jactéis\nni mintáis contra la verdad. Tal sabiduría no desciende de lo alto, sino que es\nterrena, natural, demoníaca. Pues donde existen envidias y espíritu de\ncontienda, allí hay desconcierto y toda clase de maldad. En cambio la sabiduría\nque viene de lo alto es, en primer lugar, pura, además pacífica, complaciente,\ndócil, llena de compasión y buenos frutos, imparcial, sin hipocresía. Frutos de\njusticia se siembran en la paz para los que procuran la paz.",
+    "anio": "I"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. La sabiduría que viene de arriba ante todo es pura y, además, es amante de\nla paz, comprensiva, dócil, llena de misericordia. * Los que procuran la paz\nestán sembrando la paz; y su fruto es la justicia.\nV. Dichosos los que obran la paz, porque ellos serán llamados hijos de Dios.\nR. Los que procuran la paz están sembrando la paz; y su fruto es la justicia.",
+    "anio": "I",
+    "ref": "St 3, 17. 18; Mt 5, 9"
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "De la carta a los Gálatas 3, 15-4, 7\n\nEL OFICIO DE LA LEY\n\nHermanos, voy a proponeros un ejemplo tomado de la vida humana: nadie\nanula ni modifica un testamento que esté en regla, a pesar de ser una cosa\npuramente humana. A Abraham y a su descendencia se hicieron las promesas\nde parte de Dios. No dice la Escritura «a los descendientes», como si se tratase\nde muchos, sino, en singular, «a tu descendencia». Y ésta es Cristo.\n\nY, ahora, a lo que iba: El testamento, formalizado ya con anterioridad por\nDios, no puede ser anulado, hasta invalidar la promesa, por una ley que vino\ncuatrocientos treinta años más tarde. Si la herencia divina hubiese dependido\nde la ley, ya no dependería de la promesa. Ahora bien, Dios la concedió a\nAbraham como un don gratuito, mediante una promesa.\n\nEntonces, ¿cuál fue el fin de la ley mosaica? Fue puesta por Dios junto a las\npromesas por razón de las transgresiones, hasta que viniese la descendencia a\nquien se habían hecho las promesas; fue promulgada por ministerio de ángeles\ny por intervención de un mediador. Pero, cuando solamente hay una persona,\nno hay lugar para mediador alguno; y, en el caso de la promesa, sólo hubo\nuno: Dios. Así, pues, ¿va la ley contra las promesas de Dios? De ningún modo.\nSi se hubiese promulgado una ley capaz de darnos la vida, realmente la\njustificación habría provenido de la ley.\n\nPero la Escritura ha declarado que todos los hombres son culpables de\npecado, para que así la promesa se concediese a los creyentes, por su fe en\nJesucristo.\n\nAntes de venir la economía de la fe, estábamos encerrados bajo la custodia\nde la ley, en espera de la fe que había de revelarse. De este modo la ley fue\nnuestro pedagogo para llevarnos a Cristo, a fin de ser justificados por la fe.\nPero, una vez llegada la era de la fe, no estamos más bajo la potestad del ayo,\npues ya sois todos hijos de Dios por la fe en Cristo Jesús.\n\nEn efecto, todos los que habéis sido bautizados en Cristo os habéis revestido\nde Cristo. Ya no hay distinción entre judío y gentil, ni entre libre y esclavo, ni\nentre hombre y mujer: todos sois uno en Cristo Jesús. Y si sois de Cristo sois\npor lo mismo descendencia de Abraham, herederos según la promesa.\n\nPongo también otra comparación: El heredero, mientras es menor de edad,\ncon ser dueño de todo, no se distingue en nada del esclavo: está bajo tutores\ny administradores hasta el tiempo prefijado por su padre. De igual modo:\nNosotros, cuando éramos menores de edad, vivíamos esclavizados por los\n«elementos del mundo».\n\nPero, cuando se cumplió el tiempo, envió a Hijo, nacido de una mujer, nacido\nbajo la ley, para rescatar a los que estaban bajo la ley, para que recibiéramos\nel ser hijos por adopción. Y la prueba de que sois hijos es que Dios ha enviado\na vuestros corazones el Espíritu de su Hijo, que clama: «¡Padre!» Por\nconsiguiente, ya no eres esclavo, sino hijo; y, si eres hijo, también eres\nheredero por voluntad de Dios.",
+    "anio": "II"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Todos los que habéis sido bautizados en Cristo os habéis revestido de Cristo.\nYa no hay distinción entre judío y gentil: * todos sois uno en Cristo Jesús.\nV. Vestíos de la nueva condición humana, creada a imagen de Dios: justicia y\nsantidad verdaderas.\nR. Todos sois uno en Cristo Jesús.",
+    "anio": "II",
+    "ref": "Ga 3, 27. 28; cf. Ef 4, 24"
+   },
+   {
+    "tipo": "lectura2",
+    "texto": "De los tratados morales de san Gregorio Magno, papa, sobre el libro de Job\n\n(Libro 23, 23-24: PL 76, 265-266)\n\nLA VERDADERA ENSEÑANZA EVITA LA ARROGANCIA\n\nEscucha mis palabras, Job, presta oído a mi discurso. Ésta es la\ncaracterística propia de la manera de enseñar de los arrogantes; que no saben\ninculcar sus enseñanzas con humildad ni comunicar rectamente las cosas\nrectas que saben. En su manera de hablar se pone de manifiesto que ellos, al\nenseñar, se consideran como situados en el lugar más elevado, y miran a los\nque reciben su enseñanza como si estuvieran muy por debajo de ellos, y se\ndignan hablarles no en plan de consejo, sino como quien pretende imponerles\nsu dominio.\n\nA estos tales les dice, con razón, el Señor, por boca del profeta: Vosotros los\nhabéis dominado con crueldad y violencia. Con crueldad y con violencia\ndominan, en efecto, aquellos que, en vez de corregir a sus súbditos razonando\nreposadamente con ellos, se apresuran a doblegarlos rudamente con su\nautoridad.\n\nPor el contrario, la verdadera enseñanza evita con su reflexión este vicio de\nla arrogancia, con tanto más interés cuanto que su intención consiste\nprecisamente en herir con los dardos de sus palabras a aquel que es el\nmaestro de la arrogancia. Procura, en efecto, no ir a obtener, con una manera\narrogante de comportarse, el resultado contrario, es decir: predicar a aquel a\nquien quiere atacar, con santas enseñanzas, en el corazón de sus oyentes. Y,\nasí, se esfuerza por enseñar de palabra y de obra la humildad, madre y\nmaestra de todas las virtudes, de manera que la explica a los discípulos de la\nverdad con las acciones, más que con las palabras.\n\nDe ahí que Pablo, hablando a los tesalonicenses, como olvidándose de la\nautoridad que tenía por su condición de apóstol, les dice: Os tratamos con\ndelicadeza. Y, en el mismo sentido, el apóstol Pedro, cuando dice: Estad\nsiempre prontos para dar razón de vuestra esperanza a todo el que os la\npidiere, enseña que hay que guardar en ello el modo debido, añadiendo: Pero\ncon mansedumbre y respeto y en buena conciencia.\n\nY, cuando Pablo dice a su discípulo: De esto tienes que hablar, animando y\nreprendiendo con autoridad, no es su intención inculcarle un dominio basado\nen el poder, sino una autoridad basada en la conducta. En efecto, la manera de\nenseñar algo con autoridad es practicarlo antes de enseñarlo, ya que la\nenseñanza pierde toda garantía cuando la conciencia contradice las palabras.\nPor tanto; lo que le aconseja no es un modo de hablar arrogante y altanero,\nsino la confianza que infunde una buena conducta. Por esto, hallamos escrito\ntambién acerca del Señor: Les enseñaba con autoridad, y no como los escribas\ny fariseos. Él, en efecto, de un modo único y singular, hablaba con autoridad,\nen el sentido verdadero de la palabra, ya que nunca cometió mal alguno por\ndebilidad. Él tuvo por el poder de su divinidad aquello que nos comunicó a\nnosotros por la inocencia de su humanidad."
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Vosotros sois linaje escogido, nación santa, pueblo adquirido por Dios, *\npara proclamar las hazañas del que os llamó a salir de la tiniebla y a entrar en\nsu luz maravillosa.\nV. Vosotros que en otro tiempo no erais pueblo sois ahora pueblo de Dios.\nR. Para proclamar las hazañas del que os llamó a salir de la tiniebla y a entrar\nen su luz maravillosa.",
+    "ref": "1Pe 2, 9-10"
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Señor, nos acogemos confiadamente a tu providencia, que nunca se"
+   }
+  ]
+ },
+ "jue": {
+  "oficio": [
+   {
+    "tipo": "lectura1",
+    "texto": "Del libro de Job  38, 1-30\n\nDIOS CONFUNDE A JOB\n\nEl Señor respondió a Job desde el seno de la tempestad:\n«¿Quién es ése que denigra mis designios con palabras sin sentido? Si eres\n\nhombre cabal, ciñe tu cintura; voy a interrogarte y tú responderás.\n¿Dónde estabas cuando cimenté la tierra? Dímelo, si es que sabes tanto.\n\n¿Quién señaló sus dimensiones? -si lo sabes-, o ¿quién le aplicó la cinta de\nmedir? ¿Dónde encajan sus cimientos?, ¿quién su piedra angular fundamentó,\nante el aplauso jubiloso de los astros matutinos y entre las aclamaciones de los\nángeles de Dios?\n\n¿Quién encerró el mar con doble puerta, cuando salía impetuoso desde el\nseno, cuando le puse nubes por mantillas y niebla por pañales, cuando le\nimpuse un límite con puertas y cerrojos, y le dije: \"Hasta aquí llegarás, no más\nallá; aquí se romperá el orgullo de tus olas\"?\n\n¿Has mandado en tu vida a la mañana o asignaste a la aurora su lugar, para\nque aferre a la tierra por los bordes y sacuda de ella a los malvados, para que\nla transforme como arcilla bajo el sello y la tiña de colores como una vestidura,\npara que quite su luz a los impíos y quebrante el brazo sublevado?\n\n¿Has entrado hasta las fuentes de los mares o paseado por la hondura del\nocéano? ¿Te han enseñado las puertas de la muerte o has visto los portales de\nlas sombras? ¿Has examinado la anchura de la tierra? Cuéntamelo, si es que tú\ntodo lo sabes.\n\n¿Por dónde se va a la casa de la luz y dónde viven las tinieblas? ¿Podrías\nconducirlas a su tierra, enseñarles el camino de su casa? ¡Oh, tienes que\nsaberlo, pues para entonces tú ya habías nacido, y es tan grande la cuenta de\ntus días...\n\n¿Has entrado a los depósitos de nieve? ¿Has visitado los graneros del\ngranizo, que reservo para la hora del peligro, para el día de la guerra y del\ncombate?\n\n¿Por qué punto se divide el rayo? ¿Por dónde se difunde el viento del\noriente? ¿Quién ha abierto un canal al aguacero y una ruta al relámpago y al\ntrueno, para que llueva en las tierras despobladas, en la estepa que el hombre\nno frecuenta, para que beba el desierto desolado y brote hierba en el páramo\ndesnudo?\n\n¿Tiene padre la lluvia? ¿Quién engendra las gotas del rocío? ¿De qué seno\nsale el hielo? Y la escarcha del cielo ¿quién la engendra, cuando el agua se\nendurece como piedra y se congela la explanada del océano?»",
+    "anio": "anual"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. ¡Oh hombre!, ¿quién eres tú para pedir cuentas a Dios? * ¿Puede acaso la\nvasija de barro decir al alfarero: «Por qué me has hecho así»?\nV. Si eres hombre cabal, ciñe tu cintura; voy a interrogarte y tú responderás.\nR. ¿Puede acaso la vasija de barro decir al alfarero: «Por qué me has hecho\nasí»?\n\nCiclo bienal:",
+    "ref": "Rm 9, 20; Jb 38, 3",
+    "anio": "anual"
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "De la carta del apóstol Santiago 4, 1-13a\n\nLA RAÍZ DE LA DISCORDIA\n\nQueridos hermanos: ¿De dónde provienen las guerras y de dónde las\nbatallas entre vosotros? ¿De dónde sino de las pasiones que luchan en\nvuestros miembros? Codiciáis, y no tenéis; matáis y envidiáis, y no podéis\nalcanzar nada. Lucháis y hacéis la guerra. No tenéis, porque no pedís. Pedís, y\nno recibís, porque pedís mal, sólo para dar satisfacción a vuestras pasiones.\nAdúlteros, ¿no sabéis que la amistad del mundo es enemistad con Dios?\n\nQuien pretende ser amigo del mundo se hace enemigo de Dios. ¿O pensáis\nque la Escritura dice sin razón: «Con celos ama el espíritu que él hizo que\nhabitase en nosotros»? Pero él da una gracia mayor. Por eso dice: «Dios resiste\na los soberbios y da su gracia a los humildes.»\n\nVivid, pues, sometidos a Dios. Resistid al diablo, y huirá de vosotros.\nAcercaos a Dios, y él se acercará a vosotros. Pecadores, lavaos las manos;\npurificad vuestros corazones, gente que obráis con doblez. Reconoced vuestra\nmiseria. Llorad y lamentaos. Que vuestra risa se torne en llanto, y vuestra\nalegría en tristeza. Humillaos en la presencia del Señor, y él os ensalzará.\n\nNo habléis mal unos de otros, hermanos. El que habla mal de un hermano, o\njuzga a un hermano, habla mal de la ley y juzga a la ley. Y si juzgas a la ley no\neres cumplidor de la ley, sino su juez. Uno es el legislador y juez: el que puede\nsalvar o perder. Pero tú, ¿quién eres para juzgar al prójimo?",
+    "anio": "I"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. El Señor es clemente y misericordioso. * Vivamos sometidos a Dios e\nimploremos su ayuda, mientras aguardamos su salvación.\nV. Dios resiste a los soberbios y da su gracia a los humildes.\n\nR. Vivamos sometidos a Dios e imploremos su ayuda, mientras aguardamos su\nsalvación.",
+    "anio": "I",
+    "ref": "Sal 144, 8; cf. St 4, 7; Jdt 8, 17; St 4, 6"
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "De la carta a los Gálatas 4, 8-31\n\nHERENCIA DIVINA Y LIBERTAD DE LA NUEVA ALIANZA\n\nHermanos: En otro tiempo, cuando desconocíais a Dios, servisteis a los que\nno eran realmente dioses. Pero ahora, después de haber conocido a Dios, o\nmejor, después de haber sido reconocidos por Dios, ¿cómo os volvéis de nuevo\na los deleznables y pobres «elementos», de quienes otra vez queréis ser\nesclavos? Continuáis observando los días, los meses, las estaciones y los años;\ntemo que hagáis vano mi trabajo entre vosotros.\n\nHermanos, os lo suplico: sed como yo, ya que yo me hice como vosotros. En\nnada me habéis ofendido. Bien sabéis que una enfermedad me dio ocasión\npara anunciaros el Evangelio por primera vez. Y, no obstante la prueba que\nsuponía para vosotros el estado de mi cuerpo, no me mostrasteis desprecio ni\nrepulsa, antes bien me recibisteis como a un enviado de Dios, como a Cristo\nJesús en persona. ¿Dónde están ahora aquellos vuestros sentimientos de\nfelicidad para conmigo? Porque yo mismo puedo dar testimonio de que, en\naquella ocasión de haber sido posible, os habríais arrancado los ojos para\ndármelos.\n\nDe modo que ahora ¿me he convertido en enemigo vuestro por deciros la\nverdad? No persiguen ésos buen fin con el afecto que os muestran. Pretenden,\napartándoos de mí, conseguir vuestro cariño. Sin embargo, es mejor que os\ndejéis perseguir por un afecto verdadero, y esto en todo tiempo, no sólo\ncuando me encuentro yo entre vosotros.\n\n¡Hijos míos!, por quienes sufro de nuevo dolores de parto, hasta ver a Cristo\nformado en vosotros. ¡Cuánto quisiera encontrarme ahora a vuestro lado y\ndecíroslo en mil tonos distintos! ¡Porque no sé cómo componérmelas con\nvosotros!\n\nDecidme vosotros, los que queréis someteros a la ley: ¿No habéis oído la\nley? Pues la Escritura dice que Abraham tuvo dos hijos, uno de la esclava y\notro de la que era libre. El de la esclava nació según el curso natural de las\ncosas; en cambio, el de la libre en virtud de la promesa. Aquí hay una alegoría.\n\nEsas dos madres son las dos alianzas: Una, la que proviene del monte Sinaí\ny engendra esclavos, es Agar. Agar, en efecto, representa al monte Sinaí que\nestá en Arabia; y corresponde a la actual Jerusalén, que es esclava con sus\nhijos. Por el contrario, la Jerusalén de arriba es libre; ésa es nuestra madre.\nDice a propósito la Escritura: «Regocíjate, estéril, la que no das a luz;\nprorrumpe en gritos de júbilo y canta, tú, que no conoces los dolores de parto,\nporque son muchos los hijos de la mujer abandonada, más que los de aquella\nque posee marido.»\n\nY vosotros, hermanos, sois hijos de la promesa, figurados en Isaac. Y, así\ncomo entonces el nacido según la carne perseguía al nacido según el espíritu,\nasí sucede también ahora. Pero, ¿qué dice la Escritura? «Despide a la esclava y\na su hijo; porque el hijo de la esclava no tendrá parte en la herencia con el hijo\n\nde la libre.» Por lo tanto, hermanos, no somos hijos de la esclava, sino de la\nlibre. Para que seamos libres, nos ha liberado Cristo.",
+    "anio": "II"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Somos hijos de la promesa, figurados en Isaac. Por lo tanto, no somos hijos\nde la esclava, sino de la libre. * Para que seamos libres, nos ha liberado Cristo.\nV. El Señor es espíritu, y donde está el Espíritu del Señor, ahí está la libertad.\nR. Para que seamos libres, nos ha liberado Cristo.",
+    "anio": "II",
+    "ref": "Ga 4, 28. 31; 2Co 3, 17"
+   },
+   {
+    "tipo": "lectura2",
+    "texto": "De los tratados morales de san Gregorio Magno, papa, sobre el libro de Job\n\n(Libro 29, 2-4: PL 76, 478-480)\n\nLA IGLESIA SE ASOMA COMO EL ALBA\n\nCon razón se designa con el nombre de amanecer o alba a toda la Iglesia de\nlos elegidos, ya que el amanecer o alba es el paso de las tinieblas a la luz. La\nIglesia, en efecto, es conducida de la noche de la incredulidad a la luz de la fe,\ny así, a imitación del alba, después de las tinieblas se abre al esplendor diurno\nde la claridad celestial. Por esto, dice acertadamente el Cantar de los cantares:\n¿Quién es ésta que se asoma como el alba? Efectivamente la santa Iglesia, por\nsu deseo del don de la vida celestial, es llamada alba, porque, al tiempo que va\ndesechando las tinieblas del pecado, se va iluminando con la luz de la justicia.\n\nPero, además, si consideramos la naturaleza del amanecer o alba,\nhallaremos un pensamiento más sutil. El alba o amanecer anuncian que la\nnoche ya ha pasado, pero no muestran todavía la íntegra claridad del día, sino\nque, por ser la transición entre la noche y el día, tienen algo de tinieblas y de\nluz al mismo tiempo. Por esto, los que en esta vida vamos en seguimiento de\nla verdad somos como el alba o amanecer, porque en parte obramos ya según\nla luz, pero en parte conservamos también restos de tinieblas. Se dice a Dios,\npor boca del salmista: Ningún hombre vivo es inocente frente a ti. Y también\nestá escrito: Todos faltamos a menudo.\n\nPor esto, Pablo, cuando dice: La noche está avanzada, no añade: \"El día ha\nllegado\", sino: El día se echa encima. Al decir, por tanto, que, después de la\nnoche, el día se echa encima, no que ya ha llegado, enseña claramente que\nnos hallamos todavía en el alba, en el tiempo que media entre las tinieblas y el\nsol.\n\nLa santa Iglesia de los elegidos será pleno día cuando no tenga ya mezcla\nalguna de la sombra del pecado. Será pleno día cuando esté perfectamente\niluminada con la fuerza de la luz interior. Por esto, con razón, la Escritura nos\nenseña el carácter transitorio de esta alba, cuando dice: Has señalado su\npuesto a la aurora, pues aquel a quien se le ha de asignar su puesto tiene que\npasar de un sitio a otro. Y este puesto de la aurora no puede ser otro que la\nperfecta claridad de la visión eterna. Cuando haya sido conducida a esta\nperfecta claridad, ya no quedará en ella ningún rastro de tinieblas de la noche\ntranscurrida. Este anhelo de la aurora por llegar a su lugar propio viene\nexpresado por el salmo que dice: Mi alma tiene sed del Dios vivo: ¿cuándo\nentraré a ver el rostro de Dios? También Pablo manifiesta la prisa de la aurora\npor llegar al lugar que ella reconoce como suyo, cuando dice que desea morir\n\npara estar con Cristo. Y también: Para mi la vida es Cristo, y una ganancia el\nmorir."
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Siendo sinceros en la caridad, * crezcamos en todo hacia Cristo, que es la\ncabeza.\nV. La senda de los justos es como la luz del alba, cuyo esplendor va creciendo\nhasta el pleno día.\nR. Crezcamos en todo hacia Cristo, que es la cabeza.",
+    "ref": "Ef 4, 15; Pr 4, 18"
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Señor, nos acogemos confiadamente a tu providencia, que nunca se"
+   }
+  ]
+ },
+ "vie": {
+  "oficio": [
+   {
+    "tipo": "lectura1",
+    "texto": "Del libro de Job 40, 1-14; 42, 1-6\n\nJOB SE SOMETE A LA MAJESTAD DIVINA\n\nEl Señor se dirigió a Job y le dijo:\n«¿Quiere el censor discutir con el Todopoderoso? El que critica a Dios, que\n\nresponda.»\nJob respondió al Señor:\n«He hablado a la ligera, ¿qué replicaré?; me llevaré la mano a la boca. He\n\nhablado una vez, y no insistiré; dos veces, ya nada añadiré.»\nEl Señor replicó a Job desde la tormenta:\n«Si eres hombre cabal, ciñe tu cintura; voy a interrogarte y tú responderás:\n\n¿Te atreves a violar mi derecho y condenarme, para quedar tú así justificado?\nSi un brazo tienes tú como el de Dios, y si atruena tu voz como la suya,\n\nrevístete de gloria y majestad, y cúbrete de fasto y esplendor; derrama la\navenida de tu cólera y abate con tus ojos al soberbio, con sola tu mirada al\narrogante; aplasta a los malvados, entiérralos juntos en el polvo y encadénalos\na todos en la tumba. Entonces yo mismo exclamaré: \"¡Tu diestra te ha dado la\nvictoria!\"»\n\nJob respondió al Señor:\n\n«Reconozco que lo puedes todo, que ningún plan es imposible para ti. Era yo\nel que empañaba tus designios con palabras insensatas; hablé de maravillas\nque me exceden, de grandezas que no puedo comprender.\n\nYo te conocía sólo de oídas, mas ahora te han visto ya mis ojos; por eso\nretracto mis palabras, me arrepiento en el polvo y la ceniza.»",
+    "anio": "anual"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Yo te conocía sólo de oídas, Señor, mas ahora te han visto ya mis ojos; por\neso retracto mis palabras, * me arrepiento en el polvo y la ceniza.\nV. He hablado una vez, y no insistiré; dos veces, ya nada añadiré, sino que me\nllevaré la mano a la boca.\nR. Me arrepiento en el polvo y la ceniza.\n\nCiclo bienal:",
+    "ref": "Jb 42, 5-6; 39, 35. 34",
+    "anio": "anual"
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "De la carta del apóstol Santiago 4, 13b-5, 11\n\nAGUARDAD CON PACIENCIA HASTA LA MANIFESTACIÓN DEL SEÑOR\n\nAhora bien, vosotros los que decís: «Hoy o mañana iremos a tal ciudad,\npasaremos allí el año, negociaremos y ganaremos»; vosotros que no sabéis\nqué será de vuestra vida el día de mañana... ¡Sois vapor que aparece un\nmomento y después desaparece! En lugar de decir: «Si el Señor quiere,\nviviremos y haremos esto o aquello». Pero ahora os jactáis en vuestra\nfanfarronería. Toda jactancia de este tipo es mala. Aquel, pues, que sabe hacer\nel bien y no lo hace, comete pecado.\n\nAhora bien, vosotros, ricos, llorad y dad alaridos por las desgracias que\nestán para caer sobre vosotros. Vuestra riqueza está podrida y vuestros\nvestidos están apolillados; vuestro oro y vuestra plata están tomados de\nherrumbre y su herrumbre será testimonio contra vosotros y devorará vuestras\ncarnes como fuego. Habéis acumulado riquezas en estos días que son los\núltimos. Mirad: el salario que no habéis pagado a los obreros que segaron\nvuestros campos está gritando; y los gritos de los segadores han llegado a los\noídos del Señor de los ejércitos. Habéis vivido sobre la tierra regaladamente y\nos habéis entregado a los placeres; habéis hartado vuestros corazones en el\ndía de la matanza. Condenasteis y matasteis al justo; él no os resiste. Tened,\npues, paciencia, hermanos, hasta la Venida del Señor. Mirad: el labrador\nespera el fruto precioso de la tierra aguardándolo con paciencia hasta recibir\nlas lluvias tempranas y tardías. Tened también vosotros paciencia; fortaleced\nvuestros corazones porque la Venida del Señor está cerca. No os quejéis,\nhermanos, unos de otros para no ser juzgados; mirad que el Juez está ya a las\npuertas. Tomad, hermanos, como modelo de sufrimiento y de paciencia a los\nprofetas, que hablaron en nombre del Señor. Mirad cómo proclamamos felices\na los que sufrieron con paciencia. Habéis oído la paciencia de Job en el\nsufrimiento y sabéis el final que el Señor le dio; porque “el Señor es compasivo\ny misericordioso”.",
+    "anio": "I"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Tomad, hermanos, como dechados de sufrimiento y de constante espera a\nlos profetas que hablaron en el nombre del Señor. * Mirad que el Juez está a\nlas puertas.\nV. Estad preparados, porque, a la hora que menos penséis, vendrá el Hijo del\nhombre.\nR. Mirad que el Juez está a las puertas.",
+    "anio": "I",
+    "ref": "Si 5, 10. 9b; Mt 24, 44"
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "De la carta a los Gálatas 5, 1-25\n\nLIBERTAD EN LA VIDA DE LOS FIELES\n\nHermanos: Manteneos firmes y no os dejéis sujetar al yugo de la esclavitud.\nYo mismo, Pablo, os lo digo: Si os hacéis circuncidar, Cristo de nada os\naprovechará. Y vuelvo a declarar a todos cuantos se hacen circuncidar:\nQuedan obligados a cumplir toda la ley. Habéis roto con Cristo los que\npretendéis alcanzar la justificación por la ley. Habéis desertado de la gracia.\nNosotros, en cambio, esperamos ansiosamente por el Espíritu, en virtud de la\nfe, la salud que nos reportará la justificación. Porque para los de Cristo Jesús\nno vale nada ser o no ser circuncidado. Solamente la fe, actuada por la\ncaridad.\n\nIbais tan bien: ¿quién se interpuso para que no creyeseis a la verdad? Esa\nsugestión no procede de aquel que os convoca. Un poco de levadura hace\nfermentar toda la masa. Yo confío en el Señor que pensaréis de la misma\nmanera que yo. Y el que introduce enredos entre vosotros sufrirá su castigo,\nquienquiera que sea. En cuanto a mí, hermanos, si en realidad predico todavía\nla circuncisión, como pretenden, ¿por qué me persiguen aún? En este caso\nhabrían de dar ya por terminado el escándalo de la cruz... ¡Ojalá que esos\ntales que os perturban se mutilasen del todo de una vez!\n\nHermanos, vuestra vocación es la libertad: no una libertad para que se\naproveche el egoísmo; al contrario, sed esclavos unos de otros por amor. Pues\ntoda la ley se concentra en esta frase: amarás al prójimo como a ti mismo.\nPero, sí mutuamente os mordéis y os devoráis, mirad que acabaréis por\ndestruiros unos a otros.\n\nE insisto: Si vivís según el Espíritu, no daréis satisfacción a las apetencias de\nla carne. Pues la carne desea contra el espíritu, y el espíritu contra la carne,\ncomo que son entre sí antagónicos, de forma que no hacéis lo que quisierais.\n\nSi os dejáis guiar por el Espíritu, ya no estáis bajo la ley. Todo el mundo\nsabe cuáles son las obras de la carne, tales como: fornicación, impureza,\nlibertinaje, idolatría, hechicería, odios, discordias, celos, ira, contiendas\ndiscusiones, disensiones, envidias, embriagueces, orgías: y otras semejantes.\nRespecto de ellas os prevengo ahora, como ya os previne antes: que quienes\nlas practican no heredarán el reino de Dios.\n\nEn cambio, el fruto del Espíritu es: amor, alegría, paz, comprensión,\nservicialidad, bondad, lealtad, amabilidad, dominio de sí. Contra estas cosas no\nse levanta ninguna ley. Los que son de Cristo Jesús han crucificado la carne\ncon sus pasiones y tendencias. Si vivimos por el Espíritu marchemos tras el\nEspíritu.",
+    "anio": "II"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Si os dejáis guiar por el Espíritu, ya no estáis bajo la ley. * El fruto del\nEspíritu es: amor, alegría y paz.\nV. Si vivimos por el Espíritu marchemos tras el Espíritu.\nR. El fruto del Espíritu es: amor, alegría v paz.",
+    "anio": "II",
+    "ref": "Ga 5, 18 22. 25"
+   },
+   {
+    "tipo": "lectura2",
+    "texto": "De los tratados de Balduino de Cantorbery, obispo\n\n(Tratado 6: PL 204, 466-467)\n\nEL SEÑOR DISCIERNE LOS PENSAMIENTOS Y SENTIMIENTOS DEL CORAZÓN\n\nEl Señor conoce, sin duda alguna, todos los pensamientos y sentimientos de\nnuestro corazón; en cuanto a nosotros, sólo podemos discernirlos en la medida\nen que el Señor nos lo concede. En efecto, el espíritu que está dentro del\nhombre no conoce todo lo que hay en el hombre, y en cuanto a sus\npensamientos, voluntarios o no, no siempre juzga rectamente. Y, aunque los\ntiene ante los ojos de su mente, tiene la vista interior demasiado nublada para\npoder discernirlos con precisión.\n\nSucede, en efecto, muchas veces, que nuestro propio criterio u otra persona\no el tentador nos hacen ver como bueno lo que Dios no juzga como tal. Hay\nalgunas cosas que tienen una falsa apariencia de virtud, o también de vicio,\nque engañan a los ojos del corazón y vienen a ser como una impostura que\nembota la agudeza de la mente, hasta hacerle ver lo malo como bueno y\nviceversa; ello forma parte de nuestra miseria e ignorancia, muy lamentable y\nmuy temible.\n\nEstá escrito: Hay caminos que parecen derechos, pero van a parar a la\nmuerte. Para evitar este peligro, nos advierte san Juan: Examinad si los\nespíritus vienen de Dios. Pero, ¿quién será capaz de examinar si los espíritus\nvienen de Dios, si Dios no le da el discernimiento de espíritus, con el que\npueda examinar con agudeza y rectitud sus pensamientos, afectos e\nintenciones? Este discernimiento es la madre de todas las virtudes, y a todos\nes necesario, ya sea para la dirección espiritual de los demás, ya sea para\ncorregir y ordenar la propia vida.\n\nLa decisión en el obrar es recta cuando se rige por el beneplácito divino, la\nintención es buena cuando tiende a Dios sin doblez. De este modo, todo el\ncuerpo de nuestra vida y de cada una de nuestras acciones será luminoso, si\nnuestro ojo está sano. Y el ojo sano es ojo y está sano cuando ve con claridad\nlo que hay que hacer y cuando, con recta intención, hace con sencillez lo que\nno hay que hacer con doblez. La recta decisión es incompatible con el error; la\nbuena intención excluye la ficción. En esto consiste el verdadero\ndiscernimiento: en la unión de la recta decisión y de la buena intención.\n\nTodo, por consiguiente, debemos hacerlo guiados por la luz del\ndiscernimiento, pensando que obramos en Dios y ante su presencia."
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Se te ha dado a conocer, oh hombre, lo que es bueno, lo que Dios desea de\nti: * simplemente que practiques la justicia, que ames la misericordia, y que\ncamines humildemente con tu Dios.\n\nV. Confía en el Señor y haz el bien, y habitarás tu tierra si eres fiel a lo que él\ndesea de ti.\nR. Simplemente que practiques la justicia, que ames a la misericordia, y que\ncamines humildemente con tu Dios.",
+    "ref": "Mi 6, 8; Sal 36, 3"
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Señor, nos acogemos confiadamente a tu providencia, que nunca se"
+   }
+  ]
+ },
+ "sab": {
+  "oficio": [
+   {
+    "tipo": "lectura1",
+    "texto": "Del libro de Job 42, 7-17\n\nDIOS JUSTIFICA Y RESTABLECE A JOB\n\nCuando el Señor terminó de hablar con Job, se dirigió a Elifaz de Temán y le\ndijo:\n\n«Estoy irritado contra ti y tus dos compañeros, porque no habéis hablado\nrectamente de mí, como lo ha hecho mi siervo Job. Por lo tanto, tomad siete\nvacas y siete carneros, dirigíos a mi siervo Job, ofrecedlos en holocausto y él\nintercederá por vosotros. Yo haré caso a Job y no os trataré como merece\nvuestra temeridad de no haber hablado rectamente de mí, como lo ha hecho\nmi siervo Job.»\n\nEntonces Elifaz de Temán, Bildad de Suj y Solar de Naamat fueron a cumplir\nlo ordenado por el Señor. Y el Señor atendió a Job.\n\nEl Señor cambió la suerte de Job, cuando éste intercedió por sus amigos, y\nduplicó todas sus posesiones.\n\nVinieron a visitarlo sus hermanos y hermanas y los antiguos conocidos;\ncomieron con él en su casa, le dieron el pésame y lo consolaron de la desgracia\nque el Señor le había enviado; cada uno le regaló una suma de dinero y un\nanillo de oro.\n\nEl Señor bendijo la nueva situación de Job, más aún que la anterior: sus\nposesiones fueron catorce mil ovejas, seis mil camellos, mil yuntas de bueyes\ny mil borricas. Tuvo siete hijos y tres hijas: la primera se llamaba Paloma, la\nsegunda Canela, la tercera Azabache. No había en todo el país mujeres más\nbellas que las hijas de Job. Su padre les repartió heredades como a sus\nhermanos.\n\nDespués vivió Job hasta la edad de ciento cuarenta años, y vio a sus hijos, a\nsus nietos y a sus biznietos. Y Job murió anciano y satisfecho.",
+    "anio": "anual"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. El Señor dijo a Elifaz: «Tú y tus dos compañeros no habéis hablado\nrectamente de mí, como lo ha hecho mi siervo Job; * él intercederá por\nvosotros».\nV. Yo haré caso a Job y no os trataré como merece vuestra temeridad.\nR. Él intercederá por vosotros.\n\nCiclo bienal:",
+    "ref": "Cf. Jb 42, 7. 8",
+    "anio": "anual"
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "De la carta del apóstol Santiago 5, 12-20\n\nRECOMENDACIONES DIVERSAS\n\nSobre todo, hermanos, no juréis ni por el cielo ni por la tierra, ni con ningún\notro juramento. Vuestro «sí» sea «sí», y vuestro «no» sea «no», para no\nincurrir en condenación.\n\n¿Sufre alguno de vosotros? Que rece. ¿Está uno de buen humor? Que cante.\n¿Hay alguno enfermo? Llame a los responsables de la comunidad, que recen\npor él y lo unjan con aceite, invocando al Señor. La oración hecha con fe dará\nla salud al enfermo y el Señor hará que se levante; si, además, tiene pecados,\nse le perdonarán. Confesaos, pues, mutuamente vuestros pecados y rogad\nunos por otros, para alcanzar vuestra curación, pues la oración ferviente del\njusto tiene gran eficacia.\n\nElías, que era un hombre de la misma condición que nosotros, oró\nfervorosamente para que no lloviese; y no llovió sobre la tierra durante tres\naños y seis meses. Y oró de nuevo, y el cielo envió la lluvia y la tierra produjo\nsus frutos.\n\nHermanos, si alguno de entre vosotros se desvía de la verdad y otro logra\nconvertirlo, sepa que quien convierte a un pecador de su camino equivocado\nsalvará su alma de la muerte y cubrirá la multitud de sus pecados.",
+    "anio": "I"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Ante todo teneos una constante caridad unos con otros, * porque la caridad\ncubre la multitud de los pecados.\nV. Quien convierte a un pecador de su camino equivocado salvará su alma de\nla muerte y cubrirá la multitud de sus pecados.\nR. Porque la caridad cubre la multitud de los pecados.",
+    "anio": "I",
+    "ref": "1 Pe 4, 8; St 5, 20"
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "De la carta a los Gálatas 5, 25-6, 18\n\nCONSEJOS SOBRE LA CARIDAD\n\nHermanos: Si vivimos por el Espíritu marchemos tras el Espíritu. No\nbusquemos la vanagloria, provocándonos y teniéndonos envidia mutuamente.\n\nHermanos, cuando alguno fuere sorprendido en alguna falta, vosotros, los\nque vivís conforme al espíritu, corregidlo con mansedumbre, teniendo cuidado\nde ti mismo, pues también tú puedes caer en la tentación. Ayudaos a llevar\nmutuamente vuestras cargas, y así cumpliréis la ley de Cristo. Porque, si\nalguno se imagina ser algo, siendo nada, como es, se engaña. Que cada uno\nexamine su propia conducta; y así encontrará en sí mismo motivos para\ngloriarse, y no en otros, pues cada uno debe llevar su propia carga.\n\nEl que recibe la instrucción de la palabra comparta sus bienes con quien lo\ninstruye.\n\nNo os engañéis: de Dios nadie se burla. Lo que cada uno siembre, eso\ncosechará. El que siembre en su carne, de la carne cosechará corrupción; el\nque siembre en el Espíritu, del Espíritu cosechará vida eterna. No nos\ncansemos de practicar el bien; que a su tiempo cosecharemos si no\ndesmayamos. Así que, mientras tengamos oportunidad, hagamos el bien a\ntodos, pero especialmente a los miembros de la Iglesia.\n\n(Mirad con qué letras tan grandes os escribo de mi propia mano.)\nLos que quieren quedar bien ante los hombres os fuerzan a circuncidaros,\n\nsólo para evitar la persecución por la cruz de Cristo. Pero ni ellos mismos,\ncircuncidados como son, guardan la ley; quieren que os hagáis circuncidar, sólo\npara tener luego de qué gloriarse a costa vuestra.\n\nEn cuanto a mí, líbreme Dios de gloriarme si no es en la cruz de nuestro\nSeñor Jesucristo; por él el mundo está crucificado para mí y yo para el mundo.\nLo que vale no es estar o no estar circuncidado, sino la nueva criatura que\nsurge.\n\nPaz y misericordia para todos los que se ajusten a esta norma, y también\npara el Israel de Dios. En adelante, que nadie me moleste; porque yo llevo en\nmi cuerpo las marcas de Jesús.\n\nHermanos, que la gracia de nuestro Señor Jesucristo esté con vuestro\nEspíritu. Amén.",
+    "anio": "II"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Lo que cada uno siembre, eso cosechará. El que siembre en su carne, de la\ncarne cosechará corrupción; * el que siembre en el Espíritu, del Espíritu\ncosechará vida eterna.\nV. El espíritu es el que da vida; la carne no vale nada.\nR. El que siembre en el Espíritu, del Espíritu cosechará vida eterna.",
+    "anio": "II",
+    "ref": "Ga 6, 8; Jn 6, 64"
+   },
+   {
+    "tipo": "lectura2",
+    "texto": "Del comentario de santo Tomás de Aquino, presbítero, sobre el evangelio de\nsan Juan\n\n(Cap. 14, lec. 21)\n\nEL CAMINO PARA LLEGAR A LA VIDA VERDADERA\n\nCristo en persona es el camino, por esto dice: Yo soy el camino. Lo cual\ntiene una explicación muy verdadera, ya que por medio de él podemos\nacercarnos al Padre.\n\nMas, como este camino no dista de su término, sino que está unido a él,\nañade: Y la verdad, y la vida; y, así, él mismo es a la vez el camino y su\n\ntérmino. Es el camino según su humanidad, el término según su divinidad. En\neste sentido, en cuanto hombre, dice: Yo soy el camino; en cuanto Dios,\nañade: Y la verdad, y la vida, dos expresiones que indican adecuadamente el\ntérmino de este camino.\n\nEfectivamente, el término de este camino es la satisfacción del deseo\nhumano, y el hombre desea principalmente dos cosas: en primer lugar, el\nconocimiento de la verdad, lo cual es algo específico suyo; en segundo lugar, la\nprolongación de su existencia, lo cual le es común con los demás seres. Ahora\nbien, Cristo es el camino para llegar al conocimiento de la verdad, con todo y\nque él mismo en persona es la verdad: Enséñame, Señor, tu camino, para que\nsiga tu verdad. Cristo es asimismo el camino para llegar a la vida, con todo y\nque él mismo en persona es la vida: Me enseñarás el sendero de la vida.\n\nPor esto, el evangelista identifica el término de este camino con las nociones\nde verdad y vida, que ya antes ha aplicado a Cristo. En primer lugar, afirma\nque él es la vida, al decir que en la Palabra había vida; en segundo lugar,\nafirma que es la verdad, cuando dice que era la luz de los hombres, ya que luz\ny verdad significan lo mismo.\n\nSi buscas, pues, por dónde has de ir, acoge en ti a Cristo, porque él es el\ncamino: Éste es el camino, camina por él. Y san Agustín dice: \"Camina a través\ndel hombre y llegarás a Dios.\" Es mejor andar por el camino, aunque sea\ncojeando, que caminar rápidamente fuera de camino. Porque el que va\ncojeando por el camino, aunque adelante poco, se va acercando al término;\npero el que anda fuera del camino, cuanto más corre, tanto más se va alejando\ndel término.\n\nSi buscas a dónde has de ir, adhiérete a Cristo, porque él es la verdad a la\nque deseamos llegar: Mi paladar repasa la verdad. Si buscas dónde has de\nquedarte, adhiérete a Cristo, porque él es la vida: Quien me alcanza, alcanza\nla vida y goza del favor del Señor.\n\nAdhiérete, pues, a Cristo, si quieres vivir seguro; es imposible que te\ndesvíes, porque él es el camino. Por esto, los que a él se adhieren no van\ndescaminados, sino que van por el camino recto. Tampoco pueden verse\nengañados, ya que él es la verdad y enseña la verdad completa, pues dice: Yo\npara esto he nacido y para esto he venido al mundo: para ser testigo de la\nverdad. Tampoco pueden verse decepcionados, ya que él es la vida y dador de\nvida, tal como dice: Yo he venido para que tengan vida y la tengan abundante."
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. El Espíritu Santo descenderá sobre ti, María, el poder del Altísimo te\nenvolverá como una nube. * Por eso el hijo, en ti engendrado, será santo, será\nHijo de Dios.\nV. Escucha, hija, mira: inclina el oído, prendado está el rey de tu belleza.\nR. Por eso el hijo, en ti engendrado, será santo, será Hijo de Dios.",
+    "ref": "Lc 1, 35; Sal 44, 11. 12"
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Señor, nos acogemos confiadamente a tu providencia, que nunca se"
+   }
+  ]
+ }
+}

@@ -1,0 +1,4 @@
+Scripts que generan liturgia-horas/data/ a partir de los txt de los tomos. Viven fuera de la carpeta que se despliega.
+  python3 parse_salterio.py   <tomo3.txt> <ruta>/liturgia-horas/data
+  python3 build_ordinario.py  <tomo3.txt> <ruta>/liturgia-horas/data
+  python3 parse_propio_to.py  <tomo3.txt> <tomo4.txt> <ruta>/liturgia-horas/data
