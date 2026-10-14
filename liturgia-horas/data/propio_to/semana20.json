@@ -1,0 +1,323 @@
+{
+ "dom": {
+  "visperas1": [
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "",
+    "ant_ciclo": {
+     "A": "Mi casa es casa de oración y así la llamarán todos los pueblos: a ellos los traeré y en ella los alegraré.",
+     "B": "Venid a comer de mi pan y a beber del vino que he mezclado; seguid el camino de la prudencia.",
+     "C": "Sabéis juzgar el aspecto del cielo, ¿y no sois capaces de juzgar las señales de los tiempos mesiánicos?"
+    }
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Oh Dios, que has preparado bienes inefables para los que te aman, infunde el amor de\ntu nombre en nuestros corazones, para que, amándote en todo y sobre todas las cosas,\nconsigamos tus promesas que superan todo deseo. Por nuestro Señor Jesucristo."
+   }
+  ],
+  "oficio": [
+   {
+    "tipo": "lectura1",
+    "texto": "Comienza la carta del apóstol san Pablo a los Efesios 1, 1-14\n\nEL MISTERIO DE LA VOLUNTAD DE DIOS\n\nPablo, apóstol de Cristo Jesús por voluntad de Dios, los consagrados a Dios y fieles en\nCristo Jesús que están en Éfeso: Gracia a vosotros y paz de parte de Dios, nuestro Padre,\ny de Jesucristo, el Señor.\n\nBendito sea Dios, Padre de nuestro Señor Jesucristo, que nos ha bendecido en la\npersona de Cristo con toda clase de bienes espirituales y celestiales.\n\nÉl nos eligió en la persona de Cristo, antes de crear el mundo, para que fuésemos\nsantos e irreprochables ante él por el amor. Él nos ha destinado en la persona de Cristo,\npor pura iniciativa suya, a ser sus hijos, para que la gloria de su gracia, que tan\ngenerosamente nos ha concedido en su querido Hijo, redunde en alabanza suya.\n\nPor este Hijo, por su sangre, hemos recibido la redención, el perdón de los pecados. El\ntesoro de su gracia, sabiduría y prudencia ha sido un derroche para con nosotros,\ndándonos a conocer el misterio de su voluntad. Éste es el plan que había proyectado\n\nrealizar por Cristo cuando llegase el momento culminante: hacer que todas las cosas\ntuviesen a Cristo por cabeza, las del cielo y las de la tierra.\n\nEn Cristo hemos sido agraciados con la herencia, elegidos de antemano según el\ndesignio de aquel que todo lo ejecuta conforme a la decisión de su voluntad, para que\nseamos alabanza de su gloria los que ya antes esperábamos en Cristo.\n\nY también vosotros —que habéis escuchado la verdad, la extraordinaria noticia de que\nhabéis sido salvados—, al abrazar la fe, habéis sido sellados con el sello del Espíritu Santo\nprometido, prenda de nuestra herencia, para la redención del pueblo que Dios adquirió\npara sí, para alabanza de su gloria.",
+    "anio": "I"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Dios nos ha destinado en la persona de Cristo a ser sus hijos, por pura iniciativa suya, *\npara que la gloria de su gracia redunde en su alabanza.\nV. Por nuestro Señor Jesucristo hemos obtenido el acceso a esta gracia en que estamos.\nR. Para que la gloria de su gracia redunde en su alabanza.",
+    "anio": "I",
+    "ref": "Ef 1, 5-6b; Rm 5, 2"
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "Comienza el libro del Qohelet (o Predicador) 1, 1-18\n\nVANIDAD DE LAS COSAS\n\nPalabras del Qohelet, hijo de David y rey de Jerusalén. ¡Vanidad de vanidades! —\nproclama el Qohelet—.\n\n¡Vanidad de vanidades, todo es vanidad! ¿Qué saca el hombre de todo su fatigoso afán\nbajo el sol?\n\nUna generación va, otra generación viene; pero la tierra sigue siempre subsistiendo.\nSale el sol y se pone el sol, corre hacia su lugar y vuelve luego a salir de allí. Sopla hacia\nel sur el viento y gira luego hacia el norte, gira que te gira sigue el viento y vuelve el\nviento a girar. Todos los ríos van al mar y el mar nunca se llena; al lugar a donde van los\nríos, allá mismo volverán luego a fluir.\n\nTodo trabaja más de cuanto el hombre puede ponderar, y no se sacia el ojo de ver ni el\noído de oír. Lo que fue, eso será; lo que se hizo, eso se hará; nada nuevo hay bajo el sol.\nSi algo hay de que se diga: «Mira, eso si que es nuevo», aun eso ya existió en los siglos\nque nos precedieron. No hay recuerdo de las cosas pasadas ni tampoco quedará memoria\nde las futuras en los hombres que después vendrán.\n\nYo, el Qohelet, he sido rey de Israel en Jerusalén. He aplicado mi corazón a investigar y\na explorar con sabiduría cuanto acaece bajo el cielo. ¡Es ésta una dura labor que Dios ha\nencomendado a los humanos para que en ella se ocupen! He observado cuanto sucede\nbajo el sol y he visto que todo es vanidad y atrapar vientos. Lo torcido no puede\nenderezarse, lo que falta no puede contarse.\n\nYo me había dicho en mi corazón: «Tengo una sabiduría grande y extensa, mayor que\nla de todos mis predecesores en Jerusalén; mi corazón ha contemplado mucha sabiduría y\nciencia. He aplicado mi corazón a conocer la sabiduría, así como también a conocer la\nlocura y el desvarío.» Pero ya he comprendido que aun esto mismo es como atrapar\nvientos, pues: donde abunda la ciencia abundan las penas, y quien acumula saber\nacumula dolor.",
+    "anio": "II"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. He observado cuanto sucede bajo el sol y he visto que todo es vanidad y atrapar\nvientos. * Como salió del vientre de su madre, desnudo volverá el hombre, como ha\nvenido; y nada podrá sacar de sus fatigas que pueda llevar consigo.\n\nV. Nada trajimos al mundo; de modo que nada podemos llevarnos de él.\nR. Como salió del vientre de su madre, desnudo volverá el hombre, como ha venido; y\nnada podrá sacar de sus fatigas que pueda llevar consigo.",
+    "anio": "II",
+    "ref": "Qo 1, 14; 5, 14; 1Tm 6, 7"
+   },
+   {
+    "tipo": "lectura2",
+    "texto": "De las homilías de san Juan Crisóstomo, obispo, sobre el evangelio de san Mateo\n(Homilía 15, 6. 7: PG 57, 231-232)\n\nSAL DE LA TIERRA Y LUZ DEL MUNDO\n\nVosotros sois la sal de la tierra. Es como si les dijera: \"El mensaje que se os comunica\nno va destinado a vosotros solos, sino que habéis de transmitirlo a todo el mundo. Porque\nno os envío a dos ciudades, ni a diez, ni a veinte; ni tan siquiera os envío a toda una\nnación, como en otro tiempo a los profetas, sino a la tierra, al mar y a todo el mundo, y a\nun mundo por cierto muy mal dispuesto.\" Porque, al decir: Vosotros sois la sal de la tierra,\nenseña que todos los hombres han perdido su sabor y están corrompidos por el pecado.\nPor ello, exige sobre todo de sus discípulos aquellas virtudes que son más necesarias y\nútiles para el cuidado de los demás. En efecto, la mansedumbre, la moderación, la\nmisericordia, la justicia son unas virtudes que no quedan limitadas al provecho propio del\nque las posee, sino que son como unas fuentes insignes que manan también en provecho\nde los demás. Lo mismo podemos afirmar de la pureza de corazón, del amor a la paz y a\nla verdad, ya que el que posee estas cualidades las hace redundar en utilidad de todos.\n\n\"No penséis —viene a decir— que el combate al que se os llama es de poca importancia\ny que la causa que se os encomienda es exigua: Vosotros sois la sal de la tierra. ¿Significa\nesto que ellos restablecieron lo que estaba podrido? En modo alguno. De nada sirve echar\nsal a lo que ya está podrido. Su labor no fue ésta; lo que ellos hicieron fue echar sal y\nconservar, así, lo que el Señor había antes renovado y liberado de la fetidez,\nencomendándoselo después a ellos, porque liberar de la fetidez del pecado fue obra del\npoder de Cristo; pero el no recaer en aquella fetidez era obra de la diligencia y esfuerzo de\nsus discípulos.\n\n¿Te das cuenta de cómo va enseñando gradualmente que\néstos son superiores a los profetas? No dice, en efecto, que hayan de ser maestros de\n\nPalestina, sino de todo el orbe. \"No os extrañe, pues —viene a decirles—, si, dejando\nahora de lado a los demás, os hablo a vosotros solos y os enfrento a tan grandes peligros.\nConsiderad a cuántas y cuán grandes ciudades, pueblos, naciones os he de enviar en\ncalidad de maestros. Por esto, no quiero que seáis vosotros solos prudentes, sino que\nhagáis también prudentes a los demás. Y muy grande ha de ser la prudencia de aquellos\nque son responsables de la salvación de los más, y muy grande ha de ser su virtud, para\nque puedan comunicarla a los otros. Si no es así, ni tan siquiera podréis bastaros a\nvosotros mismos.\n\nEn efecto, si los otros han perdido el sabor, pueden recuperarlo por vuestro ministerio;\npero, si sois vosotros los que os tornáis insípidos, arrastraréis también a los demás con\nvuestra perdición. Por esto, cuanto más importante es el asunto que se os encomienda,\nmás grande debe ser vuestra solicitud\". Y  así, añade: Si la sal se vuelve sosa, ¿con qué la\nsalarán? No sirve más que para tirarla fuera y que la pise la gente.\n\nPara que no teman lanzarse al combate, al oír aquellas palabras: Cuando os insulten y\nos persigan y os calumnien de cualquier modo, les dice de modo equivalente: \"Si no estáis\ndispuestos a tales cosas, en vano habéis sido elegidos. Lo que hay que temer no es el mal\nque digan contra vosotros, sino la simulación de vuestra parte; entonces sí que perderíais\nvuestro sabor y seríais pisoteados. Pero, si no cejáis en presentar el mensaje con toda su\n\nausteridad, si después oís hablar mal de vosotros, alegraos. Porque lo propio de la sal es\nmorder y escocer a los que llevan una vida de molicie.\n\nPor tanto, estas maledicencias son inevitables y en nada os perjudicarán, antes serán\nprueba de vuestra firmeza. Mas si, por temor a ellas, cedéis en la vehemencia\nconveniente, peor será vuestro sufrimiento, ya que entonces todos hablarán mal de\nvosotros y todos os despreciarán; en esto consiste el ser pisoteado por la gente.\"\n\nA continuación, propone una comparación más elevada: Vosotros sois la luz del mundo.\nDe nuevo se refiere al mundo, no a una sola nación ni a veinte ciudades, sino al orbe\nentero; luz que, como la sal de que ha hablado antes, hay que entenderla en sentido\nespiritual, luz más excelente que los rayos de este sol que nos ilumina. Habla primero de\nla sal, luego de la luz, para que entendamos el gran provecho que se sigue de una\npredicación austera, de unas enseñanzas tan exigentes. Esta predicación, en efecto, es\ncomo si nos atara, impidiendo nuestra dispersión, y nos abre los ojos al enseñarnos el\ncamino de la virtud. No se puede ocultar una ciudad puesta en lo alto de un monte.\nTampoco se enciende una lámpara para meterla debajo del celemín. Con estas palabras,\ninsiste el Señor en la perfección de vida que han de llevar sus discípulos y en la vigilancia\nque han de tener sobre su propia conducta, ya que ella está a la vista de todos, y el\npalenque en que se desarrolla su combate es el mundo entero."
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Recibiréis la fortaleza del Espíritu Santo, que descenderá sobre vosotros; * y seréis mis\ntestigos hasta los últimos confines de la tierra.\nV. Alumbre vuestra luz a los hombres para que, viendo vuestras buenas obras, den gloria a\nvuestro Padre celestial.\nR. Y seréis mis testigos hasta los últimos confines de la tierra.",
+    "ref": "Hch 1, 8; Mt 5, 16"
+   },
+   {
+    "tipo": "te_deum"
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Oh Dios, que has preparado bienes inefables para los que te aman, infunde tu amor en\nnuestros corazones, para que, amándote en todo y sobre todas las cosas consigamos\nalcanzar tus promesas, que superan todo deseo. Por nuestro Señor Jesucristo."
+   }
+  ],
+  "laudes": [
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "",
+    "ant_ciclo": {
+     "A": "Dios encerró a todos los hombres en la desobediencia, a fin de hacer misericordia con todos.",
+     "B": "El que come mi carne y bebe mi sangre permanece en mí, y yo en él.",
+     "C": "Jesús quiso recibir el bautismo del sufrimiento y beber el cáliz de la pasión."
+    }
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Oh Dios, que has preparado bienes inefables para los que te aman, infunde tu amor en\nnuestros corazones, para que, amándote en todo y sobre todas las cosas consigamos\nalcanzar tus promesas, que superan todo deseo. Por nuestro Señor Jesucristo."
+   }
+  ],
+  "visperas2": [
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "",
+    "ant_ciclo": {
+     "A": "Mujer, grande es tu fe; que se cumpla lo que deseas.",
+     "B": "Yo soy el pan vivo que ha bajado del cielo. El que come de este pan vivirá para siempre. Aleluya.",
+     "C": "He venido a traer fuego al mundo, y ¡cuánto deseo que esté ya ardiendo!"
+    }
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Oh Dios, que has preparado bienes inefables para los que te aman, infunde tu amor en\nnuestros corazones, para que, amándote en todo y sobre todas las cosas consigamos\nalcanzar tus promesas, que superan todo deseo. Por nuestro Señor Jesucristo."
+   }
+  ]
+ },
+ "lun": {
+  "oficio": [
+   {
+    "tipo": "lectura1",
+    "texto": "De la carta a los Efesios 1, 15-23\n\nORACIÓN DE PABLO PARA QUE LOS FIELES SEAN ILUMINADOS\n\nHermanos: Después que he oído hablar de vuestra fe en Jesús, el Señor, y de vuestra\ncaridad para con todos los fieles, no ceso de dar gracias por vosotros, y siempre os\nrecuerdo en mis oraciones. Quiera el Dios de nuestro Señor Jesucristo, el Padre de la\ngloria, concedernos el don de sabiduría y de revelación, para que lleguemos al pleno\nconocimiento de él e, iluminados así los ojos de nuestra mente, conozcamos cuál es la\nesperanza a que nos ha llamado y cuáles las riquezas de gloria otorgadas por él como\nherencia a su pueblo santo,\n\nY ¡qué soberana grandeza despliega su poder en nosotros, los creyentes, según la\neficacia de su fuerza poderosa! Este poder lo ejercitó en Cristo, resucitándolo de entre los\nmuertos y constituyéndolo a su diestra en los cielos, por encima de todo principado,\npotestad, virtud y dominación, y de todo ser que exista no sólo en el mundo presente,\nsino también en el futuro. Puso todas las cosas bajo sus pies y lo dio como cabeza a la\nIglesia, que es su cuerpo, es decir, la plenitud de aquel que lo llena todo en todo.",
+    "anio": "I"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Quiera Dios concedernos el don de sabiduría y de revelación, * para que conozcamos\ncuál es la esperanza a que nos ha llamado y cuáles las riquezas de gloria otorgadas por él\ncomo herencia a su pueblo santo.\nV. Y nosotros no hemos recibido el espíritu del mundo, sino el Espíritu que viene de Dios,\npara conocer las gracias que Dios nos ha otorgado.\nR. Para que conozcamos cuál es la esperanza a que nos ha llamado y cuáles las riquezas\nde gloria otorgadas por él como herencia a su pueblo santo.",
+    "anio": "I",
+    "ref": "Ef 1, 17. 18; 1 Co 2, 12"
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "Del libro del Qohelet 2, 1-3. 12-26\n\nVANIDAD DE LOS PLACERES Y DE LA SABIDURÍA\n\nYo me dije en mí corazón: «¡Adelante! ¡Voy a hacer probar el placer, a hacer que\ndisfrutes del bienestar!» Pero vi que también esto es vanidad. A la risa la llamé\n«¡Locura!»; y del placer dije: «¿Para qué vale?» Traté de regalar mi cuerpo con el vino,\nmientras guardaba mi corazón en la sabiduría, y entregarme al desvarío hasta ver en qué\nconsistía la felicidad de los humanos, lo que hacen bajo el cielo durante los contados días\nde su vida. Dirigí luego mi reflexión sobre la sabiduría, la locura y el desvarío. Porque ¿qué\nhará el hombre que suceda al rey, sino lo que ya otros hicieron? Yo vi que la sabiduría\naventaja al desvarío, como la luz a las tinieblas.\n\nEl sabio tiene sus ojos en la cabeza, mas el necio camina en las tinieblas. Pero también\nyo sé que la misma suerte alcanza a ambos. Entonces me dije: «Como la suerte del necio\nserá la mía. ¿Para qué vale, pues, mi sabiduría?» Y pensé que hasta eso mismo es\nvanidad. No hay recuerdo duradero ni del sabio ni del necio; al correr de los días, todos\nson olvidados. Pues el sabio muere igual que el necio.\n\nHe detestado la vida, porque me disgusta cuanto se hace bajo el sol, pues todo es\nvanidad y atrapar vientos. Detesté todos mis fatigosos afanes bajo el sol, y los dejo a mi\nsucesor. ¿Quién sabe si será sabio o necio? Y, sin embargo, él será dueño de toda mi\nfatiga, la que realicé con afán y sabiduría bajo el sol. También esto es vanidad. Entregué\nmi corazón al desaliento por todos mis fatigosos afanes bajo el sol, al considerar cómo\nalgún hombre que se ha afanado con sabiduría, ciencia y destreza deja su bien a otro que\nen nada se afanó para ello. También esto es vanidad y mal grave. Pues ¿qué le queda a\naquel hombre de toda su fatiga y esfuerzo con que se fatigó bajo el sol? ¿De todos sus\ndías de dolor, de penosas ocupaciones, de todas sus noches de insomnio? También esto es\nvanidad.\n\nNo hay mayor felicidad humana que comer y beber y pasarlo bien en medio de los\nafanes. Yo veo que también esto viene de la mano de Dios, pues quien come y goza lo\ntiene de Dios. Porque a quien le agrada da él sabiduría, ciencia y alegría; mas al pecador\nda el trabajo de amontonar y atesorar para dejárselo a quien a él le plazca. También esto\nes vanidad y atrapar vientos.",
+    "anio": "II"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Dios da a quien le agrada sabiduría, ciencia y alegría; mas al pecador da el trabajo de\namontonar y atesorar para dejárselo a quien a él le plazca. * También esto es vanidad y\natrapar vientos.\nV. Raíz de todos los males es el afán del dinero; y algunos, por dejarse llevar de él, han\nquedado sumergidos en un mar de tormentos.\nR. También esto es vanidad y atrapar vientos.",
+    "anio": "II",
+    "ref": "Qo 2, 26; 1Tm 6, 10"
+   },
+   {
+    "tipo": "lectura2",
+    "texto": "De los tratados morales de san Gregorio Magno, papa, sobre el libro de Job\n(Libro 3, 39-40: PL. 75, 619-620)\n\nATAQUES POR FUERA Y TEMORES POR DENTRO\n\nLos santos varones, al hallarse involucrados en el combate de las tribulaciones,\nteniendo que soportar al mismo tiempo a los que atacan y a los que intentan seducirlos,\nse defienden de los primeros con el escudo de su paciencia, atacan a los segundos\narrojándoles los dardos de su doctrina, y se ejercitan en una y otra clase de lucha con\nadmirable fortaleza de espíritu, en cuanto que por dentro oponen una sabia enseñanza a\nlas doctrinas desviadas, y por fuera desdeñan sin temor las cosas adversas; a unos\ncorrigen con su doctrina, a otros superan con su paciencia. Padeciendo, superan a los\nenemigos que se alzan contra ellos; compadeciendo, retornan al camino de la salvación a\nlos débiles; a aquéllos les oponen resistencia, para que no arrastren a los demás; a éstos\nles ofrecen su solicitud, para que no pierdan del todo el camino de la rectitud.\n\nVeamos cómo lucha contra unos y otros el soldado de la milicia de Dios. Dice san Pablo:\nAtaques por fuera y temores por dentro. Y enumera estas dificultades exteriores, diciendo:\nCon peligros de ríos, con peligros de bandoleros, peligros entre mi gente, peligros entre\ngentiles, peligros en la ciudad, peligros en despoblado, peligros en el mar, peligros con los\nfalsos hermanos. Y añade cuales son los dardos que asesta contra el adversario en\nsemejante batalla: Muerto de cansancio, sin dormir muchas noches, con hambre y sed, a\nmenudo en ayunas, con frío y sin ropa.\n\nPero en medio de tan fuertes batallas, nos dice cuánta es la vigilancia con que protege\nel campamento, ya que añade a continuación: Y, aparte todo lo demás, la carga de cada\ndía, la preocupación por todas las Iglesias. Además de la fuerte batalla que él ha de\nsostener, se dedica compasivamente a la defensa del prójimo. Después de explicarnos los\nmales que ha de sufrir, añade los bienes que comunica a los otros.\n\nPensemos lo gravoso que ha de ser tolerar las adversidades, por fuera, y proteger a los\ndébiles, por dentro, todo ello al mismo tiempo. Por fuera sufre ataques, porque es\nazotado, atado con cadenas; por dentro sufre por el temor de que sus padecimientos sean\nun obstáculo no para él, sino para sus discípulos. Por esto, les escribe también: Nadie\nvacile a causa de estas tribulaciones. Ya sabéis que éste es nuestro destino. Él temía que\nsus propios padecimientos fueran ocasión de caída para los demás, que los discípulos,\nsabiendo que él había sido azotado por causa de la fe, se hicieran atrás en la profesión de\nsu fe.\n\n¡Oh inmenso y entrañable amor! Desdeñando lo que él padece, se preocupa de que los\ndiscípulos no padezcan en su interior desviación alguna. Menospreciando las heridas de su\ncuerpo, cura las heridas internas de los demás. Es éste un distintivo del hombre justo,\nque, aun en medio de sus dolores y tribulaciones, no deja de preocuparse por los demás;\nsufre con paciencia sus propias aflicciones, sin abandonar por ello la instrucción que prevé\nnecesaria para los demás, obrando así como el médico magnánimo cuando está él mismo\nenfermo. Mientras sufre las desgarraduras de su propia herida, no deja de proveer a los\notros el remedio saludable."
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Como están los ojos de los esclavos fijos en las manos de sus señores, * así están\nnuestros ojos en el Señor, Dios nuestro, esperando su misericordia.\nV. Yo soy la luz del mundo; el que me sigue no camina en tinieblas, sino que tendrá la luz\nde la vida.\nR. Así están nuestros ojos en el Señor, Dios nuestro, esperando su misericordia.",
+    "ref": "Sal 122, 2; Jn 8, 12"
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Oh Dios, que has preparado bienes inefables para los que te aman, infunde tu amor en\nnuestros corazones, para que, amándote en todo y sobre todas las cosas consigamos\nalcanzar tus promesas, que superan todo deseo. Por nuestro Señor Jesucristo."
+   }
+  ]
+ },
+ "mar": {
+  "oficio": [
+   {
+    "tipo": "lectura1",
+    "texto": "De la carta a los Efesios 2, 1-10\n\nLOS PECADORES HAN SIDO SALVADOS EN CRISTO JESÚS\n\nHermanos: Dios también os vivificó a vosotros, que estabais muertos por vuestros\ndelitos y pecados, en los cuales vivisteis en otro tiempo, siguiendo el proceder de este\nmundo, sometidos al príncipe que tiene su imperio en el aire, el espíritu que actúa ahora\nen los rebeldes a la fe, entre los cuales vivíamos también nosotros, siguiendo las\napetencias de nuestra carne, poniendo por obra sus deseos y sentimientos, y éramos por\nnuestro natural hijos de cólera, como los demás.\n\nPero Dios, que es rico en misericordia, por el gran amor con que nos amó, aun cuando\nestábamos muertos por nuestros pecados, nos vivificó con Cristo —por pura gracia habéis\nsido salvados— y nos resucitó con él, y nos hizo sentar en los cielos con Cristo Jesús. Así\nDios, en su bondad para con nosotros en Cristo Jesús, quiso mostrar en los siglos\nvenideros la sublime riqueza de su gracia.\n\nEstáis salvados por la gracia y mediante la fe. Y no se debe a vosotros, sino que es un\ndon de Dios; y tampoco se debe a las obras, para que nadie pueda presumir. Somos obra\nde Dios. Dios nos ha creado en Cristo Jesús, para que nos dediquemos a las buenas obras,\nque él determinó que practicásemos.",
+    "anio": "I"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Cuando estábamos muertos por nuestros pecados, Dios nos vivificó con Cristo, * nos\nresucitó con él, y nos hizo sentar en los cielos con Cristo Jesús.\nV. Tanto amó Dios al mundo que le entregó su Hijo único.\nR. Nos resucitó con él, y nos hizo sentar en los cielos con Cristo Jesús.",
+    "anio": "I",
+    "ref": "Ef 2, 5. 6; Jn 3, 16"
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "Del libro del Qohelet 3, 1-22\n\nOSCURIDAD DEL HOMBRE SIN LA REVELACIÓN\n\nTodo tiene su tiempo y cada cosa su momento bajo el cielo:\nSu tiempo el nacer y su tiempo el morir, su tiempo el plantar y su tiempo el arrancar lo\n\nplantado. Su tiempo el matar y su tiempo el curar, su tiempo el destruir y su tiempo el\nedificar. Su tiempo el llorar y su tiempo el reír, su tiempo el lamentarse y su tiempo el\ndanzar. Su tiempo el lanzar piedras y su tiempo el recogerlas, su tiempo el abrazarse y su\ntiempo el separarse. Su tiempo el buscar y su tiempo el perder, su tiempo el guardar y su\n\ntiempo el tirar. Su tiempo el rasgar y su tiempo el coser, su tiempo el callar y su tiempo el\nhablar. Su tiempo el amar y su tiempo el odiar, su tiempo la guerra y su tiempo la paz.\n\n¿Qué gana el que trabaja con fatiga? He considerado la tarea que Dios ha puesto a los\nhumanos para que en ella se ocupen. Él ha hecho todas las cosas apropiadas a su tiempo;\nha puesto también en sus corazones el deseo de considerar el conjunto, pero el hombre\nno llega a descubrir la obra que Dios ha hecho de principio a fin.\n\nComprendo que no hay en ellos más felicidad que alegrarse y buscar el bienestar en su\nvida. Y el que el hombre coma y beba y lo pase bien en medio de sus afanes, eso es un\ndon de Dios.\n\nComprendo que cuanto Dios hace es duradero; nada hay que añadir ni nada que quitar.\nY así hace Dios que se le tema. Lo que es ya antes fue; lo que será ya es. Lo que pasó,\nDios lo volverá a traer.\n\nTodavía más he visto bajo el sol: en la sede de la justicia, allí está la iniquidad; y en el\nsitial del justo está el impío. Dije en mi corazón: «Dios juzgará al justo y al impío, pues\nhay un tiempo para cada cosa y para todo quehacer.» Dije también en mi corazón acerca\nde la conducta de los humanos: «Sucede así para que Dios los pruebe y ellos\nexperimenten que, de sí, son bestias.» Porque el hombre y la bestia tienen la misma\nsuerte: muere el uno como el otro; y ambos tienen el mismo aliento de vida. En nada\naventaja el hombre a la bestia, pues todo es vanidad. Todos caminan hacia una misma\nmeta; todos han salido del polvo y todos vuelven al polvo.\n\n¿Quién puede saber si el aliento de vida de los humanos asciende hacia arriba, y si el\naliento de vida de la bestia desciende hacia abajo, a la tierra?\n\nVeo que no hay para el hombre nada mejor que gozarse en sus obras, porque esa es su\npaga. Pues ¿quién lo guiará a contemplar lo que ha de suceder después de él?",
+    "anio": "II"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. El momento es apremiante; queda como solución que los que negocian en el mundo\nvivan como si no disfrutaran de él, * porque la presentación de este mundo se termina.\nV. Todo tiene su tiempo y cada cosa su momento bajo el cielo.\nR. Porque la presentación de este mundo se termina.",
+    "anio": "II",
+    "ref": "1Co 7; 29. 31; Qo 3, 1"
+   },
+   {
+    "tipo": "lectura2",
+    "texto": "De las homilías de san Bernardo, abad, sobre las excelencias de la Virgen Madre\n(Homilía 2,1-2. 4: Opera omnia, edición cisterciense, 4-1966-21-23)\n\nPREPARADA POR EL ALTÍSIMO, DESIGNADA ANTICIPADAMENTE POR LOS PADRES\nANTIGUOS\n\nEl único nacimiento digno de Dios era el procedente de la Virgen; asimismo, la dignidad\nde la Virgen demandaba que quien naciere de ella no fuere otro que el mismo Dios. Por\nesto, el Hacedor del hombre, al hacerse hombre, naciendo de la raza humana, tuvo que\nelegir, mejor dicho, que formar para sí, entre todas, una madre tal cual él sabía que había\nde serle conveniente y agradable.\n\nQuiso, pues, nacer de una virgen inmaculada, él, el inmaculado, que venía a limpiar las\nmáculas de todos.\n\nQuiso que su madre fuese humilde, ya que él, manso y humilde de corazón, había de\ndar a todos el ejemplo necesario y saludable de estas virtudes. Y el mismo que ya antes\nhabía inspirado a la Virgen el propósito de la virginidad y la había enriquecido con el don\nde la humildad le otorgó también el don de la maternidad divina.\n\nDe otro modo, ¿cómo el ángel hubiese podido saludarla pues como llena de gracia, si\nhubiera habido en ella algo, por poco que fuese, que no poseyera por gracia? Así, pues, la\n\nque había de concebir y dar a luz al Santo de los santos recibió el don de la virginidad\npara que fuese santa en el cuerpo, el don de la humildad para que fuese santa en el\nespíritu.\n\nAsí, engalanada con las joyas de estas virtudes, resplandeciente con la doble hermosura\nde su alma y de su cuerpo, conocida en los cielos por su belleza y atractivo, la Virgen regia\natrajo sobre sí las miradas de los que allí habitan, hasta el punto de enamorar al mismo\nRey y de hacer venir al mensajero celestial.\n\nFue enviado el ángel, dice el Evangelio, a la Virgen. Virgen en su cuerpo, virgen en su\nalma, virgen por su decisión, virgen, finalmente, tal cual la describe el Apóstol, santa en el\ncuerpo y en el alma; no hallada recientemente y por casualidad, sino elegida desde la\neternidad, predestinada y preparada por el Altísimo para él mismo, guardada por los\nángeles, designada anticipadamente por los padres antiguos, prometida por los profetas."
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Yo doy la muerte y la vida, yo desgarro y yo mismo * y no hay quien pueda librar de mi\nmano.\nV. Yo tengo las llaves de la muerte y del hades.\nR. Y no hay quien pueda librar de mi mano.",
+    "ref": "Dt 32, 39; Ap 1, 18"
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Oh Dios, que has preparado bienes inefables para los que te aman, infunde tu amor en\nnuestros corazones, para que, amándote en todo y sobre todas las cosas consigamos\nalcanzar tus promesas, que superan todo deseo. Por nuestro Señor Jesucristo."
+   }
+  ]
+ },
+ "mie": {
+  "oficio": [
+   {
+    "tipo": "lectura1",
+    "texto": "De la carta a los Efesios 2, 11-22\n\nLOS GENTILES RECONCILIADOS CON LOS JUDÍOS Y CON DIOS\n\nHermanos: Acordaos de que, en otro tiempo, vosotros, gentiles por vuestra carne sin\ncircuncidar, tratados de incircuncisos por quienes a sí mismos se decían circuncisos debido\na una operación practicada en la carne, estabais entonces lejos de Cristo, excluidos de la\nciudadanía de Israel y ajenos a las alianzas de la promesa, sin esperanza y sin Dios en el\nmundo.\n\nAhora, en cambio, estáis en Cristo Jesús. Ahora, por la sangre de Cristo, estáis cerca los\nque antes estabais lejos. Él es nuestra paz. Él ha hecho de los dos pueblos, judíos y\ngentiles, una sola cosa, derribando con su cuerpo el muro que los separaba: el odio. Él ha\nabolido la ley con sus mandamientos y reglas, haciendo las paces, para crear en él un solo\nhombre nuevo. Reconcilió con Dios a los dos pueblos, uniéndolos en un solo cuerpo\nmediante la cruz, dando muerte en él al odio.\n\nY, cuando vino, anunció la buena nueva de la paz a los que estabais lejos y a los que\nestábamos cerca, porque por medio de él tenemos unos y otros acceso al Padre en un\nsolo Espíritu.\n\nPor tanto, ya no sois extranjeros ni forasteros, sino que sois ciudadanos del pueblo de\nDios y miembros de la familia de Dios. Estáis edificados sobre el cimiento de los apóstoles\ny profetas, y el mismo Cristo Jesús es la piedra angular. Por él todo el edificio queda\nensamblado y se va levantando hasta formar un templo consagrado al Señor. Por él\ntambién vosotros os vais integrando en la construcción, para ser morada de Dios por el\nEspíritu.",
+    "anio": "I"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Cristo es nuestra paz; él ha hecho de los dos pueblos una sola cosa, derribando con su\ncuerpo el muro que los separaba: el odio. Él anunció la buena nueva de la paz a los que\nestabais lejos y a los que estábamos cerca, *porque por medio de él tenemos unos y otros\nacceso al Padre en un solo Espíritu.\nV. Ahora, por la sangre de Cristo, estáis cerca los que antes estabais lejos.\nR. Porque por medio de él tenemos unos y otros acceso al Padre en un solo Espíritu.",
+    "anio": "I",
+    "ref": "Ef 2, 14. 16. 18. 13"
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "Del libro del Qohelet 5, 9-6, 8\n\nVANIDAD DE LAS RIQUEZAS\n\nQuien ama el dinero no se harta de él, y para quien ama las riquezas no bastan\nganancias. También esto es vanidad. A muchos bienes, muchos parásitos; y ¿de qué más\nsirven a su dueño que para verlos con sus ojos? Dulce el sueño del obrero, coma poco o\ncoma mucho; pero al rico la hartura no le deja dormir.\n\nHay un grave mal que yo he visto bajo el sol: riqueza guardada para su dueño, y que\nsólo sirve para su mal, pues las riquezas perecen en un mal negocio y, si engendra un\nhijo, nada queda ya en su mano.\n\nComo salió del vientre de su madre, desnudo volverá el hombre, como ha venido; y\nnada podrá sacar de sus fatigas que pueda llevar consigo. También esto es grave mal: que\ntal como vino se vaya; y ¿de qué le vale el fatigarse para el viento? Todos los días come\nen oscuridad, y los pasa en la pena y el fastidio, en la enfermedad y el enojo.\n\nEsto he experimentado: lo mejor para el hombre es comer, beber y pasarlo bien con el\nfruto de su trabajo con que se afana bajo el sol, en los contados días de su vida que Dios\nle da; porque es su parte. Y además: cuando a cualquier hombre Dios da riquezas y\nhacienda y le permite disfrutar de ellas, tomar su paga y holgarse en medio de sus fatigas,\nesto es un don de Dios. Porque así no tiene que pensar mucho en los días de su vida,\nmientras Dios le llena de alegría el corazón.\n\nHay otro mal que observo bajo el sol, y que pesa sobre el hombre. Un hombre a quien\nDios da riquezas, tesoros y honores; nada le falta de lo que desea, pero Dios no le\nconcede disfrutar de ello, porque un extraño lo disfruta. Esto es vanidad y gran desgracia.\n\nSi alguno que tiene cien hijos y vive muchos años y, por muchos que sean sus años, no\nse sacia su alma de felicidad y ni siquiera halla sepultura, entonces yo digo: «Más feliz es\nun aborto, pues, en la oscuridad vino y en la oscuridad se va; mientras su nombre queda\noculto en las tinieblas. No ha visto el sol, no lo ha conocido, y ha tenido más descanso que\nel otro. Y aunque hubiera vivido por dos veces mil años, pero sin gustar la felicidad, ¿no\ncaminan acaso todos al mismo lugar?\n\nTodo el mundo se fatiga para comer y, a pesar de todo, nunca se harta. ¿En qué supera\nel sabio al necio? ¿En qué al pobre que sabe vivir su vida?",
+    "anio": "II"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Aleja de mí la falsedad y la mentira; *no me des riqueza ni pobreza, concédeme tan\nsólo el alimento necesario.\nV. Yo confío en ti, Señor, en tu mano está mi destino.\nR. No me des riqueza ni pobreza, concédeme tan sólo el alimento necesario.",
+    "anio": "II",
+    "ref": "Pr 30, 8; Sal 30, 15. 16"
+   },
+   {
+    "tipo": "lectura2",
+    "texto": "De los sermones de san Agustín, obispo\n(Sermón Caillau-Sant-Yves 2, 92: PLS 2, 441-552)\n\nEL QUE PERSEVERE HASTA EL FINAL SE SALVARÁ\n\nTodas las aflicciones y tribulaciones que nos sobrevienen pueden servirnos de\nadvertencia y corrección a la vez. Pues nuestras mismas sagradas Escrituras no nos\ngarantizan la paz, la seguridad y el descanso. Al contrario, el Evangelio nos habla de\ntribulaciones, apuros y escándalos; pero el que persevere hasta el final se salvará. Pues,\n¿qué bienes ha tenido esta nuestra vida, ya desde el primer hombre, que nos mereció la\nmuerte y la maldición, de la que sólo Cristo, nuestro Señor, pudo librarnos?\n\nNo protestéis, pues, queridos hermanos, como protestaron algunos de ellos —son\npalabras del Apóstol—, y perecieron víctimas de las serpientes. ¿O es que ahora tenemos\nque sufrir desgracias tan extraordinarias que no las han sufrido, ni parecidas, nuestros\nantepasados? ¿O no nos damos cuenta, al sufrirlas, de que se diferencian muy poco de las\nsuyas? Es verdad que encuentras hombres que protestan de los tiempos actuales y dicen\nque fueron mejores los de nuestros antepasados; pero esos mismos, si se les pudiera\nsituar en los tiempos que añoran, también entonces protestarían. En realidad juzgas que\nesos tiempos pasados son buenos, porque no son los tuyos.\n\nUna vez que has sido rescatado de la maldición, y has creído en Cristo, y estás\nempapado en las sagradas Escrituras, o por lo menos tienes algún conocimiento de ellas,\ncreo que no tienes motivo para decir que fueron buenos los tiempos de Adán. También tus\npadres tuvieron que sufrir las consecuencias de Adán. Porque Adán es aquel a quien se\ndijo: Con sudor de tu frente comerás el pan, y labrarás la tierra, de donde te sacaron;\nbrotará para ti cardos y espinas. Éste es el merecido castigo que el justo juicio de Dios le\nfulminó. ¿Por qué, pues, has de pensar que cualquier tiempo pasado fue mejor que los\nactuales? Desde el primer Adán hasta el Adán de hoy, ésta es la perspectiva humana:\ntrabajo y sudor, espinas y cardos. ¿Se ha desencadenado sobre nosotros algún diluvio?\n¿Hemos tenido aquellos difíciles tiempos de hambre y de guerras? Precisamente nos los\nrefiere la historia para que nos abstengamos de protestar contra Dios en los tiempos\nactuales.\n\n¡Qué tiempos tan terribles fueron aquéllos! ¿No nos hace temblar el solo hecho de\nescucharlos o leerlos? Así es que tenemos más motivos para alegrarnos de vivir en este\ntiempo que para quejarnos de él."
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Señor, padre y dueño de mi vida, no permitas que mis ojos sean altaneros, aparta de\nmí los malos deseos, * que la sensualidad y la lascivia no se apoderen de mí.\nV. No me abandones, Señor, para que no aumenten mis ignorancias ni se multipliquen mis\npecados.\nR. Que la sensualidad y la lascivia no se apoderen de mí.",
+    "ref": "Cf. Sir 23, 4-6. 1. 3"
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Oh Dios, que has preparado bienes inefables para los que te aman, infunde tu amor en\nnuestros corazones, para que, amándote en todo y sobre todas las cosas consigamos\nalcanzar tus promesas, que superan todo deseo. Por nuestro Señor Jesucristo."
+   }
+  ]
+ },
+ "jue": {
+  "oficio": [
+   {
+    "tipo": "lectura1",
+    "texto": "De la carta a los Efesios 3, 1-13\n\nPABLO, MINISTRO DEL MINISTERIO DE CRISTO\n\nHermanos: Yo, Pablo, el prisionero de Cristo Jesús por vosotros, los gentiles... Ya\nhabréis oído hablar del cómo Dios me ha encomendado la dispensación de la gracia divina\nen favor vuestro, es decir, de cómo, por revelación, me dio a conocer el misterio, que\nacabo de describiros en pocas palabras. Por su lectura, podréis conocer mi penetración del\nmisterio de Cristo. Este misterio no fue dado a conocer a los hombres en las pasadas\ngeneraciones, tal como ha sido revelado ahora por el Espíritu a sus santos apóstoles y\nprofetas, esto es, que los gentiles, incorporados a Cristo Jesús y por medio del Evangelio,\nson coherederos con los judíos, miembros del mismo cuerpo y copartícipes de las\npromesas divinas. De este Evangelio he sido yo constituido ministro, al darme Dios su\ngracia con toda la eficacia de su poder.\n\nA mí, el más insignificante de todos los consagrados me concedieron este don: anunciar\na los gentiles la inimaginable riqueza de Cristo y aclararles a todos cómo se va realizando\nel secreto escondido desde siempre en Dios, creador del universo. Así, por medio de la\nIglesia, las soberanías y autoridades de lo alto conocen las múltiples formas de la\nsabiduría de Dios, contenidas en el proyecto secular que llevó a efecto con Cristo Jesús,\nSeñor nuestro, pues, gracias a Cristo y por la fe en él, tenemos libertad para acercarnos\nconfiados.\n\nPor eso os pido que no os desaniméis por las tribulaciones que sufro por vosotros, pues\nellas son vuestra gloria.",
+    "anio": "I"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. A mí, el más insignificante de todos los consagrados, me concedieron este don:\nanunciar a los gentiles la inimaginable riqueza de Cristo. * Por la fe en él, tenemos libertad\npara acercarnos confiados.\nV. Hemos recibido la gracia y el apostolado, para predicar la sumisión de la fe a todos los\ngentiles.\nR. Por la fe en él, tenemos libertad para acercarnos confiados.",
+    "anio": "I",
+    "ref": "Ef 3, 8. 12; Rm 1, 5"
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "Del libro del Qohelet 7, 1-30a\n\nNO SEPAS MÁS DE LO QUE NECESITES\n\n¿Quién puede saber lo que conviene al hombre en su vida, durante los días contados de\nsu vano vivir, que él los vive como una sombra? Y ¿quién indicará al hombre lo que\nsucederá después de él bajo el sol?\n\nMás vale el buen nombre que el óleo perfumado; y el día de la muerte más que el día\ndel nacimiento. Más vale ir a casa de luto que a casa de festín, porque aquél es el fin de\ntodo hombre y, con ello, el que vive reflexiona. Más vale llorar que reír, pues tras una cara\ntriste hay un corazón feliz. El corazón de los sabios está en la casa del luto, mientras que\nel corazón de los necios en la casa del festín.\n\nMás vale oír reproche de sabio que alabanza de necios. Porque como crepitar de zarzas\nbajo la olla, así es el reír del necio: y también esto es vanidad. El halago atonta al sabio, y\nel regalo pervierte el corazón. Mejor es el fin de una cosa que su principio. Más vale el\npaciente que el soberbio.\n\nNo te dejes llevar del enojo, pues el enojo reside en el pecho de los necios. No digas:\n«¿Cómo es que el tiempo pasado fue mejor que el presente?», pues no es de sabios\npreguntar sobre ello. Tan buena es la sabiduría como la hacienda, y aprovecha a los que\nven el sol. Porque la sabiduría protege como el dinero, pero el saber lo aventaja en que\nhace vivir al que lo posee.\n\nMira la obra de Dios: ¿quién podrá enderezar lo que él torció? Alégrate en el día feliz, y\nen el día desgraciado considera que, tanto uno como otro, Dios los hace para que el\nhombre nada descubra de su porvenir. En mi vano vivir, de todo he visto: justos perecer\nen su justicia e impíos envejecer en su iniquidad. No quieras ser justo en demasía ni te\nvuelvas sabio con exceso. ¿Para qué destruirte? No quieras ser demasiado impío ni te\nhagas el insensato. ¿A qué morir antes de tiempo? Bueno es que mantengas asida una\ncosa, sin dejar otra de la mano, porque el temeroso de Dios con todo ello se sale.\n\nLa sabiduría da más fuerza al sabio que diez poderosos que haya en la ciudad. Cierto es\nque no hay ningún justo en la tierra que haga el bien sin nunca pecar. Tampoco hagas\ncaso de todo lo que se dice, para que no oigas que tu siervo te denigra. Que tu corazón\nbien sabe cuantas veces también tú has denigrado a otros.\n\nTodo esto lo intenté con la sabiduría. Dije: «Seré sabio.» Pero eso estaba lejos de mí.\nLejos quedó lo que estaba lejos, y profundo lo que estaba profundo: ¿quién lo alcanzará?\n\nHe aplicado mi corazón a explorar y a buscar sabiduría y razón, a reconocer la maldad\ncomo una necedad, y la necedad como una locura. He hallado que la mujer es más\namarga que la muerte, porque ella es como una red, su corazón como un lazo y sus\nbrazos como cadenas. El que agrada a Dios se libra de ella, mas el pecador cae en su\ntrampa.\n\nEsto es lo que he hallado —dice el Qohelet— tratando de razonar, caso por caso;\naunque he seguido buscando, nada más he hallado. Un hombre entre mil, sí que lo hallo;\npero mujer entre todas ellas, no la encuentro. Mira, lo que hallé fue sólo eso: Dios hizo\nsencillo al hombre, pero él se complicó con muchas razones.",
+    "anio": "II"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. ¿Quién se atreverá a decir: «Tengo la conciencia limpia, estoy libre de pecado»? * Pues\nno hay ningún justo en la tierra que haga el bien sin nunca pecar.\nV. Si decimos que no tenemos pecado, nos engañamos a nosotros mismos; pero si\nconfesamos nuestros pecados, fiel y bondadoso es Dios para perdonarnos y purificarnos\nde toda iniquidad.\nR. Pues no hay ningún justo en la tierra que haga el bien sin nunca pecar.",
+    "anio": "II",
+    "ref": "Pr 20, 9; Qo 7. 21; 1Jn 1, 8.9"
+   },
+   {
+    "tipo": "lectura2",
+    "texto": "De los tratados de Balduino de Cantorbery, obispo\n(Tratado 7, Sobre la salutación angélica: PL 204, 477-478)\n\nFLOR QUE SUBE DE LA RAÍZ DE JESÉ\n\nA las palabras del ángel, que repetimos cada día para saludar a la santísima Virgen con\nfilial devoción, añadimos: Y bendito el fruto de tu vientre. Expresión que añadió Isabel, al\nser saludada por la Virgen, a las últimas palabras que había dicho el ángel a María en su\nsaludo. Y así dijo Isabel: Bendita tú entre las mujeres, y bendito el fruto de tu vientre. De\neste fruto habla Isaías cuando dice: Aquel día, el vástago del Señor será joya y gloria,\nfruto del país. ¿Cuál puede ser este fruto, sino el Santo de Israel, que a la vez es semilla\nde Abrahán, vástago del Señor, y flor que sube de la raíz de Jesé, fruto de vida del que\nhemos participado?\n\nBendito, realmente, en la semilla, bendito en el vástago, bendito en la flor, bendito en el\ndon; por último, bendito en la acción de gracias y la plena glorificación. Cristo,\ndescendiente de Abrahán, ha nacido según la carne de la estirpe de David.\n\nEs el único entre los hombres que ha llegado al ápice de la bondad. Ha recibido el\nEspíritu sin medida. Sólo él puede realizar toda justicia. Pues su justicia responde de la de\ntodos. Así, dice Isaías: Como el suelo echa sus brotes, como un jardín hace brotar sus\nsemillas, así el Señor hará brotar la justicia y los Himnos ante todos los pueblos. Porque\néste es el vástago de la justicia, bendecido y embellecido con la flor de la gloria. ¿De qué\ngloria? De la mayor que cabe imaginar; más aún, es de tal naturaleza que no hay\nposibilidad siquiera de imaginársela. Porque es una flor que sube de la raíz de Jesé.\n¿Hasta dónde sube? Hasta lo más elevado, porque Jesucristo es Señor, para gloria de Dios\nPadre. Se alza su majestad por encima de los cielos, para que el vástago del Señor sea\njoya y gloria y fruto maravilloso del país.\n\nAhora bien, ¿qué fruto nos brinda este fruto? ¿De este bendito fruto podremos lograr\nalguno que no sea verdadera bendición? En efecto, de esta semilla, de este vástago, de\nesta flor, obtendremos frutos de bendición. Y penetrarán en nuestro interior;\nprimeramente se depositará la semilla: la gracia que nos trae el perdón; después brotará\nel vástago: la gracia que se va desarrollando; por último, una espléndida floración: la\nesperanza y el disfrute de la gloria. Realmente es fruto bendito por Dios y en Dios así en él\nDios es glorificado de verdad. Es también bendito para nosotros, de manera que,\nbendecidos por él, logremos la gloria en él, ya que Dios le otorgó la bendición de todos los\nhombres, según la promesa que hizo a Abrahán."
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Pondrán los pueblos su esperanza en el renuevo de Jesé, que surgirá para juzgar a las\nnaciones. * Y su nombre será bendito por los siglos.\nV. En sus días florecerá la justicia y abundará la paz.\nR. Y su nombre será bendito por los siglos.",
+    "ref": "Rm 15, 12; Sal 71, 17. 7"
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Oh Dios, que has preparado bienes inefables para los que te aman, infunde tu amor en\nnuestros corazones, para que, amándote en todo y sobre todas las cosas consigamos\nalcanzar tus promesas, que superan todo deseo. Por nuestro Señor Jesucristo."
+   }
+  ]
+ },
+ "vie": {
+  "oficio": [
+   {
+    "tipo": "lectura1",
+    "texto": "De la carta a los Efesios 3, 14-21\n\nCONOCED EL AMOR DE CRISTO\n\nHermanos: Doblo las rodillas ante el Padre que da el apellido a toda familia en cielo y\ntierra, pidiéndole que, mostrando la riqueza de su gloria, os refuerce y robustezca\ninteriormente con su Espíritu y así Cristo habite por la fe en lo íntimo de vosotros.\n\nArraigados y cimentados en el amor, tendréis vigor para comprender, con todos los\nconsagrados, lo que es anchura y largura, altura y profundidad; y para conocer, aunque\nsobrepasa todo conocimiento, el amor que Cristo nos tiene, llenándoos de la plenitud total\nde Dios.\n\nA aquel que tiene sumo poder para hacer muchísimo más de lo que pedimos o\npensamos, con la energía que obra en nosotros, a él la gloria en la Iglesia y en Cristo\nJesús, en todas las generaciones por los siglos de los siglos. Amén.",
+    "anio": "I"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. A aquel que tiene sumo poder para hacer muchísimo más de lo que pedimos o\npensamos, * a él la gloria en la Iglesia y en Cristo Jesús, en todas las generaciones por los\nsiglos de los siglos.\nV. Jesucristo se entregó a sí mismo por nuestros pecados, según la voluntad de nuestro\nDios y Padre.\nR. A él la gloria en la Iglesia y en Cristo Jesús, en todas las generaciones por los siglos de\nlos siglos.",
+    "anio": "I",
+    "ref": "Ef 3, 20. 21; Ga 1, 4"
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "Del libro del Qohelet 8, 5-9, 10\n\nCONSUELO DEL SABIO\n\nEl que guarda los mandamientos no experimenta el infortunio, y el corazón del sabio\nsabe el cuándo y el cómo. Porque todo asunto tiene su cuándo y su cómo.\n\nPues es grande el peligro que acecha al hombre, ya que éste ignora lo que está por\nvenir, pues lo que está por venir ¿quién va a anunciárselo? No es el hombre señor del\nviento. Tampoco tiene señorío sobre el día de la muerte, ni hay evasión en la agonía, ni\nlibra la maldad a sus autores. Todo esto tengo visto al aplicar mi corazón a cuanto pasa\nbajo el sol, cuando el hombre domina al hombre para causarle el mal.\n\nPor ejemplo, he visto a gente mala llevada a la tumba. Partieron del lugar santo, y se\ndio al olvido en la ciudad que hubiesen obrado de aquel modo.\n\n¡Otro absurdo!: que no se ejecute en seguida la sentencia de la conducta del malo, con\nlo que el corazón de los humanos se llena de deseos de hacer el mal; que el pecador haga\nel mal cien veces, y se le den largas. Pues yo tenía entendido que les va bien a los\ntemerosos de Dios, a aquellos que ante su rostro temen, y que no le va bien al malvado,\nni alargará sus días como sombra el que no teme ante el rostro de Dios.\n\nPues bien, un absurdo se da en la tierra: hay justos a quienes les sucede cual\ncorresponde a las obras de los malos, y malos a quienes sucede cual corresponde a las\nobras de los buenos. Digo que éste es otro absurdo.\n\nY yo por mí alabo la alegría, ya que otra cosa buena no existe para el hombre bajo el\nsol, si no es comer, beber y gozar; y eso es lo que le acompaña en sus trabajos, en los\ndías de su vida que Dios le ha dado baje el sol.\n\nCuanto más apliqué mi corazón a estudiar la sabiduría y a contemplar el ajetreo que se\nda sobre la tierra —pues ni de día ni de noche concilian los ojos el sueño— fui viendo que\n\nel ser humano no puede descubrir todas las obras de Dios, las obras que se realizan bajo\nel sol. Por más que se afane el hombre en buscar, no las descubre, y el mismo sabio,\naunque diga saberlo, no es capaz de descubrirlo.\n\nPues bien, a todo eso he aplicado mi corazón y todo lo he explorado, y he visto que los\njustos y los sabios sus obras están en manos de Dios. Y ni de amor ni el odio saben los\nhombres nada; todo les resulta absurdo como el que haya un destino común para todos,\npara el justo y para el malvado, el puro y el manchado, el que hace sacrificios y el que no\nlos hace, así el bueno como el pecador, el que jura como el que se recata de jurar.\n\nEso es lo peor de todo cuanto pasa bajo el sol: que haya un destino común para todos,\ny así el corazón de los humanos está lleno de maldad y hay locura en sus corazones\nmientras viven, y después... ¡con los muertos! Mientras uno sigue unido a todos los\nvivientes hay algo seguro, pues vale más perro vivo que león muerto. Porque los vivos\nsaben que han de morir, pero los muertos no saben nada, y no hay ya paga para ellos,\npues se perdió su memoria. Tanto su amor, como su odio, como sus celos ha tiempo que\nperecieron, y no tomarán parte nunca jamás en todo lo que pasa bajo el sol.\n\nAnda, come tu pan con alegría y bebe tu vino con alegre corazón, que Dios está ya\ncontento con tus obras. Lleva en todo tiempo vestidos de alegría y no falte ungüento\nsobre tu cabeza. Goza de la vida con la mujer que amas, todo el espacio de tu vana\nexistencia que se te ha dado bajo el sol, ya que tal es tu parte en la vida y en los afanes\ncon que te afanas bajo el sol.\n\nCualquier cosa que esté a tu alcance el hacerla, hazla según tus fuerzas, porque no\nexistirá obra, ni razones, ni ciencia, ni sabiduría en el sheol a donde te encaminas.",
+    "anio": "II"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Ni el ojo vio, ni el oído oyó, ni vino a la mente del hombre lo que Dios ha preparado\npara los que le aman. * Pero a nosotros Dios nos lo ha revelado por su Espíritu, pues el\nEspíritu todo lo penetra, hasta la profundidad de Dios.\nV. El ser humano no puede descubrir todas las obras de Dios.\nR. Pero a nosotros Dios nos lo ha revelado por su Espíritu, pues el Espíritu todo lo penetra,\nhasta la profundidad de Dios.",
+    "anio": "II",
+    "ref": "1 Co 2, 9-10; Qo 8, 17"
+   },
+   {
+    "tipo": "lectura2",
+    "texto": "De los comentarios de san Ambrosio, obispo, sobre los salmos\n(Salmo 48,13-14: CSEL 64, 367-368)\n\nUNO SOLO ES EL MEDIADOR ENTRE DIOS Y LOS HOMBRES, EL HOMBRE CRISTO JESÚS\n\nEl hermano no rescata, un hombre rescatará; nadie puede rescatarse a si mismo, ni dar\na Dios un precio por su vida; esto es, ¿por qué habré de temer los días aciagos? Pues,\n¿qué es lo que puede perjudicarme? No necesito yo redención. Al contrario, yo mismo soy\nel único redentor de todos. En mis manos está la libertad de los demás; y ¿yo voy a\necharme a temblar por mí? Voy a hacer algo nuevo, que trascienda el amor fraternal y\ntodo afecto de piedad. A quien no puede redimir a su propio hermano, nacido de un\nmismo seno materno, lo redimirá aquel hombre de quien está escrito: Les enviará el Señor\nun hombre que los salvará; aquel que, hablando de sí mismo afirma: Tratáis de matarme a\nmi, el hombre que os ha hablado de la verdad.\n\nPero, aunque se trate de un hombre, ¿quién será capaz de conocerlo? ¿Por qué no\npodrá nadie conocerlo? Porque, así como Dios es uno solo, así también uno solo es el\nmediador entre Dios y los hombres, el hombre Cristo Jesús. Sólo él podrá redimir al\nhombre, aventajando en amor fraternal a los propios hermanos. Porque él, por los que no\neran de su propia familia, derramó su propia sangre, cosa que no se hace ni por los\n\npropios hermanos. Y así no tuvo consideración con su propio cuerpo, a fin de redimirnos\nde nuestros pecados, y se entregó en rescate por todos. Así lo afirma el apóstol Pablo, su\ntestigo veraz, como se califica a sí mismo cuando dice: Digo la verdad, no miento.\n\nY ¿por qué sólo él es capaz de redimir? Porque nadie puede tener un amor como el\nsuyo, hasta dar la vida por sus mismos siervos; ni una santidad como la de él, porque\ntodos están sujetos al pecado, todos sufriendo las consecuencias del de Adán. Sólo puede\nser designado Redentor aquel que no podía estar sometido al pecado de origen. Al hablar,\npues, del hombre, nos referimos a nuestro Señor Jesucristo, que tomó naturaleza humana\npara crucificar en su carne el pecado de todos y borrar con su sangre el protocolo que nos\ncondenaba.\n\nAlguno podría replicar: \"¿Por qué se dice que el hermano no rescatará, siendo así que\nél mismo dijo: Contaré tu fama a mis hermanos?\" Pero es que, si pudo perdonar nuestros\npecados, no es precisamente porque era hermano nuestro, sino porque era el hombre\nCristo Jesús, en el cual estaba Dios. Por eso está escrito: Dios mismo estaba en Cristo,\nreconciliando al mundo consigo; en aquel Cristo Jesús, el único de quien pudo decirse: La\nPalabra se hizo carne y acampó entre nosotros. Por eso, al hacerse carne, acampó entre\nnosotros en cuanto Dios, no en cuanto hermano."
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Con el Señor a mi derecha no vacilaré; * por eso se me alegra el corazón, se gozan mis\nentrañas.\nV. El Señor es mi heredad y mi copa.\nR. Por eso se me alegra el corazón, se gozan mis entrañas.",
+    "ref": "Sal 15, 8-9. 5"
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Oh Dios, que has preparado bienes inefables para los que te aman, infunde tu amor en\nnuestros corazones, para que, amándote en todo y sobre todas las cosas consigamos\nalcanzar tus promesas, que superan todo deseo. Por nuestro Señor Jesucristo."
+   }
+  ]
+ },
+ "sab": {
+  "oficio": [
+   {
+    "tipo": "lectura1",
+    "texto": "De la carta a los Efesios 4, 1-16\n\nEL CUERPO DE CRISTO SE CONSTRUYE EN LA UNIDAD\n\nHermanos: Yo, el prisionero por Cristo, os ruego que andéis como pide la vocación a la\nque habéis sido convocados. Sed siempre humildes y amables, sed comprensivos;\nsobrellevaos mutuamente con amor; esforzaos por mantener la unidad del Espíritu, con el\nvínculo de la paz. Un solo cuerpo y un solo Espíritu, como una sola es la meta de la\nesperanza en la vocación a la que habéis sido convocados. Un Señor, una fe, un bautismo.\nUn Dios, Padre de todo, que lo trasciende todo, y lo penetra todo, y lo invade todo.\n\nA cada uno de nosotros le ha sido concedida la gracia a la medida del don de Cristo.\nPor eso dice: «Subiendo a la altura, llevó cautivos y dio dones a los hombres.» ¿Qué\n\nquiere decir «subió» sino que antes bajó a las regiones inferiores de la tierra? Éste que\nbajó es el mismo que subió por encima de todos los cielos, para llenarlo todo.\n\nÉl mismo ha constituido a unos, apóstoles; a otros, profetas; a otros, evangelistas; a\notros, pastores y doctores, para el perfeccionamiento de los fieles, en función de su\nministerio, y para la edificación del cuerpo de Cristo; hasta que lleguemos todos a la\nunidad en la fe y en el conocimiento del Hijo de Dios, al hombre perfecto a la medida de\nCristo en su plenitud. Para que ya no seamos niños sacudidos por las olas y llevados al\nretortero por todo viento de doctrina, en la trampa de los hombres, que con astucia\nconduce al error; sino que realizando la verdad en el amor, hagamos crecer todas las\ncosas hacia él, que es la cabeza: Cristo, del cual todo el cuerpo, bien ajustado y unido a\ntravés de todo el complejo de junturas que lo nutren y actuando a la medida de cada\nparte, se procura su propio crecimiento para construcción de sí mismo en el amor.",
+    "anio": "I"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Un solo cuerpo y un solo Espíritu, como una es la meta de la esperanza en la vocación\na la que habéis sido convocados. * Un Señor, una fe, un bautismo.\nV. Damos gracias a Dios Padre, que nos ha hecho capaces de compartir la herencia del\npueblo santo en la luz.\nR. Un Señor, una fe, un bautismo.",
+    "anio": "I",
+    "ref": "Ef 4, 4-5; Col 1, 12"
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "Del libro del Qohelet 11, 7-12, 14\n\nENTRÉGALE A DIOS LO MEJOR DE TU VIDA\n\nDulce es la luz y bueno para los ojos ver el sol. Si uno vive muchos años, que goce de\ntodos ellos, y tenga en cuenta que los días de tinieblas muchos serán, que es vanidad\ntodo el porvenir.\n\nAlégrate, joven, en tu juventud, que tu corazón disfrute en tus años mozos. Vete por\ndonde te lleve el corazón y el gusto de tus ojos; ten sólo presente que de todo ello Dios te\npedirá cuentas. Aparta el mal humor de tu pecho y aleja el sufrimiento de tu carne, pero\nrecuerda que juventud y pelo negro son también vanidad.\n\nAcuérdate de tu Creador en tus días mozos, mientras no vengan los días malos y se\nechen encima los años en que dirás: «No me agradan»; mientras no se nublen el sol y la\nluz, la luna y las estrellas, y retornen las nubes tras la lluvia; cuando tiemblen los guardias\nde palacio y se doblen los guerreros; cuando se detengan las moledoras, por ser ya\nescasas, y se queden a oscuras las que miran por las ventanas; cuando se cierren las\npuertas de la calle, ahogándose el son del molino; cuando enmudezca el canto del ave y\ncesen todas las canciones; cuando en las alturas haya temores y en los caminos angustias.\n\nY, mientras florece el almendro y está grávida la langosta y revienta la alcaparra, el\nhombre se va a su eterna morada y circulan por la calle los dolientes.\n\nAcuérdate de tu Creador en tus días mozos, antes de que se rompa el cordón de plata y\nse quiebre la lámpara de oro y se haga añicos el cántaro junto a la fuente y se caiga la\npolea dentro del pozo; antes de que el polvo vuelva a la tierra, a lo que era, y el espíritu\nvuelva a Dios, que es quien lo dio.\n\n¡Vanidad de vanidades! —proclama el Qohelet—, ¡todo es vanidad!\nEl Qohelet, a más de ser un sabio, enseñó doctrina al pueblo. Ponderó e investigó,\n\ncompuso muchos proverbios. El Qohelet  trabajó mucho en inventar frases felices y en\nescribir bien sentencias verdaderas.\n\nLas palabras de los sabios son como aguijadas o como estacas hincadas por un pastor\npara controlar el rebaño. Lo que de ellas se saca, hijo mío, es ilustrarse, pues componer\nmuchos libros es cosa de nunca acabar, y estudiar demasiado daña la salud.\n\nBasta de palabras. Todo está dicho: Teme a Dios y guarda sus mandamientos, que eso\nes ser hombre cabal. Porque Dios emplazará a juicio todas las acciones, y él lo ve todo,\naun lo oculto, sea bueno o malo.",
+    "anio": "II"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Dios mío, me instruiste desde mi juventud, y hasta hoy relato tus maravillas; * en la\nvejez y las canas, no me abandones.\nV. Me saciarás de gozo en tu presencia, de alegría perpetua a tu derecha.\nR. En la vejez y las canas, no me abandones.",
+    "anio": "II",
+    "ref": "Sal 70, 17. 9; cf. Sal 15, 11"
+   },
+   {
+    "tipo": "lectura2",
+    "texto": "De los comentarios de san Ambrosio, obispo, sobre los salmos\n(Salmo 48,14-15: CSEL 64, 368-370)\n\nCRISTO RECONCILIÓ EL MUNDO CON DIOS POR SU PROPIA SANGRE\n\nCristo, que reconcilió el mundo con Dios, personalmente no tuvo necesidad de\nreconciliación. Él, que no tuvo ni sombra de pecado, no podía expiar pecados propios. Y\nasí, cuando le pidieron los judíos la didracma del tributo que, según la ley, se tenía que\npagar por el pecado, preguntó a Pedro: \"¿Qué te parece, Simón? Los reyes del mundo, ¿a\nquién le cobran impuestos y tasas, a sus hijos o a los extraños?,\" Contestó: \"A los\nextraños.\" Jesús le dijo: \"Entonces, los hijos están exentos. Sin embargo, para no\nescandalizarlos, ve al lago, echa el anzuelo, coge el primer pez que pique, ábrele la boca y\nencontrarás una moneda de plata. Cógela y págales por mi y por ti\".\n\nDio a entender con esto que él no estaba obligado a pagar para expiar pecados\npropios; porque no era esclavo del pecado, sino que, siendo como era Hijo de Dios, estaba\nexento de toda culpa. Pues el Hijo libera, pero el esclavo está sujeto al pecado. Por tanto,\ngoza de perfecta libertad y no tiene por qué dar ningún precio en rescate de sí mismo. En\ncambio, el precio de su sangre es más que suficiente para satisfacer por los pecados de\ntodo el mundo. El que nada debe está en perfectas condiciones para satisfacer por los\ndemás.\n\nPero aún hay más. No sólo Cristo no necesita rescate ni propiciación por el pecado, sino\nque esto mismo lo podemos decir de cualquier hombre, en cuanto que ninguno de ellos\ntiene que expiar por sí mismo, ya que Cristo es propiciación de todos los pecados, y él\nmismo es el rescate de todos los hombres.\n\n¿Quién es capaz de redimirse con su propia sangre después que Cristo ha derramado la\nsuya por la redención de todos? ¿Qué sangre puede compararse con la de Cristo? ¿O hay\nalgún ser humano que pueda dar una satisfacción mayor que la que personalmente\nofreció Cristo, el único que puede reconciliar el mundo con Dios por su propia sangre?\n¿Hay alguna víctima más excelente? ¿Hay algún sacrificio de más valor? ¿Hay algún\nabogado más eficaz que el mismo que se ha hecho propiciación por nuestros pecados y\ndio su vida por nuestro rescate?\n\nNo hace falta, pues, propiciación o rescate para cada uno, porque el precio de todos es\nla sangre de Cristo. Con ella nos redimió nuestro Señor Jesucristo, el único que de hecho\nnos reconcilió con el Padre. Y llevó una vida trabajosa hasta el fin, porque tomó sobre sí\nnuestro trabajos. Y así decía: Venid a mi todos los que estáis cansados y agobiados, y yo\nos aliviaré."
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Proclamad conmigo la grandeza del Señor, ensalcemos juntos su nombre. *\nContempladlo y quedaréis radiantes, vuestro rostro no se avergonzará.\n\nV. Nos ha hecho capaces de compartir la herencia del pueblo santo en la luz; nos ha\nsacado del dominio de las tinieblas.\nR. Contempladlo y quedaréis radiantes, vuestro rostro no se avergonzará.",
+    "ref": "Sal 33, 4. 6; Col 1, 12-13"
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Oh Dios, que has preparado bienes inefables para los que te aman, infunde tu amor en\nnuestros corazones, para que, amándote en todo y sobre todas las cosas consigamos\nalcanzar tus promesas, que superan todo deseo. Por nuestro Señor Jesucristo."
+   }
+  ]
+ }
+}

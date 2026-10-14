@@ -1,0 +1,323 @@
+{
+ "dom": {
+  "visperas1": [
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "",
+    "ant_ciclo": {
+     "A": "Si tu hermano comete un pecado, ve y corrígele a solas. Si te hace caso, habrás ganado a tu hermano para Dios.",
+     "B": "Los oídos de los sordos se abrirán y la lengua del mudo cantará: es Dios mismo quien nos viene a salvar. Aleluya.",
+     "C": "¿Quién conocerá tu designio, si tú no le das la sabiduría enviando tu Santo Espíritu desde el cielo?"
+    }
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Señor, tú que te has dignado redimirnos y has querido hacernos hijos tuyos, míranos\nsiempre con amor de padre y haz que cuantos creemos en Cristo, tu Hijo, alcancemos la\nlibertad verdadera y la herencia eterna. Por nuestro Señor Jesucristo."
+   }
+  ],
+  "oficio": [
+   {
+    "tipo": "lectura1",
+    "texto": "Del libro del profeta Amós 7, 1-17\n\nVISIONES SOBRE EL DESASTRE\n\nEn aquellos días, el Señor me mostró lo siguiente: Preparaba langostas cuando\ncomenzaba a crecer la hierba, la hierba que brota después de la siega del rey. Y  cuando\nestaban devorando toda la hierba de la tierra dije:\n\n«Señor, te ruego que concedas tu perdón. ¿Cómo resistirá Jacob, siendo tan pequeño?»\nSe compadeció el Señor por mi intercesión, y dijo:\n«No sucederá.»\nEsto me mostró el Señor: Llamaba para el juicio al fuego, que devoraba el océano y el\n\ncampo. Yo dije:\n«Concede tu perdón, Señor, te lo ruego. ¿Cómo resistirá Jacob, siendo tan pequeño?»\nSe compadeció el Señor por mi intercesión, y dijo:\n«No sucederá.»\n\nEsto me mostró el Señor: Estaba él en pie junto al muro, con una plomada en la mano.,\nMe dijo el Señor:\n\n«¿Qué ves, Amós?»\nRespondí:\n«Veo una plomada.»\nDijo él:\n«Echaré la plomada en medio de mi pueblo; esta vez no dejará de suceder. Quedarán\n\ndesoladas las alturas de Isaac, los santuarios de Israel se arruinarán, me levantaré con la\nespada contra la dinastía de Jeroboam.»\n\nEntonces Amasías, sacerdote de Betel, envió un mensaje a Jeroboam, rey de Israel,\ndiciendo:\n\n«Amós conjura contra ti en medio de Israel; la tierra ya no puede soportar sus palabras.\nPorque así predica: \"Morirá a espada Jeroboam, Israel saldrá de su destierro.\"»\n\nDijo Amasías a Amós:\n«Vidente, vete y refúgiate en tierra de Judá, come allí tu pan y profetiza allí. No vuelvas\n\na profetizar en Betel, porque es el santuario real, el templo del país.»\nRespondió Amós:\n«No soy profeta ni hijo de profeta, sino pastor y cultivador de higos. El Señor me sacó\n\nde junto al rebaño y me dijo: \"Ve y profetiza a mi pueblo de Israel.\" Y ahora escucha la\npalabra del Señor: Tú dices: \"No profetices contra la casa de Israel, no prediques contra la\ncasa de Isaac,\" Pues bien, así dice el Señor: \"Tu mujer será deshonrada en la ciudad, tus\nhijos e hijas caerán a espada; tu tierra será repartida a cordel, tú morirás en tierra\npagana, e Israel saldrá de su país al destierro.\"",
+    "anio": "I"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Nada hace el Señor sin revelar su plan a sus siervos los profetas. * El Señor ha\n\nhablado, ¿quién no va a profetizar?\nV. El Señor me sacó de junto al rebaño y me dijo: «Ve y profetiza a mi pueblo.»\nR. El Señor ha hablado, ¿quién no va a profetizar?",
+    "anio": "I",
+    "ref": "Am 3, 7. 8; 7, 15"
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "Comienza la segunda carta del apóstol san Pedro 1,1-11\n\nEXHORTACIÓN A SEGUIR EL CAMINO DE PERFECCIÓN\n\nSimón Pedro, esclavo y apóstol de Jesucristo, a los que han recibido la misma preciosa\nfe que nosotros, en virtud de la justificación conferida por nuestro Dios y Salvador\nJesucristo: que la gracia y la paz abunden cada vez más entre vosotros, mediante el\nperfecto conocimiento de Dios y de Jesús, nuestro Señor.\n\nSu divino poder nos ha concedido todo lo referente a la vida eterna y a la verdadera\nreligión, mediante el perfecto conocimiento del que nos convocó por su propia gloria y\nvirtud. Por ellas nos ha hecho merced de las preciosas y magníficas promesas, para que\nasí seáis partícipes de la naturaleza divina, escapando de la corrupción existente en el\nmundo por causa de la concupiscencia.\n\nPor este motivo, poned todo vuestro empeño en unir a vuestra fe la probidad moral, a\nla probidad moral el conocimiento de Dios, al conocimiento de Dios el dominio de vosotros\nmismos, al dominio de vosotros mismos la constancia, a la constancia la piedad, a la\npiedad el amor fraterno, al amor fraterno la caridad universal. Si estas virtudes se\nencuentran de hecho entre vosotros y van creciendo, os enriqueceréis de frutos\npreciosísimos que os llevarán al perfecto conocimiento de nuestro Señor Jesucristo. Quien\nde ellas carece es un miope, un ciego, que se olvida de que ha sido purificado de sus\nantiguos pecados.\n\nPor eso, hermanos, poned más empeño todavía en consolidar vuestra vocación y\nelección. Si hacéis así, nunca jamás tropezaréis; de este modo se os concederá\ngenerosamente la entrada en el reino eterno de nuestro Señor y Salvador Jesucristo.",
+    "anio": "II"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. El Señor os convocó por su propia gloria y virtud, y os ha hecho merced de las\npreciosas y magníficas promesas, * para que así seáis partícipes de la naturaleza divina.\nV. Todos los que habéis sido bautizados en Cristo os habéis revestido de Cristo.\nR. Para que así seáis partícipes de la naturaleza divina.",
+    "anio": "II",
+    "ref": "Cf. 2 Pe 1, 3. 4; Ga 3, 27"
+   },
+   {
+    "tipo": "lectura2",
+    "texto": "Del sermón de san León Magno, papa, sobre las bienaventuranzas\n(Sermón 95, 6-8: PL, 54, 464-465)\n\nLA SABIDURÍA CRISTIANA\n\nDespués de esto, el Señor prosiguió, diciendo: Dichosos los que tienen hambre y sed de\nla justicia, porque ellos quedarán saciados. Esta hambre no desea nada corporal, esta sed\nno apetece nada terreno; el bien del que anhela saciarse consiste en la justicia, y el objeto\npor el que suspira es penetrar en el conocimiento de los misterios ocultos, hasta saciarse\ndel mismo Dios.\n\nFeliz el alma que ambiciona este manjar y anhela esta bebida; ciertamente no la\ndesearía si no hubiera gustado ya antes de su suavidad. De esta dulzura, el alma recibió\nya una pregustación, al oír al profeta que le decía: Gustad y ved qué bueno es el Señor;\ncon esta pregustación, tanto se inflamó en el amor de los placeres castos, que,\nabandonando todas las cosas temporales, sólo puso ya su afecto en comer y beber la\njusticia, adhiriéndose a aquel primer mandamiento que dice: Amarás al Señor, tu Dios, con\ntodo tu corazón y con toda el alma y con todas tus fuerzas. Porque amar la justicia no es\notra cosa sino amar a Dios.\n\nY, como este amor de Dios va siempre unido al amor que se interesa por el bien del\nprójimo, el hambre de la justicia se ve acompañada de la virtud de la misericordia; por\nello, se añade a continuación: Dichosos los misericordiosos, porque ellos alcanzarán\nmisericordia.\n\nReconoce, oh cristiano, la altísima dignidad de esta tu sabiduría, y entiende bien cuál ha\nde ser tu conducta y cuáles los premios que se te prometen. La misericordia quiere que\nseas misericordioso, la justicia desea que seas justo, pues el Creador quiere verse\nreflejado en su criatura, y Dios quiere ver reproducida su imagen en el espejo del corazón\nhumano, mediante la imitación que tú realizas de las obras divinas. No quedará frustrada\nla fe de los que así obran, tus deseos llegarán a ser realidad, y gozarás eternamente de\naquello que es el objeto de tu amor.\n\nY porque todo será limpio para ti, a causa de la limosna, llegarás también a gozar de\naquella otra bienaventuranza que te promete el Señor, como consecuencia de lo que hasta\naquí se te ha dicho: Dichosos los limpios de corazón, porque ellos verán a Dios. Gran\nfelicidad es ésta, amadísimos hermanos, para la que se prepara un premio tan grande.\nPues, ¿qué significa tener limpio el corazón, sino desear las virtudes de que antes hemos\nhablado? ¿Qué inteligencia puede llegar a concebir, o qué palabras lograrán explicar la\ngrandeza de una felicidad que consiste en ver a Dios? Y es esto precisamente lo que se\nrealizará cuando la naturaleza humana se transforme, y podamos contemplar la divinidad\nno confusamente en un espejo, sino cara a cara, viendo tal como es a aquel a quien\nningún hombre jamás contempló; entonces lo que ni el ojo vio, ni el oído oyó, ni el\nhombre puede pensar, lo alcanzaremos en el gozo inefable de una contemplación eterna."
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. ¡Qué amor tan grande, Señor, reservas para tus fieles! * Tú lo concedes a los que a ti\nse acogen.\nV. Lo que ni el ojo vio, ni el oído oyó, ni vino a la mente del hombre.\nR. Tú lo concedes a los que a ti se acogen.",
+    "ref": "Sal 30, 20; 1 Co 2, 9"
+   },
+   {
+    "tipo": "te_deum"
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Señor, tú que te has dignado redimirnos y has querido hacernos hijos tuyos, míranos\nsiempre con amor de padre y haz que cuantos creemos en Cristo, tu Hijo, alcancemos la\nlibertad verdadera y la herencia eterna. Por nuestro Señor Jesucristo."
+   }
+  ],
+  "laudes": [
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "",
+    "ant_ciclo": {
+     "A": "El único deber vuestro ha de ser amaros los unos a los otros. porque quien ama al prójimo ya ha cumplido la ley.",
+     "B": "Abre, Señor, nuestro corazón para que comprendamos tus palabras; abre nuestros labios y proclamaremos tu alabanza.",
+     "C": "Dice el Señor: El que no renuncia a todos sus bienes no puede ser discípulo mío."
+    }
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Señor, tú que te has dignado redimirnos y has querido hacernos hijos tuyos, míranos\nsiempre con amor de padre y haz que cuantos creemos en Cristo, tu Hijo, alcancemos la\nlibertad verdadera y la herencia eterna. Por nuestro Señor Jesucristo."
+   }
+  ],
+  "visperas2": [
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "",
+    "ant_ciclo": {
+     "A": "«Donde estén dos o tres reunidos en mi nombre, allí estoy yo en medio de ellos», dice el Señor.",
+     "B": "Todo lo ha hecho bien, ha hecho oír a los sordos y hablar a los mudos. Aleluya.",
+     "C": "«El que no carga su cruz para venir en pos de mí no puede ser mi discípulo», dice el Señor."
+    }
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Señor, tú que te has dignado redimirnos y has querido hacernos hijos tuyos, míranos\nsiempre con amor de padre y haz que cuantos creemos en Cristo, tu Hijo, alcancemos la\nlibertad verdadera y la herencia eterna. Por nuestro Señor Jesucristo."
+   }
+  ]
+ },
+ "lun": {
+  "oficio": [
+   {
+    "tipo": "lectura1",
+    "texto": "Del libro del profeta Amós 8, 1-14\n\nOTRAS VISIONES\n\nEn aquellos días, el Señor me mostró lo siguiente: Un cesto de higos maduros. Y me\ndijo:\n\n«¿Qué ves, Amós?»\nRespondí:\n«Un cesto de higos maduros.»\nY me dijo el Señor:\n«Maduro está mi pueblo para su fin, y ya no dejará de suceder. Aquel día gemirán las\n\ncantoras del templo -oráculo del Señor-, en silencio arrojarán por todas partes numerosos\ncadáveres. Escuchadlo, los que exprimís a los pobres y despojáis a los miserables,\ndiciendo: \"¿Cuándo pasará la luna nueva para vender trigo, y el sábado para ofrecer grano\ny hasta el salvado de trigo?\" Disminuís la medida, aumentáis el precio, usáis balanzas con\ntrampa, compráis por dinero al pobre, y al mísero por un par de sandalias.\n\nJura el Señor por la gloria de Jacob que no olvidará jamás vuestras acciones. ¿No\ntemblará por ello la tierra, no perecerán sus habitantes? Aunque crezca toda como el Nilo,\nvolverá a bajar como el Nilo de Egipto. Aquel día -oráculo del Señor- haré ponerse el sol a\nmediodía, y en pleno día oscureceré la tierra. Cambiaré vuestras fiestas en luto, vuestros\ncantos en elegías, vestiré de saco toda cintura y dejaré calva toda cabeza; y habrá un\nllanto como por el hijo único, el final será un día amargo.\n\nMirad que llegan días -oráculo del Señor- en que enviaré hambre a la tierra: no hambre\nde pan ni sed de agua, sino de escuchar la palabra del Señor. Irán errantes de oriente a\noccidente, vagando de norte a sur, buscando la palabra del Señor, y no la encontrarán.\nAquel día desfallecerán de sed las hermosas doncellas y los jóvenes. Los que juraban por\nel crimen de Samaría, diciendo: \"Por la vida de tu Dios, Dan; por la vida del Señor de\nBerseba\", caerán para no levantarse.»",
+    "anio": "I"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Mirad que llegan días en que enviaré hambre a la tierra: no hambre de pan ni sed de\nagua. * Irán errantes, buscando la palabra del Señor.\nV. Dichosos los que tienen hambre y sed de ser justos, porque ellos serán saciados.\nR. Irán errantes, buscando la palabra del Señor.",
+    "anio": "I",
+    "ref": "Am 8, 11. 12; Mt 5, 6"
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "De la segunda carta del apóstol san Pedro 1, 5-7. 12-21\n\nEL TESTIMONIO DE LOS APOSTOLES Y PROFETAS\n\nHermanos: Poned todo vuestro empeño en unir a vuestra fe la probidad moral, a la\nprobidad moral el conocimiento de Dios, al conocimiento de Dios el dominio de vosotros\nmismos, al dominio de vosotros mismos la constancia, a la constancia la piedad, a la\npiedad el amor fraterno, al amor fraterno la caridad universal.\n\nTengo el propósito de traeros siempre a la memoria estas cosas, por más que las sepáis\ny estéis firmes en la verdad que al presente poseéis. Juzgo que es mi deber, mientras\npermanezca en esta tienda de mi cuerpo teneros en continua alerta con estos avisos. Ya\nsé que pronto veré desmoronarse mi tienda, según me lo ha dado a conocer Jesucristo,\nnuestro Señor. Pero he de procurar que después de mi partida vayáis recordando en todo\ntiempo estas cosas.\n\nNo os hemos dado a conocer el poder y la venida de nuestro Señor Jesucristo por haber\ndado crédito a sutiles quimeras, sino porque fuimos testigos oculares de su grandeza y\nmajestad. Él recibió, en efecto, honor y gloria de parte de Dios Padre, cuando de la\nsublime gloria vino sobre él aquella voz que decía: «Éste es mi Hijo muy amado, en quien\ntengo mis complacencias.» Y nosotros mismos oímos esta voz venida del cielo cuando\nestábamos con él en el monte santo.\n\nY así tenemos confirmada la palabra profética, a la que hacéis bien en prestar atención,\ncomo a lámpara que brilla en lugar oscuro, hasta que despunte el día y salga el lucero de\nla mañana en vuestro corazón. Ante todo habéis de saber que ninguna profecía de la\nEscritura es de interpretación privada; pues nunca fue proferida alguna por voluntad\nhumana, sino que, llevados del Espíritu Santo, hablaron los hombres de parte de Dios.",
+    "anio": "II"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. La Palabra se hizo carne y puso su morada entre nosotros; * y hemos visto su gloria,\ngloria que recibe del Padre, como Hijo único.\nV. Fuimos testigos oculares de su grandeza, cuando estábamos con él en el monte santo.\nR. Y hemos visto su gloria, gloria que recibe del Padre, como Hijo único.",
+    "anio": "II",
+    "ref": "Jn 1, 14; 2 Pe 1, 16. 18"
+   },
+   {
+    "tipo": "lectura2",
+    "texto": "Del sermón de san León Magno, papa, sobre las bienaventuranzas\n(Sermón 95, 8-9: PL. 54, 465-466)\n\nMUCHA PAZ TIENEN LOS QUE AMAN TUS LEYES\n\nCon toda razón se promete a los limpios de corazón la bienaventuranza de la visión\ndivina. Nunca una vida manchada podrá contemplar el esplendor de la luz verdadera, pues\naquello mismo que constituirá el gozo de las almas limpias será el castigo de las que estén\nmanchadas. Que huyan, pues, las tinieblas de la vanidad terrena y que ojos del alma se\npurifiquen de las inmundicias del pecado, para que así puedan saciarse gozando en paz de\nla magnífica visión de Dios.\n\nPero para merecer este don es necesario lo que a continuación sigue: Dichosos las que\ntrabajan por la paz, porque ellos se llamarán los hijos de Dios. Esta bienaventuranza,\namadísimos, no puede referirse a cualquier clase de concordia o armonía humana, sino\nque debe entenderse precisamente de aquella a la que alude el Apóstol cuando dice:\nEstad en paz con Dios, o a la que se refiere el salmista al afirmar: Mucha paz tienen los\nque aman tus leyes, y nada los hace tropezar.\n\nEsta paz no se logra ni con los lazos de la más íntima amistad ni con una profunda\nsemejanza de carácter, si todo ello no está fundamentado en una total comunión de\nnuestra voluntad con la voluntad de Dios. Una amistad fundada en deseos pecaminosos,\nen pactos que arrancan de la injusticia y en el acuerdo que parte de los vicios nada tiene\nque ver con el logro de esta paz. El amor del mundo y el amor de Dios no concuerdan\n\nentre sí, ni puede uno tener su parte entre los hijos de Dios si no se ha separado antes del\nconsorcio de los que viven según la carne. Mas los que sin cesar se esfuerzan por\nmantener la unidad del Espíritu con el vínculo de la paz jamás se apartan de la ley divina,\ndiciendo, por ello, fielmente en la oración: Hágase tu voluntad así en la tierra como en el\ncielo.\n\nEstos son los que obran la paz, éstos los que viven santamente unánimes y concordes,\ny por ello merecen ser llamados con el nombre eterno de hijos de Dios y coherederos con\nCristo; todo ello lo realiza el amor de Dios y el amor del prójimo, y de tal manera lo realiza\nque ya no sienten ninguna adversidad ni temen ningún tropiezo, sino que, superado el\ncombate de todas las tentaciones, descansan tranquilamente en la paz de Dios, por\nnuestro Señor Jesucristo, que, con el Padre y el Espíritu Santo, vive y reina por los siglos\nde los siglos. Amén."
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Tengamos para con Dios un corazón íntegro y sincero, *hagamos su voluntad,\nguardemos sus mandamientos.\nV. En esto consiste el perfecto amor de Dios.\nR. Hagamos su voluntad, guardemos sus mandamientos.",
+    "ref": "Cf. Is 38, 3; 1 Jn 2, 6; 5, 3; 2, 5"
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Señor, tú que te has dignado redimirnos y has querido hacernos hijos tuyos, míranos\nsiempre con amor de padre y haz que cuantos creemos en Cristo, tu Hijo, alcancemos la\nlibertad verdadera y la herencia eterna. Por nuestro Señor Jesucristo."
+   }
+  ]
+ },
+ "mar": {
+  "oficio": [
+   {
+    "tipo": "lectura1",
+    "texto": "Del libro del profeta Amós 9, 1-15\n\nSALVACIÓN DE LOS JUSTOS\n\nEn aquellos días, vi al Señor de pie junto al altar, me dijo:\n«¡Golpea los capiteles y que se desplomen los umbrales! Hazlos trizas sobre las cabezas\n\nde todos, y a los que queden los mataré yo a espada; no escapará ni un fugitivo, ni un\nevadido se salvará. Aunque perforen hasta el infierno, de allí los sacará mi mano; aunque\nsuban hasta el cielo, de allí los derribaré; aunque se escondan en la cumbre del Carmelo,\nallí los descubriré y prenderé; aunque se oculten de mis ojos en lo profundo del mar, allá\nenviaré la serpiente que los muerda; aunque vayan prisioneros delante de sus enemigos,\nallá enviaré la espada que los mate; volveré contra ellos mis ojos para mal, y no para\nbien.»\n\nEl Señor de los ejércitos toca la tierra y se derrite, y desfallecen sus habitantes. La hace\ncrecer como el Nilo, y menguar como el río de Egipto; construye en el cielo su morada,\ncimienta sobre la tierra su bóveda; convoca las aguas del mar, y las derrama sobre la\nsuperficie de la tierra. «El Señor» es su nombre.\n\n«¿No sois para mí como etíopes, hijos de Israel? -dice el Señor- ¿No hice subir a Israel\ndel país de Egipto, como a los filisteos de Creta y a los sirios de Quir? Mirad, los ojos del\nSeñor se vuelven contra el reino pecador, lo aniquilaré de la superficie de la tierra; pero no\naniquilaré a la casa de Jacob -oráculo del Señor-. Daré órdenes para que zarandeen a\nIsrael entre las naciones, como se zarandea una criba sin que caiga un grano a tierra. Los\npecadores de mi pueblo morirán a espada, los que dicen: \"No se acerca, no nos alcanza la\ndesgracia.\"\n\nAquel día levantaré la tienda caída de David, taparé sus brechas, levantaré sus ruinas\ncomo en otros tiempos. Para que posean las primicias de Edom y de todas las naciones\ndonde se invocó mi nombre -oráculo del Señor-.\n\nMirad que llegan días -oráculo del Señor- en que el que ara seguirá de cerca al segador;\nel que pisa las uvas, al sembrador; los montes manarán vino, y fluirán los collados. Haré\nvolver los cautivos de Israel, reconstruirán las ciudades destruidas y las habitarán,\nplantarán viñas y, beberán de su vino, cultivarán huertos y comerán de sus frutos. Los\nplantaré en su suelo, y no serán arrancados de su tierra que yo les di -dice el Señor, tu\nDios-.»",
+    "anio": "I"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. «Para que busquen al Señor todos los hombres y todas las naciones que invocan mi\nnombre, * volveré y reconstruiré la tienda de David que está caída», dice el Señor.\nV. Dios intervino para procurarse entre los gentiles un pueblo para su nombre, según lo\ndice la Escritura.\nR. «Volveré y reconstruiré la tienda de David que está caída», dice el Señor.",
+    "anio": "I",
+    "ref": "Cf. Hch 15, 16-17. 14"
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "De la segunda carta del apóstol san Pedro 2, 1-9\n\nLOS FALSOS DOCTORES\n\nHermanos: Hubo también falsos profetas en el pueblo, como también entre vosotros\nhabrá falsos maestros. Éstos introducirán sectas perniciosas, llegarán hasta a negar al\nSeñor que los rescató y atraerán sobre sí una rápida ruina. Muchos seguirán sus torpezas\ny a causa de ellos será difamada la doctrina de la verdad. Llevados de su avaricia, se\naprovecharán de vosotros con cuentos y engaños; pero su condena hace ya tiempo que\nestá en acción y su ruina está en vela.\n\nDios no perdonó a los ángeles pecadores: después de haberlos precipitado en el\ninfierno, los recluyó en sus cavernas tenebrosas y los reservó para el juicio. No perdonó al\nmundo antiguo: hizo caer el diluvio sobre aquel mundo de impíos, preservando sólo a\nNoé, heraldo de la justicia divina, con otras siete personas. Condenó a la destrucción a las\nciudades de Sodoma y Gomorra, reduciéndolas a cenizas, para escarmiento de los futuros\nimpíos.\n\nPero libró al justo Lot, que era acosado por la conducta desenfrenada de aquellos\ndisolutos y que, viviendo entre ellos, sentía día tras día su alma justa atormentada por las\niniquidades que tenía que ver y oír, pues el Señor sabe librar de la prueba a los hombres\njustos y reserva a los malvados para castigarlos en el día del juicio.",
+    "anio": "II"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Guardaos de los falsos profetas, que vienen a vosotros disfrazados de ovejas, * pero\npor dentro son lobos rapaces.\nV. Surgirán muchos falsos profetas, que obrarán grandes señales y prodigios y engañarán\na muchos.\n\nR. Pero por dentro son lobos rapaces.",
+    "anio": "II",
+    "ref": "Mt 7, 15; 24, 11. 24"
+   },
+   {
+    "tipo": "lectura2",
+    "texto": "De los sermones de san Bernardo, abad\n(Sermón 5 sobre diversas materias, 1-4: Opera omnia, edición cisterciense, 6, 1 [1970],\n\n98-103)\nME PONDRÉ DE CENTINELA PARA ESCUCHAR LO QUE ME DICE\n\nLeemos en el Evangelio que en cierta ocasión, al predicar el Salvador y al exhortar a\nsus discípulos a participar de su pasión comiendo sacramentalmente su carne, hubo\nquienes dijeron: Este modo de hablar es duro. Y dejaron ya de ir con él. Preguntados los\ndemás discípulos si también ellos querían marcharse, respondieron: Señor, ¿a quién vamos\na acudir? Tú tienes palabras de vida eterna.\n\nLo mismo os digo yo, queridos hermanos. Hasta ahora para algunos es evidente que las\npalabras que dice Cristo son espíritu y son vida, y por eso lo siguen. A otros, en cambio,\nles parecen inaceptables y tratan de buscar al margen de él un mezquino consuelo. Está\nllamando la sabiduría por las plazas, en el espacioso camino que lleva a la perdición, para\napartar de él a los que por él caminan.\n\nFinalmente, dice: Durante cuarenta años aquella generación me asqueó, y dije: \"Es un\npueblo de corazón extraviado\". Y en otro salmo se lee: Dios ha hablado una vez. Es cierto:\nuna sola vez. Porque siempre está hablando, ya que su palabra es una sola, sin\ninterrupción, constante, eterna.\n\nEsta voz hace reflexionar a los pecadores. Acusa los desvíos del corazón: y en él vive, y\ndentro de él habla. Está realizando, efectivamente, lo que manifestó por el profeta,\ncuando decía: Hablad al corazón de Jerusalén.\n\nVed, queridos hermanos, qué provechosamente nos advierte el salmista que, si\nescuchamos hoy su voz, no endurezcamos nuestros corazones. Casi idénticas palabras\nencontramos en el Evangelio y en el salmista. El Señor nos dice en el Evangelio: Mis\novejas escuchan mi voz. Y el santo David dice en el salmo: Su pueblo (evidentemente el\ndel Señor), el rebaño que él guía, ojalá escuchéis hoy su voz: \"No endurezcáis el corazón.\"\n\nEscucha, finalmente, las palabras del profeta Habacuc. No usa de eufemismos, sino de\nexpresiones claras, pero que expresan solicitud, para dirigirse a su pueblo: Me pondré de\ncentinela, en pie vigilaré, velaré para escuchar lo que me dice, qué responde a mis quejas.\nTambién nosotros, queridos hermanos, pongámonos de centinela, porque es tiempo de\nlucha.\n\nAdentrémonos en lo íntimo del corazón, donde vive Cristo. Permanezcamos en la\nsensatez, en la prudencia, sin poner la confianza en nosotros, fiándonos de nuestra débil\nguardia."
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Caminad mientras tenéis luz, para que las tinieblas no os sorprendan. * Mientras tenéis\nluz, creed en la luz, para que seáis hijos de la luz.\nV. Yo he venido a este mundo para que los que no ven vean.\nR. Mientras tenéis luz, creed en la luz, para que seáis hijos de la luz.",
+    "ref": "Jn 12, 35. 36; 9, 39"
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Señor, tú que te has dignado redimirnos y has querido hacernos hijos tuyos, míranos\nsiempre con amor de padre y haz que cuantos creemos en Cristo, tu Hijo, alcancemos la\nlibertad verdadera y la herencia eterna. Por nuestro Señor Jesucristo."
+   }
+  ]
+ },
+ "mie": {
+  "oficio": [
+   {
+    "tipo": "lectura1",
+    "texto": "Comienza el libro del profeta Oseas 1, 1-9; 3, 1-5\n\nEL PROFETA OSEAS, SÍMBOLO DEL AMOR DE DIOS HACIA EL PUEBLO\n\nPalabra del Señor que recibió Oseas, hijo de Beerí, durante los reinados de Ozías,\nYotán, Ajaz y Ezequías, reyes de Judá, y de Jeroboam, hijo de Joás, rey de Israel.\n\nComienzan las palabras del Señor a Oseas: Dijo el Señor a Oseas:\n«Anda, toma una mujer prostituta, y engendra hijos de prostitución, porque toda la\n\ntierra se ha prostituido, apartándose del Señor.»\nÉl fue y tomó a Gomer, hija de Dibláyitrí, la cual concibió y le parió un hijo. El Señor le\n\ndijo:\n«Llámalo Yizreel, porque muy pronto tomaré cuentas de la sangre de Yizreel a la casa\n\nde Jehú y pondré fin al reino de Israel. Aquel día romperé el arco de Israel en el valle de\nYizreel.»\n\nElla volvió a concebir y parió una hija. El Señor le dijo:\n«Llámala \"No-compadecida\" porque ya no me compadeceré de la casa de Israel. Pero\n\nde la casa de Judá me compadeceré y la salvaré por el Señor su Dios: No los salvaré con\narcos ni espadas ni batallas ni caballos ni jinetes.»\n\nGomer destetó a «No-compadecida», y concibió y parió un hijo. Dijo el Señor:\n«Llámalo \"No-es-mi-pueblo\", porque vosotros no sois mi pueblo, ni yo seré para\n\nvosotros \"El-que-soy\".»\nVolvió a decirme el Señor:\n«Anda, ama a una mujer amante de otro y adúltera: así ama el Señor a los israelitas, y\n\nellos se entregan a dioses ajenos y les gustan las tortas de uvas.»\nYo me la compré por quince monedas de plata y fanega y media de cebada, y le dije:\n«Por incontables días vivirás conmigo: no adulterarás ni serás de otro y yo seré tuyo.»\nPorque por incontables días vivirán los israelitas sin rey ni príncipe, sin sacrificios ni\n\naltares, sin ornamentos, ni imágenes. Después volverán los israelitas buscando al Señor,\nsu Dios, y a David, su rey, y adorarán al Señor, su bien, al fin de los tiempos.",
+    "anio": "I"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Vosotros sois linaje escogido, sacerdocio regio. * Vosotros que en otro tiempo no erais\npueblo sois ahora pueblo de Dios.\nV. Ahí donde se dijo: «No sois mi pueblo», serán llamados «hijos del Dios vivo».\nR. Vosotros que en otro tiempo no erais pueblo sois ahora pueblo de Dios.",
+    "anio": "I",
+    "ref": "1 Pe 2, 9. 10; Rm 9, 26"
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "De la segunda carta del apóstol san Pedro 2, 9-22\n\nREPROBACIÓN DE LOS CORROMPIDOS Y ENGAÑADORES\n\nHermanos: El Señor sabe librar de la prueba a los hombres justos y reserva a los\nmalvados para castigarlos en el día del juicio. Sobre todo castigará a los que, por deseos\nimpuros, andan tras la carne y desprecian la soberanía del Señor.\n\nSon osados, pagados de sí mismos, no temen insultar a los seres gloriosos, cuando ni\nlos mismos ángeles superiores en fuerza y poder, se atreven a pronunciar en el tribunal de\nDios ninguna acusación injuriosa contra tales seres gloriosos. Estos hombres, por el\ncontrario, son como animales desprovistos de razón para ser capturados y destruidos.\nVituperan cosas que no entienden; serán destruidos igual que los animales sufriendo así el\ncastigo merecido por su iniquidad.\n\nSe complacen en entregarse desvergonzadamente al libertinaje en pleno día, ¡hombres\ncorrompidos e inmundos!, y se gozan en engañaros mientras están con vosotros en las\ncomidas comunitarias. Brillan sus ojos de pasión por la adúltera y no se hartan de pecado,\nseducen a las almas vacilantes, tienen entregado el corazón a la avaricia, son hijos de\nmaldición. Abandonando el camino recto, se extraviaron y siguieron la senda de Balaam,\nhijo de Beor, que prefirió la iniquidad de la recompensa, pero recibió una reprensión por\nsu maldad, pues una muda bestia de carga, expresándose en palabras humanas, reprimió\nla insensatez del profeta.\n\nÉstos son fuentes sin agua, nubes empujadas por el huracán: para ellos está reservada\nla oscuridad de las tinieblas. Pronunciando discursos ampulosos y sin sustancia, seducen a\nla concupiscencia de la carne y al libertinaje a los que apenas se habían escapado de los\nque viven en el error. Les prometen la libertad, cuando ellos mismos son esclavos de la\ncorrupción, porque cada cual es esclavo del que lo ha vencido.\n\nSi, después de haber huido de las torpezas del mundo mediante el perfecto\nconocimiento del Señor y Salvador, Jesucristo, vuelven a enredarse en ellas y se dejan\ndominar, su situación última será peor que la primera. Mejor les fuera no haber conocido\nel camino del bien que, después de haberlo conocido, abandonar la doctrina del Señor que\nles fue comunicada. En ellos se cumple exactamente lo que dice el proverbio: «Volvióse el\nperro a su propio vómito.» Y también: «Lavóse la puerca para revolcarse en el lodo.»",
+    "anio": "II"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Tomad en consideración todo lo que es verdadero, noble y puro; *seguid practicando\nesto, y el Dios de la paz estará con vosotros.\nV. Estad en vela y manteneos firmes en la fe, portaos varonilmente y con toda fortaleza.\nR. Seguid practicando esto, y el Dios de la paz estará con vosotros.",
+    "anio": "II",
+    "ref": "Flp 4, 8. 9; 1 Co 16, 13"
+   },
+   {
+    "tipo": "lectura2",
+    "texto": "De los sermones de san Bernardo, abad\n(Sermón 5 sobre diversas materias, 4-5: Opera omnia, edición cisterciense, 6,1 [1970]\n\n103-104)\n\nSOBRE LOS GRADOS DE LA CONTEMPLACIÓN\n\nVigilemos en pie, apoyándonos con todas nuestras fuerzas en la roca firmísima que es\nCristo, como está escrito: Afianzó mis pies sobre roca, y aseguró mis pasos. Apoyados y\nafianzados en esta forma, veamos qué nos dice y qué decimos a quien nos pone\nobjeciones.\n\nAmadísimos hermanos, éste es el primer grado de la contemplación: pensar\nconstantemente qué es lo que quiere el Señor, qué es lo que le agrada, qué es lo que\nresulta aceptable en su presencia. Y, pues todos faltamos a menudo, y nuestro orgullo\nchoca contra la rectitud de la voluntad del Señor, y no puede aceptarla ni ponerse de\nacuerdo con ella, humillémonos bajo la poderosa mano del Dios altísimo y esforcémonos\nen poner nuestra miseria a la vista de su misericordia, con estas palabras: Sáname, Señor,\ny quedaré sano; sálvame y quedaré a salvo. Y  también aquellas otras: Señor, ten\nmisericordia, sáname, porque he pecado contra ti.\n\nUna vez que se ha purificado la mirada de nuestra alma con esas consideraciones, ya\nno nos ocupamos con amargura en nuestro propio espíritu, sino en el espíritu divino, y ello\ncon gran deleite. Y ya no andamos pensando cuál sea la voluntad de Dios respecto a\nnosotros, sino cuál sea en sí misma.\n\nY, ya que la vida está en la voluntad del Señor, indudablemente lo más provechoso y útil\npara nosotros será lo que está en conformidad con la voluntad del Señor. Por eso, si nos\nproponemos de verdad conservar la vida de nuestra alma, hemos de poner también\nverdadero empeño en no apartarnos lo más mínimo de la voluntad divina.\n\nConforme vayamos avanzando en la vida espiritual, siguiendo los impulsos del Espíritu,\nque ahonda en lo más íntimo de Dios, pensemos en la dulzura del Señor, qué bueno es en\nsí mismo. Pidamos también, con el salmista, gozar de la dulzura del Señor, contemplando,\nno nuestro propio corazón, sino su templo, diciendo con el mismo salmista: Cuando mi\nalma se acongoja, te recuerdo.\n\nEn estos dos grados está todo el resumen de nuestra vida espiritual: Que la propia\nconsideración ponga quietud y tristeza en nuestra alma, para conducir a la salvación, y\nque nos hallemos como en nuestro elemento en la consideración divina, para lograr el\nverdadero consuelo en el gozo del Espíritu Santo. Por el primero, nos fundaremos en el\nsanto temor y en la verdadera humildad; por el segundo, nos abriremos a la esperanza y\nal amor."
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Nadie puede venir a mí, si no es atraído por el Padre, que me ha enviado. * Todo el que\nescucha al Padre y se deja instruir por él viene a mí.\nV. Está escrito en los profetas: «Todos tendrán por maestro al mismo Dios.»\nR. Todo el que escucha al Padre y se deja instruir por él viene a mí.",
+    "ref": "Jn 6, 44-45"
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Señor, tú que te has dignado redimirnos y has querido hacernos hijos tuyos, míranos\nsiempre con amor de padre y haz que cuantos creemos en Cristo, tu Hijo, alcancemos la\nlibertad verdadera y la herencia eterna. Por nuestro Señor Jesucristo."
+   }
+  ]
+ },
+ "jue": {
+  "oficio": [
+   {
+    "tipo": "lectura1",
+    "texto": "Del libro del profeta Oseas 2, 2. 6-24\n\nISRAEL, CASTIGADO POR SU INFIDELIDAD, VOLVERÁ A DIOS\n\nEsto dice el Señor:\n«¡Acusad a vuestra madre, ponedle pleito! Porque ella no es ya mi mujer, ni yo soy su\n\nmarido. Arrancadle de su rostro sus prostituciones y de su pecho sus adulterios.\nPues yo voy a cercar su sendero con espinos, derribaré sus tapias, y no encontrará su\n\ncamino. Irá tras sus amantes y no los hallará, los buscará y no los encontrará y entonces\ndirá: \"Voy a volver a mi marido, al primero: porque entonces me iba mejor que ahora.\"\n\nY he aquí que yo la cortejaré, me la llevaré al desierto, y allí le hablaré al corazón. Le\ndevolveré sus antiguos huertos, y a Acor, Valle de la Desgracia, lo convertiré en Puerta de\nla Esperanza, y ella me responderá allí como en los días de su juventud, como el día en\nque la saqué de Egipto. Aquel día -oráculo del Señor- me llamará: \"Esposo mío\", no me\nllamará: \"Baal mío\". Quitaré de su boca los nombres de los ídolos, y no se acordará más\nde invocarlos. Aquel día haré para ellos una alianza con las fieras del campo y las aves del\ncielo y los reptiles de la tierra. Romperé en su país arco, espada y armas, y los haré vivir\ntranquilos.\n\nTe desposaré conmigo para siempre, me casaré contigo en derecho y justicia, en la\nbenignidad y me casaré contigo en fidelidad, y tú conocerás al Señor. Aquel día -oráculo\ndel Señor- yo responderé a los cielos, ellos responderán a la tierra, la tierra responderá al\ntrigo y al vino y al aceite, y ellos responderán a Yizreel, y la sembraré para mí en el país,\nme compadeceré de \"No-compadecida\", y diré a \"No-es-mi-pueblo\": \"Tú eres mi pueblo\",\ny él responderá: \"Tú eres mi Dios.\"»",
+    "anio": "I"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Llegó la boda del Cordero, y su esposa se ha embellecido. * Dichosos los invitados al\nbanquete de bodas.\nV. Me casaré contigo en fidelidad, y tú conocerás a Señor.\nR. Dichosos los invitados al banquete de bodas.",
+    "anio": "I",
+    "ref": "Ap 19, 7. 9; Os 2, 20"
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "De la segunda carta del apóstol san Pedro 3, 1-10\n\nDIOS ES FIEL A SUS PROMESAS\n\nHermanos: Ésta es ya la segunda carta que os escribo. En las dos he procurado excitar\ncon mi recuerdo vuestro sano criterio. Así traeréis a la memoria las palabras predichas por\nlos santos profetas y la enseñanza del Señor y Salvador, que os comunicaron vuestros\napóstoles.\n\nAnte todo habéis de saber que en los últimos tiempos vendrán escarnecedores con sus\nburlas, que llevarán una vida en conformidad con sus concupiscencias y que dirán: «¿Qué\nse ha hecho de la promesa de su venida? Desde que murieron nuestros padres, todo sigue\nlo mismo que desde el principio de la creación.» Estos tales se olvidan de propósito que ya\nen tiempos muy antiguos hubo cielos y hubo tierra que salió del agua y adquirió\nestabilidad en medio de las aguas por la palabra de Dios, y que por ellas pereció el mundo\nde entonces, anegado en el diluvio. Pero los cielos y la tierra actuales están guardados por\nla misma palabra de Dios para el fuego; están reservados para el día del juicio Y de la\ndestrucción de los impíos.\n\nUna cosa importantísima, carísimos, no debéis olvidar. Y  es que para el Señor un día es\ncomo mil años, y mil años como un día. No es tardo el Señor en el cumplimiento de sus\npromesas, como algunos piensan. Lo que hace es aguardaros pacientemente, porque no\nquiere que nadie perezca, sino que todos vengáis a arrepentiros.\n\nPero vendrá el día del Señor, como un ladrón: entonces desaparecerán los cielos con\nestruendo, los elementos abrasados se disolverán y la tierra con todas sus obras dejará de\nexistir.",
+    "anio": "II"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Si el amo de la casa supiera a qué hora de la noche ha de venir el ladrón, estaría en\nvela y no le dejaría horadar la pared de su casa. * Así, también vosotros estad\npreparados.\n\nV. El día del Señor vendrá corno un ladrón: entonces desaparecerán los cielos con\nestruendo.\nR. Así, también vosotros estad preparados.",
+    "anio": "II",
+    "ref": "Mt 24, 43-44; 2 Pe 3, 10"
+   },
+   {
+    "tipo": "lectura2",
+    "texto": "Del comentario de san Bruno, presbítero, sobre los salmos\n(Salmo 83: Edición de la Cartuja de Pratis, 1891, 376-377)\n\nSI ME OLVIDO DE TI, JERUSALÉN\n\n¡Qué deseables son tus moradas! Mi alma se consume y anhela llegar a los atrios del\nSeñor, es decir, desea llegar a la Jerusalén del cielo, la gran ciudad del Dios vivo.\n\nEl salmista nos muestra cuál sea la razón por la que desea llegar a los atrios del Señor:\n\"Lo deseo, Señor, Dios de los ejércitos celestiales, Rey mío y Dios mío, porque son\ndichosos los que viven en tu casa, la Jerusalén celestial\". Es como si dijera: ¿Quién no\nanhelará llegar a tus atrios, siendo tú el mismo Dios, el Señor de los ejércitos, el Rey del\nuniverso? ¿Quién no anhelará penetrar en tu tabernáculo si son dichosos los que viven en\ntu casa?\" Atrios y casa significan aquí lo mismo. Y  cuando dice aquí dichosos ya se\nsobreentiende que tienen tanta dicha cuanta el hombre es capaz de concebir. Por ello, son\ndichosos los que habitan en sus atrios, porque alaban a Dios con un amor totalmente\ndefinitivo, que durará por los siglos de los siglos, es decir, eternamente; y no podrían\nalabar eternamente, sino fueran eternamente dichosos.\n\nEsta dicha nadie puede alcanzarla por sus propias fuerzas, aunque posea ya la\nesperanza, la fe y el amor; únicamente la logra el hombre dichoso que encuentra en ti su\nfuerza, y con ella dispone su corazón para que llegue a esta suprema felicidad, que es lo\nmismo que decir: únicamente alcanza esta suprema dicha aquel que, después de\nejercitarse en las diversas virtudes y buenas obras, recibe además el auxilio de la gracia\ndivina; pues por sí mismo nadie puede llegar a esta suprema felicidad, como lo afirma el\nmismo Señor: Nadie ha subido al cielo -se entiende por sí mismo-, sino el Hijo del hombre\nque está en el cielo.\n\nAfirmo que dispone su corazón para subir hasta esta suprema felicidad, porque, de\nhecho, el hombre se encuentra en un árido valle de lágrimas, es decir, en un mundo que,\nen comparación con la vida eterna, que viene a ser como un monte repleto de alegría, es\nun valle profundo donde abundan los sufrimientos y las tribulaciones.\n\nPero, como sea que el profeta declara dichoso al hombre que encuentra en ti su fuerza,\npodría alguien preguntarse: \"¿Concede Dios su ayuda para conseguir esto?\" A ello\nrespondo: \"Sin duda alguna, Dios concede a los santos este auxilio\". En efecto, nuestro\nlegislador, Cristo, el mismo que nos dio la ley, nos ha dado y continuará dándonos sin\ncesar sus bendiciones; con ellas nos irá elevando hacia la dicha suprema, y así subiremos,\nde altura en altura, hasta que lleguemos a contemplar a Cristo, el Dios de los dioses; él\nnos divinizará en la futura Jerusalén del cielo: por esto, allí podremos contemplar al Dios\nde los dioses, es decir, a la Santa Trinidad en sus mismos santos; es decir, nuestra\ninteligencia sabrá descubrir en nosotros mismos a aquel Dios a quien nadie en este mundo\npudo ver, y de esta forma Dios lo será todo en todos."
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Yo te ruego por todos los que han de creer en mí, para que todos sean uno, así como\ntú, Padre, estás en mí y yo en ti. Yo les he dado la gloria que tú me diste; * para que sean\nuno, como nosotros somos uno.\nV. Como tú me enviaste al mundo, así también yo los he enviado al mundo.\nR. Para que sean uno, como nosotros somos uno.",
+    "ref": "Jn 17, 20. 21. 22. 18"
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Señor, tú que te has dignado redimirnos y has querido hacernos hijos tuyos, míranos\nsiempre con amor de padre y haz que cuantos creemos en Cristo, tu Hijo, alcancemos la\nlibertad verdadera y la herencia eterna. Por nuestro Señor Jesucristo."
+   }
+  ]
+ },
+ "vie": {
+  "oficio": [
+   {
+    "tipo": "lectura1",
+    "texto": "Del libro del profeta Oseas 4, 1-10; 5, 1-7\n\nCORRUPCIÓN GENERAL DE ISRAEL Y DE LOS SACERDOTES\n\nEscuchad la palabra del Señor, hijos de Israel: el Señor llama a juicio a los habitantes\ndel país: porque no hay verdad, ni misericordia, ni respeto a Dios, sino perjurio y mentira,\nasesinato y robo, adulterio y libertinaje, homicidio tras homicidio. Por eso gime la tierra y\ndesfallecen sus habitantes: hasta las fieras del campo, hasta las aves del cielo, incluso los\npeces del mar desaparecen.\n\nQue no acuse el uno al otro, ni dé testimonio contra él, contra ti, sacerdote, va mi\nquerella. De día tropiezas tú, de noche tropieza contigo el profeta. Perecerá tu patria,\nperecerá mi pueblo, por falta de conocimiento. Porque has rehusado el conocimiento, yo\nte rehusaré el sacerdocio; te olvidaste de la ley del Señor, también yo me olvidaré de tus\nhijos.\n\nCuantos más son, más pecan contra mí; cambiaré su dignidad en ignominia. Se\nalimentan del pecado de mi pueblo y su alma busca la iniquidad. Será del sacerdote lo que\nsea del pueblo, le tomaré cuentas por sus costumbres, le pagaré por sus maldades.\nComerán y no se saciarán, se prostituirán con los ídolos sin dar fruto porque abandonaron\nal Señor para entregarse a la fornicación.\n\nEscuchadlo, sacerdotes; atended, israelitas; oídlo, casa real: os llega el juicio. Fuisteis\ntrampa en Atalaya, red tendida sobre el Tabor y fosa cavada en Setim. Y  los castigaré a\ntodos: yo conozco a Efraím, no ignoro a Israel; tú, Efraím, has fornicado, Israel está\ncontaminado. No permiten sus maldades que se conviertan a su Dios porque llevan dentro\nun espíritu de fornicación y no conocen al Señor. La arrogancia de Israel testimonia contra\nél, Efraím caerá por sus pecados, y caerá con ella Judá. Con ovejas y vacas buscarán al\nSeñor, y no lo encontrarán, porque se ha alejado de ellos; se rebelaron contra el Señor,\nengendraron hijos bastardos: pues ahora el enemigo devorará sus posesiones.",
+    "anio": "I"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Pueblo mío, ¿qué te he hecho, o en qué te he contristado? Respóndeme. * ¿Qué más\npude hacer por ti y no lo hice?\nV. ¿Por qué has rehusado el conocimiento, y has olvidado la ley del Señor?\nR. ¿Qué más pude hacer por ti y no lo hice?",
+    "anio": "I",
+    "ref": "Cf. Mi  6, 3; cf. Os 4, 6"
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "De la segunda carta del apóstol san Pedro 3, 11-18\n\nEL SEÑOR ES FIEL: ESPEREMOS SU VENIDA\n\nHermanos: Si todo se ha de disolver de este modo, ¡qué vida tan santa y tan entregada\na Dios tiene que ser la vuestra! Estad en espera y apresurad la venida del día del Señor.\nEn ese día los cielos incendiados se disolverán y los elementos abrasados se\ndesintegrarán. Pero nosotros conforme a la promesa del Señor esperamos cielos nuevos v\ntierra nueva, en los que tiene su morada la santidad.\n\nPor eso, carísimos, mientras esperáis estos acontecimientos, procurad con toda\ndiligencia que él os encuentre en paz, sin mancha e irreprensibles. Considerad esta\npaciente espera de nuestro Señor como una oportunidad para alcanzar la salud. En este\nsentido os escribió también nuestro amado hermano Pablo, conforme a la sabiduría que\nDios le concedió. Así lo enseña en todas sus cartas cuando habla de estos temas. En ellas\nhay algunos pasajes difíciles de entender, cuyo sentido falsean los hombres que no tienen\ninstrucción ni firmeza en la fe. Así lo hacen también con las demás Escrituras, para su\npropia perdición.\n\nVosotros, pues, carísimos, avisados a tiempo, estad alerta, no sea que, arrastrados por\nel error de esos libertinos, vengáis a caer de vuestra firmeza en la fe. Id creciendo en la\ngracia y en el conocimiento de nuestro Señor y Salvador, Jesucristo. A él sea la gloria\nahora y hasta el día de la eternidad.",
+    "anio": "II"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Mirad, yo voy a crear un cielo nuevo y una tierra nueva; habrá gozo y alegría perpetua\npor lo que voy a crear. * Voy a renovar todas las cosas.\nV. Voy a transformar a Jerusalén en alegría y a su pueblo en gozo.\nR. Voy a renovar todas las cosas.",
+    "anio": "II",
+    "ref": "Is 65, 17. 18; Ap 21, 5"
+   },
+   {
+    "tipo": "lectura2",
+    "texto": "De los sermones del beato Isaac, abad del monasterio de Stella\n(Sermón 11: PL. 194, 1728-1729)\n\nNADA QUIERE PERDONAR CRISTO SIN LA IGLESIA\n\nHay dos cosas que son de la exclusiva de Dios: la honra de la confesión y el poder de\nperdonar. Hemos de confesarnos a él. Hemos de esperar de él el perdón. ¿Quién puede\nperdonar pecados, fuera de Dios? Por eso, hemos de confesar ante él. Pero, al desposarse\nel Omnipotente con la débil, el Altísimo con la humilde, haciendo reina a la esclava, puso\nen su costado a la que estaba a sus pies. Porque brotó de su costado. En él le otorgó las\narras de su matrimonio. Y, del mismo modo que todo lo del Padre es del Hijo, y todo lo del\nHijo es del Padre, porque por naturaleza son uno, igualmente el Esposo dio todo lo suyo a\nla esposa, y la esposa dio todo lo suyo al Esposo, y así la hizo uno consigo mismo y con el\nPadre: Éste es mi deseo, dice Cristo, dirigiéndose al Padre en favor de su esposa, que ellos\ntambién sean uno en nosotros, como tú en mi y yo en ti.\n\nPor eso, el Esposo, que es uno con el Padre y uno con la esposa, hizo desaparecer de\nsu esposa todo lo que halló en ella de impropio, lo clavó en la cruz y en ella expió todos\nlos pecados de la esposa. Todo lo borró por el madero. Tomó sobre sí lo que era propio de\nla naturaleza de la esposa y se revistió de ello; a su vez, le otorgó lo que era propio de la\nnaturaleza divina. En efecto, hizo desaparecer lo que era diabólico, tomó sobre sí lo que\nera humano y comunicó lo divino. Y así es del Esposo todo lo de la esposa. Por eso, el que\nno cometió pecado y en cuya boca no se halló engaño pudo muy bien decir: Misericordia,\nSeñor, que desfallezco. De esta manera, participa él en la debilidad y en el llanto de su\n\nesposa, y todo resulta común entre el esposo y la esposa, incluso el honor de recibir la\nconfesión y el poder de perdonar los pecados; por ello dice: Ve a presentarte al sacerdote.\n\nNada podría perdonar la Iglesia sin Cristo: nada quiere perdonar Cristo sin la Iglesia.\nNada puede perdonar la Iglesia; sino al que se arrepiente, o sea, al que ha sido tocado\npor Cristo. Nada quiere mantener perdonado Cristo al que desprecia a la Iglesia. Pues lo\nque Dios ha unido que no lo separe el hombre. Es éste un gran misterio: y yo lo refiero a\nCristo y a la Iglesia.\n\nNo quites la cabeza al cuerpo. Así no podría estar el Cristo total en ninguna parte. En\nningún sitio está entero Cristo sin su Iglesia. En ningún sitio está entera la Iglesia sin\nCristo. Porque el Cristo entero e integral es cabeza y cuerpo. Por eso dice el Evangelio:\nNadie ha subido al cielo, sino el Hijo del hombre, que está en el cielo. Y éste es el único\nhombre que puede perdonar los pecados."
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Todos los hombres pecaron y se hallan privados de la gloria de Dios; son justificados\ngratuitamente, mediante la gracia de Cristo, en virtud de la redención realizada en él; * a\nquien Dios ha propuesto como instrumento de propiciación, por su propia sangre y\nmediante la fe.\nV. Así como todos mueren, asociados a Adán, así todos revivirán, asociados a Cristo.\nR. A quien Dios ha propuesto como instrumento de propiciación, por su propia sangre y\nmediante la fe.",
+    "ref": "Rm 3, 23-25; 1 Co 15, 22"
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Señor, tú que te has dignado redimirnos y has querido hacernos hijos tuyos, míranos\nsiempre con amor de padre y haz que cuantos creemos en Cristo, tu Hijo, alcancemos la\nlibertad verdadera y la herencia eterna. Por nuestro Señor Jesucristo."
+   }
+  ]
+ },
+ "sab": {
+  "oficio": [
+   {
+    "tipo": "lectura1",
+    "texto": "Del libro del profeta Oseas 6, 1 — 7, 2\n\nINUTILIDAD DE LA FALSA CONVERSIÓN\n\nEsto dice el Señor:\n«En su aflicción me buscarán, diciendo: \"Volvamos al Señor. Él, que nos despedazó, nos\n\nsanará; él, que nos hirió, nos vendará. En dos días nos sanará, y al tercero nos levantará,\ny viviremos en su presencia. Esforcémonos por conocer al Señor: su amanecer es como la\naurora, y su sentencia surge como la luz. Bajará sobre nosotros como lluvia de primavera\nque empapa la tierra.\"\n\n¿Qué haré de ti, Efraín? ¿Qué haré de ti, Judá? Vuestro amor es como nube mañanera,\ncomo rocío de madrugada que se evapora. Por eso os herí por medio de los profetas, os\ncondené con la palabra de mi boca. Porque yo quiero misericordia y no sacrificios;\nconocimiento de Dios, más que holocaustos.\n\nEllos en la ciudad de Adam quebrantaron la alianza, se rebelaron contra mí. Galaad es\nciudad malhechora, con huellas de sangre. Como bandas de salteadores se agrupan los\nsacerdotes, camino de Siquem asesinan, ejecutan sus malos pensamientos. En Betel he\nvisto abominaciones, allí se prostituye Efraín, se mancha Israel.\n\nCuando yo intento sanar a Israel, se manifiesta el pecado de Efraín, las maldades de\nSamaría; obran con falsedad, entran como ladrón en las casas, y como bandidos asaltan\npor los caminos. No consideran en su corazón que yo recuerdo todas sus maldades; los\nenvuelven sus iniquidades, que están presentes ante mis ojos.»",
+    "anio": "I"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Id y aprended lo que quiere decir esto: *Yo quiero misericordia y no sacrificios;\nconocimiento de Dios, más que holocaustos.\nV. Vuestro amor es como nube mañanera, como rocío de madrugada que se evapora.\nR. Yo quiero misericordia y no sacrificios; conocimiento de Dios, más que holocaustos.",
+    "anio": "I",
+    "ref": "Mt 9, 13; Os 6, 6. 4"
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "De la carta del apóstol san Judas 1-8. 12-13. 17-25\n\nCONTINUAD ORANDO EN EL ESPÍRITU SANTO Y CONSERVAOS EN LA CARIDAD DE DIOS\n\nJudas, siervo de Jesucristo y hermano de Santiago, a los amados por Dios Padre y\ncustodiados como posesión de Jesucristo, que han sido convocados: que Dios os conceda\nparticipar cada vez más de su misericordia, de su paz y de su amor.\n\nQueridos hermanos, tenía sumo interés en escribiros acerca de la salvación que nos\nconcierne a todos; y ahora me veo obligado a hacerlo. Quiero daros alientos para que\nsigáis luchando por conservar intacta la fe, esta fe que ha sido transmitida de una vez\npara siempre a los fieles. Es el caso que entre vosotros se han introducido solapadamente\nalgunos a quienes ya desde hace tiempo tiene señalados la Escritura para recibir esta\nsentencia. Son hombres impíos que convierten en libertinaje la gracia de nuestro Dios y\nniegan al único Dueño y Señor nuestro, Jesucristo.\n\nQuiero recordaros, aunque ya sabéis perfectamente todo esto, que el Señor, después de\nhaber salvado de Egipto a su pueblo, hizo luego perecer a los que no tuvieron fe; que\ncastigó a los ángeles que no conservaron su dignidad, sino que abandonaron su propia\nmorada, y envolviéndolos en tinieblas y reduciéndolos a eterna prisión los tiene reservados\npara el juicio del gran día; y que Sodoma y Gomorra y las ciudades circunvecinas, que\ncomo ellos fornicaron y se fueron tras una carne diferente, quedaron para escarmiento,\nsufriendo el castigo de un fuego eterno.\n\nA pesar de ello, también estos alucinados manchan como ellos su cuerpo, rechazan el\nseñorío de Cristo e insultan a los seres gloriosos. Son ellos deshonra de vuestros ágapes,\nen los cuales banquetean desvergonzadamente, apacentándose a sí mismos. Son nubes\nsin agua que el viento arrastra, árboles de final de otoño que no tienen fruto y están\ncompletamente secos y sin raíces, olas furiosas del mar que arrojan la espuma de su\ntorpeza, estrellas fugaces para las que está reservada la oscuridad de las tinieblas para\nsiempre.\n\nPero vosotros, carísimos, acordaos de las palabras dichas por los apóstoles de nuestro\nSeñor Jesucristo. Ellos os repetían: «En los últimos tiempos vendrán hombres sarcásticos\nque vivirán al capricho de sus pasiones en todo género de impiedad.» Éstos son los que\nintroducen discordias y no tienen otras miras que las terrenas, pues no poseen el espíritu\nde Dios. Pero vosotros, queridos hermanos, seguid edificándoos sobre el santísimo edificio\nde vuestra fe, continuad orando en el Espíritu Santo y conservaos en la caridad de Dios,\nesperando la misericordia de nuestro Señor Jesucristo para la vida eterna. A los que\n\nvacilan, tratad de convencerlos; a otros, salvadlos, arrancándolos del fuego; a otros, en\nfin, mostradles misericordia, pero con cautela, teniendo aversión aun a la túnica\ncontaminada por su cuerpo.\n\nA aquel que puede guardaros inmunes de pecado y haceros comparecer sin mancha y\ncon verdadero júbilo ante su gloria, al único Dios, salvador nuestro por medio de\nJesucristo nuestro Señor, la gloria, la majestad, el imperio y el poder, desde antes de los\nsiglos, ahora y por siempre jamás. Amén.",
+    "anio": "II"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Desechando la impiedad y las ambiciones del mundo, vivamos con sensatez, justicia y\nreligiosidad en esta vida; * aguardando la feliz esperanza y la manifestación de la gloria\ndel gran Dios y Salvador nuestro, Jesucristo.\nV. Miremos los unos por los otros, para estimularnos a la caridad y a las buenas obras.\nR. Aguardando la feliz esperanza y la manifestación de la gloria del gran Dios y Salvador\nnuestro, Jesucristo.",
+    "anio": "II",
+    "ref": "Tt 2, 12-13; Hb 10, 24"
+   },
+   {
+    "tipo": "lectura2",
+    "texto": "De los sermones de san Atanasio, obispo\n(Sermón sobre la encarnación del Verbo, 10: PG, 25,111-114)\n\nRENUEVA LOS TIEMPOS PASADOS\n\nEl Verbo de Dios, Hijo del mejor Padre, no abandonó la naturaleza humana corrompida.\nCon la oblación de su propio cuerpo, destruyó la muerte, castigo en que había incurrido el\ngénero humano. Trató de corregir su descuido, adoctrinándolo, y restauró todas las cosas\nhumanas con su eficacia y poder.\n\nEstas afirmaciones de los teólogos hallan apoyo en el testimonio de los discípulos del\nSalvador, como se lee en sus escritos: Nos apremia el amor de Cristo, al considerar que, si\nuno murió por todos, todos murieron. Murió por todos, para que los que viven ya no vivan\npara sí, sino para el que murió y resucitó por ellos, nuestro Señor Jesucristo. Y en otro\npasaje: Al que Dios había hecho un poco inferior a los ángeles, a Jesús, lo vemos ahora\ncoronado de gloria y honor por su pasión y muerte. Así, por la gracia de Dios, ha padecido\nla muerte para bien de todos. Más adelante, la Escritura prueba que el único que debía\nhacerse hombre era el Verbo de Dios, cuando dice: Dios, para quien y por quien existe\ntodo, juzgó conveniente, para llevar una multitud de hijos a la gloria, perfeccionar y\nconsagrar con sufrimientos al guía de su salvación. Con estas palabras, da a entender que\nel único que debía librar al hombre de su corrupción era el Verbo de Dios, el mismo que lo\nhabía creado desde el principio.\n\nPrueba además que el Verbo mismo tomó un cuerpo precisamente con el fin de\nofrendarse por los que tenían cuerpos semejantes. Y  así lo dice: Los hijos de una familia\nson todos de la misma carne y sangre, y de nuestra carne y sangre participó también él;\nasí, muriendo, aniquiló al que tenía el poder de la muerte, es decir, al diablo, y libró a\ntodos los que por miedo a la muerte pasaban la vida entera como esclavos. Ya que, al\ninmolar su propio cuerpo, acabó con la ley que pesaba contra nosotros y renovó el\nprincipio de vida con la esperanza de la resurrección.\n\nComo la muerte había cobrado fuerzas contra los hombres, de los mismos hombres, por\neso, se logró la victoria sobre la muerte y la resurrección para la vida por el mismo Verbo\nde Dios, hecho hombre para los hombres, así pudo decir muy bien aquel hombre lleno de\nCristo: Si por un hombre vino la muerte, por un hombre ha venido la resurrección. Si por\nAdán murieron todos, por Cristo todos volverán a la vida. Y lo demás que pone a\ncontinuación. Así que no morimos ya para ser condenados, sino para ser resucitados de\n\nentre los muertos. Esperan la común resurrección de todos. A su tiempo nos la dará Dios,\nque la hace y la comunica."
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Todos pecaron y todos están privados de la gloria de Dios, y son justificados\ngratuitamente por su gracia, mediante la redención de Cristo Jesús, * A quien constituyó\nsacrificio de propiciación mediante la fe en su sangre.\nV. Si por Adán murieron todos, por Cristo todos volverán a la vida.\nR. A quien constituyó sacrificio de propiciación mediante la fe en su sangre.",
+    "ref": "Rom 3, 23-25; 1Cor 15, 22"
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Señor, tú que te has dignado redimirnos y has querido hacernos hijos tuyos, míranos\nsiempre con amor de padre y haz que cuantos creemos en Cristo, tu Hijo, alcancemos la\nlibertad verdadera y la herencia eterna. Por nuestro Señor Jesucristo."
+   }
+  ]
+ }
+}

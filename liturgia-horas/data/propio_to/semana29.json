@@ -1,0 +1,323 @@
+{
+ "dom": {
+  "visperas1": [
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "",
+    "ant_ciclo": {
+     "A": "De oriente a occidente no hay otro dios fuera de mí. Yo soy el Señor y no hay otro.",
+     "B": "«Vosotros beberéis el cáliz que yo he de beber y recibiréis el bautismo que yo he de recibir», dice el Señor.",
+     "C": "Moisés sostuvo en alto las manos, orando, hasta la puesta del sol."
+    }
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Dios todopoderoso y eterno, te pedimos entregarnos a ti con fidelidad y servirte con\nsincero corazón. Por nuestro Señor Jesucristo."
+   }
+  ],
+  "oficio": [
+   {
+    "tipo": "lectura1",
+    "texto": "Del segundo libro de los Reyes 22, 8.10-23, 4.21-23\n\nEN TIEMPO DE JOSÍAS, ES ENCONTRADO EL LIBRO DE LA LEY. RENOVACIÓN DE LA\nALIANZA Y CELEBRACIÓN DE LA PASCUA\n\nEn aquellos días el sumo sacerdote Helcías dijo al cronista Safán:\n“He encontrado en el templo el libro de la ley.”\nEntregó el libro a Safán, y éste lo leyó. Y le comunicó la noticia al rey:\n«El sacerdote Helcías me ha dado un libro.»\nSafán lo leyó ante el rey; y, cuando el rey oyó el contenido del libro de la ley, se rasgó\n\nlas vestiduras. Y ordenó al sacerdote Helcías, a Ajicán, hijo de Safán, a Aebor, hijo de\nMiqueas, al cronista Safán y a Asaías, funcionario real:\n\n«Id a consultar al Señor por mí y por el pueblo y por todo Judá, a propósito de este\nlibro que han encontrado; porque el Señor estará enfurecido contra nosotros, porque\nnuestros padres no obedecieron los mandatos de este libro cumpliendo lo prescrito en él.»\n\nEntonces, el sacerdote Helcías, Ajicán, Acbor, Safán y Asaías fueron a ver a la profetisa\nJulda, esposa de Salún, el guardarropa, hijo de Ticua de Jarjás. Julda vivía en Jerusalén,\nen el Barrio Nuevo. Le expusieron el caso, y ella les respondió:\n\n«Así dice el Señor, Dios de Israel: Decidle al que os ha enviado: Así dice el Señor: \"Yo\nvoy a traer la desgracia sobre este lugar y todos sus habitantes: todas las maldiciones de\neste libro, que ha leído el rey de Judá; por haberme abandonado y haber quemado\nincienso a otros dioses, irritándome con sus ídolos, está ardiendo mi cólera contra este\nlugar, y no se apagará.\"\n\nY al rey de Judá, que os ha enviado a consultar al Señor, decidle: Así dice el Señor, Dios\nde Israel: \"Puesto que, al oír la lectura, lo has sentido de corazón, y te has humillado ante\nel Señor, al oír mi amenaza contra este lugar y sus habitantes, que serán objeto de\nespanto y de maldición; puesto que te has rasgado las vestiduras y llorado en mi\npresencia, también yo te escucho —oráculo del Señor—. Por eso, cuando yo te reúna con\ntus padres, te enterrarán en paz, sin que llegues a ver con tus ojos la desgracia que voy a\ntraer a este lugar.\"»\n\nEllos llevaron la respuesta al rey. Y  éste mandó al sumo sacerdote Helcías, al vicario y a\nlos porteros que sacaran del templo todos los utensilios fabricados para Baal, Astarté y\ntodo el ejército del cielo. Los quemó fuera de Jerusalén, en los campos del Cedrón, y\nllevaron las cenizas a Betel. Luego, se volvió a Jerusalén y ordenó al pueblo:\n\n«Celebrad la Pascua en honor del Señor, vuestro Dios, como está prescrito en este libro\nde la alianza.»\n\nNo se había celebrado una Pascua semejante desde el tiempo en que los jueces\ngobernaban a Israel, ni durante todos los reyes de Israel y Judá. Fue el año dieciocho del\nreinado de Josías cuando se celebró aquella Pascua en Jerusalén, en honor del Señor.",
+    "anio": "I"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Obedecedme y haced lo que os mando; * así seréis mi pueblo y yo seré vuestro Dios.\nV. Si guardáis mis mandamientos, permaneceréis en mi amor.\nR. Así seréis mi pueblo y yo seré vuestro Dios.",
+    "anio": "I",
+    "ref": "Jr 11,4; Jn 15,10"
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "Del libro de Ben Sirá 26, 1-4. 12-23\n\nLA MUJER BUENA Y  LA MUJER MALVADA\n\nDichoso el marido de una mujer buena: se doblarán los años de su vida. La mujer\nhacendosa hace prosperar al marido, él cumplirá sus días en paz. Mujer buena es buen\npartido que recibe el que teme al Señor: sea rico o pobre, estará contento y tendrá cara\nalegre en toda sazón.\n\nMujer adúltera tiene ojos engreídos, y se la conoce en los párpados. Vigila bien a la\njoven desenvuelta, no sea que, si ve descuido, se aproveche. Guárdate bien de sus ojos\ndescarados, y no te extrañes si te llevan al mal. Porque abre la boca como viajero sediento\ny bebe de cualquier fuente a mano; se sienta frente a cualquier estaca y abre la aljaba a\ncualquier flecha.\n\nMujer hermosa deleita al marido, mujer prudente lo robustece; mujer discreta es don\ndel Señor: no se paga un ánimo instruido; mujer modesta duplica su encanto: no hay\nbelleza que pague un ánimo casto. El sol brilla en el cielo del Señor, la mujer brilla en su\ncasa bien arreglada; lámpara que luce en candelabro sagrado es un rostro hermoso sobre\nun tipo esbelto; columnas de oro sobre plintos de plata son piernas firmes sobre pies\nhermosos.",
+    "anio": "II"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. El sol brilla en el cielo del Señor, la mujer brilla en su casa bien arreglada. * Mujer\nmodesta duplica su encanto.\n\nV. Dichoso el marido de una mujer buena: se doblarán los años de su vida.\nR. Mujer modesta duplica su encanto.",
+    "anio": "II",
+    "ref": "Sir 26, 21. 19. 1"
+   },
+   {
+    "tipo": "lectura2",
+    "texto": "De la carta de san Agustín, obispo, a Proba\n(Carta 130, 8,15.17-9,18: CSEL 44, 56-57. 59-60)\n\nQUE NUESTRO DESEO DE LA VIDA ETERNA SE EJERCITE EN LA ORACIÓN\n\n¿Por qué en la oración nos preocupamos de tantas cosas y nos preguntamos cómo\nhemos de orar, temiendo que nuestras plegarias no procedan con rectitud, en lugar de\nlimitarnos a decir con el salmo: Una cosa pido al Señor, eso buscaré: habitar en la casa del\nSeñor por los días de mi vida; gozar de la dulzura del Señor, contemplando su templo? En\naquella morada, los días no consisten en el empezar y en el pasar uno después de otro ni\nel comienzo de un día significa el fin del anterior; todos los días se dan simultáneamente,\ny ninguno se termina allí donde ni la vida ni sus días tienen fin.\n\nPara que lográramos esta vida dichosa, la misma Vida verdadera y dichosa nos enseñó\na orar; pero no quiso que lo hiciéramos con muchas palabras, como si nos escuchara\nmejor cuanto más locuaces nos mostráramos, pues, como el mismo Señor dijo, oramos a\naquel que conoce nuestras necesidades aun antes de que se las expongamos.\n\nPuede resultar extraño que nos exhorte a orar aquel que conoce nuestras necesidades\nantes de que se las expongamos, si no comprendemos que nuestro Dios y Señor no\npretende que le descubramos nuestros deseos, pues él ciertamente no puede\ndesconocerlos, sino que pretende que, por la oración, se acreciente nuestra capacidad de\ndesear, para que así nos hagamos más capaces de recibir los dones que nos prepara. Sus\ndones, en efecto, son muy grandes, y nuestra capacidad de recibir es pequeña e\ninsignificante. Por eso, se nos dice: Ensanchaos; no os unzáis al mismo yugo con los\ninfieles.\n\nCuanto más fielmente creemos, más firmemente esperamos y más ardientemente\ndeseamos este don, más capaces somos de recibirlo; se trata de un don realmente\ninmenso, tanto, que ni el ojo vio, pues no se trata de un color; ni el oído oyó, pues no es\nningún sonido; ni vino al pensamiento del hombre, ya que es el pensamiento del hombre\nel que debe ir a aquel don para alcanzarlo.\n\nAsí, pues, constantemente oramos por medio de la fe, de la esperanza y de la caridad,\ncon un deseo ininterrumpido. Pero, además, en determinados días y horas, oramos a Dios\ntambién con palabras, para que, amonestándonos a nosotros mismos por medio de estos\nsignos externos, vayamos tomando conciencia de cómo progresamos en nuestro deseo y,\nde este modo, nos animemos a proseguir en él. Porque, sin duda alguna, el efecto será\ntanto mayor, cuanto más intenso haya sido el afecto que lo hubiera precedido. Por tanto,\naquello que nos dice el Apóstol: Sed constantes en orar, ¿qué otra cosa puede significar\nsino que debemos desear incesantemente la vida dichosa, que es la vida eterna, la cual\nnos ha de venir del único que la puede dar?"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Dichosos los que viven en tu casa, Señor, * ellos te alabarán eternamente.\nV. En aquel día se unirán al Señor muchos pueblos, y serán su pueblo.\nR. Ellos te alabarán eternamente.",
+    "ref": "Sal 83, 5; Za 2, 11"
+   },
+   {
+    "tipo": "te_deum"
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Dios todopoderoso y eterno, te pedimos entregarnos a ti con fidelidad y servirte con\nsincero corazón. Por nuestro Señor Jesucristo."
+   }
+  ],
+  "laudes": [
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "",
+    "ant_ciclo": {
+     "A": "Jesús, maestro, tú enseñas con veracidad la manera de vivir según Dios. Aleluya.",
+     "B": "El que quiera ser el mayor, que sea vuestro servidor; y el que quiera ser el primero, que sea esclavo de todos.",
+     "C": "Dios hará justicia a sus elegidos que claman a él día y noche."
+    }
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Dios todopoderoso y eterno, te pedimos entregarnos a ti con fidelidad y servirte con\nsincero corazón. Por nuestro Señor Jesucristo."
+   }
+  ],
+  "visperas2": [
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "",
+    "ant_ciclo": {
+     "A": "Dad al César lo que es del César, y a Dios lo que es de Dios. Aleluya.",
+     "B": "El Hijo del hombre ha venido a servir y a dar su vida en rescate por todos.",
+     "C": "Cuando venga el Hijo del hombre, ¿encontrará fe sobre la tierra?"
+    }
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Dios todopoderoso y eterno, te pedimos entregarnos a ti con fidelidad y servirte con\nsincero corazón. Por nuestro Señor Jesucristo."
+   }
+  ]
+ },
+ "lun": {
+  "oficio": [
+   {
+    "tipo": "lectura1",
+    "texto": "Del libro del profeta Nahum 1, 1-8; 3, 1-7. 12-15a\n\nJUICIO DE DIOS CONTRA NÍNIVE\n\nOráculo contra Nínive: texto de la visión de Nahum, el elcasita.\nEl Señor es un Dios celoso y vengador, el Señor se venga con cólera, se venga el Señor\n\nde sus enemigos, se irrita contra sus contrarios. El Señor es lento a la ira, poderoso, pero\nno deja impune; el Señor camina en la tormenta y tempestad, las nubes son el polvo de\nsus pasos. Ruge sobre el mar, y lo seca, evapora todos los ríos; aridecen Basán y Carmelo,\nse marchita la flor del Líbano. Los montes tiemblan ante él, los collados se derriten; la\ntierra se hunde en su presencia, el orbe y sus habitantes. ¿Quién resistirá su cólera, quién\nse mantendrá en pie ante el incendio de su ira? Su furor se derrama como fuego, y las\nrocas se rompen ante él.\n\nEl Señor es bueno: refugio en el día de la angustia, acoge a los que se refugian en él,\nen medio del torrente desbordado. Extermina a sus contrarios y persigue en las tinieblas a\nsus enemigos. ¡Ay de la ciudad sanguinaria y traidora, llena de crueldades, insaciable de\ndespojos! Escuchad: látigos, estrépito de ruedas, caballos al galope, carros rebotando,\njinetes al asalto, llamear de espadas, relampagueo de lanzas, muchos heridos, masas de\ncadáveres, cadáveres sin fin, se tropieza en cadáveres.\n\nPor las muchas fornicaciones de la prostituta, tan hermosa y seductora, que compraba\npueblos con sus seducciones y tribus con sus hechicerías, ¡aquí estoy yo contra ti! —\noráculo del Señor de los ejércitos—. Te levantaré hasta la cara las faldas, enseñaré tu\ndesnudez a los pueblos, tu afrenta a los reyes. Arrojaré basura sobre ti, haré de ti un\nespectáculo vergonzoso. Quien te vea, se apartará de ti diciendo: «Desolada está Nínive,\n¿quién lo sentirá?, ¿dónde encontrar quien la consuele?»\n\nTus plazas fuertes son higueras cargadas de higos, al sacudirlas, caen y se los comen.\nMira: tus soldados se han vuelto mujeres ante el enemigo; se abrirán las puertas de tu\ntierra, el fuego consumirá tus cerrojos. Haz acopio de agua para el asedio, fortifica las\ndefensas, pisa el lodo, aplasta la arcilla, métela en el molde. El fuego te consumirá, la\nespada te destruirá.",
+    "anio": "I"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. ¿Quién se mantendrá en pie ante el incendio de la ira del Señor?, ¿quién resistirá su\ncólera? * El Señor es bueno: acoge a los que se refugian en él.\nV. Justificados por la sangre de Cristo, seremos salvados por él de la cólera divina.\nR. El Señor es bueno: acoge a los que se refugian en él.",
+    "anio": "I",
+    "ref": "Na 1, 6. 7; Rm 5, 9"
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "Del libro de Ben Sirá 27, 25-28, 9\n\nCONTRA LA IRA Y LA VENGANZA\n\nEl que guiña el ojo trama algo malo, y nadie lo apartará de ello; en tu presencia su\nboca es melosa, admira tus palabras; después cambia de lenguaje y procura cogerte en\ntus palabras. Muchas cosas detesto, pero ninguna como a él, porque el Señor mismo lo\ndetesta.\n\nTira una piedra a lo alto y te caerá en la cabeza: un golpe a traición reparte heridas; el\nque cava una fosa caerá en ella, el que tiende una red quedará cogido en ella; al que hace\nel mal se le volverá contra él, aunque no sepa de dónde le viene. Burlas e insultos le\ntocarán al insolente, pues la venganza le acecha como un león. Los que se alegran de la\ncaída de los buenos se consumirán de pena antes de morir.\n\nFuror y cólera son odiosos: el pecador los posee. Del vengativo se vengará el Señor y\nllevará estrecha cuenta de sus culpas. Perdona la ofensa a tu prójimo, y se te perdonarán\nlos pecados cuando lo pidas. ¿Cómo puede un hombre guardar rencor a otro y pedir la\n\nsalud al Señor? No tiene compasión de su semejante, ¿y pide perdón de sus pecados? Si\nél, que es carne, conserva la ira, ¿quién expiará por sus pecados?\n\nPiensa en tu fin, y cesa en tu enojo; en la muerte y corrupción, y guarda los\nmandamientos. Recuerda los mandamientos, y no te enojes con tu prójimo; la alianza del\nSeñor, y perdona el error.",
+    "anio": "II"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Del vengativo se vengará el Señor y llevará estrecha cuenta de sus culpas. * Perdona la\nofensa a tu prójimo, y se te perdonarán los pecados cuando lo pidas.\nV. Si vosotros perdonáis al prójimo sus faltas, también perdonará las vuestras vuestro\nPadre celestial.\nR. Perdona la ofensa a tu prójimo, y se te perdonarán los pecados cuando lo pidas.",
+    "anio": "II",
+    "ref": "Sir 28, 1-2; Mt 6, 14"
+   },
+   {
+    "tipo": "lectura2",
+    "texto": "De la carta de san Agustín, obispo, a Proba\n(Carta 130, 9,18-10, 20: CSEL 44, 60-63)\n\nDEBEMOS, EN CIERTOS MOMENTOS, AMONESTARNOS A NOSOTROS MISMOS CON LA\nORACIÓN VOCAL\n\nDeseemos siempre la vida dichosa y eterna, que nos dará nuestro Dios y Señor, y así\nestaremos siempre orando. Pero, con objeto de mantener vivo este deseo, debemos, en\nciertos momentos, apartar nuestra mente de las preocupaciones y quehaceres que, de\nalgún mudo, nos distraen de él y amonestarnos a nosotros mismos con la oración vocal,\nno fuese caso que si nuestro deseo empezó a entibiarse llegara a quedar totalmente frío y,\nal no renovar con frecuencia el fervor, acabara por extinguirse del todo.\n\nPor eso, cuando dice el Apóstol: Vuestras peticiones sean presentadas a Dios, no hay\nque entender estas palabras como si se tratara de descubrir a Dios nuestras peticiones,\npues él continuamente las conoce, aun antes de que se las formulemos; estas palabras\nsignifican, más bien, que debemos descubrir nuestras peticiones a nosotros mismos en\npresencia de Dios, perseverando en la oración, sin mostrarlas ante los hombres por\nvanagloria de nuestras plegarias.\n\nComo esto sea así, aunque ya en el cumplimiento de nuestros deberes, como dijimos,\nhemos de orar siempre con el deseo, no puede considerarse inútil y vituperable el\nentregarse largamente a la oración, siempre y cuando no nos lo impidan otras\nobligaciones buenas y necesarias. Ni hay que decir, como algunos piensan, que orar\nlargamente sea lo mismo que orar con vana palabrería. Una cosa, en efecto, son las\nmuchas palabras y otra cosa el efecto perseverante y continuado. Pues del mismo Señor\nestá escrito que pasaba la noche en oración y que oró largamente; con lo cual, ¿qué hizo\nsino darnos ejemplo, al orar oportunamente en el tiempo, aquel mismo que, con el Padre,\noye nuestra oración en la eternidad?\n\nSe dice que los monjes de Egipto hacen frecuentes oraciones, pero muy cortas, a\nmanera de jaculatorias brevísimas, para que así la atención, que es tan sumamente\nnecesaria en la oración, se mantenga vigilante y despierta y no se fatigue ni se embote\ncon la prolijidad de las palabras. Con esto nos enseñan claramente que así como no hay\nque forzar la atención cuando no logra mantenerse despierta, así tampoco hay que\ninterrumpirla cuando puede continuar orando.\n\nLejos, pues, de nosotros la oración con vana palabrería; pero que no falte la oración\nprolongada, mientras persevere ferviente la atención: Hablar mucho en la oración es como\ntratar un asunto necesario y urgente con palabras superfluas. Orar, en cambio,\nprolongadamente es llamar con corazón perseverante y lleno de afecto a la puerta de\n\naquel que nos escucha. Porque, con frecuencia, la finalidad de la oración se logra más con\nlágrimas y llantos que con palabras y expresiones verbales. Porque el Señor recoge\nnuestras lágrimas en su odre y a él no se le ocultan nuestros gemidos, pues todo lo creó\npor medio de aquel que es su Palabra, y no necesita las palabras humanas."
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Jesús tomó pan, dio gracias, lo partió y lo dio a sus discípulos, diciendo: * «Esto es mi\ncuerpo que va a ser entregado por vosotros; haced esto en memoria mía.»\nV. Éste es el pan que ha bajado del cielo; el que coma de este pan vivirá para siempre.\nR. Esto es mi cuerpo que va a ser entregado por vosotros; haced esto en memoria mía.",
+    "ref": "Lc 22, 19; Jn 6, 59"
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Dios todopoderoso y eterno, te pedimos entregarnos a ti con fidelidad y servirte con\nsincero corazón. Por nuestro Señor Jesucristo."
+   }
+  ]
+ },
+ "mar": {
+  "oficio": [
+   {
+    "tipo": "lectura1",
+    "texto": "Del segundo libro de las Crónicas 35, 20-36, 12\n\nCORRUPCIÓN DE JUDÁ. PRIMERA INVASIÓN DE JERUSALÉN\n\nEn aquellos días, bastante después de que Josías restaurase el templo, el rey de Egipto,\nNecó, se dirigió a Cárquemis, junto al Éufrates, para entablar batalla. Josías salió a hacerle\nfrente. Entonces, Necó le envió este mensaje:\n\n«No te metas en mis asuntos, rey de Judá. No vengo contra ti, sino contra la dinastía\nque me hace la guerra. Dios me ha dicho que me dé prisa. Deja de oponerte a Dios, que\nestá conmigo, no sea que él te destruya.»\n\nPero Josías, en vez de dejarle paso franco, se empeñó en combatir. Desatendiendo lo\nque Dios le decía por medio de Necó, entabló batalla en la llanura de Meguidó. Los\narqueros dispararon contra el rey Josías, y éste dijo a sus servidores:\n\n«Sacadme del combate, porque estoy gravemente herido.»\nSus servidores lo sacaron del carro, lo trasladaron al otro que poseía y lo llevaron a\n\nJerusalén, donde murió. Lo enterraron en las tumbas de sus antepasados.\nJudá y Jerusalén hicieron duelo por Josías. Jeremías compuso una elegía en su honor, y\n\ntodos los cantores y cantoras siguen recordándolo en sus elegías. Se han hecho\ntradicionales en Israel; pueden verse en las Lamentaciones. Para más datos sobre Josías,\nlas obras de piedad que hizo de acuerdo con la ley del Señor y todas sus gestas, de las\nprimeras a las últimas, véase el libro de Israel y Judá.\n\nLa gente tomó a Joacaz, hijo de Josías, y lo nombraron rey sucesor en Jerusalén.\nCuando Joacaz subió al trono tenía veintitrés años, y reinó tres meses en Jerusalén. El rey\nde Egipto lo destronó, impuso al país un tributo de cien pesos de plata y un peso de oro, y\nnombró rey de Judá y Jerusalén a su hermano Eliacim, cambiándole el nombre por el de\nJoaquín. A su hermano Joacaz se lo llevó Necó a Egipto.\n\nCuando Joaquín subió al trono tenía veinticinco años, y reinó en Jerusalén once años.\nHizo lo que el Señor, su Dios, reprueba. Nabucodonosor de Babilonia subió contra él y lo\ncondujo a Babilonia atado con cadenas de bronce. También se llevó algunos objetos del\ntemplo y, los colocó en su palacio de Babilonia. Para más datos sobre Joaquín, las\niniquidades que cometió y todo lo que le sucedió, véase el libro de los reyes de Israel y\nJudá. Su hijo Jeconías le sucedió en el trono.\n\nCuando Jeconías subió al trono tenía ocho años, y reinó en Jerusalén tres meses y diez\ndías. Hizo lo que el Señor reprueba. A principios de año, el rey Nabucodonosor envió a por\nél y lo llevaron a Babilonia, junto con los objetos de valor del templo. Nombró rey de Judá\ny Jerusalén a su hermano Sedecías.\n\nCuando Sedecías subió al trono tenía veintiún años, y reinó en Jerusalén once años.\nHizo lo que el Señor, su Dios, reprueba; no se humilló ante el profeta Jeremías, que le\nhablaba en nombre de Dios.",
+    "anio": "I"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Fuiste paciente con ellos durante muchos años, los amonestaste para que volvieran a tu\nley; pero ellos, altivos, no prestaron atención. * Y  los entregaste en manos de pueblos\npaganos.\nV. Pecaron contra tus normas, volvieron la espalda con rebeldía; no quisieron escuchar.\nR. Y los entregaste en manos de pueblos paganos.",
+    "anio": "I",
+    "ref": "Ne 9, 30. 29"
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "Del libro de Ben Sirá 29, 1-16; 31, 1-4\n\nPRÉSTAMO, LIMOSNA Y RIQUEZA\n\nEl hombre compasivo presta a su prójimo, el que le echa una mano guarda el\nmandamiento. Presta a tu prójimo cuando lo necesita, y paga pronto lo que debes al\nprójimo; cumple la palabra y sé fiel a ella, y en todo momento obtendrás lo que necesitas.\n\nMuchos procuraron obtener un préstamo y perjudicaron al que les prestó: hasta\nconseguirlo le besan las manos, ante las riquezas del prójimo humillan la voz; a la hora de\ndevolver dan largas y piden una prórroga. Importunando apenas recobrará la mitad, y lo\nconsiderará un hallazgo; en otro caso se quedará sin dinero y habrá conseguido un\nenemigo de balde, que le pagará con maldiciones e insultos, con injurias, en vez de honor.\nMuchos se retraen no por maldad, sino temiendo que los despojen sin razón.\n\nCon todo, sé generoso con el pobre, no le des largas en la limosna; por amor a la ley\nrecibe al menesteroso, y en su indigencia no lo despidas vacío; pierde tu dinero por el\nhermano y el prójimo, no lo eches a perder bajo una piedra; dispón de tus tesoros según\nel mandato del Altísimo, y te aprovecharán más que el oro; guarda limosnas en tu\ndespensa, y ellas te librarán de todo mal; mejor que escudo resistente o poderosa lanza,\nlucharán contra el enemigo a tu favor.\n\nLas vigilias del rico acaban con su salud, la preocupación por el sustento aleja el sueño,\nla enfermedad grave no le deja dormir. El rico trabaja por amasar una fortuna, y descansa\nacumulando lujos; el pobre trabaja, y le faltan las fuerzas, y, si descansa, pasa necesidad.",
+    "anio": "II"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R.  Guarda limosnas en tu despensa, y ellas te librarán de todo mal; * porque el agua\napaga el fuego ardiente y la limosna expía el pecado.\nV. Dad de limosna lo que poseéis, y con eso lo tendréis todo purificado.\nR. Porque el agua apaga el fuego ardiente y la limosna expía el pecado.",
+    "anio": "II",
+    "ref": "Sir 21, 15; 3, 33; Lc 11, 41"
+   },
+   {
+    "tipo": "lectura2",
+    "texto": "De la carta de san Agustín, obispo, a Proba\n(Carta 130,11, 21-12, 22: CSEL 44, 63-64)\n\nSOBRE LA ORACIÓN DOMINICAL\n\nA nosotros, cuando oramos, nos son necesarias las palabras: ellas nos amonestan y nos\ndescubren lo que debemos pedir, pero lejos de nosotros el pensar que las palabras de\nnuestra oración sirvan para mostrar a Dios lo que necesitamos o para forzarlo a\nconcedérnoslo.\n\nPor tanto, al decir: Santificado sea tu nombre, nos amonestamos a nosotros mismos\npara que deseemos que el nombre del Señor, que siempre es santo en sí mismo, sea\ntambién tenido como santo por los hombres, es decir, que no sea nunca despreciado por\nellos; lo cual, ciertamente redunda en bien de los mismos hombres y no en bien de Dios.\n\nY cuando añadimos: Venga a nosotros tu reino, lo que pedimos es que crezca nuestro\ndeseo de que este reino llegue a nosotros y de que nosotros podamos reinar en él, pues el\nreino de Dios vendrá ciertamente, lo queramos o no.\n\nCuando decimos: Hágase tu voluntad así en la tierra como en el cielo, pedimos que el\nSeñor nos otorgue la virtud de la obediencia, para que así cumplamos su voluntad como la\ncumplen sus ángeles en el cielo.\n\nCuando decimos: El pan nuestro de cada día dánosle hoy, con el hoy queremos\nsignificar el tiempo presente, para el cual, al pedir el alimento principal, pedimos ya lo\nsuficiente, pues con la palabra pan significamos todo cuanto necesitamos, incluso el\nsacramento de los fieles, el cual nos es necesario en esta vida temporal, aunque no sea\npara alimentarla, sino para conseguir la vida eterna.\n\nCuando decimos: Perdónanos nuestras deudas, así como nosotros perdonamos a\nnuestros deudores, nos obligamos a pensar tanto en lo que pedimos como en lo que\ndebemos hacer, no sea que seamos indignos de alcanzar aquello por lo que oramos.\n\nCuando decimos: No nos dejes caer en la tentación, nos exhortamos a pedir la ayuda\nde Dios, no sea que, privados de ella, nos sobrevenga la tentación y consintamos ante la\nseducción o cedamos ante la aflicción.\n\nCuando decimos: Líbranos del mal, recapacitamos que aún no estamos en aquel sumo\nbien en donde no será posible que nos sobrevenga mal alguno. Y  estas últimas palabras\nde la oración dominical abarcan tanto, que el cristiano, sea cual fuere la tribulación en que\nse encuentre, tiene en esta petición su modo de gemir, su manera de llorar, las palabras\ncon que empezar su oración, la reflexión en la cual meditar y las expresiones con que\nterminar dicha oración. Es, pues, muy conveniente valerse de estas palabras para grabar\nen nuestra memoria todas estas realidades.\n\nPorque todas las demás palabras que podamos decir, bien sea antes de la oración, para\nexcitar nuestro amor y para adquirir conciencia clara de lo que vamos a pedir, bien sea en\nla misma oración, para acrecentar su intensidad, no dicen otra cosa que lo que ya se\ncontiene en la oración dominical, si hacemos la oración de modo conveniente. Y quien en\nla oración dice algo que no puede referirse a esta oración evangélica, si no ora\nilícitamente, por lo menos hay que decir que ora de una manera carnal. Aunque no sé\nhasta qué punto puede llamarse lícita una tal oración, pues a los renacidos en el Espíritu\nsolamente les conviene orar con una oración espiritual."
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Ya no será el sol tu luz en el día, ni te alumbrará en la noche la claridad de la luna; *\nporque el Señor será tu luz perenne, y tu Dios será tu esplendor.\nV. Tu sol ya no se pondrá, ni menguará tu luna.\nR. Porque el Señor será tu luz perenne, y tu Dios será tu esplendor.",
+    "ref": "Is 60, 19-20"
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Dios todopoderoso y eterno, te pedimos entregarnos a ti con fidelidad y servirte con\nsincero corazón. Por nuestro Señor Jesucristo."
+   }
+  ]
+ },
+ "mie": {
+  "oficio": [
+   {
+    "tipo": "lectura1",
+    "texto": "Comienza el libro del profeta Habacuc 1, 1-2, 4\n\nORACIÓN EN TIEMPO DE TRIBULACIÓN\n\nOráculo que vio el profeta Habacuc: ¿Hasta cuándo clamaré, Señor, sin que me\nescuches?\n\n¿Te gritaré: «Violencia», sin que me salves? ¿Por qué me haces ver desgracias? Me\nmuestras trabajos, violencias y catástrofes, surgen luchas, se alzan contiendas. Por eso\ncesa la ley, el derecho no se muestra jamás. El malvado elimina al justo, y se emite una\nsentencia al revés.\n\n«Mirad a los pueblos, contemplad y quedaréis asombrados, porque en vuestros días va\na realizarse una obra tal, que si os la contaran no la creeríais. Yo suscitaré a los caldeos,\npueblo cruel y veloz, que recorrerá la anchura de la tierra para conquistar territorios\najenos. Es funesto y terrible, dicta sentencia y condenación. Sus caballos son más veloces\nque leopardos, más rápidos que lobos de la estepa; sus jinetes trotan, sus jinetes vienen\nde lejos, volarán como rauda águila sobre la presa. Cada cual está dispuesto a la violencia\ncon las cabezas tendidas hacia adelante, junta prisioneros como arena. Se burla de los\nreyes, hace escarnio de los príncipes, se ríe de las plazas fuertes, levanta un terraplén y\nlas conquista. Después toma aliento y continúa implacable. Su fuerza es su dios.»\n\n¿No eres tú, Señor, desde antiguo mi santo Dios que no muere? ¿Lo has destinado para\ncastigo, oh Roca, le has encomendado la sentencia? Tus ojos son demasiados puros para\nmirar el mal, no puedes contemplar la presión. ¿Por qué contemplas en silencio a los\nbandidos, cuando el malvado devora al inocente? Tú trata a los hombres como peces del\nmar, como reptiles que no tienen dueño: El invasor los saca a todos con el anzuelo, los\napresa en la red, los reúne en su esparavel y después ríe de gozo; ofrece sacrificios al\nanzuelo, incienso a la red, porque con ellos cogió rica presa, comida abundante.\n\n¿Seguirá vaciando sus redes, matando pueblos sin compasión?\nMe pondré de centinela, me plantaré en la atalaya, velaré para escuchar lo que me\n\ndice, lo que responde a mis quejas. Y el Señor me respondió así:\n«Escribe la visión, grábala en tablillas, de modo que se lea de corrido. La visión espera\n\nsu momento, se acerca su término y no fallará; si tarda, espérala, porque ha de llegar sin\nfalta. He aquí que sucumbe quien no tiene el alma recta, pero el justo vivirá por su\nfidelidad.»",
+    "anio": "I"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Todavía un poco de tiempo, un poco nada más: y el que ha de venir vendrá y no\ntardará. * El justo vivirá por la fe.\n\nV. Nosotros no somos de los que se vuelven atrás para su perdición, sino hombres de fe\nque vamos hacia la salvación de nuestras almas.\nR. El justo vivirá por la fe.",
+    "anio": "I",
+    "ref": "Hb 10, 37-38. 39"
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "Del libro de Ben Sirá 35, 1-21\n\nSINCERIDAD EN EL CULTO A DIOS\n\nObservar la ley es hacer una buena ofrenda, guardar los mandamientos es ofrecer\nsacrificios de comunión; hacer favores es ofrendar flor de harina, dar limosna equivale a\nofrecer sacrificios de alabanza. Apartarse del mal es complacer al Señor, apartarse de la\ninjusticia es expiación. No te presentes a Dios con las manos vacías: esto es lo que pide la\nley. La ofrenda del justo enriquece el altar, y su aroma llega hasta el Altísimo. El sacrificio\ndel justo es aceptado, su ofrenda memorial no se olvidará.\n\nHonra al Señor con generosidad y no seas mezquino en tus ofrendas; al hacer tus\ndones, pon buena cara, y paga de buena gana los diezmos. Da al Altísimo como él te ha\ndado a ti, generosamente, según tus posibilidades, porque el Señor sabe pagar y te dará\nsiete veces más.\n\nNo lo sobornes, porque no lo acepta, no confíes en sacrificios injustos; porque es un\nDios justo que no puede ser parcial; no es parcial contra el pobre, escucha las súplicas del\noprimido; no desoye los gritos del huérfano o de la viuda cuando repite su queja; mientras\nle corren las lágrimas por las mejillas y el gemido se añade a las lágrimas, sus penas\nconsiguen su favor y su grito alcanza las nubes; los gritos del pobre atraviesan las nubes y\nhasta alcanzar a Dios no descansan; no ceja hasta que Dios le atiende, y el juez justo le\nhace justicia.",
+    "anio": "II"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Dios no acepta sacrificios injustos, pero los gritos del pobre atraviesan las nubes. *\nPorque es un Dios justo que no puede ser parcial.\nV. El publicano bajó justificado a su casa, pero no el fariseo; porque el que se humilla será\nensalzado.\nR. Porque es un Dios justo que no puede ser parcial.",
+    "anio": "II",
+    "ref": "Cf. Sir  35, 14. 21. 15; cf. Lc 18,  14"
+   },
+   {
+    "tipo": "lectura2",
+    "texto": "De la carta de san Agustín, obispo, a Proba\n(Carta 130,12, 22-13, 24: CSEL 44, 65-68)\n\nNADA HALLARÁS QUE NO SE ENCUENTRE EN ESTA ORACIÓN DOMINICAL\n\nQuien dice, por ejemplo: Como mostraste tu santidad a las naciones, muéstranos así tu\ngloria y saca veraces a tus profetas, ¿qué otra cosa dice sino: Santificado sea tu nombre?\n\nQuien dice: Dios de los ejércitos, restáuranos, que brille tu rostro y nos salve, ¿qué otra\ncosa dice sino: Venga a nosotros tu reino?\n\nQuien dice: Asegura mis pasos con tu promesa, que ninguna maldad me domine, ¿qué\notra cosa dice sino: Hágase tu voluntad así en la tierra como en el cielo?\n\nQuien dice: No me des riqueza ni pobreza, ¿qué otra cosa dice sino: El pan nuestro de\ncada día dánosle hoy?\n\nQuien dice: Señor, tenle en cuenta a David todos sus afanes, o bien: Señor, si soy\nculpable, si hay crímenes en mis manos, si he causado daño a mi amigo, ¿qué otra cosa\ndice sino: Perdónanos nuestras deudas así como nosotros perdonamos a nuestros\ndeudores?\n\nQuien dice: Líbrame de mi enemigo, Dios mío, protégeme de mis agresores, ¿qué otra\ncosa dice sino: Líbranos del mal?\n\nY, si vas discurriendo por todas las plegarias de la santa Escritura, creo que nada\nhallarás que no se encuentre y contenga en esta oración dominical. Por eso, hay libertad\nde decir estas cosas en la oración con unas u otras palabras, pero no debe haber libertad\npara decir cosas distintas.\n\nEsto es, sin duda alguna, lo que debemos pedir en la oración, tanto para nosotros como\npara los nuestros, como también para los extraños e incluso para nuestros mismos\nenemigos, y, aunque roguemos por unos y otros de modo distinto, según las diversas\nnecesidades y los diversos grados de familiaridad, procuremos, sin embargo, que en\nnuestro corazón nazca y crezca el amor hacia todos.\n\nAquí tienes explicado, a mi juicio, no sólo las cualidades que debe tener tu oración, sino\ntambién lo que debes pedir en ella, todo lo cual no soy yo quien te lo ha enseñado, sino\naquel que se dignó ser maestro de todos.\n\nHemos de buscar la vida dichosa y hemos de pedir a Dios que nos la conceda. En qué\nconsiste esta felicidad son muchos los que lo han discutido, y sus sentencias son muy\nnumerosas. Pero nosotros, ¿qué necesidad tenemos de acudir a tantos autores y a tan\nnumerosas opiniones? En las divinas Escrituras se nos dice de modo breve y veraz:\nDichoso el pueblo cuyo Dios es el Señor. Para que podamos formar parte de este pueblo,\nllegar a contemplar a Dios y vivir con él eternamente, el Apóstol nos dice: Esa orden tiene\npor objeto el amor, que brota del corazón limpio, de la buena conciencia y de la fe sincera.\n\nAl citar estas tres propiedades, se habla de la conciencia recta aludiendo a la\nesperanza. Por tanto, la fe, la esperanza y la caridad conducen hasta Dios al que ora, es\ndecir, a quien cree, espera y desea, al tiempo que descubre en la oración dominical lo que\ndebe pedir al Señor."
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Tuve presentes los mandamientos del Señor y no me aparté de sus preceptos. * Los\nmandatos del Señor son rectos y alegran el corazón; la norma del Señor es límpida y da\nluz a los ojos.\nV. Quien guarda su palabra posee el perfecto amor de Dios.\nR. Los mandatos del Señor son rectos y alegran el corazón; la norma del Señor es límpida\ny da luz a los ojos.",
+    "ref": "Sal 17, 23; 18, 9; 1Jn 2, 5"
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Dios todopoderoso y eterno, te pedimos entregarnos a ti con fidelidad y servirte con\nsincero corazón. Por nuestro Señor Jesucristo."
+   }
+  ]
+ },
+ "jue": {
+  "oficio": [
+   {
+    "tipo": "lectura1",
+    "texto": "Del libro del profeta Habacuc 2, 5-20\n\nIMPRECACIONES CONTRA LOS OPRESORES CALDEOS\n\nEn aquellos días, me dijo el Señor:\n«Aunque el hombre soberbio saquee riquezas, no triunfará. Ensancha las fauces como\n\nel infierno, como la muerte insaciable, se apodera de todos los pueblos, se adueña de\ntodas las naciones. Pero todos ellos entonarán contra él una canción, sátiras y burlas,\ndiciendo:\n\n\"¡Ay del que acumula bienes ajenos! Amontona objetos empeñados. De repente se\nalzarán tus acreedores, despertarán tus atormentadores y te despojarán. Porque\nsaqueaste naciones numerosas, te saqueará el resto de los pueblos, por tus asesinatos y\nviolencias contra territorios, ciudades y poblaciones.\n\n¡Ay del que reúne en casa ganancias injustas y pone en lo alto su nido para salvarse de\nla desgracia! Hiciste un proyecto deshonroso para tu casa: aniquilando muchos pueblos,\nhas perjudicado tu vida. Gritarán las piedras de los muros, y las vigas del maderamen les\nresponderán.\n\n¡Ay del que construye con sangre la ciudad y funda la capital con crímenes! El Señor\nhará que suceda esto: que trabajen los pueblos para el fuego y las naciones se fatiguen\npara nada, cuando la tierra esté llena del conocimiento de la gloria del Señor, como las\naguas llenan el mar.\n\n¡Ay del que embriaga a su prójimo, y le mezcla una droga y lo emborracha para\ncontemplar su desnudez! Te sacias de oprobios más que de honores, bebe tú también y\nenseña tu vergüenza.\n\nLlega a ti la copa de la diestra del Señor, y la ignominia sobre tu gloria. La violencia\nhecha al Líbano te cubrirá, el degüello de los animales te aterrará, por tus asesinatos y\nviolencias contra territorios, ciudades y poblaciones.\n\n¡Ay del que dice a un leño: 'Despierta, levántate', y a la piedra muda: 'Dime un oráculo'.\n¡Está forrado de plata y oro, pero por dentro no tiene alma! ¿De qué le sirve al ídolo que\nlo talle el artífice, a la imagen de oráculos engañosos el que el artífice confíe en ella,\nfabricando ídolos mudos? Pero el Señor está en su santo templo, ¡guarde silencio ante él\ntoda la tierra!\"»",
+    "anio": "I"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Todos los que pecaron sin conocer la ley perecerán sin la ley; y cuantos pecaron con\nconocimiento de la ley serán juzgados por la ley. * Pues todos pecaron y se hallan\nprivados de la gloria de Dios.\nV. Dios encerró a todos los hombres en la desobediencia, para usar con todos ellos de\nmisericordia.\nR. Pues todos pecaron y se hallan privados de la gloria de Dios.",
+    "anio": "I",
+    "ref": "Rm 2, 12; 3, 23; 11, 32"
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "Del libro de Ben Sirá 38, 25-39, 15\n\nLOS OFICIOS MANUALES Y LA MEDITACIÓN DE LA SABIDURÍA\n\nEl ocio del escritor aumenta su sabiduría, el que está poco ocupado se hará sabio.\n¿Cómo se hará sabio el que agarra el arado y su orgullo es manejar la aguijada? El que\nguía los bueyes, dirige los toros y no habla más que de novillos; se desvela por arreglar el\nestablo y se preocupa de trazar los surcos.\n\nLo mismo el artesano y el tejedor, que emplean la noche como el día. Los que esculpen\nrelieves de sellos procurando variar el diseño, se esfuerzan por imitar la vida y se desvelan\npor terminar la tarea.\n\nLo mismo el herrero, sentado junto al yunque, mientras estudia el trabajo del hierro; el\nsoplo del fuego le seca la carne, mientras brega en el calor del horno; el ruido del martillo\n\nle ensordece, mientras se fija en el modelo de la herramienta; se esfuerza por dar término\na su tarea y se desvela por perfilar la obra.\n\nLo mismo el alfarero, sentado al trabajo, hace girar el torno con los pies, siempre\npreocupado por su tarea, y trabajando para producir mucho; con el brazo modela la\narcilla, y ablanda su resistencia con los pies; se esfuerza por terminar el barnizado y se\ndesvela por dejar limpio el horno.\n\nTodos éstos se fían de su destreza y son expertos en su oficio; sin su trabajo la ciudad\nno tiene casas ni habitantes ni transeúntes; con todo, no los eligen senadores ni\ndescuellan en la asamblea, no toman asiento en el tribunal ni discuten la justa sentencia,\nno exponen su doctrina o su decisión ni entienden de proverbios; aunque, mantienen la\nvieja creación ocupados en su trabajo artesano.\n\nEn cambio, el que se entrega de lleno a meditar la ley del Altísimo indaga la sabiduría\nde sus predecesores y estudia las profecías, examina las explicaciones de autores famosos\ny penetra por parábolas intrincadas, indaga el misterio de proverbios y da vueltas a\nenigmas.\n\nPresta servicio ante los poderosos y se presenta ante  los jefes; viaja por países\nextranjeros, probando el bien y el mal de los hombres; madruga por el Señor, su creador,\ny reza delante del Altísimo; abre la boca para suplicar, pidiendo perdón de sus pecados.\n\nSi el Señor lo quiere, él se llenará de espíritu de inteligencia; Dios le hará derramar\nsabias palabras, y él confesará al Señor en su oración. Dios guiará sus consejos prudentes,\ny él meditará sus misterios; Dios le comunicará su doctrina y enseñanza, y él se gloriará\nde la ley del Altísimo.\n\nMuchos alabarán su inteligencia, que no perecerá jamás; nunca faltará su recuerdo, y\nsu fama vivirá por generaciones. Los pueblos contarán su sabiduría y la asamblea\nanunciará su alabanza; mientras vive, tendrá  renombre entre mil, que le bastará cuando\nmuera.",
+    "anio": "II"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. El sabio abre la boca para suplicar; * si el Señor lo quiere, él se llenará de espíritu de\ninteligencia.\nV. Si alguno de vosotros está a falta de sabiduría, que la pida a Dios, que da a todos\ngenerosamente.\nR. Si el Señor lo quiere, él se llenará de espíritu de inteligencia.",
+    "anio": "II",
+    "ref": "Sir 39, 7. 8; St 1, 5"
+   },
+   {
+    "tipo": "lectura2",
+    "texto": "De la carta de san Agustín, obispo, a Proba\n(Carta 130,14, 25-26: CSEL 44, 68-71)\n\nNO SABEMOS PEDIR LO QUE NOS CONVIENE\n\nQuizá me preguntes aún por qué razón dijo el Apóstol que no sabemos pedir lo que nos\nconviene, siendo así que podemos pensar que tanto el mismo Pablo como aquellos a\nquienes él se dirigía conocían la oración dominical.\n\nPorque el Apóstol experimentó seguramente su incapacidad de orar como conviene, por\neso quiso manifestarnos su ignorancia; en efecto, cuando, en medio de la sublimidad de\nsus revelaciones, le fue dado el aguijón de su carne, el ángel de Satanás que lo apaleaba,\ndesconociendo la manera conveniente de orar, Pablo pidió tres veces al Señor que lo\nlibrara de esta aflicción. Y oyó la respuesta de Dios y el por qué no se realizaba ni era\nconveniente que se realizase lo que pedía un hombre tan santo: Te basta mi gracia: la\nfuerza se realiza en la debilidad.\n\nCiertamente, en aquellas tribulaciones que pueden ocasionarnos provecho o daño no\nsabemos cómo debemos orar; pues como dichas tribulaciones nos resultan duras y\nmolestas y van contra nuestra débil naturaleza, todos coincidimos naturalmente en pedir\nque se alejen de nosotros. Pero, por el amor que nuestro Dios y Señor nos tiene, no\ndebemos pensar que si no aparta de nosotros aquellos contratiempos es porque nos\nolvida; sino más bien, por la paciente tolerancia de estos males, esperemos obtener\nbienes mayores, y así la fuerza se realiza en la debilidad. Esto, en efecto, fue escrito para\nque nadie se enorgullezca si, cuando pide con impaciencia, es escuchado en aquello que\nno le conviene, y para que nadie decaiga ni desespere de la misericordia divina si su\noración no es escuchada en aquello que pidió y que, posiblemente, o bien le sería causa\nde un mal mayor o bien ocasión de que, engreído por la prosperidad, corriera el riesgo de\nperderse. En tales casos, ciertamente, no sabemos pedir lo que nos conviene.\n\nPor tanto, si algo acontece en contra de lo que hemos pedido, tolerémoslo con\npaciencia y demos gracias a Dios por todo, sin dudar en lo más mínimo de que lo más\nconveniente para nosotros es lo que acaece según la voluntad de Dios y no según la\nnuestra. De ello nos dio ejemplo aquel divino Mediador, el cual dijo en su pasión: Padre, si\nes posible, que pase y se aleje de mí ese cáliz, pero, con perfecta abnegación de la\nvoluntad humana que recibió al hacerse hombre, añadió inmediatamente: Pero no se haga\nlo que yo quiero, sino lo que tú quieres. Por lo cual entendemos perfectamente que por la\nobediencia de todos se convertirán en justos."
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Primicia de la sabiduría es el temor del Señor, tienen buen juicio los que lo practican. *\nLa alabanza del Señor dura por siempre.\nV. Amar la sabiduría es guardar sus leyes, pues el temor del Señor es la síntesis de la\nsabiduría.\nR. La alabanza del Señor dura por siempre.",
+    "ref": "Sal 110, 10: Sb 6, 19; Sir 19, 18"
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Dios todopoderoso y eterno, te pedimos entregarnos a ti con fidelidad y servirte con\nsincero corazón. Por nuestro Señor Jesucristo."
+   }
+  ]
+ },
+ "vie": {
+  "oficio": [
+   {
+    "tipo": "lectura1",
+    "texto": "Del libro del profeta Jeremías 22, 10-30\n\nORÁCULO CONTRA EL ÚLTIMO REY DE JUDÁ\n\nNo lloréis por el muerto, ni os lamentéis por él; llorad más bien por el que se marcha,\nporque no volverá a ver su tierra natal. Porque así dice el Señor a Salún, hijo de Josías,\nrey de Judá, sucesor en el reino de Josías, su padre: «El que salió de este lugar no volverá\nmás a él; sino que morirá en el país adonde lo llevan cautivo, y esta tierra no la volverá a\nver.»\n\n¡Ay del que edifica su casa con injusticias, piso a piso, inicuamente; hace trabajar de\nbalde a su prójimo, no le entrega su salario! Piensa: «Me voy a construir una casa\nespaciosa con habitaciones aireadas; abriré ventanas, la cubriré de cedro, la pintaré de\nrojo.» ¿Piensas que eres rey porque compites en cedros? Si tu padre comió y bebió y le\nfue bien, es porque guardó la justicia y el derecho; sentenció a favor del pobre y del\noprimido, y eso sí que es conocerme —oráculo del Señor—.\n\nPero tú no tienes ojos ni corazón más que para la ganancia, para derramar sangre\ninocente, para practicar el abuso y la opresión. Por eso, así dice el Señor a Joaquín, hijo\nde Josías, rey de Judá: «No le harán luto cantando: \"¡Ay hermano mío, ay hermana mía!\",\nno le harán funeral diciendo: \"¡Ay señor mío, ay majestad!\" Lo enterrarán como a un\nasno: lo arrastrarán y lo tirarán fuera de las puertas de Jerusalén.»\n\nSube al Líbano y grita, alza la voz en Basán, grita desde Abarín, porque están\ndeshechos tus amigos. Te hablé en tu prosperidad, y dijiste: «No quiero oír»; ésta es tu\nconducta desde tu juventud: no escuchabas mi voz. Pues el viento se apacentará de tus\npastores, tus amigos irán al destierro; entonces te avergonzarás y sonrojarás de todas tus\nmaldades. Tú, sentada en el Líbano, que anidas entre cedros, cómo sollozarás cuando te\nlleguen las ansias, los dolores del parto.\n\nJuro por mi vida —oráculo del Señor—: Aunque Jeconías, hijo de Joaquín, rey de Judá,\nfuera un anillo en mi mano derecha, de allí te arrancaría, y te entregaría en manos de los\nque te persiguen a muerte, en manos de los que tú más temes, en manos de\nNabucodonosor, rey de Babilonia, en manos de los caldeos. Os expulsaré a ti y a tu madre,\nque te dio a luz, a tierra extranjera donde no nacisteis, y allí moriréis. Y no volverán a la\ntierra adonde ansían volver. ¿Es Jeconías una vasija rota, despreciable, un cacharro inútil?\n¿Por qué lo expulsan con su estirpe y lo arrojan a un país desconocido?\n\n¡Tierra, tierra, tierra!, escucha la palabra del Señor.\nAsí dice el Señor: «Inscribid a este hombre como estéril, como varón fracasado en la\n\nvida, porque de su estirpe no prosperará nadie que se siente en el trono de David para\nreinar en Judá.»",
+    "anio": "I"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Reyes, haced justicia y derecho, librad al oprimido de la mano del opresor; * no abuséis\ndel forastero, del huérfano y de la viuda.\nV. Quien aspire a ser el primero sea servidor de todos.\nR. No abuséis del forastero, del huérfano y de la viuda.",
+    "anio": "I",
+    "ref": "Jr 22, 3; Mt 20, 27"
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "Del libro de Ben Sirá 42, 15-26; 43, 31-37\n\nTODA LA CREACIÓN CANTA LA GLORIA DE DIOS\n\nVoy a recordar las obras de Dios y a contar lo que he visto: por la palabra de Dios\nfueron creadas las cosas y de su voluntad reciben su tarea.\n\nSale el sol mostrando a todos su esplendor, la gloria del Señor se refleja en todas sus\ncriaturas. Aun los santos de Dios no bastaron para contar sus maravillas. Dios fortaleció\nsus ejércitos, para que estén firmes en presencia de su gloria.\n\nÉl sondea las profundidades del abismo y del corazón humano, penetra todas sus\ntramas y secretos, declara el pasado y el futuro y revela los misterios escondidos. No se le\noculta ningún pensamiento ni se le esconde palabra alguna.\n\nHa establecido el poder de su sabiduría, él es el único desde la eternidad; no puede\ncrecer ni menguar ni le hace falta un consejero.\n\n¡Qué deseables son todas sus obras!, y eso que no vemos más que una chispa. Todas\nviven y permanecen para siempre y lo obedecen en todas sus funciones. Todas difieren\n\nunas de otras, y no ha hecho ninguna inútil. Cada cosa hace resaltar la excelencia de la\notra: ¿quién se saciará de contemplar su hermosura?\n\nTemible es el Señor, inmensamente grande, su poder es admirable. Los que ensalzáis al\nSeñor, levantad la voz, esforzaos cuanto podáis, que siempre os quedaréis cortos. Los que\nalabáis al Señor, redoblad las fuerzas y no os canséis, que nunca será bastante. ¿Quién lo\nha visto que pueda describirlo? ¿Quién lo alabará tal como él es?\n\nQuedan cosas más grandes escondidas, sólo un poco hemos visto de sus obras. Todo lo\nha hecho el Señor, y a sus fieles les da sabiduría.",
+    "anio": "II"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R.  Muchas cosas más podríamos seguir diciendo, mas nunca terminaríamos; * sea, pues,\néste el broche de nuestras palabras: «Él lo es todo.»\nV. ¿Dónde hallar fuerza para glorificarlo dignamente? Él es más grande que todas sus\nobras.\nR. Sea, pues, éste el broche de nuestras palabras: «Él lo es todo.»",
+    "anio": "II",
+    "ref": "Sir 43, 29. 30"
+   },
+   {
+    "tipo": "lectura2",
+    "texto": "De la carta de san Agustín, obispo, a Proba\n(Carta 130,14, 27-15, 28: CSEL 44, 71-73)\n\nEL ESPÍRITU INTERCEDE POR NOSOTROS\n\nQuien pide al Señor aquella sola cosa que hemos mencionado, es decir, la vida dichosa\nde la gloria, y esa sola cosa busca, éste pide con seguridad y pide con certeza, y no puede\ntemer que algo le sea obstáculo para conseguir lo que pide, pues pide aquello sin lo cual\nde nada le aprovecharía cualquier otra cosa que hubiera pedido, orando como conviene.\nÉsta es la única vida verdadera, la única vida feliz: contemplar eternamente la belleza del\nSeñor, en la inmortalidad e incorruptibilidad del cuerpo y del espíritu. En razón de esta\nsola cosa, nos son necesarias todas las demás cosas; en razón de ella, pedimos\noportunamente las demás cosas. Quien posea esta vida poseerá todo lo que desee, y allí\nnada podrá desear que no sea conveniente.\n\nAllí está la fuente de la vida, cuya sed debemos avivar en la oración, mientras vivimos\naún de esperanza. Pues ahora vivimos sin ver lo que esperamos, seguros a la sombra de\nlas alas de aquel ante cuya presencia están todas nuestras ansias; pero tenemos la\ncerteza de nutrirnos un día de lo sabroso de su casa y de beber del torrente de sus\ndelicias, porque en él está la fuente viva, y su luz nos hará ver la luz; aquel día, en el cual\ntodos nuestros deseos quedarán saciados con sus bienes y ya nada tendremos que pedir\ngimiendo, pues todo lo poseeremos gozando.\n\nPero, como esta única cosa que pedimos consiste en aquella paz que sobrepasa toda\ninteligencia, incluso cuando en la oración pedimos esta paz, hemos de decir que no\nsabemos pedir lo que nos conviene. Porque no podemos imaginar cómo sea esta paz en sí\nmisma y, por tanto, no sabemos pedir lo que nos conviene. Cuando se nos presenta al\npensamiento alguna imagen de ella, la rechazamos, la reprobamos, reconocemos que está\nlejos de la realidad aunque continuamos ignorando lo que buscamos.\n\nPero hay en nosotros, para decirlo de algún modo, una docta ignorancia; docta, sin\nduda, por el Espíritu de Dios, que viene en ayuda de nuestra debilidad. En efecto, dice el\nApóstol: Cuando esperamos lo que no vemos, aguardamos con perseverancia. Y añade a\ncontinuación: El Espíritu viene en ayuda de nuestra debilidad, porque nosotros no\nsabemos pedir lo que nos conviene, pero el Espíritu mismo intercede por nosotros con\ngemidos inefables. Y el que escudriña los corazones sabe cuál es el deseo del Espíritu, y\nque su intercesión por los santos es según Dios.\n\nNo hemos de entender estas palabras como si dijeran que el Espíritu de Dios, que en la\nTrinidad divina es Dios inmutable y un solo Dios con el Padre y el Hijo, orase a Dios como\nalguien distinto de Dios, intercediendo por los santos; si el texto dice que el Espíritu\nintercede por los santos, es para significar que incita a los fieles a interceder, del mismo\nmodo que también se dice: Se trata de una prueba del Señor, vuestro Dios, para ver si lo\namáis, es decir, para que vosotros conozcáis si lo amáis. El Espíritu, pues, incita a los\nsantos a que intercedan con gemidos inefables, inspirándoles el deseo de aquella realidad\ntan sublime que aún no conocemos, pero que esperamos ya con perseverancia. Pero\n¿cómo se puede hablar cuando se desea lo que ignoramos? Ciertamente que si lo\nignoráramos del todo no lo desearíamos; pero, por otro lado, si ya lo viéramos no lo\ndesearíamos ni lo pediríamos con gemidos inefables."
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. ¿Con qué me acercaré al Señor? Se te ha dado a conocer, oh hombre, lo que es bueno,\nlo que Dios desea de ti: * simplemente que practiques la justicia, que ames la misericordia\ny que camines humildemente con tu Dios.\nV. Del Señor tu Dios son el cielo y la tierra y cuanto hay en ellos; y ¿qué es lo que te exige\nel Señor tu Dios?\nR. Simplemente que practiques la justicia, que ames la misericordia y que camines\nhumildemente con tu Dios.",
+    "ref": "Mi 6, 6. 8; D t 10, 14. 12"
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Dios todopoderoso y eterno, te pedimos entregarnos a ti con fidelidad y servirte con\nsincero corazón. Por nuestro Señor Jesucristo."
+   }
+  ]
+ },
+ "sab": {
+  "oficio": [
+   {
+    "tipo": "lectura1",
+    "texto": "Del libro del profeta Jeremías 19, 1-5. 10-20, 6\n\nACCIÓN SIMBÓLICA DE LA JARRA ROTA\n\nEsto dijo el Señor a Jeremías:\n«Vete y compra una jarra de barro, y lleva luego contigo a algunos de los ancianos del\n\npueblo y a algunos sacerdotes. Sal al valle de Ben Hinnon, que está junto a la puerta de\nlos Cascotes, y proclama allí las palabras que te diré. Les dirás:\n\n\"Escuchad la palabra del Señor, reyes de Judá y habitantes de Jerusalén: Así dice el\nSeñor de los ejércitos, Dios de Israel: Yo haré venir sobre este lugar una catástrofe, que a\nquien la oiga le zumbarán los oídos; porque me abandonaron e hicieron extraño este\nlugar, quemando en él incienso a dioses extranjeros, que ni ellos ni sus padres conocían; y\nlos reyes de Judá llenaron este lugar de sangre inocente. Construyeron altozanos a Baal,\npara quemar en su honor a sus propios hijos, cosa que yo no les mandé ni dije, ni me\npasó por la cabeza.\"\n\nRomperás luego la jarra en presencia de los que van contigo, y les dirás:\n\n\"Así dice el Señor de los ejércitos: Así romperé yo a este pueblo y a esta ciudad, como\nse rompe un cacharro de alfarero que ya no tiene arreglo. En el Tofet enterrarán, a falta\nde sitio para enterrar. Así trataré a este lugar —dice el Señor— y a los que lo habitan; y\nconvertiré esta ciudad en un Tofet. Las casas de Jerusalén y los palacios reales serán\ninmundos como el Tofet; todas las casas en cuyas azoteas quemaban incienso al\nescuadrón de los astros del cielo y hacían libaciones a dioses extranjeros.\"»\n\nVolvió Jeremías del Tofet, adonde lo había enviado el Señor a proclamar, y se plantó en\nel atrio del templo, diciendo a todo el pueblo:\n\n«Así dice el Señor de los ejércitos, Dios de Israel: \"Yo haré venir sobre esta ciudad y\ntodas sus poblaciones los males con que la he amenazado; porque endurecieron la cerviz\ny no escucharon mis palabras.\"»\n\nPasjur, hijo de Immer, sacerdote comisario del templo del Señor, escuchó a Jeremías\nprofetizar estas palabras y lo hizo azotar y lo metió en el cepo que se encuentra en la\npuerta alta de Benjamín, en el templo del Señor. A la mañana siguiente, cuando Pasjur\nsacó a Jeremías del cepo, Jeremías le dijo:\n\n«El Señor ya no te llama Pasjur, sino Pavor, porque así dice el Señor: \"Te haré el pavor\ntuyo y de tus amigos, que caerán en manos del enemigo: tus ojos lo verán; y entregaré\ntoda Judá en manos del rey de Babilonia, que la llevará cautiva a Babilonia y la pasará a\nespada. Entregaré todas las riquezas de esta ciudad, sus posesiones y objetos preciosos,\nlos tesoros de los reyes de Judá en manos de sus enemigos: los saquearán, los tomarán y\nse los llevarán a Babilonia. Y tú, Pasjur, y todos los que habitan en tu casa, iréis al\ndestierro. Irás a Babilonia, allí morirás y serás enterrado, tú con todos tus amigos a\nquienes profetizabas en falso.\"»",
+    "anio": "I"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Jerusalén, que matas a los profetas y apedreas a los que te son enviados. * ¡Cuántas\nveces he querido agrupar a tus hijos como la gallina cobija a los polluelos bajo las alas, y\ntú no has querido!\nV. Endureciste tu cerviz y no escuchaste mis palabras.\nR. ¡Cuántas veces he querido agrupar a tus hijos como la gallina cobija a los polluelos bajo\nlas alas, y tú no has querido!",
+    "anio": "I",
+    "ref": "Mt 23, 37; cf. Jr 19,15"
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "Del libro de Ben Sirá 51, 1-17\n\nHIMNO DE ACCIÓN DE GRACIAS\n\nTe alabo, mi Dios y salvador, te doy gracias, Dios de mi padre.\nContaré tu fama, refugio de mi vida, porque me has salvado de la muerte, detuviste mi\n\ncuerpo ante la fosa, libraste mis pies de las garras del abismo, me salvaste del látigo de la\nlengua calumniosa y de los labios que se pervierten con la mentira, estuviste conmigo\nfrente a mis rivales. Me auxiliaste con tu gran misericordia: del lazo de los que acechan mi\ntraspiés, del poder de los que me persiguen a muerte. Me salvaste de múltiples peligros:\ndel cerco apretado de las llamas, del incendio de un fuego que no ardía, del vientre de un\nocéano sin agua, de labios mentirosos e insinceros, de las flechas de una lengua traidora.\n\nCuando estaba ya para morir y casi en lo profundo del abismo, me volvía a todas\npartes, y nadie me auxiliaba, buscaba un protector, y no lo había. Recordé la compasión\ndel Señor y su misericordia eterna, que libra a los que se acogen a él y los rescata de todo\nmal. Desde la tierra levanté la voz, y grité desde las puertas del abismo, invoqué al Señor:\n\n«Tú eres mi Padre, tú eres mi fuerte salvador, no me abandones en el peligro, a la hora\ndel espanto y turbación. Alabaré siempre tu nombre y te llamaré en mi súplica.»\n\nEl Señor escuchó mi voz y prestó oído a mi súplica, me salvó de todo mal, me puso a\nsalvo del peligro. Por eso doy gracias y alabo, y bendigo el nombre del Señor.",
+    "anio": "II"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Me auxiliaste, Señor, con tu gran misericordia, del cerco apretado de las llamas, * del\nincendio de un fuego que no ardía.\nV. El Señor me asistió y me dio fuerzas, para llevar a feliz término la predicación del\nmensaje de salud; él me libró de la boca del león.\nR. Del incendio de un fuego que no ardía.",
+    "anio": "II",
+    "ref": "Sir 51, 4. 6; 2Tm 4, 17"
+   },
+   {
+    "tipo": "lectura2",
+    "texto": "De los sermones de san Pedro Crisólogo, obispo\n(Sermón 117: PL 52, 520-521)\n\nEL VERBO, SABIDURÍA DE DIOS, SE HIZO HOMBRE\n\nEl apóstol san Pablo nos dice que dos hombres dieron origen al género humano, a\nsaber, Adán y Cristo. Dos hombres semejantes en su cuerpo, pero muy diversos en su\nobrar; totalmente iguales por el número y orden de sus miembros, pero totalmente\ndistintos por su respectivo origen. Dice, en efecto, la Escritura: El primer hombre, Adán,\nfue un ser animado; el último Adán, un espíritu que da vida.\n\nAquel primer Adán fue creado por el segundo, de quien recibió el alma con la cual\nempezó a vivir; el último Adán, en cambio, se configuró a sí mismo y fue su propio autor,\npues no recibió la vida de nadie, sino que fue el único de quien procede la vida de todos.\nAquel primer Adán fue plasmado del barro deleznable; el último Adán se formó en las\nentrañas preciosas de la Virgen. En aquél, la tierra se convierte en carne; en éste, la carne\nllega a ser Dios.\n\nY ¿qué más podemos añadir? Éste es aquel Adán que, cuando creó al primer Adán,\ncolocó en él su divina imagen. De aquí que recibiera su naturaleza y adoptara su mismo\nnombre, para que aquel a quien había formado a su misma imagen no pereciera. El primer\nAdán es, en realidad, el nuevo Adán; aquel primer Adán tuvo principio, pero este último\nAdán no tiene fin. Por lo cual, este último es, realmente, también el primero, como él\nmismo afirma: Yo soy el primero y yo soy el último.\n\n\"Yo soy el primero, es decir, no tengo principio. Yo soy el último, porque, ciertamente,\nno tengo fin. No es primero lo espiritual —dice—, sino lo animal. Lo espiritual viene\ndespués. El espíritu no fue lo primero —dice—, primero vino la vida y después el espíritu\".\nAntes, sin duda, es la tierra que el fruto, pero la tierra no es tan preciosa como el fruto;\naquélla exige lágrimas y trabajo, éste, en cambio, nos proporciona alimento y vida. Con\nrazón el profeta se gloría de tal fruto, cuando dice: Nuestra tierra ha dado su fruto. ¿Qué\nfruto? Aquel que se afirma en otro lugar: A un fruto de tus entrañas lo pondré sobre tu\ntrono. Y también: El primer hombre, hecho de tierra, era terreno; el segundo hombre es\ndel cielo.\n\nIgual que el terreno son los hombres terrenos; igual que el celestial son los hombres\ncelestiales. ¿Cómo, pues, los que no nacieron con tal naturaleza celestial llegaron a ser de\nesta naturaleza y no permanecieron tal cual habían nacido, sino que perseveraron en la\ncondición en que habían renacido? Esto se debe, hermanos, a la acción misteriosa del\nEspíritu, el cual fecunda con su luz el seno materno de la fuente virginal, para que\naquellos a quienes el origen terreno de su raza da a luz en condición terrena y miserable\nvuelvan a nacer en condición celestial, y lleguen a ser semejantes a su mismo Creador. Por\ntanto, renacidos ya, recreados según la imagen de nuestro Creador, realicemos lo que nos\n\ndice el Apóstol: Nosotros, que somos imagen del hombre terreno, seamos también imagen\ndel hombre celestial.\n\nRenacidos ya, como hemos dicho, a semejanza de nuestro Señor, adoptados como\nverdaderos hijos de Dios, llevemos íntegra y con plena semejanza la imagen de nuestro\nCreador: no imitándolo en su soberanía, que sólo a él corresponde, sino siendo su imagen\npor nuestra inocencia, simplicidad, mansedumbre, paciencia, humildad, misericordia y\nconcordia, virtudes todas por las que el Señor se ha dignado hacerse uno de nosotros y\nser semejante a nosotros."
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Como el delito de uno solo atrajo sobre todos los hombres la condenación, * así\ntambién la obra de justicia de uno solo procura a todos la justificación que da la vida.\nV. Y como por un solo hombre entró el pecado en el mundo y, por el pecado, la muerte.\nR. Así también la obra de justicia de uno solo procura a todos la justificación que da la\nvida.",
+    "ref": "Rm 5, 18.12"
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Dios todopoderoso y eterno, te pedimos entregarnos a ti con fidelidad y servirte con\nsincero corazón. Por nuestro Señor Jesucristo."
+   }
+  ]
+ }
+}

@@ -1,0 +1,997 @@
+{
+ "dom": {
+  "visperas1": [
+   {
+    "tipo": "inicio",
+    "texto": "V. Dios mío, ven en mi auxilio.\nR. Señor, date prisa en socorrerme. Gloria al Padre. Como era. Aleluya."
+   },
+   {
+    "tipo": "himno",
+    "texto": "¡Luz que te entregas!,\n¡luz que te niegas!,\na tu busca va el pueblo de noche:\nalumbra su senda.\n\nDios de la luz, presencia ardiente\nsin meridiano ni frontera:\nvuelves la noche mediodía,\nciegas al sol con tu derecha.\n\nComo columna de la aurora,\niba en la noche tu grandeza;\nte vio el desierto, y destellaron\nluz de tu gloria las arenas.\n\nCerró la noche sobre Egipto\ncomo cilicio de tinieblas;\npara tu pueblo amanecías\nbajo los techos de las tiendas.\n\nEres la Luz, pero en tu rayo\nlanzas el día o la tiniebla:\nciegas los ojos del soberbio,\ncuras al pobre su ceguera.\n\nCristo Jesús, tú que trajiste\nfuego a la entraña de la tierra,\nguarda encendida nuestra lámpara\nhasta la aurora de tu vuelta."
+   },
+   {
+    "tipo": "salmodia",
+    "texto": "Ant. 1. Lámpara es tu palabra para mis pasos, luz en mi sendero. Aleluya. †\n\nSalmo 118, 105-112\n\nHIMNO A LA LEY DIVINA\n\nEste es mi mandamiento, que os améis unos a otros (Jn 15, 12).\nLámpara es tu palabra para mis pasos,\n\nluz en mi sendero;\n† lo juro y lo cumpliré:\nguardaré tus justos mandamientos;\n¡estoy tan afligido!\nSeñor, dame vida según tu promesa.\n\nAcepta, Señor, los votos que pronuncio,\nenséñame tus mandatos;\nmi vida está siempre en peligro,\npero no olvido tu voluntad;\nlos malvados me tendieron un lazo,\npero no me desvié de tus decretos.\n\nTus preceptos son mi herencia perpetua,\nla alegría de mi corazón;\ninclino mi corazón a cumplir tus leyes,\nsiempre y cabalmente.\n\nAnt. Lámpara es tu palabra para mis pasos, luz en mi sendero. Aleluya\nAnt. 2. Me saciarás de gozo en tu presencia, Señor. Aleluya.\n\nSalmo 15\nEL SEÑOR ES EL LOTE DE MI HEREDAD\n\nDios resucitó a Jesús, rompiendo las ataduras de la muerte (Hech 2, 24).\nProtégeme, Dios mío, que me refugio en ti;\n\nyo digo al Señor: \"Tú eres mi bien\".\nLos dioses y señores de la tierra\nno me satisfacen.\n\nMultiplican las estatuas\nde dioses extraños;\nno derramaré sus libaciones con mis manos,\nni tomaré sus nombres en mis labios.\n\nEl Señor es el lote de mi heredad y mi copa;\nmi suerte está en tu mano:\nme ha tocado un lote hermoso,\nme encanta mi heredad.\n\nBendeciré al Señor, que me aconseja,\nhasta de noche me instruye internamente.\nTengo siempre presente al Señor,\n\ncon él a mi derecha no vacilaré.\n\nPor eso se me alegra el corazón,\nse gozan mis entrañas,\ny mi carne descansa serena.\nPorque no me entregarás a la muerte,\nni dejarás a tu fiel conocer la corrupción.\n\nMe enseñarás el sendero de la vida,\nme saciarás de gozo en tu presencia,\nde alegría perpetua a tu derecha.\n\nAnt. Me saciarás de gozo en tu presencia, Señor. Aleluya.\nAnt. 3. Al nombre de Jesús toda rodilla se doble en el cielo y en la tierra.\nAleluya.\n\nCántico Flp 2, 5-11\n\nCRISTO, SIERVO DE DIOS, EN SU MISTERIO PASCUAL\n\nCristo, a pesar de su condición divina,\nno hizo alarde de su categoría de Dios;\nal contrario, se despojó de su rango\ny tomó la condición de esclavo,\npasando por uno de tantos.\n\nY así, actuando como un hombre cualquiera,\nse rebajó hasta someterse incluso a la muerte,\ny una muerte de cruz.\n\nPor eso Dios lo levantó sobre todo\ny le concedió el \"Nombre-sobre-todo-nombre\";\nde modo que al nombre de Jesús toda rodilla se doble\nen el cielo, en la tierra, en el abismo,\ny toda lengua proclame:\nJesucristo es Señor, para gloria de Dios Padre.\n\nAnt. Al nombre de Jesús toda rodilla se doble en el cielo y en la tierra. Aleluya."
+   },
+   {
+    "tipo": "lectura_breve",
+    "texto": "Damos gracias a Dios, Padre de nuestro Señor Jesucristo, en todo momento,\nrezando por vosotros, al oír hablar de vuestra fe en Jesucristo y del amor que\ntenéis a todos los santos, por la esperanza que os está reservada en los cielos,\nsobre la cual oísteis hablar por la palabra verdadera de la Buena Noticia, que\nse os hizo presente, y está dando fruto y prosperando en todo el mundo igual\nque entre vosotros.",
+    "ref": "Col 1, 3-6a"
+   },
+   {
+    "tipo": "responsorio_breve",
+    "texto": "V. De la salida del sol hasta su ocaso, alabado sea el nombre del Señor.\n\nR. De la salida del sol hasta su ocaso, alabado sea el nombre del Señor.\nV. Su gloria se eleva sobre los cielos.\nR. Alabado sea el nombre del Señor.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. De la salida del sol hasta su ocaso, alabado sea el nombre del Señor."
+   },
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "Ant. Mi espíritu se alegra en Dios mi salvador.\nMagníficat"
+   },
+   {
+    "tipo": "preces",
+    "texto": "Demos gracias al Señor que ayuda y protege al pueblo que se ha escogido\ncomo heredad, y recordando su amor para con nosotros supliquémosle\ndiciendo:\n\nEscúchanos, Señor, que confiamos en ti.\n\nPadre lleno de amor, te pedimos por el Papa N. y por nuestro obispo N.,\n— protégelos con tu fuerza y santifícalos con tu gracia.\n\nQue los enfermos vean en sus dolores una participación de la pasión de tu\nHijo,\n— para que así tengan también parte en su consuelo.\n\nMira con piedad a los que no tienen techo donde cobijarse,\n— y haz que encuentren pronto el hogar que desean.\n\nDígnate dar y conservar los frutos de la tierra,\n— para que a nadie falte el pan de cada día.\n\nSeñor, ten piedad de los difuntos,\n— y ábreles la puerta de tu mansión eterna.\n\nMovidos por el Espíritu Santo, dirijamos al Padre la oración que Cristo nos\nenseñó: Padre nuestro.\n\nSeñor, atiende benignamente las súplicas de tu pueblo; danos luz para conocer\ntu voluntad y la fuerza necesaria para cumplirla. Por nuestro Señor Jesucristo."
+   }
+  ],
+  "invitatorio": [
+   {
+    "tipo": "inicio",
+    "texto": "V. Señor, abre mis labios.\nR. Y mi boca proclamará tu alabanza.\n\nAnt. Pueblo del Señor, rebaño que él guía, bendice a tu Dios. Aleluya."
+   }
+  ],
+  "oficio": [
+   {
+    "tipo": "inicio",
+    "texto": "V. Dios mío, ven en mi auxilio.\nR. Señor, date prisa en socorrerme. Gloria al Padre. Como era. Aleluya."
+   },
+   {
+    "tipo": "himno",
+    "texto": "Se puede tomar de Laudes o de  Vísperas, según el momento del día en que se rece el Oficio de\nlectura.\nO bien:\n\nQue doblen las campanas jubilosas,\ny proclamen el triunfo del amor,\ny llenen nuestras almas de aleluyas,\nde gozo y esperanza en el Señor.\n\nLos sellos de la muerte han sido rotos,\nla vida para siempre es libertad,\nni la muerte ni el mal son para el hombre\nsu destino, su última verdad.\n\nDerrotados la muerte y el pecado,\nes de Dios toda historia y su final;\nesperad con confianza su venida:\nno temáis, con vosotros él está.\n\nVolverán encrespadas tempestades\npara hundir vuestra fe y vuestra verdad,\nes más fuerte que el mal y que su embate\nel poder del Señor, que os salvará.\n\nAleluyas cantemos a Dios Padre,\naleluyas al Hijo salvador,\nsu Espíritu corone la alegría\nque su amor derramó en el corazón. Amén."
+   },
+   {
+    "tipo": "salmodia",
+    "texto": "Ant. 1. Señor, Dios mío, te vistes de belleza y majestad, la luz te envuelve\ncomo un manto. Aleluya.\n\nSalmo 103\n\nHIMNO AL DIOS CREADOR\n\nEl que es de Cristo es una criatura nueva: lo antiguo ha pasado, lo nuevo ha\ncomenzado (2 Cor 5, 17).\n\nI\n\nBendice, alma mía, al Señor:\n¡Dios mío, qué grande eres!\nTe vistes de belleza y majestad,\nla luz te envuelve como un manto.\n\nExtiendes los cielos como una tienda,\nconstruyes tu morada sobre las aguas;\nlas nubes te sirven de carroza,\navanzas en las alas del viento;\nlos vientos te sirven de mensajeros;\nel fuego llameante, de ministro.\n\nAsentaste la tierra sobre sus cimientos,\ny no vacilará jamás;\nla cubriste con el manto del océano,\ny las aguas se posaron sobre las montañas;\n\npero a tu bramido huyeron,\nal fragor de tu trueno se precipitaron,\nmientras subían los montes y bajaban los valles:\ncada cual al puesto asignado.\nTrazaste una frontera que no traspasarán,\ny no volverán a cubrir la tierra.\n\nDe los manantiales sacas los ríos,\npara que fluyan entre los montes;\nen ellos beben las fieras de los campos,\nel asno salvaje apaga su sed;\njunto a ellos habitan las aves del cielo,\ny entre las frondas se oye su canto.\n\nAnt. Señor, Dios mío, te vistes de belleza y majestad, la luz te envuelve como\nun manto. Aleluya.\nAnt. 2. El Señor saca pan de los campos y vino para alegrar el corazón del\nhombre. Aleluya.\n\nII\n\nDesde tu morada riegas los montes,\ny la tierra se sacia de tu acción fecunda;\nhaces brotar hierba para los ganados,\ny forraje para los que sirven al hombre.\n\nÉl saca pan de los campos,\ny vino que le alegra el corazón;\ny aceite que da brillo a su rostro,\ny alimento que le da fuerzas.\n\nSe llenan de savia los árboles del Señor,\nlos cedros del Líbano que Él plantó:\nallí anidan los pájaros,\nen su cima pone casa la cigüeña.\nLos riscos son para las cabras,\nlas peñas son madriguera de erizos.\n\nHiciste la luna con sus fases,\nel sol conoce su ocaso.\nPones las tinieblas y viene la noche,\ny rondan las fieras de la selva;\nlos cachorros rugen por la presa,\nreclamando a Dios su comida.\n\nCuando brilla el sol, se retiran,\ny se tumban en sus guaridas;\nel hombre sale a sus faenas,\na su labranza hasta el atardecer.\n\nAnt. El Señor saca pan de los campos y vino para alegrar el corazón del\nhombre. Aleluya.\nAnt. 3. Vio Dios todo lo que había hecho, y era muy bueno. Aleluya.\n\nIII\n\nCuántas son tus obras, Señor,\ny todas las hiciste con sabiduría;\nla tierra está llena de tus criaturas.\n\nAhí está el mar: ancho y dilatado,\nen él bullen, sin número,\nanimales pequeños y grandes;\nlo surcan las naves, y el Leviatán\nque modelaste para que retoce.\n\nTodos ellos aguardan\na que les eches comida a su tiempo:\nse la echas, y la atrapan;\nabres tu mano, y se sacian de bienes;\n\nescondes tu rostro, y se espantan;\nles retiras el aliento, y expiran\ny vuelven a ser polvo;\nenvías tu aliento, y los creas,\ny repueblas la faz de la tierra.\n\nGloria a Dios para siempre,\ngoce el Señor con sus obras,\n\ncuando Él mira la tierra, ella tiembla;\ncuando toca los montes, humean.\n\nCantaré al Señor mientras viva,\ntocaré para mi Dios mientras exista:\nque le sea agradable mi poema,\ny yo me alegraré con el Señor.\n\nQue se acaben los pecadores en la tierra,\nque los malvados no existan más.\n¡Bendice, alma mía, al Señor!\n\nAnt.  Vio Dios todo lo que había hecho, y era muy bueno. Aleluya."
+   },
+   {
+    "tipo": "versiculo",
+    "texto": "V. Dichosos vuestros ojos porque ven.\nR. Y vuestros oídos porque oyen."
+   }
+  ],
+  "laudes": [
+   {
+    "tipo": "inicio",
+    "texto": "V. Dios mío, ven en mi auxilio.\nR. Señor, date prisa en socorrerme. Gloria al Padre. Como era. Aleluya."
+   },
+   {
+    "tipo": "himno",
+    "texto": "Somos el pueblo de la Pascua,\nAleluya es nuestra canción,\nCristo nos trae la alegría;\nlevantemos el corazón.\n\nEl Señor ha vencido al mundo\nmuerto en la cruz por nuestro amor,\nresucitado de la muerte y de la muerte vencedor.\n\nÉl ha venido a hacernos libres\ncon libertad de hijos de Dios,\ndesata nuestras cadenas;\nalegraos en el Señor.\n\nSin conocerle, muchos siguen\nrutas de desesperación,\nno han escuchado la noticia\nde Jesucristo Redentor.\n\nMisioneros de la alegría,\nde la esperanza y del amor,\n\nmensajeros del Evangelio,\nsomos testigos del Señor.\n\nGloria a Dios Padre, que nos hizo,\ngloria a Dios Hijo Salvador,\ngloria al Espíritu divino:\ntres Personas y un solo Dios. Amén."
+   },
+   {
+    "tipo": "salmodia",
+    "texto": "Ant. 1. Bendito el que viene en nombre del Señor. Aleluya.\n\nSalmo 117\n\nHIMNO DE ACCIÓN DE GRACIAS DESPUÉS DE LA VICTORIA\n\nJesús es la piedra que desechasteis vosotros, los arquitectos, y que se ha convertido\nen piedra angular (Hech 4, 11).\n\nDad gracias al Señor porque es bueno,\nporque es eterna su misericordia.\n\nDiga la casa de Israel:\neterna es su misericordia.\n\nDiga la casa de Aarón:\neterna es su misericordia.\n\nDigan los fieles del Señor:\neterna es su misericordia.\n\nEn el peligro grité al Señor,\ny me escuchó, poniéndome a salvo.\n\nEl Señor está conmigo: no temo;\n¿qué podrá hacerme el hombre?\nEl Señor está conmigo y me auxilia,\nveré la derrota de mis adversarios.\n\nMejor es refugiarse en el Señor\nque fiarse de los hombres,\nmejor es refugiarse en el Señor\nque fiarse de los jefes.\n\nTodos los pueblos me rodeaban,\nen el nombre del Señor los rechacé;\nme rodeaban cerrando el cerco,\nen el nombre del Señor los rechacé;\nme rodeaban como avispas,\nardiendo como fuego en las zarzas,\nen el nombre del Señor los rechacé.\n\nEmpujaban y empujaban para derribarme,\npero el Señor me ayudó;\nel Señor es mi fuerza y mi energía,\nél es mi salvación.\n\nEscuchad: hay cantos de victoria\nen las tiendas de los justos:\n\"la diestra del Señor es poderosa,\nla diestra del Señor es excelsa,\nla diestra del Señor es poderosa\".\n\nNo he de morir, viviré\npara contar las hazañas del Señor.\nMe castigó, me castigó el Señor,\npero no me entregó a la muerte.\n\nAbridme las puertas del triunfo,\ny entraré para dar gracias al Señor.\n\nÉsta es la puerta del Señor:\nlos vencedores entrarán por ella.\n\nTe doy gracias porque me escuchaste\ny fuiste mi salvación.\n\nLa piedra que desecharon los arquitectos\nes ahora la piedra angular.\n\nEs el Señor quien lo ha hecho,\nha sido un milagro patente.\n\nÉste es el día en que actuó el Señor:\nsea nuestra alegría y nuestro gozo.\nSeñor, danos la salvación;\nSeñor, danos prosperidad.\n\nBendito el que viene en nombre del Señor,\nos bendecimos desde la casa del Señor;\nel Señor es Dios, él nos ilumina.\n\nOrdenad una procesión con ramos\nhasta los ángulos del altar.\n\nTú eres mi Dios, te doy gracias;\nDios mío, yo te ensalzo.\n\nDad gracias al Señor porque es bueno,\n\nporque es eterna su misericordia.\nAnt. Bendito el que viene en nombre del Señor. Aleluya.\nAnt. 2. Cantemos un himno al Señor nuestro Dios. Aleluya.\n\nCántico Dn 3, 52-57\n\nQUE LA CREACIÓN ENTERA ALABE AL SEÑOR\n\nEl Creador... es bendito por los siglos (Rom 1, 25).\nBendito eres, Señor, Dios de nuestros padres:\n\na ti gloria y alabanza por los siglos.\n\nBendito tu nombre, santo y glorioso:\na él gloria y alabanza por los siglos.\n\nBendito eres en el templo de tu santa gloria:\na ti gloria y alabanza por los siglos.\n\nBendito eres sobre el trono de tu reino:\na ti gloria y alabanza por los siglos.\n\nBendito eres tú, que sentado sobre querubines\nsondeas los abismos:\na ti gloria y alabanza por los siglos.\n\nBendito eres en la bóveda del cielo:\na ti honor y alabanza por los siglos.\n\nCriaturas todas del Señor, bendecid al Señor,\nensalzadlo con himnos por los siglos.\n\nAnt. Cantemos un himno al Señor nuestro Dios. Aleluya.\nAnt. 3. Alabad al Señor por su inmensa grandeza. Aleluya.\n\nSalmo 150\n\nALABAD AL SEÑOR\n\nSalmodiad con el espíritu, salmodiad con toda vuestra mente, es decir, glorificad a\nDios con el cuerpo y con el alma (Hesiquio).\n\nAlabad al Señor en su templo,\nalabadlo en su fuerte firmamento.\n\nAlabadlo por sus obras magníficas,\nalabadlo por su inmensa grandeza.\n\nAlabadlo tocando trompetas,\nalabadlo con arpas y cítaras,\n\nalabadlo con tambores y danzas,\nalabadlo con trompas y flautas,\n\nalabadlo con platillos sonoros,\nalabadlo con platillos vibrantes.\n\nTodo ser que alienta alabe al Señor.\nAnt. Alabad al Señor por su inmensa grandeza. Aleluya."
+   },
+   {
+    "tipo": "lectura_breve",
+    "texto": "Derramaré sobre vosotros un agua pura que os purificará: de todas vuestras\ninmundicias e idolatrías os he de purificar; y os daré un corazón nuevo, y os\ninfundiré un espíritu nuevo; arrancaré de vuestra carne el corazón de piedra, y\nos daré un corazón de carne. Os infundiré mi espíritu, y haré que caminéis\nsegún mis preceptos, y que guardéis, y cumpláis mis mandatos.",
+    "ref": "Ez 36, 25-27"
+   },
+   {
+    "tipo": "responsorio_breve",
+    "texto": "V. Te damos gracias, oh Dios, invocando tu nombre.\nR. Te damos gracias, oh Dios, invocando tu nombre.\nV. Pregonando tus maravillas.\nR. Invocando tu nombre.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. Te damos gracias; oh Dios, invocando tu nombre."
+   },
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "Ant. Proclame mi alma tu grandeza Dios mío.\nBenedictus"
+   },
+   {
+    "tipo": "preces",
+    "texto": "Invoquemos, hermanos, a nuestro Salvador, que ha venido al mundo para ser\n\"Dios-con-nosotros\", y digámosle confiadamente:\n\nSeñor Jesús, rey de la gloria, sé tú nuestra luz y nuestro gozo.\n\nSeñor Jesús, sol que nace de lo alto y primicia de la humanidad resucitada,\n— haz que siguiéndote a ti no caminemos nunca en sombras de muerte, sino\nque tengamos siempre la luz de la vida.\n\nQue sepamos descubrir, Señor, cómo todas las criaturas están llenas de tus\nperfecciones,\n— para que así, en todas ellas, sepamos contemplarte a ti.\n\nNo permitas, Señor, que hoy nos dejemos vencer por el mal,\n— antes danos tu fuerza para que venzamos al mal a fuerza del bien.\n\nTú que, bautizado por Juan en el Jordán, fuiste ungido con el Espíritu Santo,\n— asístenos durante este día para que actuemos movidos por este mismo\nEspíritu.\n\nPor Jesús nos llamamos y somos hijos de Dios; por ello nos atrevemos a decir:\nPadre nuestro."
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Dios todopoderoso y eterno, que gobiernas a un tiempo cielo y tierra, escucha\npaternalmente las súplicas de tu pueblo y haz que los días de nuestra vida\ntranscurran en tu paz. Por nuestro Señor Jesucristo."
+   }
+  ],
+  "intermedia": {
+   "comun": [
+    {
+     "tipo": "_comun_menor",
+     "texto": "V. Dios mío, ven en mi auxilio.\nR. Señor, date prisa en socorrerme. Gloria al Padre. Como era. Aleluya."
+    },
+    {
+     "tipo": "himno",
+     "texto": "El mundo brilla de alegría.\nSe renueva la faz de la tierra.\nGloria al Padre, y al Hijo, y al Espíritu Santo.\n\nÉsta es la hora\nen que rompe el Espíritu\nel techo de la tierra,\ny una lengua de fuego innumerable\npurifica, renueva, enciende, alegra\nlas entrañas del mundo.\n\nÉsta es la fuerza\nque pone en pie a la Iglesia\nen medio de las plazas\ny levanta testigos en el pueblo,\npara hablar con palabras como espadas\ndelante de los jueces.\n\nLlama profunda,\nque escrutas e iluminas\nel corazón del hombre:\nrestablece la fe con tu noticia,\ny el amor ponga en vela la esperanza,\nhasta que el Señor vuelva."
+    },
+    {
+     "tipo": "salmodia",
+     "texto": "Ant. 1. En verdes praderas me hace recostar el Señor. Aleluya.\n\nSalmo 22\n\nEL BUEN PASTOR\n\nEl Cordero los apacentará y los guiará a los manantiales de las aguas de la vida (Ap 7,\n17).\n\nEl Señor es mi Pastor, nada me falta:\nen verdes praderas me hace recostar;\n\nme conduce hacia fuentes tranquilas\ny repara mis fuerzas;\nme guía por el sendero justo,\npor el honor de su nombre.\n\nAunque camine por cañadas oscuras,\nnada temo, porque tú vas conmigo:\ntu vara y tu cayado me sosiegan.\n\nPreparas una mesa ante mí,\nenfrente de mis enemigos;\nme unges la cabeza con perfume,\ny mi copa rebosa.\n\nTu bondad y tu misericordia me acompañan\ntodos los días de mi vida,\ny habitaré en la casa del Señor\npor años sin término.\n\nAnt. En verdes praderas me hace recostar el Señor. Aleluya.\nAnt. 2. Grande es en Israel la fama del Señor. Aleluya.\n\nSalmo 75\n\nACCIÓN DE GRACIAS POR LA VICTORIA\n\nVerán al Hijo del hombre venir sobre las nubes del cielo (Mt 24, 30).\n\nI\n\nDios se manifiesta en Judá,\nsu fama es grande en Israel;\nsu tabernáculo está en Jerusalén,\nsu morada en Sión:\nallí quebró los relámpagos del arco,\nel escudo, la espada y la guerra.\n\nTú eres deslumbrante, magnífico,\n\ncon montones de botín conquistados.\nLos valientes duermen su sueño,\ny a los guerreros no les responden sus brazos.\nCon un bramido, oh Dios de Jacob,\ninmovilizaste carros y caballos.\n\nAnt. Grande es en Israel la fama del Señor. Aleluya.\nAnt. 3. La tierra teme sobrecogida, cuando Dios se pone en pie para juzgar.\nAleluya.\n\nII\n\nTú eres terrible: ¿quién resiste frente a ti\nal ímpetu de tu ira?\nDesde el cielo proclamas la sentencia:\nla tierra teme sobrecogida,\ncuando Dios se pone en pie para juzgar,\npara salvar a los humildes de la tierra.\n\nLa cólera humana tendrá que alabarte,\nlos que sobrevivan al castigo te rodearán.\nHaced votos al Señor y cumplidlos,\ny traigan los vasallos tributo al Temible:\nél deja sin aliento a los príncipes,\ny es temible para los reyes del orbe.\n\nAnt. La tierra teme sobrecogida, cuando Dios se pone en pie para juzgar.\nAleluya.\nPara las otras Horas véase la salmodia complementaria."
+    }
+   ],
+   "tercia": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "Ya que hemos recibido la justificación por la fe, estamos en paz con Dios, por\nmedio de nuestro Señor Jesucristo. Por él hemos obtenido con la fe el acceso a\nesta gracia en que estamos: y nos gloriamos apoyados en la esperanza de la\ngloria de los hijos de Dios; y la esperanza no defrauda, porque el amor de Dios\nha sido derramado en nuestros corazones con el Espíritu Santo que se nos ha\ndado.\nV. Cantaré eternamente las misericordias del Señor.\nR. Anunciaré tu fidelidad por todas las edades.",
+     "ref": "Rm 5, 1-2. 5"
+    }
+   ],
+   "sexta": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "De la misma manera, el Espíritu acude en ayuda de nuestra debilidad, pues no\nsabemos pedir como conviene; y el Espíritu mismo aboga por nosotros con\ngemidos que no pueden ser expresados en palabras.\n\nV. Que llegue mi clamor a tu presencia, Señor.\nR. Con tus palabras dame inteligencia.",
+     "ref": "Rm 8, 26"
+    }
+   ],
+   "nona": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "Dios es quien nos confirma en Cristo a nosotros junto con vosotros. Él nos ha\nungido, él nos ha sellado, y ha puesto en nuestros corazones, como prenda\nsuya, el Espíritu.\nV. El Señor es mi luz y mi salvación.\nR. El Señor es la defensa de mi vida.",
+     "ref": "2 Co 1, 21-22"
+    }
+   ]
+  },
+  "visperas2": [
+   {
+    "tipo": "inicio",
+    "texto": "V. Dios mío, ven en mi auxilio.\nR. Señor, date prisa en socorrerme. Gloria al Padre. Como era. Aleluya."
+   },
+   {
+    "tipo": "himno",
+    "texto": "Nos dijeron de noche\nque estabas muerto,\ny la fe estuvo en vela\njunto a tu cuerpo.\n\nLa noche entera\nla pasamos queriendo\nmover la piedra.\n\nCon la vuelta del sol,\nvolverá a ver la tierra\nla gloria del Señor.\n\nNo supieron contarlo\nlos centinelas\nnadie supo la hora\nni la manera.\n\nAntes del día\nse cubrieron de gloria\ntus cinco heridas.\n\nCon la vuelta del sol,\nvolverá a ver la tierra\nla gloria del Señor.\n\nSi los cinco sentidos\n\nbuscan el sueño,\nque la fe tenga el suyo\nvivo y despierto.\n\nLa fe velando,\npara verte de noche\nresucitando.\n\nCon la vuelta del sol,\nvolverá a ver la tierra\nla gloria del Señor. Amén"
+   },
+   {
+    "tipo": "salmodia",
+    "texto": "Ant. 1. Cristo es sacerdote eterno según el rito de Melquisedec. Aleluya.\n\nSalmo 109, 1-5. 7\n\nEL MESÍAS, REY Y SACERDOTE\n\nÉl debe reinar hasta poner a todos sus enemigos bajo sus pies (1 Co 15, 25).\nOráculo del Señor a mi Señor:\n\n«Siéntate a mi derecha,\ny haré de tus enemigos\nestrado de tus pies.»\nDesde Sión extenderá el Señor\nel poder de tu cetro:\nsomete en la batalla a tus enemigos.\n\n«Eres príncipe desde el día de tu nacimiento,\nentre esplendores sagrados;\nyo mismo te engendré, como rocío,\nantes de la aurora.»\n\nEl Señor lo ha jurado y no se arrepiente:\n«Tú eres sacerdote eterno,\nsegún el rito de Melquisedec.»\n\nEl Señor a tu derecha, el día de su ira,\nquebrantará a los reyes.\nEn su camino beberá del torrente,\npor eso, levantará la cabeza.\n\nAnt. Cristo es sacerdote eterno según el rito de Melquisedec. Aleluya.\nAnt. 2. Nuestro Dios está en el cielo, y lo que quiere lo hace. Aleluya.\n\nSalmo 113 B\n\nHIMNO AL DIOS VERDADERO\n\nAbandonando a los ídolos, os volvisteis a Dios para servir al Dios vivo y verdadero (1\nTs 1, 9).\n\nNo a nosotros, Señor, no a nosotros,\nsino a tu nombre da la gloria,\npor tu bondad, por tu lealtad.\n¿Por qué han de decir las naciones:\n\"Dónde está su Dios?\"\n\nNuestro Dios está en el cielo,\nlo que quiere lo hace.\nSus ídolos, en cambio, son plata y oro,\nhechura de manos humanas:\n\ntienen boca, y no hablan;\ntienen ojos, y no ven;\ntienen orejas, y no oyen;\ntienen nariz, y no huelen;\n\ntienen manos, y no tocan;\ntienen pies, y no andan;\nno tiene voz su garganta:\nque sean igual los que los hacen,\ncuantos confían en ellos.\n\nIsrael confía en el Señor:\nÉl es su auxilio y su escudo.\nLa casa de Aarón confía en el Señor:\nél es su auxilio y su escudo.\nLos fieles del Señor confían en el Señor:\nél es su auxilio y su escudo.\n\nQue el Señor se acuerde de nosotros y nos bendiga,\nbendiga a la casa de Israel,\nbendiga a la casa de Aarón;\nbendiga a los fieles del Señor,\npequeños y grandes.\n\nQue el Señor os acreciente,\na vosotros y a vuestros hijos;\nbenditos seáis del Señor,\nque hizo el cielo y la tierra.\nEl cielo pertenece al Señor,\nla tierra se la ha dado a los hombres.\n\nLos muertos ya no alaban al Señor,\nni los que bajan al silencio.\nNosotros, sí, bendeciremos al Señor\nahora y por siempre.\n\nAnt. Nuestro Dios está en el cielo, y lo que quiere lo hace. Aleluya.\nAnt. 3. Alabad al Señor sus siervos todos, pequeños y grandes. Aleluya.\nEl cántico siguiente se dice con Aleluya, tal como está aquí, solamente cuando el Oficio es\ncantado. Cuando el Oficio se dice sin canto es suficiente decir Aleluya sólo al principio y al final\nde cada estrofa.\n\nCántico Cf. Ap 19, 1-7\n\nLAS BODAS DEL CORDERO\n\nAleluya.\nLa salvación y la gloria y el poder son de nuestro Dios.\n(R. Aleluya.)\nPorque sus juicios son verdaderos y justos.\nR. Aleluya, (aleluya).\n\nAleluya.\nAlabad al Señor, sus siervos todos.\n(R. Aleluya.)\nLos que le teméis, pequeños y grandes.\nR. Aleluya, (aleluya).\n\nAleluya.\nPorque reina el Señor, nuestro Dios, dueño de todo.\n(R. Aleluya.)\nAlegrémonos y gocemos y démosle gracias.\nR. Aleluya, (aleluya).\n\nAleluya.\nLlegó la boda del Cordero.\n(R. Aleluya.)\nSu esposa se ha embellecido.\nR. Aleluya, (aleluya).\nAnt. Alabad al Señor sus siervos todos, pequeños y grandes. Aleluya."
+   },
+   {
+    "tipo": "lectura_breve",
+    "texto": "Nosotros debemos dar continuamente gracias a Dios por vosotros, hermanos,\na quienes tanto ama el Señor. Dios os eligió desde toda la eternidad para daros\nla salud por la santificación que obra el Espíritu y por la fe en la verdad. Con\ntal fin os convocó por medio del mensaje de la salud, anunciado por nosotros,\npara daros la posesión de la gloria de nuestro Señor Jesucristo.",
+    "ref": "2 Ts 2, 13-14"
+   },
+   {
+    "tipo": "responsorio_breve",
+    "texto": "V. Nuestro Señor es grande y poderoso.\nR. Nuestro Señor es grande y poderoso.\nV. Su sabiduría no tiene medida.\nR. Grande y poderoso.\nV. Gloria al Padre, al Hijo, y al Espíritu Santo.\n\nR. Nuestro Señor es grande y poderoso."
+   },
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "Ant. Nuestro Señor es grande y poderoso.\nMagníficat"
+   },
+   {
+    "tipo": "preces",
+    "texto": "Demos gloria y honor a Cristo, que puede salvar definitivamente a los que por\nmedio de él se acercan a Dios, porque vive para interceder en su favor, y\ndigámosle con plena confianza:\n\nAcuérdate, Señor, de tu pueblo.\n\nSeñor Jesús, sol de justicia que iluminas nuestras vidas, al llegar al umbral de\nla noche te pedimos por todos los hombres,\n— que todos lleguen a gozar eternamente de tu luz.\n\nGuarda, Señor, la alianza sellada con tu sangre,\n— y santifica a tu iglesia para que sea siempre inmaculada y santa.\n\nAcuérdate de esta comunidad aquí reunida,\n— que tú elegiste para morada de tu gloria.\n\nQue los que están en camino tengan un viaje feliz,\n— y regresen a sus hogares con salud y alegría.\n\nAcoge, Señor, a tus hijos difuntos,\n— y concédeles tu perdón y la vida eterna.\n\nTerminemos nuestras preces con la oración que Cristo nos enseñó: Padre\nnuestro.\n\nSeñor Jesús, al finalizar nuestra oración vespertina consagramos a tu santa\nmajestad los afectos e inspiraciones que nos concediste a lo largo del día para\nque enriquecidos bajo la luz de tu mirada alcancemos nuevos beneficios. Por\nJesucristo nuestro Señor."
+   }
+  ]
+ },
+ "lun": {
+  "invitatorio": [
+   {
+    "tipo": "inicio",
+    "texto": "V. Señor, abre mis labios.\nR. Y mi boca proclamará tu alabanza.\nAnt. Demos vítores al Señor, aclamándolo con cantos."
+   }
+  ],
+  "oficio": [
+   {
+    "tipo": "inicio",
+    "texto": "V. Dios mío, ven en mi auxilio.\nR. Señor, date prisa en socorrerme. Gloria al Padre. Como era. Aleluya."
+   },
+   {
+    "tipo": "himno",
+    "texto": "Se puede tomar de Laudes o de  Vísperas, según el momento del día en que se rece el Oficio de\nlectura.\nO bien:\n\nEn el principio, tu Palabra.\nAntes que el sol ardiera,\nantes del mar y las montañas,\nantes de las constelaciones,\nnos amó tu Palabra.\n\nDesde tu seno, Padre,\nera sonrisa su mirada,\nera ternura su sonrisa,\nera calor de brasa.\nEn el principio, tu Palabra.\n\nTodo se hizo de nuevo,\ntodo salió sin mancha,\ndesde el arrullo del río\nhasta el rocío y la escarcha;\nnuevo el canto de los pájaros,\nporque habló tu Palabra.\n\nY nos sigues hablando todo el día,\naunque matemos la mañana\ny desperdiciemos la tarde,\ny asesinemos la alborada.\nComo una espada de fuego,\nen el principio, tu Palabra.\n\nLlénanos de tu presencia, Padre;\nEspíritu, satúranos de tu fragancia;\ndanos palabras para responderte,\nHijo, eterna Palabra. Amén."
+   },
+   {
+    "tipo": "salmodia",
+    "texto": "Ant. 1. Inclina, Señor, tu oído hacia mí; ven a librarme.\n\nSalmo 30, 2-17. 20-25\n\nSÚPLICA CONFIADA DE UN AFLIGIDO\n\nPadre, en tus manos encomiendo mi espíritu (Lc 23, 46).\n\nI\n\nA ti, Señor, me acojo:\nno quede yo nunca defraudado;\ntú, que eres justo, ponme a salvo,\ninclina tu oído hacia mí;\n\nven aprisa a librarme,\nsé la roca de mi refugio,\nun baluarte donde me salve,\ntú que eres mi roca y mi baluarte;\n\npor tu nombre dirígeme y guíame:\nsácame de la red que me han tendido,\nporque tú eres mi amparo.\n\nEn tus manos encomiendo mi espíritu:\ntú, el Dios leal, me librarás;\ntú aborreces a los que veneran ídolos inertes,\npero yo confío en el Señor,\ntu misericordia sea mi gozo y mi alegría.\n\nTe has fijado en mi aflicción,\nvelas por mi vida en peligro;\nno me has entregado en manos del enemigo,\nhas puesto mis pies en un camino ancho.\n\nAnt. Inclina, Señor, tu oído hacia mí; ven a librarme.\nAnt. 2. Haz brillar, Señor, tu rostro sobre tu siervo.\n\nII\n\nPiedad, Señor, que estoy en peligro:\nse consumen de dolor mis ojos,\nmi garganta y mis entrañas.\n\nMi vida se gasta en el dolor;\nmis años, en los gemidos;\nmi vigor decae con las penas,\nmis huesos se consumen.\n\nSoy la burla de todos mis enemigos,\nla irrisión de mis vecinos,\nel espanto de mis conocidos:\nme ven por la calle y escapan de mí.\nMe han olvidado como a un muerto,\nme han desechado como a un cacharro inútil.\n\nOigo las burlas de la gente,\ny todo me da miedo;\nse conjuran contra mí\ny traman quitarme la vida.\n\nPero yo confío en ti, Señor,\nte digo: «Tú eres mi Dios.»\nEn tu mano está mi destino:\nlíbrame de los enemigos que me persiguen;\nhaz brillar tu rostro sobre tu siervo,\nsálvame por tu misericordia.\n\nAnt. Haz brillar, Señor, tu rostro sobre tu siervo.\nAnt. 3. Bendito sea el Señor, que ha hecho por mí prodigios de misericordia.\n\nIII\n\n¡Qué bondad tan grande, Señor,\nreservas para tus fieles,\ny concedes a los que a ti se acogen\na la vista de todos!\n\nEn el asilo de tu presencia los escondes\nde las conjuras humanas;\nlos ocultas en tu tabernáculo,\nfrente a las lenguas pendencieras.\n\nBendito el Señor, que ha hecho por mí\nprodigios de misericordia\nen la ciudad amurallada.\n\nYo decía en mi ansiedad:\n«Me has arrojado de tu vista»;\npero tú escuchaste mi voz suplicante\ncuando yo te gritaba.\n\nAmad al Señor, fieles suyos;\n\nel Señor guarda a sus leales,\ny a los soberbios les paga con creces.\n\nSed fuertes y valientes de corazón\nlos que esperáis en el Señor.\n\nAnt. Bendito sea el Señor, que ha hecho por mí prodigios de misericordia."
+   },
+   {
+    "tipo": "versiculo",
+    "texto": "V. Enséñame, Señor, a caminar con lealtad.\nR. Porque tú eres mi Dios y Salvador."
+   }
+  ],
+  "laudes": [
+   {
+    "tipo": "inicio",
+    "texto": "V. Dios mío, ven en mi auxilio.\nR. Señor, date prisa en socorrerme. Gloria al Padre. Como era. Aleluya."
+   },
+   {
+    "tipo": "himno",
+    "texto": "Hoy que sé que mi vida es un desierto,\nen el que nunca nacerá una flor,\nvengo a pedirte, Cristo jardinero,\npor el desierto de mi corazón.\n\nPara que nunca la amargura sea\nen mi vida más fuerte que el amor,\npon, Señor, una fuente de alegría\nen el desierto de mi corazón.\n\nPara que nunca ahoguen los fracasos\nmis ansias de seguir siempre tu voz,\npon, Señor, una fuente de esperanza\nen el desierto de mi corazón.\n\nPara que nunca busque recompensa\nal dar mi mano o al pedir perdón,\npon, Señor, una fuente de amor puro\nen el desierto de mi corazón.\n\nPara que no me busque a mí cuando te busco\ny no sea egoísta mi oración,\npon tu cuerpo, Señor, y tu palabra\nen el desierto de mi corazón. Amén."
+   },
+   {
+    "tipo": "salmodia",
+    "texto": "Ant. 1. ¿Cuándo entraré a ver el rostro de mi Dios?\nSalmo 41\n\nDESEO DEL SEÑOR Y ANSIAS DE CONTEMPLAR EL TEMPLO\n\nEl que tenga sed y quiera, que venga a beber el agua de la vida (Ap 22, 17).\nComo busca la cierva\n\ncorrientes de agua,\nasí mi alma te busca\na ti, Dios mío;\n\ntiene sed de Dios,\ndel Dios vivo:\n¿cuándo entraré a ver\nel rostro de Dios?\n\nLas lágrimas son mi pan\nnoche y día.\nmientras todo el día me repiten:\n\"¿Dónde está tu Dios?\"\n\nRecuerdo otros tiempos,\ny desahogo mi alma conmigo:\ncómo marchaba a la cabeza del grupo,\nhacia la casa de Dios,\nentre cantos de júbilo y alabanza,\nen el bullicio de la fiesta.\n\n¿Por qué te acongojas, alma mía,\npor qué te me turbas?\nEspera en Dios que volverás a alabarlo:\n\"Salud de mi rostro, Dios mío\".\n\nCuando mi alma se acongoja,\nte recuerdo\ndesde el Jordán y el Hermón\ny el Monte Menor.\n\nUna sima grita a otra sima\ncon voz de cascadas:\ntus torrentes y tus olas\nme han arrollado.\n\nDe día el Señor\nme hará misericordia,\nde noche cantaré la alabanza\ndel Dios de mi vida.\n\nDiré a Dios: \"Roca mía,\n¿por qué me olvidas?\n¿Por qué voy andando, sombrío,\nhostigado por mi enemigo?\"\n\nSe me rompen los huesos\npor las burlas del adversario;\ntodo el día me preguntan:\n\"¿Dónde está tu Dios?\"\n\n¿Por qué te acongojas, alma mía,\npor qué te me turbas?\nEspera en Dios que volverás a alabarlo:\n\"Salud de mi rostro, Dios mío\".\n\nAnt. ¿Cuándo entraré a ver el rostro de mi Dios?\nAnt. 2. Muéstranos, Señor, tu gloria y tu compasión.\n\nCántico Sir 36, 1-7. 13-16\n\nSÚPLICA EN FAVOR DE LA CIUDAD SANTA DE JERUSALÉN\n\nEsta es la vida eterna: que te conozcan a ti, único Dios verdadero, y a tu enviado\nJesucristo (Jn 17, 3).\n\nSálvanos, Dios del universo,\ninfunde tu terror a todas las naciones,\namenaza con tu mano al pueblo extranjero,\npara que sienta tu poder.\n\nComo les mostraste tu santidad al castigarnos,\nmuéstranos así tu gloria castigándolos a ellos:\npara que sepan, como nosotros lo sabemos,\nque no hay Dios fuera de ti.\n\nRenueva los prodigios, repite los portentos,\nexalta tu mano, robustece tu brazo.\n\nReúne a todas las tribus de Jacob\ny dales su heredad como antiguamente.\n\nTen compasión del pueblo que lleva tu nombre,\nde Israel, a quien nombraste tu primogénito;\nten compasión de tu ciudad santa,\nde Jerusalén, lugar de tu reposo.\n\nLlena a Sión de tu majestad,\ny al templo, de tu gloria.\n\nAnt. Muéstranos, Señor, tu gloria y tu compasión.\n\nAnt. 3. Bendito eres, Señor, en la bóveda del cielo.\nSalmo 18 A\n\nALABANZA AL DIOS CREADOR DEL UNIVERSO\n\nNos visitará el sol que nace de lo alto... para guiar nuestros pasos por el camino de la\npaz (Lc 1, 78-79).\n\nEl cielo proclama la gloria de Dios,\nel firmamento pregona\nla obra de sus manos:\nel día al día le pasa el mensaje,\nla noche a la noche se lo susurra.\n\nSin que hablen, sin que pronuncien,\nsin que resuene su voz,\na toda la tierra alcanza su pregón\ny hasta los límites del orbe su lenguaje.\n\nAllí le ha puesto su tienda al sol:\nél sale como el esposo de su alcoba,\ncontento como un héroe,\na recorrer su camino.\n\nAsoma por un extremo del cielo,\ny su órbita llega al otro extremo:\nnada se libra de su calor.\n\nAnt. Bendito eres, Señor, en la bóveda del cielo."
+   },
+   {
+    "tipo": "lectura_breve",
+    "texto": "Cuando encontraba palabras tuyas las devoraba; tus palabras eran mi gozo y\nla alegría de mi corazón, porque tu nombre fue pronunciado sobre mí, ¡Señor,\nDios de los ejércitos!",
+    "ref": "Jr 15,16"
+   },
+   {
+    "tipo": "responsorio_breve",
+    "texto": "V. Aclamad, justos, al Señor, que merece la alabanza de los buenos.\nR. Aclamad, justos, al Señor, que merece la alabanza de los buenos.\nV. Cantadle un cántico nuevo.\nR. Que merece la alabanza de los buenos.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. Aclamad, justos, al Señor, que merece la alabanza de los buenos"
+   },
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "Ant. Bendito sea el Señor, Dios de Israel, porque ha visitado y redimido a su\npueblo.\nBenedictus"
+   },
+   {
+    "tipo": "preces",
+    "texto": "Demos gracias a nuestro salvador que ha hecho un pueblo de reyes y\nsacerdotes, y digámosle:\nConsérvanos, Señor, en tu servicio.\n\nSeñor Jesús, sacerdote eterno, que has querido que tu pueblo participara de tu\nsacerdocio,\n— haz que ofrezcamos siempre sacrificios espirituales, agradables al Padre.\n\nDanos, Señor, la abundancia de los frutos del Espíritu Santo,\n— comprensión, bondad, amabilidad.\n\nQue la luz de la fe ilumine este nuevo día,\n— y que durante el mismo caminemos por la senda del amor.\n\nHaz que busquemos siempre el bien de nuestros hermanos,\n— y les ayudemos a progresar en su salvación.\n\nCon el gozo que nos da el sabernos hijos de Dios, digamos confiadamente al\nPadre: Padre nuestro."
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Señor, Dios todopoderoso, que nos has hecho llegar al comienzo de este día:\ndanos tu ayuda para que no caigamos hoy en el pecado, sino que en nuestras\npalabras, pensamientos y acciones sigamos el camino de tus mandatos. Por\nnuestro Señor Jesucristo."
+   }
+  ],
+  "intermedia": {
+   "comun": [
+    {
+     "tipo": "_comun_menor",
+     "texto": "V. Dios mío, ven en mi auxilio.\nR. Señor, date prisa en socorrerme. Gloria al Padre. Como era. Aleluya."
+    },
+    {
+     "tipo": "himno",
+     "texto": "¿Qué tengo yo, que mi amistad procuras?\n¿Qué interés se te sigue, Jesús mío,\nque a mi puerta, cubierto de rocío,\npasas las noches del invierno a oscuras?\n\n¡Oh, cuánto fueron mis entrañas duras,\npues no te abrí!; ¡qué extraño desvarío,\nsi de mi ingratitud el hielo frío\nsecó las llagas de tus plantas puras!\n\nCuantas veces el ángel me decía:\n\"Alma, asómate ahora a la ventana,\n\nverás con cuanto amor llamar porfía\"!\n\n¡Y cuántas, hermosura soberana:\n\"Mañana le abriremos\", respondía,\npara lo mismo responder mañana!\n\nGloria al Padre, y al Hijo, y al Espíritu,\nPor los siglos de los siglos. Amén"
+    },
+    {
+     "tipo": "salmodia",
+     "texto": "Ant. 1. ¡Dichosos los que escuchan la palabra de Dios y la cumplen!\n\nSalmo 118, 41-48\nVI (Vau)\n\nSeñor, que me alcance tu favor,\ntu salvación según tu promesa:\nasí responderé a los que me injurian,\nque confío en tu palabra;\nno quites de mi boca las palabras sinceras,\nporque yo espero en tus mandamientos.\n\nCumpliré sin cesar tu voluntad,\npor siempre jamás;\nandaré por un camino ancho,\nbuscando tus decretos;\ncomentaré tus preceptos ante los reyes,\ny no me avergonzaré.\n\nSerán mi delicia tus mandatos,\nque tanto amo;\nlevantaré mis manos hacia ti\nrecitando tus mandatos.\n\nAnt. ¡Dichosos los que escuchan la palabra de Dios y la cumplen!\nAnt. 2. Mi alimento es hacer la voluntad de mi padre.\n\nSalmo 39, 2-14. 17-18\n\nEL JUSTO ESPERA EN EL SEÑOR\n\nNo quieres sacrificios ni ofrendas, pero me has preparado un cuerpo (Heb 10, 5).\n\nI\n\nYo esperaba con ansia al Señor;\nél se inclinó y escuchó mi grito:\n\nme levantó de la fosa fatal,\nde la charca fangosa;\n\nafianzó mis pies sobre roca,\ny aseguró mis pasos;\n\nme puso en la boca un cántico nuevo,\nun himno a nuestro Dios.\nMuchos, al verlo, quedaron sobrecogidos\ny confiaron en el Señor.\n\nDichoso el hombre que ha puesto\nsu confianza en el Señor,\ny no acude a los idólatras,\nque se extravían con engaños.\n\nCuántas maravillas has hecho,\nSeñor, Dios mío,\ncuántos planes en favor nuestro;\nnadie se te puede comparar.\nIntento proclamarlas, decirlas,\npero superan todo número.\n\nTú no quieres sacrificios ni ofrendas,\ny, en cambio, me abriste el oído;\nno pides sacrificio expiatorio,\nentonces yo digo: \"Aquí estoy\n-como está escrito en mi libro-\npara hacer tu voluntad\".\n\nDios mío, lo quiero,\ny llevo tu ley en las entrañas.\n\nAnt. Mi alimento es hacer la voluntad de mi padre.\nAnt. 3. Yo soy pobre, pero el Señor se cuida de mí.\n\nII\n\nHe proclamado tu salvación\nante la gran asamblea;\nno he cerrado los labios:\nSeñor, tú lo sabes.\n\nNo me he guardado en el pecho tu defensa,\nhe contado tu fidelidad y tu salvación,\nno he negado tu misericordia y tu lealtad\nante la gran asamblea.\n\nTú, Señor, no me cierres tus entrañas,\nque tu misericordia y tu lealtad\nme guarden siempre,\nporque me cercan desgracias sin cuento.\n\nSe me echan encima mis culpas,\ny no puedo huir;\nson más que los pelos de mi cabeza,\ny me falta el valor.\n\nSeñor, dígnate librarme;\nSeñor, date prisa en socorrerme.\n\nAlégrense y gocen contigo\ntodos los que te buscan;\ndigan siempre: \"Grande es el Señor\"\nlos que desean tu salvación.\n\nYo soy pobre y desgraciado,\npero el Señor se cuida de mí;\ntú eres mi auxilio y mi liberación:\nDios mío, no tardes.\n\nAnt. Yo soy pobre, pero el Señor se cuida de mí.\nPara las otras Horas véase la salmodia complementaria."
+    }
+   ],
+   "tercia": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "Así será la alianza que haré con la casa de Israel, después de aquellos días -\noráculo del Señor-: Pondré mi ley en su pecho, la escribiré en sus corazones;\nyo seré su Dios y ellos serán mi pueblo.\nV. Oh Dios, crea en mí un corazón puro.\nR. No me arrojes lejos de tu rostro.",
+     "ref": "Jr 31, 33"
+    },
+    {
+     "tipo": "oracion",
+     "texto": "Padre óptimo, Dios nuestro, tú has querido que los hombres trabajemos de tal\nmodo, que, cooperando unos con otros, alcancemos éxitos cada vez mejor\nlogrados; ayúdanos, pues, a vivir en medio de nuestros trabajos, sintiéndonos\nsiempre hijos tuyos y hermanos de todos los hombres. Por Jesucristo nuestro\nSeñor."
+    }
+   ],
+   "sexta": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "Haré con ellos alianza eterna y no cesaré de hacerles bien. Pondré en sus\ncorazones mi temor para que no se aparten de mí.\nV. De Dios viene mi salvación y mi gloria.\nR. Él es mi refugio.",
+     "ref": "Jr 32, 40"
+    },
+    {
+     "tipo": "oracion",
+     "texto": "Señor, tú eres el dueño de la viña y de los sembrados, tú el que repartes las\ntareas y distribuyes el justo salario a los trabajadores: ayúdanos a soportar el\npeso del día y el calor de la jornada sin quejarnos nunca de tus planes. Por\nJesucristo nuestro Señor."
+    }
+   ],
+   "nona": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "Dice el Señor Dios: «Vosotros sois rebaño mío, ovejas de mi grey; y yo soy\nvuestro Dios.»\nV. El Señor es mi pastor, nada me falta.\nR. En verdes praderas me hace recostar.",
+     "ref": "Ez 34, 31"
+    },
+    {
+     "tipo": "oracion",
+     "texto": "Tú nos has convocado, Señor, en tu presencia en esta misma hora en que los\napóstoles subían al templo para la oración de la tarde: concédenos que las\nsúplicas que ahora te dirigimos en nombre de Jesús, tu Hijo, alcancen la\nsalvación a cuantos lo invocan. Por Jesucristo nuestro Señor."
+    }
+   ]
+  },
+  "visperas": [
+   {
+    "tipo": "inicio",
+    "texto": "V. Dios mío, ven en mi auxilio.\nR. Señor date prisa en socorrerme. Gloria al Padre. Como era. Aleluya."
+   },
+   {
+    "tipo": "himno",
+    "texto": "Ahora que la noche es tan pura,\ny que no hay nadie más que tú,\ndime quién eres.\n\nDime quién eres y por qué me visitas,\npor qué bajas a mí que estoy tan necesitado\ny por qué te separas sin decirme tu nombre.\n\nDime quién eres tú que andas sobre la nieve;\ntú que, al tocar las estrellas, las haces palidecer de hermosura.\nTú que mueves el mundo tan suavemente,\nque parece que se me va a derramar el corazón.\n\nDime quién eres; ilumina quién eres;\ndime quién soy también, y por qué la tristeza de ser hombre;\ndímelo ahora que alzo hacia ti mi corazón,\ntú que andas sobre la nieve.\n\nDímelo ahora que tiembla todo mi ser en libertad,\nahora que brota mi vida y te llamo como nunca.\nSostenme entre tus manos; sostenme en mi tristeza,\nTú que andas sobre la nieve."
+   },
+   {
+    "tipo": "salmodia",
+    "texto": "Ant. 1. Eres el más bello de los hombres, en tus labios se derrama la gracia.\n\nSalmo 44\n\nLAS NUPCIAS DEL REY\n\nLlega el esposo, salid a recibirlo (Mt 25, 6).\n\nI\n\nMe brota del corazón un poema bello,\nrecito mis versos a un rey;\nmi lengua es ágil pluma de escribano.\n\nEres el más bello de los hombres,\nen tus labios se derrama la gracia,\nel Señor te bendice eternamente.\n\nCíñete al flanco la espada, valiente:\nes tu gala y tu orgullo;\ncabalga victorioso por la verdad y la justicia,\ntu diestra te enseñe a realizar proezas.\nTus flechas son agudas, los pueblos se te rinden,\nse acobardan los enemigos del rey.\n\nTu trono, oh Dios, permanece para siempre,\ncetro de rectitud es tu cetro real;\nhas amado la justicia y odiado la impiedad:\npor eso el Señor, tu Dios, te ha ungido\ncon aceite de júbilo\nentre todos tus compañeros.\n\nA mirra, áloe y acacia huelen tus vestidos,\ndesde los palacios de marfiles te deleitan las arpas.\nHijas de reyes salen a tu encuentro,\nde pie a tu derecha está la reina,\nenjoyada con oro de Ofir.\n\nAnt. Eres el más bello de los hombres, en tus labios se derrama la gracia.\nAnt. 2. Llega el Esposo, salid a recibirlo.\n\nII\n\nEscucha, hija, mira: inclina el oído,\n\nolvida tu pueblo y la casa paterna;\nprendado está el rey de tu belleza:\npóstrate ante él, que él es tu señor.\nLa ciudad de Tiro viene con regalos,\nlos pueblos más ricos buscan tu favor.\n\nYa entra la princesa, bellísima,\nvestida de perlas y brocado;\nla llevan ante el rey, con séquito de vírgenes,\nla siguen sus compañeras:\nlas traen entre alegría y algazara,\nvan entrando en el palacio real.\n\n\"A cambio de tus padres tendrás hijos,\nque nombrarás príncipes por toda la tierra\".\n\nQuiero hacer memorable tu nombre\npor generaciones y generaciones,\ny los pueblos te alabarán\npor los siglos de los siglos.\n\nAnt. Llega el Esposo, salid a recibirlo.\nAnt. 3. Dios proyectó hacer que todas las cosas tuviesen a Cristo por cabeza,\ncuando llegase el momento culminante.\n\nCántico Ef 1, 3-10\n\nEL DIOS SALVADOR\n\nBendito sea Dios,\nPadre de nuestro Señor Jesucristo,\nque nos ha bendecido en la persona de Cristo\ncon toda clase de bienes espirituales y celestiales.\n\nÉl nos eligió en la persona de Cristo,\nantes de crear el mundo,\npara que fuésemos santos\ne irreprochables ante Él por el amor.\n\nÉl nos ha destinado en la persona de Cristo,\npor pura iniciativa suya,\na ser sus hijos,\npara que la gloria de su gracia,\nque tan generosamente nos ha concedido\nen su querido Hijo,\nredunde en alabanza suya.\n\nPor este Hijo, por su sangre,\nhemos recibido la redención,\n\nel perdón de los pecados.\nEl tesoro de su gracia, sabiduría y prudencia\nha sido un derroche para con nosotros,\ndándonos a conocer el misterio de su voluntad.\n\nÉste es el plan\nque había proyectado realizar por Cristo\ncuando llegase el momento culminante:\nrecapitular en Cristo todas las cosas\ndel cielo y de la tierra.\n\nAnt. Dios proyectó hacer que todas las cosas tuviesen a Cristo por cabeza,\ncuando llegase el momento culminante."
+   },
+   {
+    "tipo": "lectura_breve",
+    "texto": "Nosotros continuamente damos gracias a Dios; porque habiendo recibido la\npalabra de Dios predicada por nosotros, la acogisteis, no como palabra\nhumana, sino —como es en realidad— como palabra de Dios. Que ejerce su\nacción en vosotros, los creyentes.",
+    "ref": "1 Ts 2, 13"
+   },
+   {
+    "tipo": "responsorio_breve",
+    "texto": "V. Suba, Señor, a ti mi oración.\nR. Suba, Señor, a ti mi oración.\nV. Como incienso en tu presencia.\nR. A ti mi oración.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. Suba, Señor a ti mi oración."
+   },
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "Ant. Proclame mi alma tu grandeza, Dios mío.\nMagníficat"
+   },
+   {
+    "tipo": "preces",
+    "texto": "Alabamos a Cristo, que ama a la Iglesia y le da aliento y calor, y roguémosle\nconfiados diciendo:\nAtiende, Señor, los deseos de tu pueblo.\n\nHaz, Señor, que todos los hombres se salven,\n— y lleguen al conocimiento de la verdad.\n\nGuarda con tu protección al Papa N. y a nuestro obispo N.,\n— ayúdalos con el poder de tu brazo.\n\nTen compasión de los que no encuentran trabajo,\n— y haz que consigan un empleo digno y estable.\n\nSeñor, sé refugio de los oprimidos,\n\n— y protégelos en todas sus necesidades.\n\nTe pedimos por el eterno descanso de los que durante su vida ejercieron el\nministerio para el bien de tu Iglesia,\n— que también te celebren eternamente en tu reino.\n\nFieles a la recomendación del Señor nos atrevemos a decir: Padre nuestro."
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Dios todopoderoso y eterno, que has querido asistirnos en el trabajo que\nnosotros, tus siervos inútiles, hemos realizado hoy, te pedimos que, al término\nde este día, acojas benignamente nuestro trabajo vespertino de acción de\ngracias y recibas con bondad la alabanza que te dirigimos. Por nuestro Señor\nJesucristo."
+   }
+  ]
+ },
+ "mar": {
+  "invitatorio": [
+   {
+    "tipo": "inicio",
+    "texto": "V. Señor, abre mis labios.\nR. Y mi boca proclamará tu alabanza.\nAnt. Al Señor, al Dios grande, venid, adorémosle."
+   }
+  ],
+  "oficio": [
+   {
+    "tipo": "inicio",
+    "texto": "V. Dios mío, ven en mi auxilio.\nR. Señor, date prisa en socorrerme. Gloria al Padre. Como era. Aleluya."
+   },
+   {
+    "tipo": "himno",
+    "texto": "Se puede tomar de Laudes o de  Vísperas, según el momento del día en que se rece el Oficio de\nlectura.\nO bien:\n\n¡Espada de dos filos\nes, Señor, tu palabra!\nPenetra como fuego\ny divide la entraña.\n\n¡Nada como tu voz,\nes terrible tu espada!\n¡Nada como tu aliento,\nes dulce tu palabra!\n\nTenemos que vivir\nencendida la lámpara,\nque para virgen necia\nno es posible la entrada.\nNo basta con gritar\nsólo palabras vanas,\nni tocar a la puerta\ncuando ya está cerrada.\n\nEspada de dos filos\nque me cercena el alma,\nque hiere a sangre y fuego\nesta carne mimada,\nque mata los ardores\npara encender la gracia.\n\nVivir de tus incendios,\nluchar por tus batallas,\ndejar por los caminos\nrumor de tus sandalias.\n¡Espada de dos filos\nes, Señor, tu palabra! Amén."
+   },
+   {
+    "tipo": "salmodia",
+    "texto": "Ant. 1. Encomienda tu camino al Señor, y él actuará.\n\nSalmo 36\n\nLA VERDADERA Y LA FALSA FELICIDAD\n\nDichosos los sufridos, porque ellos heredarán la tierra (Mt 5, 4).\n\nI\n\nNo te exasperes por los malvados,\nno envidies a los que obran el mal:\nse secarán pronto, como la hierba,\ncomo el césped verde se agostarán.\n\nConfía en el Señor y haz el bien,\nhabita tu tierra y practica la lealtad;\nsea el Señor tu delicia,\ny él te dará lo que pide tu corazón.\n\nEncomienda tu camino al Señor,\nconfía en él, y él actuará:\nhará tu justicia como el amanecer,\ntu derecho como el mediodía.\n\nDescansa en el Señor y espera en él,\nno te exasperes por el hombre que triunfa\nempleando la intriga:\n\ncohíbe la ira, reprime el coraje,\nno te exasperes, no sea que obres mal;\nporque los que obran mal son excluidos,\npero los que esperan en el Señor poseerán la tierra.\n\nAguarda un momento: desapareció el malvado,\nfíjate en su sitio: ya no está;\nen cambio, los sufridos poseen la tierra\ny disfrutan de paz abundante.\n\nAnt. Encomienda tu camino al Señor, y él actuará.\nAnt. 2. Apártate del mal y haz el bien; al honrado lo sostiene el Señor.\n\nII\n\nEl malvado intriga contra el justo,\nrechina sus dientes contra él;\npero el Señor se ríe de él,\nporque ve que le llega su hora.\n\nLos malvados desenvainan la espada,\nasestan el arco,\npara abatir a los pobres y humildes,\npara asesinar a los honrados;\npero su espada les atravesará el corazón,\nsus arcos se romperán.\n\nMejor es ser honrado con poco\nque ser malvado en la opulencia;\npues al malvado se le romperán los brazos,\npero al honrado lo sostiene el Señor.\n\nEl Señor vela por los días de los buenos,\ny su herencia durará siempre;\nno se agostarán en tiempo de sequía,\nen tiempo de hambre se saciarán;\n\npero los malvados perecerán,\nlos enemigos del Señor\nse marchitarán como la belleza de un prado,\nen humo se disiparán.\n\nEl malvado pide prestado y no devuelve,\nel justo se compadece y perdona.\nLos que el Señor bendice poseen la tierra,\nlos que él maldice son excluidos.\n\nEl Señor asegura los pasos del hombre,\nse complace en sus caminos;\nsi tropieza, no caerá,\nporque el Señor lo tiene de la mano.\n\nFui joven, ya soy viejo:\nnunca he visto a un justo abandonado,\nni a su linaje mendigando el pan.\nA diario se compadece y da prestado;\nbendita será su descendencia.\n\nApártate del mal y haz el bien,\ny siempre tendrás una casa;\nporque el Señor ama la justicia\n\ny no abandona a sus fieles.\n\nLos inicuos son exterminados,\nla estirpe de los malvados se extinguirá;\npero los justos poseen la tierra,\nla habitarán por siempre jamás.\n\nAnt. Apártate del mal y haz el bien; al honrado lo sostiene el Señor.\nAnt. 3. Confía en el Señor y sigue su camino.\n\nIII\n\nLa boca del justo expone la sabiduría,\nsu lengua explica el derecho;\nporque lleva en el corazón la ley de su Dios,\ny sus pasos no vacilan.\n\nEl malvado espía al justo\ne intenta darle muerte;\npero el Señor no lo entrega en sus manos,\nno deja que lo condenen en el juicio.\n\nConfía en el Señor, sigue su camino;\nél te levantará a poseer la tierra,\ny verás la expulsión de los malvados.\n\nVi a un malvado que se jactaba,\nque prosperaba como un cedro frondoso;\nvolví a pasar, y ya no estaba;\nlo busqué, y no lo encontré.\n\nObserva al honrado, fíjate en el bueno:\nsu porvenir es la paz;\nlos impíos serán totalmente aniquilados,\nel porvenir de los malvados quedará truncado.\n\nEl Señor es quien salva a los justos,\nél es su alcázar en el peligro;\nel Señor los protege y los libra,\nlos libra de los malvados y los salva\nporque se acogen a él.\n\nAnt. Confía en el Señor y sigue su camino."
+   },
+   {
+    "tipo": "versiculo",
+    "texto": "V. Enséñame, Señor, a gustar y a comprender.\nR. Porque me fío de tus mandatos."
+   }
+  ],
+  "laudes": [
+   {
+    "tipo": "inicio",
+    "texto": "V. Dios mío, ven en mi auxilio.\nR. Señor, date prisa en socorrerme. Gloria al Padre. Como era. Aleluya."
+   },
+   {
+    "tipo": "himno",
+    "texto": "Porque, Señor, yo te he visto\ny quiero volverte a ver,\nquiero creer.\n\nTe vi, sí, cuando era niño\ny en agua me bauticé.\ny, limpio de culpa vieja,\nsin velos te pude ver.\n\nDevuélveme aquellas puras\ntransparencias de aire fiel,\ndevuélveme aquellas niñas\nde aquellos ojos de ayer.\n\nEstán mis ojos cansados\nde tanto ver luz sin ver;\npor la oscuridad del mundo,\nvoy como un ciego que ve.\n\nTú que diste vista al ciego\ny a Nicodemo también,\nfiltra en mis secas pupilas\ndos gotas frescas de fe."
+   },
+   {
+    "tipo": "salmodia",
+    "texto": "Ant. 1. Envíame, Señor, tu luz y tu verdad.\n\nSalmo 42\n\nDESEO DEL TEMPLO\n\nYo he venido al mundo como luz (Jn 12, 46).\nHazme justicia, ¡oh Dios!, defiende mi causa\n\ncontra gente sin piedad,\nsálvame del hombre traidor y malvado.\n\nTú eres mi Dios y protector,\n¿por qué me rechazas?,\n¿por qué voy andando sombrío,\nhostigado por mi enemigo?\n\nEnvía tu luz y tu verdad:\nque ellas me guíen\ny me conduzcan hasta tu monte santo,\nhasta tu morada.\n\nQue yo me acerque al altar de Dios,\nal Dios de mi alegría;\nque te dé gracias al son de la cítara,\nDios, Dios mío.\n\n¿Por qué te acongojas, alma mía,\npor qué te me turbas?\nEspera en Dios, que volverás a alabarlo:\n\"Salud de mi rostro, Dios mío\".\n\nAnt. Envíame, Señor, tu luz y tu verdad.\nAnt. 2. Protégenos, Señor, todos los días de nuestra vida.\n\nCántico Is 38,10-14. 17-20\n\nANGUSTIAS DE UN MORIBUNDO Y ALEGRÍA DE LA CURACIÓN\n\nYo soy el que vive y estaba muerto... y tengo las llaves de la muerte (Ap 1, 17. 18).\nYo pensé: \"En medio de mis días\n\ntengo que marchar hacia las puertas del abismo;\nme privan del resto de mis años\".\n\nYo pensé: \"ya no veré más al Señor\nen la tierra de los vivos,\nya no miraré a los hombres\nentre los habitantes del mundo.\n\nLevantan y enrollan mi vida\ncomo una tienda de pastores.\nComo un tejedor, devanaba yo mi vida,\ny me cortan la trama\".\n\nDía y noche me estás acabando,\nsollozo hasta el amanecer.\nMe quiebras los huesos como un león,\ndía y noche me estás acabando.\n\nEstoy piando como una golondrina,\ngimo como una paloma.\nMis ojos mirando al cielo se consumen:\n¡Señor, que me oprimen, sal fiador por mí!\n\nMe has curado, me has hecho revivir,\nla amargura se me volvió paz\n\ncuando detuviste mi alma ante la tumba vacía\ny volviste la espalda a todos mis pecados.\n\nEl abismo no te da gracias,\nni la muerte te alaba,\nni esperan en tu fidelidad\nlos que bajan a la fosa.\n\nLos vivos, los vivos son quienes te alaban:\ncomo yo ahora.\nEl padre enseña a sus hijos tu fidelidad.\n\nSálvame, Señor, y tocaremos nuestras arpas\ntodos nuestros días en la casa del Señor.\n\nAnt. Protégenos, Señor, todos los días de nuestra vida.\nAnt. 3. ¡Oh Dios!, tú mereces un himno en Sión.\n\nSalmo 64\n\nSOLEMNE ACCIÓN DE GRACIAS\n\nCuando se habla de Sión debe entenderse del reino eterno (Orígenes).\nOh Dios, tú mereces un himno en Sión,\n\ny a ti se te cumplen los votos,\nporque tú escuchas las súplicas.\n\nA ti acude todo mortal\na causa de sus culpas;\nnuestros delitos nos abruman,\npero tú los perdonas.\n\nDichoso el que tú eliges y acercas\npara que viva en tus atrios:\nque nos saciemos de los bienes de tu casa,\nde los dones sagrados de tu templo.\n\nCon portentos de justicia nos respondes,\nDios, salvador nuestro;\ntú, esperanza del confín de la tierra\ny del océano remoto;\n\ntú que afianzas los montes con tu fuerza,\nceñido de poder;\ntú que reprimes el estruendo del mar,\nel estruendo de las olas\ny el tumulto de los pueblos.\n\nLos habitantes del extremo del orbe\n\nse sobrecogen ante tus signos,\ny las puertas de la aurora y del ocaso\nlas llenas de júbilo.\n\nTú cuidas la tierra, la riegas\ny la enriqueces sin medida;\nla acequia de Dios va llena de agua,\npreparas los trigales;\n\nriegas los surcos,\nigualas los terrones,\ntu llovizna los deja mullidos,\nbendices sus brotes;\ncoronas el año con tus bienes,\ntus carriles rezuman abundancia;\n\nrezuman los pastos del páramo,\ny las colinas se orlan de alegría;\nlas praderas se cubren de rebaños,\ny los valles se visten de mieses,\nque aclaman y cantan.\n\nAnt. ¡Oh Dios!, tú mereces un himno en Sión."
+   },
+   {
+    "tipo": "lectura_breve",
+    "texto": "No viváis, hermanos, en tinieblas para que el día del Señor no os sorprenda\ncomo ladrón; porque todos sois hijos de la luz e hijos del día. No somos de la\nnoche ni de las tinieblas.",
+    "ref": "1 Ts 5, 4 5"
+   },
+   {
+    "tipo": "responsorio_breve",
+    "texto": "V. Escucha mi voz, Señor; espero en tu palabra.\nR. Escucha mi voz, Señor; espero en tu palabra.\nV. Me adelanto a la aurora pidiendo auxilio.\nR. Espero en tu palabra.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. Escucha mi voz, Señor; espero en tu palabra."
+   },
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "Ant. De la mano de nuestros enemigos, líbranos, Señor.\nBenedictus"
+   },
+   {
+    "tipo": "preces",
+    "texto": "Bendigamos a nuestro Salvador, que con su resurrección ha iluminado el\nmundo, y digámosle suplicantes:\nHaz, Señor, que caminemos por tu senda.\n\nSeñor Jesús, al consagrar nuestra oración matinal en memoria de tu santa\nresurrección,\n— te pedimos que la esperanza de participar de tu gloria ilumine todo nuestro\ndía.\n\nTe ofrecemos, Señor, los deseos y proyectos de nuestra jornada,\n— dígnate aceptarlos y bendecirlos como primicia de nuestro día.\n\nConcédenos crecer hoy en tu amor,\n— a fin de que todo concurra para nuestro bien y el de nuestros hermanos.\n\nHaz, Señor, que el ejemplo de nuestra vida resplandezca como una luz ante los\nhombres,\n— para que todos den gloria al Padre que está en los cielos.\n\nPorque deseamos que la luz de Cristo ilumine a todos los hombres, pidamos al\nPadre que su reino llegue a nosotros: Padre nuestro."
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Señor Jesucristo, luz verdadera que alumbras a todo hombre y le muestras el\ncamino de la salvación: concédenos la abundancia de tu gracia para que\npreparemos, delante de ti, sendas de justicia y de paz. Tú que vives y reinas."
+   }
+  ],
+  "intermedia": {
+   "comun": [
+    {
+     "tipo": "_comun_menor",
+     "texto": "V. Dios mío, ven en mi auxilio.\nR. Señor, date prisa en socorrerme. Gloria al Padre. Como era. Aleluya."
+    },
+    {
+     "tipo": "himno",
+     "texto": "Tu poder multiplica\nla eficacia del hombre,\ny crece cada día, entre sus manos,\nla obra de tus manos.\n\nNos señalaste un trozo de la viña\ny nos dijiste: \"Venid y trabajad\".\n\nNos mostraste una mesa vacía\ny nos dijiste: \"Llenadla de pan\".\n\nNos presentaste un campo de batalla\ny nos dijiste: \"Construid la paz\".\n\nNos sacaste al desierto con el alba\n\ny nos dijiste: \"Levantad la ciudad\".\n\nPusiste una herramienta en nuestras manos\ny nos dijiste: \"Es tiempo de crear\".\n\nEscucha a mediodía el rumor del trabajo\ncon que el hombre se afana en tu heredad.\n\nGloria al Padre, y al Hijo, y al Espíritu Santo.\nPor los siglos. Amén."
+    },
+    {
+     "tipo": "salmodia",
+     "texto": "Ant. 1. En tierra extranjera guardé tus decretos.\n\nSalmo 118, 49-56\nVII (Zain)\n\nRecuerda la palabra que diste a tu siervo,\nde la que hiciste mi esperanza;\néste es mi consuelo en la aflicción:\nque tu promesa me da vida;\nlos insolentes me insultan sin parar,\npero yo no me aparto de tus mandatos.\n\nRecordando tus antiguos mandamientos,\nSeñor, quedé consolado;\nsentí indignación ante los malvados,\nque abandonan tu voluntad;\ntus leyes eran mi canción\nen tierra extranjera.\n\nDe noche pronuncio tu nombre,\nSeñor, y, velando, tus preceptos;\nesto es lo que a mí me toca:\nguardar tus decretos.\n\nAnt. En tierra extranjera guardé tus decretos.\nAnt. 2. El Señor cambiará la suerte de su pueblo, y gozará Israel.\n\nSalmo 52\n\nNECEDAD DE LOS PECADORES\n\nTodos pecaron y se hallan privados de la gloria de Dios (Rom 3, 23).\nDice el necio para sí:\n\n\"No hay Dios\".\nSe han corrompido cometiendo execraciones,\nno hay quien obre bien.\n\nDios observa desde el cielo\n\na los hijos de Adán,\npara ver si hay alguno sensato\nque busque a Dios.\n\nTodos se extravían\nigualmente obstinados,\nno hay uno que obre bien,\nni uno solo.\n\nPero ¿no aprenderán los malhechores\nque devoran a mi pueblo como pan\ny no invocan al Señor?\n\nPues temblarán de espanto,\nporque Dios esparce los huesos del agresor,\ny serán derrotados,\nporque Dios los rechaza.\n\n¡Ojalá venga desde Sión\nla salvación de Israel!\nCuando el Señor cambie la suerte de su pueblo,\nse alegrará Jacob y gozará Israel.\n\nAnt. El Señor cambiará la suerte de su pueblo, y gozará Israel.\nAnt. 3. Dios es mi auxilio, el Señor sostiene mi vida.\n\nSalmo 53\n\nPETICIÓN DE AUXILIO\n\nEl profeta pide verse libre de sus enemigos por el nombre del Señor (Casiodoro).\nOh Dios, sálvame por tu nombre,\n\nsal por mí con tu poder.\nOh Dios, escucha mi súplica,\natiende a mis palabras;\n\nporque unos insolentes se alzan contra mí,\ny hombres violentos me persiguen a muerte,\nsin tener presente a Dios.\n\nPero Dios es mi auxilio,\nel Señor sostiene mi vida.\n\nTe ofreceré un sacrificio voluntario,\ndando gracias a tu nombre, que es bueno;\nporque me libraste del peligro,\ny he visto la derrota de mis enemigos.\n\nAnt. 3. Dios es mi auxilio, el Señor sostiene mi vida.\n\nPara las otras Horas véase la salmodia complementaria."
+    }
+   ],
+   "tercia": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "Hay diversidad de dones, pero un mismo Espíritu; hay diversidad de servicios,\npero un mismo Señor; y hay diversidad de funciones, pero un mismo Dios que\nobra todo en todos.\nV. La salvación está cerca de los fieles.\nR. Y la gloria habitará en nuestra tierra.",
+     "ref": "1 Co 12, 4-6"
+    },
+    {
+     "tipo": "oracion",
+     "texto": "Dios todopoderoso y eterno, que a la hora de tercia enviaste tu Espíritu\nParáclito a los apóstoles, derrama también sobre nosotros ese Espíritu de amor\npara que demos siempre fiel testimonio ante los hombres de aquel amor que\nes el distintivo de los discípulos de tu Hijo. Que vive y reina por los siglos de\nlos siglos."
+    }
+   ],
+   "sexta": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "Lo mismo que el cuerpo es uno y tiene muchos miembros, y todos los\nmiembros del cuerpo, a pesar de ser muchos, son un solo cuerpo, así es\ntambién Cristo. Todos nosotros, judíos y griegos, esclavos y libres, hemos sido\nbautizados en un mismo Espíritu, para formar un solo cuerpo. Y todos hemos\nbebido de un solo Espíritu.\nV. Padre santo, guárdanos en tu nombre.\nR. Para que seamos perfectamente uno.",
+     "ref": "1 Co 12, 12-13"
+    },
+    {
+     "tipo": "oracion",
+     "texto": "Dios nuestro, que revelaste a Pedro tu plan de salvar a todas las naciones,\ndanos tu gracia para que todas nuestras acciones sean agradables a tus ojos y\nútiles a tu designio de amor y salvación universal. Por Jesucristo nuestro\nSeñor."
+    }
+   ],
+   "nona": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "Dios quiso que no hubiera divisiones en el cuerpo, porque todos los miembros\npor igual se preocupan unos de otros. Cuando un miembro sufre, todos sufren\ncon él; cuando un miembro es honrado, todos le felicitan.\nV. Señor Dios nuestro, reúnenos de entre los gentiles.\nR. Daremos gracias a tu santo nombre.",
+     "ref": "1 Co 12, 24b. 25-26"
+    },
+    {
+     "tipo": "oracion",
+     "texto": "Dios nuestro, que enviaste un ángel al centurión Cornelio para que le revelara\nel camino de la salvación, ayúdanos a trabajar cada día con mayor entrega en\nla salvación de los hombres, para que, junto con todos nuestros hermanos,\nincorporados a la Iglesia de tu Hijo, podamos llegar a ti. Por Jesucristo nuestro\nSeñor."
+    }
+   ]
+  },
+  "visperas": [
+   {
+    "tipo": "inicio",
+    "texto": "V. Dios mío, ven en mi auxilio.\nR. Señor, date prisa en socorrerme. Gloria al Padre. Como era. Aleluya."
+   },
+   {
+    "tipo": "himno",
+    "texto": "La noche no interrumpe\ntu historia con el hombre;\nla noche es tiempo de salvación.\n\nDe noche descendía tu escala misteriosa\nhasta la misma piedra donde Jacob dormía.\n\nLa noche es tiempo\nde salvación.\n\nDe noche celebrabas la Pascua con tu pueblo,\nmientras en las tinieblas volaba el exterminio.\n\nLa noche es tiempo\nde salvación.\n\nAbrahán contaba tribus de estrellas cada noche;\nde noche prolongabas la voz de la promesa.\n\nLa noche es tiempo\nde salvación.\n\nDe noche, por tres veces oyó Samuel su nombre;\nde noche eran los sueños tu lengua más profunda\n\nLa noche es tiempo\nde salvación.\n\nDe noche, en un pesebre, nacía tu Palabra;\nde noche lo anunciaron el ángel y la estrella.\n\nLa noche es tiempo\nde salvación.\n\nLa noche fue testigo de Cristo en el sepulcro;\nla noche vio la gloria de su resurrección.\n\nLa noche es tiempo\nde salvación.\n\nDe noche esperaremos tu vuelta repentina,\ny encontrarás a punto la luz de nuestra lámpara.\n\nLa noche es tiempo\nde salvación. Amén."
+   },
+   {
+    "tipo": "salmodia",
+    "texto": "Ant. 1. No podéis servir a Dios y al dinero.\n\nSalmo 48\n\nVANIDAD DE LAS RIQUEZAS\n\nEs muy difícil que un rico entre en el reino de los cielos (Mt 19, 23).\n\nI\n\nOíd esto, todas las naciones;\nescuchadlo, habitantes del orbe:\nplebeyos y nobles, ricos y pobres;\n\nmi boca hablará sabiamente,\ny serán muy sensatas mis reflexiones;\nprestaré oído al proverbio\ny propondré mi problema al son de la cítara.\n\n¿Por qué habré de temer los días aciagos,\ncuando me cerquen y acechen los malvados,\nque confían en su opulencia\ny se jactan de sus inmensas riquezas,\nsi nadie puede salvarse\nni dar a Dios un rescate?\n\nEs tan caro el rescate de la vida,\nque nunca les bastará para vivir perpetuamente\nsin bajar a la fosa.\n\nMirad: los sabios mueren,\nlo mismo que perecen los ignorantes y necios,\ny legan sus riquezas a extraños.\n\nEl sepulcro es su morada perpetua\ny su casa de edad en edad,\n\naunque hayan dado nombre a países.\n\nEl hombre no perdurará en la opulencia,\nsino que perece como los animales.\n\nAnt. No podéis servir a Dios y al dinero.\nAnt. 2. «Atesorad tesoros en el cielo», dice el Señor.\n\nII\n\nÉste es el camino de los confiados,\nel destino de los hombres satisfechos:\nson un rebaño para el abismo,\nla muerte es su pastor,\ny bajan derechos a la tumba;\nse desvanece su figura,\ny el abismo es su casa.\n\nPero a mí, Dios me salva,\nme saca de las garras del abismo\ny me lleva consigo.\n\nNo te preocupes si se enriquece un hombre\ny aumenta el fasto de su casa:\ncuando muera, no se llevará nada,\nsu fasto no bajará con él.\n\nAunque en vida se felicitaba:\n\"Ponderan lo bien que lo pasas\",\nirá a reunirse con sus antepasados,\nque no verán nunca la luz.\n\nEl hombre rico e inconsciente\nes como un animal que perece.\n\nAnt. «Atesorad tesoros en el cielo», dice el Señor.\nAnt. 3. Digno es el Cordero degollado de recibir el honor y la gloria.\n\nCántico Ap 4, 11; 5, 9-10. 12\n\nHIMNO DE LOS REDIMIDOS\n\nEres digno, Señor, Dios nuestro,\nde recibir la gloria, el honor y el poder,\nporque tú has creado el universo;\nporque por tu voluntad lo que no existía fue creado.\n\nEres digno de tomar el libro y abrir sus sellos,\nporque fuiste degollado\ny con tu sangre compraste para Dios\n\nhombres de toda raza, lengua, pueblo y nación;\ny has hecho de ellos para nuestro Dios\nun reino de sacerdotes,\ny reinan sobre la tierra.\n\nDigno es el Cordero degollado\nde recibir el poder, la riqueza, la sabiduría,\nla fuerza, el honor, la gloria y la alabanza.\n\nAnt. Digno es el Cordero degollado de recibir el honor y la gloria."
+   },
+   {
+    "tipo": "lectura_breve",
+    "texto": "Todos pecaron y se hallan privados de la gloria de Dios; son justificados\ngratuitamente, mediante la gracia de Cristo, en virtud de la redención realizada\nen él, a quien Dios ha propuesto como instrumentos de propiciación.",
+    "ref": "Rm 3, 23-25a"
+   },
+   {
+    "tipo": "responsorio_breve",
+    "texto": "V. Me saciarás de gozo en tu presencia, Señor.\nR. Me saciarás de gozo en tu presencia, Señor.\nV. De alegría perpetua a tu derecha.\nR. En tu presencia, Señor.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. Me saciarás de gozo en tu presencia, Señor."
+   },
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "Ant. Haz, Señor, obras grandes por nosotros, porque tú eres poderoso y tu\nnombre es santo.\nMagníficat"
+   },
+   {
+    "tipo": "preces",
+    "texto": "Alabemos a Cristo, pastor y obispo de nuestras vidas, que vela siempre con\namor por su pueblo, y digámosle suplicantes:\n\nProtege, Señor, a tu pueblo.\n\nPastor eterno, protege a nuestro obispo N.,\n— y a todos los pastores de la Iglesia.\n\nMira con bondad a los que sufren persecución,\n— y líbralos de todas sus angustias.\n\nCompadécete de los pobres y necesitados,\n— y da pan a los hambrientos.\n\nIlumina a los que tienen la misión de gobernar a los pueblos,\n— y dales sabiduría y prudencia.\n\nNo olvides, Señor, a los difuntos redimidos por tu sangre,\n\n— y admítelos en el festín de las bodas eternas.\n\nUnidos fraternalmente como hermanos de una misma familia, invoquemos al\nPadre común: Padre nuestro."
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Dios todopoderoso y eterno, Señor del día y de la noche, humildemente te\npedimos que la luz de Cristo, verdadero sol de justicia, ilumine siempre\nnuestras vidas para que así merezcamos gozar un día de aquella luz en la que\ntú habitas eternamente. Por nuestro Señor Jesucristo."
+   }
+  ]
+ },
+ "mie": {
+  "invitatorio": [
+   {
+    "tipo": "inicio",
+    "texto": "V. Señor, abre mis labios.\nR. Y mi boca proclamará tu alabanza.\nAnt. Aclama al Señor, tierra entera, servid al Señor con alegría."
+   }
+  ],
+  "oficio": [
+   {
+    "tipo": "inicio",
+    "texto": "V. Dios mío, ven en mi auxilio.\nR. Señor, date prisa en socorrerme. Gloria al Padre. Como era. Aleluya."
+   },
+   {
+    "tipo": "himno",
+    "texto": "Se puede tomar de Laudes o de  Vísperas, según el momento del día en que se rece el Oficio de\nlectura.\nO bien:\n\nPues busco, debo encontrar;\npues llamo, débenme abrir;\npues pido, me deben dar;\npues amo, débeme amar\naquel que me hizo vivir.\n\n¿Calla? Un día me hablará.\n¿Pasa? No lejos irá.\n¿Me pone a prueba? Soy fiel.\n¿Pasa? No lejos irá:\npues tiene alas mi alma, y va\nvolando detrás de él.\n\nEs poderoso, mas no\npodrá mi amor esquivar;\ninvisible se volvió,\nmas ojos de lince yo\ntengo y le habré de mirar.\n\nAlma, sigue hasta el final\nen pos del Bien de los bienes,\ny consuélate en tu mal\npensando con fe total:\n¿Le buscas? ¡Es que lo tienes! Amén."
+   },
+   {
+    "tipo": "salmodia",
+    "texto": "Ant. 1. También nosotros gemimos en nuestro interior, aguardando la\nredención de nuestro cuerpo.\n\nSalmo 38\n\nSÚPLICA DE UN ENFERMO\n\nLa creación fue sometida a la frustración..., pero con la esperanza de verse liberada\n(Rom 8, 20).\n\nI\n\nYo me dije: \"vigilaré mi proceder,\npara que no se me vaya la lengua;\npondré una mordaza a mi boca\nmientras el impío esté presente\".\n\nGuardé silencio resignado,\nno hablé con ligereza;\npero mi herida empeoró,\ny el corazón me ardía por dentro;\npensándolo me requemaba,\nhasta que solté la lengua.\n\n\"Señor, dame a conocer mi fin\ny cuál es la medida de mis años,\npara que comprenda lo caduco que soy\".\n\nMe concediste un palmo de vida,\nmis días son nada ante ti;\nel hombre no dura más que un soplo,\nel hombre pasa como una sombra,\npor un soplo se afana,\natesora sin saber para quién.\n\nAnt. También nosotros gemimos en nuestro interior, aguardando la redención\nde nuestro cuerpo.\nAnt. 2. Escucha, Señor, mi oración: no seas sordo a mi llanto.\n\nII\n\nY ahora, Señor, ¿qué esperanza me queda?\nTú eres mi confianza.\nLíbrame de mis iniquidades,\nno me hagas la burla de los necios.\n\nEnmudezco, no abro la boca,\nporque eres tú quien lo ha hecho.\nAparta de mí tus golpes,\nque el ímpetu de tu mano me acaba.\n\nEscarmientas al hombre\ncastigando su culpa;\ncomo una polilla roes sus tesoros;\nel hombre no es más que un soplo.\n\nEscucha, Señor, mi oración,\nhaz caso de mis gritos,\nno seas sordo a mi llanto;\n\nporque yo soy huésped tuyo,\nforastero como todos mis padres.\nAplácate, dame respiro,\nantes de que pase y no exista.\n\nAnt. Escucha, Señor, mi oración: no seas sordo a mi llanto.\nAnt. 3. Yo confío en la misericordia del Señor por siempre jamás.\n\nSalmo 51\n\nCONTRA LA VIOLENCIA DE LOS CALUMNIADORES\n\nEl que se gloría, que se gloríe en el Señor (1 Cor 1, 31).\n¿Por qué te glorías de la maldad\n\ny te envalentonas contra el piadoso?\nEstás todo el día maquinando injusticias,\ntu lengua es navaja afilada,\nautor de fraudes;\n\nprefieres el mal al bien,\nla mentira a la honradez;\nprefieres las palabras corrosivas,\nlengua embustera.\n\nPues Dios te destruirá para siempre,\nte abatirá y te barrerá de tu tienda;\narrancará tus raíces\ndel suelo vital.\n\nLo verán los justos, y temerán,\ny se reirán de él:\n\"mirad al valiente\nque no puso en Dios su apoyo,\nconfió en sus muchas riquezas,\nse insolentó en sus crímenes\".\n\nPero yo, como verde olivo,\nen la casa de Dios,\nconfío en la misericordia de Dios\n\npor siempre jamás.\n\nTe daré siempre gracias\nporque has actuado;\nproclamaré delante de tus fieles:\n\"Tu nombre es bueno\".\n\nAnt. Yo confío en la misericordia del Señor por siempre jamás."
+   },
+   {
+    "tipo": "versiculo",
+    "texto": "V. Mi alma espera en el Señor.\nR. Espera en su palabra."
+   }
+  ],
+  "laudes": [
+   {
+    "tipo": "inicio",
+    "texto": "V. Dios mío, ven en mi auxilio.\nR. Señor, date prisa en socorrerme. Gloria al Padre. Como era. Aleluya."
+   },
+   {
+    "tipo": "himno",
+    "texto": "Estate, Señor, conmigo\nsiempre, sin jamás partirte,\ny, cuando decidas irte,\nllévame, Señor, contigo;\nporque el pensar que te irás\nme causa un terrible miedo\nde si yo sin ti me quedo,\nde si tú sin mí te vas.\n\nLlévame en tu compañía,\ndonde tú vayas, Jesús,\nporque bien sé que eres tú\nla vida del alma mía;\nsi tú vida no me das,\nyo sé que vivir no puedo,\nni si yo sin ti me quedo,\nni si tú sin mí te vas.\n\nPor eso, más que a la muerte,\ntemo, Señor, tu partida y\nquiero perder la vida\nmil veces más que perderte;\npues la inmortal que tú das\nsé que alcanzarla no puedo\ncuando yo sin ti me quedo,\ncuando tú sin mí te vas. Amén."
+   },
+   {
+    "tipo": "salmodia",
+    "texto": "Ant. 1. Dios mío, tus caminos son santos: ¿qué dios es grande como nuestro\nDios?\n\nSalmo 76\n\nRECUERDO DEL PASADO GLORIOSO DE ISRAEL\n\nNos aprietan por todos lados, pero no nos aplastan (2 Cor 4, 8).\nAlzo mi voz a Dios gritando,\n\nalzo mi voz a Dios para que me oiga.\n\nEn mi angustia te busco, Señor mío;\nde noche extiendo las manos sin descanso,\ny mi alma rehúsa el consuelo.\nCuando me acuerdo de Dios, gimo,\ny meditando me siento desfallecer.\n\nSujetas los párpados de mis ojos,\ny la agitación no me deja hablar.\nRepaso los días antiguos,\nrecuerdo los años remotos;\nde noche lo pienso en mis adentros,\ny meditándolo me pregunto:\n\n\"¿Es que el Señor nos rechaza para siempre\ny ya no volverá a favorecernos?\n¿Se ha agotado ya su misericordia,\nse ha terminado para siempre su promesa?\n¿Es que Dios se ha olvidado de su bondad,\no la cólera cierra sus entrañas?\"\n\nY me digo: \"¡Qué pena la mía!\n¡Se ha cambiado la diestra del Altísimo!\"\nRecuerdo las proezas del Señor;\nsí, recuerdo tus antiguos portentos,\nmedito todas tus obras\ny considero tus hazañas.\n\nDios mío, tus caminos son santos:\n¿Qué dios es grande como nuestro Dios?\n\nTú, oh Dios, haciendo maravillas,\nmostraste tu poder a los pueblos;\ncon tu brazo rescataste a tu pueblo,\na los hijos de Jacob y de José.\n\nTe vio el mar, oh Dios,\n\nte vio el mar y tembló,\nlas olas se estremecieron.\n\nLas nubes descargaban sus aguas,\nretumbaban los nubarrones,\ntus saetas zigzagueaban.\n\nRodaba el estruendo de tu trueno,\nlos relámpagos deslumbraban el orbe,\nla tierra retembló estremecida.\n\nTú te abriste camino por las aguas,\nun vado por las aguas caudalosas,\ny no quedaba rastro de tus huellas.\n\nMientras guiabas a tu pueblo,\ncomo a un rebaño,\npor la mano de Moisés y de Aarón.\n\nAnt. Dios mío, tus caminos son santos: ¿qué dios es grande como nuestro\nDios?\nAnt. 2. Mi corazón se regocija por el Señor, que humilla y enaltece.\n\nCántico 1 Sam 2, 1-10\n\nEL SEÑOR ENALTECE A LOS POBRES\n\nDerriba del trono a los poderosos y enaltece a los humildes; a los hambrientos los\ncolma de bienes (Lc 1, 52-53).\n\nMi corazón se regocija por el Señor,\nmi poder se exalta por Dios;\nmi boca se ríe de mis enemigos,\nporque gozo con tu salvación.\nNo hay santo como el Señor,\nno hay roca como nuestro Dios.\n\nNo multipliquéis discursos altivos,\nno echéis por la boca arrogancias,\nporque el Señor es un Dios que sabe;\nél es quien pesa las acciones.\n\nSe rompen los arcos de los valientes,\nmientras los cobardes se ciñen de valor;\nlos hartos se contratan por el pan,\nmientras los hambrientos engordan;\nla mujer estéril da a luz siete hijos,\nmientras la madre de muchos queda baldía.\n\nEl Señor da la muerte y la vida,\nhunde en el abismo y levanta;\n\nda la pobreza y la riqueza,\nhumilla y enaltece.\n\nÉl levanta del polvo al desvalido,\nalza de la basura al pobre,\npara hacer que se siente entre príncipes\ny que herede un trono de gloria;\npues del Señor son los pilares de la tierra,\ny sobre ellos afianzó el orbe.\n\nÉl guarda los pasos de sus amigos,\nmientras los malvados perecen en las tinieblas,\nporque el hombre no triunfa por su fuerza.\n\nEl Señor desbarata a sus contrarios,\nel Altísimo truena desde el cielo,\nel Señor juzga hasta el confín de la tierra.\nÉl da fuerza a su Rey,\nexalta el poder de su Ungido.\n\nAnt. Mi corazón se regocija por el Señor, que humilla y enaltece.\nAnt. 3. El Señor reina, la tierra goza.\n\nSalmo 96\n\nGLORIA DEL SEÑOR, REY DE JUSTICIA\n\nEste salmo canta la salvación del mundo y la conversión de todos los pueblos (S.\nAtanasio).\n\nEl Señor reina, la tierra goza,\nse alegran las islas innumerables.\nTiniebla y nube lo rodean,\njusticia y derecho sostienen su trono.\n\nDelante de él avanza el fuego,\nabrasando en torno a los enemigos;\nsus relámpagos deslumbran el orbe,\ny, viéndolos, la tierra se estremece.\n\nLos montes se derriten como cera\nante el dueño de toda la tierra;\nlos cielos pregonan su justicia,\ny todos los pueblos contemplan su gloria.\n\nLos que adoran estatuas se sonrojan,\nlos que ponen su orgullo en los ídolos;\nante él se postran todos los dioses.\n\nLo oye Sión, y se alegra,\n\nse regocijan las ciudades de Judá\npor tus sentencias, Señor;\n\nporque tú eres, Señor,\naltísimo sobre toda la tierra,\nencumbrado sobre todos los dioses.\n\nEl Señor ama al que aborrece el mal,\nprotege la vida de sus fieles\ny los libra de los malvados.\n\nAmanece la luz para el justo,\ny la alegría para los rectos de corazón.\nAlegraos, justos, con el Señor,\ncelebrad su santo nombre.\n\nAnt. El Señor reina, la tierra goza."
+   },
+   {
+    "tipo": "lectura_breve",
+    "texto": "¿Quién podrá apartarnos del amor de Cristo? ¿La aflicción? ¿La angustia? ¿La\npersecución? ¿El hambre? ¿La desnudez? ¿El peligro? ¿La espada? En todo esto\nvencemos fácilmente por aquel que nos ha amado.",
+    "ref": "Rm 8, 35. 37"
+   },
+   {
+    "tipo": "responsorio_breve",
+    "texto": "V. Bendigo al Señor en todo momento.\nR. Bendigo al Señor en todo momento.\nV. Su alabanza está siempre en mi boca.\nR. En todo momento.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. Bendigo al Señor en todo momento."
+   },
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "Ant. Sirvamos al Señor con santidad todos nuestros días.\nBenedictus"
+   },
+   {
+    "tipo": "preces",
+    "texto": "Oremos a nuestro Señor Jesucristo, que prometió estar con nosotros todos los\ndías hasta el fin del mundo, y digámosle confiados:\n\nEscúchanos, Señor.\n\nQuédate con nosotros, Señor, durante este día,\n— que la luz de tu gracia no conozca nunca el anochecer de nuestras vidas.\n\nQue el trabajo de este día sea como una oblación sin defectos,\n— y que sea agradable a tus ojos.\n\nQue en todas nuestras palabras y acciones seamos hoy luz del mundo,\n\n— y sal de la tierra para cuantos nos traten.\n\nQue la gracia del Espíritu Santo habite en nuestros corazones y resplandezcan\nnuestras obras,\n— para que así permanezcamos en tu amor y en tu alabanza.\n\nTerminemos nuestra oración diciendo juntos las palabras del Señor y pidiendo\nal Padre que nos libres de todo mal: Padre nuestro."
+   },
+   {
+    "tipo": "oracion",
+    "texto": "ones la abundancia de tu luz, para que, avanzando siempre por el camino de\ntus mandatos, nos veamos libres de todo error. Por nuestro Señor Jesucristo."
+   }
+  ],
+  "intermedia": {
+   "comun": [
+    {
+     "tipo": "_comun_menor",
+     "texto": "V. Dios mío, ven en mi auxilio.\nR. Señor, date prisa en socorrerme. Gloria al Padre. Como era. Aleluya."
+    },
+    {
+     "tipo": "himno",
+     "texto": "Te está cantando el martillo,\ny rueda en tu honor la rueda.\nPuede que la luz no pueda\nlibrar del humo su brillo.\n¡Qué sudoroso y sencillo\nte pones a mediodía,\nDios de esta dura porfía\nde estar sin pausa creando,\ny verte necesitando\ndel hombre más cada día!\n\nQuien diga que Dios ha muerto\nque salga a la luz y vea\nsi el mundo es o no tarea\nde un Dios que sigue despierto.\nYa no es su sitio el desierto\nni la montaña se esconde;\ndecid, si preguntan dónde,\nque Dios está -sin mortaja-\nen donde un hombre trabaja\ny un corazón le responde. Amén."
+    },
+    {
+     "tipo": "salmodia",
+     "texto": "Ant. 1. He examinado mi camino, para enderezar mis pies a tus preceptos.\n\nSalmo 118, 57-64\n\nVIII (Heth)\nMi porción es el Señor;\n\nhe resuelto guardar tus palabras;\nde todo corazón busco tu favor:\nten piedad de mí, según tu promesa;\nhe examinado mi camino,\npara enderezar mis pies a tus preceptos.\n\nCon diligencia, sin tardanza,\nobservo tus mandatos;\nlos lazos de los malvados me envuelven,\npero no olvido tu voluntad;\na media noche me levanto para darte gracias\npor tus justos mandamientos.\n\nMe junto con tus fieles,\nque guardan tus decretos;\nSeñor, de tu bondad está llena la tierra;\nenséñame tus leyes.\n\nAnt. He examinado mi camino, para enderezar mis pies a tus preceptos.\nAnt. 2. Me asalta el temor y el terror; hazme caso y respóndeme.\n\nSALMO 54\n\nORACIÓN ANTE LA TRAICIÓN DE UN AMIGO\n\nJesús empezó a sentir terror y angustia (Mc 14, 33).\n\nI\n\nDios mío, escucha mi oración,\nno te cierres a mi súplica;\nhazme caso y respóndeme,\nme agitan mis ansiedades.\n\nMe turba la voz del enemigo,\nlos gritos del malvado:\ndescargan sobre mí calamidades\ny me atacan con furia.\n\nSe me retuercen dentro las entrañas,\nme sobrecoge un pavor mortal,\nme asalta el temor y el terror,\nme cubre el espanto,\n\ny pienso: \"¡Quién me diera alas de paloma\npara volar y posarme!\nEmigraría lejos,\n\nhabitaría en el desierto,\n\nme pondría en seguida a salvo de la tormenta,\ndel huracán que devora, Señor;\ndel torrente de sus lenguas\".\n\nViolencia y discordia veo en la ciudad:\ndía y noche hacen la ronda\nsobre sus murallas;\n\nen su recinto, crimen e injusticia;\ndentro de ella, calamidades;\nno se apartan de su plaza\nla crueldad y el engaño.\n\nAnt. Me asalta el temor y el terror; hazme caso y respóndeme.\nAnt. 3. Yo invoco a Dios, y el Señor me salva.\n\nII\n\nSi mi enemigo me injuriase,\nlo aguantaría;\nsi mi adversario se alzase contra mí,\nme escondería de él;\n\npero eres tú, mi compañero,\nmi amigo y confidente,\na quien me unía una dulce intimidad:\njuntos íbamos entre el bullicio\npor la casa de Dios.\n\nPero yo invoco a Dios,\ny el Señor me salva:\npor la tarde, en la mañana, al mediodía,\nme quejo gimiendo.\n\nDios escucha mi voz:\nsu paz rescata mi alma\nde la guerra que me hacen,\nporque son muchos contra mí.\n\nDios me escucha, los humilla\nel que reina desde siempre,\nporque no quieren enmendarse\nni temen a Dios.\n\nLevantan la mano contra su aliado,\nviolando los pactos;\nsu boca es más blanda que la manteca,\n\npero desean la guerra;\nsus palabras son más suaves que el aceite,\npero son puñales.\n\nEncomienda a Dios tus afanes,\nque Él te sustentará;\nno permitirá jamás que el justo caiga.\n\nTú, Dios mío, los harás bajar a ellos\na la fosa profunda.\nLos traidores y sanguinarios\nno cumplirán ni la mitad de sus años.\nPero yo confío en ti.\n\nAnt. Yo invoco a Dios, y el Señor me salva.\nPara las otras Horas véase la salmodia complementaria."
+    }
+   ],
+   "tercia": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "Yo di a vuestros jefes estas normas: «Vosotros escucharéis los pleitos de\nvuestros hermanos y juzgaréis con justicia las causas que surjan entre un\nhombre con su hermano o un extranjero. No seáis parciales en la sentencia,\noíd por igual al pequeño y al grande; no os dejéis amedrentar por nadie, que la\nsentencia es de Dios».\nV. El Señor es justo y ama la justicia.\nR. Los buenos verán su rostro.",
+     "ref": "Dt 1, 16-17a"
+    },
+    {
+     "tipo": "oracion",
+     "texto": "Señor, Padre santo, Dios fiel, tú que enviaste al Espíritu Santo prometido para\nque congregara a los hombres que el pecado había disgregado: ayúdanos a\nser, en medio de nuestros hermanos, fermento de unidad y de paz. Por\nJesucristo nuestro Señor."
+    }
+   ],
+   "sexta": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "Mis planes no son vuestros planes, vuestros caminos no son mis caminos -\noráculo del Señor-. Como el cielo es más alto que la tierra, mis caminos son\nmás altos que los vuestros, mis planes, que vuestros planes.\nV. Señor de los ejércitos, ¿quién como tú?\nR. El poder y la fidelidad te rodean.",
+     "ref": "Is 55, 8-9"
+    },
+    {
+     "tipo": "oracion",
+     "texto": "Dios todopoderoso y lleno de amor, que a la mitad de nuestra jornada\nconcedes un descanso a nuestra fatiga, contempla complacido el trabajo\n\nempezado, remedia nuestras deficiencias, y haz que nuestras obras te sean\nagradables. Por Jesucristo nuestro Señor."
+    }
+   ],
+   "nona": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "La mirada de Dios no es como la mirada del hombre, pues el hombre mira las\napariencias, pero el Señor mira el corazón.\nV. Señor, sondéame y conoce mi corazón.\nR. Guíame por el camino eterno.",
+     "ref": "1 S 16, 7b"
+    },
+    {
+     "tipo": "oracion",
+     "texto": "Señor Jesucristo, que por la salvación de los hombres extendiste tus brazos en\nla cruz: haz que todas nuestras acciones te sean agradables y sirvan para\nmanifestar al mundo tu redención. Tú que vives y reinas por los siglos de los\nsiglos."
+    }
+   ]
+  },
+  "visperas": [
+   {
+    "tipo": "inicio",
+    "texto": "V. Dios mío, ven en mi auxilio.\nR. Señor, date prisa en socorrerme. Gloria al Padre. Como era. Aleluya."
+   },
+   {
+    "tipo": "himno",
+    "texto": "Padre: has de oír\neste decir\nque se me abre en los labios como flor.\nTe llamaré\nPadre, porque\nla palabra me sabe a más amor.\n\nTuyo me sé,\npues me miré\nen mi carne prendido tu fulgor.\nMe has de ayudar\na caminar,\nsin deshojar mi rosa de esplendor.\n\nPor cuanto soy gracias te doy:\npor el milagro de vivir.\nY por el ver\nla tarde arder,\npor el encantamiento de existir.\n\nY para ir,\nPadre, hacia ti,\ndame tu mano suave y tu amistad.\n\nPues te diré:\nsolo no sé\nir rectamente hacia tu claridad.\n\nTras el vivir,\ndame el dormir\ncon los que aquí anudaste a mi querer.\nDame, Señor, hondo soñar.\nHogar dentro de ti nos has de hacer. Amén."
+   },
+   {
+    "tipo": "salmodia",
+    "texto": "Ant. 1. Aguardamos la alegre esperanza, la aparición gloriosa de nuestro\nsalvador.\n\nSalmo 61\n\nDIOS, ÚNICA ESPERANZA DEL JUSTO\n\nQue el Dios de la esperanza os colme de todo gozo y paz (Rom 15, 13).\nSólo en Dios descansa mi alma,\n\nporque de él viene mi salvación;\nsólo él es mi roca y mi salvación,\nmi alcázar: no vacilaré.\n\n¿Hasta cuándo arremeteréis contra un hombre\ntodos juntos, para derribarlo\ncomo a una pared que cede\no a una tapia ruinosa?\n\nSólo piensan en derribarme de mi altura,\ny se complacen en la mentira:\ncon la boca bendicen,\ncon el corazón maldicen.\n\nDescansa sólo en Dios, alma mía,\nporque él es mi esperanza;\nsólo él es mi roca y mi salvación,\nmi alcázar: no vacilaré.\n\nDe Dios viene mi salvación y mi gloria,\nél es mi roca firme,\nDios es mi refugio.\n\nPueblo suyo, confiad en él,\ndesahogad ante él vuestro corazón,\nque Dios es nuestro refugio.\n\nLos hombres no son más que un soplo,\n\nlos nobles son apariencia:\ntodos juntos en la balanza subirían\nmás leves que un soplo.\n\nNo confiéis en la opresión,\nno pongáis ilusiones en el robo;\ny aunque crezcan vuestras riquezas,\nno les deis el corazón.\n\nDios ha dicho una cosa,\ny dos cosas que he escuchado:\n\n\"Que Dios tiene el poder\ny el Señor tiene la gracia;\nque tú pagas a cada uno\nsegún sus obras\".\n\nAnt. Aguardamos la alegre esperanza, la aparición gloriosa de nuestro\nsalvador.\nAnt. 2. Que Dios ilumine su rostro sobre nosotros y nos bendiga.\n\nSalmo 66\n\nQUE TODOS LOS PUEBLOS ALABEN AL SEÑOR\n\nSabed que esta salvación de Dios ha sido enviada a los gentiles (Hech 28, 28).\nEl Señor tenga piedad y nos bendiga,\n\nilumine su rostro sobre nosotros;\nconozca la tierra tus caminos,\ntodos los pueblos tu salvación.\n\n¡Oh Dios!, que te alaben los pueblos,\nque todos los pueblos te alaben.\n\nQue canten de alegría las naciones,\nporque riges el mundo con justicia,\nriges los pueblos con rectitud\ny gobiernas las naciones de la tierra.\n\nOh Dios, que te alaben los pueblos,\nque todos los pueblos te alaben.\n\nLa tierra ha dado su fruto,\nnos bendice el Señor, nuestro Dios.\nQue Dios nos bendiga; que le teman\nhasta los confines del orbe.\n\nAnt. Que Dios ilumine su rostro sobre nosotros y nos bendiga.\nAnt. 3. Todo fue creado por él y para él.\n\nCántico Col 1, 12-20\n\nHIMNO A CRISTO, PRIMOGÉNITO DE TODA CRIATURA Y PRIMER RESUCITADO\nDE ENTRE LOS MUERTOS\n\nDamos gracias a Dios Padre,\nque nos ha hecho capaces de compartir\nla herencia del pueblo santo en la luz.\n\nÉl nos ha sacado del dominio de las tinieblas,\ny nos ha trasladado al reino de su Hijo querido,\npor cuya sangre hemos recibido la redención,\nel perdón de los pecados.\n\nÉl es imagen de Dios invisible,\nprimogénito de toda criatura;\nporque por medio de él\nfueron creadas todas las cosas:\ncelestes y terrestres, visibles e invisibles,\nTronos, Dominaciones, Principados, Potestades;\ntodo fue creado por él y para él.\n\nÉl es anterior a todo, y todo se mantiene en él.\nÉl es también la cabeza del cuerpo: de la Iglesia.\nÉl es el principio, el primogénito de entre los muertos,\ny así es el primero en todo.\n\nPorque en él quiso Dios que residiera toda la plenitud.\nY por él quiso reconciliar consigo todos los seres:\nlos del cielo y los de la tierra,\nhaciendo la paz por la sangre de su cruz.\n\nAnt. Todo fue creado por él y para él."
+   },
+   {
+    "tipo": "lectura_breve",
+    "texto": "Sed humildes unos con otros, porque Dios resiste a los soberbios, pero da su\ngracia a los humildes. Inclinaos bajo la poderosa mano de Dios, para que a su\ntiempo os eleve. Descargad en él todas vuestras preocupaciones, porque él se\ninteresa por vosotros.",
+    "ref": "1 Pe 5, 5-7"
+   },
+   {
+    "tipo": "responsorio_breve",
+    "texto": "V. Guárdanos, Señor, como a las niñas de tus ojos.\nR. Guárdanos, Señor, como a las niñas de tus ojos.\nV. A la sombra de tus alas escóndenos.\nR. Como a las niñas de tus ojos.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. Guárdanos, Señor, como a las niñas de tus ojos."
+   },
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "Ant. Haz, Señor, proezas con tu brazo, dispersa a los soberbios y enaltece a los\nhumildes.\nMagníficat"
+   },
+   {
+    "tipo": "preces",
+    "texto": "Aclamemos, hermanos, a Dios, nuestro salvador, que se complace en\nenriquecernos con sus dones, y digámosle con fe:\n\nMuéstranos, Señor, tu amor y danos tu paz\n\nDios eterno, mil años en presencia son como un ayer que pasó,\n— ayúdanos a recordar siempre que nuestra vida es como una hierba que se\nrenueva por la mañana y se seca por la tarde.\n\nAlimenta a tu pueblo con el maná para que no perezca de hambre,\n— y dale el agua viva para que nunca más tenga sed.\n\nQue tus fieles busquen y saboreen los bienes de arriba,\n— y te glorifiquen también con su descanso.\n\nConcede, Señor, buen tiempo a las cosechas,\n— para que la tierra dé frutos abundantes.\n\nLíbranos, Señor de todo peligro,\n— y bendice nuestros hogares (nuestra comunidad).\n\nQue los difuntos puedan contemplar tu faz,\n— y que nosotros tengamos un día parte en tu felicidad.\n\nConfiemos nuestras súplicas a Dios nuestro Padre, terminando nuestra oración\ncon las palabras que Cristo nos enseñó: Padre nuestro."
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Dios nuestro, tu nombre es santo y tu misericordia llega a tus fieles de\ngeneración en generación; atiende, pues, las súplicas de tu pueblo y haz que\npueda cantar eternamente tus alabanzas. Por nuestro Señor Jesucristo."
+   }
+  ]
+ },
+ "jue": {
+  "invitatorio": [
+   {
+    "tipo": "inicio",
+    "texto": "V. Señor, abre mis labios.\nR. Y mi boca proclamará tu alabanza.\nAnt. Entrad en la presencia del Señor con aclamaciones."
+   }
+  ],
+  "oficio": [
+   {
+    "tipo": "inicio",
+    "texto": "V. Dios mío, ven en mi auxilio.\nR. Señor, date prisa en socorrerme. Gloria al Padre. Como era. Aleluya."
+   },
+   {
+    "tipo": "himno",
+    "texto": "Se puede tomar de Laudes o de  Vísperas, según el momento del día en que se rece el Oficio de\nlectura.\nO bien:\n\nSeñor, ¿a quién iremos,\nsi tú eres la Palabra?\nA la voz de tu aliento\nse estremeció la nada;\nla hermosura brilló\ny amaneció la gracia.\n\nSeñor, ¿a quién iremos,\nsi tu voz nos habla?\n\nNos hablas en las voces\nde tu voz semejanza:\nen los goces pequeños\ny en las angustias largas.\n\nSeñor, ¿a quién iremos,\nsi tú eres la Palabra?\n\nEn los silencios íntimos\ndonde se siente el alma,\ntu clara voz creadora\ndespierta la nostalgia.\n\n¿A quién iremos, Verbo,\nentre tantas palabras?\n\nAl golpe de la vida,\nperdemos la esperanza;\nhemos roto el camino\ny el roce de tu planta.\n\n¿A dónde iremos, dinos,\nSeñor, si no nos hablas?\n\n¡Verbo del Padre, Verbo\nde todas las mañanas,\nde las tardes serenas,\nde las noches cansadas!\n\n¿A dónde iremos, Verbo,\nsi tú eres la Palabra? Amén."
+   },
+   {
+    "tipo": "salmodia",
+    "texto": "Ant. 1. Nos diste, Señor, la victoria sobre el enemigo; por eso damos gracias a\ntu nombre.\n\nSalmo 43\n\nORACIÓN DEL PUEBLO EN LAS CALAMIDADES\n\nEn todo vencemos fácilmente por aquel que nos ha amado (Rom 8, 37).\n\nI\n\nOh Dios, nuestros oídos lo oyeron,\nnuestros padres nos lo han contado:\nla obra que realizaste en sus días,\nen los años remotos.\n\nTú mismo con tu mano desposeíste a los gentiles,\ny los plantaste a ellos;\ntrituraste a las naciones,\ny los hiciste crecer a ellos.\n\nPorque no fue su espada la que ocupó la tierra,\nni su brazo el que les dio la victoria,\nsino tu diestra y tu brazo y la luz de tu rostro,\nporque tú los amabas.\n\nMi rey y mi Dios eres tú,\nque das la victoria a Jacob:\ncon tu auxilio embestimos al enemigo,\nen tu nombre pisoteamos al agresor.\n\nPues yo no confío en mi arco,\n\nni mi espada me da la victoria;\ntú nos das la victoria sobre el enemigo\ny derrotas a nuestros adversarios.\n\nDios ha sido siempre nuestro orgullo,\ny siempre damos gracias a tu nombre.\n\nAnt. Nos diste, Señor, la victoria sobre el enemigo; por eso damos gracias a tu\nnombre.\nAnt. 2. Perdónanos, Señor, y no entregues tu heredad al oprobio.\n\nII\n\nAhora, en cambio, nos rechazas y nos avergüenzas,\ny ya no sales, Señor, con nuestras tropas:\nnos haces retroceder ante el enemigo,\ny nuestro adversario nos saquea.\n\nNos entregas como ovejas a la matanza\ny nos has dispersado por las naciones;\nvendes a tu pueblo por nada,\nno lo tasas muy alto.\n\nNos haces el escarnio de nuestros vecinos,\nirrisión y burla de los que nos rodean;\nnos has hecho el refrán de los gentiles,\nnos hacen muecas las naciones.\n\nTengo siempre delante mi deshonra,\ny la vergüenza me cubre la cara\nal oír insultos e injurias,\nal ver a mi rival y a mi enemigo.\n\nAnt. Perdónanos, Señor, y no entregues tu heredad al oprobio.\nAnt. 3. Levántate, Señor, y redímenos por tu misericordia.\n\nIII\n\nTodo esto nos viene encima,\nsin haberte olvidado\nni haber violado tu alianza,\nsin que se volviera atrás nuestro corazón\nni se desviaran de tu camino nuestros pasos;\ny tú nos arrojaste a un lugar de chacales\ny nos cubriste de tinieblas.\n\nSi hubiéramos olvidado el nombre de nuestro Dios\ny extendido las manos a un dios extraño,\nel Señor lo habría averiguado,\n\npues él penetra los secretos del corazón.\n\nPor tu causa nos degüellan cada día,\nnos tratan como a ovejas de matanza.\nDespierta, Señor, ¿por qué duermes?\nLevántate, no nos rechaces más.\n¿Por qué nos escondes tu rostro\ny olvidas nuestra desgracia y opresión?\n\nNuestro aliento se hunde en el polvo,\nnuestro vientre está pegado al suelo.\nLevántate a socorrernos,\nredímenos por tu misericordia.\n\nAnt. Levántate, Señor, y redímenos por tu misericordia."
+   },
+   {
+    "tipo": "versiculo",
+    "texto": "V. Señor, ¿a quién vamos a ir?\nR. Tú tienes palabras de vida eterna."
+   }
+  ],
+  "laudes": [
+   {
+    "tipo": "inicio",
+    "texto": "V. Dios mío, ven en mi auxilio.\nR. Señor, date prisa en socorrerme. Gloria al Padre. Como era. Aleluya."
+   },
+   {
+    "tipo": "himno",
+    "texto": "Alfarero del hombre, mano trabajadora\nque, de los hondos limos iniciales,\nconvocas a los pájaros a la primera aurora,\nal pasto, los primeros animales.\n\nDe mañana te busco, hecho de luz concreta,\nde espacio puro y tierra amanecida.\nDe mañana te encuentro, Vigor, Origen, Meta\nde los sonoros ríos de la vida.\n\nEl árbol toma cuerpo, y el agua melodía;\ntus manos son recientes en la rosa;\nse espesa la abundancia del mundo a mediodía,\ny estás de corazón en cada cosa.\n\nNo hay brisa, si no alientas, monte, si no estás dentro\nni soledad en que no te hagas fuerte.\nTodo es presencia y gracia. Vivir es este encuentro\nTú, por la luz, el hombre, por la muerte.\n\n¡Que se acabe el pecado! ¡Mira que es desdecirte\ndejar tanta hermosura en tanta guerra!\nQue el hombre no te obligue, Señor, a arrepentirte\nde haberle dado un día las llaves de la tierra.\nAmén."
+   },
+   {
+    "tipo": "salmodia",
+    "texto": "Ant. 1. Despierta tu poder, Señor, y ven a salvarnos.\n\nSalmo 79\n\nVEN, SEÑOR, A VISITAR TU VIÑA\n\nVen, Señor Jesús (Ap 22, 20).\nPastor de Israel, escucha,\n\ntú que guías a José como a un rebaño;\ntú que te sientas sobre querubines, resplandece\nante Efraín, Benjamín y Manasés;\ndespierta tu poder y ven a salvarnos.\n\nOh Dios, restáuranos,\nque brille tu rostro y nos salve.\n\nSeñor, Dios de los ejércitos,\n¿hasta cuándo estarás airado\nmientras tu pueblo te suplica?\n\nLes diste a comer llanto,\na beber lágrimas a tragos;\nnos entregaste a las contiendas de nuestros vecinos,\nnuestros enemigos se burlan de nosotros.\n\nDios de los ejércitos, restáuranos,\nque brille tu rostro y nos salve.\n\nSacaste una vid de Egipto,\nexpulsaste a los gentiles, y la trasplantaste;\nle preparaste el terreno, y echó raíces\nhasta llenar el país;\n\nSu sombra cubría las montañas,\ny sus pámpanos, los cedros altísimos;\nextendió sus sarmientos hasta el mar,\ny sus brotes hasta el Gran Río.\n\n¿Por qué has derribado su cerca\npara que la saqueen los viandantes,\nla pisoteen los jabalíes\n\ny se la coman las alimañas?\n\nDios de los ejércitos, vuélvete:\nmira desde el cielo, fíjate,\nven a visitar tu viña,\nla cepa que tu diestra plantó\ny que tú hiciste vigorosa.\n\nLa han talado y le han prendido fuego;\ncon un bramido hazlos perecer.\nQue tu mano proteja a tu escogido,\nal hombre que tú fortaleciste.\n\nNo nos alejaremos de ti:\ndanos vida, para que invoquemos tu nombre.\n\nSeñor, Dios de los ejércitos, restáuranos,\nque brille tu rostro y nos salve.\n\nAnt. Despierta tu poder, Señor, y ven a salvarnos.\nAnt. 2. Anunciad a toda la tierra que el Señor hizo proezas.\n\nCántico Is 12,1-6\n\nACCIÓN DE GRACIAS DE LOS REDIMIDOS\n\nEl que tenga sed que venga a mí y que beba (Jn 7, 37).\nTe doy gracias, Señor,\n\nporque estabas airado contra mí,\npero ha cesado tu ira\ny me has consolado.\n\nÉl es mi Dios y Salvador:\nconfiaré y no temeré,\nporque mi fuerza y mi poder es el Señor,\nél fue mi salvación.\nY sacaréis aguas con gozo\nde las fuentes de la salvación.\n\nAquel día diréis:\n\"Dad gracias al Señor,\ninvocad su nombre,\ncontad a los pueblos sus hazañas,\nproclamad que su nombre es excelso.\n\nTañed para el Señor, que hizo proezas,\nanunciadlas a toda la tierra;\ngritad jubilosos, habitantes de Sión:\n\"Qué grande es en medio de ti\n\nel Santo de Israel\".\nAnt. Anunciad a toda la tierra que el Señor hizo proezas.\nAnt. 3. Aclamad a Dios, nuestra fuerza. †\n\nSalmo 80\n\nSOLEMNE RENOVACIÓN DE LA ALIANZA\n\nMirad que no tenga nadie un corazón malo e incrédulo (Heb 3, 12).\nAclamad a Dios, nuestra fuerza;\n\n† dad vítores al Dios de Jacob:\n\nacompañad, tocad los panderos,\nlas cítaras templadas y las arpas;\ntocad la trompeta por la luna nueva,\npor la luna llena, que es nuestra fiesta.\n\nPorque es una ley de Israel,\nun precepto del Dios de Jacob,\nuna norma establecida para José\nal salir de Egipto.\n\nOigo un lenguaje desconocido:\n\"retiré sus hombros de la carga,\ny sus manos dejaron la espuerta.\n\nClamaste en la aflicción, y te libré,\nte respondí oculto entre los truenos,\nte puse a prueba junto a la fuente de Meribá.\n\nEscucha, pueblo mío, doy testimonio contra ti;\n¡ojalá me escuchases Israel!\n\nNo tendrás un dios extraño,\nno adorarás un dios extranjero;\nyo soy el Señor, Dios tuyo,\nque te saqué del país de Egipto;\nabre la boca que te la llene\".\n\nPero mi pueblo no escuchó mi voz,\nIsrael no quiso obedecer:\nlos entregué a su corazón obstinado,\npara que anduviesen según sus antojos.\n\n¡Ojalá me escuchase mi pueblo\ny caminase Israel por mi camino!:\nen un momento humillaría a sus enemigos\ny volvería mi mano contra sus adversarios;\n\nlos que aborrecen al Señor te adularían,\ny su suerte quedaría fijada;\nte alimentaría con flor de harina,\nte saciaría con miel silvestre.\n\nAnt. Aclamad a Dios, nuestra fuerza."
+   },
+   {
+    "tipo": "lectura_breve",
+    "texto": "El reino de Dios no es comida ni bebida, sino justicia y paz y gozo en el\nEspíritu Santo, pues el que en esto sirve a Cristo es grato a Dios y acepto a los\nhombres. Por tanto, trabajemos por la paz y por nuestra mutua edificación.",
+    "ref": "Rm 14, 17-19"
+   },
+   {
+    "tipo": "responsorio_breve",
+    "texto": "V. Velando medito en ti, Señor.\nR. Velando medito en ti, Señor.\nV. Porque fuiste mi auxilio.\nR. Medito en ti, Señor.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. Velando medito en ti, Señor."
+   },
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "Ant. Anuncia, Señor la salvación a tu pueblo y perdónanos nuestros pecados.\nBenedictus"
+   },
+   {
+    "tipo": "preces",
+    "texto": "Bendigamos a Dios, nuestro Padre, que mira siempre con amor a sus hijos y\nnunca desatiende sus súplicas, y digámosle con humildad:\n\nIlumínanos, Señor\n\nTe damos gracias, Señor, porque nos has iluminado con la luz de Jesucristo,\n— que esta claridad ilumine hoy nuestros actos.\n\nQue tu sabiduría nos dirija en nuestra jornada,\n— así andaremos por sendas de vida nueva.\n\nAyúdanos a superar con fortaleza nuestras adversidades,\n— y haz que te sirvamos con generosidad de espíritu.\n\nDirige y santifica los pensamientos, palabras y obras de nuestro día,\n— y danos un espíritu dócil a tus inspiraciones.\nDirijamos ahora todos juntos, nuestra oración al Padre y digámosle: Padre\nnuestro."
+   },
+   {
+    "tipo": "oracion",
+    "texto": "A ti, Señor, que eres la luz verdadera y la fuente misma de toda luz, te\npedimos humildemente que imitando fielmente tu palabra vivamos siempre en\nla claridad de tu luz. Por nuestro Señor Jesucristo."
+   }
+  ],
+  "intermedia": {
+   "comun": [
+    {
+     "tipo": "_comun_menor",
+     "texto": "V. Dios mío, ven en mi auxilio.\nR. Señor, date prisa en socorrerme. Gloria al Padre. Como era. Aleluya."
+    },
+    {
+     "tipo": "himno",
+     "texto": "Fuerza tenaz, firmeza de las cosas,\ninmóvil en ti mismo;\norigen de la luz, eje del mundo\ny norma de su giro:\n\nconcédenos tu luz en una tarde\nsin muerte ni castigo,\nla luz que se prolonga tras la muerte\ny dura por los siglos. Amén."
+    },
+    {
+     "tipo": "salmodia",
+     "texto": "Ant. 1. Más estimo yo los preceptos de tu boca que miles de monedas de oro y\nplata.\n\nSalmo 118, 65-72\nIX (Teth)\n\nHas dado bienes a tu siervo,\nSeñor, con tus palabras;\nenséñame a gustar y a comprender,\nporque me fío de tus mandatos;\nantes de sufrir, yo andaba extraviado,\npero ahora me ajusto a tu promesa.\n\nTú eres bueno y haces el bien;\ninstrúyeme en tus leyes;\nlos insolentes urden engaños contra mí,\npero yo custodio tus leyes;\ntienen el corazón espeso como grasa,\npero mi delicia es tu voluntad.\n\nMe estuvo bien el sufrir,\nasí aprendí tus mandamientos;\nmás estimo yo los preceptos de tu boca\nque miles de monedas de oro y plata.\n\nAnt. Más estimo yo los preceptos de tu boca que miles de monedas de oro y\nplata.\nAnt. 2. En Dios, confío y no temo lo que pueda hacerme un mortal.\n\nSALMO 55\n\nCONFIANZA EN LA PALABRA DE DIOS\n\nEn este salmo aparece Cristo en su pasión (S. Jerónimo).\nMisericordia, Dios mío, que me hostigan,\n\nme atacan y me acosan todo el día;\ntodo el día me hostigan mis enemigos,\nme atacan en masa.\n\nLevántame en el día terrible,\nyo confío en ti.\n\nEn Dios, cuya promesa alabo,\nen Dios confío y no temo:\n¿qué podrá hacerme un mortal?\n\nTodos los días discuten y planean\npensando sólo en mi daño;\nbuscan un sitio para espiarme,\nacechan mis pasos y atentan contra mi vida.\n\nAnota en tu libro mi vida errante,\nrecoge mis lágrimas en tu odre, Dios mío.\n\nQue retrocedan mis enemigos cuando te invoco,\ny así sabré que eres mi Dios.\n\nEn Dios, cuya promesa alabo,\nen el Señor, cuya promesa alabo,\nen Dios confío y no temo;\n¿qué podrá hacerme un hombre?\n\nTe debo, Dios mío, los votos que hice,\nlos cumpliré con acción de gracias;\nporque libraste mi alma de la muerte,\nmis pies de la caída;\npara que camine en presencia de Dios\na la luz de la vida.\n\nAnt. En Dios, confío y no temo lo que pueda hacerme un mortal.\nAnt. 3. Tu bondad, Señor, es más grande que los cielos.\n\nSalmo 56\n\nORACIÓN MATUTINA DE UN AFLIGIDO\n\nEste salmo canta la pasión del Señor (S. Agustín).\nMisericordia, Dios mío, misericordia,\n\nque mi alma se refugia en ti;\nme refugio a la sombra de tus alas\nmientras pasa la calamidad.\n\nInvoco al Dios altísimo,\nal Dios que hace tanto por mí:\ndesde el cielo me enviará la salvación,\nconfundirá a los que ansían matarme,\nenviará su gracia y su lealtad.\n\nEstoy echado entre leones\ndevoradores de hombres;\nsus dientes son lanzas y flechas,\nsu lengua es una espada afilada.\n\nElévate sobre el cielo, Dios mío,\ny llene la tierra tu gloria.\n\nHan tendido una red a mis pasos,\npara que sucumbiera;\nme han cavado delante una fosa,\npero han caído en ella.\n\nMi corazón está firme, Dios mío,\nmi corazón está firme.\nVoy a cantar y a tocar:\ndespierta, gloria mía;\ndespertad, cítara y arpa;\ndespertaré a la aurora.\n\nTe daré gracias ante los pueblos, Señor;\ntocaré para ti ante las naciones:\npor tu bondad, que es más grande que los cielos;\npor tu fidelidad, que alcanza las nubes.\n\nElévate sobre el cielo, Dios mío,\ny llene la tierra tu gloria.\n\nAnt. Tu bondad, Señor, es más grande que los cielos.\nPara las otras Horas véase la salmodia complementaria."
+    }
+   ],
+   "tercia": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "Hermanos: vuestra vocación es la libertad, no una libertad para que se\naproveche el egoísmo; al contrario, sed esclavos unos de otros por amor. Pues\ntoda ley se concentra en esta frase: amarás al prójimo como a ti mismo.\nV. Correré, Señor, por el camino de tus mandatos.\nR. Cuando me ensanches el corazón.",
+     "ref": "Ga 5, 13-14"
+    },
+    {
+     "tipo": "oracion",
+     "texto": "Señor Dios, fiel, que enviaste al Espíritu Santo sobre los apóstoles reunidos en\noración, concédenos también a nosotros participar de los dones de ese mismo\nEspíritu. Por Jesucristo nuestro Señor."
+    }
+   ],
+   "sexta": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "Si vivís según el Espíritu, no daréis satisfacción a las apetencias de la carne.\nPues la carne desea contra el espíritu, y el espíritu contra la carne, como que\nson entre sí antagónicos, de forma que no hacéis lo que quisierais.\nV. Tú eres bueno, Señor, y haces el bien.\nR. Instrúyeme en tus leyes.",
+     "ref": "Ga 5, 16-17"
+    },
+    {
+     "tipo": "oracion",
+     "texto": "Dios todopoderoso y eterno, ante ti no existe ni la oscuridad ni las tinieblas,\nhaz, pues, brillar sobre nosotros la claridad de tu luz, para que, guardando tus\npreceptos, caminemos siempre por tus sendas con el corazón jubiloso. Por\nJesucristo nuestro Señor."
+    }
+   ],
+   "nona": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "El fruto del espíritu es: amor, alegría, paz, comprensión, servicialidad, bondad,\nlealtad, amabilidad, dominio de sí. Si vivimos por el Espíritu marcharemos tras\nel Espíritu.\nV. Indícame, Señor, el camino que he de seguir.\nR. Tu espíritu que es bueno me guíe por tierra llana.",
+     "ref": "Ga 5, 22.  23a. 25"
+    },
+    {
+     "tipo": "oracion",
+     "texto": "Contempla, Señor, a tu familia en oración, y haz que imitando los ejemplos de\npaciencia de tu Hijo no decaiga nunca ante la adversidad. Por Jesucristo\nnuestro Señor."
+    }
+   ]
+  },
+  "visperas": [
+   {
+    "tipo": "inicio",
+    "texto": "V. Dios mío, ven en mi auxilio.\nR. Señor, date prisa en socorrerme. Gloria al Padre. Como era. Aleluya."
+   },
+   {
+    "tipo": "himno",
+    "texto": "Tras el temblor opaco de las lágrimas,\n\nno estoy yo solo.\n\nTras el profundo velo de mi sangre,\nno estoy yo solo.\n\nTras la primera música del día,\nno estoy yo solo.\n\nTras la postrera luz de las montañas,\nno estoy yo solo.\n\nTras el estéril gozo de las horas,\nno estoy yo solo.\n\nTras el augurio helado del espejo,\nno estoy yo solo.\n\nNo estoy yo solo; me acompaña, en vela,\nla pura eternidad de cuanto amo.\nVivimos junto a Dios eternamente.\n\nGloria al Padre, y al Hijo, y al Espíritu,\npor los siglos de los siglos. Amén."
+   },
+   {
+    "tipo": "salmodia",
+    "texto": "Ant. 1. Te hago luz de las naciones, para que seas mi salvación hasta el fin de\nla tierra.\n\nSalmo 71\n\nPODER REAL DEL MESÍAS\n\nAbriendo sus cofres, le ofrecieron regalos: oro, incienso y mirra (Mt 2, 11).\n\nI\n\nDios mío, confía tu juicio al rey,\ntu justicia al hijo de reyes,\npara que rija a tu pueblo con justicia,\na tus humildes con rectitud.\n\nQue los montes traigan paz,\ny los collados justicia;\nque él defienda a los humildes del pueblo,\nsocorra a los hijos del pobre\ny quebrante al explotador.\n\nQue dure tanto como el sol,\ncomo la luna, de edad en edad;\nque baje como lluvia sobre el césped,\ncomo llovizna que empapa la tierra.\n\nQue en sus días florezca la justicia\ny la paz hasta que falte la luna;\nque domine de mar a mar,\ndel Gran Río al confín de la tierra.\n\nQue en su presencia se inclinen sus rivales;\nque sus enemigos muerdan el polvo;\nque los reyes de Tarsis y de las islas\nle paguen tributo.\n\nQue los reyes de Saba y de Arabia\nle ofrezcan sus dones;\nque se postren ante él todos los reyes,\ny que todos los pueblos le sirvan.\n\nAnt. Te hago luz de las naciones, para que seas mi salvación hasta el fin de la\ntierra.\nAnt. 2. Socorrerá el Señor a los hijos de los pobres; rescatará sus vidas de la\nviolencia.\n\nII\n\nÉl librará al pobre que clamaba,\nal afligido que no tenía protector;\nél se apiadará del pobre y del indigente,\ny salvará la vida de los pobres;\nél rescatará sus vidas de la violencia,\nsu sangre será preciosa a sus ojos.\n\nQue viva y que le traigan el oro de Saba,\nque recen por él continuamente\ny lo bendigan todo el día.\n\nQue haya trigo abundante en los campos,\ny susurre en lo alto de los montes;\nque den fruto como el Líbano,\ny broten las espigas como hierba del campo.\n\nQue su nombre sea eterno,\ny su fama dure como el sol;\nque él sea la bendición de todos los pueblos,\ny lo proclamen dichoso todas las razas de la tierra.\n\nBendito sea el Señor, Dios de Israel,\n\nel único que hace maravillas;\nbendito por siempre su nombre glorioso;\nque su gloria llene la tierra.\n¡Amén, amén!\n\nAnt. Socorrerá el Señor a los hijos de los pobres; rescatará sus vidas de la\nviolencia.\nAnt. 3. Ahora se estableció el poderío y el reinado de nuestro Dios.\n\nCántico Ap 11,17-18; 12,10b-12a\n\nEL JUICIO DE DIOS\n\nGracias te damos, Señor Dios omnipotente,\nel que eres y el que eras,\nporque has asumido el gran poder\ny comenzaste a reinar.\n\nSe encolerizaron las gentes,\nllegó tu cólera,\ny el tiempo de que sean juzgados los muertos,\ny de dar el galardón a tus siervos, los profetas,\ny a los santos y a los que temen tu nombre,\ny a los pequeños y a los grandes,\ny de arruinar a los que arruinaron la tierra.\n\nAhora se estableció la salud y el poderío,\ny el reinado de nuestro Dios,\ny la potestad de su Cristo;\nporque fue precipitado\nel acusador de nuestros hermanos,\nel que los acusaba ante nuestro Dios día y noche.\n\nEllos le vencieron en virtud de la sangre del Cordero\ny por la palabra del testimonio que dieron,\ny no amaron tanto su vida que temieran la muerte.\nPor esto, estad alegres, cielos,\ny los que moráis en sus tiendas.\n\nAnt. Ahora se estableció el poderío y el reinado de nuestro Dios."
+   },
+   {
+    "tipo": "lectura_breve",
+    "texto": "Por la obediencia a la verdad habéis purificado vuestras almas para un amor\nfraternal no fingido; amaos, pues, con intensidad y muy cordialmente unos a\notros, como quienes han sido engendrados no de semilla corruptible, sino\nincorruptible, por la palabra viva y permanente de Dios.",
+    "ref": "1 Pe 1, 22-23"
+   },
+   {
+    "tipo": "responsorio_breve",
+    "texto": "V. El Señor es mi pastor, nada me falta.\n\nR. El Señor es mi pastor, nada me falta.\nV. En verdes praderas me hace recostar.\nR. Nada me falta.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. El Señor es mi pastor, nada me falta."
+   },
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "Ant. A los que tienen hambre de ser justos el Señor les colma de bienes.\nMagníficat"
+   },
+   {
+    "tipo": "preces",
+    "texto": "Elevemos a Dios nuestros corazones agradecidos porque ha bendecido a su\npueblo con toda clase de bienes espirituales y digámosle con fe:\n\nBendice, Señor, a tu pueblo.\n\nDios todopoderoso y lleno de misericordia, protege al Papa N., y a nuestro\nobispo N.,\n— que tú mismo has elegido para guiar la Iglesia.\n\nProtege, Señor, a nuestros pueblos y ciudades,\n— y aleja de ellos todo mal.\n\nMultiplica como renuevo de olivo alrededor de tu mesa hijos que se consagren\na tu reino,\n— siguiendo a Jesucristo en pobreza, castidad y obediencia.\n\nConserva el propósito de aquellas de tus hijas que han consagrado a ti su\nvirginidad,\n— para que, en la integridad de su cuerpo y de su espíritu, sigan al cordero\ndonde quiera que vaya.\n\nDa la paz a los difuntos,\n— y permítenos encontrarnos nuevamente un día en tu reino.\n\nYa que por Jesucristo hemos llegados a ser hijos de Dios, acudamos con\nconfianza a nuestro Padre: Padre nuestro."
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Al ofrecerte, Señor, nuestro sacrificio vespertino de alabanza, te pedimos\nhumildemente que, meditando día y noche tu palabra, consigamos un día la luz\ny el premio de la vida eterna. Por nuestro Señor Jesucristo."
+   }
+  ]
+ },
+ "vie": {
+  "invitatorio": [
+   {
+    "tipo": "inicio",
+    "texto": "V. Señor, abre mis labios.\nR. Y mi boca proclamará tu alabanza.\nAnt. El Señor es bueno, bendecid su nombre."
+   }
+  ],
+  "oficio": [
+   {
+    "tipo": "inicio",
+    "texto": "V. Dios mío, ven en mi auxilio.\nR. Señor, date prisa en socorrerme. Gloria al Padre. Como era. Aleluya."
+   },
+   {
+    "tipo": "himno",
+    "texto": "Se puede tomar de Laudes o de  Vísperas, según el momento del día en que se rece el Oficio de\nlectura.\nO bien:\n\n¡Qué hermosos son los pies\ndel que anuncia la paz a sus hermanos!\n¡Y qué hermosas las manos\nmaduras en el surco y en la mies!\n\nGrita lleno de gozo,\npregonero, que traes noticias buenas:\nse rompen las cadenas,\ny el sol de Cristo brilla esplendoroso.\n\nGrita sin miedo, grita,\ny denuncia a mi pueblo sus pecados;\nvivimos engañados,\npues la belleza humana se marchita.\n\nToda yerba es fugaz,\nla flor del campo pierde sus colores;\nlevanta sin temores,\npregonero, tu voz dulce y tenaz.\n\nSi dejas los pedazos\nde tu alma enamorada en el sendero,\n¡qué dulces, mensajero,\nqué hermosos, qué divinos son tus pasos! Amén."
+   },
+   {
+    "tipo": "salmodia",
+    "texto": "Ant. 1. Señor, no me castigues con cólera.\nSalmo 37\n\nSEÑOR, NO ME CORRIJAS CON IRA\n\nTodos sus conocidos se mantenían a distancia (Lc 23, 49).\n\nI\n\nSeñor, no me corrijas con ira,\nno me castigues con cólera;\ntus flechas se me han clavado,\ntu mano pesa sobre mí;\n\nno hay parte ilesa en mi carne\na causa de tu furor,\nno tienen descanso mis huesos\na causa de mis pecados;\n\nmis culpas sobrepasan mi cabeza,\nson un peso superior a mis fuerzas.\n\nAnt. Señor, no me castigues con cólera.\nAnt. 2. Señor, todas mis ansias están en tu presencia.\n\nII\n\nMis llagas están podridas y supuran\npor causa de mi insensatez;\nvoy encorvado y encogido,\ntodo el día camino sombrío.\n\nTengo las espaldas ardiendo,\nno hay parte ilesa en mi carne;\nestoy agotado, deshecho del todo;\nrujo con más fuerza que un león.\n\nSeñor mío,\ntodas mis ansias están en tu presencia,\nno se te ocultan mis gemidos;\nsiento palpitar mi corazón,\nme abandonan las fuerzas,\ny me falta hasta la luz de los ojos.\n\nMis amigos y compañeros\nse alejan de mí,\nmis parientes se quedan a distancia;\nme tienden lazos\nlos que atentan contra mí,\n\nlos que desean mi daño\nme amenazan de muerte,\ntodo el día murmuran traiciones.\n\nAnt. Señor, todas mis ansias están en tu presencia.\nAnt. 3. Yo te confieso mi culpa, no me abandones, Señor, Dios mío.\n\nIII\n\nPero yo, como un sordo, no oigo;\ncomo un mudo no abro la boca;\nsoy como uno que no oye\ny no puede replicar.\n\nEn ti, Señor, espero,\ny tú me escucharás, Señor, Dios mío;\nesto pido:\nque no se alegren por mi causa,\nque, cuando resbale mi pie,\nno canten triunfo.\n\nPorque yo estoy a punto de caer,\ny mi pena no se aparta de mí:\nyo confieso mi culpa,\nme aflige mi pecado.\n\nMis enemigos mortales son poderosos,\nson muchos\nlos que me aborrecen sin razón,\nlos que me pagan males por bienes,\nlos que me atacan\ncuando procuro el bien.\n\nNo me abandones, Señor;\nDios mío, no te quedes lejos;\nven aprisa a socorrerme,\nSeñor mío, mi salvación.\n\nAnt. Yo te confieso mi culpa, no me abandones, Señor, Dios mío."
+   },
+   {
+    "tipo": "versiculo",
+    "texto": "V. Mis ojos se consumen aguardando tu salvación.\nR. Y tu promesa de justicia."
+   }
+  ],
+  "laudes": [
+   {
+    "tipo": "inicio",
+    "texto": "V. Dios mío, ven en mi auxilio.\n\nR. Señor, date prisa en socorrerme. Gloria al Padre. Como era. Aleluya."
+   },
+   {
+    "tipo": "himno",
+    "texto": "Por el dolor creyente que brota del pecado;\npor no haberte querido de todo corazón;\npor haberte, Dios mío, tantas veces negado,\ntantas veces pedido, de rodillas, perdón.\n\nPor haberte perdido; por haberte encontrado.\nPorque es como un desierto nevado mi oración;\nporque es como la hiedra sobre un árbol cortado\nel recuerdo que brota cargado de ilusión.\n\nPorque es como la hiedra, déjame que te abrace,\nprimero amargamente, lleno de flor después,\ny que a mi viejo tronco poco a poco me enlace,\ny que mi vieja sombra se derrame a tus pies.\n\n¡Porque es como la rama donde la savia nace,\nmi corazón, Dios mío, sueña que tú lo ves! Amén."
+   },
+   {
+    "tipo": "salmodia",
+    "texto": "Ant. 1. Un corazón quebrantado y humillado, tú no lo desprecias, Señor.\n\nSalmo 50\n\nMISERICORDIA, DIOS MÍO\n\nRenovaos en la mente y en el espíritu y vestíos de la nueva condición humana (Cf. Ef\n4, 23-24).\n\nMisericordia, Dios mío, por tu bondad,\npor tu inmensa compasión borra mi culpa;\nlava del todo mi delito,\nlimpia mi pecado.\n\nPues yo reconozco mi culpa,\ntengo siempre presente mi pecado:\ncontra ti, contra ti sólo pequé,\ncometí la maldad que aborreces.\n\nEn la sentencia tendrás razón,\nen el juicio resultarás inocente.\nMira, en la culpa nací,\npecador me concibió mi madre.\n\nTe gusta un corazón sincero,\ny en mi interior me inculcas sabiduría.\n\nRocíame con el hisopo: quedaré limpio;\nlávame: quedaré más blanco que la nieve.\n\nHazme oír el gozo y la alegría,\nque se alegren los huesos quebrantados.\nAparta de mi pecado tu vista,\nborra en mí toda culpa.\n\nOh Dios, crea en mí un corazón puro,\nrenuévame por dentro con espíritu firme;\nno me arrojes lejos de tu rostro,\nno me quites tu santo espíritu.\n\nDevuélveme la alegría de tu salvación,\nafiánzame con espíritu generoso:\nenseñaré a los malvados tus caminos,\nlos pecadores volverán a ti.\n\nLíbrame de la sangre, oh Dios,\nDios, Salvador mío,\ny cantará mi lengua tu justicia.\nSeñor, me abrirás los labios,\ny mi boca proclamará tu alabanza.\n\nLos sacrificios no te satisfacen:\nsi te ofreciera un holocausto, no lo querrías.\nMi sacrificio es un espíritu quebrantado;\nun corazón quebrantado y humillado,\ntú no lo desprecias.\n\nSeñor, por tu bondad, favorece a Sión,\nreconstruye las murallas de Jerusalén:\nentonces aceptarás los sacrificios rituales,\nofrendas y holocaustos,\nsobre tu altar se inmolarán novillos.\n\nAnt. Un corazón quebrantado y humillado, tú no lo desprecias, Señor.\nAnt. 2. En tu juicio, Señor, acuérdate de la misericordia.\n\nCántico Ha 3, 2-4. 13a. 15-19\n\nJUICIO DE DIOS\n\nLevantaos, alzad la cabeza, se acerca vuestra liberación (Lc 21, 28).\nSeñor, he oído tu fama,\n\nme ha impresionado tu obra.\nEn medio de los años, realízala;\nen medio de los años, manifiéstala;\nen el terremoto, acuérdate de la misericordia.\n\nEl Señor viene de Temán;\nel Santo, del monte Farán:\nsu resplandor eclipsa el cielo,\nla tierra se llena de su alabanza;\nsu brillo es como el día,\nsu mano destella velando su poder.\n\nSales a salvar a tu pueblo,\na salvar a tu ungido;\npisas el mar con tus caballos,\nrevolviendo las aguas del océano.\n\nLo escuché y temblaron mis entrañas,\nal oírlo se estremecieron mis labios;\nme entró un escalofrío por los huesos,\nvacilaban mis piernas al andar;\ngimo ante el día de angustia\nque sobreviene al pueblo que nos oprime.\n\nAunque la higuera no echa yemas\ny las viñas no tienen fruto,\naunque el olivo olvida su aceituna\ny los campos no dan cosechas,\naunque se acaban las ovejas del redil\ny no quedan vacas en el establo,\nyo exultaré con el Señor,\nme gloriaré en Dios, mi salvador.\n\nEl Señor soberano es mi fuerza,\nél me da piernas de gacela\ny me hace caminar por las alturas.\n\nAnt. En tu juicio, Señor, acuérdate de la misericordia.\nAnt. 3. Glorifica al Señor Jerusalén. †\n\nSalmo 147\n\nACCIÓN DE GRACIAS POR LA RESTAURACIÓN DE JERUSALÉN\n\nVen y te mostraré la desposada, la esposa del Cordero (Ap 21, 9).\nGlorifica al Señor, Jerusalén;\n\n† alaba a tu Dios, Sión:\nque ha reforzado los cerrojos de tus puertas,\ny ha bendecido a tus hijos dentro de ti;\nha puesto paz en tus fronteras,\nte sacia con flor de harina.\n\nÉl envía su mensaje a la tierra,\n\ny su palabra corre veloz;\nmanda la nieve como lana,\nesparce la escarcha como ceniza;\n\nhace caer el hielo como migajas\ny con el frío congela las aguas;\nenvía una orden, y se derriten;\nsopla su aliento, y corren.\n\nAnuncia su palabra a Jacob,\nsus decretos y mandatos a Israel;\ncon ninguna nación obró así,\nni les dio a conocer sus mandatos.\n\nAnt. Glorifica al Señor Jerusalén."
+   },
+   {
+    "tipo": "lectura_breve",
+    "texto": "Ahora estáis en Cristo Jesús. Ahora, por la sangre de Cristo, estáis cerca los\nque antes estabais lejos. Él es nuestra paz. Él ha hecho de los dos pueblos,\njudíos y gentiles, una sola cosa, derribando con su cuerpo el muro que los\nseparaba: el odio. Él ha abolido la ley con sus mandamientos y reglas,\nhaciendo las paces, para crear en él un solo hombre nuevo. Reconcilió con Dios\na los dos pueblos, uniéndolos en un solo cuerpo mediante la cruz, dando\nmuerte en él al odio.",
+    "ref": "Ef 2, 13-16"
+   },
+   {
+    "tipo": "responsorio_breve",
+    "texto": "V. Invoco al Dios altísimo, al Dios que hace tanto por mí.\nR. Invoco al Dios altísimo, al Dios que hace tanto por mí.\nV. Desde el cielo me enviará la salvación.\nR. Al Dios que hace tanto por mí.\nV. Gloria al Padre, al Hijo y al Espíritu Santo\nR. Invoco al Dios altísimo, al Dios que hace tanto por mí."
+   },
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "Ant. Por la entrañable misericordia de nuestro Dios, nos visitará el sol que nace\nde lo alto.\nBenedictus"
+   },
+   {
+    "tipo": "preces",
+    "texto": "Adoremos a Cristo, que se ofreció a Dios como sacrificio sin mancha para\npurificar nuestras conciencias de las obras muertas, y digámosle con fe:\nEn tu voluntad, Señor, encontramos nuestra paz.\n\nTú que nos has dado la luz del nuevo día,\n— concédenos caminar durante sus horas por sendas de vida nueva.\n\nTú que todo lo has creado con tu poder y con tu providencia lo conservas,\n\n— ayúdanos a descubrirte presente en todas tus criaturas.\n\nTú que has sellado con tu sangre una alianza nueva y eterna,\n— haz que, obedeciendo siempre tus mandatos, permanezcamos fieles a esa\nalianza.\n\nTú que colgado en la cruz quisiste que de tu costado manara sangre y agua,\n— purifica con esta agua nuestros pecados y alegra con este manantial a la\nciudad de Dios.\n\nYa que Dios nos ha adoptado como hijos, oremos al Padre como enseñó\nJesucristo: Padre nuestro."
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Señor, Dios todopoderoso, te pedimos nos concedas que del mismo modo que\nhemos cantado tus alabanzas en esta celebración matutina así también las\npodamos cantar plenamente en la asamblea de tus santos por toda la\neternidad. Por nuestro Señor Jesucristo."
+   }
+  ],
+  "intermedia": {
+   "comun": [
+    {
+     "tipo": "_comun_menor",
+     "texto": "V. Dios mío, ven en mi auxilio.\nR. Señor, date prisa en socorrerme. Gloria al Padre. Como era. Aleluya."
+    },
+    {
+     "tipo": "himno",
+     "texto": "I\n\nEl trabajo, Señor, de cada día\nnos sea por tu amor santificado,\nconvierte su dolor en alegría\nde amor, que para dar tú nos has dado.\n\nPaciente y larga es nuestra tarea\nen la noche oscura del amor que espera;\ndulce huésped del alma, al que flaquea\ndale tu luz, tu fuerza que aligera.\n\nEn el alto gozoso del camino,\ndemos gracias a Dios, que nos concede\nla esperanza sin fin del don divino;\ntodo lo puede en él quien nada puede. Amén.\n\nII\n\nSólo para Nona:\nSe cubrieron de luto los montes\n\na la hora de nona.\nEl Señor rasgó el velo del templo\n\na la hora de nona.\nDieron gritos las piedras en duelo\n\na la hora de nona.\nY Jesús inclinó la cabeza\n\na la hora de nona.\n\nHora de gracia,\nen que Dios da su paz a la tierra\npor la sangre de Cristo.\n\nLevantaron sus ojos los pueblos\na la hora de nona.\n\nContemplaron al que traspasaron\na la hora de nona.\n\nDel costado manó sangre y agua\na la hora de nona.\n\nQuien lo vio es el que da testimonio\na la hora de nona.\n\nHora de gracia,\nen que Dios da su paz a la tierra\npor la sangre de Cristo. Amén."
+    },
+    {
+     "tipo": "salmodia",
+     "texto": "Ant. 1. Que tu bondad me consuele, según tu promesa.\n\nSalmo 118, 73-80\nX (Iod)\n\nTus manos me hicieron y me formaron:\ninstrúyeme para que aprenda tus mandatos;\ntus fieles verán con alegría\nque he esperado en tu palabra;\nreconozco, Señor, que tus mandamientos son justos,\nque con razón me hiciste sufrir.\n\nQue tu bondad me consuele,\nsegún la promesa hecha a tu siervo;\ncuando me alcance tu compasión, viviré,\ny mis delicias serán tu voluntad;\nque se avergüencen los insolentes\ndel daño que me hacen;\nyo meditaré tus decretos.\n\nVuelvan a mí tus fieles\n\nque hacen caso de tus preceptos;\nsea mi corazón perfecto en tus leyes,\nasí no quedaré avergonzado.\n\nAnt. Que tu bondad me consuele, según tu promesa.\nAnt. 2. Protégeme de mis enemigos, Dios mío.\n\nSALMO 58\n\nORACIÓN PIDIENDO LA PROTECCIÓN DE DIOS CONTRA LOS ENEMIGOS\n\nEstas súplicas expresan la confianza del Salvador ante su Padre (Eusebio de Cesarea).\nLíbrame de mi enemigo, Dios mío;\n\nprotégeme de mis agresores,\nlíbrame de los malhechores,\nsálvame de los hombres sanguinarios.\n\nMira que me están acechando,\ny me acosan los poderosos:\nsin que yo haya pecado ni faltado, Señor,\nsin culpa mía, avanzan para acometerme.\n\nDespierta, ven a mi encuentro, mira:\ntú, el Señor de los ejércitos,\nel Dios de Israel.\n\nEstoy velando contigo, fuerza mía,\nporque tú, oh Dios, eres mi alcázar;\nque tu favor se adelante, oh Dios,\ny me haga ver la derrota del enemigo.\n\nPero yo cantaré tu fuerza,\npor la mañana aclamaré tu misericordia;\nporque has sido mi alcázar\ny mi refugio en el peligro.\n\nY tocaré en tu honor, fuerza mía,\nporque tú, oh Dios, eres mi alcázar.\n\nAnt. Protégeme de mis enemigos, Dios mío.\nAnt. 3. Dichoso el hombre a quien corrige Dios, porque él hiere y venda la\nherida.\n\nSalmo 59\n\nORACIÓN DESPUÉS DE UNA CALAMIDAD\n\nEn el mundo tendréis luchas, pero tened valor: Yo he vencido al mundo (Jn 16, 33).\nOh Dios, nos rechazaste y rompiste nuestras filas;\n\nestabas airado, pero restáuranos.\n\nHas sacudido y agrietado el país:\nrepara sus grietas, que se desmorona.\n\nHiciste sufrir un desastre a tu pueblo,\ndándole a beber un vino de vértigo;\ndiste a tus fieles la señal de desbandada,\nhaciéndolos huir de los arcos.\n\nPara que se salven tus predilectos,\nque tu mano salvadora nos responda.\n\nDios habló en su santuario:\n\"Triunfante ocuparé Siquén,\nparcelaré el valle de Sucot;\n\nmío es Galaad, mío Manasés,\nEfraín es yelmo de mi cabeza,\nJudá es mi cetro;\n\nMoab, una jofaina para lavarme;\nsobre Edom echo mi sandalia,\nsobre Filistea canto victoria\".\n\nPero ¿quién me guiará a la plaza fuerte,\nquién me conducirá a Edom,\nsi tú, oh Dios, nos has rechazado\ny no sales ya con nuestras tropas?\n\nAuxílianos contra el enemigo,\nque la ayuda del hombre es inútil.\nCon Dios haremos proezas,\nél pisoteará a nuestros enemigos.\n\nAnt. Dichoso el hombre a quien corrige Dios, porque él hiere y venda la herida.\nPara las otras Horas véase la salmodia complementaria."
+    }
+   ],
+   "tercia": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "Tu Dios te ha llevado, como un hombre lleva a su hijo, mientras ha durado tu\ncamino.\nV. Sosténme, Señor, con tu promesa y viviré.\nR. Que no quede frustrada mi esperanza.",
+     "ref": "Dt 1, 31b"
+    },
+    {
+     "tipo": "oracion",
+     "texto": "Señor Jesucristo, tú que en la hora de tercia fuiste llevado al suplicio de la cruz\npor la salvación del mundo; ayúdanos a llorar nuestros pecados y a evitar las\nfaltas en lo porvenir. Tú que vives y reinas por los siglos de los siglos."
+    }
+   ],
+   "sexta": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "Como os inclinasteis a apartaros de Dios, así convertidos lo buscaréis diez\nveces más, pues el que trajo sobre vosotros el castigo, os traerá con la\nredención la eterna alegría.\nV. Del Señor viene la misericordia.\nR. Y la redención copiosa.",
+     "ref": "Ba 4, 28-29"
+    },
+    {
+     "tipo": "oracion",
+     "texto": "Señor Jesucristo, tú que a la hora de sexta subiste a la cruz por nuestra\nsalvación mientras el mundo vivía sumergido en las tinieblas; concédenos que\ntu luz nos ilumine siempre para que, guiados por ella, podamos alcanzar la\nvida eterna. Tú que vives y reinas por los siglos de los siglos."
+    }
+   ],
+   "nona": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "Dios no hizo la muerte, ni se recrea en la destrucción de los vivientes; todo lo\ncreó para que subsistiera; las criaturas del mundo son saludables, no hay en\nellas veneno de muerte ni imperio del abismo sobre la tierra, porque la justicia\nes inmortal.\nV. Arrancó el Señor mi alma de la muerte.\nR. Caminaré en presencia del Señor en el país de la vida.",
+     "ref": "Sb 1, 13-15"
+    },
+    {
+     "tipo": "oracion",
+     "texto": "Señor Jesucristo, tú que, crucificado a la hora de nona, diste al ladrón\narrepentido el reino eterno; míranos a nosotros, que como él confesamos\nnuestras culpas, y concédenos poder entrar, también como él, después de la\nmuerte, en tu paraíso. Tú que vives y reinas por los siglos de los siglos."
+    }
+   ]
+  },
+  "visperas": [
+   {
+    "tipo": "inicio",
+    "texto": "V. Dios mío, ven en mi auxilio.\nR. Señor, date prisa en socorrerme. Gloria al Padre. Como era. Aleluya."
+   },
+   {
+    "tipo": "himno",
+    "texto": "El dolor extendido por tu cuerpo,\nsometida tu alma como un lago,\nvas a morir y mueres por nosotros\nante el Padre que acepta perdonándonos.\n\nCristo, gracias aún, gracias, que aún duele\ntu agonía en el mundo, en tus hermanos.\nQue hay hambre, ese resumen de injusticias;\nque hay hombre en el que estás crucificado.\n\nGracias por tu palabra que está viva,\ny aquí la van diciendo nuestros labios;\ngracias porque eres Dios y hablas a Dios\nde nuestras soledades, nuestros bandos.\n\nQue no existan verdugos, que no insistan;\nrezas hoy con nosotros que rezamos.\nPorque existen las víctimas, el llanto. Amén."
+   },
+   {
+    "tipo": "salmodia",
+    "texto": "Ant. 1. Arranca, Señor, mi vida de la muerte, mis pies de la caída.\n\nSalmo 114\n\nACCIÓN DE GRACIAS\n\nHay que pasar mucho para entrar en el reino de Dios (Hch 14, 21).\nAmo al Señor, porque escucha\n\nmi voz suplicante,\nporque inclina su oído hacia mí\nel día que lo invoco.\n\nMe envolvían redes de muerte,\nme alcanzaron los lazos del abismo,\ncaí en tristeza y angustia.\nInvoqué el nombre del Señor:\n\"Señor, salva mi vida\".\n\nEl Señor es benigno y justo,\nnuestro Dios es compasivo;\nel Señor guarda a los sencillos:\nestando yo sin fuerzas, me salvó.\n\nAlma mía, recobra tu calma,\nque el Señor fue bueno contigo:\narrancó mi alma de la muerte,\nmis ojos de las lágrimas,\nmis pies de la caída.\n\nCaminaré en presencia del Señor\nen el país de la vida.\n\nAnt. Arranca, Señor, mi vida de la muerte, mis pies de la caída.\nAnt. 2. El auxilio me viene del Señor, que hizo el cielo y la tierra.\n\nSalmo 120\n\nEL GUARDIÁN DEL PUEBLO\n\nNo tendrán hambre ni sed; no les molestará el sol ni calor alguno (Ap 7, 16).\nLevanto mis ojos a los montes:\n\n¿de dónde me vendrá el auxilio?\nEl auxilio me viene del Señor,\nque hizo el cielo y la tierra.\n\nNo permitirá que resbale tu pie,\ntu guardián no duerme;\nno duerme ni reposa\nel guardián de Israel.\n\nEl Señor te guarda a su sombra,\nestá a tu derecha;\nde día el sol no te hará daño,\nni la luna de noche.\n\nEl Señor te guarda de todo mal,\nél guarda tu alma;\nel Señor guarda tus entradas y salidas,\nahora y por siempre.\n\nAnt. El auxilio me viene del Señor, que hizo el cielo y la tierra.\nAnt. 3. Justos y verdaderos son tus caminos, ¡oh Rey de los siglos!\n\nCántico Ap 15, 3-4\n\nHIMNO DE ADORACIÓN\n\nGrandes y maravillosas son tus obras,\nSeñor, Dios omnipotente,\njustos y verdaderos tus caminos,\n¡oh Rey de los siglos!\n\n¿Quién no temerá, Señor,\ny glorificará tu nombre?\nPorque tú solo eres santo,\nporque vendrán todas las naciones\ny se postrarán en tu acatamiento,\nporque tus juicios se hicieron manifiestos.\n\nAnt. Justos y verdaderos son tus caminos, ¡oh Rey de los siglos!"
+   },
+   {
+    "tipo": "lectura_breve",
+    "texto": "Enseñamos una sabiduría divina, misteriosa, escondida, predestinada por Dios\nantes de los siglos para nuestra gloria, que no conoció ninguno de los príncipes\nde este siglo; si la hubieran conocido, nunca hubieran crucificado al Señor de\n\nla gloria. Pero, según está escrito: \"Ni el ojo vio ni el oído oyó, ni vino a la\nmente del hombre lo que Dios ha preparado para los que le aman.\" Pero a\nnosotros nos lo ha revelado por su Espíritu.",
+    "ref": "1 Co 2, 7-10a"
+   },
+   {
+    "tipo": "responsorio_breve",
+    "texto": "V. Cristo murió por nuestros pecados, para llevarnos a Dios.\nR. Cristo murió por nuestros pecados, para llevarnos a Dios.\nV. Muerto en la carne, pero vivificado en el espíritu.\nR. Para llevarnos a Dios.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. Cristo murió por nuestros pecados, para llevarnos a Dios."
+   },
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "Ant. Acuérdate, Señor, de tu misericordia como lo habías prometido a nuestros\npadres.\nMagníficat"
+   },
+   {
+    "tipo": "preces",
+    "texto": "Bendigamos ahora al Señor Jesús, que en su vida mortal escuchó siempre con\nbondad las súplicas de los que acudían a él y enjugaba con amor las lágrimas\nde los que lloraban, y digámosle también nosotros:\n\nSeñor, ten piedad.\n\nSeñor Jesucristo, tú que consolaste a los tristes y desconsolados,\n— pon ahora tus ojos en los sufrimientos de los pobres y consuela a los\ndeprimidos.\n\nEscucha los gemidos de los agonizantes y envíales tus ángeles,\n— para que los consuelen y conforten.\n\nQue los emigrantes sientan el consuelo de tu amor en el destierro,\n— que puedan regresar a su patria y que un día alcancen también la patria\neterna.\n\nQue los pecadores escuchando tu voz se conviertan,\n— y encuentren en tu Iglesia el perdón y la paz.\n\nPerdona las faltas de los que han muerto,\n— y dales la plenitud de tu salvación.\n\nCon el gozo que nos da el saber que somos hijos de Dios, digamos con plena\nconfianza: Padre nuestro."
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Dios nuestro, que con el escándalo de la cruz has manifestado de una manera\nadmirable tu sabiduría escondida, concédenos contemplar, con tal plenitud de\n\nfe, la gloria de la pasión de tu Hijo, que encontremos siempre nuestra gloria en\nsu cruz. Por nuestro Señor Jesucristo."
+   }
+  ]
+ },
+ "sab": {
+  "invitatorio": [
+   {
+    "tipo": "inicio",
+    "texto": "V. Señor, abre mis labios.\nR. Y mi boca proclamará tu alabanza.\nAnt. Escuchemos la voz del Señor y entremos en su descanso."
+   }
+  ],
+  "oficio": [
+   {
+    "tipo": "inicio",
+    "texto": "V. Dios mío, ven en mi auxilio.\nR. Señor, date prisa en socorrerme. Gloria al Padre. Como era. Aleluya."
+   },
+   {
+    "tipo": "himno",
+    "texto": "Se puede tomar de Laudes o de  Vísperas, según el momento del día en que se rece el Oficio de\nlectura.\nO bien:\n\nA caminar sin ti, Señor, no atino;\ntu palabra de fuego es mi sendero\nme encontraste cansado y prisionero\ndel desierto, del cardo y del espino.\n\nDescansa aquí conmigo del camino,\nque en Emaús hay trigo en el granero,\nhay un poco de vino y un alero\nque cobije tu sueño, Peregrino.\n\nYo contigo, Señor, herido y ciego;\ntú conmigo, Señor, enfebrecido,\nel aire quieto, el corazón en fuego.\n\nY en diálogo sediento y torturado\nse encontrarán en un solo latido,\ncara a cara, tu amor y mi pecado. Amén."
+   },
+   {
+    "tipo": "salmodia",
+    "texto": "Ant. 1. Sólo el Señor hizo grandes maravillas: es eterna su misericordia.\n\nSalmo 135\n\nHIMNO PASCUAL\n\nAlabar a Dios es narrar sus maravillas (Casiano).\n\nI\n\nDad gracias al Señor porque es bueno:\nporque es eterna su misericordia.\n\nDad gracias al Dios de los dioses:\nporque es eterna su misericordia.\n\nDad gracias al Señor de los señores:\nporque es eterna su misericordia.\n\nSólo él hizo grandes maravillas:\nporque es eterna su misericordia.\n\nÉl hizo sabiamente los cielos:\nporque es eterna su misericordia.\n\nÉl afianzó sobre las aguas la tierra:\nporque es eterna su misericordia.\n\nÉl hizo lumbreras gigantes:\nporque es eterna su misericordia.\n\nEl sol que gobierna el día:\nporque es eterna su misericordia.\n\nLa luna que gobierna la noche:\nporque es eterna su misericordia.\n\nAnt. Sólo el Señor hizo grandes maravillas: es eterna su misericordia.\nAnt. 2. Con mano poderosa, con brazo extendido, sacó a Israel de Egipto.\n\nII\n\nÉl hirió a Egipto en sus primogénitos:\nporque es eterna su misericordia.\n\nY sacó a Israel de aquel país:\nporque es eterna su misericordia.\n\nCon mano poderosa, con brazo extendido:\nporque es eterna su misericordia.\n\nÉl dividió en dos partes el mar Rojo:\nporque es eterna su misericordia.\n\nY condujo por en medio a Israel:\nporque es eterna su misericordia.\n\nArrojó en el mar Rojo al Faraón:\nporque es eterna su misericordia.\n\nAnt. Con mano poderosa, con brazo extendido, sacó a Israel de Egipto.\nAnt. 3. Dad gracias al Dios del cielo: él nos libró de nuestros opresores.\n\nIII\nGuió por el desierto a su pueblo:\n\nporque es eterna su misericordia.\n\nÉl hirió a reyes famosos:\nporque es eterna su misericordia.\n\nDio muerte a reyes poderosos:\nporque es eterna su misericordia.\n\nA Sijón, rey de los amorreos:\nporque es eterna su misericordia.\n\nY a Hog, rey de Basán:\nporque es eterna su misericordia.\n\nLes dio su tierra en heredad:\nporque es eterna su misericordia.\n\nEn heredad a Israel su siervo:\nporque es eterna su misericordia.\n\nEn nuestra humillación, se acordó de nosotros:\nporque es eterna su misericordia.\n\nY nos libró de nuestros opresores:\nporque es eterna su misericordia.\n\nÉl da alimento a todo viviente:\nporque es eterna su misericordia.\n\nDad gracias al Dios del cielo:\nporque es eterna su misericordia.\n\nAnt. Dad gracias al Dios del cielo: él nos libró de nuestros opresores."
+   },
+   {
+    "tipo": "versiculo",
+    "texto": "V. Señor, enséñame tus caminos.\nR. Instrúyeme en tus sendas."
+   }
+  ],
+  "laudes": [
+   {
+    "tipo": "inicio",
+    "texto": "V. Dios mío, ven en mi auxilio.\nR. Señor, date prisa en socorrerme. Gloria al Padre. Como era. Aleluya."
+   },
+   {
+    "tipo": "himno",
+    "texto": "Padre nuestro,\nPadre de todos,\nlíbrame del orgullo\nde estar solo.\n\nNo vengo a la soledad\ncuando vengo a la oración,\npues sé que, estando contigo,\ncon mis hermanos estoy;\ny sé que, estando con ellos,\ntú estás en medio, Señor.\n\nNo he venido a refugiarme\ndentro de tu torreón,\ncomo quien huye a un exilio\nde aristocracia interior.\nPues vine huyendo del ruido,\npero de los hombres no.\n\nAllí donde va un cristiano\nno hay soledad, sino amor,\npues lleva toda la Iglesia\ndentro de su corazón.\nY dice siempre «nosotros»,\nincluso si dice «yo»."
+   },
+   {
+    "tipo": "salmodia",
+    "texto": "Ant. 1. Por la mañana proclamamos, Señor, tu misericordia y de noche tu\nfidelidad.\n\nSalmo 91\n\nALABANZA DEL DIOS CREADOR\n\nEste salmo canta las maravillas realizadas en Cristo (S. Atanasio).\nEs bueno dar gracias al Señor\n\ny tocar para tu nombre, oh Altísimo,\nproclamar por la mañana tu misericordia\ny de noche tu fidelidad,\ncon arpas de diez cuerdas y laúdes,\nsobre arpegios de cítaras.\n\nTus acciones, Señor, son mi alegría,\n\ny mi júbilo, las obras de tus manos.\n¡Qué magníficas son tus obras, Señor,\nqué profundos tus designios!\nEl ignorante no los entiende\nni el necio se da cuenta.\n\nAunque germinen como hierba los malvados\ny florezcan los malhechores,\nserán destruidos para siempre.\nTú, en cambio, Señor,\neres excelso por los siglos.\n\nPorque tus enemigos, Señor, perecerán,\nlos malhechores serán dispersados;\npero a mí me das la fuerza de un búfalo\ny me unges con aceite nuevo.\nMis ojos despreciarán a mis enemigos,\nmis oídos escucharán su derrota.\n\nEl justo crecerá como una palmera,\nse alzará como un cedro del Líbano:\nplantado en la casa del Señor,\ncrecerá en los atrios de nuestro Dios;\n\nen la vejez seguirá dando fruto\ny estará lozano y frondoso,\npara proclamar que el Señor es justo,\nque en mi Roca no existe la maldad.\n\nAnt. Por la mañana proclamamos, Señor, tu misericordia y de noche tu\nfidelidad.\nAnt. 2. Dad gloria a nuestro Dios.\n\nCántico Dt 32, 1-12\n\nBENEFICIOS DE DIOS PARA CON SU PUEBLO\n\n¡Cuántas veces he querido agrupar a tus hijos como la gallina cobija a los polluelos\nbajo las alas! (Mt 23, 37)\n\nEscuchad, cielos, y hablaré;\noye, tierra, los dichos de mi boca;\ndescienda como lluvia mi doctrina,\ndestile como rocío mi palabra,\ncomo llovizna sobre la hierba,\ncomo orvallo sobre el césped.\n\nVoy a proclamar el nombre del Señor:\ndad gloria a nuestro Dios.\nÉl es la Roca, sus obras son perfectas,\n\nsus caminos son justos,\nes un Dios fiel,  sin maldad;\nes justo y recto.\n\nHijos degenerados, se portaron mal con él,\ngeneración malvada y pervertida.\n¿Así le pagas al Señor,\npueblo necio e insensato?\n¿No es él tu padre y tu creador,\nel que te hizo y te constituyó?\n\nAcuérdate de los días remotos,\nconsidera las edades pretéritas,\npregunta a tu padre y te lo contará,\na tus ancianos y te lo dirán:\n\nCuando el Altísimo daba a cada pueblo su heredad\ny distribuía a los hijos de Adán,\ntrazando las fronteras de las naciones,\nsegún el número de los hijos de Dios,\nla porción del Señor fue su pueblo,\nJacob fue el lote de su heredad.\n\nLo encontró en una tierra desierta,\nen una soledad poblada de aullidos:\nlo rodeó cuidando de él,\nlo guardó como a las niñas de sus ojos.\n\nComo el águila incita a su nidada,\nrevolando sobre los polluelos,\nasí extendió sus alas, los tomó\ny los llevó sobre sus plumas.\n\nEl Señor solo los condujo,\nno hubo dioses extraños con él.\n\nAnt. Dad gloria a nuestro Dios.\nAnt. 3. ¡Qué admirable es tu nombre, Señor, en toda la tierra!\n\nSalmo 8\n\nSEÑOR DIOS NUESTRO\n\nTodo lo puso bajo sus pies y lo dio a la Iglesia como cabeza, sobre todo (Ef 1, 22).\nSeñor, dueño nuestro,\n\n¡qué admirable es tu nombre en toda la tierra!\n\nEnsalzaste tu majestad sobre los cielos.\nDe la boca de los niños de pecho\n\nhas sacado una alabanza contra tus enemigos,\npara reprimir al adversario y al rebelde.\n\nCuando contemplo el cielo,\nobra de tus dedos,\nla luna y las estrellas que has creado,\n¿qué es el hombre para que te acuerdes de él,\nel ser humano, para darle poder?\n\nLo hiciste poco inferior a los ángeles,\nlo coronaste de gloria y dignidad,\nle diste el mando sobre las obras de tus manos,\ntodo lo sometiste bajo sus pies:\n\nrebaños de ovejas y toros,\ny hasta las bestias del campo,\nlas aves del cielo, los peces del mar,\nque trazan sendas por el mar.\n\nSeñor, dueño nuestro,\n¡qué admirable es tu nombre\nen toda la tierra!\n\nAnt. ¡Qué admirable es tu nombre, Señor, en toda la tierra!"
+   },
+   {
+    "tipo": "lectura_breve",
+    "texto": "Bendecid a los que os persiguen, no maldigáis. Alegraos con los que se\nalegran; llorad con los que lloran. Tened un mismo sentir entre vosotros, sin\napetecer grandezas; atraídos más bien por lo humilde.",
+    "ref": "Rm 12, 14-16a"
+   },
+   {
+    "tipo": "responsorio_breve",
+    "texto": "V. Te aclamarán mis labios, Señor, cuando salmodie para ti.\nR. Te aclamarán mis labios, Señor, cuando salmodie para ti.\nV. Mi lengua recitará tu auxilio.\nR. Cuando salmodie para ti.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. Te aclamarán mis labios, Señor, cuando salmodie para ti."
+   },
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "Ant. Guía nuestros pasos, Dios de Israel, por el camino de la paz.\nBenedictus"
+   },
+   {
+    "tipo": "preces",
+    "texto": "Celebremos la sabiduría y la bondad de Cristo, que ha querido ser amado y\nservido en los hermanos, especialmente en los que sufren, y supliquémosle\ninsistentemente diciendo:\n\nSeñor, acrecienta nuestro amor.\n\nAl recordar esta mañana tu santa resurrección,\n— te pedimos, Señor, que extiendas los beneficios de tu redención a todos los\nhombres.\n\nQue todo el día de hoy sepamos dar buen testimonio del nombre cristiano,\n— y ofrezcamos nuestra jornada como un culto espiritual agradable al Padre.\n\nEnséñanos, Señor, a describir tu imagen en todos los hombres,\n— y a saberte servir a ti en cada uno de ellos.\n\nCristo, Señor nuestro, vid verdadera de la que nosotros somos sarmientos,\n— haz que permanezcamos en ti y demos fruto abundante para que con ello\nsea glorificado nuestro Padre que está en el cielo.\n\nCon la confianza que nos da nuestra fe, acudamos ahora al Padre, diciendo\ncomo Cristo nos enseñó: Padre nuestro."
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Que nuestra voz, Señor, nuestro espíritu y toda nuestra vida sean una continua\nalabanza en tu honor, y ya que toda nuestra existencia es un don gratuito de\ntu liberalidad, haz que también cada una de nuestras acciones te esté\nplenamente dedicada. Por nuestro Señor Jesucristo."
+   }
+  ],
+  "intermedia": {
+   "comun": [
+    {
+     "tipo": "_comun_menor",
+     "texto": "V. Dios mío, ven en mi auxilio.\nR. Señor, date prisa en socorrerme. Gloria al Padre. Como era. Aleluya."
+    },
+    {
+     "tipo": "himno",
+     "texto": "Este mundo del hombre, en que él se afana\ntras la felicidad que tanto ansía,\ntú lo vistes, Señor, de luz temprana\ny de radiante sol al mediodía.\n\nAsí el poder de tu presencia encierra\nel secreto más hondo de esta vida;\nun nuevo cielo y una nueva tierra\ncolmarán nuestro anhelo sin medida.\n\nPoderoso Señor de nuestra historia,\nno tardes en venir gloriosamente;\ntu luz resplandeciente y tu victoria\ninunden nuestra vida eternamente. Amén."
+    },
+    {
+     "tipo": "salmodia",
+     "texto": "Ant. 1. «El cielo y la tierra pasarán, pero mis palabras no pasarán», dice el\nSeñor.\n\nSalmo 118, 81-88\nXI (Kaf)\n\nMe consumo ansiando tu salvación,\ny espero en tu palabra;\nmis ojos se consumen ansiando tus promesas,\nmientras digo: \"¿Cuándo me consolarás?\"\nEstoy como un odre puesto al humo,\npero no olvido tus leyes.\n\n¿Cuántos serán los días de tu siervo?\n¿Cuándo harás justicia de mis perseguidores?\nMe han cavado fosas los insolentes,\nignorando tu voluntad;\ntodos tus mandatos son leales,\nsin razón me persiguen, protégeme.\n\nCasi dieron conmigo en la tumba,\npero yo no abandoné tus decretos;\npor tu bondad dame vida,\npara que observe los preceptos de tu boca.\n\nAnt. «El cielo y la tierra pasarán, pero mis palabras no pasarán», dice el Señor.\nAnt. 2. Tú eres mi refugio y mi bastión contra el enemigo.\n\nSalmo 60\n\nORACIÓN DE UN DESTERRADO\n\nOración del justo que espera la vida eterna (S. Hilario).\nDios mío, escucha mi clamor,\n\natiende a mi súplica;\nte invoco desde el confín de la tierra\ncon el corazón abatido:\n\nllévame a una roca inaccesible,\nporque tú eres mi refugio\ny mi bastión contra el enemigo.\n\nHabitaré siempre en tu morada,\nrefugiado al amparo de tus alas;\nporque tú, oh Dios, escucharás mis votos\ny me darás la heredad de los que veneran tu nombre.\n\nAñade días a los días del rey,\n\nque sus años alcancen varias generaciones;\nque reine siempre en presencia de Dios,\nque tu gracia y tu lealtad le hagan guardia.\n\nYo tañeré siempre en tu honor,\ne iré cumpliendo mis votos día tras día.\n\nAnt. Tú eres mi refugio y mi bastión contra el enemigo.\nAnt. 3. Protege mi vida, Señor, del terrible enemigo.\n\nSALMO 63\n\nSÚPLICA CONTRA LOS ENEMIGOS\n\nEste salmo se aplica especialmente a la pasión del Señor (S. Agustín).\nEscucha, oh Dios, la voz de mi lamento,\n\nprotege mi vida del terrible enemigo;\nescóndeme de la conjura de los perversos\ny del motín de los malhechores:\n\nafilan sus lenguas como espadas\ny disparan como flechas palabras venenosas,\npara herir a escondidas al inocente,\npara herirlo por sorpresa y sin riesgo.\n\nSe animan al delito,\ncalculan cómo esconder trampas,\ny dicen: \"¿quién lo descubrirá?\"\nInventan maldades y ocultan sus invenciones,\nporque su mente y su corazón no tienen fondo.\n\nPero Dios los acribilla a flechazos,\npor sorpresa los cubre de heridas;\nsu misma lengua los lleva a la ruina,\ny los que lo ven menean la cabeza.\n\nTodo el mundo se atemoriza,\nproclama la obra de Dios\ny medita sus acciones.\n\nEl justo se alegra con el Señor,\nse refugia en él,\ny se felicitan los rectos de corazón.\n\nAnt. Protege mi vida, Señor, del terrible enemigo.\nPara las otras Horas véase la salmodia complementaria."
+    }
+   ],
+   "tercia": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "El Señor, tu Dios, te ha educado como educa un padre a su hijo; para que\nguardes los preceptos del Señor, tu Dios, sigas sus caminos y lo temas.\nV. La voluntad del Señor es pura y eternamente estable.\nR. Los mandamientos del Señor son verdaderos y enteramente justos.",
+     "ref": "Dt 8, 5b-6"
+    },
+    {
+     "tipo": "oracion",
+     "texto": "Señor Dios, Padre todopoderoso, infúndenos la luz del Espíritu Santo para que,\nlibres de toda adversidad, podamos alegrarnos siempre en tu alabanza. Por\nJesucristo nuestro Señor."
+    }
+   ],
+   "sexta": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "Esfuérzate y sé hombre. Sé fiel al Señor tu Dios marchando por los caminos,\nguardando sus mandamientos, sus leyes y sus preceptos, como están escritos\nen la ley de Moisés, para que seas afortunado en cuanto hagas y dondequiera\nque vayas.\nV. Guíame, Señor, por las sendas de tus mandatos.\nR. Porque ella es mi gozo.",
+     "ref": "1 Re 5, 16-17"
+    },
+    {
+     "tipo": "oracion",
+     "texto": "Señor, fuego ardiente de amor eterno, haz que, inflamados en tu amor, te\namemos a ti sobre todas las cosas y a nuestro prójimo por amor tuyo. Por\nJesucristo nuestro Señor."
+    }
+   ],
+   "nona": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "Poneos en los caminos y mirad, preguntad a las sendas antiguas: «¿Es éste el\nbuen camino?» Caminad por él, y hallaréis reposo para vuestras almas.\nV. Tus preceptos son mi herencia perpetua.\nR. La alegría de mi corazón.",
+     "ref": "Jr 6, 16"
+    },
+    {
+     "tipo": "oracion",
+     "texto": "Escucha, Señor, nuestra oración y danos la abundancia de tu paz, para que,\npor intercesión de la santísima Virgen María, después de haberte servido\ndurante toda nuestra vida, podamos presentarnos ante ti sin temor alguno. Por\nJesucristo nuestro Señor."
+    }
+   ]
+  }
+ }
+}

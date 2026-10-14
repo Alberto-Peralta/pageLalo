@@ -1,0 +1,323 @@
+{
+ "dom": {
+  "visperas1": [
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "",
+    "ant_ciclo": {
+     "A": "Pondré en el hombro de mi siervo la llave de mi casa: lo que él abra nadie lo cerrará, lo que él cierre nadie lo abrirá.",
+     "B": "El Hijo del hombre ha subido al cielo, de donde había bajado; pan que da la vida al mundo.",
+     "C": "«Yo vendré para reunir a los pueblos de toda lengua: acudirán para ver mi gloria», dice el Señor."
+    }
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Oh Dios, que unes los corazones de tus fieles en un mismo deseo, inspira a tu pueblo el\namor a tus preceptos y esperanza en tus promesas, para que, en medio de las vicisitudes\ndel mundo, nuestros corazones estén firmes en la verdadera alegría. Por nuestro Señor\nJesucristo."
+   }
+  ],
+  "oficio": [
+   {
+    "tipo": "lectura1",
+    "texto": "De la carta a los Efesios 4, 17-24\n\nVESTIRSE DE LA NUEVA CONDICIÓN HUMANA\n\nHermanos: Esto es lo que digo y aseguro en el Señor: que no andéis ya como lo hacen\nlos gentiles, que andan en la vaciedad de sus criterios, sumergido su pensamiento en las\ntinieblas y excluidos de la vida de Dios por la ignorancia que hay en ellos, por la dureza de\nsu cabeza, los cuales, habiendo perdido el sentido moral, se entregaron al libertinaje,\nhasta practicar con desenfreno toda suerte de impurezas.\n\nVosotros, en cambio, no es así como habéis aprendido a Cristo, si es que es él a quien\nhabéis oído y en él fuisteis adoctrinados, tal como es la verdad en Cristo Jesús. Cristo os\nha enseñado a abandonar el anterior modo de vivir, el hombre viejo corrompido por\ndeseos de placer, a renovaros en la mente y en el espíritu y a vestiros de la nueva\ncondición humana, creada a imagen de Dios: justicia y santidad verdaderas.",
+    "anio": "I"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Renovaos en la mente y en el espíritu y vestíos del hombre nuevo, * creado a imagen\nde Dios, con justicia y santidad verdaderas.\nV. Despojaos del hombre viejo con sus malas pasiones y revestíos de ese hombre nuevo.\nR. Creado a imagen de Dios, con justicia y santidad verdaderas.",
+    "anio": "I",
+    "ref": "Cf. Ef 4, 23-24; cf. Col 3, 9. 10"
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "Comienza la carta del apóstol san Pablo a Tito 1, 1-16\n\nLA MISIÓN DE TITO\n\nPablo, esclavo de Dios, y apóstol de Cristo Jesús para llevar a los elegidos de Dios a la\nfe y al conocimiento de la verdadera doctrina, ordenada al culto de Dios: él me ha\ncomisionado para inculcar la esperanza de la vida eterna; él, que no puede faltar a sus\npromesas, la prometió desde antiguo, y ahora, a su debido tiempo, nos ha dado a conocer\nsu mensaje de salvación por medio de la predicación, esta predicación que me ha sido\nconfiada según el mandato de Dios, salvador nuestro: Desea la gracia y la paz de parte de\nDios Padre y de Cristo Jesús, nuestro salvador, a Tito, mi verdadero hijo en la fe que nos\nune a los dos.\n\nTe dejé en Creta para que acabases de organizar lo que faltaba y para que\nconstituyeses presbíteros en cada ciudad, según las instrucciones que yo mismo te di. Los\ncandidatos deben ser irreprochables, casados una sola vez, y tener los hijos educados en\nla misma fe, sin que éstos sean tachados de liviandad o de desobediencia. Porque es\npreciso que el obispo sea irreprochable, como administrador que es de la casa de Dios:\nque no sea soberbio ni iracundo, ni dado al vino ni pendenciero, ni codicioso de torpes\nganancias. Más bien, debe ser hospitalario, amigo de todo lo bueno, discreto, recto,\nreligioso, dueño de sí y muy adicto al auténtico mensaje de la verdad transmitida. Así\npodrá exhortar y animar con sana instrucción y rebatir a los contradictores.\n\nHay, en verdad, muchos insubordinados, charlatanes y embaucadores, sobre todo de\nentre los partidarios de la circuncisión. Es necesario irles tapando la boca, porque van\nrevolviendo familias enteras, enseñando lo que no se debe, con la mira puesta en\nvergonzosas ganancias. Bien dijo uno que salió de entre ellos y fue su profeta: «Los\ncretenses, eternos embusteros, malas bestias, vientres perezosos.»\n\nY es verdad esta aseveración. Por eso, corrígelos severamente para que mantengan la\nfe íntegra y en todo su vigor. Y que no den oídos a esas leyendas judías ni a esos\npreceptos de hombres que viven de espaldas a la verdad. Todo es puro para los puros;\nmas para los que están contaminados y para los que no tienen fe, nada es limpio, pues su\nmente y su conciencia están contaminadas. Hacen profesión de conocer a Dios, pero lo\nvan negando con sus obras; son execrados por Dios, rebeldes e incapaces de hacer cosa\nbuena.",
+    "anio": "II"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. A mí, el más insignificante de todos los consagrados me concedieron este don: anunciar\na los gentiles la inimaginable riqueza de Cristo. * Por la fe en él, tenemos libertad para\nacercarnos confiados.\nV. Hemos recibido la gracia y el apostolado, para predicar la sumisión de la fe a todos los\ngentiles.\nR. Por la fe en él, tenemos libertad para acercarnos confiados.",
+    "anio": "II",
+    "ref": "Ef 3, 8. 12; Rm 1, 5"
+   },
+   {
+    "tipo": "lectura2",
+    "texto": "De la Constitución pastoral Gaudium et  spes, sobre la Iglesia en el mundo actual, del\nConcilio Vaticano segundo\n\n(Núm. 34)\n\nLA ESPERANZA DE LA TIERRA NUEVA\n\nNo conocemos ni el tiempo de la nueva tierra y de la nueva humanidad, ni el modo en\nque el universo se transformará. Se termina ciertamente la representación de este mundo,\ndeformado por el pecado, pero sabemos que Dios prepara una nueva morada y una nueva\ntierra, en la que habita la justicia y cuya bienaventuranza llenará y sobrepasará todos los\ndeseos de paz que brotan en el corazón del hombre. Entonces, vencida la muerte, los\nhijos de Dios resucitarán en Cristo, y lo que se había sembrado débil y corruptible se\nvestirá de incorrupción y, permaneciendo la caridad y sus frutos, toda la creación, que\nDios creó por el hombre, se verá libre de la esclavitud de la vanidad.\n\nAunque se nos advierta que de nada le vale al hombre ganar todo el mundo si se pierde\na sí mismo, sin embargo, la esperanza de la tierra nueva no debe debilitar, al contrario,\ndebe excitar la solicitud de perfeccionar esta tierra, en la que crece el cuerpo de la nueva\nhumanidad, que ya presenta las esbozadas líneas de lo que será el siglo futuro. Por eso,\naunque hay que distinguir cuidadosamente progreso temporal y crecimiento del reino de\nDios, con todo, el primero, por lo que puede contribuir a una mejor ordenación de la\nhumana sociedad, interesa mucho al bien del reino de Dios.\n\nLos bienes que proceden de la dignidad humana, de la comunión fraterna y de la\nlibertad, bienes que son un producto de nuestra naturaleza y de nuestro trabajo, una vez\nque, en el Espíritu del Señor y según su mandato, los hayamos propagado en la tierra, los\nvolveremos a encontrar limpios de toda mancha, iluminados y transfigurados, cuando\nCristo devuelva a su Padre \"un reino eterno y universal: el reino de la verdad y la vida, el\nreino de la santidad y la gracia, el reino de la justicia, el amor y la paz\". En la tierra este\nreino está ya presente de una manera misteriosa, pero se completará con la llegada del\nSeñor."
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Alégrese el cielo, goce la tierra, romped a cantar, montañas, porque el Señor, nuestro\nDios, va a venir, * y se compadecerá de los desamparados.\nV. En sus días florecerá la justicia y abundará la paz.\nR. Y se compadecerá de los desamparados.",
+    "ref": "Sal 95, 11; Is 49, 13; Sal 71, 7"
+   },
+   {
+    "tipo": "te_deum"
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Oh Dios, que unes los corazones de tus fieles en un mismo deseo, inspira a tu pueblo el\namor a tus preceptos y esperanza en tus promesas, para que, en medio de las vicisitudes\ndel mundo, nuestros corazones estén firmes en la verdadera alegría. Por nuestro Señor\nJesucristo."
+   }
+  ],
+  "laudes": [
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "",
+    "ant_ciclo": {
+     "A": "«Tú eres el Mesías, el Hijo del Dios vivo.» «Bienaventurado eres tú, Simón: mi Padre te lo ha revelado.»",
+     "B": "El Espíritu es el que da vida; la carne no vale nada. Las palabras que acabo de deciros son espíritu y vida.",
+     "C": "Procurad entrar por la puerta estrecha —dice el Señor—; es la puerta de la vida."
+    }
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Oh Dios, que unes los corazones de tus fieles en un mismo deseo, inspira a tu pueblo el\namor a tus preceptos y esperanza en tus promesas, para que, en medio de las vicisitudes\ndel mundo, nuestros corazones estén firmes en la verdadera alegría. Por nuestro Señor\nJesucristo."
+   }
+  ],
+  "visperas2": [
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "",
+    "ant_ciclo": {
+     "A": "Yo te daré las lleves del reino de los cielos, Simón Pedro: todo lo que ates sobre la tierra quedará atado en el cielo.",
+     "B": "Señor, ¿a quién vamos a ir? Tú tienes palabras de vida eterna; y nosotros hemos creído y sabemos que tú eres el Mesías, el Hijo de Dios. Aleluya.",
+     "C": "Vendrán muchos del oriente y del occidente a sentarse con Abraham, Isaac y Jacob en el reino de los cielos."
+    }
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Oh Dios, que unes los corazones de tus fieles en un mismo deseo, inspira a tu pueblo el\namor a tus preceptos y esperanza en tus promesas, para que, en medio de las vicisitudes\ndel mundo, nuestros corazones estén firmes en la verdadera alegría. Por nuestro Señor\nJesucristo."
+   }
+  ]
+ },
+ "lun": {
+  "oficio": [
+   {
+    "tipo": "lectura1",
+    "texto": "De la carta a los Efesios 4, 25-5, 7\n\nSED IMITADORES DE DIOS\n\nHermanos: Dejaos de mentiras, hable cada uno con verdad a su prójimo, que somos\nmiembros unos de otros. Si os indignáis, no lleguéis a pecar; que la puesta del sol no os\nsorprenda en vuestro enojo. No dejéis lugar al diablo.\n\nEl ladrón, que no robe más; mejor será que se fatigue trabajando honradamente con\nsus propias manos, para poder repartir con el necesitado. No salga de vuestra boca\npalabra desedificante, sino la que sirva para la necesaria edificación, comunicando la\ngracia a los oyentes. Y  no provoquéis más al Santo Espíritu de Dios, con el cual fuisteis\nmarcados para el día de la redención. Desterrad de entre vosotros todo exacerbamiento,\nanimosidad, ira, pendencia, insulto y toda clase de maldad. Sed, por el contrario,\nbondadosos y compasivos unos con otros, y perdonaos mutuamente como también Dios\nos ha perdonado en Cristo.\n\nSed, pues, imitadores de Dios como hijos amados que sois. Y vivid en el amor a\nejemplo de Cristo, que os amó y se entregó por nosotros a Dios como oblación de suave\nfragancia.\n\nPor otra parte, de lujuria, inmoralidad de cualquier género o codicia, entre vosotros ni\nhablar; es impropio de gente consagrada. Y  lo mismo obscenidades, estupideces o\nchabacanerías, que están fuera de sitio; en lugar de eso, dad gracias a Dios. Porque esto\nque digo, tenedlo por sabido y resabido: nadie que se da a la lujuria, a la inmoralidad o a\nla codicia, que es una idolatría, tendrá parte en el reino de Cristo y de Dios. Que nadie os\nengañe con argumentos especiosos: estas cosas son las que atraen la reprobación de Dios\nsobre los rebeldes. Por eso, no os hagáis cómplices de ellos.",
+    "anio": "I"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. No provoquéis al Santo Espíritu de Dios, * con el cual fuisteis marcados para el día de\nla redención.\nV. Alegraos siempre y dad gracias a Dios en toda ocasión; no impidáis las manifestaciones\ndel Espíritu.\nR. Con el cual fuisteis marcados para el día de la redención.",
+    "anio": "I",
+    "ref": "Ef 4, 30; 1Ts 5, 16. 18. 19"
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "De la carta a Tito 2, 1-3, 2\n\nEXHORTACIÓN A LOS FIELES\n\nQuerido hermano: Tú enseña lo que es conforme a la sana doctrina. Los ancianos, que\nsean moderados, dignos, discretos, íntegros y vigorosos en la fe, en la caridad, en la\nconstancia. Las ancianas, de igual modo, que observen un porte religioso, como conviene\na una profesión santa; que no se den a la murmuración ni al mucho vino; que sean\nmaestras de buenas costumbres, para poder inspirar sentimientos de modestia a las más\njóvenes. Así les enseñarán a ser buenas esposas y buenas madres de familia, a ser\ndiscretas, honestas, hacendosas, bondadosas, dóciles a sus maridos. Así no darán motivo\npara que se hable mal del Evangelio de Dios.\n\nAsimismo, a los jóvenes, anímalos a vivir con moderación en todas las cosas. Y tú sé\nmodelo por tus buenas obras, con desinterés e integridad en la enseñanza, con gravedad,\ncon genuina e incensurable doctrina, para que nuestros adversarios se vean confundidos,\nal no tener nada malo que decir contra nosotros.\n\nLos esclavos, que vivan sometidos en todo a sus amos, complaciéndoles sin\ncontradecirles; y que no se den al robo; antes bien, muéstrenles una hermosa y total\nfidelidad, para que en todo hagan honor a la enseñanza evangélica de Dios, nuestro\nSalvador.\n\nPorque Dios ha hecho aparecer a la vista de todos los hombres la gracia que nos trae la\nsalud; y nos enseña a vivir con sensatez, justicia y religiosidad en esta vida, desechando la\n\nimpiedad y las ambiciones del mundo, y aguardando la feliz esperanza y la manifestación\nde la gloria del gran Dios y Salvador nuestro, Jesucristo. Él se entregó a la muerte por\nnosotros, a fin de redimirnos de toda iniquidad y reservarse para sí, como posesión propia,\nun pueblo purificado y lleno de fervor por las buenas obras. Vete enseñando todo esto,\nanimando y reprendiendo con toda autoridad. Que nadie te desprecie. Recuérdales que\nvivan sometidos a las autoridades y a los que ejercen el poder: que los obedezcan y que\nestén prontos para toda obra buena. Que no calumnien a nadie, que no sean\npendencieros, sino condescendientes, y que muestren una perfecta mansedumbre con\ntodos los hombres.",
+    "anio": "II"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Desechando la impiedad y las ambiciones del mundo, vivamos con sensatez, justicia y\nreligiosidad en esta vida; * aguardando la feliz esperanza y la manifestación de la gloria\ndel gran Dios y Salvador nuestro, Jesucristo.\nV. Miremos cómo nos portamos; no sea como necios, sino como sabios, aprovechando\nbien la ocasión presente.\nR. Aguardando la feliz esperanza y la manifestación de la gloria del gran Dios y Salvador\nnuestro, Jesucristo.",
+    "anio": "II",
+    "ref": "Tt 2, 12-13; cf. Ef 5, 15. 16"
+   },
+   {
+    "tipo": "lectura2",
+    "texto": "Del comentario de santo Tomás de Aquino, presbítero, sobre el evangelio de san Juan\n(Cap. 10, lect. 3)\n\nEL RESTO DE ISRAEL PASTARÁ Y SE TENDERÁ SIN SOBRESALTOS\n\nYo soy el buen Pastor. Es evidente que el oficio de pastor compete a Cristo, pues, de la\nmisma manera que el rebaño es guiado y alimentado por el pastor, así Cristo alimenta a\nlos fieles espiritualmente y también con su cuerpo y su sangre. Andabais descarriados\ncomo ovejas -dice el Apóstol-, pero ahora habéis vuelto al pastor y guardián de vuestras\nvidas.\n\nPero ya que Cristo, por una parte, afirma que el pastor entra por la puerta y, en otro\nlugar, dice que él es la puerta, y aquí añade que él es el pastor, debe concluirse de todo\nello, que Cristo entra por sí mismo. Y  es cierto que Cristo entra por sí mismo, pues él se\nmanifiesta a sí mismo, y por sí mismo conoce al Padre. Nosotros, en cambio, entramos por\nél, pues es por él que alcanzamos la felicidad.\n\nPero, fíjate bien: nadie que no sea él es puerta, porque nadie sino él es luz verdadera, a\nno ser por participación:\n\nNo era él -es decir, Juan Bautista- la luz, sino testigo de la luz. De Cristo, en cambio, se\ndice: Era la luz verdadera; que alumbra a todo hombre. Por ello, de nadie puede decirse\nque sea puerta; esta cualidad Cristo se la reservó para sí; el oficio, en cambio, de pastor lo\ndio también a otros y quiso que lo tuvieran sus miembros: por ello, Pedro fue pastor, y\npastores fueron también los otros apóstoles, y son pastores todos los buenos obispos. Os\ndaré -dice la Escritura- pastores a mi gusto. Pero, aunque los prelados de la Iglesia, que\ntambién son hijos, sean todos llamados pastores, sin embargo, el Señor dice en singular:\nYo soy el buen Pastor; con ello quiere estimularlos a la caridad, insinuándoles que nadie\npuede ser buen pastor, si no llega a ser una sola cosa con Cristo por la caridad y se\nconvierte en miembro del verdadero pastor.\n\nEl deber del buen pastor es la caridad; por eso dice: El buen pastor da la vida por las\novejas. Conviene, pues, distinguir entre el buen pastor y el mal pastor: el buen pastor es\naquel que busca el bien de sus ovejas, en cambio, el mal pastor es el que persigue su\npropio bien.\n\nA los pastores que apacientan rebaños de ovejas no se les exige exponer su propia vida\na la muerte por el bien de su rebaño, pero, en cambio, el pastor espiritual sí que debe\nrenunciar a su vida corporal ante el peligro de sus ovejas, porque la salvación espiritual\ndel rebaño es de más precio que la vida corporal del pastor. Es esto precisamente lo que\nafirma el Señor: El buen pastor da la vida -la vida del cuerpo- por las ovejas, es decir, por\nlas que son suyas por razón de su autoridad y de su amor. Ambas cosas se requieren: que\nlas ovejas le pertenezcan y que las ame, pues lo primero sin lo segundo no sería\nsuficiente.\n\nDe este proceder Cristo nos dio ejemplo: Si Cristo dio su vida por nosotros, también\nnosotros debemos dar nuestra vida por los hermanos."
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Buscaré mis ovejas, * y las sacaré de todos los lugares por donde se dispersaron en un\ndía de oscuridad y nubarrones.\nV. Mis ovejas nunca jamás perecerán, ni nadie las arrebatará de mis manos.\nR. Y las sacaré de todos los lugares por donde se dispersaron en un día de oscuridad y\nnubarrones.",
+    "ref": "Ez 34, 12; Jn 10, 28"
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Oh Dios, que unes los corazones de tus fieles en un mismo deseo, inspira a tu pueblo el\namor a tus preceptos y esperanza en tus promesas, para que, en medio de las vicisitudes\ndel mundo, nuestros corazones estén firmes en la verdadera alegría. Por nuestro Señor\nJesucristo."
+   }
+  ]
+ },
+ "mar": {
+  "oficio": [
+   {
+    "tipo": "lectura1",
+    "texto": "De la carta a los Efesios 5, 8-2 1\n\nCAMINAD COMO HIJOS DE LA LUZ\n\nHermanos: Antes erais tinieblas, pero ahora sois luz en el Señor. Caminad como hijos de\nla luz. Toda bondad, justicia y verdad son fruto de la luz. Examinad qué es lo que agrada\nal Señor, y no toméis parte en las obras infructuosas de las tinieblas, antes bien,\ndenunciadlas; porque lo que ésos hacen a escondidas da vergüenza hasta decirlo. Pero\ntodo eso, cuando la luz lo denuncia, queda al descubierto, y todo lo que está al\ndescubierto recibe el influjo de la luz. Por eso dice: «Despierta, tú que duermes, levántate\nde la muerte y te iluminará Cristo.»\n\nMirad, pues, con cuidado, cómo os portáis; que no sea como necios, sino como sabios,\naprovechando bien la ocasión presente, porque los días son malos. Por eso, no seáis\nnecios, sino entended bien cuál es la voluntad del Señor. No os embriaguéis, porque el\nvino es fuente de libertinaje. Colmaos más bien de espíritu, recitando entre vosotros\nsalmos, himnos y cánticos inspirados, cantando y alabando al Señor en vuestros\ncorazones, Dad continuamente gracias a Dios Padre por todos sus beneficios, en nombre\nde Jesucristo, nuestro Señor.\n\nVivid sumisos unos a otros como lo pide el respeto debido a Cristo.",
+    "anio": "I"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Sois luz en el Señor. Caminad como hijos de la luz. * Toda bondad, justicia y verdad son\nfruto de la luz.\nV. Vosotros sois la luz del mundo. Alumbre vuestra luz a los hombres.\nR. Toda bondad, justicia y verdad son fruto de la luz.",
+    "anio": "I",
+    "ref": "Ef 5, 8-9; Mt 5, 14. 16"
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "De la carta a Tito 3, 3-15\n\nEL BAÑO BAUTISMAL DE REGENERACIÓN\n\nQuerido hermano: También nosotros fuimos en un tiempo insensatos, rebeldes a Dios,\ndescarriados, esclavos de toda suerte de pasiones y placeres; vivíamos sumergidos en\nmaldad y envidia, aborrecibles a Dios y odiándonos unos a otros. Pero Dios, nuestro\nSalvador, hizo aparecer su misericordia y su amor por los hombres. Y nos trajo la salud, no\nen consideración a las buenas obras que hubiésemos practicado nosotros, sino por pura\nmisericordia suya, mediante el baño bautismal de regeneración y renovación que obra el\nEspíritu Santo. Él derramó con toda profusión sobre nosotros este Espíritu por Cristo\nJesús, nuestro Salvador. Así, justificados por la gracia de Cristo, hemos obtenido la\nesperanza de poseer en herencia la vida eterna.\n\nSentencia verdadera es ésta, y yo quiero que la vayas enseñando con todo tesón. Así\npondrán todo su celo en aventajarse en buenas obras los que han puesto su fe en Dios.\nÉstas son verdades sublimes y de gran utilidad para los hombres.\n\nNo tomes parte en cuestiones tontas, en genealogías, en discusiones, en disputas sobre\npuntos de la ley, porque son inútiles y vanas. Tras una primera y segunda amonestación,\nevita la compañía del hombre que va sembrando escisiones; sabe que ese tal va fuera de\ncamino y peca, condenándose a sí mismo.\n\nEnviaré a tu lado a Artemas o Tíquico; y tú date prisa en venir a juntarte conmigo en\nNicópolis. He resuelto pasar allí el invierno. A Zenas, el jurisconsulto, y a Apolo, provéeles\nsolícitamente de lo necesario para el viaje, y que nada les falte. Que los nuestros vayan\naprendiendo a ser los primeros en la práctica del bien; que atiendan a las necesidades\nmás apremiantes y que no sean gente inútil.\n\nTe saludan todos mis colaboradores. Saludos a todos los que nos aman en la fe. La\ngracia sea con todos vosotros.",
+    "anio": "II"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Como un padre siente ternura por sus hijos, siente el Señor ternura por sus fieles; *\nporque él sabe de qué estamos hechos.\nV. Dios nos trajo la salud, no en consideración a las buenas obras que hubiésemos\npracticado, sino por pura misericordia.\nR. Porque él sabe de qué estamos hechos.",
+    "anio": "II",
+    "ref": "Sal 102, 13-14a; Tt 3, 5"
+   },
+   {
+    "tipo": "lectura2",
+    "texto": "De las homilías de san Juan Crisóstomo, obispo\n(Homilía 2 sobre el diablo tentador, 6: PG 49, 263-264)\n\nCINCO CAMINOS DE PENITENCIA\n\n¿Queréis que os recuerde los diversos caminos de penitencia? Hay ciertamente muchos,\ndistintos y diferentes, y todos ellos conducen al cielo.\n\nEl primer camino de penitencia consiste en la acusación de los pecados: Confiesa\nprimero tus pecados, y serás justificado. Por eso dice el salmista: Propuse: \"Confesaré al\nSeñor mi culpa\", y tú perdonaste mi culpa y mi pecado. Condena, pues, tú mismo, aquello\nen lo que pecaste, y esta confesión te obtendrá el perdón ante el Señor, pues, quien\ncondena aquello en lo que faltó, con más dificultad volverá a cometerlo; haz que tu\nconciencia esté siempre despierta y sea como tu acusador doméstico, y así no tendrás\nquien te acuse ante el tribunal de Dios.\n\nÉste es un primer y óptimo camino de penitencia; hay también otro, no inferior al\nprimero, que consiste en perdonar las ofensas que hemos recibido de nuestros enemigos,\nde tal forma que, poniendo a raya nuestra ira, olvidemos las faltas de nuestros hermanos;\nobrando así, obtendremos que Dios perdone aquellas deudas que ante él hemos\ncontraído; he aquí, pues, un segundo modo de expiar nuestras culpas. Porque si perdonáis\na los demás sus culpas -dice el Señor-, también vuestro Padre del cielo os perdonará a\nvosotros.\n\n¿Quieres conocer un tercer camino de penitencia? Lo tienes en la oración ferviente y\ncontinuada, que brota de lo íntimo del corazón.\n\nSi deseas que te hable aún de un cuarto camino te diré que lo tienes en la limosna: ella\nposee una grande y extraordinaria virtualidad.\n\nTambién, si eres humilde y obras con modestia en este proceder encontrarás, no menos\nque en cuanto hemos dicho hasta aquí, un modo de destruir el pecado: De ello tienes un\nejemplo en aquel publicano, que, si bien no pudo recordar ante Dios su buena conducta,\nen lugar de buenas obras presentó su humildad y se vio descargado del gran peso de sus\nmuchos pecados.\n\nTe he recordado, pues, cinco caminos de penitencia: primero, la acusación de los\npecados; segundo, el perdonar las ofensas de nuestro prójimo; tercero, la oración; cuarto,\nla limosna; y quinto, la humildad.\n\nNo te quedes, por tanto, ocioso, antes procura caminar cada día por la senda de estos\ncaminos: ello, en efecto, resulta fácil, y no te puedes excusar aduciendo tu pobreza, pues,\naunque vivieres en gran penuria, podrías deponer tu ira y mostrarte humilde, podrías orar\nasiduamente y confesar tus pecados; la pobreza no es obstáculo para dedicarte a estas\nprácticas. pero, ¿qué estoy diciendo? La pobreza no impide de ninguna manera el andar\npor aquel camino de penitencia que consiste en seguir el mandato del Señor,\ndistribuyendo los propios bienes -hablo de la limosna-, pues esto lo realizó incluso aquella\nviuda pobre que dio sus dos pequeñas monedas.\n\nYa que has aprendido con estas palabras a sanar tus heridas, decídete a usar de estas\nmedicinas, y así, recuperada ya tu salud, podrás acercarte confiado a la mesa santa y salir\ncon gran gloria al encuentro del Señor, rey de la gloria, y alcanzar los bienes eternos por la\ngracia, la misericordia y la benignidad de nuestro Señor Jesucristo."
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Buena es la oración con el ayuno, y mejor es la limosna con justicia que la riqueza con\niniquidad; * pues la limosna purifica de todo pecado.\nV. Perdonad y seréis perdonados, dad y se os dará.\nR. Pues la limosna purifica de todo pecado.",
+    "ref": "Tb 12, 8-9; Lc 6, 37-38"
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Oh Dios, que unes los corazones de tus fieles en un mismo deseo, inspira a tu pueblo el\namor a tus preceptos y esperanza en tus promesas, para que, en medio de las vicisitudes"
+   }
+  ]
+ },
+ "mie": {
+  "oficio": [
+   {
+    "tipo": "lectura1",
+    "texto": "De la carta a los Efesios 5, 22-33\n\nDEBERES DE LOS ESPOSOS\n\nHermanos: Las mujeres deben someterse a sus maridos corno si se sometieran al\nSeñor; porque el marido es cabeza de la mujer, como Cristo es cabeza de la Iglesia y\nsalvador de ella, que es su cuerpo. Ahora bien, como la Iglesia está sometida a Cristo, así\ntambién las mujeres deben someterse en todo a sus maridos.\n\nY vosotros, maridos, amad a vuestras mujeres, como Cristo amó a su Iglesia y se\nentregó a la muerte por ella para santificarla, purificándola en el baño del agua, que va\nacompañado de la palabra, y para hacerla comparecer ante su presencia toda\nresplandeciente, sin mancha ni defecto ni cosa parecida, sino santa e inmaculada. Así\ndeben también los maridos amar a sus mujeres como a sus propios cuerpos. Amar a su\nmujer es amarse a sí mismo.\n\nNadie aborrece jamás su propia carne, sino que la alimenta y la cuida con cariño. Lo\nmismo hace Cristo con la Iglesia, porque somos miembros de su cuerpo. «Por eso dejará\nel hombre a su padre y a su madre y se unirá a su mujer y serán los dos una sola\ncarne.» ¡Gran misterio es éste! Y  yo lo refiero a Cristo y a la Iglesia. En resumen: ame\ncada uno a su mujer como a sí mismo; y la mujer respete a su marido.",
+    "anio": "I"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. ¡Ésta sí que es hueso de mis huesos y carne de mi carne! Por eso, dejará el hombre a\nsu padre y a su madre, y se unirá a su mujer * y serán los dos un solo ser.\nV. ¡Gran misterio es éste! Y yo lo refiero a Cristo y a la Iglesia.\nR. Y serán los dos un solo ser.",
+    "anio": "I",
+    "ref": "Gn 2, 23. 241 Ef 5, 32"
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "Comienza la primera carta del apóstol san Pablo a Timoteo 1, 1-20\n\nMISIÓN DE TIMOTEO. PABLO PREDICADOR DEL EVANGELIO\n\nPablo, apóstol de Jesucristo por mandato de Dios, nuestro Salvador, y de Cristo Jesús,\nnuestra esperanza, a Timoteo, mi verdadero hijo en la fe: gracia, misericordia y paz de\nparte de Dios Padre y de Cristo Jesús, nuestro Señor.\n\nAl partir para Macedonia, te rogué que te quedaras en tu puesto en Éfeso, para intimar\na algunos a que no sigan enseñando doctrinas extrañas ni se ocupen de leyendas y\ngenealogías inacabables. Son éstas más a propósito para promover inútiles discusiones\nque para llevar a cabo el plan divino de salvación por la fe. El objetivo de tu exhortación\nno debe ser otro que promover la caridad que proviene de un corazón sincero, de una\nconciencia recta y de una fe sin fingimiento. Algunos se han desviado de esta enseñanza y\n\nhan venido a dar en vana palabrería; pretenden ser doctores de la ley, cuando no\nentienden ni lo que dicen ni lo que con tanta seguridad afirman.\n\nYa sabemos que la ley es buena para quien usa de ella conforme al fin que tiene. Es\ndecir, sabiendo que no fue instituida para los justos, sino para los prevaricadores y\nrebeldes, para impíos y pecadores, para gente sin religión y sin piedad, para parricidas y\nmatricidas, para asesinos, adúlteros, sodomitas, traficantes de seres humanos,\nembusteros, perjuros y para todos los que se oponen a la sana doctrina. Esta sana\ndoctrina es conforme al mensaje evangélico de salvación, cuyo objeto es la gloria del Dios\nbienaventurado, y que ha sido encomendado a mi solicitud.\n\nDoy gracias a Cristo Jesús, nuestro Señor, que me hizo capaz, se fió de mí y me confió\neste ministerio. Yo primero fui blasfemo y perseguidor, e inferí ultrajes; pero fui acogido\ncon toda misericordia, porque obré por ignorancia en el tiempo de mi incredulidad. ¡Y en\nverdad que sobreabundó en mí la gracia de nuestro Señor, juntamente con la fe y la\ncaridad de Cristo Jesús!\n\nSentencia verdadera y digna de universal adhesión es ésta: Cristo Jesús vino al mundo\npara salvar a los pecadores. Y de entre ellos yo soy el primero. Y si Dios me concedió su\nmisericordia, fue para que Cristo Jesús manifestase primeramente en mí toda su\nbenignidad y sirviese de ejemplo a quienes habían de creer en él para conseguir la vida\neterna. Al Rey de los siglos, inmortal, invisible, único Dios, honor y gloria por los siglos de\nlos siglos. Amén.\n\nÉsta es la recomendación que yo te hago, hijo mío Timoteo, atendiendo a las\nrevelaciones carismáticas hechas anteriormente sobre tu persona. Armado con ellas\npodrás combatir en buena lid, teniendo a tu favor la fe y la recta conciencia. Algunos, por\nhaber obrado en contra de ésta, naufragaron en la fe. Entre ellos se encuentran Himeneo\ny Alejandro, a quienes he entregado al poder de Satanás, para que aprendan a no\nblasfemar.",
+    "anio": "II"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Sobreabundó la gracia de nuestro Señor, juntamente con la fe y la caridad. * Cristo\nJesús vino al mundo para salvar a los pecadores.\nV. Pues todos pecaron y se hallan privados de la gloria de Dios.\nR. Cristo Jesús vino al mundo para salvar a los pecadores.",
+    "anio": "II",
+    "ref": "1 Tm 1, 14. 15; Rm 3, 23"
+   },
+   {
+    "tipo": "lectura2",
+    "texto": "De las instrucciones de san Columbano, abad\n(Instrucción 13, Sobre Cristo, fuente de vida, 1-2: Opera, Dublín 1957, pp. 116-118)\n\nEL QUE TENGA SED QUE VENGA A MÍ Y QUE BEBA\n\nAmadísimos hermanos, escuchad nuestras palabras, pues vais a oír algo realmente\nnecesario; y mitigad la sed de vuestra alma con el caudal de la fuente divina, de la que\nahora pretendemos hablaros. Pero no la apaguéis del todo: bebed, pero no intentéis\nsaciaros completamente. La fuente viva, la fuente de la vida nos invita ya a ir a él,\ndiciéndonos: El que tenga sed que venga a mí y que beba.\n\nTratad de entender qué es lo que vais a beber. Que os lo diga Jeremías. Mejor dicho,\nque os lo diga el que es la misma fuente: Me abandonaron a mi, fuente de agua viva -\noráculo del Señor-. Así, pues, nuestro Señor Jesucristo en persona es la fuente de la vida.\nPor eso, nos invita a ir a él, que es la fuente, para beberlo. Lo bebe quien lo ama, lo bebe\nquien trata de saciarse de la palabra de Dios. El que tiene suficiente amor también tiene\nsuficiente deseo. Lo bebe quien se inflama en el amor de la sabiduría.\n\nObservad de donde brota esa fuente. Precisamente de donde nos viene el pan. Porque\nuno mismo es el pan y la fuente: el Hijo único, nuestro Dios y Señor Jesucristo, de quien\nsiempre hemos de tener hambre. Aunque lo comamos por el amor, aunque lo vayamos\ndevorando por el deseo, tenemos que seguir con ganas de él, como hambrientos.\nVayamos a él, como a fuente, y bebamos, tratando de excedernos siempre en el amor;\nbebamos llenos de deseo y gocemos de la suavidad de su dulzura.\n\nPorque el Señor es bueno y suave; y, por más que lo bebamos y lo comamos, siempre\nseguiremos teniendo hambre y sed de él, porque esta nuestra comida y bebida no puede\nacabar nunca de comerse y beberse; aunque se coma, no se termina, aunque se beba, no\nse agota, porque este nuestro pan es eterno y esta nuestra fuente es perenne y esta\nnuestra fuente es dulce. Por eso, dice el profeta: Sedientos todos, acudid por agua.\nPorque esta fuente es para los que tienen sed, no para los que ya la han apagado. Y, por\neso, llama a los que tienen sed, aquellos mismos que en otro lugar proclama dichosos,\naquellos que nunca se sacian de beber, sino que, cuanto más beben, más sed tienen.\n\nCon razón, pues, hermanos, hemos de anhelar, buscar y amar a aquel que es la Palabra\nde Dios en el cielo, la fuente de la sabiduría, en quien, como dice el Apóstol, están\nencerrados todos los tesoros del saber y el conocer, tesoros que Dios brinda a los que\ntienen sed.\n\nSi tienes sed, bebe de la fuente de la vida; si tienes hambre, come el pan de la vida.\nDichosos los que tienen hambre de este pan y sed de esta fuente; nunca dejan de comer\ny beber y siempre siguen deseando comer y beber. Tiene que ser muy apetecible lo que\nnunca se deja de comer y beber, siempre se apetece y se anhela, siempre se gusta y\nsiempre se desea; por eso, dice el rey profeta: Gustad y ved qué dulce, qué bueno es el\nSeñor."
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Jesús, puesto en pie, clamaba en alta voz: * «El que tenga sed que venga a mí, y que\nbeba el que crea en mí.»\nV. Brotarán de su seno torrentes de agua viva.\nR. El que tenga sed que venga a mí, y que beba el que crea en mí.",
+    "ref": "Jn 7, 37-38"
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Oh Dios, que unes los corazones de tus fieles en un mismo deseo, inspira a tu pueblo el\namor a tus preceptos y esperanza en tus promesas, para que, en medio de las vicisitudes\ndel mundo, nuestros corazones estén firmes en la verdadera alegría. Por nuestro Señor\nJesucristo."
+   }
+  ]
+ },
+ "jue": {
+  "oficio": [
+   {
+    "tipo": "lectura1",
+    "texto": "De la carta a los Efesios 6, 1-9\n\nDEBERES EN LA VIDA DOMÉSTICA\n\nVosotros, hijos, obedeced a vuestros padres, como lo quiere el Señor, pues esto es lo\njusto: «Honra a tu padre y a tu madre.» Éste es el primer mandamiento que lleva consigo\nuna promesa: «Para que te vaya bien y vivas muchos años sobre la tierra.»\n\nY los padres, por vuestra parte, no exasperéis a vuestros hijos, sino formadlos y\neducadlos según el espíritu del Señor.\n\nEsclavos, obedeced a vuestros amos de este mundo con solicitud y respeto, con\nsinceridad de corazón, como a Cristo. Servidles no sólo cuando están delante, como si\nbuscaseis agradar a los hombres, sino como auténticos esclavos de Cristo, cumpliendo de\ncorazón la voluntad de Dios; servidles con buena voluntad, como quien sirve al Señor y no\na los hombres, sabiendo que cada cual, sea esclavo o libre, recibirá la recompensa del\nSeñor conforme al bien que haya realizado.\n\nY los amos, por vuestra parte, haced otro tanto con ellos; dejad a un lado las\namenazas, sabiendo que el Señor de unos y otros está en los cielos y que en él no hay\nacepción de personas.",
+    "anio": "I"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. El que, siendo esclavo, ha sido convocado en el Señor es un liberto del Señor; y el que,\nsiendo libre, ha sido convocado es un esclavo de Cristo. *Habéis sido comprados a precio;\nno os hagáis esclavos de los hombres.\nV. Ya no hay distinción entre judío y gentil, ni entre libre y esclavo: todos somos uno en\nCristo Jesús.\nR. Habéis sido comprados a precio; no os hagáis esclavos de los hombres.",
+    "anio": "I",
+    "ref": "1 Co 7, 22-23; cf. Ga 3, 28"
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "De la primera carta a Timoteo 2, 1-15\n\nEXHORTACIÓN A HACER PLEGARIAS UNIVERSALES\n\nHijo mío, Timoteo: Te recomiendo ante todo que se hagan plegarias, oraciones, súplicas\ny acciones de gracias por todos los hombres; por los reyes y por todos los constituidos en\ndignidad, para que gocemos de una vida tranquila y sosegada, en el temor de Dios y con\ndignidad humana.\n\nEsto es hermoso y grato a los ojos de Dios, nuestro Salvador, que quiere que todos los\nhombres se salven y lleguen al pleno conocimiento de la verdad. Porque hay un solo Dios,\ny único es el mediador entre Dios y los hombres, Cristo Jesús, hombre también él, el cual\nse entregó a sí mismo como precio de rescate por todos. Éste es el testimonio que nos ha\ndado Dios a su tiempo* y para su promulgación me ha constituido mensajero y apóstol -\ndigo la verdad, no miento- y maestro de los gentiles en la fe y en la verdad.\n\nAsí, pues, quiero que los hombres oren en todo lugar levantando al cielo las manos\npurificadas, limpias de ira y de altercados. Asimismo, que las mujeres se presenten en la\nasamblea con traje decoroso, arregladas con recato y sobriedad, sin peinados\ncomplicados, ni oro, ni joyas, ni suntuosos vestidos. Su ornato deben ser las buenas obras,\ncomo conviene a mujeres que hacen profesión de religiosidad. Durante la instrucción, las\nmujeres guarden silencio en actitud sumisa. No consiento que la mujer enseñe ni ejerza\nautoridad sobre el hombre; debe mantenerse en silencio. Fue Adán primero en ser creado,\ndespués Eva. Y no fue Adán el seducido, sino Eva, que una vez seducida incurrió en la\ntransgresión. Pero la mujer se salvará por el cumplimiento de sus deberes maternales, si\npersevera en la fe, en el amor y en la santidad.",
+    "anio": "II"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Hay un solo Dios, y único es el mediador entre Dios y los hombres, Cristo Jesús,\nhombre también él, * el cual se entregó a sí mismo como precio de rescate por todos.\nV. Por eso debía ser semejante en todo a sus hermanos, para poderse apiadar de ellos.\nR. El cual se entregó a sí mismo como precio de rescate por todos.",
+    "anio": "II",
+    "ref": "1Tm 2, 5-6; Hb 2, 17"
+   },
+   {
+    "tipo": "lectura2",
+    "texto": "De las instrucciones de san Columbano, abad\n(Instrucción 13, Sobre Cristo, fuente de vida, 2-3: Opera, Dublín 1957, pp. 118-120)\n\nTÚ, SEÑOR, ERES TODO LO NUESTRO\n\nHermanos, seamos fieles a nuestra vocación. A través de ella nos llama a la fuente de\nla vida aquel que es la vida misma, que es fuente de agua viva y fuente de vida eterna,\nfuente de luz y fuente de resplandor, ya que de él procede todo esto: sabiduría y vida, luz\neterna. El autor de la vida es fuente de vida, el creador de la luz es fuente de resplandor.\nPor eso, dejando a un lado lo visible y prescindiendo de las cosas de este mundo,\nbusquemos en lo más alto del cielo la fuente de la luz, la fuente de la vida, la fuente de\nagua viva, como si fuéramos peces inteligentes y que saben discurrir; allí podremos beber\nel agua viva que salta hasta la vida eterna.\n\nDios misericordioso, piadoso Señor, haznos dignos de llegar a esa fuente. En ella podré\nbeber también yo, con los que tienen sed de ti, un caudal vivo de la fuente viva de agua\nviva. Si llegara a deleitarme con la abundancia de su dulzura, lograría levantar siempre mi\nespíritu para agarrarme a ella y podría decir: \"¡Qué grata resulta una fuente de agua viva\nde la que siempre mana agua que salta hasta la vida eterna!\"\n\nSeñor, tú mismo eres esa fuente que hemos de anhelar cada vez más, aunque no\ncesemos de beber de ella. Cristo Señor, danos siempre esa agua, para que haya también\nen nosotros un surtidor de agua viva que salta hasta la vida eterna. Es verdad que pido\ngrandes cosas, ¿quién lo puede ignorar? Pero tú eres el rey de la gloria y sabes dar cosas\nexcelentes, y tus promesas son magníficas. No hay ser que te aventaje. Y te diste a\nnosotros. Y te diste por nosotros.\n\nPor eso, te pedimos que vayamos ahondando en el conocimiento de lo que tiene que\nconstituir nuestro amor. No pedimos que nos des cosa distinta de ti. Porque tú eres todo lo\nnuestro: nuestra vida, nuestra luz, nuestra salvación, nuestro alimento, nuestra bebida,\nnuestro Dios. Infunde en nuestros corazones, Jesús querido, el soplo de tu Espíritu e\ninflama nuestras almas en tu amor, de modo que cada uno de nosotros pueda decir con\nverdad: \"Muéstrame al amado de mi alma, porque estoy herido de amor\".\n\nQue no falten en mí esas heridas, Señor. Dichosa el alma que está así herida de amor.\nÉsa va en busca de la fuente. Ésa va a beber. Y, por más que bebe, siempre tiene sed.\nSiempre sorbe con ansia, porque siempre bebe con sed. Y, así, siempre va buscando con\namor, porque halla la salud en las mismas heridas. Que se digne dejar impresas en lo más\níntimo de nuestras almas esas saludables heridas el compasivo y bienhechor médico de\nnuestras almas, nuestro Dios y Señor Jesucristo, que es uno con el Padre y el Espíritu\nSanto por los siglos de los siglos. Amén."
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. El que beba del agua que yo le daré nunca más tendrá sed; *el agua que yo le dé se\nconvertirá en él en manantial, cuyas aguas brotan para comunicar vida eterna.\nV. Señor, dame de ese agua, para que no sienta ya más sed.\nR. El agua que yo le dé se convertirá en él en manantial, cuyas aguas brotan para\ncomunicar vida eterna.",
+    "ref": "Jn 4, 13-15"
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Oh Dios, que unes los corazones de tus fieles en un mismo deseo, inspira a tu pueblo el\namor a tus preceptos y esperanza en tus promesas, para que, en medio de las vicisitudes\ndel mundo, nuestros corazones estén firmes en la verdadera alegría. Por nuestro Señor\nJesucristo."
+   }
+  ]
+ },
+ "vie": {
+  "oficio": [
+   {
+    "tipo": "lectura1",
+    "texto": "De la carta a los Efesios 6, 10-24\n\nEL COMBATE ESPIRITUAL. EPÍLOGO DE LA CARTA\n\nHermanos: Sacad vuestra fortaleza del Señor y de su valiosa omnipotencia. Revestíos\nde la armadura de Dios, para poder resistir a las asechanzas del demonio. Que nuestra\nlucha no es contra hombres de carne y hueso, sino contra los principados y potestades\ncontra los amos y señores de este mundo de tinieblas: contra los espíritus del mal que\nandan por las regiones del aire.\n\nPor eso, echad mano de la armadura de Dios, para que podáis resistir en el día malo y,\nvencidos todos los enemigos, quedar dueños del campo. Estad firmes, ceñida vuestra\ncintura con la verdad, protegidos con la coraza de la justificación, y calzados los pies con\nel celo por el Evangelio de la paz. Embrazad, en todo momento, el escudo de la fe, para\npoder inutilizar los dardos de fuego del maligno. Tomad el yelmo de la salud y la espada\ndel espíritu, que es la palabra de Dios.\n\nCon toda suerte de oraciones y súplicas, orad en todo momento a impulsos del Espíritu,\ny velad en común en toda reunión y súplica a favor de todos los fieles. Y pedid también\npor mí, para que Dios me conceda el poder de hablar y anunciar con toda libertad el\nmisterio contenido en el Evangelio, del cual soy embajador, aunque encadenado; pedid\npara que libremente sepa hablar de él, como debo hacerlo.\n\nPara que también vosotros conozcáis mi situación y cómo me encuentro, os informará\nde todo Tíquico, mi amado hermano y fiel ministro en el Señor. Os lo envío con este fin,\npara que os lleve noticias nuestras y dé ánimo a vuestros corazones.\n\nPaz a los hermanos, y caridad en unión con la fe, de parte de Dios Padre y de\nJesucristo, el Señor. La gracia sea con todos los que aman a nuestro Señor Jesucristo, que\nvive la vida incorruptible.",
+    "anio": "I"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Sacad vuestra fortaleza del Señor y de su valiosa omnipotencia. * Revestíos de la\narmadura de Dios, para poder resistir a las asechanzas del demonio.\nV. Fiel es Dios para no permitir que seáis tentados más allá de lo que podéis.\nR. Revestíos de la armadura de Dios, para poder resistir a las asechanzas del demonio.",
+    "anio": "I",
+    "ref": "Ef 6, 10-11; 1 Co 10, 13"
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "De la primera carta a Timoteo 3, 1-16\n\nCUALIDADES REQUERIDAS EN LOS MINISTROS DE LA IGLESIA\n\nHermano: Sentencia verdadera es ésta: Aspirar al cargo de obispo es aspirar a una\nexcelente función. Por lo mismo, es preciso que el obispo sea irreprochable, que no se\nhaya casado más que una vez, que sea sensato, bien educado, hospitalario, con\ncualidades para enseñar, no dado al vino ni violento, sino indulgente, amigo de la paz y\ndesinteresado; que sepa gobernar bien su propia casa y educar dignamente a sus hijos.\n\nQuien no sabe gobernar su propia casa ¿cómo podrá llevar el cuidado de la Iglesia de\nDios? No debe ser recién «convertido», no sea que se le suban los humos a la cabeza y\ncaiga en la misma condena del demonio y debe también gozar de buena reputación ante\nlos de fuera para que no sirva de escándalo y caiga en las redes del diablo.\n\nLos diáconos deben asimismo ser dignos y sin doblez, no dados al vino ni a torpes\nnegocios: que guarden con limpia conciencia el misterio de la fe. Sean primero probados y\nluego, si fueren irreprensibles, podrán ejercer su diaconado. Las mujeres deben ser\nigualmente dignas, no murmuradoras; moderadas y fieles en todo. Los diáconos que sean\ncasados una sola vez y sepan gobernar bien a sus hijos y a su propia casa. Los que\nejercen bien el diaconado alcanzan un puesto honroso y grande entereza en la fe de Cristo\nJesús.\n\nTe escribo la presente con la esperanza de ir pronto a verte. Pero, si tardo, sabrás ya de\neste modo cómo debes conducirte en la casa de Dios, que es la Iglesia del Dios vivo,\ncolumna y fundamento de la verdad.\n\nRealmente es grande el misterio que veneramos. Él, Cristo, fue manifestado en\nfragilidad humana, fue santificado por el Espíritu, fue mostrado a los ángeles, fue\nproclamado a los gentiles, fue objeto de fe para el mundo, fue elevado a la gloria.",
+    "anio": "II"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Tened cuidado del rebaño que el Espíritu Santo os ha encargado guardar, * como\npastores de la Iglesia de Dios, que él adquirió con la sangre de su Hijo.\nV. En un administrador lo que se busca es que sea fiel.\nR. Como pastores de la Iglesia de Dios, que él adquirió con la sangre de su Hijo.",
+    "anio": "II",
+    "ref": "Cf. Hch 20, 28; 1 Co 4, 2"
+   },
+   {
+    "tipo": "lectura2",
+    "texto": "Del comentario de san Jerónimo, presbítero, sobre el libro del profeta Joel\n(PL 25, 967-968)\n\nCONVERTÍOS A MÍ\n\nConvertíos a mí de todo corazón, y que vuestra penitencia interior se manifieste por\nmedio del ayuno, del llanto y de las lágrimas; así, ayunando ahora, seréis luego saciados;\nllorando ahora, podréis luego reír; lamentándoos ahora, seréis luego consolados. Y, ya que\nla costumbre tiene establecido rasgar los vestidos en los momentos tristes y adversos -\ncomo nos lo cuenta el Evangelio, al decir que el pontífice rasgó sus vestiduras para\nsignificar la magnitud del crimen del Salvador, o como nos dice el libro de los Hechos que\nPablo y Bernabé rasgaron sus túnicas al oír las palabras blasfematorias-, así os digo que\nno rasguéis vuestras vestiduras, sino vuestros corazones repletos de pecado; pues el\ncorazón, a la manera de los odres, se rompe nunca espontáneamente, sino que debe ser\nrasgado por la voluntad. Cuando, pues, hayáis rasgado de esta manera vuestro corazón,\nvolved al Señor, vuestro Dios, de quien os habíais apartado por vuestros antiguos pecados,\ny no dudéis del perdón, pues, por grandes que sean vuestras culpas, la magnitud de su\nmisericordia perdonará, sin duda, la vastedad de vuestros muchos pecados.\n\nPues el Señor es compasivo y misericordioso, lento a la cólera, rico en piedad; él no se\ncomplace en la muerte del malvado,: sino en que el malvado cambie de conducta y viva;\nél no es impaciente como el hombre, sino que espera sin prisas nuestra conversión y sabe\nretirar su malicia de nosotros, de manera que, si nos convertimos de nuestros pecados, él\nretira de nosotros sus castigos y aparta de nosotros sus amenazas, cambiando ante\nnuestro cambio. Cuando aquí el profeta dice que el Señor sabe perdonar su malicia, por\nmalicia no debemos entender lo que es contrario a la virtud, sino las desgracias con que\nnuestra vida está amenazada, según aquello que leemos en otro lugar: A cada día le\nbastan sus disgustos, o bien aquello otro: ¿Sucede una desgracia en la ciudad que no la\nmande el Señor?\n\nY, porque dice, como hemos visto más arriba, que el Señor es compasivo y\nmisericordioso, lento a la cólera y rico en piedad y que sabe retirar su malicia, a fin de que\nla magnitud de su clemencia no nos haga negligentes en el bien, añade el profeta: Quizá\nse arrepienta y nos perdone y nos deje todavía su bendición. Por eso, dice, yo, por mi\nparte, exhorto a la penitencia y reconozco que Dios es infinitamente misericordioso, como\ndice el profeta David: Misericordia, Dios mío; por tu bondad, por tu inmensa compasión\nborra mi culpa.\n\nPero, como sea que no podemos conocer hasta dónde llega el abismo de las riquezas y\nsabiduría de Dios, prefiero ser discreto en mis afirmaciones y decir sin presunción: Quizá\nse arrepienta y nos perdone. Al decir quizá, ya está indicando que se trata de algo o bien\nimposible o por lo menos muy difícil.\n\nHabla luego el profeta de ofrenda y libación para nuestro Dios: con ello, quiere\nsignificar que, después de habernos dado su bendición y perdonado nuestro pecado,\nnosotros debemos ofrecer a Dios nuestros dones."
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Convertíos todos a Dios con pureza de alma y con caridad sincera, * para que se\ncancele la nota deudora de vuestros pecados.\nV. Rasgad vuestros corazones y no vuestras vestiduras y convertíos al Señor, vuestro Dios.\nR. Para que se cancele la nota deudora de vuestros pecados.",
+    "ref": "Cf. Sal 23, 4; 2Co 6, 6; Col 2, 14; Jl 2, 13"
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Oh Dios, que unes los corazones de tus fieles en un mismo deseo, inspira a tu pueblo el\namor a tus preceptos y esperanza en tus promesas, para que, en medio de las vicisitudes\ndel mundo, nuestros corazones estén firmes en la verdadera alegría. Por nuestro Señor\nJesucristo."
+   }
+  ]
+ },
+ "sab": {
+  "oficio": [
+   {
+    "tipo": "lectura1",
+    "texto": "Carta del apóstol san Pablo a Filemón 1-25\n\nEL APÓSTOL INTERCEDE POR ONÉSIMO\n\nPablo, prisionero de Cristo Jesús, y el hermano Timoteo, a Filemón, nuestro querido\namigo y colaborador, y a la hermana Apia y a Arquipo, nuestro compañero de armas, y a\nla Iglesia que se reúne en tu casa: La gracia y la paz sean con vosotros de parte de Dios,\nnuestro Padre, y de Jesucristo, el Señor.\n\nDoy continuamente gracias a mi Dios, al acordarme de ti en mis oraciones; porque\ntengo noticias de tu caridad y de la fe que tienes para con Jesús, el Señor, y para con\ntodos los fieles. Que la generosidad que te inspira tu fe te mueva a dar a conocer todo el\nbien que se da entre nosotros para gloria de Cristo. En verdad, he recibido alegría y\nconsuelo con las nuevas de tu caridad, y porque, hermano, has proporcionado verdadero\nalivio a los corazones de los fieles.\n\nPor este motivo, aunque tengo la suficiente confianza y libertad en nombre de Cristo\npara mandarte lo que es justo, prefiero apelar a tu caridad. Y, presentándome tal cual soy,\nyo, Pablo, anciano, y ahora además preso de Cristo Jesús, te pido por mi hijo, a quien\nengendré entre cadenas, por Onésimo, que en otro tiempo fue inútil para ti, pero ahora es\nmuy útil para ti y para mí. Te lo envío, es decir, te envío mi corazón.\n\nYo quisiera retenerlo a mi lado, para que me sirviera en tu lugar, en estas cadenas que\nllevo por el Evangelio; pero no quiero hacer nada sin contar contigo. Así, el favor que me\nhaces no será por imposición, sino por tu libre voluntad. Quizás por esto ha permitido Dios\nque se escapara de tu lado por una temporada. Así, lo recobrarás para siempre, y no ya\ncomo a esclavo, sino, mejor que como a esclavo, como a un hermano carísimo; él es muy\nquerido para mí, pero ¡cuánto más lo será para ti no sólo desde el punto de vista material,\nsino también en el Señor!\n\nSi, pues, realmente me tienes por compañero tuyo, recíbelo como si fuese yo en\npersona. Y, si en alguna cosa te ha perjudicado o te debe algo, ponlo a mi cuenta. Yo,\nPablo, lo firmo de mi puño y letra: yo te lo pagaré. Por no recordarte que tú mismo te me\ndebes. Sí hermano, hazme este favor en el Señor. Consuela mi corazón en Cristo.\n\nSeguro de tu docilidad, te escribo la presente, sabiendo que harás más de lo que te\ndigo. Y, al mismo tiempo, vete preparándome el hospedaje, porque espero que por\nvuestras oraciones Dios hará que me llegue a vosotros. Saludos de Epafras, mi compañero\nde prisión en Cristo Jesús. También de Marcos, de Aristarco, de Demas y de Lucas, mis\ncolaboradores. La gracia de Jesucristo, el Señor, sea con vuestro espíritu.",
+    "anio": "I"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Todos sois uno en Cristo Jesús. * Por consiguiente, ya no eres esclavo, sino hijo; y, si\neres hijo, también eres heredero por voluntad de Dios.\nV. Recíbelo, y no ya como a esclavo, sino, mejor que como a esclavo, como a un hermano\ncarísimo.\nR. Por consiguiente, ya no eres esclavo, sino hijo; y, si eres hijo, también eres heredero\npor voluntad de Dios.",
+    "anio": "I",
+    "ref": "Ga 3, 28; 4, 7; Flm 16"
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "De la primera carta a Timoteo 4, 1-5, 2\n\nLOS FALSOS DOCTORES\n\nHermano: El Espíritu dice claramente que algunos en los últimos tiempos desertarán de\nla fe, dando oídos a engaños, inspiraciones y enseñanzas propias de demonios, seducidos\npor embaucadores hipócritas, cuya conciencia estará marcada a fuego por la infamia;\néstos proscriben el matrimonio y el uso de alimentos, que han sido creados por Dios para\nque disfruten de ellos con acción de gracias los fieles y los conocedores de la verdad. Todo\nlo que Dios ha creado es bueno; y no hay alimento que merezca repulsa, si se toma dando\ngracias a Dios. Todo queda santificado por la palabra de Dios y por nuestra oración. Si\n\npropones estas cosas a los hermanos y te vas nutriendo cada día con los principios de la\nfe y de la buena doctrina que has seguido con toda fidelidad serás un excelente servidor\nde Cristo Jesús.\n\nRechaza, en cambio, las leyendas supersticiosas y propias de viejas. Ejercítate en la\npiedad. Los ejercicios corporales reportan beneficios escasos, pero la piedad es\nprovechosa para todo y tiene la promesa de la vida, tanto presente corno futura. He aquí\nuna afirmación veraz y digna de universal adhesión: Nuestros trabajos y nuestras luchas\nestán impulsados por nuestra esperanza en el Dios vivo, que es el salvador de todos los\nhombres y en particular de los fieles. Esto has de enseñar e inculcar. Que nadie te\ndesprecie por tu juventud. Sé modelo para los fieles en las palabras y en el trato, en la\ncaridad, en la fe y en la pureza de vida. En tanto que llego, aplícate a la lectura, a la\npredicación, a la enseñanza. No descuides el don que posees, que te fue dado por una\nintervención profética con la imposición de las manos del colegio de presbíteros. Pon\ninterés en estas cosas, ocúpate de ellas, de modo que tus progresos sean manifiestos a\ntodos. Vigílate a ti mismo y a tu enseñanza; sé constante en ello; obrando así, te salvarás\na ti mismo y a los que te escuchan.\n\nAl anciano no lo reprendas con dureza, sino exhórtale como a un padre; a los jóvenes,\ncomo a hermanos; a las ancianas, como a madres; a las jóvenes, como a hermanas, con\ntoda pureza.",
+    "anio": "II"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. La piedad es provechosa para todo y tiene la promesa de la vida; * nuestros trabajos y\nnuestras luchas están impulsados por nuestra esperanza en el Dios vivo.\nV. Somos acosados, mas no aniquilados; derribados, pero no perdidos.\nR. Nuestros trabajos y nuestras luchas están impulsados por nuestra esperanza en el Dios\nvivo.",
+    "anio": "II",
+    "ref": "1 Tm 4, 8. 10; 2 Co 4, 9"
+   },
+   {
+    "tipo": "lectura2",
+    "texto": "De las homilías de san Juan Crisóstomo, obispo, sobre el evangelio de san Mateo\n(Homilía 50, 3-4: PG 58, 508-509)\n\nAL ADORNAR EL TEMPLO, NO DESPRECIES AL HERMANO NECESITADO\n\n¿Deseas honrar el cuerpo de Cristo? No lo desprecies, pues, cuando lo contemples\ndesnudo en los pobres, ni lo honres aquí, en el templo, con lienzos de seda, si al salir lo\nabandonas en su frío y desnudez. Porque el mismo que dijo: Esto es mi cuerpo; y con su\npalabra llevó a realidad lo que decía, afirmó también: Tuve hambre, y no me disteis de\ncomer, y más adelante: Siempre que dejasteis de hacerlo a uno de estos pequeñuelos, a\nmi en persona lo dejasteis de hacer. El templo no necesita vestidos y lienzos, sino pureza\nde alma; los pobres, en cambio, necesitan que con sumo cuidado nos preocupemos de\nellos.\n\nReflexionemos, pues, y honremos a Cristo con aquel mismo honor con que él desea ser\nhonrado; pues, cuando se quiere honrar a alguien, debemos pensar en el honor que a él\nle agrada, no en el que a nosotros nos place. También Pedro pretendió honrar al Señor\ncuando no quería dejarse lavar los pies, pero lo que él quería impedir no era el honor que\nel Señor deseaba, sino todo lo contrario. Así tú debes tributar al Señor el honor que él\nmismo te indicó, distribuyendo tus riquezas a los pobres. Pues Dios no tiene ciertamente\nnecesidad de vasos de oro, pero sí, en cambio, desea almas semejantes al oro.\n\nNo digo esto con objeto de prohibir la entrega de dones preciosos para los templos,\npero sí que quiero afirmar que, junto con estos dones y aun por encima de ellos, debe\npensarse en la caridad para con los pobres. Porque, si Dios acepta los dones para su\n\ntemplo, le agradan, con todo, mucho más las ofrendas que se dan a los pobres. En efecto,\nde la ofrenda hecha al templo sólo saca provecho quien la hizo; en cambio, de la limosna\nsaca provecho tanto quien la hace como quien la recibe. El don dado para el templo puede\nser motivo de vanagloria, la limosna, en cambio, sólo es signo de amor y de caridad.\n\n¿De qué serviría adornar la mesa de Cristo con vasos de oro, si el mismo Cristo muere\nde hambre? Da primero de comer al hambriento, y luego, con lo que te sobre, adornarás\nla mesa de Cristo. ¿Quieres hacer ofrenda de vasos de oro y no eres capaz de dar un vaso\nde agua? Y, ¿de qué serviría recubrir el altar con lienzos bordados de oro, cuando niegas\nal mismo Señor el vestido necesario para cubrir su desnudez? ¿Qué ganas con ello? Dime\nsi no: Si ves a un hambriento falto del alimento indispensable y, sin preocuparte de su\nhambre, lo llevas a contemplar una mesa adornada con vajilla de oro, ¿te dará las gracias\nde ello? ¿No se indignará más bien contigo? O, si, viéndolo vestido de andrajos y muerto\nde frío, sin acordarte de su desnudez, levantas en su honor monumentos de oro,\nafirmando que con esto pretendes honrarlo, ¿no pensará él que quieres burlarte de su\nindigencia con la más sarcástica de tus ironías?\n\nPiensa, pues, que es esto lo que haces con Cristo, cuando lo contemplas errante,\nperegrino y sin techo y, sin recibirlo, te dedicas a adornar el pavimento, las paredes y las\ncolumnas del templo. Con cadenas de plata sujetas lámparas, y te niegas a visitarlo\ncuando él está encadenado en la cárcel. Con esto que estoy diciendo, no pretendo prohibir\nel uso de tales adornos, pero sí que quiero afirmar que es del todo necesario hacer lo uno\nsin descuidar lo otro; es más: os exhorto a que sintáis mayor preocupación por el\nhermano necesitado que por el adorno del templo. Nadie, en efecto, resultará condenado\npor omitir esto segundo, en cambio, los castigos del infierno, el fuego inextinguible y la\ncompañía de los demonios están destinados para quienes descuiden lo primero. Por tanto,\nal adornar el templo procurad no despreciar al hermano necesitado, porque este templo es\nmucho más precioso que aquel otro."
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Tuve hambre y me disteis de comer, tuve sed y me disteis de beber, fui forastero y me\nhospedasteis. * Os aseguro que cada vez que lo hicisteis con uno de estos mis humildes\nhermanos, conmigo lo hicisteis.\nV. Quien se apiada del pobre presta al Señor.\nR. Os aseguro que cada vez que lo hicisteis con uno de estos mis humildes hermanos,\nconmigo lo hicisteis.",
+    "ref": "Mt 25, 35. 40; Pr 19, 17"
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Oh Dios, que unes los corazones de tus fieles en un mismo deseo, inspira a tu pueblo el\namor a tus preceptos y esperanza en tus promesas, para que, en medio de las vicisitudes\ndel mundo, nuestros corazones estén firmes en la verdadera alegría. Por nuestro Señor\nJesucristo."
+   }
+  ]
+ }
+}

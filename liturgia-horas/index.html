@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Liturgia de las Horas | Notica</title>
+<meta name="description" content="La Liturgia de las Horas de cada día: Laudes, Vísperas, Completas y más. Notica.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/liturgia.css">
+</head>
+<body>
+  <header class="barra">
+    <a href="../" aria-label="Volver a Notica">← Notica</a>
+    <div class="ajustes">
+      <button type="button" id="lit-menos" aria-label="Letra más pequeña">A−</button>
+      <button type="button" id="lit-mas" aria-label="Letra más grande">A+</button>
+    </div>
+  </header>
+
+  <main>
+    <h1>Liturgia de las Horas</h1>
+    <p id="lit-fecha" class="fecha"></p>
+
+    <div class="dias">
+      <button type="button" id="lit-ant" class="enlace">‹ Anterior</button>
+      <button type="button" id="lit-hoy" class="enlace">Hoy</button>
+      <label class="fecha-sel"><input type="date" id="lit-fecha-input" aria-label="Elegir fecha"></label>
+      <button type="button" id="lit-sig" class="enlace">Siguiente ›</button>
+    </div>
+
+    <p id="lit-titulo" class="dia-titulo"></p>
+    <p id="lit-sub" class="sub-lit"></p>
+
+    <nav id="lit-tabs" class="tabs" role="tablist" aria-label="Horas del día"></nav>
+    <article id="lit-contenido" class="contenido" aria-live="polite"></article>
+  </main>
+
+  <noscript><p class="aviso">Esta sección necesita JavaScript.</p></noscript>
+  <script src="js/calendario.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
