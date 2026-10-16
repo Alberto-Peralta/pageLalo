@@ -6,6 +6,7 @@
   var TRAMO = [0,0,0,0,0,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,0,0,0,0];
 
   var PAGINAS = [
+    ['Radio Guadalupana en vivo', './radio/index.html'],
     ['Juegos católicos', './juegos/index.html'],
     ['Rosarios', './rosarios/index.html'],
     ['Rosario', './rosario/index.html'],

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Radio Guadalupana en vivo - Notica</title>
+<meta name="description" content="Escucha Radio Guadalupana en vivo.">
+<link rel="icon" type="image/png" sizes="192x192" href="../icons/android-chrome-192x192.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="../portada.css">
+<style>
+.ro-volver { color: #7fb4ee; text-decoration: none; font-size: 15px; }
+.ra-main { max-width: 520px; margin: 0 auto; padding: 24px 16px 40px; padding-bottom: max(40px, env(safe-area-inset-bottom)); }
+.ra-main h1 { color: #f4b942; font-size: 1.8rem; margin: 0 0 4px; }
+.ra-sub { color: #9fb3c8; margin: 0 0 18px; font-size: 15px; }
+.ra-player { text-align: center; padding: 28px 18px; }
+.ra-live { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; color: #9fb3c8; margin-bottom: 18px; }
+.ra-live b { width: 9px; height: 9px; border-radius: 50%; background: #5b6b7e; display: inline-block; }
+.ra-player.on .ra-live b { background: #e5484d; animation: ra-p 1.4s infinite; }
+@keyframes ra-p { 50% { opacity: .35; } }
+.ra-nombre { font-size: 1.3rem; color: #ffd98a; margin: 0 0 20px; }
+.ra-play { width: 84px; height: 84px; border-radius: 50%; border: 0; cursor: pointer; background: #f4b942; color: #0a1626; font-size: 32px; display: inline-grid; place-items: center; }
+.ra-play:hover { background: #ffd98a; }
+.ra-vol { display: flex; align-items: center; gap: 10px; justify-content: center; margin-top: 24px; color: #9fb3c8; }
+.ra-vol input { width: 60%; max-width: 220px; accent-color: #f4b942; }
+.ra-msg { min-height: 20px; margin: 16px 0 0; font-size: 14px; color: #ff8a80; }
+.ra-mas { display: block; text-align: center; margin-top: 16px; color: #7fb4ee; font-size: 14px; text-decoration: none; }
+</style>
+</head>
+<body class="pn">
+<header class="pn-top">
+<a href="../" class="logo"><img src="../icons/logo-nav-oscuro.png" alt="Notica"></a>
+<a class="ro-volver" href="../">&larr; Inicio</a>
+</header>
+<main class="ra-main">
+<h1>Radio en vivo</h1>
+<p class="ra-sub">Acompaña tu día con música y programas católicos.</p>
+<section class="pn-card ra-player" id="ra-caja">
+<div class="ra-live"><b></b><span id="ra-estado">En pausa</span></div>
+<p class="ra-nombre">Radio Guadalupana</p>
+<button class="ra-play" id="ra-play" type="button" aria-label="Reproducir"><i class="fas fa-play" id="ra-icono"></i></button>
+<div class="ra-vol"><i class="fas fa-volume-low"></i><input type="range" id="ra-vol" min="0" max="1" step="0.05" value="0.8" aria-label="Volumen"><i class="fas fa-volume-high"></i></div>
+<p class="ra-msg" id="ra-msg" role="status"></p>
+</section>
+<a class="ra-mas" href="https://www.radioguadalupana.com/" target="_blank" rel="noopener">Ir al sitio de Radio Guadalupana</a>
+</main>
+<audio id="ra-audio" preload="none"></audio>
+<script>
+(function () {
+  var URL = 'https://edge.mixlr.com/channel/bhama';
+  var a = document.getElementById('ra-audio');
+  var btn = document.getElementById('ra-play');
+  var ico = document.getElementById('ra-icono');
+  var est = document.getElementById('ra-estado');
+  var msg = document.getElementById('ra-msg');
+  var caja = document.getElementById('ra-caja');
+  var vol = document.getElementById('ra-vol');
+  a.volume = parseFloat(vol.value);
+  function ui(on, texto) {
+    ico.className = on ? 'fas fa-pause' : 'fas fa-play';
+    btn.setAttribute('aria-label', on ? 'Pausar' : 'Reproducir');
+    caja.classList.toggle('on', on);
+    est.textContent = texto;
+  }
+  btn.addEventListener('click', function () {
+    msg.textContent = '';
+    if (!a.paused) { a.pause(); a.removeAttribute('src'); a.load(); ui(false, 'En pausa'); return; }
+    a.src = URL;
+    ui(true, 'Conectando…');
+    a.play().catch(function () { a.removeAttribute('src'); ui(false, 'En pausa'); msg.textContent = 'No se pudo reproducir. Intenta de nuevo.'; });
+  });
+  a.addEventListener('playing', function () { ui(true, 'En vivo'); });
+  a.addEventListener('waiting', function () { if (!a.paused) { est.textContent = 'Cargando…'; } });
+  a.addEventListener('error', function () { if (a.getAttribute('src')) { a.removeAttribute('src'); ui(false, 'En pausa'); msg.textContent = 'La radio no está disponible ahora. Intenta en unos minutos.'; } });
+  vol.addEventListener('input', function () { a.volume = parseFloat(vol.value); });
+})();
+</script>
+</body>
+</html>
