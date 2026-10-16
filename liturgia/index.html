@@ -12,16 +12,17 @@
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "a7d50e2cf06445848a47c594610014ed"}'></script>
 <style>
 :root {
-  --azul: #185FA5;
-  --azul-claro: #E6F1FB;
-  --azul-mid: #378ADD;
-  --texto: #1a1a1a;
-  --texto-muted: #6b7280;
-  --borde: rgba(0,0,0,0.08);
-  --fondo: #ffffff;
-  --fondo-sec: #f8f9fa;
+  --azul: #f4b942;
+  --azul-claro: rgba(244,185,66,0.14);
+  --azul-mid: #c97a2b;
+  --texto: #eef3f8;
+  --texto-muted: #9fb3c8;
+  --borde: rgba(255,255,255,0.1);
+  --fondo: #12263f;
+  --fondo-sec: #0a1626;
   --radio-card: 12px;
   --radio-sm: 8px;
+  color-scheme: dark;
 }
 * { box-sizing: border-box; }
 body {
@@ -37,7 +38,7 @@ body {
   padding: 12px 16px;
   padding-top: max(12px, env(safe-area-inset-top));
 }
-.barra a { color: var(--azul); text-decoration: none; font-weight: 500; font-size: 15px; }
+.barra a { color: #7fb4ee; text-decoration: none; font-weight: 500; font-size: 15px; }
 main {
   max-width: 720px;
   margin: 0 auto;
@@ -82,7 +83,7 @@ h1 {
 .color-lit i {
   width: 12px; height: 12px;
   border-radius: 50%;
-  border: 1px solid rgba(0,0,0,0.2);
+  border: 1px solid rgba(255,255,255,0.3);
   display: inline-block;
 }
 .tarjeta {
@@ -119,7 +120,7 @@ button.compartir, button.copiar {
 button.compartir:hover, button.copiar:hover { background: var(--azul-claro); color: var(--azul); }
 button.reintentar {
   background: var(--azul);
-  color: #fff;
+  color: #0a1626;
   border: 0;
   border-radius: var(--radio-sm);
   padding: 10px 18px;
@@ -130,7 +131,7 @@ button.reintentar {
 }
 button:focus-visible, a:focus-visible { outline: 3px solid var(--azul-mid); outline-offset: 2px; }
 .estado { text-align: center; color: var(--texto-muted); padding: 40px 0; }
-.estado.error { color: #b42318; }
+.estado.error { color: #ff8a80; }
 .girar {
   width: 28px; height: 28px;
   margin: 0 auto 12px;
