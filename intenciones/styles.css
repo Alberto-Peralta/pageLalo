@@ -1,12 +1,12 @@
 /* 🎨 Global Styles */
 :root {
-  --primary-color: #5c3a00;
-  --secondary-color: #b8860b;
-  --accent-color: #daa520;
-  --light-bg-color: #fcf7e3;
-  --white: #ffffff;
-  --shadow-color: rgba(0, 0, 0, 0.08);
-  --border-color: #ddd;
+  --primary-color: #eef3f8;
+  --secondary-color: #f4b942;
+  --accent-color: #ffd98a;
+  --light-bg-color: #0a1626;
+  --white: #12263f;
+  --shadow-color: rgba(0, 0, 0, 0.35);
+  --border-color: rgba(255, 255, 255, 0.12);
 }
 
 * {
@@ -68,7 +68,7 @@ h2 {
 
 p {
   font-size: 1rem;
-  color: #555;
+  color: #9fb3c8;
   text-align: center;
   margin-bottom: 1rem;
 }
@@ -81,7 +81,7 @@ p {
 
 .intention-item .intention-meta {
   font-size: 0.8rem;
-  color: #a0a0a0;
+  color: #9fb3c8;
   margin-top: 0.8rem;
   display: flex;
   justify-content: space-between;
@@ -147,7 +147,7 @@ button:hover {
 #login-form input:focus {
   outline: none;
   border-color: var(--secondary-color);
-  box-shadow: 0 0 6px rgba(184, 134, 11, 0.4);
+  box-shadow: 0 0 6px rgba(244, 185, 66, 0.4);
 }
 
 #intention-form textarea {
@@ -156,7 +156,7 @@ button:hover {
 }
 
 .error-message {
-  color: #dc3545;
+  color: #ff8a80;
   font-size: 0.9rem;
   text-align: center;
   margin-top: -0.5rem;
@@ -433,3 +433,7 @@ button:hover {
     transform: translateY(0);
   }
 }
+/* Tema Notica */
+:root { color-scheme: dark; }
+textarea, input { background: #0a1626; color: #eef3f8; }
+.delete-btn { color: #fff; }
