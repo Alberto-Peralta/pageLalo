@@ -15,14 +15,14 @@
                     },
                     colors: {
                         // Paleta extraída del styles.css (Mostaza/Dorado)
-                        'primary': '#b8860b',   // Mostaza Oscuro/Botón
-                        'secondary': '#ecf0f1', // Blanco Humo (Texto)
-                        'accent-light': '#d4a017', // Mostaza Claro (Fondo)
-                        'accent-dark': '#daa520', // Dorado Claro (Hover)
-                        'background': '#d4a017', // Fondo Principal
-                        'card-bg': '#8b5e00',    // Caramelo Oscuro (Fondo de Tarjeta)
-                        'text-color': '#ecf0f1', // Texto Blanco Humo
-                        'text-dark': '#5c3a00',  // Marrón Elegante
+                        'primary': '#c97a2b',   // Mostaza Oscuro/Botón
+                        'secondary': '#9fb3c8', // Blanco Humo (Texto)
+                        'accent-light': '#1a3556', // Mostaza Claro (Fondo)
+                        'accent-dark': '#f4b942', // Dorado Claro (Hover)
+                        'background': '#0a1626', // Fondo Principal
+                        'card-bg': '#12263f',    // Caramelo Oscuro (Fondo de Tarjeta)
+                        'text-color': '#eef3f8', // Texto Blanco Humo
+                        'text-dark': '#f4b942',  // Marrón Elegante
                     }
                 }
             }
@@ -32,13 +32,13 @@
         /* Estilos generales y fuente Arial */
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #d4a017; /* Mostaza Claro */
-            color: #ecf0f1; /* Blanco Humo */
+            background-color: #0a1626; /* Mostaza Claro */
+            color: #eef3f8; /* Blanco Humo */
         }
 
         /* Contenedor principal de la aplicación: Fondo de Tarjeta */
         #rosary-container {
-            background-color: #8b5e00; /* Caramelo Oscuro */
+            background-color: #12263f; /* Caramelo Oscuro */
         }
 
         /* Estilo para las cuentas de rosario */
@@ -53,7 +53,7 @@
             width: 40px;
             height: 40px;
             border-radius: 50%;
-            background-color: #b8860b; /* Primary/Mostaza Oscuro */
+            background-color: #c97a2b; /* Primary/Mostaza Oscuro */
         }
 
         /* Estilo para las cuentas pequeñas (Ave) - Mostaza Claro/Fondo */
@@ -61,15 +61,15 @@
             width: 30px;
             height: 30px;
             border-radius: 50%;
-            background-color: #d4a017; /* Mostaza Claro */
+            background-color: #0a1626; /* Mostaza Claro */
         }
 
         /* Estilo para la cuenta actual (iluminada) */
         .bead.current {
             transform: scale(1.2);
             /* Sombra con Dorado Claro y Marrón Elegante */
-            box-shadow: 0 0 20px rgba(218, 165, 32, 0.8), 0 0 10px rgba(92, 58, 0, 0.5); 
-            border: 3px solid #daa520; /* Dorado Claro */
+            box-shadow: 0 0 20px rgba(244, 185, 66, 0.8), 0 0 10px rgba(255, 217, 138, 0.4); 
+            border: 3px solid #ffd98a; /* Dorado Claro */
         }
 
         /* Estilo para la cuenta completada */
@@ -85,33 +85,34 @@
             border-radius: 5px; /* Usando 5px como el CSS de la card button */
             font-size: 1.25rem;
             font-weight: bold;
-            background-color: #b8860b; /* Mostaza Oscuro Botón */
-            color: #ecf0f1; /* Blanco Humo */
+            background-color: #c97a2b; /* Mostaza Oscuro Botón */
+            color: #eef3f8; /* Blanco Humo */
             transition: background-color 0.3s ease, transform 0.3s ease;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
         }
 
         .main-button:hover {
             transform: scale(1.05);
-            background-color: #daa520; /* Dorado Claro Hover Botón */
+            background-color: #f4b942; /* Dorado Claro Hover Botón */
             box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
         }
 
         /* Estilo para el contenedor del texto de la oración - Fondo Mostaza Claro */
         .prayer-content-container {
-            background-color: #d4a017; /* Mostaza Claro */
+            background-color: #0a1626; /* Mostaza Claro */
         }
         
         /* Estilo para el texto de la oración */
         #mystery-title {
-            color: #5c3a00; /* Marrón Elegante */
+            color: #f4b942; /* Marrón Elegante */
         }
         #prayer-text {
-            color: #ecf0f1; /* Blanco Humo */
+            color: #eef3f8; /* Blanco Humo */
         }
     </style>
 <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "a7d50e2cf06445848a47c594610014ed"}'></script></head>
-<body class="min-h-screen flex items-center justify-center p-4 bg-background text-text-color">
+<body class="min-h-screen flex items-center justify-center p-4 pt-16 bg-background text-text-color">
+    <a id="btn-volver-inicio" href="../index.html" style="position:fixed;top:calc(10px + env(safe-area-inset-top));left:10px;z-index:99999;background:#12263f;color:#eef3f8;border:1px solid rgba(255,255,255,0.12);padding:8px 14px;border-radius:999px;text-decoration:none;font:14px system-ui,-apple-system,sans-serif;">← Inicio</a>
 
     <div id="rosary-container" class="w-full max-w-lg rounded-3xl shadow-2xl p-6 md:p-8">
         
