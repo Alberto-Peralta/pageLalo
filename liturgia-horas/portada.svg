@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-label="Liturgia de las Horas">
+  <defs>
+    <linearGradient id="fondo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#378ADD"/>
+      <stop offset="1" stop-color="#185FA5"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#fondo)"/>
+  <circle cx="300" cy="200" r="125" fill="#E6F1FB" opacity="0.25"/>
+  <circle cx="300" cy="200" r="110" fill="#ffffff"/>
+  <circle cx="300" cy="200" r="96" fill="none" stroke="#185FA5" stroke-width="5"/>
+  <g stroke="#185FA5" stroke-width="5" stroke-linecap="round">
+    <line x1="300" y1="112" x2="300" y2="126"/>
+    <line x1="300" y1="112" x2="300" y2="126" transform="rotate(30 300 200)"/>
+    <line x1="300" y1="112" x2="300" y2="126" transform="rotate(60 300 200)"/>
+    <line x1="300" y1="112" x2="300" y2="126" transform="rotate(90 300 200)"/>
+    <line x1="300" y1="112" x2="300" y2="126" transform="rotate(120 300 200)"/>
+    <line x1="300" y1="112" x2="300" y2="126" transform="rotate(150 300 200)"/>
+    <line x1="300" y1="112" x2="300" y2="126" transform="rotate(180 300 200)"/>
+    <line x1="300" y1="112" x2="300" y2="126" transform="rotate(210 300 200)"/>
+    <line x1="300" y1="112" x2="300" y2="126" transform="rotate(240 300 200)"/>
+    <line x1="300" y1="112" x2="300" y2="126" transform="rotate(270 300 200)"/>
+    <line x1="300" y1="112" x2="300" y2="126" transform="rotate(300 300 200)"/>
+    <line x1="300" y1="112" x2="300" y2="126" transform="rotate(330 300 200)"/>
+  </g>
+  <g stroke="#185FA5" stroke-width="8" stroke-linecap="round">
+    <line x1="300" y1="200" x2="300" y2="150" transform="rotate(-60 300 200)"/>
+    <line x1="300" y1="200" x2="300" y2="132" transform="rotate(60 300 200)"/>
+  </g>
+  <circle cx="300" cy="200" r="9" fill="#185FA5"/>
+  <circle cx="140" cy="90" r="5" fill="#ffffff" opacity="0.7"/>
+  <circle cx="470" cy="75" r="4" fill="#ffffff" opacity="0.7"/>
+  <circle cx="500" cy="320" r="6" fill="#ffffff" opacity="0.6"/>
+  <circle cx="105" cy="310" r="4" fill="#ffffff" opacity="0.6"/>
+</svg>
