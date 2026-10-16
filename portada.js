@@ -18,7 +18,7 @@
     ['Criptograma bíblico', './criptograma_biblico/index.html'],
     ['Templos de Delicias', './templos/index.html'],
     ['Noticias', './noticias/index.html'],
-    ['Chat litúrgico', './misalYLiturgiaDeLasHoras/chat.html'],
+    ['Chat litúrgico', './fray-noti/chat.html'],
     ['Recursos descargables', '#recursos']
   ];
 

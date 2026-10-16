@@ -1,2 +1,7 @@
 [functions]
-directory = "misalYLiturgiaDeLasHoras/netlify/functions/"
+directory = "fray-noti/netlify/functions/"
+
+[[redirects]]
+  from = "/misalYLiturgiaDeLasHoras/*"
+  to = "/fray-noti/:splat"
+  status = 301
