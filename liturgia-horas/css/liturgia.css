@@ -1,16 +1,17 @@
 /* Liturgia de las Horas — estilos alineados con Notica (misma paleta, tipografías y tarjetas que liturgia/). */
 :root {
-  --azul: #185FA5;
-  --azul-claro: #E6F1FB;
-  --azul-mid: #378ADD;
-  --texto: #1a1a1a;
-  --texto-muted: #6b7280;
-  --borde: rgba(0,0,0,0.08);
-  --fondo: #ffffff;
-  --fondo-sec: #f8f9fa;
+  --azul: #f4b942;
+  --azul-claro: rgba(244,185,66,0.14);
+  --azul-mid: #c97a2b;
+  --texto: #eef3f8;
+  --texto-muted: #9fb3c8;
+  --borde: rgba(255,255,255,0.1);
+  --fondo: #12263f;
+  --fondo-sec: #0a1626;
   --radio-card: 12px;
   --radio-sm: 8px;
   --lit-tam: 20px;
+  color-scheme: dark;
 }
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
@@ -31,7 +32,7 @@ button { cursor: pointer; }
   padding: 12px 16px;
   padding-top: max(12px, env(safe-area-inset-top));
 }
-.barra a { color: var(--azul); text-decoration: none; font-weight: 500; font-size: 15px; }
+.barra a { color: #7fb4ee; text-decoration: none; font-weight: 500; font-size: 15px; }
 .ajustes { display: flex; gap: 6px; }
 .ajustes button {
   min-width: 38px; min-height: 36px; background: var(--fondo);
@@ -91,7 +92,7 @@ h1 {
   padding: 8px 14px; min-height: 40px; white-space: nowrap; font-size: 14px; font-weight: 500;
 }
 .tabs button:hover, .selector button:hover { background: var(--azul-claro); color: var(--azul); }
-.tabs button.on, .selector button.on { background: var(--azul); color: #fff; border-color: var(--azul); }
+.tabs button.on, .selector button.on { background: var(--azul); color: #0a1626; border-color: var(--azul); }
 .selector { display: flex; gap: 8px; flex-wrap: wrap; margin: 0 0 14px; }
 
 /* tarjetas */
@@ -135,7 +136,7 @@ h1 {
 }
 .aviso p { margin: 6px 0 12px; }
 .btn {
-  background: var(--azul); color: #fff; border: 0; border-radius: var(--radio-sm);
+  background: var(--azul); color: #0a1626; border: 0; border-radius: var(--radio-sm);
   padding: 10px 18px; font-family: inherit; font-size: 15px; cursor: pointer;
 }
 .cargando { color: var(--texto-muted); text-align: center; padding: 32px 0; }
