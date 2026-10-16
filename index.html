@@ -25,57 +25,70 @@
   <link rel="icon" type="image/png" sizes="192x192" href="./icons/android-chrome-192x192.png">
  
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="portada.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="./instalar.js" defer></script>
   <script src="./silencio-templo.js" defer></script>
 <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "a7d50e2cf06445848a47c594610014ed"}'></script></head>
-<body>
- 
-  <!-- NAVBAR -->
-  <header>
-    <nav class="navbar">
-      <a href="./" class="logo"><img src="./icons/logo-nav.png" alt="Notica" class="logo-img logo-img-full"></a>
-      <button class="menu-toggle" onclick="toggleMenu()" aria-label="Abrir menú">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="menu" id="menu">
-        <li><a href="./rosario/index.html">Rosario</a></li>
-        <li><a href="./cinco-minutos-maria/index.html">María</a></li>
-        <li><a href="./rosario_difuntos/index.html">Exequias</a></li>
-        <li><a href="./coronilla/index.html">Coronilla</a></li>
-        <li><a href="./triviaCristiana/index.html">¿Cristiano?</a></li>
-        <li><a href="./criptograma_biblico/index.html">Criptograma</a></li>
-        <li><a href="./biblia/index.html">Biblia</a></li>
-        <li><a href="./intenciones/index.html">Intenciones</a></li>
-        <li><a href="./liturgia/index.html">Liturgia</a></li>
-        <li><a href="./misalYLiturgiaDeLasHoras/chat.html">Chat</a></li>
-      </ul>
+<body class="pn">
+  <header class="pn-top">
+    <a href="./" class="logo"><img src="./icons/logo-nav.png" alt="Notica"></a>
+    <nav class="pn-nav" aria-label="Principal">
+      <button class="pn-nav-item activo" id="pn-btn-inicio" type="button"><i class="fas fa-home"></i><span>Inicio</span></button>
+      <button class="pn-nav-item" id="pn-btn-explorar" type="button"><i class="fas fa-compass"></i><span>Explorar</span></button>
+      <button class="pn-nav-item pronto" type="button"><i class="fas fa-heart"></i><span>Mi Fe</span></button>
+      <button class="pn-nav-item pronto" type="button"><i class="fas fa-users"></i><span>Comunidad</span></button>
     </nav>
   </header>
- 
- 
-  <main>
- 
-    <!-- HERO -->
-    <section class="hero">
-      <div class="hero-eyebrow">Espacio de fe</div>
-      <h1>Acércate a <em>Dios</em> hoy</h1>
-      <p class="hero-sub">Oraciones, recursos litúrgicos y herramientas para tu vida espiritual.</p>
-      <img
-        src="./images/507c4aa7-b312-451d-9308-53c6a4ec5448.jpg"
-        alt="Virgen de Guadalupe"
-        class="hero-image">
-      <div class="hero-actions">
-        <a href="./rosario/index.html" class="btn-primary">
-          <i class="fas fa-pray"></i> Rezar el Rosario
-        </a>
-        <a href="#recursos" class="btn-outline">
-          Ver recursos <i class="fas fa-arrow-down"></i>
-        </a>
-      </div>
+
+  <main class="pn-main">
+
+    <section class="pn-hero">
+      <h1 id="pn-saludo">Buenos días</h1>
+      <p>El Señor es mi luz y mi salvación, ¿a quién temeré?</p>
+      <small>Salmo 27,1</small>
     </section>
+
+    <a class="pn-card pn-evangelio" id="pn-ev-link" href="./liturgia/index.html">
+      <div class="pn-icono"><i class="fas fa-book-open"></i></div>
+      <div class="pn-texto">
+        <p class="pn-eyebrow">Evangelio del día</p>
+        <h2 id="pn-ev-fecha">Hoy</h2>
+        <p id="pn-ev-cita">Cargando...</p>
+      </div>
+      <i class="fas fa-chevron-right"></i>
+    </a>
+
+    <div class="pn-atajos">
+      <a class="pn-atajo" href="./biblia/index.html"><i class="fas fa-bible"></i><span>Biblia</span></a>
+      <a class="pn-atajo" href="./rosario/index.html"><i class="fas fa-pray"></i><span>Rosario</span></a>
+      <a class="pn-atajo" href="./coronilla/index.html"><i class="fas fa-hands-praying"></i><span>Coronilla</span></a>
+      <a class="pn-atajo" href="./cinco-minutos-maria/index.html"><i class="fas fa-star"></i><span>5 min con María</span></a>
+      <a class="pn-atajo" href="./liturgia/index.html"><i class="fas fa-church"></i><span>Liturgia</span></a>
+      <a class="pn-atajo" href="./intenciones/index.html"><i class="fas fa-heart"></i><span>Intenciones</span></a>
+      <a class="pn-atajo" href="./misalYLiturgiaDeLasHoras/chat.html"><i class="fas fa-comments"></i><span>Chat</span></a>
+      <a class="pn-atajo" href="./templos/index.html"><i class="fas fa-location-dot"></i><span>Templos</span></a>
+      <a class="pn-atajo" href="./triviaCristiana/index.html"><i class="fas fa-circle-question"></i><span>Trivia</span></a>
+      <a class="pn-atajo" href="./criptograma_biblico/index.html"><i class="fas fa-puzzle-piece"></i><span>Criptograma</span></a>
+    </div>
+
+    <section class="pn-card pn-guia">
+      <h2>¿Qué necesitas hoy?</h2>
+      <p>Encuentra una guía espiritual para tu momento.</p>
+      <span class="pn-btn pronto">Próximamente</span>
+    </section>
+
+    <section class="pn-card pn-noticias">
+      <div class="pn-noticias-cab">
+        <h2>Noticias</h2>
+        <a href="./noticias/index.html">Ver todas</a>
+      </div>
+      <div id="pn-noticias-lista"><p class="pn-estado">Cargando noticias...</p></div>
+    </section>
+
+    <div class="pn-legacy">
  
     <!-- CARD RADIO GUADALUPANA -->
     <div class="main-container">
@@ -230,7 +243,16 @@
     </section>
  
  
+    </div>
   </main>
+
+  <div class="pn-explorar" id="pn-explorar" hidden>
+    <div class="pn-explorar-caja">
+      <button class="pn-cerrar" id="pn-cerrar" type="button">Cerrar</button>
+      <input class="pn-buscar" id="pn-buscar" type="search" placeholder="Buscar: rosario, biblia, liturgia..." autocomplete="off">
+      <div id="pn-resultados"></div>
+    </div>
+  </div>
  
   <!-- FOOTER -->
   <footer class="footer">
@@ -415,5 +437,6 @@
  
   </script>
  
+  <script src="./portada.js" defer></script>
 </body>
 </html>

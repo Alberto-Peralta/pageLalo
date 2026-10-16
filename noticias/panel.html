@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Panel de noticias - Notica</title>
+<style>
+body { font-family: system-ui, sans-serif; margin: 0; background: #f4f1ea; color: #222; }
+main { max-width: 720px; margin: 0 auto; padding: 20px 16px 60px; }
+h1 { font-size: 1.5rem; }
+h2 { font-size: 1.15rem; margin-top: 28px; }
+section.caja { background: #fff; border-radius: 10px; padding: 16px; margin-top: 16px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+label { display: block; margin-top: 10px; font-size: 0.9rem; }
+input, select, textarea { width: 100%; box-sizing: border-box; padding: 9px; margin-top: 4px; font: inherit; border: 1px solid #bbb; border-radius: 6px; }
+button { margin-top: 12px; padding: 9px 16px; font: inherit; border: 0; border-radius: 6px; background: #5b3a1e; color: #fff; cursor: pointer; }
+button.sec { background: #888; }
+.error { color: #b00020; margin-top: 8px; }
+.ok { color: #1b6e2d; margin-top: 8px; }
+ul { padding-left: 18px; }
+</style>
+</head>
+<body>
+<main>
+<h1>Panel de noticias</h1>
+
+<section id="pantallaLogin" class="caja">
+<form id="formLogin">
+<label>Correo<input type="email" id="email" required></label>
+<label>Contraseña<input type="password" id="clave" required></label>
+<button type="submit">Entrar</button>
+<p id="errorLogin" class="error"></p>
+</form>
+</section>
+
+<div id="panel" style="display:none">
+<p>Sesión: <span id="correo"></span> | Rol: <span id="rol"></span> <button id="salir" class="sec">Salir</button></p>
+<section id="seccionNoticia" class="caja">
+<h2>Nueva publicación</h2>
+<form id="formNoticia">
+<label>Tipo<select id="noticiaTipo"><option value="noticia">Noticia</option><option value="evento">Evento</option><option value="aviso">Aviso</option><option value="video">Video</option></select></label>
+<label>Parroquia<select id="noticiaParroquia" required></select></label>
+<label>Título<input type="text" id="noticiaTitulo" required maxlength="140"></label>
+<label>Texto<textarea id="noticiaCuerpo" rows="8" required></textarea></label>
+<label>Fecha y hora del evento (solo eventos)<input type="datetime-local" id="noticiaFecha"></label>
+<label>Lugar (solo eventos)<input type="text" id="noticiaLugar"></label>
+<label>Enlace de video (YouTube o Facebook)<input type="url" id="noticiaVideo"></label>
+<label>Fuentes (una por línea: Título | enlace)<textarea id="noticiaFuentes" rows="3"></textarea></label>
+<button type="submit">Enviar a revisión</button>
+</form>
+<p id="resultadoNoticia"></p>
+<h2>Publicaciones pendientes</h2>
+<ul id="listaPendientes"></ul>
+</section>
+
+<section id="seccionParroquias" class="caja" style="display:none">
+<h2>Parroquias</h2>
+<form id="formParroquia">
+<label>Nombre<input type="text" id="parroquiaNombre" required></label>
+<label>Decanato<input type="text" id="parroquiaDecanato"></label>
+<button type="submit">Guardar parroquia</button>
+<button type="button" id="crearMundo" class="sec">Crear Iglesia en el mundo</button>
+<button type="button" id="importarTemplos" class="sec">Importar desde Templos</button>
+</form>
+<p id="resultadoParroquia"></p>
+<ul id="listaParroquias"></ul>
+</section>
+</div>
+</main>
+<script type="module" src="panel.js"></script>
+</body>
+</html>

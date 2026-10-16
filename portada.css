@@ -1,0 +1,94 @@
+/* PORTADA NUEVA (Notica): todo con prefijo body.pn */
+body.pn { margin: 0; background: #0a1626; color: #eef3f8; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+body.pn a { color: inherit; text-decoration: none; }
+
+/* Barra superior y menu */
+.pn-top { display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; background: #0a1626; position: sticky; top: 0; z-index: 50; }
+.pn-top .logo img { height: 44px; width: auto; display: block; }
+.pn-nav { position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; display: flex; background: #0d1e35; border-top: 1px solid rgba(255,255,255,0.12); padding-bottom: env(safe-area-inset-bottom); }
+.pn-nav-item { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 10px 4px; font-size: 12px; color: #9fb3c8; background: none; border: 0; cursor: pointer; font-family: inherit; }
+.pn-nav-item i { font-size: 20px; }
+.pn-nav-item.activo { color: #f4b942; }
+.pn-nav-item.pronto { opacity: 0.6; }
+
+/* Contenedor principal */
+.pn-main { display: grid; gap: 14px; padding: 8px 16px 100px; max-width: 1400px; margin: 0 auto; }
+.pn-card { background: #12263f; border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 16px; }
+.pn-eyebrow { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #f4b942; margin: 0 0 6px; }
+.pn-estado { color: #9fb3c8; font-size: 14px; margin: 0; }
+
+/* Saludo */
+.pn-hero { position: relative; overflow: hidden; border-radius: 18px; padding: 24px 20px; min-height: 210px; display: flex; flex-direction: column; justify-content: flex-end; border: 1px solid rgba(255,255,255,0.1); background: var(--pn-hero-img, none) center / cover no-repeat, linear-gradient(160deg, #16365c 0%, #0f2745 55%, #c97a2b 135%); }
+.pn-hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(8,18,34,0.75), rgba(8,18,34,0.05) 70%); }
+.pn-hero * { position: relative; }
+.pn-hero h1 { margin: 0 0 8px; font-size: clamp(28px, 5vw, 44px); line-height: 1.1; }
+.pn-hero p { margin: 0; font-size: 18px; font-style: italic; }
+.pn-hero small { margin-top: 6px; opacity: 0.85; }
+
+/* Evangelio */
+.pn-evangelio { display: flex; align-items: center; gap: 14px; }
+.pn-evangelio .pn-icono { flex: none; width: 52px; height: 52px; border-radius: 50%; background: #1b3556; display: grid; place-items: center; font-size: 22px; color: #f4b942; }
+.pn-evangelio .pn-texto { flex: 1; min-width: 0; }
+.pn-evangelio h2 { margin: 0 0 4px; font-size: 18px; }
+.pn-evangelio p { margin: 0; color: #c5d3e2; font-size: 15px; }
+
+/* Atajos en carrusel */
+.pn-atajos { display: flex; gap: 10px; overflow-x: auto; scroll-snap-type: x proximity; padding-bottom: 6px; -webkit-overflow-scrolling: touch; }
+.pn-atajo { flex: none; scroll-snap-align: start; width: 96px; padding: 14px 6px; border-radius: 16px; text-align: center; font-size: 13px; background: #16304f; border: 1px solid rgba(255,255,255,0.12); display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.pn-atajo i { font-size: 26px; color: #f4b942; }
+.pn-atajo.pronto { opacity: 0.55; }
+
+/* Que necesitas hoy */
+.pn-guia { display: flex; flex-direction: column; gap: 8px; background: linear-gradient(135deg, #16365c, #0f2745); }
+.pn-guia h2 { margin: 0; font-size: 22px; }
+.pn-guia p { margin: 0; color: #c5d3e2; }
+.pn-btn { align-self: flex-start; background: #f4b942; color: #1a1a1a; font-weight: 600; padding: 10px 18px; border-radius: 999px; }
+.pn-btn.pronto { opacity: 0.7; }
+
+/* Noticias */
+.pn-noticias-cab { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+.pn-noticias-cab h2 { margin: 0; font-size: 14px; letter-spacing: 0.14em; text-transform: uppercase; }
+.pn-noticias-cab a { color: #7fb4ee; font-size: 14px; }
+.pn-noticia { display: block; padding: 12px 0; border-top: 1px solid rgba(255,255,255,0.1); }
+.pn-noticia-tipo { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #f4b942; }
+.pn-noticia-titulo { margin: 4px 0; font-size: 17px; font-weight: 600; }
+.pn-noticia-meta { font-size: 13px; color: #9fb3c8; }
+
+/* Bloque con el contenido anterior (fondo claro, para que se vea como antes) */
+.pn-legacy { background: #ffffff; color: #1a1a1a; border-radius: 16px; overflow: hidden; }
+body.pn .footer { padding-bottom: calc(80px + env(safe-area-inset-bottom)); }
+
+/* Explorar (buscador) */
+.pn-explorar[hidden] { display: none; }
+.pn-explorar { position: fixed; inset: 0; z-index: 80; background: rgba(6,12,22,0.96); padding: 16px 16px 100px; overflow-y: auto; }
+.pn-explorar-caja { max-width: 640px; margin: 0 auto; }
+.pn-buscar { width: 100%; box-sizing: border-box; padding: 14px 16px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.2); background: #12263f; color: #eef3f8; font-size: 17px; }
+.pn-cerrar { background: none; border: 0; color: #9fb3c8; font-size: 15px; padding: 10px 0; cursor: pointer; }
+.pn-resultado { display: block; padding: 14px 4px; border-bottom: 1px solid rgba(255,255,255,0.1); font-size: 17px; }
+
+/* PC y pantallas grandes */
+@media (min-width: 900px) {
+  .pn-top { padding: 12px 32px; }
+  .pn-nav { position: static; background: none; border: 0; padding: 0; gap: 8px; }
+  .pn-nav-item { flex: none; flex-direction: row; font-size: 16px; padding: 10px 16px; }
+  .pn-nav-item i { font-size: 18px; }
+  .pn-main { grid-template-columns: 1.6fr 1fr; grid-template-areas: "hero guia" "evangelio noticias" "atajos noticias" "legacy legacy"; padding: 8px 32px 32px; gap: 18px; }
+  .pn-hero { grid-area: hero; min-height: 260px; }
+  .pn-guia { grid-area: guia; justify-content: center; }
+  .pn-evangelio { grid-area: evangelio; }
+  .pn-atajos { grid-area: atajos; flex-wrap: wrap; overflow: visible; }
+  .pn-noticias { grid-area: noticias; }
+  .pn-legacy { grid-area: legacy; }
+  body.pn .footer { padding-bottom: 0; }
+}
+
+/* Flotantes sobre el menu inferior (solo celular) y logo en pastilla */
+body.pn #instalar-app { bottom: calc(84px + env(safe-area-inset-bottom)); }
+body.pn .ns-chip { bottom: calc(84px + env(safe-area-inset-bottom)); }
+body.pn .ns-panel { bottom: calc(84px + env(safe-area-inset-bottom)); }
+.pn-top .logo img { background: #ffffff; border-radius: 10px; padding: 4px 10px; box-sizing: content-box; }
+@media (min-width: 900px) {
+  body.pn #instalar-app { bottom: 16px; }
+  body.pn .ns-chip { bottom: 14px; }
+  body.pn .ns-panel { bottom: 16px; }
+}
