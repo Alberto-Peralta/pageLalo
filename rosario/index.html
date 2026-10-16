@@ -9,13 +9,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #87CEEB;          /* azul cielo */
-            --primary-light-color: #B0E2FF;    /* azul claro */
-            --accent-color: #4682B4;           /* azul acero */
+            --primary-color: #f4b942;          /* dorado Notica */
+            --primary-light-color: #ffd98a;    /* dorado claro */
+            --accent-color: #c97a2b;           /* ámbar */
             --font-heading: 'Crimson Text', serif;
             --font-body: 'Lato', sans-serif;
-            --text-light-color: #f0f8ff;       /* blanco azulado claro */
-            --bg-overlay: rgba(0, 0, 50, 0.6); /* overlay oscuro azulado */
+            --text-light-color: #eef3f8;       /* texto Notica */
+            --bg-overlay: rgba(10, 22, 38, 0.65); /* overlay Notica */
             --active-bead-color: var(--primary-light-color);
         }
 
@@ -357,7 +357,7 @@
         }
 
         @media (max-width: 480px) {
-            .main-content { padding: 10px; width: 95%; }
+            .main-content { padding: calc(56px + env(safe-area-inset-top)) 10px 10px; width: 95%; }
             .controls { flex-direction: column; gap: 8px; flex-wrap: wrap; }
             .controls select { width: 100%; max-width: none; }
             .reflection { padding: 0 10px; }
