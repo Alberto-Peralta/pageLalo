@@ -5,7 +5,7 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(to bottom, #003366, #2c6f8c);
+    background: #0a1626;
     color: #ffffff;
     margin: 0;
     text-align: center;
@@ -22,7 +22,7 @@ body {
 .game-container, .admin-container {
     width: 95%;
     max-width: 900px;
-    background: rgba(0, 51, 102, 0.85);
+    background: rgba(18, 38, 63, 0.88);
     border-radius: 20px;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
     padding: 1.5rem;
@@ -45,18 +45,18 @@ body {
 
 .game-title {
     font-size: clamp(1.8rem, 5vw, 2.8rem);
-    color: #ffcc00;
+    color: #f4b942;
     text-shadow: 2px 2px 4px #000;
     margin-bottom: 1.5rem;
 }
 
 /* Estilos para el panel de administración */
 .admin-container {
-    background-color: #004d99;
+    background-color: #12263f;
 }
 
 .admin-container h2 {
-    color: #ffcc00;
+    color: #f4b942;
     font-size: 1.8rem;
 }
 
@@ -68,13 +68,13 @@ body {
     border: 1px solid #ccc;
     font-size: 1rem;
     background-color: #f0f0f0;
-    color: #003366;
+    color: #0a1626;
     box-sizing: border-box;
 }
 
 .admin-container button {
-    background-color: #ffcc00;
-    color: #003366;
+    background-color: #f4b942;
+    color: #0a1626;
     border: none;
     padding: 0.8rem 1.5rem;
     margin: 0.5rem;
@@ -86,7 +86,7 @@ body {
 }
 
 .admin-container button:hover {
-    background-color: #ffb800;
+    background-color: #ffd98a;
     transform: translateY(-2px);
 }
 
@@ -100,15 +100,15 @@ body {
 }
 
 .admin-container th, .admin-container td {
-    border: 1px solid #ffcc00;
+    border: 1px solid #f4b942;
     padding: 0.75rem;
     text-align: left;
     word-wrap: break-word;
 }
 
 .admin-container th {
-    background-color: #003366;
-    color: #ffcc00;
+    background-color: #0a1626;
+    color: #f4b942;
 }
 
 /* Estilos para la pantalla de inicio */
@@ -118,7 +118,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    background: #c97a2b;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -151,7 +151,7 @@ body {
 .start-btn {
     padding: 1rem 2rem;
     font-size: 1.2rem;
-    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    background: #c97a2b;
     color: white;
     border: none;
     border-radius: 50px;
@@ -179,9 +179,9 @@ body {
     width: 95%;
     padding: 1rem 2.5rem; /* Ajuste para hacer el botón más largo */
     margin: 0.75rem auto;
-    background-color: #003366;
-    color: #ffcc00;
-    border: 2px solid #ffcc00;
+    background-color: #0a1626;
+    color: #f4b942;
+    border: 2px solid #f4b942;
     border-radius: 50px; /* Ajuste para hacer las esquinas más redondeadas */
     cursor: pointer;
     font-size: clamp(1rem, 3.5vw, 1.25rem);
@@ -194,15 +194,15 @@ body {
 }
 
 .answer-btn:hover {
-    background-color: #ffcc00;
-    color: #003366;
+    background-color: #f4b942;
+    color: #0a1626;
     transform: translateY(-2px);
 }
 
 .answer-btn.selected {
-    background-color: #ffb800;
-    color: #003366;
-    border-color: #ffb800;
+    background-color: #ffd98a;
+    color: #0a1626;
+    border-color: #ffd98a;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
     transform: scale(1.02);
 }
@@ -275,7 +275,7 @@ body {
 .controls button {
     flex: 1 1 auto;
     max-width: 150px;
-    background-color: #005f99;
+    background-color: #1a3556;
     color: #fff;
     border: 1px solid #fff;
     border-radius: 5px;
@@ -286,7 +286,7 @@ body {
 }
 
 .controls button:hover {
-    background-color: #004c80;
+    background-color: #234a75;
     transform: translateY(-2px);
 }
 
@@ -301,8 +301,8 @@ body {
 #admin-link {
     display: inline-block;
     padding: 0.75rem 1.5rem;
-    background-color: #ffcc00;
-    color: #003366;
+    background-color: #f4b942;
+    color: #0a1626;
     text-decoration: none;
     border-radius: 8px;
     font-weight: bold;
@@ -312,7 +312,7 @@ body {
 }
 
 #admin-link:hover {
-    background-color: #ffb800;
+    background-color: #ffd98a;
     transform: translateY(-2px);
 }
 
@@ -331,9 +331,9 @@ body {
 }
 
 .modal-content {
-    background-color: #003366;
+    background-color: #0a1626;
     padding: 1.5rem;
-    border: 2px solid #ffcc00;
+    border: 2px solid #f4b942;
     width: 90%;
     max-width: 450px;
     border-radius: 15px;
@@ -350,14 +350,14 @@ body {
 }
 
 .modal-content p {
-    color: #ffcc00;
+    color: #f4b942;
     font-size: 1.2rem;
     margin-bottom: 1rem;
 }
 
 .modal-content button {
-    background-color: #ffcc00;
-    color: #003366;
+    background-color: #f4b942;
+    color: #0a1626;
     border: none;
     padding: 0.75rem 1.5rem;
     margin-top: 1rem;
@@ -368,7 +368,7 @@ body {
 }
 
 .modal-content button:hover {
-    background-color: #ffb800;
+    background-color: #ffd98a;
     transform: translateY(-2px);
 }
 
@@ -394,7 +394,7 @@ body {
 
 /* === Nuevos estilos para la pantalla de progresión === */
 #progression-screen {
-    background-color: rgba(0, 51, 102, 0.95);
+    background-color: rgba(10, 22, 38, 0.95);
     padding: 2rem;
     border-radius: 20px;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
@@ -407,7 +407,7 @@ body {
 
 #progression-screen h2 {
     font-size: clamp(1.8rem, 5vw, 2.5rem);
-    color: #ffcc00;
+    color: #f4b942;
     margin-bottom: 1rem;
 }
 
@@ -423,8 +423,8 @@ body {
 }
 
 .progression-step {
-    background-color: #004d99;
-    border: 2px solid #003366;
+    background-color: #12263f;
+    border: 2px solid #0a1626;
     border-radius: 10px;
     padding: 0.75rem;
     text-align: left;
@@ -435,8 +435,8 @@ body {
 }
 
 .progression-step.completed {
-    background-color: #ffcc00;
-    color: #003366;
+    background-color: #f4b942;
+    color: #0a1626;
     font-weight: bold;
     transform: scale(1.05);
 }
@@ -456,13 +456,13 @@ body {
     50% {
         transform: scale(1.15); /* Crece más para un efecto "pop" */
         background-color: #fff3a3; /* Un flash más brillante */
-        color: #003366;
-        box-shadow: 0 8px 25px rgba(255, 204, 0, 0.6);
+        color: #0a1626;
+        box-shadow: 0 8px 25px rgba(244, 185, 66, 0.6);
     }
     100% {
         transform: scale(1.05); /* Se asienta en el estado final de "completado" */
-        background-color: #ffcc00;
-        color: #003366;
+        background-color: #f4b942;
+        color: #0a1626;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
     }
 }
@@ -501,7 +501,7 @@ body {
 }
 
 .progression-step.completed p {
-    color: #003366;
+    color: #0a1626;
 }
 
 #continue-btn {
@@ -536,7 +536,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 51, 102, 0.95);
+    background: rgba(10, 22, 38, 0.95);
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -545,7 +545,7 @@ body {
 
 #end-screen h2 {
     font-size: clamp(1.8rem, 5vw, 2.5rem);
-    color: #ffcc00;
+    color: #f4b942;
     text-shadow: 1px 1px 2px #000;
     margin-bottom: 1.5rem;
 }
@@ -584,7 +584,7 @@ body {
 #player-alias {
     padding: 0.8rem;
     border-radius: 8px;
-    border: 2px solid #ffcc00;
+    border: 2px solid #f4b942;
     background: rgba(255, 255, 255, 0.1);
     color: white;
     font-size: 1rem;
@@ -593,8 +593,8 @@ body {
 }
 
 #save-score-btn {
-    background-color: #ffcc00;
-    color: #003366;
+    background-color: #f4b942;
+    color: #0a1626;
 }
 
 .rank-item {
@@ -605,12 +605,12 @@ body {
     margin: 0.5rem 0;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 8px;
-    border-left: 4px solid #ffcc00;
+    border-left: 4px solid #f4b942;
 }
 
 .rank-position {
     font-weight: bold;
-    color: #ffcc00;
+    color: #f4b942;
     min-width: 40px;
 }
 
@@ -644,7 +644,7 @@ body {
 #player-alias {
     padding: 0.8rem;
     border-radius: 8px;
-    border: 2px solid #ffcc00;
+    border: 2px solid #f4b942;
     background: rgba(255, 255, 255, 0.1);
     color: white;
     font-size: 1rem;
@@ -657,8 +657,8 @@ body {
 }
 
 #save-score-btn {
-    background-color: #ffcc00;
-    color: #003366;
+    background-color: #f4b942;
+    color: #0a1626;
     padding: 0.75rem 1.5rem;
 }
 
@@ -669,7 +669,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 51, 102, 0.95);
+    background: rgba(10, 22, 38, 0.95);
     display: none;
     justify-content: center;
     align-items: center;
@@ -685,7 +685,7 @@ body {
     margin: 0.5rem 0;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 8px;
-    border-left: 4px solid #ffcc00;
+    border-left: 4px solid #f4b942;
     width: 400px;
     max-width: 90%;
 }
@@ -698,12 +698,12 @@ body {
     margin: 0.5rem 0;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 8px;
-    border-left: 4px solid #ffcc00;
+    border-left: 4px solid #f4b942;
     gap: 0.5rem;
 }
 
 .rank-perfectas {
-    color: #ffcc00;
+    color: #f4b942;
     font-weight: bold;
     text-align: center;
 }
@@ -718,7 +718,7 @@ body {
 /* Para partidas perfectas */
 .rank-item.perfect {
     background: linear-gradient(135deg, #ffd700 0%, #ffb700 100%) !important;
-    color: #003366;
+    color: #0a1626;
     border-left: 4px solid #ff6b6b;
 }
 
@@ -803,3 +803,10 @@ body {
 }
 
 /* --- TERMINA CÓDIGO DE PROGRESIÓN ADAPTABLE --- */
+/* Tema Notica */
+#start-screen { background: #0a1626; }
+.start-container { background: #12263f; border: 1px solid rgba(255, 255, 255, 0.1); }
+.start-container h1 { color: #f4b942; }
+.start-btn { color: #0a1626; }
+.start-btn:hover { background: #f4b942; }
+.rank-item.perfect { color: #0a1626; }
