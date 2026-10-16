@@ -278,6 +278,7 @@ async function publicarNoticia(id, n) {
   copia.estado = 'publicado';
   copia.publicado = Date.now();
   copia.publicadoPor = usuarioNoticias.uid;
+  delete copia.autorCorreo;
   try {
     await set(ref(database, 'noticias_publicas/' + id), copia);
     await remove(ref(database, 'noticias_pendientes/' + id));
