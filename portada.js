@@ -8,7 +8,7 @@
   var PAGINAS = [
     ['Rosario', './rosario/index.html'],
     ['Rosario de Exequias', './rosario_difuntos/index.html'],
-    ['Rosario de Aurora', './Rosario de aurora luciente por su natividad/index.html'],
+    ['Rosario de Aurora', './rosario_aurora/index.html'],
     ['Coronilla de la Misericordia', './coronilla/index.html'],
     ['5 minutos con María', './cinco-minutos-maria/index.html'],
     ['Biblia', './biblia/index.html'],
