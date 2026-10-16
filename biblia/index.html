@@ -1,27 +1,28 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lectura de la Biblia</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Enlace al archivo CSS -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lectura de la Biblia - Notica</title>
+<link rel="icon" type="image/png" sizes="192x192" href="../icons/android-chrome-192x192.png">
+<link rel="stylesheet" href="../portada.css">
+<style>
+body.pn { display: flex; flex-direction: column; height: 100%; min-height: 100dvh; }
+html { height: 100%; }
+body.pn .bb-volver { color: #7fb4ee; font-size: 14px; }
+.bb-main { flex: 1; min-height: 0; display: flex; padding: 0 12px 8px; }
+.bb-main iframe { width: 100%; height: 100%; border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; background: #fff; }
+.bb-pie { text-align: center; color: #9fb3c8; font-size: 12px; padding: 6px 16px calc(10px + env(safe-area-inset-bottom)); margin: 0; }
+</style>
 <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "a7d50e2cf06445848a47c594610014ed"}'></script></head>
-<body>
-    <header>
-        <h1>Lectura de la Biblia</h1>
-    </header>
-
-    <main>
-        <iframe 
-            src="https://cem.org.mx/biblia/" 
-            title="Biblia en línea de CEM">
-        </iframe>
-    </main>
-
-    <footer>
-        <p>biblia de la Conferencia del Episcopado Mexicano - CEM</p>
-    </footer>
-
-    <script src="script.js"></script> <!-- Enlace al archivo JS -->
+<body class="pn">
+<header class="pn-top">
+<a href="../" class="logo"><img src="../icons/logo-nav-oscuro.png" alt="Notica"></a>
+<a class="bb-volver" href="../">&larr; Inicio</a>
+</header>
+<main class="bb-main">
+<iframe src="https://cem.org.mx/biblia/" title="Biblia en línea de la CEM"></iframe>
+</main>
+<p class="bb-pie">Biblia de la Conferencia del Episcopado Mexicano (CEM)</p>
 </body>
 </html>
