@@ -1,0 +1,769 @@
+{
+ "03": {
+  "titulo": "San Gregorio Magno, papa y doctor de la Iglesia",
+  "rango": "M",
+  "semblanza": "Nació en Roma hacia el año 540. Desempeñó primero diversos cargos públicos, y llegó luego a ser prefecto de la Urbe. Más tarde, se dedicó a la vida monástica, fue ordenado diácono y nombrado legado pontificio en Constantinopla. El día 3 de septiembre del año 590 fue elegido papa, cargo que ejerció como verdadero pastor, en su modo de gobernar, en su ayuda a los pobres, en la propagación y consolidación de la fe. Tiene escritas muchas obras sobre teología moral y dogmática. Murió el día 12 de marzo del año 604.",
+  "comun": "Del Común de pastores o del Común de doctores de la Iglesia.",
+  "horas": {
+   "oficio": [
+    {
+     "tipo": "lectura2",
+     "texto": "De las homilías de san Gregorio Magno, papa, sobre el libro del profeta Ezequiel\n(Libro 1,11, 4-6: CCL 142,170-172)\n\nPOR AMOR A CRISTO, CUANDO HABLO DE ÉL, NI A MÍ MISMO ME PERDONO\n\nHijo de Adán, te he puesto de atalaya en la casa de Israel. Fijémonos cómo el Señor\ncompara sus predicadores a un atalaya. El atalaya está siempre en un lugar alto para ver\ndesde lejos todo lo que se acerca. Y todo aquel que es puesto como atalaya del pueblo de\nDios debe, por su conducta, estar siempre en alto, a fin de preverlo todo y ayudar así a los\nque tiene bajo su custodia.\n\nEstas palabras que os dirijo resultan muy duras para mí, ya que con ellas me ataco a mí\nmismo, puesto que ni mis palabras ni mi conducta están a la altura de mi misión.\n\nMe confieso culpable, reconozco mi tibieza y mi negligencia. Quizá esta confesión de mi\nculpabilidad me alcance el perdón del Juez piadoso. Porque, cuando estaba en el\nmonasterio, podía guardar mi lengua de conversaciones ociosas y estar dedicado casi\ncontinuamente a la oración. Pero, desde que he cargado sobre mis hombros la\nresponsabilidad pastoral, me es imposible guardar el recogimiento que yo querría,\nsolicitado como estoy por tantos asuntos.\n\nMe veo, en efecto, obligado a dirimir las causas, ora de las diversas Iglesias, ora de los\nmonasterios, y a juzgar con frecuencia de la vida y actuación de los individuos en\nparticular; otras veces tengo que ocuparme de asuntos de orden civil, otras, de\nlamentarme de los estragos causados por las tropas de los bárbaros y de temer por causa\nde los lobos que acechan al rebaño que me ha sido confiado. Otras veces debo\npreocuparme de que no falte la ayuda necesaria a los que viven sometidos a una disciplina\nregular, a veces tengo que soportar con paciencia a algunos que usan de la violencia,\notras, en atención a la misma caridad que les debo, he de salirles al encuentro.\n\nEstando mi espíritu disperso y desgarrado con tan diversas preocupaciones, ¿cómo voy\na poder reconcentrarme para dedicarme por entero a la predicación y al ministerio de la\npalabra? Además, muchas veces, obligado por las circunstancias, tengo que tratar con las\npersonas del mundo, lo que hace que alguna vez se relaje la disciplina impuesta a mi\nlengua. Porque, si mantengo en esta materia una disciplina rigurosa, sé que ello me\naparta de los más débiles, y así nunca podré atraerlos adonde yo quiero. Y esto hace que,\ncon frecuencia, escuche pacientemente sus palabras, aunque sean ociosas. Pero, como yo\ntambién soy débil, poco a poco me voy sintiendo atraído por aquellas palabras ociosas, y\nempiezo a hablar con gusto de aquello que había empezado a escuchar con paciencia, y\nresulta que me encuentro a gusto postrado allí mismo donde antes sentía repugnancia de\ncaer.\n\n¿Qué soy yo, por tanto, o qué clase de atalaya soy, que no estoy situado, por mis obras,\nen lo alto de la montaña, sino que estoy postrado aún en la llanura de mi debilidad? Pero\nel Creador y Redentor del género humano es bastante poderoso para darme a mí, indigno,\nla necesaria altura de vida y eficacia de palabra, ya que por su amor, cuando hablo de él,\nni a mí mismo me perdono."
+    },
+    {
+     "tipo": "responsorio",
+     "texto": "R. Sacando de la fuente de la sagrada Escritura enseñanzas morales y místicas, hizo llegar\nhasta el pueblo las corrientes del Evangelio; * Y, después de muerto aún sigue enseñando.\nV. Como un águila que recorre el mundo, cuida de  mayores y pequeños con magnánima\ncaridad.\nR. Y, después de muerto aún sigue enseñando."
+    }
+   ],
+   "laudes": [
+    {
+     "tipo": "cantico_evangelico",
+     "texto": "Ant. Gregorio, pastor eximio, nos dejó un  modelo y una regla de vida pastoral."
+    }
+   ],
+   "visperas2": [
+    {
+     "tipo": "cantico_evangelico",
+     "texto": "Ant. San Gregorio traducía en obras lo que enseñaba en sus sermones; por eso, fue un\nejemplo vivo de doctrina espiritual."
+    }
+   ]
+  },
+  "oracion": "Oh Dios, que cuidas a tu pueblo con misericordia y lo gobiernas con amor, concede el\ndon de sabiduría, por intercesión del papa san Gregorio Magno, a quienes confiaste la\nmisión del gobierno en tu Iglesia, para que el progreso de los fieles sea el gozo eterno de\nsus pastores. Por nuestro Señor Jesucristo."
+ },
+ "08": {
+  "titulo": "La Natividad de la Virgen María",
+  "rango": "F",
+  "semblanza": "",
+  "comun": "",
+  "horas": {
+   "invitatorio": [
+    {
+     "tipo": "inicio",
+     "texto": "Ant. Celebremos el nacimiento de la Virgen María; adoremos a su Hijo Jesucristo, el Señor.\nEl salmo del Invitatorio como en el Ordinario: Salmo 94; Salmo 99; Salmo 66; Salmo 23"
+    }
+   ],
+   "oficio": [
+    {
+     "tipo": "himno",
+     "texto": "Niña de Dios, por nuestro bien nacida;\ntierna, pero, tan fuerte, que la frente,\nen soberbia maldad endurecida,\nquebrantasteis de la infernal serpiente;\nbrinco de Dios, de nuestra muerte vida,\npues vos fuisteis el medio conveniente\nque redujo a pacífica concordia\nde Dios y el hombre la mortal discordia.\n\nCreced, hermosa planta, y dad el fruto\npresto en sazón, por quien el alma espera\ncambiar en ropa rozagante el luto\nque la gran culpa le vistió primera.\nDe aquel inmenso y general tributo,\nla paga conveniente y verdadera\nen vos se ha de fraguar: creced, Señora,\nque sois universal remediadora.\n\nGloria al Padre, y al Hijo, y al Espíritu,\npor los siglos de los siglos. Amén."
+    },
+    {
+     "tipo": "salmodia",
+     "texto": "Ant. 1. María ha recibido la bendición del Señor y la misericordia de Dios, su salvador.\nCuando el salmo 23 se ha dicho en el Invitatorio, aquí se dice el salmo 94.\n\nSalmo 23\n\nDel Señor es la tierra y cuanto la llena,\nel orbe y todos sus habitantes:\nél la fundó sobre los mares,\nél la afianzó sobre los ríos.\n\n- ¿Quién puede subir al monte del Señor?\n\n¿Quién puede estar en el recinto sacro?\n\n- El hombre de manos inocentes\n\ny puro corazón,\nque no confía en los ídolos\nni jura contra el prójimo en falso.\nÉse recibirá la bendición del Señor,\nle hará justicia el Dios de salvación.\n\n- Éste es el grupo que busca al Señor,\n\nque viene a tu presencia, Dios de Jacob.\n\n¡Portones!, alzad los dinteles,\n\nque se alcen las antiguas compuertas:\nva a entrar el Rey de la gloria.\n\n- ¿Quién es ese Rey de la gloria?\n- El Señor, héroe valeroso;\nel Señor, héroe de la guerra.\n\n¡Portones!, alzad los dinteles,\n\nque se alcen las antiguas compuertas:\nva a entrar el Rey de la gloria.\n\n- ¿Quién es ese Rey de la gloria?\n\n- El Señor, Dios de los ejércitos.\nÉl es el Rey de la gloria.\n\nAnt. María ha recibido la bendición del Señor y la misericordia de Dios, su salvador.\nAnt. 2. El Altísimo consagra su morada.\n\nSalmo 45\n\nDios es nuestro refugio y nuestra fuerza,\npoderoso defensor en el peligro.\n\nPor eso no tememos aunque tiemble la tierra,\ny los montes se desplomen en el mar.\n\nQue hiervan y bramen sus olas,\nque sacudan a los montes con su furia:\n\nel Señor de los ejércitos está con nosotros,\nnuestro alcázar es el Dios de Jacob.\n\nEl correr de las acequias alegra la ciudad de Dios,\nel Altísimo consagra su morada.\n\nTeniendo a Dios en medio, no vacila;\nDios lo socorre al despuntar la aurora.\n\nLos pueblos se amotinan, los reyes se rebelan;\npero él lanza su trueno, y se tambalea la tierra.\n\nEl Señor de los ejércitos está con nosotros,\nnuestro alcázar es el Dios de Jacob.\n\nVenid a ver las obras del Señor,\nlas maravillas que hace en la tierra:\n\nPone fin a la guerra hasta el extremo del orbe,\nrompe los arcos, quiebra las lanzas,\nprende fuego a los escudos.\n\n\"Rendíos, reconoced que yo soy Dios:\nmás alto que los pueblos,\nmás alto que la tierra\".\n\nEl Señor de los ejércitos está con nosotros,\nnuestro alcázar es el Dios de Jacob.\n\nAnt. El Altísimo consagra su morada.\nAnt. 3. ¡Qué pregón tan glorioso para ti, Virgen María!\n\nSalmo 86\n\nÉl la ha cimentado sobre el monte santo;\ny el Señor prefiere las puertas de Sión\na todas las moradas de Jacob.\n\n¡Qué pregón tan glorioso para ti,\nciudad de Dios!\n\"Contaré a Egipto y a Babilonia\nentre mis fieles;\nfilisteos, tirios y etíopes\nhan nacido allí\".\n\nSe dirá de Sión: \"uno por uno\ntodos han nacido en ella;\nel Altísimo en persona la ha fundado\".\n\nEl Señor escribirá en el registro de los pueblos:\n\"Éste ha nacido allí\".\nY cantarán mientras danzan:\n\"Todas mis fuerzas están en ti\"\n\nAnt. ¡Qué pregón tan glorioso para ti, Virgen María!\nV. María conservaba todas estas cosas.\nR. Meditándolas en su corazón."
+    },
+    {
+     "tipo": "lectura1",
+     "texto": "Del libro del Génesis\n\nSENTENCIA CONTRA EL PECADO Y PROMESA DE SALVACIÓN\n\nEn aquellos días, el Señor llamó al hombre:\n«¿Dónde estás?»\nÉl contestó:\n«Oí tu ruido en el jardín, me dio miedo, porque estaba desnudo, y me escondí.»\nEl Señor le replicó:\n«¿Quién te informó de que estabas desnudo? ¿Es que has comido del árbol del que te\n\nprohibí comer?»\nAdán respondió:\n«La mujer que me diste como compañera me ofreció del fruto, y comí. »\nEl Señor dijo a la mujer:\n«¿Qué es lo que has hecho?»\nElla respondió:\n«La serpiente me engañó, y comí.»\nEl Señor Dios dijo a la serpiente:\n«Por haber hecho eso, serás maldita entre todo el ganado y todas las fieras del campo;\n\nte arrastrarás sobre el vientre y comerás polvo toda tu vida; establezco hostilidades entre\nti y la mujer, entre tu estirpe y la suya; ella te herirá en la cabeza cuando tú la hieras en el\ntalón.\n\nA la mujer le dijo:\n«Mucho te haré sufrir en tu preñez, parirás hijos con dolor, tendrás ansia de tu marido,\n\ny él te dominará.\nAl hombre le dijo:\n«Porque le hiciste caso a tu mujer y comiste del árbol del que te prohibí comer, maldito\n\nel suelo por tu culpa; comerás de él con fatiga mientras vivas; brotará para ti cardos y\nespinas, y comerás hierba del campo. Con sudor de tu frente comerás el pan, hasta que\nvuelvas a la tierra, porque de ella te sacaron; pues eres polvo y al polvo volverás.»\n\nEl hombre llamó a su mujer Eva, por ser la madre de todos los que viven."
+    },
+    {
+     "tipo": "responsorio",
+     "texto": "R. Hoy ha nacido la Virgen María del linaje de David. * Por ella vino la salvación del mundo\na los creyentes, y por su vida gloriosa todo el orbe quedó iluminado.\nV. Celebremos con devoción el nacimiento de la bienaventurada Virgen María.\nR. Por ella vino la salvación del mundo a los creyentes, y por su vida gloriosa todo el orbe\nquedó iluminado."
+    },
+    {
+     "tipo": "lectura2",
+     "texto": "De los sermones de san Andrés de Creta, obispo\n\n(Sermón 1: PG 97, 806-810)\n\nLO ANTIGUO HA PASADO, LO NUEVO HA COMENZADO\n\nCristo es el fin de la ley: él nos hace pasar de la esclavitud de esta ley a la libertad del\nespíritu. La ley tendía hacia él como a su complemento; y él, como supremo legislador, da\ncumplimiento a su misión, transformando en espíritu la letra de la ley. De este modo, hacía\nque todas las cosas lo tuviesen a él por cabeza. La gracia es la que da vida a la ley y, por\nesto, es superior a la misma, y de la unión de ambas resulta un conjunto armonioso,\nconjunto que no hemos de considerar como una mezcla, en la cual alguno de los dos\nelementos citados pierda sus características propias, sino como una transmutación divina,\nsegún la cual todo lo que había de esclavitud en la ley se cambia en suavidad y libertad,\nde modo que, como dice el Apóstol, no vivamos ya esclavizados por lo elemental del\nmundo, ni sujetos al yugo y a la esclavitud de la ley.\n\nÉste es el compendio de todos los beneficios que Cristo nos ha hecho; ésta es la\nrevelación del designio amoroso de Dios: su anonadamiento, su encarnación y la\nconsiguiente divinización del hombre. Convenía, pues, que esta fulgurante y sorprendente\nvenida de Dios a los hombres fuera precedida de algún hecho que nos preparara a recibir\ncon gozo el gran don de la salvación. Y éste es el significado de la fiesta que hoy\ncelebramos, ya que el nacimiento de la Madre de Dios es el exordio de todo este cúmulo\nde bienes, exordio que hallará su término y complemento en la unión del Verbo con la\ncarne que le estaba destinada. El día de hoy nació la Virgen; es luego amamantada y se\nva desarrollando; y es preparada para ser la Madre de Dios, rey de todos los siglos.\n\nUn doble beneficio nos aporta este hecho: nos conduce a la verdad y nos libera de una\nmanera de vivir sujeta a la esclavitud de la letra de la ley. ¿De qué modo tiene lugar esto?\nPor el hecho de que la sombra se retira ante la llegada de la luz, y la gracia sustituye a la\nletra de la ley por la libertad del espíritu. Precisamente la solemnidad de hoy representa el\ntránsito de un régimen al otro en cuanto que convierte en realidad lo que no era más que\nsímbolo y figura, sustituyendo lo antiguo por lo nuevo.\n\nQue toda la creación, pues, rebose de contento y contribuya a su modo a la alegría\npropia de este día. Cielo y tierra se unen en esta celebración, y que la festeje con gozo\ntodo lo que hay en el mundo y por enésima del mundo. Hoy, en efecto, ha sido construido\nel santuario creado del Creador de todas las cosas, y la creación, de un modo nuevo y\nmás digno, queda dispuesta para hospedar en sí al supremo Hacedor."
+    },
+    {
+     "tipo": "responsorio",
+     "texto": "R. Celebremos con devoción, en este día del natalicio de María, Virgen perpetua y Madre\nde Dios, * cuya vida ilustre da esplendor a todas las Iglesias.\nV. Con todo el corazón y toda el alma, cantemos la gloria de Cristo en esta sagrada fiesta\nde María, la excelsa Madre de Dios.\nR. Cuya vida ilustre da esplendor a todas las Iglesias."
+    },
+    {
+     "tipo": "te_deum"
+    },
+    {
+     "tipo": "oracion",
+     "texto": "Concede, Señor, a tus hijos el don de tu gracia, para que cuantos hemos recibido las\nprimicias de la salvación por la maternidad de la Virgen María consigamos aumento de paz\nen la fiesta de su Nacimiento. Por nuestro Señor Jesucristo."
+    }
+   ],
+   "laudes": [
+    {
+     "tipo": "himno",
+     "texto": "Hoy nace una clara estrella,\ntan divina y celestial,\nque, con ser estrella, es tal,\nque el mismo Sol nace de ella.\n\nDe Ana y de Joaquín, oriente\nde aquella estrella divina,\nsale su luz clara y digna\nde ser pura eternamente:\nel alba más clara y bella\nno le puede ser igual,\nque, con ser estrella, es tal,\nque el mismo Sol nace de ella.\n\nNo le iguala lumbre alguna\nde cuantas bordan el cielo,\nporque es el humilde suelo\nde sus pies la blanca luna:\nnace en el suelo tan bella\ny con luz tan celestial,\nque, con ser estrella, es tal,\nque el mismo Sol nace de ella.\n\nGloria al Padre, y gloria al Hijo,\ngloria al Espíritu Santo,\npor los siglos de los siglos. Amén."
+    },
+    {
+     "tipo": "salmodia",
+     "texto": "Ant. 1. Hoy es el nacimiento de la gloriosa Virgen María, descendiente de Abrahán, de la\ntribu de Judá y de la noble estirpe de David.\n\nSalmo 62, 2-9\n\nEL ALMA SEDIENTA DE DIOS\n\nMadruga por Dios todo el que rechaza las obras de las tinieblas.\n¡Oh Dios!, tú eres mi Dios, por ti madrugo,\n\nmi alma está sedienta de ti;\nmi carne tiene ansia de ti,\ncomo tierra reseca, agostada, sin agua.\n\n¡Cómo te contemplaba en el santuario\nviendo tu fuerza y tu gloria!\nTu gracia vale más que la vida,\nte alabarán mis labios.\n\nToda mi vida te bendeciré\ny alzaré las manos invocándote.\nMe saciaré de manjares exquisitos,\ny mis labios te alabarán jubilosos.\n\nEn el lecho me acuerdo de ti\ny velando medito en ti,\nporque fuiste mi auxilio,\ny a la sombra de tus alas canto con júbilo;\nmi alma está unida a ti,\ny tu diestra me sostiene.\n\nAnt. Hoy es el nacimiento de la gloriosa Virgen María, descendiente de Abrahán, de la\ntribu de Judá y de la noble estirpe de David.\nAnt. 2. Cuando nació la santísima Virgen, el mundo se iluminó; ¡dichosa estirpe, raíz\nsanta, bendito su fruto!\n\nCántico Dn 3, 57-88. 56\n\nTODA LA CREACIÓN ALABE AL SEÑOR\n\nAlabad al Señor, sus siervos todos (Ap 19, 5).\n\nCriaturas todas del Señor, bendecid al Señor,\nensalzadlo con himnos por los siglos.\n\nÁngeles del Señor, bendecid al Señor;\ncielos, bendecid al Señor.\n\nAguas del espacio, bendecid al Señor;\nejércitos del Señor, bendecid al Señor.\n\nSol y luna, bendecid al Señor;\nastros del cielo, bendecid al Señor.\n\nLluvia y rocío, bendecid al Señor;\nvientos todos, bendecid al Señor.\n\nFuego y calor, bendecid al Señor;\nfríos y heladas, bendecid al Señor.\n\nRocíos y nevadas, bendecid al Señor;\ntémpanos y hielos, bendecid al Señor.\n\nEscarchas y nieves, bendecid al Señor;\nnoche y día, bendecid al Señor.\n\nLuz y tinieblas, bendecid al Señor;\nrayos y nubes, bendecid al Señor.\n\nBendiga la tierra al Señor,\nensálcelo con himnos por los siglos.\n\nMontes y cumbres, bendecid al Señor;\ncuanto germina en la tierra, bendiga al Señor.\n\nManantiales, bendecid al Señor;\nmares y ríos, bendecid al Señor.\n\nCetáceos y peces, bendecid al Señor;\naves del cielo, bendecid al Señor.\n\nFieras y ganados, bendecid al Señor,\nensalzadlo con himnos por los siglos.\n\nHijos de los hombres, bendecid al Señor;\nbendiga Israel al Señor.\n\nSacerdotes del Señor, bendecid al Señor;\nsiervos del Señor, bendecid al Señor.\n\nAlmas y espíritus justos, bendecid al Señor;\nsantos y humildes de corazón, bendecid al Señor.\n\nAnanías, Azarías y Misael, bendecid al Señor,\nensalzadlo con himnos por los siglos.\n\nBendigamos al Padre, al Hijo y al Espíritu Santo,\nensalcémoslo con himnos por los siglos.\n\nBendito el Señor en la bóveda del cielo,\nalabado y glorioso y ensalzado por los siglos.\n\nNo se dice Gloria al Padre.\nAnt. Cuando nació la santísima Virgen, el mundo se iluminó; ¡dichosa estirpe, raíz\nsanta, bendito su fruto!\nAnt. 3. Celebremos con gozo el nacimiento de María, para que interceda por nosotros ante\nnuestro Señor Jesucristo.\n\nSalmo 149\n\nALEGRÍA DE LOS SANTOS\n\nLos hijos de la Iglesia, nuevo pueblo de Dios, se alegran en su Rey, Cristo, el Señor\n(Hesiquio).\n\nCantad al Señor un cántico nuevo,\nresuene su alabanza en la asamblea de los fieles;\nque se alegre Israel por su Creador,\nlos hijos de Sión por su Rey.\n\nAlabad su nombre con danzas,\ncantadle con tambores y cítaras;\nporque el Señor ama a su pueblo\ny adorna con la victoria a los humildes.\n\nQue los fieles festejen su gloria\ny canten jubilosos en filas:\ncon vítores a Dios en la boca\ny espadas de dos filos en las manos:\n\npara tomar venganza de los pueblos\ny aplicar el castigo a las naciones,\nsujetando a los reyes con argollas,\na los nobles con esposas de hierro.\n\nEjecutar la sentencia dictada\nes un honor para todos sus fieles.\n\nAnt. Celebremos con gozo el nacimiento de María, para que interceda por nosotros ante\nnuestro Señor Jesucristo."
+    },
+    {
+     "tipo": "lectura_breve",
+     "texto": "Brotará un renuevo del tronco de Jesé, y de su raíz florecerá un vástago. Sobre él se\nposará el espíritu del Señor: espíritu de prudencia y sabiduría, espíritu de consejo y\nvalentía, espíritu de ciencia y temor del Señor. Le inspirará el temor del Señor.",
+     "ref": "Is 11, 1-3a"
+    },
+    {
+     "tipo": "responsorio_breve",
+     "texto": "V. El Señor la eligió y la predestinó.\nR. El Señor la eligió y la predestinó.\nV. La hizo morar en su templo santo.\nR. Y la predestinó.\nV. Gloria al Padre.\nR. El Señor la eligió y la predestinó."
+    },
+    {
+     "tipo": "cantico_evangelico",
+     "texto": "Ant. Tu nacimiento, Virgen Madre de Dios, anunció la alegría a todo el mundo. De ti nació\nel sol de la justicia, Cristo, nuestro Dios, que, borrando la maldición, nos trajo la\nbendición, y, triunfando de la muerte, nos dio la vida eterna."
+    },
+    {
+     "tipo": "preces",
+     "texto": "Elevemos nuestras súplicas al Salvador, que quiso nacer de María Virgen, y digámosle:\nQue tu santa Madre, Señor, interceda por nosotros.\n\nSol de justicia, a quien María Virgen precedía cual aurora luciente,\n— haz que vivamos siempre iluminados por la claridad de tu presencia.\n\nPalabra eterna del Padre, tú que elegiste a María como arca de tu morada,\n— líbranos de toda ocasión de pecado.\n\nSalvador del mundo, que quisiste que tu Madre estuviera junto a tu cruz,\n— por su intercesión concédenos compartir con alegría tus padecimientos.\n\nSeñor Jesús, que colgado en la cruz entregaste María a Juan como madre,\n— haz que nosotros vivamos también como hijos suyos.\nSe pueden añadir algunas intenciones libres.\nSegún el mandato del Señor, digamos confiadamente: Padre nuestro.\n\nO bien:\nElevemos nuestras súplicas al Salvador, que quiso nacer de María Virgen, y digámosle:\nQue tu santa Madre, Señor, interceda por nosotros.\n\nSalvador del mundo, tú que con la eficacia de tu redención preservaste a tu Madre de toda\nmancha de pecado,\n— líbranos también a nosotros de toda culpa.\n\nRedentor nuestro, tú que hiciste de la inmaculada Virgen María tabernáculo purísimo de tu\npresencia y sagrario del Espíritu Santo,\n— haz también de nosotros templos de tu Espíritu.\n\nPalabra eterna del Padre, que enseñaste a María a escoger la parte mejor,\n— ayúdanos a imitarla y a buscar el alimento que perdura hasta la vida eterna.\n\nRey de reyes, que elevaste contigo a tu Madre en cuerpo y alma al cielo,\n— haz que aspiremos siempre a los bienes celestiales.\n\nSeñor del cielo y de la tierra, que has colocado a tu derecha a María reina,\n— danos el gozo de tener parte en su gloria.\nSe pueden añadir algunas intenciones libres.\nSegún el mandato del Señor, digamos confiadamente: Padre nuestro."
+    },
+    {
+     "tipo": "oracion",
+     "texto": "Concede, Señor, a tus hijos el don de tu gracia, para que cuantos hemos recibido las\nprimicias de la salvación por la maternidad de la Virgen María consigamos aumento de paz\nen la fiesta de su Nacimiento. Por nuestro Señor Jesucristo."
+    }
+   ],
+   "intermedia": {
+    "comun": [],
+    "tercia": [
+     {
+      "tipo": "lectura_breve",
+      "texto": "¿Quién es esa que se asoma como el alba, hermosa como la luna y límpida como el sol,\nterrible como escuadrón a banderas desplegadas?\nV. Dichosos los que escuchan la palabra de Dios.\nR. Y la cumplen.",
+      "ref": "Ct 6, 10"
+     }
+    ],
+    "sexta": [
+     {
+      "tipo": "lectura_breve",
+      "texto": "Bendito el Señor, creador de cielo y tierra, que hoy ha glorificado tu nombre de tal modo,\nque tu alabanza estará siempre en la boca de todos los que se acuerden de esta obra\npoderosa de Dios.\nV. Dichoso el vientre de María, la Virgen.\nR. Que llevó al Hijo del eterno Padre.",
+      "ref": "Jdt 13,24. 25"
+     }
+    ],
+    "nona": [
+     {
+      "tipo": "lectura_breve",
+      "texto": "Ésta es la morada de Dios con los hombres: acampará entre ellos. Ellos serán su pueblo, y\nDios estará con ellos.\nV. Bendita tú entre las mujeres.\nR. Y bendito el fruto de tu vientre.",
+      "ref": "Ap 21, 3"
+     },
+     {
+      "tipo": "oracion_laudes"
+     }
+    ]
+   },
+   "visperas2": [
+    {
+     "tipo": "himno",
+     "texto": "Canten hoy, pues nacéis vos,\nlos ángeles, gran Señora,\ny ensáyense, desde ahora,\npara cuando nazca Dios.\n\nCanten hoy, pues a ver vienen\nnacida su Reina bella,\nque el fruto que esperan de ella\nes por quien la gracia tienen.\nDigan, Señora, de vos,\nque habéis de ser su Señora,\ny ensáyense, desde ahora,\npara cuando nazca Dios.\n\nPues de aquí a catorce años,\nque en buena hora cumpláis,\nverán el bien que nos dais,\nremedio de tantos daños.\nCanten y digan, por vos,\nque desde hoy tienen Señora,\ny ensáyense, desde ahora,\npara cuando venga Dios.\n\nY nosotros, que esperamos\nque llegue pronto Belén,\nprepararemos también\nel corazón y las manos.\nVete sembrando, Señora,\nde paz nuestro corazón,\ny ensayemos, desde ahora,\npara cuando nazca Dios. Amén."
+    },
+    {
+     "tipo": "salmodia",
+     "texto": "Ant. 1. Del tronco de Jesé ha brotado la Virgen María, en cuyo tálamo ha entrado el\nEspíritu del Altísimo.\n\nSalmo 121\n\n¡Qué alegría cuando me dijeron:\n\"Vamos a la casa del Señor\"!\nYa están pisando nuestros pies\ntus umbrales, Jerusalén.\n\nJerusalén está fundada\ncomo ciudad bien compacta.\nAllá suben las tribus,\nlas tribus del Señor,\n\nsegún la costumbre de Israel,\na celebrar el nombre del Señor;\nen ella están los tribunales de justicia,\nen el palacio de David.\n\nDesead la paz a Jerusalén:\n\"Vivan seguros los que te aman,\nhaya paz dentro de tus muros,\nseguridad en tus palacios\".\n\nPor mis hermanos y compañeros,\nvoy a decir: \"La paz contigo\".\nPor la casa del Señor, nuestro Dios,\nte deseo todo bien.\n\nAnt. Del tronco de Jesé ha brotado la Virgen María, en cuyo tálamo ha entrado el\nEspíritu del Altísimo.\nAnt. 2. Hoy es el nacimiento de santa María Virgen, en cuya belleza y humildad Dios se ha\ncomplacido.\n\nSalmo 126\n\nSi el Señor no construye la casa,\nen vano se cansan los albañiles;\nsi el Señor no guarda la ciudad,\nen vano vigilan los centinelas.\n\nEs inútil que madruguéis,\nque veléis hasta muy tarde,\nque comáis el pan de vuestros sudores:\n¡Dios lo da a sus amigos mientras duermen!\n\nLa herencia que da el Señor son los hijos;\nsu salario, el fruto del vientre:\nson saetas en manos de un guerrero\nlos hijos de la juventud.\n\nDichoso el hombre que llena\ncon ellas su aljaba:\nNo quedará derrotado cuando litigue\ncon su adversario en la plaza.\n\nAnt. Hoy es el nacimiento de santa María Virgen, en cuya belleza y humildad Dios se ha\ncomplacido.\nAnt. 3. Bendita y venerable eres tú, Virgen María, Madre de Dios, cuyo nacimiento\ncelebramos; intercede por nosotros ante el Señor.\n\nCántico Ef 1, 3-10\n\nBendito sea Dios,\nPadre de nuestro Señor Jesucristo,\nque nos ha bendecido en la persona de Cristo\ncon toda clase de bienes espirituales y celestiales.\n\nÉl nos eligió en la persona de Cristo,\nantes de crear el mundo,\npara que fuésemos santos\ne irreprochables ante Él por el amor.\n\nÉl nos ha destinado en la persona de Cristo,\npor pura iniciativa suya,\na ser sus hijos,\npara que la gloria de su gracia,\nque tan generosamente nos ha concedido\nen su querido Hijo,\nredunde en alabanza suya.\n\nPor este Hijo, por su sangre,\n\nhemos recibido la redención,\nel perdón de los pecados.\nEl tesoro de su gracia, sabiduría y prudencia\nha sido un derroche para con nosotros,\ndándonos a conocer el misterio de su voluntad.\n\nÉste es el plan\nque había proyectado realizar por Cristo\ncuando llegase el momento culminante:\nrecapitular en Cristo todas las cosas\ndel cielo y de la tierra.\n\nAnt. Bendita y venerable eres tú, Virgen María, Madre de Dios, cuyo nacimiento\ncelebramos; intercede por nosotros ante el Señor."
+    },
+    {
+     "tipo": "lectura_breve",
+     "texto": "Los descendientes de Israel fueron adoptados como hijos, tienen la presencia de Dios,\nla alianza, la ley, el culto y las promesas. Suyos son los patriarcas, de quienes, según la\ncarne, nació el Mesías, el que está por encima de todo: Dios bendito por los siglos. Amén.",
+     "ref": "Rm 9, 4-5"
+    },
+    {
+     "tipo": "responsorio_breve",
+     "texto": "V. Alégrate, María, llena de gracia, el Señor está contigo.\nR. Alégrate, María, llena de gracia, el Señor está contigo.\nV. Bendita tú entre las mujeres, y bendito el fruto de tu vientre.\nR. El Señor está contigo.\nV. Gloria al Padre, y al Hijo y al Espíritu Santo.\nR. Alégrate, María, llena de gracia, el Señor está contigo."
+    },
+    {
+     "tipo": "cantico_evangelico",
+     "texto": "Ant. Celebremos el nacimiento santo de la gloriosa Virgen María; el Señor miró su\nhumildad, y por el anuncio del ángel concibió al Redentor del mundo."
+    },
+    {
+     "tipo": "preces",
+     "texto": "Proclamemos las grandezas de Dios Padre todopoderoso, que quiso que todas las\ngeneraciones felicitaran a María, la madre de su Hijo, y supliquémosle diciendo:\nQue la llena de gracia interceda por nosotros.\nO bien:\nMira a la llena de gracia y escúchanos.\n\nSeñor, Dios nuestro, admirable siempre en tus obras, que has querido que la inmaculada\nVirgen María participara en cuerpo y alma de la gloria de Jesucristo,\n— haz que todos tus hijos deseen y caminen hacia esta misma gloria.\n\nTú que nos diste a María por madre, concede por su mediación salud a los enfermos,\nconsuelo a los tristes, perdón a los pecadores,\n— y a todos abundancia de salud y de paz.\n\nTú que hiciste de María la llena de gracia,\n— concede la abundancia de tu gracia a todos los hombres.\n\nHaz, Señor, que tu Iglesia tenga un solo corazón y una sola alma por el amor,\n— y que todos los fieles perseveren unánimes en la oración con María, la madre de Jesús.\nSe pueden añadir algunas intenciones libres,\nTú que coronaste a María como reina del cielo,\n— haz que los difuntos puedan alcanzar con todos los santos la felicidad de tu reino.\n\nConfiando en el Señor, que hizo obras grandes en María, pidamos al Padre que colme\ntambién de bienes al mundo hambriento: Padre nuestro.\n\nO bien:\nProclamemos las grandezas de Dios Padre todopoderoso, que quiso que todas las\ngeneraciones felicitaran a María, la madre de su Hijo, y supliquémosle diciendo:\nQue la llena de gracia interceda por nosotros.\nO bien:\nMira a la llena de gracia y escúchanos.\n\nTú que hiciste de María la madre de misericordia,\n— haz que los que viven en peligro o están tentados sientan su protección maternal.\n\nTú que encomendaste a María la misión de madre de familia en el hogar de Jesús y de\nJosé,\n— haz que por su intercesión todas las madres fomenten en sus hogares el amor y la\nsantidad.\n\nTú que fortaleciste a María cuando estaba al pie de la cruz y la llenaste de gozo en la\nresurrección de su Hijo,\n— levanta y robustece la esperanza de los decaídos.\n\nTú que hiciste que María meditara tus palabras en su corazón y fuera tu esclava fiel,\n— por su intercesión haz de nosotros siervos fieles y discípulos dóciles de tu Hijo.\nSe pueden añadir algunas intenciones libres.\nTú que coronaste a María como reina del cielo,\n— haz que los difuntos puedan alcanzar con todos los santos la felicidad de tu reino.\n\nSegún el mandato del Señor, digamos confiadamente: Padre nuestro."
+    },
+    {
+     "tipo": "oracion",
+     "texto": "Concede, Señor, a tus hijos el don de tu gracia, para que cuantos hemos recibido las\nprimicias de la salvación por la maternidad de la Virgen María consigamos aumento de paz\nen la fiesta de su nacimiento. Por nuestro Señor Jesucristo."
+    }
+   ]
+  }
+ },
+ "13": {
+  "titulo": "San Juan Crisóstomo, obispo y doctor de la Iglesia",
+  "rango": "M",
+  "semblanza": "Nació en Antioquía, hacia el año 349; después de recibir una excelente formación, comenzó por dedicarse a la vida ascética. Más tarde, fue ordenado sacerdote y ejerció, con gran provecho, el ministerio de la predicación. El año 397 fue elegido obispo de Constantinopla, cargo en el que se comportó como un pastor ejemplar, esforzándose por llevar a cabo una estricta reforma de las costumbres del clero y de los fieles. La oposición de la corte imperial y de los envidiosos lo llevó por dos veces al destierro. Acabado por tantas miserias, murió en Comuna, en el Ponto, el día 14 de septiembre del año 407. Contribuyó en gran manera, por su palabra y escritos, al enriquecimiento de la doctrina cristiana, mereciendo el apelativo de Crisóstomo, es decir, «Boca de oro».",
+  "comun": "Del Común de pastores o del Común de doctores de la Iglesia.",
+  "horas": {
+   "oficio": [
+    {
+     "tipo": "lectura2",
+     "texto": "De las homilías de san Juan Crisóstomo, obispo\n(Homilía antes de partir en exilio, 1-3: PG 52, 427*-430)\n\nPARA MÍ LA VIDA ES CRISTO, Y UNA GANANCIA EL MORIR\n\nMuchas son las olas que nos ponen en peligro, y una gran tempestad nos amenaza: sin\nembargo, no tememos ser sumergidos porque permanecemos de pie sobre la roca. Aun\ncuando el mar se desate, no romperá esta roca aunque se levanten las olas, nada podrán\ncontra la barca de Jesús. Decidme, ¿qué podemos temer? ¿La muerte? Para mí la vida es\nCristo, y una ganancia el morir. ¿El destierro? Del Señor es la tierra y cuanto la llena. ¿La\nconfiscación de los bienes? Sin nada vinimos al mundo, y sin nada nos iremos de él. Yo me\nrío de todo lo que es temible en este mundo y de sus bienes. No temo la muerte ni\nenvidio las riquezas. No tengo deseos de vivir, si no es para vuestro bien espiritual. Por\neso, os hablo de lo que sucede ahora exhortando vuestra caridad a la confianza.\n\n¿No has oído aquella palabra del Señor: Donde dos o tres están reunidos en mi nombre,\nallí estoy yo en medio de ellos? Y, allí donde un pueblo numeroso esté reunido por los\nlazos de la caridad, ¿no estará presente el Señor? Él me ha garantizado su protección, no\nes en mis fuerzas que me apoyo. Tengo en mis manos su palabra escrita. Este es mi\nbáculo, ésta es mi seguridad, éste es mi puerto tranquilo. Aunque se turbe el mundo\nentero, yo leo esta palabra escrita que llevo conmigo, porque ella es mi muro y mi\ndefensa. ¿Qué es lo que ella me dice? Yo estoy con vosotros todos los días, hasta el fin del\nmundo.\n\nCristo está conmigo, ¿qué puedo temer? Que vengan a asaltarme las olas del mar y la\nira de los poderosos; todo eso no pesa más que una tela de araña. Si no me hubiese\nretenido el amor que os tengo, no hubiese esperado a mañana para marcharme. En toda\nocasión yo digo: «Señor, hágase tu voluntad: no lo que quiere éste o aquél, sino lo que tú\nquieres que haga.» Éste es mi alcázar, ésta es mi roca inamovible, éste es mi báculo\nseguro. Si esto es lo que quiere Dios, que así se haga. Si quiere que me quede aquí, le\ndoy gracias. En cualquier lugar donde me mande, le doy gracias también.\n\nAdemás, donde yo esté estaréis también vosotros, donde estéis vosotros estaré también\nyo: formamos todos un solo cuerpo, y el cuerpo no puede separarse de la cabeza, ni la\ncabeza del cuerpo. Aunque estemos separados en cuanto al lugar, permanecemos unidos\npor la caridad, y ni la misma muerte será capaz de desunirnos. Porque, aunque muera mi\ncuerpo, mi espíritu vivirá y no echará en olvido a su pueblo.\n\nVosotros sois mis conciudadanos, mis padres, mis hermanos, mis hijos, mis miembros,\nmi cuerpo y mi luz, una luz más agradable que esta luz material. Porque, para mí, ninguna\nluz es mejor que la de vuestra caridad. La luz material me es útil en la vida presente, pero\nvuestra caridad es la que va preparando mi corona para el futuro."
+    },
+    {
+     "tipo": "responsorio",
+     "texto": "R. Por el Evangelio sufro hasta llevar cadenas, como un malhechor; pero la palabra de\nDios no está encadenada. * Por eso, lo aguanto todo por los elegidos.\nV. El Señor es mi luz y mi salvación, ¿a quién temeré?\nR. Por eso, lo aguanto todo por los elegidos.",
+     "ref": "2 Tm 2, 9-10; Sal 26, 1"
+    }
+   ]
+  },
+  "oracion": "Oh Dios, fortaleza de los que esperan en ti, que has hecho brillar en la Iglesia a san\nJuan Crisóstomo por su admirable elocuencia y su capacidad de sacrificio, te pedimos que,\ninstruidos por sus enseñanzas, nos llene de fuerza el ejemplo de su valerosa paciencia.\nPor nuestro Señor Jesucristo."
+ },
+ "14": {
+  "titulo": "La Exaltación de la Santa Cruz",
+  "rango": "F",
+  "semblanza": "En Perú se celebra el 3 de mayo.",
+  "comun": "",
+  "horas": {
+   "visperas1": [
+    {
+     "tipo": "himno",
+     "texto": "En la cruz está la vida\ny el consuelo\ny ella sola es el camino\npara el cielo.\n\nEn la cruz está el Señor\nde cielo y tierra,\ny el gozar de mucha paz,\naunque haya guerra;\ntodos los males destierra\nen este suelo,\ny ella sola es el camino\npara el cielo.\n\nEs una oliva preciosa\nla santa cruz,\nque, con su aceite nos unta\ny nos da luz.\nHermano, toma la cruz,\ncon gran consuelo,\nque ella sola es el camino\npara el cielo.\n\nEl alma que a Dios está\ntoda rendida,\ny muy de veras del mundo\ndesasida,\nla cruz le es árbol de vida\ny de consuelo,\ny un camino deleitoso\npara el cielo.\n\nDespués\nque se puso en cruz\nel Salvador,\nen la cruz está la gloria\ny el amor,\ny en el padecer dolor\nvida y consuelo,\ny el camino más seguro\npara el cielo.\nO bien:\nLas banderas reales se adelantan\ny la cruz misteriosa en ellas brilla:\nla cruz en que la vida sufrió muerte\n\ny en que, sufriendo muerte, nos dio vida.\n\nElla sostuvo el sacrosanto cuerpo\nque, al ser herido por la lanza dura,\nderramó sangre y agua en abundancia\npara lavar con ellas nuestras culpas.\n\nEn ella se cumplió perfectamente\nlo que David profetizó en su verso,\ncuando dijo a los pueblos de la tierra:\n«Nuestro Dios reinará desde un madero.»\n\n¡Árbol lleno de luz, árbol hermoso,\nárbol ornado con la regia púrpura\ny destinado a que su tronco digno\nsintiera el roce de la carne pura!\n\n¡Dichosa cruz que con tus brazos firmes,\nen que estuvo colgado nuestro precio,\nfuiste balanza para el cuerpo santo\nque arrebató su presa a los infiernos!\n\nA ti, que eres la única esperanza,\nte ensalzamos, oh cruz, y te rogamos\nque acrecientes la gracia de los justos\ny borres los delitos de los malos.\n\nRecibe, oh Trinidad, fuente salubre,\nla alabanza de todos los espíritus,\ny tú que con tu cruz nos das el triunfo,\nañádenos el premio, oh Jesucristo. Amén."
+    },
+    {
+     "tipo": "salmodia",
+     "texto": "Ant. 1. El Crucificado resucitó de entre los muertos y nos redimió. Aleluya.\n\nSalmo 146\n\nAlabad al Señor, que la música es buena;\nnuestro Dios merece una alabanza armoniosa.\n\nEl Señor reconstruye Jerusalén,\nreúne a los deportados de Israel;\nél sana los corazones destrozados,\nvenda sus heridas.\n\nCuenta el número de las estrellas,\na cada una la llama por su nombre.\n\nNuestro Señor es grande y poderoso,\nsu sabiduría no tiene medida.\nEl Señor sostiene a los humildes,\nhumilla hasta el polvo a los malvados.\n\nEntonad la acción de gracias al Señor,\ntocad la cítara para nuestro Dios,\nque cubre el cielo de nubes,\npreparando la lluvia para la tierra;\n\nque hace brotar hierba en los montes,\npara los que sirven al hombre;\nque da su alimento al ganado\ny a las crías de cuervo que graznan.\n\nNo aprecia el vigor de los caballos,\nno estima los jarretes del hombre:\nel Señor aprecia a sus fieles,\nque confían en su misericordia.\n\nAnt. El Crucificado resucitó de entre los muertos y nos redimió. Aleluya.\nAnt. 2. En medio de la ciudad santa de Jerusalén está el árbol de la vida, y las hojas del\nárbol sirven de medicina a las naciones. Aleluya.\n\nSalmo 147\n\nGlorifica al Señor, Jerusalén;\nalaba a tu Dios, Sión:\nque ha reforzado los cerrojos de tus puertas,\ny ha bendecido a tus hijos dentro de ti;\nha puesto paz en tus fronteras,\nte sacia con flor de harina.\n\nÉl envía su mensaje a la tierra,\ny su palabra corre veloz;\nmanda la nieve como lana,\nesparce la escarcha como ceniza;\n\nhace caer el hielo como migajas\ny con el frío congela las aguas;\nenvía una orden, y se derriten;\nsopla su aliento, y corren.\n\nAnuncia su palabra a Jacob,\nsus decretos y mandatos a Israel;\ncon ninguna nación obró así,\nni les dio a conocer sus mandatos.\n\nAnt. En medio de la ciudad santa de Jerusalén está el árbol de la vida, y las hojas del\nárbol sirven de medicina a las naciones. Aleluya.\nAnt. 3. Nosotros hemos de gloriarnos en la cruz de nuestro Señor Jesucristo.\n\nCántico Flp 2, 6-11\n\nCristo, a pesar de su condición divina,\nno hizo alarde de su categoría de Dios;\nal contrario, se despojó de su rango\ny tomó la condición de esclavo,\npasando por uno de tantos.\n\nY así, actuando como un hombre cualquiera,\nse rebajó hasta someterse incluso a la muerte,\ny una muerte de cruz.\n\nPor eso Dios lo levantó sobre todo\ny le concedió el \"Nombre-sobre-todo-nombre\";\nde modo que al nombre de Jesús toda rodilla se doble\nen el cielo, en la tierra, en el abismo,\ny toda lengua proclame:\nJesucristo es Señor, para gloria de Dios Padre.\n\nAnt. Nosotros hemos de gloriarnos en la cruz de nuestro Señor Jesucristo."
+    },
+    {
+     "tipo": "lectura_breve",
+     "texto": "Nosotros predicamos a Cristo crucificado: escándalo para los judíos, necedad para los\ngentiles; pero para los llamados a Cristo -judíos o griegos-: fuerza de Dios y sabiduría de\nDios.",
+     "ref": "1 Co 1, 23-24"
+    },
+    {
+     "tipo": "responsorio_breve",
+     "texto": "V. Cuando venga el Señor, aparecerá el signo de la cruz en el cielo.\nR. Cuando venga el Señor, aparecerá el signo de la cruz en el cielo.\nV. Cobrad ánimo y levantad vuestras cabezas: está ya cerca vuestra redención.\nR. Aparecerá el signo de la cruz en el cielo.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. Cuando venga el Señor, aparecerá el signo de la cruz en el cielo."
+    },
+    {
+     "tipo": "cantico_evangelico",
+     "texto": "Ant. Era necesario que el Mesías padeciera y resucitara de entre los muertos para entrar\nen su gloria."
+    },
+    {
+     "tipo": "preces",
+     "texto": "Oremos a nuestro Redentor, que por su cruz nos ha salvado, y digámosle confiados:\nPor tu cruz, Señor, llévanos a tu reino.\n\nOh Cristo, que te anonadaste a ti mismo, tomando la condición de esclavo y pasando por\nuno de tantos,\n— haz que la Iglesia imite siempre tu humildad.\n\nCristo Señor, que te rebajaste hasta someterte incluso a la muerte y una muerte de cruz,\n— haz que te sigamos por el camino de la obediencia y de la paciencia.\n\nCristo Señor, que fuiste levantado por Dios y recibiste el «Nombre-sobre-todo-nombre»,\n\n— concede a todos tus fieles perseverar hasta el fin.\n\nCristo Jesús, ante cuyo nombre se dobla toda rodilla en el cielo, en la tierra y en el\nabismo,\n— haz que todos los hombres te adoren y vivan en tu paz.\nSe pueden añadir algunas intenciones libres.\nCristo Jesús, a quien toda lengua proclamará: Señor, para gloria de Dios Padre,\n— recibe a nuestros hermanos difuntos en el reino de la eterna felicidad.\n\nTerminemos nuestra oración con las palabras que Cristo nos enseñó: Padre nuestro."
+    },
+    {
+     "tipo": "oracion",
+     "texto": "Señor, Dios nuestro, que has querido realizar la salvación de todos los hombres por medio\nde tu Hijo, muerto en la cruz, concédenos te rogamos, a quienes hemos conocido en la\ntierra este misterio, alcanzar en el cielo los premios de la redención. Por nuestro Señor\nJesucristo."
+    }
+   ],
+   "invitatorio": [
+    {
+     "tipo": "inicio",
+     "texto": "Ant. A Cristo, Rey y Señor, que por nosotros fue exaltado en la cruz, venid, adorémosle.\nEl salmo del Invitatorio como en el Ordinario: Salmo 94; Salmo 99; Salmo 66; Salmo 23"
+    }
+   ],
+   "oficio": [
+    {
+     "tipo": "himno",
+     "texto": "¡Oh cruz fiel, árbol único en nobleza!\nJamás el bosque dió mejor tributo\nen hoja, en flor y en fruto.\n¡Dulces clavos! ¡Dulce árbol dondela Vida empieza\ncon un peso tan dulce en su corteza!\n\nCantemos la nobleza de esta guerra,\nel triunfo de la sangre y del madero;\ny un Redentor, que en trance de Cordero,\nsacrificado en cruz, salvó la tierra.\n\nDolido mi Señor por el fracaso\nde Adán, que mordió muerte en la manzana,\notro árbol señaló de flor humana,\nque reparase el daño paso a paso.\n\nY así dijo el Señor: \"¡Vuelva la Vida,\ny que el Amor redima la condena!\"\nLa gracia está en el fondo de la pena,\ny la salud naciendo de la herida.\n\n¡Oh plenitud del tiempo consumado!\nDel seno de Dios Padre en que vivía,\n\nved la Palabra entrando por María\nen el misterio mismo del pecado.\n\n¿Quién vio en más estrechez gloria más plena,\ny a Dios como el menor de los humanos?\nLlorando en el pesebre, pies y manos\nle faja una doncella nazarena.\n\nEn plenitud de vida y de sendero,\ndio el paso hacia la muerte porque él quiso.\nMirad de par en par el paraíso\nabierto por la fuerza de un Cordero.\n\nVinagre y sed la boca, apenas gime;\ny, al golpe de los clavos y la lanza,\nun mar de sangre fluye, inunda, avanza\npor tierra, mar y cielo, y los redime.\n\nAblándate, madero, tronco abrupto\nde duro corazón y fibra inerte;\ndoblégate a este peso y esta muerte\nque cuelga de tus ramas como un fruto.\n\nTú, solo entre los árboles, crecido\npara tender a Cristo en tu regazo;\ntú, el arca que nos salva; tú, el abrazo\nde Dios con los verdugos del Ungido.\n\nAl Dios de los designios de la historia,\nque es Padre, Hijo y Espíritu, alabanza;\nal que en la cruz devuelve la esperanza\nde toda salvación, honor y gloria. Amén.\n\nO bien:\nCruz de Cristo,\ncuyos brazos\ntodo el mundo han acogido.\n\nCruz de Cristo,\ncuya sangre\ntodo el mundo ha redimido.\n\nCruz de Cristo,\nluz que brilla\nen la noche del camino.\n\nCruz de Cristo,\ncruz del hombre,\nsu bastón de peregrino.\n\nCruz de Cristo,\nárbol de vida,\n\nvida nuestra, don eximio.\n\nCruz de Cristo,\naltar divino\nde Dios-Hombre en sacrificio. Amén."
+    },
+    {
+     "tipo": "salmodia",
+     "texto": "Ant. 1. Mirad la cruz del Señor, que huyan los enemigos; ha vencido el león de la tribu de\nJudá, el vástago de David. Aleluya.\n\nSalmo 2\n\n¿Por qué se amotinan las naciones,\ny los pueblos planean un fracaso?\n\nSe alían los reyes de la tierra,\nlos príncipes conspiran\ncontra el Señor y contra su Mesías:\n\"rompamos sus coyundas,\nsacudamos su yugo\".\n\nEl que habita en el cielo sonríe,\nel Señor se burla de ellos.\nLuego les habla con ira,\nlos espanta con su cólera:\n\"yo mismo he establecido a mi Rey\nen Sión, mi monte santo\".\n\nVoy a proclamar el decreto del Señor;\nél me ha dicho: \"Tú eres mi hijo:\nyo te he engendrado hoy.\nPídemelo: te daré en herencia las naciones,\nen posesión, los confines de la tierra:\nlos gobernarás con cetro de hierro,\nlos quebrarás como jarro de loza\".\n\nY ahora, reyes, sed sensatos;\nescarmentad, los que regís la tierra:\nservid al Señor con temor,\nrendidle homenaje temblando;\nno sea que se irrite, y vayáis a la ruina,\nporque se inflama de pronto su ira.\n¡Dichosos los que se refugian en él!\n\nAnt. Mirad la cruz del Señor, que huyan los enemigos; ha vencido el león de la tribu de\nJudá, el vástago de David. Aleluya.\nAnt. 2. En la cruz ha sido ensalzada la majestad del Señor; su nombre ha sido enaltecido\nsobre los cielos y la tierra. Aleluya.\n\nSalmo 8\n\nSeñor, dueño nuestro,\n\n¡qué admirable es tu nombre\nen toda la tierra!\n\nEnsalzaste tu majestad sobre los cielos.\nDe la boca de los niños de pecho\nhas sacado una alabanza contra tus enemigos,\npara reprimir al adversario y al rebelde.\n\nCuando contemplo el cielo, obra de tus dedos,\nla luna y las estrellas que has creado,\n¿qué es el hombre, para que te acuerdes de él,\nel ser humano, para darle poder?\n\nLo hiciste poco inferior a los ángeles,\nle coronaste de gloria y dignidad,\nle diste el mando sobre las obras de tus manos,\ntodo lo sometiste bajo sus pies:\n\nrebaños de ovejas y toros,\ny hasta las bestias del campo,\nlas aves del cielo, los peces del mar,\nque trazan sendas por el mar.\n\nSeñor, dueño nuestro,\n¡qué admirable es tu nombre\nen toda la tierra!\n\nAnt. En la cruz ha sido ensalzada la majestad del Señor; su nombre ha sido enaltecido\nsobre los cielos y la tierra. Aleluya.\nAnt. 3. Oh cruz santa, tú has sido la única digna de llevar al Rey y Señor de los cielos y de\nla tierra. Aleluya.\n\nSalmo 95\n\nCantad al Señor un cántico nuevo,\ncantad al Señor, toda la tierra;\ncantad al Señor, bendecid su nombre,\nproclamad día tras día su victoria.\n\nContad a los pueblos su gloria,\nsus maravillas a todas las naciones;\nporque es grande el Señor, y muy digno de alabanza,\nmás temible que todos los dioses.\n\nPues los dioses de los gentiles son apariencia,\nmientras que el Señor ha hecho el cielo;\nhonor y majestad lo preceden,\nfuerza y esplendor están en su templo.\n\nFamilias de los pueblos, aclamad al Señor,\naclamad la gloria y el poder del Señor,\naclamad la gloria del nombre del Señor,\n\nentrad en sus atrios trayéndole ofrendas.\n\nPostraos ante el Señor en el atrio sagrado,\ntiemble en su presencia la tierra toda;\ndecid a los pueblos: \"el Señor es rey,\nél afianzó el orbe, y no se moverá;\nél gobierna a los pueblos rectamente\".\n\nAlégrese el cielo, goce la tierra,\nretumbe el mar y cuanto lo llena;\nvitoreen los campos y cuanto hay en ellos,\naclamen los árboles del bosque,\n\ndelante del Señor, que ya llega,\nya llega a regir la tierra:\nregirá el orbe con justicia\ny los pueblos con fidelidad.\n\nAnt. Oh cruz santa, tú has sido la única digna de llevar al Rey y Señor de los cielos y de la\ntierra. Aleluya."
+    },
+    {
+     "tipo": "versiculo",
+     "texto": "V. Así como Moisés levantó en alto la serpiente en el desierto.\nR. Así deberá ser levantado en alto el Hijo del hombre."
+    },
+    {
+     "tipo": "lectura1",
+     "texto": "De la carta del apóstol san Pablo a los Gálatas 2, 19-3, 7. 13-14; 6, 14-16\n\nLA GLORIA DE LA CRUZ\n\nHermanos: Yo, Pablo, en virtud de la misma ley he muerto a la ley, a fin de vivir para\nDios. Estoy crucificado con Cristo; vivo yo, pero no soy yo, es Cristo quien vive en mí. Y,\nmientras vivo en esta carne, vivo de la fe en el Hijo de Dios, que me amó hasta entregarse\npor mí. No tengo por inútil esta gracia de Dios: Si la justificación nos viniera por la ley,\nentonces deberíamos concluir que Cristo murió inútilmente.\n\n¡Oh, insensatos gálatas! ¿Quién os fascinó, después que ante vuestros ojos\npresentamos a Jesucristo muerto en la cruz? Sólo quiero que me digáis una cosa: ¿Cómo\nhabéis recibido el Espíritu, en virtud de las obras de la ley o por vuestra sumisión a la fe?\n¿Tan insensatos sois, que, habiendo comenzado por espíritu, termináis ahora en carne?\n¿Habrá sido en vano para vosotros el haber experimentado tan grandes dones? Pues ¡de\nveras que habría sido en vano! El que os da el Espíritu y obra prodigios entre vosotros ¿lo\nhace porque observáis la ley o por vuestra aceptación de la fe?\n\nAsí se dice: «Abraham creyó a Dios y Dios estimó su fe como justificación.» Entended,\npues, que los hijos de Abraham son sólo aquellos que viven según la fe.\n\nCristo nos redimió de la maldición de la ley, haciéndose maldición por nosotros. Así lo\ndice la Escritura: «Maldito sea aquel que cuelga del madero.» De ese modo la bendición\nde Abraham alcanza a todas las naciones por Cristo Jesús, para que recibamos por la fe el\nEspíritu prometido por Dios.\n\nEn cuanto a mí, líbreme Dios de gloriarme si no es en la cruz de nuestro Señor\nJesucristo; por él el mundo está crucificado para mí y yo para el mundo. Lo que vale no es\nestar o no estar circuncidado, sino la nueva criatura que surge.\n\nPaz y misericordia para todos los que se ajusten a esta norma, y también para el Israel\nde Dios."
+    },
+    {
+     "tipo": "responsorio",
+     "texto": "R. Líbrenos Dios de gloriarnos si no es en la cruz de nuestro Señor Jesucristo, en quien\nestá nuestra salvación, vida y resurrección; * por él hemos sido salvados y liberados.\nV. Él fue coronado de gloria y de honor por haber padecido la muerte.\nR. Por él hemos sido salvados y liberados.",
+     "ref": "Cf. Ga 6, 14; Hb 2, 9"
+    },
+    {
+     "tipo": "lectura2",
+     "texto": "De los sermones de san Andrés de Creta, obispo\n(Sermón 10, Sobre la Exaltación de la santa cruz: PG 97, 1018-1019. 1022-1023)\n\nLA CRUZ ES LA GLORIA Y EXALTACIÓN DE CRISTO\n\nPor la cruz, cuya fiesta celebramos, fueron expulsadas las tinieblas y devuelta la luz.\nCelebramos hoy la fiesta de la cruz y, junto con el Crucificado, nos elevamos hacia lo alto,\npara, dejando abajo la tierra y el pecado, gozar de los bienes celestiales; tal y tan grande\nes la posesión de la cruz. Quien posee la cruz posee un tesoro. Y, al decir un tesoro,\nquiero significar con esta expresión a aquel que es, de nombre y de hecho, el más\nexcelente de todos los bienes, en el cual, por el cual y para el cual culmina nuestra\nsalvación y se nos restituye a nuestro estado de justicia original.\n\nPorque, sin la cruz, Cristo no hubiera sido crucificado. Sin la cruz, aquel que es la vida\nno hubiera sido clavado en el leño. Si no hubiese sido clavado, las fuentes de la\ninmortalidad no hubiesen manado de su costado la sangre y el agua que purifican el\nmundo, no hubiese sido rasgado el documento en que constaba la deuda contraída por\nnuestros pecados, no hubiéramos sido declarados libres, no disfrutaríamos del árbol de la\nvida, el paraíso continuaría cerrado. Sin la cruz, no hubiera sido derrotada la muerte, ni\ndespojado el lugar de los muertos.\n\nPor esto, la cruz es cosa grande y preciosa. Grande, porque ella es el origen de\ninnumerables bienes, tanto más numerosos, cuanto que los milagros y sufrimientos de\nCristo juegan un papel decisivo en su obra de salvación. Preciosa, porque la cruz significa\na la vez el sufrimiento y el trofeo del mismo Dios: el sufrimiento, porque en ella sufrió una\nmuerte voluntaria; el trofeo, porque en ella quedó herido de muerte el demonio y, con él,\nfue vencida la muerte. En la cruz fueron demolidas las puertas de la región de los\nmuertos, y la cruz se convirtió en salvación universal para todo el mundo.\n\nLa cruz es llamada también gloria y exaltación de Cristo. Ella es el cáliz rebosante, de\nque nos habla el salmo, y la culminación de todos los tormentos que padeció Cristo por\nnosotros. El mismo Cristo nos enseña que la cruz es su gloria, cuando dice: Ahora es\nglorificado el Hijo del hombre, y Dios es glorificado en él, y pronto lo glorificará. Y\ntambién: Padre, glorifícame con la gloria que yo tenía cerca de ti, antes que el mundo\nexistiese. Y asimismo dice: \"Padre, glorifica tu nombre.\" Entonces vino una voz del cielo:\n\"Lo he glorificado y volveré a glorificarlo\", palabras que se referían a la gloria que había de\nconseguir en la cruz.\n\nTambién nos enseña Cristo que la cruz es su exaltación, cuando dice: Cuando yo sea\nelevado sobre la tierra, atraeré a todos hacia mi. Está claro, pues, que la cruz es la gloria y\nexaltación de Cristo."
+    },
+    {
+     "tipo": "responsorio",
+     "texto": "R. ¡Oh cruz admirable, en cuyas ramas estuvo suspendido el tesoro y la redención de los\ncautivos! * Por ti el mundo fue redimido con la sangre de su Señor.\nV. ¡Salve, oh cruz, que fuiste consagrada por el cuerpo de Cristo, y estuviste adornada con\nsus sagrados miembros como con piedras preciosas!\n\nR. Por ti el mundo fue redimido con la sangre de su Señor.\nHIMNO A ti, oh Dios, te alabamos."
+    },
+    {
+     "tipo": "te_deum"
+    },
+    {
+     "tipo": "oracion",
+     "texto": "Señor, Dios nuestro, que has querido realizar la salvación de todos los hombres por medio\nde tu Hijo, muerto en la cruz, concédenos te rogamos, a quienes hemos conocido en la\ntierra este misterio, alcanzar en el cielo los premios de la redención. Por nuestro Señor\nJesucristo."
+    }
+   ],
+   "laudes": [
+    {
+     "tipo": "himno",
+     "texto": "¡Oh cruz fiel, árbol único en nobleza!\nJamás el bosque dio mejor tributo\nen hoja, en flor y en fruto.\n¡Dulces clavos! ¡Dulce árbol donde\nla Vida empieza\ncon un peso tan dulce en su corteza!\n\nCantemos la nobleza de esta guerra,\nel triunfo de la sangre y del madero;\ny un Redentor, que en trance de Cordero,\nsacrificado en cruz, salvó la tierra.\n\nDolido mi Señor por el fracaso\nde Adán, que mordió muerte en la manzana,\notro árbol señaló de flor humana,\nque reparase el daño paso a paso.\n\nY así dijo el Señor: \"¡Vuelva la Vida,\ny que el Amor redima la condena!\"\nLa gracia está en el fondo de la pena,\ny la salud naciendo de la herida.\n\n¡Oh plenitud del tiempo consumado!\nDel seno de Dios Padre en que vivía,\nved la Palabra entrando por María\nen el misterio mismo del pecado.\n\n¿Quién vio en más estrechez gloria más plena,\ny a Dios como el menor de los humanos?\nLlorando en el pesebre, pies y manos\nle faja una doncella nazarena.\n\nEn plenitud de vida y de sendero,\ndio el paso hacia la muerte porque él quiso.\nMirad de par en par el paraíso\nabierto por la fuerza de un Cordero.\n\nVinagre y sed la boca, apenas gime;\ny, al golpe de los clavos y la lanza,\nun mar de sangre fluye, inunda, avanza\npor tierra, mar y cielo, y los redime.\n\nAblándate, madero, tronco abrupto\nde duro corazón y fibra inerte;\ndoblégate a este peso y esta muerte\nque cuelga de tus ramas como un fruto.\n\nTú, solo entre los árboles, crecido\npara tender a Cristo en tu regazo;\ntú, el arca que nos salva; tú, el abrazo\nde Dios con los verdugos del Ungido.\n\nAl Dios de los designios de la historia,\nque es Padre, Hijo y Espíritu, alabanza;\nal que en la cruz devuelve la esperanza\nde toda salvación, honor y gloria. Amén.\nO bien:\nBrille la cruz del Verbo, luminosa,\nbrille como la carne sacratísima\nde aquel Jesús nacido de la Virgen\nque en la gloria del Padre vive y brilla.\n\nGemía Adán, doliente y conturbado,\nlágrimas Eva junto a Adán vertía;\nbrillen sus rostros por la cruz gloriosa,\ncruz que se enciende cuando el Verbo expira.\n\n¡Salve, cruz de los montes y caminos,\njunto al enfermo suave medicina,\nregio trono de Cristo en las familias,\ncruz de nuestra fe, salve, cruz bendita!\n\nReine el Señor crucificado,\nlevantando la cruz donde moría;\nnuestros enfermos ojos buscan luz,\nnuestros labios, el río de la vida.\n\nTe adoramos, oh cruz que fabricamos,\npecadores, con manos deicidas;\nte adoramos, ornato del Señor,\nsacramento de nuestra eterna dicha. Amén."
+    },
+    {
+     "tipo": "salmodia",
+     "texto": "Ant. 1. Subió al árbol santo de la cruz, destruyó el poderío de la muerte, se revistió de\npoder, resucitó al tercer día.\n\nSalmo 62, 2-9\n\nEL ALMA SEDIENTA DE DIOS\n\nMadruga por Dios todo el que rechaza las obras de las tinieblas.\n¡Oh Dios!, tú eres mi Dios, por ti madrugo,\n\nmi alma está sedienta de ti;\nmi carne tiene ansia de ti,\ncomo tierra reseca, agostada, sin agua.\n\n¡Cómo te contemplaba en el santuario\nviendo tu fuerza y tu gloria!\nTu gracia vale más que la vida,\nte alabarán mis labios.\n\nToda mi vida te bendeciré\ny alzaré las manos invocándote.\nMe saciaré de manjares exquisitos,\ny mis labios te alabarán jubilosos.\n\nEn el lecho me acuerdo de ti\ny velando medito en ti,\nporque fuiste mi auxilio,\ny a la sombra de tus alas canto con júbilo;\nmi alma está unida a ti,\ny tu diestra me sostiene.\n\nAnt. Subió al árbol santo de la cruz, destruyó el poderío de la muerte, se revistió de\npoder, resucitó al tercer día.\nAnt. 2. ¡Cómo brilla la cruz santa! De ella colgó el cuerpo del Señor y desde ella derramó\nCristo aquella sangre que ha sanado nuestras heridas.\n\nCántico Dn 3, 57-88. 56\n\nTODA LA CREACIÓN ALABE AL SEÑOR\n\nAlabad al Señor, sus siervos todos (Ap 19, 5).\n\nCriaturas todas del Señor, bendecid al Señor,\nensalzadlo con himnos por los siglos.\n\nÁngeles del Señor, bendecid al Señor;\ncielos, bendecid al Señor.\n\nAguas del espacio, bendecid al Señor;\nejércitos del Señor, bendecid al Señor.\n\nSol y luna, bendecid al Señor;\nastros del cielo, bendecid al Señor.\n\nLluvia y rocío, bendecid al Señor;\nvientos todos, bendecid al Señor.\n\nFuego y calor, bendecid al Señor;\nfríos y heladas, bendecid al Señor.\n\nRocíos y nevadas, bendecid al Señor;\ntémpanos y hielos, bendecid al Señor.\n\nEscarchas y nieves, bendecid al Señor;\nnoche y día, bendecid al Señor.\n\nLuz y tinieblas, bendecid al Señor;\nrayos y nubes, bendecid al Señor.\n\nBendiga la tierra al Señor,\nensálcelo con himnos por los siglos.\n\nMontes y cumbres, bendecid al Señor;\ncuanto germina en la tierra, bendiga al Señor.\n\nManantiales, bendecid al Señor;\nmares y ríos, bendecid al Señor.\n\nCetáceos y peces, bendecid al Señor;\naves del cielo, bendecid al Señor.\n\nFieras y ganados, bendecid al Señor,\nensalzadlo con himnos por los siglos.\n\nHijos de los hombres, bendecid al Señor;\nbendiga Israel al Señor.\n\nSacerdotes del Señor, bendecid al Señor;\nsiervos del Señor, bendecid al Señor.\n\nAlmas y espíritus justos, bendecid al Señor;\nsantos y humildes de corazón, bendecid al Señor.\n\nAnanías, Azarías y Misael, bendecid al Señor,\nensalzadlo con himnos por los siglos.\n\nBendigamos al Padre, al Hijo y al Espíritu Santo,\nensalcémoslo con himnos por los siglos.\n\nBendito el Señor en la bóveda del cielo,\nalabado y glorioso y ensalzado por los siglos.\n\nNo se dice Gloria al Padre.\nAnt. ¡Cómo brilla la cruz santa! De ella colgó el cuerpo del Señor y desde ella derramó\nCristo aquella sangre que ha sanado nuestras heridas.\nAnt. 3. Resplandece la cruz santa: por ella el mundo ha obtenido la salvación; la cruz\nvence, la cruz reina, la cruz aleja todo pecado. Aleluya.\n\nSalmo 149\n\nALEGRÍA DE LOS SANTOS\n\nLos hijos de la Iglesia, nuevo pueblo de Dios, se alegran en su Rey, Cristo, el Señor\n(Hesiquio).\n\nCantad al Señor un cántico nuevo,\nresuene su alabanza en la asamblea de los fieles;\nque se alegre Israel por su Creador,\nlos hijos de Sión por su Rey.\n\nAlabad su nombre con danzas,\ncantadle con tambores y cítaras;\nporque el Señor ama a su pueblo\ny adorna con la victoria a los humildes.\n\nQue los fieles festejen su gloria\ny canten jubilosos en filas:\ncon vítores a Dios en la boca\ny espadas de dos filos en las manos:\n\npara tomar venganza de los pueblos\ny aplicar el castigo a las naciones,\nsujetando a los reyes con argollas,\na los nobles con esposas de hierro.\n\nEjecutar la sentencia dictada\nes un honor para todos sus fieles.\n\nAnt. Resplandece la cruz santa: por ella el mundo ha obtenido la salvación; la cruz\nvence, la cruz reina, la cruz aleja todo pecado. Aleluya."
+    },
+    {
+     "tipo": "lectura_breve",
+     "texto": "Vemos a Jesús coronado de gloria y de honor por haber padecido la muerte. Así, por\namorosa dignación de Dios, gustó la muerte en beneficio de todos. Pues como quisiese\nDios, por quien y para quien son todas las cosas, llevar un gran número de hijos a la\ngloria, convenía ciertamente que perfeccionase por medio del sufrimiento al que iba a\nguiarlos a la salvación.",
+     "ref": "Hb 2, 9b-10"
+    },
+    {
+     "tipo": "responsorio_breve",
+     "texto": "V. Te adoramos, oh Cristo, y te bendecimos.\nR. Te adoramos, oh Cristo, y te bendecimos.\nV. Porque con tu santa cruz redimiste al mundo.\nR. Y te bendecimos.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. Te adoramos, oh Cristo, y te bendecimos."
+    },
+    {
+     "tipo": "cantico_evangelico",
+     "texto": "Ant. Tu cruz adoramos, Señor, y tu santa resurrección alabamos y glorificamos; por el\nmadero ha venido la alegría al mundo entero."
+    },
+    {
+     "tipo": "preces",
+     "texto": "Oremos a nuestro Redentor, que por su cruz nos ha salvado, y digámosle confiados:\nPor tu cruz, sálvanos, Señor.\n\nHijo de Dios, que por el símbolo de la serpiente de bronce sanaste al pueblo de Israel,\n— protégenos hoy de las heridas del pecado.\n\nHijo del hombre, que fuiste elevado en la cruz, como la serpiente fue elevada por Moisés\nen el desierto,\n\n— elévanos hasta la gloria de tu reino.\n\nHijo unigénito del Padre, que has sido enviado al mundo para que todo el que crea en ti\nno perezca,\n\n— concede la vida eterna a los que buscan tu rostro.\n\nHijo amado del Padre, que has sido enviado al mundo no para condenar al mundo, sino\npara que el mundo sea salvado por ti,\n\n— concede el don de la fe a todos nuestros familiares y amigos, para que obtengan la\nsalvación.\n\nHijo eterno del Padre, que viniste a prender fuego a la tierra para que el mundo entero\nardiera,\n\n— haz que vivamos de acuerdo con la verdad y lleguemos a la luz.\n\nSe pueden añadir algunas intenciones libres.\nPidamos ahora al Padre que venga al mundo su reino: Padre nuestro."
+    },
+    {
+     "tipo": "oracion",
+     "texto": "Señor, Dios nuestro, que has querido realizar la salvación de todos los hombres por medio\nde tu Hijo, muerto en la cruz, concédenos te rogamos, a quienes hemos conocido en la\ntierra este misterio, alcanzar en el cielo los premios de la redención. Por nuestro Señor\nJesucristo."
+    }
+   ],
+   "intermedia": {
+    "comun": [],
+    "tercia": [
+     {
+      "tipo": "lectura_breve",
+      "texto": "Cristo, en los días de su vida mortal, habiendo elevado oraciones y súplicas con poderoso\nclamor y lágrimas hacia aquel que tenía poder para salvarlo de la muerte, fue escuchado\nen atención a su actitud reverente y filial; con todo, aunque era Hijo, aprendió por\nexperiencia, en sus padecimientos, la obediencia, y, habiendo así llegado hasta la plena\nconsumación, se convirtió en causa de salvación para todos los que lo obedecen.\nV. Te adoramos, oh Cristo, y te bendecimos.\nR. Porque con tu santa cruz redimiste al mundo.",
+      "ref": "Hb 5, 7-9"
+     }
+    ],
+    "sexta": [
+     {
+      "tipo": "lectura_breve",
+      "texto": "Por Cristo, por su sangre, hemos recibido la redención, el perdón de los pecados. El tesoro\nde su gracia, sabiduría y prudencia ha sido un derroche para con nosotros.\nV. Que se postre ante ti la tierra entera, que toquen en tu honor.\nR. Que toquen para tu nombre, Señor.",
+      "ref": "Ef 1, 7-8"
+     }
+    ],
+    "nona": [
+     {
+      "tipo": "lectura_breve",
+      "texto": "Os rescataron de la vana conducta que habíais heredado de vuestros mayores: no con\nbienes efímeros, con oro o plata, sino a precio de la sangre de Cristo, el cordero sin\ndefecto ni mancha.\nV. Cuando venga el Señor para juzgar al mundo.\nR. Aparecerá el signo de la cruz en el cielo.",
+      "ref": "1 Pe 1, 18-19"
+     },
+     {
+      "tipo": "oracion_laudes"
+     }
+    ]
+   },
+   "visperas2": [
+    {
+     "tipo": "himno",
+     "texto": "En la cruz está la vida\ny el consuelo\ny ella sola es el camino\npara el cielo.\n\nEn la cruz está el Señor\nde cielo y tierra,\ny el gozar de mucha paz,\naunque haya guerra;\ntodos los males destierra\nen este suelo,\ny ella sola es el camino\npara el cielo.\n\nEs una oliva preciosa\nla santa cruz,\nque, con su aceite nos unta\ny nos da luz.\nHermano, toma la cruz,\ncon gran consuelo,\nque ella sola es el camino\npara el cielo.\n\nEl alma que a Dios está\ntoda rendida,\ny muy de veras del mundo\ndesasida,\nla cruz le es árbol de vida\ny de consuelo,\ny un camino deleitoso\npara el cielo.\n\nDespués\nque se puso en cruz\nel Salvador,\nen la cruz está la gloria\ny el amor,\ny en el padecer dolor\nvida y consuelo,\ny el camino más seguro\npara el cielo.\nO bien:\nLas banderas reales se adelantan\ny la cruz misteriosa en ellas brilla:\nla cruz en que la vida sufrió muerte\n\ny en que, sufriendo muerte, nos dio vida.\n\nElla sostuvo el sacrosanto cuerpo\nque, al ser herido por la lanza dura,\nderramó sangre y agua en abundancia\npara lavar con ellas nuestras culpas.\n\nEn ella se cumplió perfectamente\nlo que David profetizó en su verso,\ncuando dijo a los pueblos de la tierra:\n«Nuestro Dios reinará desde un madero.»\n\n¡Árbol lleno de luz, árbol hermoso,\nárbol ornado con la regia púrpura\ny destinado a que su tronco digno\nsintiera el roce de la carne pura!\n\n¡Dichosa cruz que con tus brazos firmes,\nen que estuvo colgado nuestro precio,\nfuiste balanza para el cuerpo santo\nque arrebató su presa a los infiernos!\n\nA ti, que eres la única esperanza,\nte ensalzamos, oh cruz, y te rogamos\nque acrecientes la gracia de los justos\ny borres los delitos de los malos.\n\nRecibe, oh Trinidad, fuente salubre,\nla alabanza de todos los espíritus,\ny tú que con tu cruz nos das el triunfo,\nañádenos el premio, oh Jesucristo. Amén."
+    },
+    {
+     "tipo": "salmodia",
+     "texto": "Ant. 1. ¡Oh gran obra de amor! Cuando en el árbol murió la Vida, con su muerte destruyó\nla misma muerte.\n\nSalmo 109, 1-5. 7\n\nOráculo del Señor a mi Señor:\n\"siéntate a mi derecha,\ny haré de tus enemigos\nestrado de tus pies\".\nDesde Sión extenderá el Señor\nel poder de tu cetro:\nsomete en la batalla a tus enemigos.\n\n\"Eres príncipe desde el día de tu nacimiento,\nentre esplendores sagrados;\nyo mismo te engendré, como rocío,\nantes de la aurora\".\n\nEl Señor lo ha jurado y no se arrepiente:\n\"Tú eres sacerdote eterno,\nsegún el rito de Melquisedec\".\n\nEl Señor a tu derecha, el día de su ira,\nquebrantará a los reyes.\nEn su camino beberá del torrente,\npor eso, levantará la cabeza.\n\nAnt. ¡Oh gran obra de amor! Cuando en el árbol murió la Vida, con su muerte destruyó la\nmisma muerte.\nAnt. 2. Adoramos, Señor, tu cruz y recordamos tu gloriosa muerte; compadécete de\nnosotros, tú que por nosotros padeciste.\n\nSalmo 115\n\nTenía fe, aún cuando dije:\n\"¡Qué desgraciado soy!\"\nYo decía en mi apuro:\n\"Los hombres son unos mentirosos\".\n\n¿Cómo pagaré al Señor\ntodo el bien que me ha hecho?\nAlzaré la copa de la salvación,\ninvocando su nombre.\nCumpliré al Señor mis votos\nen presencia de todo el pueblo.\n\nMucho le cuesta al Señor\nla muerte de sus fieles.\nSeñor, yo soy tu siervo,\nsiervo tuyo, hijo de tu esclava:\nrompiste mis cadenas.\n\nTe ofreceré un sacrificio de alabanza,\ninvocando tu nombre, Señor.\nCumpliré al Señor mis votos\nen presencia de todo el pueblo,\nen el atrio de la casa del Señor,\nen medio de ti, Jerusalén.\n\nAnt. Adoramos, Señor, tu cruz y recordamos tu gloriosa muerte; compadécete de\nnosotros, tú que por nosotros padeciste.\nAnt. 3. Te adoramos, oh Cristo, y te bendecimos, porque con tu santa cruz redimiste al\nmundo.\n\nCántico Ap 4, 11; 5, 9-10. 12\nEres digno, Señor, Dios nuestro,\n\nde recibir la gloria, el honor y el poder,\nporque tú has creado el universo;\nporque por tu voluntad lo que no existía fue creado.\n\nEres digno de tomar el libro y abrir sus sellos,\nporque fuiste degollado\ny con tu sangre compraste para Dios\nhombres de toda raza, lengua, pueblo y nación;\ny has hecho de ellos para nuestro Dios\nun reino de sacerdotes,\ny reinan sobre la tierra.\n\nDigno es el Cordero degollado\nde recibir el poder, la riqueza, la sabiduría,\nla fuerza, el honor, la gloria y la alabanza.\n\nAnt. Te adoramos, oh Cristo, y te bendecimos, porque con tu santa cruz redimiste al\nmundo."
+    },
+    {
+     "tipo": "lectura_breve",
+     "texto": "Nosotros predicamos a Cristo crucificado: escándalo para los judíos, necedad para los\ngentiles; pero para los llamados a Cristo -judíos o griegos-: fuerza de Dios y sabiduría de\nDios.",
+     "ref": "1 Co 1, 23-24"
+    },
+    {
+     "tipo": "responsorio_breve",
+     "texto": "V. Oh cruz gloriosa, en ti triunfó el Rey de los ángeles.\nR. Oh cruz gloriosa, en ti triunfó el Rey de los ángeles.\nV. Con su sangre lavó nuestras heridas.\nR. En ti triunfó el Rey de los ángeles.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. Oh cruz gloriosa, en ti triunfó el Rey de los ángeles."
+    },
+    {
+     "tipo": "cantico_evangelico",
+     "texto": "Ant. Oh cruz victoriosa, signo admirable, ayúdanos a alcanzar el triunfo eterno."
+    },
+    {
+     "tipo": "preces",
+     "texto": "Oremos a nuestro Redentor, que por su cruz nos ha salvado, y digámosle confiados:\nPor tu cruz, Señor, llévanos a tu reino.\n\nOh Cristo, que te anonadaste a ti mismo, tomando la condición de esclavo y pasando por\nuno de tantos,\n\n— haz que la Iglesia imite siempre tu humildad.\n\nCristo Señor, que te rebajaste hasta someterte incluso a la muerte y una muerte de cruz,\n— haz que te sigamos por el camino de la obediencia y de la paciencia.\n\nCristo Señor, que fuiste levantado por Dios y recibiste el «Nombre-sobre-todo-nombre»,\n— concede a todos tus fieles perseverar hasta el fin.\n\nCristo Jesús, ante cuyo nombre se dobla toda rodilla en el cielo, en la tierra y en el\nabismo,\n\n— haz que todos los hombres te adoren y vivan en tu paz.\n\nSe pueden añadir algunas intenciones libres.\nCristo Jesús, a quien toda lengua proclamará: Señor, para gloria de Dios Padre,\n\n— recibe a nuestros hermanos difuntos en el reino de la eterna felicidad.\n\nTerminemos nuestra oración con las palabras que Cristo nos enseñó: Padre nuestro."
+    },
+    {
+     "tipo": "oracion",
+     "texto": "Señor, Dios nuestro, que has querido realizar la salvación de todos los hombres por medio\nde tu Hijo, muerto en la cruz, concédenos te rogamos, a quienes hemos conocido en la\ntierra este misterio, alcanzar en el cielo los premios de la redención. Por nuestro Señor\nJesucristo."
+    }
+   ]
+  }
+ },
+ "15": {
+  "titulo": "Nuestra Señora, la Virgen de los Dolores",
+  "rango": "M",
+  "semblanza": "",
+  "comun": "Del Común de santa María Virgen, excepto lo siguiente.",
+  "horas": {
+   "oficio": [
+    {
+     "tipo": "lectura2",
+     "texto": "De los sermones de san Bernardo, abad\n(Sermón en el Domingo infraoctava de la Asunción, 14-15: OPERA OMNIA, edición\ncisterciense, 5 (1968), (273-274)\n\nLA MADRE ESTABA JUNTO A LA CRUZ\n\nEl martirio de la Virgen queda atestiguado por la profecía de Simeón y por la misma\nhistoria de la pasión del Señor. Éste —dice el santo anciano, refiriéndose al niño Jesús—\nestá puesto como una bandera discutida; y a ti —añade, dirigiéndose a María— una\nespada te traspasará el alma.\n\nEn verdad, Madre santa, una espada traspasó tu alma. Por lo demás, esta espada no\nhubiera penetrado en la carne de tu Hijo sin atravesar tu alma. En efecto, después que\naquel Jesús —que es de todos, pero que es tuyo de un modo especialísimo— hubo\nexpirado, la cruel espada que abrió su costado, sin perdonarlo aun después de muerto,\ncuando ya no podía hacerle mal alguno, no llegó a tocar su alma, pero sí atravesó la tuya.\nPorque el alma de Jesús ya no estaba allí, en cambio la tuya no podía ser arrancada de\naquel lugar. Por tanto, la punzada del dolor atravesó tu alma, y, por esto, con toda razón,\nte llamamos más que mártir, ya que tus sentimientos de compasión superaron las\nsensaciones del dolor corporal.\n\n¿Por ventura no fueron peores que una espada aquellas palabras que atravesaron\nverdaderamente tu alma y penetraron hasta la separación del alma y del espíritu: Mujer,\nahí tienes a tu hijo? ¡Vaya cambio! Se te entrega a Juan en sustitución de Jesús, al siervo\nen sustitución del Señor, al discípulo en lugar del Maestro, al hijo de Zebedeo en lugar del\nHijo de Dios, a un simple hombre en sustitución del Dios verdadero. ¿Cómo no habían de\natravesar tu alma, tan sensible, estas palabras, cuando aun nuestro pecho, duro como la\npiedra o el hierro, se parte con sólo recordarlas?\n\nNo os admiréis, hermanos, de que María sea llamada mártir en el alma. Que se admire\nel que no recuerde haber oído cómo Pablo pone entre las peores culpas de los gentiles el\ncarecer de piedad. Nada más lejos de las entrañas de María, y nada más lejos debe estar\nde sus humildes servidores.\n\nPero quizá alguien dirá: \"¿Es que María no sabía que su Hijo había de morir?\" Sí, y con\ntoda certeza. \"¿Es que no sabía que había de resucitar al cabo de muy poco tiempo?,\" Sí,\ny con toda seguridad. \"¿Y, a pesar de ello, sufría por el Crucificado?\" Sí, y con toda\nvehemencia. Y si no, ¿qué clase de hombre eres tú, hermano, o de dónde te viene esta\n\nsabiduría, que te extrañas más de la compasión de María que de la pasión del Hijo de\nMaría? Éste murió en su cuerpo, ¿y ella no pudo morir en su corazón? Aquélla fue una\nmuerte motivada por un amor superior al que pueda tener cualquier otro hombre; esta\notra tuvo por motivo un amor que, después de aquél, no tiene semejante."
+    },
+    {
+     "tipo": "responsorio",
+     "texto": "R. Cuando llegaron al lugar llamado «La Calavera», lo crucificaron allí. * Junto a la cruz de\nJesús estaba su madre.\nV. Entonces una espada de dolor le traspasó el alma.\nR. Junto a la cruz de Jesús estaba su madre.",
+     "ref": "Lc 23, 33; Jn 19, 25; cf. Lc 2, 35"
+    }
+   ],
+   "laudes": [
+    {
+     "tipo": "cantico_evangelico",
+     "texto": "Ant. Alégrate, Madre dolorosa, porque, después de tantos sufrimientos, gozas ya de la\ngloria celestial, sentada junto al Hijo como reina del universo."
+    }
+   ],
+   "visperas2": [
+    {
+     "tipo": "cantico_evangelico",
+     "texto": "Ant. Jesús, al ver junto a la cruz a su madre y cerca al discípulo que tanto quería, dijo a su\nmadre: «Mujer, ahí tienes a tu hijo.» Luego, dijo al discípulo: «Ahí tienes a tu madre.»"
+    }
+   ]
+  },
+  "oracion": "Señor, tú has querido que la Madre compartiera los dolores de tu Hijo al pie de la cruz;\nhaz que la Iglesia, asociándose con María a la pasión de Cristo, merezca participar de su\nresurrección. Por nuestro Señor Jesucristo."
+ },
+ "16": {
+  "titulo": "San Cornelio, papa y san Cipriano, obispo, mártires",
+  "rango": "M",
+  "semblanza": "Cornelio fue ordenado obispo de la Iglesia de Roma el año 251; se opuso al cisma de los novacianos y, con la ayuda de Cipriano, pudo reafirmar su autoridad. Fue desterrado por el emperador Galo, y murió en Civitavecchia el año 253. Su cuerpo fue trasladado a Roma y sepultado en el cementerio de Calixto. Cipriano nació en Cartago hacia el año 210, de familia pagana. Se convirtió a la fe, fue ordenado presbítero y, el año 249, fue elegido obispo de su ciudad. En tiempos muy difíciles gobernó sabiamente su Iglesia con sus obras y sus escritos. En la persecución de Valeriano, primero fue desterrado y más tarde sufrió el martirio, el día 14 de septiembre del año 258.",
+  "comun": "Del Común de mártires o del Común de pastores.",
+  "horas": {
+   "oficio": [
+    {
+     "tipo": "lectura2",
+     "texto": "De las cartas de san Cipriano, obispo y mártir\n(Carta 60,1-2. 5: CSEL 3, 691-692. 694-695)\n\nUNA FE GENEROSA Y FIRME\n\nCipriano a su hermano Cornelio:\nHemos tenido noticia, hermano muy amado, del testimonio glorioso que habéis dado de\n\nvuestra fe y fortaleza; y hemos recibido con tanta alegría el honor de vuestra confesión,\nque nos consideramos partícipes y socios de vuestros méritos y alabanzas. En efecto, si\nformamos todos una misma Iglesia, si tenemos todos una sola alma y un solo corazón,\n¿qué sacerdote no se congratulará de las alabanzas tributadas a un colega suyo, como si\nse tratara de las suyas propias? ¿O qué hermano no se alegrará siempre de las alegrías de\nsus otros hermanos?\n\nNo hay manera de expresar cuán grande ha sido aquí la alegría y el regocijo, al\nenterarnos de vuestra victoria y vuestra fortaleza: de cómo tú has ido a la cabeza de tus\nhermanos en la confesión del nombre de Cristo, y de cómo esta confesión tuya, como\ncabeza de tu Iglesia, se ha visto a su vez robustecida por la confesión de los hermanos;\nde este modo, precediéndolos en el camino hacia la gloria, has hecho que fueran muchos\nlos que te siguieran, y ha sido un estímulo para que el pueblo confesara su fe el hecho de\nque te mostraras tú, el primero, dispuesto a confesarla en nombre de todos; y, así, no\nsabemos qué es lo más digno de alabanza en vosotros, si tu fe generosa y firme o la\ninseparable caridad de los hermanos. Ha quedado públicamente comprobada la fortaleza\ndel obispo que está al frente de su pueblo y ha quedado de manifiesto la unión entre los\nhermanos que han seguido sus huellas. Por el hecho de tener todos vosotros un solo\nespíritu y una sola voz, toda la Iglesia de Roma ha tenido parte en vuestra confesión.\n\nHa brillado en todo su fulgor, hermano muy amado, aquella fe vuestra, de la que habló\nel Apóstol. Él preveía, ya en espíritu, esta vuestra fortaleza y valentía, tan digna de\nalabanza, y pregonaba lo que más tarde había de suceder, atestiguando vuestros\nmerecimientos, ya que, alabando a vuestros antecesores, os incitaba a vosotros a\n\nimitarlos. Con vuestra unanimidad y fortaleza, habéis dado a los demás hermanos un\nmagnífico ejemplo de estas virtudes.\n\nY, teniendo en cuenta que la providencia del Señor nos advierte y pone en guardia y\nque los saludables avisos de la misericordia divina nos previenen que se acerca ya el día\nde nuestra lucha y combate, os exhortamos de corazón, en cuanto podemos, hermano\nmuy amado, por la mutua caridad que nos une, a que no dejemos de insistir junto con\ntodo el pueblo, en los ayunos, vigilias y oraciones. Porque éstas son nuestras armas\ncelestiales, que nos harán mantener firmes y perseverar con fortaleza; éstas son las\ndefensas espirituales y los dardos divinos que nos protegen.\n\nAcordémonos siempre unos de otros, con grande concordia y unidad de espíritu,\nencomendémonos siempre mutuamente en la oración y prestémonos ayuda con mutua\ncaridad cuando llegue el momento de la tribulación y de la angustia."
+    },
+    {
+     "tipo": "responsorio",
+     "texto": "R. Dios nos contempla, Cristo y sus ángeles nos miran, mientras luchamos por la fe. * Qué\ndignidad tan grande, qué felicidad tan plena es luchar bajo la mirada de Dios y ser\ncoronados por Cristo.\nV. Revistámonos de fuerza y preparémonos para la lucha con un espíritu indoblegable, con\nuna fe sincera, con una total entrega.\nR. Qué dignidad tan grande, qué felicidad tan plena es luchar bajo la mirada de Dios y ser\ncoronados por Cristo.\nO bien:\nDe las Actas proconsulares del martirio de san Cipriano, obispo\n(Cap. 3-6: CSEL 3,112-114)\n\nTRATÁNDOSE DE UN ASUNTO TAN CLARO, NO HAY POR QUÉ PENSARLO MÁS\n\nEl día catorce de septiembre por la mañana, se congregó una gran multitud en la Villa\nde Sexto, conforme al mandato del procónsul Galerio Máximo. Y, así, dicho procónsul\nGalerio Máximo, sentado en su tribunal, en el atrio llamado Sauciolo, mandó ese mismo\ndía que trajeran a Cipriano a su presencia. Cuando se lo trajeron, el procónsul Galerio\nMáximo dijo al obispo Cipriano:\n\n\"¿Tú eres Tascio Cipriano?\"\nEl obispo Cipriano respondió:\n\"Lo soy.\"\nEl procónsul Galerio Máximo dijo:\n\"¿Tú te presentas ante los hombres como jefe de esta doctrina sacrílega?\"\nEl obispo Cipriano respondió:\n\"Así es.\"\nEl procónsul Galerio Máximo prosiguió:\n\"Los sacratísimos emperadores te ordenan que sacrifiques\"\nEl obispo Cipriano respondió:\n\"No lo haré.\"\nGalerio Máximo insistió:\n\"Piénsalo bien.\"\nPero el obispo Cipriano replicó con firmeza:\n\"Haz lo que se te ha mandado; tratándose de un asunto tan claro, no hay por qué\n\npensarlo más.\"\nGalerio Máximo, después de consultar con sus asesores, pronunció, como a\n\nregañadientes, la sentencia, con estas palabras:\n\n\"Por mucho tiempo has vivido según esta doctrina sacrílega y has hecho que fueran\nmuchos los que te imitaran en este nefando acuerdo, con lo que te has constituido en\nenemigo de los dioses de Roma y de los sagrados cultos, sin que sirvieran de nada los\nesfuerzos de los sacratísimos príncipes Valeriano y Galieno, Augustos, y de Valeriano,\nnobilísimo César, por atraerte de nuevo a la práctica de su religión. Así pues, habiendo\nsido hallado autor y abanderado de gravísimos crímenes, servirás de escarmiento para\naquellos que te imitaron en tu delito: con tu sangre será restablecida la justicia.\"\n\nDicho esto, leyó la fórmula de la sentencia:\n\"Decretamos que Tascio Cipriano sea decapitado.\"\nEl obispo Cipriano dijo:\n\"Gracias sean dadas a Dios.\"\nAl oír esta sentencia, la muchedumbre de los hermanos decía:\n\"Seamos decapitados junto con él.\"\nY se originó un tumulto entre la gran muchedumbre que lo seguía al lugar del suplicio.\n\nAsí, pues, Cipriano fue conducido al campo de Sexto, y allí se despojó del manto, se\narrodilló y se prosternó ante el Señor en oración. Luego se despojó también de la\ndalmática y se la entregó a los diáconos, y, quedándose en su túnica de lino, esperó la\nllegada del verdugo.\n\nCuando éste llegó, Cipriano mandó a los suyos que dieran al verdugo veinticinco\nmonedas de oro. Los hermanos tendían ante él lienzos y pañuelos. Luego, el\nbienaventurado Cipriano se vendó los ojos con sus propias manos. Pero, como no podía\natarse por sí mismo las manos, lo hicieron el presbítero Juliano y el subdiácono Juliano.\n\nDe este modo sufrió el martirio el bienaventurado Cipriano, y su cuerpo fue colocado en\nun lugar cercano para evitar la curiosidad de los gentiles. Al llegar la noche lo sacaron de\nallí y fue llevado triunfalmente, con cirios y lámparas, al solar del procurador Macrobio\nCandidiano, lugar situado en la vía Mapaliense, junto a las piscinas. Al cabo de pocos días,\nmurió el procónsul Galerio Máximo.\n\nEl bienaventurado Cipriano sufrió martirio el día catorce de septiembre, siendo\nemperadores Valeriano y Galieno, bajo el reinado de nuestro Señor Jesucristo, a quien sea\nel honor y la gloria por los siglos de los siglos. Amén.",
+     "ref": "S. Cipriano, Carta 58"
+    },
+    {
+     "tipo": "responsorio",
+     "texto": "R. Dios nos contempla, Cristo y sus ángeles nos miran, mientras luchamos por la fe. * Qué\ndignidad tan grande, qué felicidad tan plena es luchar bajo la mirada de Dios y ser\ncoronados por Cristo.\nV. Revistámonos de fuerza y preparémonos para la lucha con un espíritu indoblegable, con\nuna fe sincera, con una total entrega.\nR. Qué dignidad tan grande, qué felicidad tan plena es luchar bajo la mirada de Dios y ser\ncoronados por Cristo.",
+     "ref": "S. Cipriano, Carta 58"
+    }
+   ],
+   "laudes": [
+    {
+     "tipo": "cantico_evangelico",
+     "texto": "Ant. Oh muerte preciosa, que compra la inmortalidad al precio de su sangre."
+    }
+   ],
+   "visperas2": [
+    {
+     "tipo": "cantico_evangelico",
+     "texto": "Ant. Oh dichosa Iglesia nuestra, ennoblecida por la gloriosa sangre de los mártires de\nCristo."
+    }
+   ]
+  },
+  "oracion": "Oh Dios, que has puesto al frente de tu pueblo, como abnegados pastores y mártires\nintrépidos, a los santos Cipriano y Cornelio, concédenos, por su intercesión, fortaleza de\nánimo y de fe para trabajar con empeño por la unidad de tu Iglesia. Por nuestro Señor\nJesucristo."
+ },
+ "20": {
+  "titulo": "San Andrés Kim Taegon, presbítero, y san Pablo Chong Hasang y compañeros, mártires",
+  "rango": "M",
+  "semblanza": "A principios del siglo XVII, gracias a la actividad de unos laicos, la fe cristiana penetró por vez primera en Corea. Una decidida y fervorosa comunidad sin pastores fue guiada y animada casi exclusivamente por laicos, hasta el año 1836, a finales del cual entraron furtivamente en el país los primeros misioneros, procedentes de Francia. En esta comunidad, durante las persecuciones de los años 1839, 1846 y 1866, hubo 103 santos mártires, entre los cuales destacan el primer presbítero y fervoroso pastor de almas Andrés Kim Taegon y el insigne apóstol laico Pablo Chong Hasang; los demás eran principalmente laicos, hombres y mujeres, casados o solteros, ancianos, jóvenes y niños, los cuales, con sus sufrimientos, consagraron las primicias de la Iglesia coreana, regándola generosamente con la sangre preciosa de su martirio.",
+  "comun": "Del Común de mártires.",
+  "horas": {
+   "oficio": [
+    {
+     "tipo": "lectura2",
+     "texto": "De la última exhortación de san Andrés Kim Taegon, presbítero y mártir\n(Pro Corea. Documenta. ed. Mission Catholique Séoul, Seúl/París 1938, vol. 1, 74-75)\n\nLA FE ES CORONADA POR EL AMOR Y LA PERSEVERANCIA\n\nHermanos y amigos muy queridos: Consideradlo una y otra vez: Dios, al principio de los\ntiempos, dispuso el cielo y la tierra y todo lo que existe, meditad luego por qué y con qué\nfinalidad creó de modo especial al hombre a su imagen y semejanza.\n\nSi en este mundo, lleno de peligros y de miserias, no reconociéramos al Señor como\ncreador, de nada nos serviría haber nacido ni continuar aún vivos. Aunque por la gracia de\nDios hemos venido a este mundo y también por la gracia de Dios hemos recibido el\nbautismo y hemos ingresado en la Iglesia, y, convertidos en discípulos del Señor, llevamos\nun nombre glorioso, ¿de qué nos serviría un nombre tan excelso, si no correspondiera a la\nrealidad? Si así fuera, no tendría sentido haber venido a este mundo y formar parte de la\nIglesia; más aún, esto equivaldría a traicionar al Señor y su gracia. Mejor sería no haber\nnacido que recibir la gracia del Señor y pecar contra él.\n\nConsiderad al agricultor cuando siembra en su campo: a su debido tiempo ara la tierra,\nluego la abona con estiércol y, sometiéndose de buen grado al trabajo y al calor, cultiva la\n\nvaliosa semilla. Cuando llega el tiempo de la siega, si las espigas están bien llenas, su\ncorazón se alegra y salta de felicidad, olvidándose del trabajo y del sudor. Pero si las\nespigas resultan vacías y no encuentra en ellas más que paja y cáscara, el agricultor se\nacuerda del duro trabajo y del sudor y abandona aquel campo en el que tanto había\ntrabajado.\n\nDe manera semejante el Señor hace de la tierra su campo, de nosotros, los hombres, el\narroz, de la gracia el abono, y por la encarnación y la redención nos riega con su sangre,\npara que podamos crecer y llegar a la madurez. Cuando en el día del juicio llegue el\nmomento de la siega, el que haya madurado por la gracia se alegrará en el reino de los\ncielos como hijo adoptivo de Dios, pero el que no haya madurado se convertirá en\nenemigo, a pesar de que él también ya había sido hijo adoptivo de Dios, y sufrirá el\ncastigo eterno merecido.\n\nHermanos muy amados, tened esto presente: Jesús, nuestro Señor, al bajar a este\nmundo, soportó innumerables padecimientos, con su pasión fundó la santa Iglesia y la\nhace crecer con los sufrimientos de los fieles. Por más que los poderes del mundo la\nopriman y la ataquen, nunca podrán derrotarla. Después de la ascensión de Jesús, desde\nel tiempo de los apóstoles hasta hoy, la Iglesia santa va creciendo por todas partes en\nmedio de tribulaciones.\n\nTambién ahora, durante cincuenta o sesenta años, desde que la santa Iglesia penetró\nen nuestra Corea, los fieles han sufrido persecución, y aun hoy mismo la persecución se\nrecrudece, de tal manera que muchos compañeros en la fe, entre los cuales yo mismo,\nestán encarcelados, como también vosotros os halláis en plena tribulación. Si todos\nformamos un solo cuerpo, ¿cómo no sentiremos una profunda tristeza? ¿Cómo dejaremos\nde experimentar el dolor, tan humano, de la separación?\n\nNo obstante, como dice la Escritura, Dios se preocupa del más pequeño cabello de\nnuestra cabeza y, con su omnisciencia, lo cuida; ¿cómo, por tanto, esta gran persecución\npodría ser considerada de otro modo que como una decisión del Señor, o como un premio\no castigo suyo?\n\nBuscad, pues, la voluntad de Dios y luchad de todo corazón por Jesús, el jefe celestial,\ny venced al demonio de este mundo, que ha sido ya vencido por Cristo.\n\nOs lo suplico: no olvidéis el amor fraterno, sino ayudaos mutuamente, y perseverad,\nhasta que el Señor se compadezca de nosotros y haga cesar la tribulación.\n\nAquí estamos veinte y, gracias a Dios, estamos todos bien. Si alguno es ejecutado, os\nruego que no os olvidéis de su familia. Me quedan muchas cosas por deciros, pero, ¿cómo\nexpresarlas por escrito? Doy fin a esta carta. Ahora que está ya cerca el combate decisivo,\nos pido que os mantengáis en la fidelidad, para que, finalmente, nos congratulemos juntos\nen el cielo. Recibid el beso de mi amor."
+    },
+    {
+     "tipo": "responsorio",
+     "texto": "R. Éstos son los mártires que dieron testimonio de Cristo sin temor a las amenazas,\nalabando al Señor. * La sangre de los mártires es semilla de cristianos.\nV. Fueron tenidos por desconocidos, aunque eran conocidos de sobra; por moribundos,\naunque estaban bien vivos; por necesitados, aunque todo lo poseían.\nR. La sangre de los mártires es semilla de cristianos.",
+     "ref": "Cf. 2 Co 6, 9-10"
+    }
+   ]
+  },
+  "oracion": "Oh Dios, creador y salvador de todos los hombres, que en Corea de modo admirable,\nllamaste a la fe católica a un pueblo de adopción y lo acrecentaste con la gloriosa\nprofesión de fe de los santos mártires Andrés, Pablo y sus compañeros, concédenos, por\nsu ejemplo e intercesión, perseverar también nosotros hasta la muerte en el cumplimiento\nde tus mandatos. Por nuestro Señor Jesucristo."
+ },
+ "21": {
+  "titulo": "San Mateo, apóstol y evangelista",
+  "rango": "F",
+  "semblanza": "Nació en Cafarnaún, y, cuando Jesús lo llamó, ejercía el oficio de recaudador de impuestos. Escribió el evangelio en lengua aramea y, según la tradición, predicó en Oriente.",
+  "comun": "Del Común de apóstoles, excepto lo siguiente:",
+  "horas": {
+   "oficio": [
+    {
+     "tipo": "salmodia",
+     "texto": "Ant. 1. A toda la tierra alcanza su pregón y hasta los límites del orbe su lenguaje.\n\nSalmo 18 A\n\nEl cielo proclama la gloria de Dios,\nel firmamento pregona\nla obra de sus manos:\nel día al día le pasa el mensaje,\nla noche a la noche se lo susurra.\n\nSin que hablen, sin que pronuncien,\nsin que resuene su voz,\na toda la tierra alcanza su pregón\ny hasta los límites del orbe su lenguaje.\n\nAllí le ha puesto su tienda al sol:\nél sale como el esposo de su alcoba,\ncontento como un héroe,\na recorrer su camino.\n\nAsoma por un extremo del cielo,\ny su órbita llega al otro extremo:\nnada se libra de su calor.\n\nAnt. A toda la tierra alcanza su pregón y hasta los límites del orbe su lenguaje.\nAnt. 2. Proclamaron la obra de Dios y meditaron sus acciones.\n\nSalmo 63\n\nEscucha, oh Dios, la voz de mi lamento,\nprotege mi vida del terrible enemigo;\nescóndeme de la conjura de los perversos\ny del motín de los malhechores:\n\nafilan sus lenguas como espadas\ny disparan como flechas palabras venenosas,\npara herir a escondidas al inocente,\npara herirlo por sorpresa y sin riesgo.\n\nSe animan al delito,\ncalculan cómo esconder trampas,\ny dicen: \"¿quién lo descubrirá?\"\n\nInventan maldades y ocultan sus invenciones,\nporque su mente y su corazón no tienen fondo.\n\nPero Dios los acribilla a flechazos,\npor sorpresa los cubre de heridas;\nsu misma lengua los lleva a la ruina,\ny los que lo ven menean la cabeza.\n\nTodo el mundo se atemoriza,\nproclama la obra de Dios\ny medita sus acciones.\n\nEl justo se alegra con el Señor,\nse refugia en él,\ny se felicitan los rectos de corazón.\n\nAnt. Proclamaron la obra de Dios y meditaron sus acciones.\nAnt. 3. Pregonaron su justicia y todos los pueblos contemplaron su gloria.\n\nSalmo 96\n\nEl Señor reina, la tierra goza,\nse alegran las islas innumerables.\nTiniebla y nube lo rodea,\njusticia y derecho sostienen su trono.\n\nDelante de él avanza el fuego,\nabrasando en torno a los enemigos;\nsus relámpagos deslumbran el orbe,\ny, viéndolos, la tierra se estremece.\n\nLos montes se derriten como cera\nante el dueño de toda la tierra;\nlos cielos pregonan su justicia,\ny todos los pueblos contemplan su gloria.\n\nLos que adoran estatuas se sonrojan,\nlos que ponen su orgullo en los ídolos;\nante él se postran todos los dioses.\n\nLo oye Sión, y se alegra,\nse regocijan las ciudades de Judá\npor tus sentencias, Señor;\n\nporque tú eres, Señor,\naltísimo sobre toda la tierra,\nencumbrado sobre todos los dioses.\n\nEl Señor ama al que aborrece el mal,\nprotege la vida de sus fieles\ny los libra de los malvados.\n\nAmanece la luz para el justo,\ny la alegría para los rectos de corazón.\nAlegraos, justos, con el Señor,\ncelebrad su santo nombre.\n\nAnt. Pregonaron su justicia y todos los pueblos contemplaron su gloria.\nV. Contaron las alabanzas del Señor y su poder.\nR. Y las maravillas que realizó."
+    },
+    {
+     "tipo": "himno",
+     "texto": "I\n\n¡Guardadnos en la fe y en la unidad,\nvosotros, que ya estáis desde el principio\nen comunión con Cristo y con el Padre!\n\n¿A quién acudiremos\ncuando la fe va herida\nsino a vosotros, testigos vigilantes,\n\nque anunciáis con palabra poderosa\nlo que era en el principio,\nlo que vieron de cerca vuestros ojos\ny lo que vuestras manos\ntocaron y palparon del Verbo de la vida?\n\n¡Guardadnos en la fe y en la unidad,\nvosotros, que ya estáis desde el principio\nen comunión con Cristo y con el Padre!\n\n¿En quién descansaremos\nla duda y la esperanza\nsino en vosotros, cimientos de la Iglesia,\nque habéis visto al Señor resucitado,\ny oísteis al Espíritu\nrevelar por el fuego y la palabra\nel misterio de Cristo\nque estaba oculto en Dios desde los siglos?\n\n¡Guardadnos en la fe y en la unidad,\nvosotros, que ya estáis desde el principio\nen comunión con Cristo y con el Padre!\n\nII\n\nVoceros de Dios,\nheraldos de amor,\napóstoles santos.\n\nLocura de cruz,\nde Dios es la luz,\napóstoles santos.\n\nMensaje del Rey,\nde amor es la ley,\napóstoles santos.\n\nDe Cristo solaz\nsois cristos de paz,\napóstoles santos.\n\nSois piedra frontal\ndel reino final\napóstoles santos.\nO bien:\nMensajeros de Dios\ndadnos la Nueva;\nmensajeros de paz,\nsea paz nuestra.\n\nMensajeros de luz,\n\nsea luz nuestra;\nmensajeros de fe,\nsea fe nuestra.\n\nMensajeros del Rey,\nsea rey nuestro;\nmensajeros de amor,\nsea amor nuestro. Amén."
+    },
+    {
+     "tipo": "lectura1",
+     "texto": "De la carta del apóstol san Pablo a los Efesios 4,1-16\n\nDIVERSIDAD DE FUNCIONES EN UN MISMO CUERPO\n\nHermanos: Yo, el prisionero por el Señor, os ruego que andéis como pide la vocación a\nla que habéis sido convocados. Sed siempre humildes y amables, sed comprensivos,\nsobrellevaos mutuamente con amor; esforzaos en mantener la unidad del Espíritu, con el\nvínculo de la paz. Un solo cuerpo y un solo Espíritu, como una sola es la esperanza de la\nvocación a la que habéis sido convocados. Un Señor, una fe, un bautismo. Un Dios, Padre\nde todo, que lo trasciende todo, y lo penetra todo, y lo invade todo.\n\nA cada uno de nosotros se le ha dado la gracia según la medida del don de Cristo. Por\neso dice la Escritura: «Subió a lo alto llevando cautivos y dio dones a los hombres.» El\n«subió» supone que había bajado a lo profundo de la tierra; y el que bajó es el mismo que\nsubió por encima de todos los cielos para llenar el universo.\n\nY él ha constituido a unos, apóstoles, a otros, profetas, a otros, evangelizadores, a\notros, pastores y maestros, para el perfeccionamiento de los santos, en función de su\nministerio, y para la edificación del cuerpo de Cristo; hasta que lleguemos todos a la\nunidad en la fe y en el conocimiento del Hijo de Dios, al hombre perfecto, a la medida de\nCristo en su plenitud. Para que ya no seamos niños sacudidos por las olas y llevados al\nretortero por todo viento de doctrina, en la trampa de los hombres, que con astucia\nconduce al error; sino que, realizando la verdad en el amor, hagamos crecer todas las\ncosas hacia él, que es la cabeza: Cristo, del cual todo el cuerpo, bien ajustado y unido a\ntravés de todo el complejo de junturas que lo nutren, actuando a la medida de cada parte,\nse procura el crecimiento del cuerpo, para construcción de sí mismo en el amor."
+    },
+    {
+     "tipo": "responsorio",
+     "texto": "R. Ninguna predicción antigua aconteció por designio humano; * Hombres como eran,\nhablaron de parte de Dios, movidos por el Espíritu Santo.\nV. Es el Señor quien da sensatez, de su boca proceden saber e inteligencia.\nR. Hombres como eran, hablaron de parte de Dios, movidos por el Espíritu Santo.",
+     "ref": "2 P 1, 21; Pr 2, 6"
+    },
+    {
+     "tipo": "lectura2",
+     "texto": "De las homilías de san Beda el Venerable, presbítero\n(Homilía 21: CCL 122,149-151)\n\nJESÚS LO VIO Y, PORQUE LO AMÓ, LO ELIGIÓ\n\nJesús vio a un hombre llamado Mateo, sentado al mostrador de los impuestos, y le dijo:\n\"Sígueme.\" Lo vio más con la mirada interna de su amor que con los ojos corporales.\nJesús vio al publicano y, porque lo amó, lo eligió, y le dijo: Sígueme. Sígueme, que quiere\ndecir: \"Imítame\". Le dijo: Sígueme, más que con sus pasos, con su modo de obrar.\nPorque, quien dice que permanece en Cristo debe vivir como vivió él.\n\nÉl —continúa el texto sagrado— se levantó y lo siguió. No hay que extrañarse del hecho\nde que aquel recaudador de impuestos, a la primera indicación imperativa del Señor,\nabandonase su preocupación por las ganancias terrenas y, dejando de lado todas sus\nriquezas, se adhiriese al grupo que acompañaba a aquel que él veía carecer en absoluto\nde bienes. Es que el Señor, que lo llamaba por fuera con su voz, lo iluminaba de un modo\ninterior e invisible para que lo siguiera, infundiendo en su mente la luz de la gracia\nespiritual, para que comprendiese que aquel que aquí en la tierra lo invitaba a dejar sus\nnegocios temporales era capaz de darle en el cielo un tesoro incorruptible.\n\nY, estando en la mesa en casa de Mateo, muchos publicanos y pecadores, que habían\nacudido, se sentaron con Jesús y sus discípulos. La conversión de un solo publicano fue\nuna muestra de penitencia y de perdón para muchos otros publicanos y pecadores. Ello\nfue un hermoso y verdadero presagio, ya que Mateo, que estaba destinado a ser apóstol y\nmaestro de los gentiles, en su primer trato con el Señor arrastró en pos de sí por el\ncamino de la salvación a un considerable grupo de pecadores. De este modo, ya en los\ninicios de su fe, comienza su ministerio de evangelizador que luego, llegado a la madurez\nen la virtud, había de desempeñar. Pero, si deseamos penetrar más profundamente el\nsignificado de estos hechos debemos observar que Mateo no sólo ofreció al Señor un\nbanquete corporal en su casa terrena, sino que le preparó, por su fe y por su amor, otro\nbanquete mucho más grato en la casa de su interior, según aquellas palabras del\nApocalipsis: Estoy a la puerta llamando: si alguien oye y me abre, entraré y comeremos\njuntos.\n\nNosotros escuchamos su voz, le abrimos la puerta y lo recibimos en nuestra casa,\ncuando de buen grado prestamos nuestro asentimiento a sus advertencias, ya vengan\ndesde fuera, ya desde dentro, y ponemos por obra lo que conocemos que es voluntad\nsuya. Él entra para comer con nosotros, y nosotros con él, porque, por el don de su amor,\nhabita en el corazón de los elegidos, para saciarlos con la luz de su continua presencia,\nhaciendo que sus deseos tiendan cada vez más hacia las cosas celestiales y deleitándose\nél mismo en estos deseos como en un manjar sabrosísimo."
+    },
+    {
+     "tipo": "responsorio",
+     "texto": "R. Fue Mateo un ágil escribano, doctísimo en la ley del Dios del cielo, * Adiestró su\ncorazón para investigar la ley del Señor, para practicar y enseñar sus mandatos, según el\ndon que él le otorgó misericordiosamente.\nV. A él le fue confiado el Evangelio de la gloria de Dios.\nR. Adiestró su corazón para investigar la ley del Señor, para practicar y enseñar sus\nmandatos, según el don que él le otorgó misericordiosamente."
+    },
+    {
+     "tipo": "te_deum"
+    },
+    {
+     "tipo": "oracion",
+     "texto": "Oh Dios, que en tu infinita misericordia te dignaste elegir a san Mateo para convertirlo\nde publicano en apóstol, concédenos que, fortalecidos con su ejemplo y su intercesión,\npodamos seguirte siempre y permanecer unidos a ti con fidelidad. Por nuestro Señor\nJesucristo."
+    }
+   ],
+   "laudes": [
+    {
+     "tipo": "himno",
+     "texto": "Vosotros, que escuchasteis la llamada\nde viva voz que Cristo os dirigía,\nabrid nuestro vivir y nuestra alma\nal mensaje de amor que él nos envía.\n\nVosotros, que invitados al banquete\ngustasteis el sabor del nuevo vino,\nllenad el vaso, del amor que ofrece,\nal sediento de Dios en su camino.\n\nVosotros, que tuvisteis tan gran suerte\nde verle dar a muertos nueva vida,\nno dejéis que el pecado y que la muerte\nnos priven de la vida recibida.\n\nVosotros, que lo visteis ya glorioso,\nhecho Señor de gloria sempiterna,\nhaced que nuestro amor conozca el gozo\nde vivir junto a él la vida eterna. Amén."
+    },
+    {
+     "tipo": "salmodia",
+     "texto": "Ant. 1. Éste es mi mandamiento: que os améis unos a otros como yo os he amado.\n\nSalmo 62, 2-9\n\nEL ALMA SEDIENTA DE DIOS\n\nMadruga por Dios todo el que rechaza las obras de las tinieblas.\n¡Oh Dios!, tú eres mi Dios, por ti madrugo,\n\nmi alma está sedienta de ti;\nmi carne tiene ansia de ti,\ncomo tierra reseca, agostada, sin agua.\n\n¡Cómo te contemplaba en el santuario\nviendo tu fuerza y tu gloria!\nTu gracia vale más que la vida,\nte alabarán mis labios.\n\nToda mi vida te bendeciré\ny alzaré las manos invocándote.\nMe saciaré de manjares exquisitos,\ny mis labios te alabarán jubilosos.\n\nEn el lecho me acuerdo de ti\ny velando medito en ti,\nporque fuiste mi auxilio,\ny a la sombra de tus alas canto con júbilo;\nmi alma está unida a ti,\ny tu diestra me sostiene.\n\nAnt. Éste es mi mandamiento: que os améis unos a otros como yo os he amado.\nAnt. 2. Nadie tiene amor más grande que el que da la vida por sus amigos.\n\nCántico Dn 3, 57-88. 56\n\nTODA LA CREACIÓN ALABE AL SEÑOR\n\nAlabad al Señor, sus siervos todos (Ap 19, 5).\n\nCriaturas todas del Señor, bendecid al Señor,\nensalzadlo con himnos por los siglos.\n\nÁngeles del Señor, bendecid al Señor;\ncielos, bendecid al Señor.\n\nAguas del espacio, bendecid al Señor;\nejércitos del Señor, bendecid al Señor.\n\nSol y luna, bendecid al Señor;\nastros del cielo, bendecid al Señor.\n\nLluvia y rocío, bendecid al Señor;\nvientos todos, bendecid al Señor.\n\nFuego y calor, bendecid al Señor;\nfríos y heladas, bendecid al Señor.\n\nRocíos y nevadas, bendecid al Señor;\ntémpanos y hielos, bendecid al Señor.\n\nEscarchas y nieves, bendecid al Señor;\nnoche y día, bendecid al Señor.\n\nLuz y tinieblas, bendecid al Señor;\nrayos y nubes, bendecid al Señor.\n\nBendiga la tierra al Señor,\nensálcelo con himnos por los siglos.\n\nMontes y cumbres, bendecid al Señor;\ncuanto germina en la tierra, bendiga al Señor.\n\nManantiales, bendecid al Señor;\nmares y ríos, bendecid al Señor.\n\nCetáceos y peces, bendecid al Señor;\naves del cielo, bendecid al Señor.\n\nFieras y ganados, bendecid al Señor,\nensalzadlo con himnos por los siglos.\n\nHijos de los hombres, bendecid al Señor;\nbendiga Israel al Señor.\n\nSacerdotes del Señor, bendecid al Señor;\nsiervos del Señor, bendecid al Señor.\n\nAlmas y espíritus justos, bendecid al Señor;\nsantos y humildes de corazón, bendecid al Señor.\n\nAnanías, Azarías y Misael, bendecid al Señor,\nensalzadlo con himnos por los siglos.\n\nBendigamos al Padre, al Hijo y al Espíritu Santo,\nensalcémoslo con himnos por los siglos.\n\nBendito el Señor en la bóveda del cielo,\nalabado y glorioso y ensalzado por los siglos.\n\nNo se dice Gloria al Padre.\nAnt. Nadie tiene amor más grande que el que da la vida por sus amigos.\nAnt. 3. Vosotros sois mis amigos si hacéis lo que yo os mando.\n\nSalmo 149\n\nALEGRÍA DE LOS SANTOS\n\nLos hijos de la Iglesia, nuevo pueblo de Dios, se alegran en su Rey, Cristo, el Señor\n(Hesiquio).\n\nCantad al Señor un cántico nuevo,\nresuene su alabanza en la asamblea de los fieles;\nque se alegre Israel por su Creador,\nlos hijos de Sión por su Rey.\n\nAlabad su nombre con danzas,\ncantadle con tambores y cítaras;\nporque el Señor ama a su pueblo\ny adorna con la victoria a los humildes.\n\nQue los fieles festejen su gloria\ny canten jubilosos en filas:\ncon vítores a Dios en la boca\ny espadas de dos filos en las manos:\n\npara tomar venganza de los pueblos\ny aplicar el castigo a las naciones,\nsujetando a los reyes con argollas,\na los nobles con esposas de hierro.\n\nEjecutar la sentencia dictada\nes un honor para todos sus fieles.\n\nAnt. Vosotros sois mis amigos si hacéis lo que yo os mando."
+    },
+    {
+     "tipo": "lectura_breve",
+     "texto": "Ya no sois extranjeros ni forasteros, sino que sois ciudadanos del pueblo de Dios y\nmiembros de la familia de Dios. Estáis edificados sobre el cimiento de los apóstoles y\nprofetas, y el mismo Cristo Jesús es la piedra angular. Por él todo el edificio queda\nensamblado, y se va levantando hasta formar un templo consagrado al Señor. Por él\ntambién vosotros os vais integrando en la construcción, para ser morada de Dios por el\nEspíritu.",
+     "ref": "Ef 2, 19-22"
+    },
+    {
+     "tipo": "responsorio_breve",
+     "texto": "V. Los nombrarás príncipes sobre toda la tierra.\nR. Los nombrarás príncipes sobre toda la tierra.\nV. Harán memorable tu nombre, Señor.\n\nR. Sobre toda la tierra.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. Los nombrarás príncipes sobre toda la tierra."
+    },
+    {
+     "tipo": "cantico_evangelico",
+     "texto": "Ant. Vio Jesús a un hombre llamado Mateo, sentado al mostrador de los impuestos, y le\ndijo: «Sígueme.» Él se levantó y lo siguió."
+    },
+    {
+     "tipo": "preces",
+     "texto": "Demos gracias a nuestro Padre que está en los cielos, porque por medio de los apóstoles\nnos ha dado parte en la herencia de los elegidos, y aclamémosle diciendo:\nEl coro de los apóstoles te alaba, Señor.\n\nTe alabamos, Señor, porque por medio de los apóstoles nos has dado la mesa de tu\ncuerpo y de tu sangre,\n— en ella encontramos nuestra fuerza y nuestra vida.\n\nTe alabamos, Señor, porque por medio de los apóstoles nos has preparado la mesa de tu\npalabra,\n— por ella crecemos en el conocimiento de la verdad y se acrecienta nuestro gozo.\n\nTe alabamos, Señor, porque por medio de los apóstoles has fundado tu Iglesia,\n— por ella nos edificas en la unidad de tu pueblo.\n\nTe alabamos, Señor, porque por medio de los apóstoles nos has dado el bautismo y la\npenitencia,\n— por ellos nos purificas de todas nuestras culpas.\nSe pueden añadir algunas intenciones libres.\nConcluyamos nuestra oración con la plegaria que Jesús enseñó a los apóstoles: Padre\nnuestro.\nLa oración conclusiva como en el Propio de los santos."
+    },
+    {
+     "tipo": "oracion",
+     "texto": "Oh Dios, que en tu infinita misericordia te dignaste elegir a san Mateo para convertirlo\nde publicano en apóstol, concédenos que, fortalecidos con su ejemplo y su intercesión,\npodamos seguirte siempre y permanecer unidos a ti con fidelidad. Por nuestro Señor\nJesucristo."
+    }
+   ],
+   "visperas2": [
+    {
+     "tipo": "himno",
+     "texto": "Benditos son los pies de los que llegan\npara anunciar la paz que el mundo espera,\napóstoles de Dios que Cristo envía,\nvoceros de su voz, grito del Verbo.\n\nDe pie en la encrucijada del camino\ndel hombre peregrino y de los pueblos,\nes el fuego de Dios el que los lleva\ncomo cristos vivientes a su encuentro.\n\nAbrid, pueblos, la puerta a su llamada,\nla verdad y el amor son dos que llevan;\nno temáis, pecadores, acogedlos,\nel perdón y la paz serán su gesto.\n\nGracias, Señor, que el pan de tu palabra\nnos llega por tu amor, pan verdadero,\ngracias, Señor, que el pan de vida nueva\nnos llega por tu amor, partido y tierno. Amén.\nO bien:\n¡Columnas de la Iglesia, piedras vivas!\n¡Apóstoles de Dios, grito del Verbo!\n\nBenditos vuestros pies, porque han llegado\npara anunciar la paz al mundo entero.\n\nDe pie en la encrucijada de la vida,\ndel hombre peregrino y de los pueblos,\nlleváis agua de Dios a los cansados,\nhambre de Dios lleváis a los hambrientos.\n\nDe puerta en puerta va vuestro mensaje,\nque es verdad y es amor y es Evangelio.\nNo temáis, pecadores, que sus manos\nson caricias de paz y de consuelo.\n\nGracias, Señor, que el pan de tu palabra\nnos llega por tu amor, pan verdadero;\ngracias, Señor, que el pan de vida nueva\nnos llega por tu amor, partido y tierno. Amén."
+    },
+    {
+     "tipo": "salmodia",
+     "texto": "Ant. 1. Vosotros sois los que habéis perseverado conmigo en mis pruebas.\n\nSalmo 115\n\nTenía fe, aún cuando dije:\n\"¡Qué desgraciado soy!\"\nYo decía en mi apuro:\n\"Los hombres son unos mentirosos\".\n\n¿Cómo pagaré al Señor\ntodo el bien que me ha hecho?\nAlzaré la copa de la salvación,\ninvocando su nombre.\nCumpliré al Señor mis votos\nen presencia de todo el pueblo.\n\nMucho le cuesta al Señor\nla muerte de sus fieles.\nSeñor, yo soy tu siervo,\nsiervo tuyo, hijo de tu esclava:\nrompiste mis cadenas.\n\nTe ofreceré un sacrificio de alabanza,\ninvocando tu nombre, Señor.\nCumpliré al Señor mis votos\nen presencia de todo el pueblo,\nen el atrio de la casa del Señor,\nen medio de ti, Jerusalén.\n\nAnt. Vosotros sois los que habéis perseverado conmigo en mis pruebas.\nAnt. 2. Yo estoy en medio de vosotros como el que sirve.\n\nSalmo 125\n\nCuando el Señor cambió la suerte de Sión,\nnos parecía soñar:\nla boca se nos llenaba de risas,\nla lengua de cantares.\n\nHasta los gentiles decían:\n\"El Señor ha estado grande con ellos\".\nEl Señor ha estado grande con nosotros,\ny estamos alegres.\n\nQue el Señor cambie nuestra suerte,\ncomo los torrentes del Negueb.\nLos que sembraban con lágrimas\ncosechan entre cantares.\n\nAl ir, iba llorando,\nllevando la semilla;\nal volver, vuelve cantando,\ntrayendo sus gavillas.\n\nAnt. Yo estoy en medio de vosotros como el que sirve.\nAnt. 3. Ya no os llamo siervos, a vosotros os llamo amigos, porque todo lo que he oído a\nmi Padre os lo he dado a conocer.\n\nCántico  Ef 1, 3-10\n\nBendito sea Dios,\nPadre de nuestro Señor Jesucristo,\nque nos ha bendecido en la persona de Cristo\ncon toda clase de bienes espirituales y celestiales.\n\nÉl nos eligió en la persona de Cristo,\nantes de crear el mundo,\npara que fuésemos santos\ne irreprochables ante Él por el amor.\n\nÉl nos ha destinado en la persona de Cristo,\npor pura iniciativa suya,\na ser sus hijos,\npara que la gloria de su gracia,\nque tan generosamente nos ha concedido\nen su querido Hijo,\nredunde en alabanza suya.\n\nPor este Hijo, por su sangre,\nhemos recibido la redención,\nel perdón de los pecados.\nEl tesoro de su gracia, sabiduría y prudencia\nha sido un derroche para con nosotros,\ndándonos a conocer el misterio de su voluntad.\n\nÉste es el plan\n\nque había proyectado realizar por Cristo\ncuando llegase el momento culminante:\nrecapitular en Cristo todas las cosas\ndel cielo y de la tierra.\n\nAnt. Ya no os llamo siervos, a vosotros os llamo amigos, porque todo lo que he oído a mi\nPadre os lo he dado a conocer."
+    },
+    {
+     "tipo": "lectura_breve",
+     "texto": "Cristo ha constituido a unos, apóstoles; a otros, profetas; a otros, evangelistas; a otros,\npastores y doctores, para el perfeccionamiento de los fieles, en función de su ministerio, y\npara la edificación del cuerpo de Cristo, hasta que lleguemos todos a la unidad en la fe y\nen el conocimiento del Hijo de Dios, al hombre perfecto, a la medida de Cristo en su\nplenitud.",
+     "ref": "Ef 4, 11-13,"
+    },
+    {
+     "tipo": "responsorio_breve",
+     "texto": "V. Contad a los pueblos la gloria del Señor.\nR. Contad a los pueblos la gloria del Señor.\nV. Sus maravillas a todas las naciones.\nR. Contad a los pueblos la gloria del Señor.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. Contad a los pueblos la gloria del Señor."
+    },
+    {
+     "tipo": "cantico_evangelico",
+     "texto": "Ant. «Misericordia quiero y no sacrificios -dice el Señor-: que no he venido a llamar a los\njustos, sino a los pecadores.»"
+    },
+    {
+     "tipo": "preces",
+     "texto": "Hermanos: Edificados sobre el cimiento de los apóstoles, oremos al Padre por su pueblo\nsanto, diciendo:\nAcuérdate, Señor, de tu Iglesia.\n\nPadre santo, que quisiste que tu Hijo resucitado de entre los muertos se manifestara en\nprimer lugar a los apóstoles,\n— haz que también nosotros seamos testigos de Cristo hasta los confines del mundo.\n\nPadre santo, tú que enviaste a tu Hijo al mundo para dar la Buena Noticia a los pobres,\n— haz que sepamos proclamar el Evangelio a todas las criaturas.\n\nTú que enviaste a tu Hijo a sembrar la semilla de la palabra,\n— haz que, sembrando también tu palabra con nuestro esfuerzo, recojamos sus frutos con\nalegría.\n\nTú que enviaste a tu Hijo para que reconciliara el mundo contigo,\n— haz que también nosotros cooperemos a la reconciliación de los hombres.\n\nSe pueden añadir algunas intenciones libres.\nTú que quisiste que tu Hijo resucitara el primero de entre los muertos,\n— concede a todos los que son de Cristo resucitar con él, el día de su venida.\n\nOremos ahora al Padre, como Jesús enseñó a los apóstoles: Padre nuestro.\nLa oración conclusiva como en el Propio de los santos."
+    },
+    {
+     "tipo": "oracion",
+     "texto": "Oh Dios, que en tu infinita misericordia te dignaste elegir a san Mateo para convertirlo\nde publicano en apóstol, concédenos que, fortalecidos con su ejemplo y su intercesión,\npodamos seguirte siempre y permanecer unidos a ti con fidelidad. Por nuestro Señor\nJesucristo."
+    }
+   ],
+   "intermedia": {
+    "comun": [],
+    "tercia": [
+     {
+      "tipo": "lectura_breve",
+      "texto": "Dios nos ha confiado el mensaje de la reconciliación. Por eso nosotros actuamos como\nenviados de Cristo, y es como si Dios mismo os exhortara por medio nuestro. En nombre\nde Cristo os pedimos que os reconciliéis con Dios.\nV. A toda la tierra alcanza su pregón.\nR. Y hasta los límites del orbe su lenguaje.",
+      "ref": "2 Co 5, 19b-20"
+     }
+    ],
+    "sexta": [
+     {
+      "tipo": "lectura_breve",
+      "texto": "Los apóstoles hacían muchos signos y prodigios en medio del pueblo, y crecía el número\nde los creyentes, hombres y mujeres, que se adherían al Señor.\nV. Guardaron los preceptos del Señor.\nR. Las normas y mandatos que les ordenó.",
+      "ref": "Hch 5, 12a. 14"
+     }
+    ],
+    "nona": [
+     {
+      "tipo": "lectura_breve",
+      "texto": "Los apóstoles salieron del Consejo contentos de haber merecido aquel ultraje por el\nnombre de Jesús. Ningún día dejaban de enseñar, en el templo y por las casas,\nanunciando el Evangelio de Jesucristo.\nV. Estad alegres, dice el Señor.\nR. Porque vuestros nombres están inscritos en el cielo.\nLa oración conclusiva como en el Propio de los santos.",
+      "ref": "Hch 5, 41-42"
+     }
+    ]
+   },
+   "invitatorio": [
+    {
+     "tipo": "inicio",
+     "texto": "Ant. Venid, adoremos al Señor, rey de los apóstoles.\nEl salmo invitatorio: Salmo 94; Salmo 99; Salmo 66; Salmo 23"
+    }
+   ]
+  }
+ },
+ "27": {
+  "titulo": "San Vicente de Paúl, presbítero",
+  "rango": "M",
+  "semblanza": "Nació en Aquitania el año 1581. Cursados los correspondientes estudios, fue ordenado sacerdote y ejerció de párroco en París. Fundó la Congregación de la Misión, destinada a la formación del clero y al servicio de los pobres, y también, con la ayuda de santa Luisa de Marillac, la Congregación de Hijas de la Caridad. Murió en París el año 1660.",
+  "comun": "Del Común de pastores.",
+  "horas": {
+   "oficio": [
+    {
+     "tipo": "lectura2",
+     "texto": "De los escritos de san Vicente de Paúl, presbítero\n(Carta 2.546: Correspondance, entretiens, documents, París 1922-1925, 7)\n\nEL SERVICIO A LOS POBRES HA DE SER PREFERIDO A TODO\n\nNosotros no debemos estimar a los pobres por su apariencia externa o su modo de\nvestir, ni tampoco por sus cualidades personales, ya que, con frecuencia, son rudos e\nincultos. Por el contrario, si consideráis a los pobres a la luz de la fe, os daréis cuenta de\nque representan el papel del Hijo de Dios, ya que él quiso también ser pobre. Y  así, aun\ncuando en su pasión perdió casi la apariencia humana, haciéndose necio para los gentiles\ny escándalo para los judíos, sin embargo, se presentó a éstos como evangelizador de los\npobres: Me ha enviado para anunciar el Evangelio a los pobres. También nosotros\ndebemos estar imbuidos de estos sentimientos e imitar lo que Cristo hizo, cuidando de los\npobres, consolándolos ayudándolos y apoyándolos.\n\nCristo, en efecto, quiso nacer pobre, llamó junto a sí a unos discípulos pobres, se hizo\nél mismo servidor de los pobres, y de tal modo se identificó con ellos, que dijo que\nconsideraría como hecho a él mismo todo el bien o el mal que se hiciera a los pobres.\nPorque Dios ama a los pobres y, por lo mismo, ama también a los que aman a los pobres,\nya que, cuando alguien tiene un afecto especial a una persona, extiende este afecto a los\nque dan a aquella persona muestras de amistad o de servicio. Por esto, nosotros tenemos\nla esperanza de que Dios nos ame, en atención a los pobres. Por esto, al visitarlos,\n\nesforcémonos en cuidar del pobre y desvalido, compartiendo sus sentimientos, de manera\nque podamos decir como el Apóstol: Me he hecho todo a todos. Por lo cual, todo nuestro\nesfuerzo ha de tender a que, conmovidos por las inquietudes y miserias del prójimo,\nroguemos a Dios que infunda en nosotros sentimientos de misericordia y compasión, de\nmanera que nuestros corazones estén siempre llenos de estos sentimientos.\n\nEl servicio a los pobres ha de ser preferido a todo, y hay que prestarlo sin demora. Por\nesto, si en el momento de la oración hay que llevar a algún pobre un medicamento o un\nauxilio cualquiera, id a él con el ánimo bien tranquilo y haced lo que convenga,\nofreciéndolo a Dios como una prolongación de la oración. Y no tengáis ningún escrúpulo ni\nremordimiento de conciencia si, por prestar algún servicio a los pobres, habéis dejado la\noración; salir de la presencia de Dios por alguna de las causas enumeradas no es ningún\ndesprecio a Dios, ya que es por él por quien lo hacemos.\n\nAsí pues, si dejáis la oración para acudir con presteza en ayuda de algún pobre,\nrecordad que aquel servicio lo prestáis al mismo Dios. La caridad, en efecto, es la máxima\nnorma, a la que todo debe tender: ella es una ilustre señora, y hay que cumplir lo que\nordena. Renovemos, pues, nuestro espíritu de servicio a los pobres, principalmente para\ncon los abandonados y desamparados, ya que ellos nos han sido dados para que los\nsirvamos como a señores."
+    },
+    {
+     "tipo": "responsorio",
+     "texto": "R. Siendo libre como soy, me he hecho esclavo de todos. Me he hecho débil con los\ndébiles. * Me he hecho todo a todos, para ganar, sea como sea, a algunos.\nV. Yo era ojos para el ciego, era pies para el cojo, yo era padre de los pobres.\nR. Me he hecho todo a todos, para ganar, sea como sea, a algunos.",
+     "ref": "1 Co 9, 19. 22; Jb 29, 15-16"
+    }
+   ],
+   "laudes": [
+    {
+     "tipo": "cantico_evangelico",
+     "texto": "Ant. San Vicente fue consuelo de los que sufren, defensor de los huérfanos y protector\nde las viudas."
+    }
+   ],
+   "visperas2": [
+    {
+     "tipo": "cantico_evangelico",
+     "texto": "Ant. «Lo que hicisteis con uno de éstos, mis humildes hermanos, conmigo lo hicisteis»,\ndice el Señor."
+    }
+   ]
+  },
+  "oracion": "Señor, Dios nuestro, que dotaste de virtudes apostólicas a tu presbítero san Vicente de\nPaúl para que entregara su vida al servicio de los pobres y a la formación del clero,\nconcédenos, te rogamos, que, impulsados por su mismo espíritu, amemos cuanto el amó y\npractiquemos sus enseñanzas. Por nuestro Señor Jesucristo."
+ },
+ "29": {
+  "titulo": "Santos Arcángeles Miguel, Gabriel y Rafael",
+  "rango": "F",
+  "semblanza": "Apéndice IV.",
+  "comun": "",
+  "horas": {
+   "invitatorio": [
+    {
+     "tipo": "inicio",
+     "texto": "Ant. Venid, adoremos al Señor, delante de los ángeles.\nEl salmo del Invitatorio como en el Ordinario: Salmo 94; Salmo 99; Salmo 66; Salmo 23"
+    }
+   ],
+   "oficio": [
+    {
+     "tipo": "himno",
+     "texto": "Miguel, Gabriel, Rafael,\nlos espíritus señeros\ny arcángeles mensajeros\nde Dios, que estáis junto a él.\n\nA vuestro lado se siente\nalas de fiel protección,\nincienso de la oración\ny el corazón obediente.\n\n\"¿Quién como Dios?\" Es la enseña,\nes el grito de Miguel,\ny el orgullo de Luzbel\nal abismo se despeña.\n\nGabriel trae la embajada\ndivina, y le lleva al Padre\nel \"sí\" de la Virgen Madre,\ndel Sol de Cristo alborada.\n\nPor la ruta verdadera\nRafael nos encamina\ny nos da la medicina\nque cura nuestra ceguera.\n\nDios que nos diste a los ángeles\npor guías y mensajeros,\ndanos el ser compañeros\ndel cielo de tus arcángeles. Amén."
+    },
+    {
+     "tipo": "salmodia",
+     "texto": "Ant. 1. Se agitó el mar y la tierra tembló cuando el arcángel Miguel bajaba del cielo.\n\nSalmo 96\n\nEl Señor reina, la tierra goza,\nse alegran las islas innumerables.\nTiniebla y nube lo rodea,\njusticia y derecho sostienen su trono.\n\nDelante de él avanza el fuego,\nabrasando en torno a los enemigos;\nsus relámpagos deslumbran el orbe,\ny, viéndolos, la tierra se estremece.\n\nLos montes se derriten como cera\nante el dueño de toda la tierra;\nlos cielos pregonan su justicia,\ny todos los pueblos contemplan su gloria.\n\nLos que adoran estatuas se sonrojan,\nlos que ponen su orgullo en los ídolos;\nante él se postran todos los dioses.\n\nLo oye Sión, y se alegra,\nse regocijan las ciudades de Judá\npor tus sentencias, Señor;\n\nporque tú eres, Señor,\naltísimo sobre toda la tierra,\nencumbrado sobre todos los dioses.\n\nEl Señor ama al que aborrece el mal,\nprotege la vida de sus fieles\ny los libra de los malvados.\n\nAmanece la luz para el justo,\ny la alegría para los rectos de corazón.\nAlegraos, justos, con el Señor,\ncelebrad su santo nombre.\n\nAnt. Se agitó el mar y la tierra tembló cuando el arcángel Miguel bajaba del cielo.\nAnt. 2. El ángel Gabriel se apareció a Zacarías y le dijo: «Tu mujer Isabel te dará un hijo, y\nle pondrás por nombre Juan».\n\nSalmo 102\n\nI\nBendice, alma mía, al Señor,\n\ny todo mi ser a su santo nombre.\nBendice, alma mía, al Señor,\ny no olvides sus beneficios.\n\nÉl perdona todas tus culpas\ny cura todas tus enfermedades;\nel rescata tu vida de la fosa,\ny te colma de gracia y de ternura;\nel sacia de bienes tus anhelos,\ny como un águila\nse renueva tu juventud.\n\nEl Señor hace justicia\ny defiende a todos los oprimidos;\nenseñó sus caminos a Moisés\ny sus hazañas a los hijos de Israel.\n\nEl Señor es compasivo y misericordioso,\nlento a la ira y rico en clemencia;\nno está siempre acusando\nni guarda rencor perpetuo;\nno nos trata como merecen\nnuestros pecados\nni nos paga según nuestras culpas.\n\nComo se levanta el cielo sobre la tierra,\nse levanta su bondad sobre sus fieles;\ncomo dista el oriente del ocaso,\nasí aleja de nosotros nuestros delitos.\n\nComo un padre\nsiente ternura por sus hijos,\nsiente el Señor ternura por sus fieles.\n\nAnt. El ángel Gabriel se apareció a Zacarías y le dijo: «Tu mujer Isabel te dará un hijo, y le\npondrás por nombre Juan».\nAnt. 3. Yo soy el ángel Rafael, que estoy al servicio de Dios; vosotros bendecid al Señor y\nescribid todo lo que os ha ocurrido.\n\nII\nPorque él conoce nuestra masa,\n\nse acuerda de que somos barro.\n\nLos días del hombre\nduran lo que la hierba,\nflorecen como flor del campo,\nque el viento la roza, y ya no existe,\nsu terreno no volverá a verla.\n\nPero la misericordia del Señor\ndura siempre,\nsu justicia pasa de hijos a nietos:\npara los que guardan la alianza\ny recitan y cumplen sus mandatos.\n\nEl Señor puso en el cielo su trono,\n\nsu soberanía gobierna el universo.\nbendecid al Señor, ángeles suyos,\npoderosos ejecutores de sus órdenes,\nprontos a la voz de su palabra.\n\nBendecid al Señor, ejércitos suyos,\nservidores que cumplís sus deseos.\nBendecid al Señor, todas sus obras,\nen todo lugar de su imperio.\n\n¡Bendice, alma mía, al Señor!\nAnt. 3. Yo soy el ángel Rafael, que estoy al servicio de Dios; vosotros bendecid al Señor\n\ny escribid todo lo que os ha ocurrido."
+    },
+    {
+     "tipo": "lectura1",
+     "texto": "Del Libro del Apocalipsis 12, 1-17\n\nBATALLA DE MIGUEL CON EL DRAGÓN\n\nApareció una figura portentosa en el cielo: Una mujer vestida de sol, la luna por\npedestal, coronada con doce estrellas. Estaba encinta, y gritaba entre los espasmos del\nparto, y por el tormento de dar a luz. Apareció una señal en el cielo: Un enorme dragón\nrojo, con siete cabezas y diez cuernos y siete diademas en las cabezas. Con la cola barrió\ndel cielo un tercio de las estrellas, arrojándolas a la tierra.\n\nEl dragón estaba enfrente de la mujer que iba a dar a luz dispuesto a tragarse el niño\nen cuanto naciera. Dio a luz un varón, destinado a gobernar con vara de hierro a los\npueblos. Arrebataron al niño y lo llevaron junto al trono de Dios. La mujer huyó al\ndesierto, donde tiene un lugar reservado por Dios, para que allí la sustenten mil\ndoscientos sesenta días.\n\nSe trabó una batalla en el cielo; Miguel y sus ángeles declararon la guerra al dragón.\nLucharon el dragón y sus ángeles, pero no vencieron, y no quedó lugar para ellos en el\ncielo. Y  al gran dragón, a la serpiente primordial que se llama diablo y Satanás, y extravía\nla tierra entera lo precipitaron a la tierra, y a sus ángeles con él. Se oyó una gran voz en el\ncielo:\n\n«Ahora se estableció la salud y el poderío, y el reino de nuestro Dios, y la potestad de\nsu Cristo; porque fue precipitado el acusador de nuestros hermanos, el que los acusaba\nante nuestro Dios día y noche. Ellos le vencieron en virtud de la sangre del Cordero y por\nla palabra del testimonio que dieron, y no amaron tanto su vida que temieran la muerte.\nPor esto, estad alegres, cielos, y los que moráis en sus tiendas. ¡Ay de la tierra y del mar!\nEl diablo bajó contra vosotros rebosando furor, pues sabe que le queda poco tiempo.»\n\nCuando vio el dragón que lo habían arrojado a la tierra se puso a perseguir a la mujer\nque había dado a luz el hijo varón. Le pusieron a la mujer dos alas de águila real para que\nvolase a su lugar en el desierto, donde será tentada un año y otro año y medio año, lejos\nde la serpiente.\n\nLa serpiente, persiguiendo a la mujer, echó por la boca un río de agua, para que el río\nla arrastrase; pero la tierra salió en ayuda de la mujer, abrió su boca y se bebió el río\nsalido de la boca de la serpiente. Despechado el dragón por causa de la mujer, se marchó\na hacer la guerra al resto de su descendencia, a los que guardan los mandamientos de\nDios y mantienen el testimonio de Jesús."
+    },
+    {
+     "tipo": "responsorio",
+     "texto": "R. Se hizo silencio en el cielo cuando el dragón trabó batalla con el arcángel Miguel; * Se\noyó una voz que decía: «Victoria, honor y poder al Dios todopoderoso.»\nV. Ahora se estableció la salud y el poderío, y la potestad de su Cristo.\nR.  Se oyó una voz que decía: «Victoria, honor y poder al Dios todopoderoso.».",
+     "ref": "Ap 12, 7. 8. 10"
+    },
+    {
+     "tipo": "lectura2",
+     "texto": "De las homilías de san Gregorio Magno, papa, sobre los evangelios\n(Homilía 34, 8-9: PL 76,1250-1251)\n\nEL NOMBRE DE «ÁNGEL» DESIGNA LA FUNCIÓN, NO EL SER\n\nHay que saber que el nombre de \"ángel\", designa la función, no el ser del que lo lleva.\nEn efecto, aquellos santos espíritus de la patria celestial son siempre espíritus, pero no\nsiempre pueden ser llamados ángeles, ya que solamente lo son cuando ejercen su oficio\nde mensajeros. Los que transmiten mensajes de menor importancia se llaman ángeles, los\nque anuncian cosas de gran trascendencia se llaman arcángeles.\n\nPor esto, a la Virgen María no le fue enviado un ángel cualquiera, sino el arcángel\nGabriel, ya que un mensaje de tal trascendencia requería que fuese transmitido por un\nángel de la máxima categoría.\n\nPor la misma razón, se les atribuyen también nombres personales, que designan cuál es\nsu actuación propia. Porque en aquella ciudad santa, allí donde la visión del Dios\nomnipotente da un conocimiento perfecto de todo, no son necesarios estos nombres\npropios para conocer a las personas, pero sí lo son para nosotros, ya que a través de estos\nnombres conocemos cuál es la misión específica para la cual nos son enviados. Y; así,\nMiguel significa: \"¿Quién como Dios?, Gabriel significa: Fortaleza de Dios\" y Rafael\nsignifica: \"Medicina de Dios.\n\nPor esto, cuando se trata de alguna misión que requiere un poder especial, es enviado\nMiguel, dando a entender por su actuación y por su nombre que nadie puede hacer lo que\nsólo Dios puede hacer. De ahí que aquel antiguo enemigo, que por su soberbia pretendió\nigualarse a Dios, diciendo: Escalaré los cielos, por encima de los astros divinos levantaré\nmi trono, me igualaré al Altísimo, nos es mostrado luchando contra el arcángel Miguel,\ncuando, al fin del mundo, será desposeído de su poder y destinado al extremo suplicio,\ncomo nos lo presenta Juan: Se trabó una batalla con el arcángel Miguel.\n\nA María le fue enviado Gabriel, cuyo nombre significa: \"Fortaleza de Dios\", porque venía\na anunciar a aquel que, a pesar de su apariencia humilde, había de reducir a los\nPrincipados y Potestades. Era, pues, natural que aquel que es la fortaleza de Dios\nanunciara la venida del que es el Señor de los ejércitos y héroe en las batallas.\n\nRafael significa, como dijimos: \"Medicina de Dios\"; este nombre le viene del hecho de\nhaber curado a Tobías, cuando, tocándole los ojos con sus manos, lo libró de las tinieblas\nde su ceguera. Si, pues, había sido enviado a curar, con razón es llamado \"Medicina de\nDios\"."
+    },
+    {
+     "tipo": "responsorio",
+     "texto": "R. Un ángel se puso junto al altar del templo con un incensario de oro en sus manos, y le\nentregaron muchos perfumes. * Y por manos del ángel subió a la presencia del Señor el\nhumo de los perfumes.\nV. Miles y miles le servían, millones estaban a sus órdenes.\nR. Y por manos del ángel subió a la presencia del Señor el humo de los perfumes.",
+     "ref": "Cf. Ap 8, 3. 4; Dn 7, 10"
+    },
+    {
+     "tipo": "te_deum"
+    },
+    {
+     "tipo": "oracion",
+     "texto": "Oh Dios, que con admirable sabiduría distribuyes los ministerios de los ángeles y los\nhombres, te pedimos que nuestra vida esté siempre protegida en la tierra por aquellos que\nte asisten continuamente en el cielo. Por nuestro Señor Jesucristo."
+    }
+   ],
+   "laudes": [
+    {
+     "tipo": "himno",
+     "texto": "Miguel, Gabriel, Rafael,\nlos espíritus señeros\ny arcángeles mensajeros\nde Dios, que estáis junto a él.\n\nA vuestro lado se siente\nalas de fiel protección,\nincienso de la oración\ny el corazón obediente.\n\n\"¿Quién como Dios?\" Es la enseña,\nes el grito de Miguel,\ny el orgullo de Luzbel\nal abismo se despeña.\n\nGabriel trae la embajada\ndivina, y le lleva al Padre\nel \"sí\" de la Virgen Madre,\ndel Sol de Cristo alborada.\n\nPor la ruta verdadera\nRafael nos encamina\ny nos da la medicina\nque cura nuestra ceguera.\n\nDios que nos diste a los ángeles\npor guías y mensajeros,\ndanos el ser compañeros\ndel cielo de tus arcángeles. Amén."
+    },
+    {
+     "tipo": "salmodia",
+     "texto": "Ant. 1. Alabemos al Señor, a quien alaban los ángeles, y los querubines y serafines\nproclaman tres veces Santo.\n\nSalmo 62, 2-9\n\nEL ALMA SEDIENTA DE DIOS\n\nMadruga por Dios todo el que rechaza las obras de las tinieblas.\n¡Oh Dios!, tú eres mi Dios, por ti madrugo,\n\nmi alma está sedienta de ti;\nmi carne tiene ansia de ti,\ncomo tierra reseca, agostada, sin agua.\n\n¡Cómo te contemplaba en el santuario\nviendo tu fuerza y tu gloria!\nTu gracia vale más que la vida,\nte alabarán mis labios.\n\nToda mi vida te bendeciré\ny alzaré las manos invocándote.\nMe saciaré de manjares exquisitos,\ny mis labios te alabarán jubilosos.\n\nEn el lecho me acuerdo de ti\ny velando medito en ti,\nporque fuiste mi auxilio,\ny a la sombra de tus alas canto con júbilo;\nmi alma está unida a ti,\ny tu diestra me sostiene.\n\nAnt. Alabemos al Señor, a quien alaban los ángeles, y los querubines y serafines\nproclaman tres veces Santo.\nAnt. 2. Ángeles del Señor, bendecid al Señor eternamente.\n\nCántico Dn 3, 57-88. 56\n\nTODA LA CREACIÓN ALABE AL SEÑOR\n\nAlabad al Señor, sus siervos todos (Ap 19, 5).\n\nCriaturas todas del Señor, bendecid al Señor,\nensalzadlo con himnos por los siglos.\n\nÁngeles del Señor, bendecid al Señor;\ncielos, bendecid al Señor.\n\nAguas del espacio, bendecid al Señor;\nejércitos del Señor, bendecid al Señor.\n\nSol y luna, bendecid al Señor;\nastros del cielo, bendecid al Señor.\n\nLluvia y rocío, bendecid al Señor;\nvientos todos, bendecid al Señor.\n\nFuego y calor, bendecid al Señor;\nfríos y heladas, bendecid al Señor.\n\nRocíos y nevadas, bendecid al Señor;\ntémpanos y hielos, bendecid al Señor.\n\nEscarchas y nieves, bendecid al Señor;\nnoche y día, bendecid al Señor.\n\nLuz y tinieblas, bendecid al Señor;\nrayos y nubes, bendecid al Señor.\n\nBendiga la tierra al Señor,\nensálcelo con himnos por los siglos.\n\nMontes y cumbres, bendecid al Señor;\ncuanto germina en la tierra, bendiga al Señor.\n\nManantiales, bendecid al Señor;\nmares y ríos, bendecid al Señor.\n\nCetáceos y peces, bendecid al Señor;\naves del cielo, bendecid al Señor.\n\nFieras y ganados, bendecid al Señor,\nensalzadlo con himnos por los siglos.\n\nHijos de los hombres, bendecid al Señor;\nbendiga Israel al Señor.\n\nSacerdotes del Señor, bendecid al Señor;\nsiervos del Señor, bendecid al Señor.\n\nAlmas y espíritus justos, bendecid al Señor;\nsantos y humildes de corazón, bendecid al Señor.\n\nAnanías, Azarías y Misael, bendecid al Señor,\nensalzadlo con himnos por los siglos.\n\nBendigamos al Padre, al Hijo y al Espíritu Santo,\nensalcémoslo con himnos por los siglos.\n\nBendito el Señor en la bóveda del cielo,\nalabado y glorioso y ensalzado por los siglos.\n\nNo se dice Gloria al Padre.\nAnt. Ángeles del Señor, bendecid al Señor eternamente.\nAnt. 3. Los ángeles en el cielo te aclaman, Señor santo, diciendo a una sola voz: «Oh Dios,\ntú mereces un himno.»\n\nSalmo 149\n\nALEGRÍA DE LOS SANTOS\n\nLos hijos de la Iglesia, nuevo pueblo de Dios, se alegran en su Rey, Cristo, el Señor\n(Hesiquio).\n\nCantad al Señor un cántico nuevo,\nresuene su alabanza en la asamblea de los fieles;\nque se alegre Israel por su Creador,\nlos hijos de Sión por su Rey.\n\nAlabad su nombre con danzas,\ncantadle con tambores y cítaras;\nporque el Señor ama a su pueblo\ny adorna con la victoria a los humildes.\n\nQue los fieles festejen su gloria\ny canten jubilosos en filas:\ncon vítores a Dios en la boca\ny espadas de dos filos en las manos:\n\npara tomar venganza de los pueblos\ny aplicar el castigo a las naciones,\nsujetando a los reyes con argollas,\na los nobles con esposas de hierro.\n\nEjecutar la sentencia dictada\nes un honor para todos sus fieles.\n\nAnt. Los ángeles en el cielo te aclaman, Señor santo, diciendo a una sola voz: «Oh Dios,\ntú mereces un himno.»"
+    },
+    {
+     "tipo": "lectura_breve",
+     "texto": "Tuvo Jacob un sueño: Una escalinata apoyada en la tierra con la cima tocaba el cielo.\nÁngeles de Dios subían y bajaban por ella. El Señor estaba en pie sobre ella y dijo: «Yo\nsoy el Señor, el Dios de tu padre Abrahán y el Dios de Isaac.»"
+    },
+    {
+     "tipo": "responsorio_breve",
+     "texto": "V. Un ángel se puso junto al altar del templo.\nR. Un ángel se puso junto al altar del templo.\nV. Con un incensario de oro en su mano.\nR. Junto al altar del templo.\nV. Gloria al Padre y al Hijo y al Espíritu Santo.\nR. Un ángel se puso junto al altar del templo."
+    },
+    {
+     "tipo": "cantico_evangelico",
+     "texto": "Ant. Yo os aseguro: veréis el cielo abierto y a los ángeles de Dios subir y bajar sobre el\nHijo del hombre."
+    },
+    {
+     "tipo": "preces",
+     "texto": "Confesemos, queridos hermanos, al Señor, a quien asisten millares de ángeles, y\naclamémosle gozosos:\nBendecid al Señor, ángeles suyos.\n\nOh Dios, que a tus ángeles has dado órdenes para que nos guarden en nuestros caminos,\n— condúcenos hoy sin tropiezo por tus sendas.\n\nPadre, cuyo rostro están siempre viendo nuestros ángeles en el cielo,\n— haz que busquemos continuamente tu rostro.\n\nOh Dios, cuyos hijos serán como ángeles del cielo,\n— danos la castidad del corazón y del cuerpo.\n\nOh Dios, envía a Miguel, príncipe supremo, en auxilio de tu pueblo,\n— a fin de que lo defienda en las batallas contra Satanás y sus ángeles.\n\nPadre nuestro."
+    },
+    {
+     "tipo": "oracion",
+     "texto": "Oh Dios, que con admirable sabiduría distribuyes los ministerios de los ángeles y los\nhombres, te pedimos que nuestra vida esté siempre protegida en la tierra por aquellos que\nte asisten continuamente en el cielo. Por nuestro Señor Jesucristo."
+    }
+   ],
+   "intermedia": {
+    "comun": [],
+    "tercia": [
+     {
+      "tipo": "lectura_breve",
+      "texto": "En el tiempo aquel, se levantará Miguel, el arcángel que se ocupa de tu pueblo: serán\ntiempos difíciles, como no los ha habido desde que hubo naciones hasta ahora. Entonces\nse salvará tu pueblo, todos los inscritos en el libro.\n\nV. Enviará el Señor a sus ángeles con trompetas sonoras.\nR. Y reunirán a sus elegidos de los cuatro vientos.",
+      "ref": "Dn 12, 1"
+     }
+    ],
+    "sexta": [
+     {
+      "tipo": "lectura_breve",
+      "texto": "El ángel Gabriel me habló así: «Daniel, acabo de salir para explicarte el sentido. Al\nprincipio de tus súplicas, se pronunció una sentencia, y yo he venido para comunicártela,\nporque eres un predilecto. ¡Entiende la palabra, comprende la visión!»\n\nV. Bendecid al Señor, ejércitos suyos.\nR. Servidores que cumplís sus deseos.",
+      "ref": "Dn 9, 22-23"
+     }
+    ],
+    "nona": [
+     {
+      "tipo": "lectura_breve",
+      "texto": "Yo soy Rafael, uno de los siete ángeles que están al servicio de Dios. Mi presencia entre\nvosotros no se ha debido a mí, sino a la voluntad de Dios. Bendecidlo siempre y cantadle\nhimnos. Yo subo ahora al que me envió. Vosotros escribid todo lo que os ha ocurrido.\n\nV. A sus ángeles Dios ha dado órdenes.\nR. Para que te guarden en tus caminos.",
+      "ref": "Tb 12, 15a. 18a. 21"
+     },
+     {
+      "tipo": "oracion_laudes"
+     }
+    ]
+   },
+   "visperas2": [
+    {
+     "tipo": "salmodia",
+     "texto": "Ant. 1. Ensalzaste tu majestad sobre los cielos, Rey de los ángeles.\n\nSalmo 8\n\nSeñor, dueño nuestro,\n¡qué admirable es tu nombre\nen toda la tierra!\n\nEnsalzaste tu majestad sobre los cielos.\nDe la boca de los niños de pecho\nhas sacado una alabanza contra tus enemigos,\npara reprimir al adversario y al rebelde.\n\nCuando contemplo el cielo, obra de tus dedos,\nla luna y las estrellas que has creado,\n¿qué es el hombre, para que te acuerdes de él,\nel ser humano, para darle poder?\n\nLo hiciste poco inferior a los ángeles,\nle coronaste de gloria y dignidad,\nle diste el mando sobre las obras de tus manos,\ntodo lo sometiste bajo sus pies:\n\nrebaños de ovejas y toros,\ny hasta las bestias del campo,\nlas aves del cielo, los peces del mar,\nque trazan sendas por el mar.\n\nSeñor, dueño nuestro,\n¡qué admirable es tu nombre\nen toda la tierra!\nAnt. Ensalzaste tu majestad sobre los cielos, Rey de los ángeles.\nAnt. 2. Delante de los ángeles, tañeré para ti, Dios mío.\n\nSalmo 137\n\nTe doy gracias, Señor, de todo corazón;\ndelante de los ángeles tañeré para ti,\nme postraré hacia tu santuario,\ndaré gracias a tu nombre:\n\npor tu misericordia y tu lealtad,\nporque tu promesa supera a tu fama;\ncuando te invoqué, me escuchaste,\nacreciste el valor en mi alma.\n\nQue te den gracias, Señor, los reyes de la tierra,\nal escuchar el oráculo de tu boca;\ncanten los caminos del Señor,\nporque la gloria del Señor es grande.\n\nEl Señor es sublime, se fija en el humilde,\ny de lejos conoce al soberbio.\n\nCuando camino entre peligros,\nme conservas la vida;\nextiendes tu brazo contra la ira de mi enemigo,\ny tu derecha me salva.\n\nEl Señor completará sus favores conmigo:\nSeñor, tu misericordia es eterna,\nno abandones la obra de tus manos.\n\nAnt. Delante de los ángeles, tañeré para ti, Dios mío.\nAnt. 3. Vi delante del trono a un Cordero en pie; se notaba que lo habían degollado. Y\nescuché la voz de muchos ángeles alrededor del trono.\n\nCántico Col 1, 12-20\nDamos gracias a Dios Padre,\nque nos ha hecho capaces de compartir\nla herencia del pueblo santo en la luz.\n\nÉl nos ha sacado del dominio de las tinieblas,\ny nos ha trasladado al reino de su Hijo querido,\npor cuya sangre hemos recibido la redención,\nel perdón de los pecados.\n\nÉl es imagen de Dios invisible,\nprimogénito de toda criatura;\nporque por medio de él\nfueron creadas todas las cosas:\ncelestes y terrestres, visibles e invisibles,\nTronos, Dominaciones, Principados, Potestades;\ntodo fue creado por él y para él.\n\nÉl es anterior a todo, y todo se mantiene en él.\nÉl es también la cabeza del cuerpo: de la Iglesia.\nÉl es el principio, el primogénito de entre los muertos,\ny así es el primero en todo.\n\nPorque en él quiso Dios que residiera toda la plenitud.\nY por él quiso reconciliar consigo todos los seres:\nlos del cielo y los de la tierra,\nhaciendo la paz por la sangre de su cruz.\n\nAnt. Vi delante del trono a un Cordero en pie; se notaba que lo habían degollado. Y\nescuché la voz de muchos ángeles alrededor del trono."
+    },
+    {
+     "tipo": "lectura_breve",
+     "texto": "Gracia y paz a vosotros de parte del que es y era y viene, y de parte de los siete\nespíritus que están ante su trono y de parte de Jesucristo, el testigo fiel, el primogénito de\nentre los muertos, el príncipe de los reyes de la tierra. Aquel que nos amó nos ha librado\nde nuestros pecados por su sangre.",
+     "ref": "Ap 1, 4b-5"
+    },
+    {
+     "tipo": "responsorio_breve",
+     "texto": "V. Subió el humo de los perfumes a la presencia del Señor.\nR. Subió el humo de los perfumes a la presencia del Señor.\nV.  Por manos del ángel.\nR. A la presencia del Señor.\nV. Gloria al Padre y al Hijo y al Espíritu Santo.\nR. Subió el humo de los perfumes a la presencia del Señor."
+    },
+    {
+     "tipo": "cantico_evangelico",
+     "texto": "Ant. El ángel Gabriel habló a María, diciendo: «Concebirás en tu vientre y darás a luz un\nhijo, y le pondrás por nombre Jesús.»"
+    },
+    {
+     "tipo": "preces",
+     "texto": "Pidamos al Señor que, como los ángeles, poderosos ejecutores de sus órdenes, seamos\nsiempre prontos a la voz de su palabra. Implorémosle, diciendo:\nTe rogamos, óyenos.\n\nPara que por manos de los ángeles suban a tu presencia nuestras oraciones,\n— como el humo de los perfumes.\nTe rogamos, óyenos.\n\nPara que nuestras ofrendas sean llevadas a tu presencia,\n— hasta el altar del cielo, por manos de tu ángel.\nTe rogamos, óyenos.\n\nPara que, con la legión del ejército celestial, podamos proclamar la gloria a Dios en el\ncielo,\n— y en la tierra paz a los hombres que ama el Señor.\nTe rogamos, óyenos.\n\nPara que, al fin de nuestra vida, los ángeles nos reciban,\n— y nos lleven a la patria del paraíso.\nTe rogamos, óyenos.\n\nPara que san Miguel, el abanderado, introduzca en la luz sagrada,\n— las almas de los fieles difuntos.\nTe rogamos, óyenos.\n\nPadre nuestro."
+    },
+    {
+     "tipo": "oracion",
+     "texto": "Oh Dios, que con admirable sabiduría distribuyes los ministerios de los ángeles y los\nhombres, te pedimos que nuestra vida esté siempre protegida en la tierra por aquellos que\nte asisten continuamente en el cielo. Por nuestro Señor Jesucristo."
+    }
+   ]
+  }
+ },
+ "30": {
+  "titulo": "San Jerónimo, presbítero y doctor de la Iglesia",
+  "rango": "M",
+  "semblanza": "Nació en Estridón (Dalmacia) hacia el año 340; estudió en Roma y allí fue bautizado. Abrazó la vida ascética, marchó al Oriente y fue ordenado presbítero. Volvió a Roma y fue secretario del papa Dámaso. Fue en esta época cuando empezó su traducción latina de la Biblia. También promovió la vida monástica. Más tarde, se estableció en Belén, donde trabajó mucho por el bien de la Iglesia. Escribió gran cantidad de obras, principalmente comentarios de la sagrada Escritura. Murió en Belén el año 420.",
+  "comun": "Del Común de doctores de la Iglesia, excepto lo siguiente:",
+  "horas": {
+   "oficio": [
+    {
+     "tipo": "lectura2",
+     "texto": "Del prólogo al comentario de san Jerónimo, presbítero, sobre el libro del profeta Isaías\n(Núms. 1. 2: CCL 73,1-3)\n\nIGNORAR LAS ESCRITURAS ES IGNORAR A CRISTO\n\nCumplo con mi deber, obedeciendo los preceptos de Cristo, que dice: Estudiad las\nEscrituras, y también: Buscad, y encontraréis, para que no tenga que decirme, como a los\njudíos: Estáis muy equivocados, porque no comprendéis las Escrituras ni el poder de Dios.\nPues, si, como dice el apóstol Pablo, Cristo es el poder de Dios y la sabiduría de Dios, y el\nque no conoce las Escrituras no conoce el poder de Dios ni su sabiduría, de ahí se sigue\nque ignorar las Escrituras es ignorar a Cristo.\n\nPor esto, quiero imitar al padre de familia que del arca va sacando lo nuevo y lo\nantiguo, y a la esposa que dice en el Cantar de los cantares: He guardado para ti, mi\namado, lo nuevo y lo antiguo; y, así, expondré el libro de Isaías, haciendo ver en él no\nsólo al profeta, sino también al evangelista y apóstol. Él, en efecto, refiriéndose a sí mismo\ny a los demás evangelistas, dice: ¡Qué hermosos son los pies del mensajero que anuncia\nla paz, que trae la Buena Nueva! Y Dios le habla como a un apóstol, cuando dice: ¿A quién\nmandaré? ¿Quién irá a ese pueblo? Y él responde: Aquí estoy, mándame.\n\nNadie piense que yo quiero resumir en pocas palabras el contenido de este libro, ya que\nél abarca todos los misterios del Señor: predice, en efecto, al Emmanuel que nacerá de la\nVirgen, que realizará obras y signos admirables, que morirá, será sepultado y resucitará\ndel país de los muertos, y será el Salvador de todos los hombres.\n\n¿Para qué voy a hablar de física, de ética, de lógica? Este libro es como un compendio\nde todas las Escrituras y encierra en sí cuanto es capaz de pronunciar la lengua humana y\nsentir el hombre mortal. El mismo libro contiene unas palabras que atestiguan su carácter\nmisterioso y profundo: Cualquier visión se os volverá —dice— como el texto de un libro\nsellado: se lo dan a uno que sabe leer diciéndole: \"Por favor, lee esto.\" Y él responde: \"No\npuedo, porque está sellado.\" Y  se lo dan a uno que no sabe leer, diciéndole: \"Por favor, lee\nesto.\" Y él responde: \"No sé leer.\"\n\nY, si a alguno le parece débil esta argumentación, que oiga lo que dice el Apóstol: De\nlos profetas, que prediquen dos o tres, los demás den su opinión. Pero en caso que otro,\nmientras está sentado, recibiera una revelación, que se calle el de antes. ¿Qué razón\ntienen los profetas para silenciar su boca, para callar o hablar, si el Espíritu es quien habla\npor boca de ellos? Por consiguiente, si recibían del Espíritu lo que decían, las cosas que\ncomunicaban estaban llenas de sabiduría y de sentido. Lo que llegaba a oídos de los\nprofetas no era el sonido de una voz material, sino que era Dios quien hablaba en su\ninterior como dice uno de ellos: El ángel que hablaba en mí, y también: Que clama en\nnuestros corazones: \"¡Abbá! (Padre)\", y asimismo: Voy a escuchar lo que dice el Señor."
+    },
+    {
+     "tipo": "responsorio",
+     "texto": "R. Toda Escritura inspirada por Dios es útil para enseñar, para educar en la virtud; * así el\nhombre de Dios estará perfectamente equipado para toda obra buena.\nV. El que observa la ley es hijo prudente.\nR. Así el hombre de Dios estará perfectamente equipado para toda obra buena.",
+     "ref": "2 Tm 3, 16-17; Pr 28, 7"
+    }
+   ]
+  },
+  "oracion": "Oh Dios, tú que concediste a san Jerónimo una estima tierna y viva por la sagrada"
+ }
+}

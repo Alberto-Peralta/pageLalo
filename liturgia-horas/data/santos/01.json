@@ -1,0 +1,331 @@
+{
+ "02": {
+  "titulo": "San Basilio Magno y san Gregorio Nacianceno, obispos y Doctores de la Iglesia",
+  "rango": "M",
+  "semblanza": "Basilio nació en Cesarea de Capadocia el año 330, de una familia cristiana; hombre de gran cultura y virtud, comenzó a llevar vida eremítica, pero el año 370 fue elevado a la sede episcopal de su ciudad natal. Combatió a los arrianos; escribió excelentes obras y sobre todo reglas monásticas, que rigen aún hoy en muchos monasterios del Oriente. Fue gran bienhechor de los pobres. Murió el día 1 de enero del año 379. Gregorio nació el mismo año que Basilio, junto a Nacianzo, y se desplazó a diversos lugares por razones de estudio. Siguió a su amigo Basilio en la vida solitaria, pero fue luego ordenado presbítero y obispo. El año 381 fue elegido obispo de Constantinopla, pero, debido a las divisiones existentes en aquella Iglesia, se retiró a Nacianzo donde murió el 25 de enero de 389 ó 390. Fue llamado el teólogo, por la profundidad de su doctrina y el encanto de su elocuencia.",
+  "comun": "Del Común de pastores o del Común de doctores de la Iglesia.",
+  "horas": {
+   "oficio": [
+    {
+     "tipo": "lectura2",
+     "texto": "De los sermones de san Gregorio Nacianceno, obispo\n(Sermón 43, en alabanza de Basilio Magno, 15. 16-17. 19-21: PG 36, 514-523)\n\nCOMO SI UNA MISMA ALMA SUSTENTASE DOS CUERPOS\n\nNos habíamos encontrado en Atenas, como la corriente de un mismo río que, desde el\nmanantial patrio, nos había dispersado por las diversas regiones, arrastrados por el afán\nde aprender, y que, de nuevo, como si nos hubiésemos puesto de acuerdo, volvió a\nunirnos, sin duda porque así lo dispuso Dios.\n\nEn aquellas circunstancias, no me contentaba yo sólo con venerar y seguir a mi gran\namigo Basilio, al advertir en él la gravedad de sus costumbres y la madurez y seriedad de\nsus palabras, sino que trataba de persuadir a los demás, que todavía no lo conocían, a\nque le tuviesen esta misma admiración. En seguida empezó a ser tenido en gran estima\npor quienes conocían su fama y lo habían oído.\n\nEn consecuencia, ¿qué sucedió? Que fue casi el único, entre todos los estudiantes que\nse encontraban en Atenas, que sobrepasaba el nivel común, y el único que había\nconseguido un honor mayor que el que parece corresponder a un principiante. Este fue el\npreludio de nuestra amistad; ésta la chispa de nuestra intimidad, así fue como el mutuo\namor prendió en nosotros.\n\nCon el paso del tiempo, nos confesamos mutuamente nuestras ilusiones y que nuestro\nmás profundo deseo era alcanzar la filosofía, y, ya para entonces, éramos el uno para el\n\notro todo lo compañeros y amigos que nos era posible ser, de acuerdo siempre, aspirando\na idénticos bienes y cultivando cada día más ferviente y más íntimamente nuestro\nrecíproco deseo.\n\nNos movía un mismo deseo de saber, actitud que suele ocasionar profundas envidias, y,\nsin embargo, carecíamos de envidia; en cambio, teníamos en gran aprecio la emulación.\nContendíamos entre nosotros, no para ver quién era el primero, sino para averiguar quién\ncedía al otro la primacía; cada uno de nosotros consideraba la gloria del otro como propia.\n\nParecía que teníamos una misma alma que sustentaba dos cuerpos. Y, si no hay que\ndar crédito en absoluto a quienes dicen que todo se encuentra en todas las cosas, a\nnosotros hay que hacernos caso si decimos que cada uno se encontraba en el otro y junto\nal otro.\n\nUna sola tarea y afán había para ambos, y era la virtud, así como vivir para las\nesperanzas futuras de tal modo que, aun antes de haber partido de esta vida, pudiese\ndecirse que habíamos emigrado ya de ella. Ése fue el ideal que nos propusimos, y así\ntratábamos de dirigir nuestra vida y todas nuestras acciones, dóciles a la dirección del\nmandato divino, acuciándonos mutuamente en el empeño por la virtud; y, a no ser que\ndecir esto vaya a parecer arrogante en exceso, éramos el uno para el otro la norma y\nregla con la que se discierne lo recto de lo torcido.\n\nY, así como otros tienen sobrenombres, o bien recibidos de sus padres, o bien suyos\npropios, o sea, adquiridos con los esfuerzos y orientación de su misma vida, para nosotros\nera maravilloso ser cristianos, y glorioso recibir este nombre."
+    },
+    {
+     "tipo": "responsorio",
+     "texto": "R. El Señor da sabiduría a los sabios y ciencia a los que saben discernir: * él revela\nhonduras y secretos, y la luz mora junto a él.\nV. Y  todos estos dones son obra de un mismo y único Espíritu, que distribuye a cada uno\nsegún le place.\nR. Él revela honduras y secretos, y la luz mora junto a él.",
+     "ref": "Dn 2, 21-22; 1 Co 12, 11"
+    }
+   ],
+   "laudes": [
+    {
+     "tipo": "cantico_evangelico",
+     "texto": "Ant. Los sabios brillarán con esplendor de cielo, y los que enseñan la justicia a las\nmultitudes serán como estrellas por toda la eternidad."
+    }
+   ],
+   "visperas2": [
+    {
+     "tipo": "cantico_evangelico",
+     "texto": "Ant. Quien cumpla y enseñe mi ley será grande en el reino de los cielos."
+    }
+   ]
+  },
+  "oracion": "Señor Dios, que te dignaste instruir a tu Iglesia con la vida y doctrina de san Basilio\nMagno y san Gregorio Nacianceno, haz que busquemos humildemente tu verdad y la\nvivamos fielmente en el amor. Por nuestro Señor Jesucristo."
+ },
+ "17": {
+  "titulo": "San Antonio, abad",
+  "rango": "M",
+  "semblanza": "Este ilustre padre del monaquismo nació en Egipto hacia el año 250. Al morir sus padres, distribuyó sus bienes entre los pobres y se retiró al desierto, donde comenzó a llevar una vida de penitencia. Tuvo muchos discípulos; trabajó en favor de la Iglesia, confortando a los confesores de la fe durante la persecución de Diocleciano, y apoyando a san Atanasio en sus luchas contra los arrianos. Murió el año 356.",
+  "comun": "Del Común de santos varones: para los santos religiosos.",
+  "horas": {
+   "oficio": [
+    {
+     "tipo": "lectura2",
+     "texto": "De la Vida de san Antonio, escrita por san Atanasio, obispo\n(Caps. 2-4: PG 26, 842-846)\n\nLA VOCACIÓN DE SAN ANTONIO\n\nCuando murieron sus padres, Antonio tenía unos dieciocho o veinte años, y\nquedó él solo con su única hermana, pequeña aún, teniendo que encargarse de\nla casa y del cuidado de su hermana.\n\nHabían transcurrido apenas seis meses de la muerte de sus padres, cuando\nun día en que se dirigía, según costumbre, a la iglesia, iba pensando en su\ninterior cómo los apóstoles lo habían dejado todo para seguir al Salvador, y\ncómo, según narran los Hechos de los apóstoles, muchos vendían sus\nposesiones y ponían el precio de la venta a los pies de los apóstoles para que\nlo repartieran entre los pobres; pensaba también en la magnitud de la\nesperanza que para éstos estaba reservada en el cielo; imbuido de estos\npensamientos, entró en la iglesia, y dio la casualidad de que en aquel\nmomento estaban leyendo aquellas palabras del Señor en el Evangelio:\n\n«Si quieres llegar hasta el final, vende lo que tienes, da el dinero a los pobres\n—así tendrás un tesoro en el cielo— y luego vente conmigo.»\n\nEntonces Antonio, como si Dios le hubiese infundido el recuerdo de lo que\nhabían hecho los santos y como si aquellas palabras hubiesen sido leídas\nespecialmente para él, salió en seguida de la iglesia e hizo donación a los\naldeanos de las posesiones heredadas de sus padres (tenía trescientas\nparcelas fértiles y muy hermosas), con el fin de evitar toda inquietud para sí y\npara su hermana. Vendió también todos sus bienes muebles y repartió entre\nlos pobres la considerable cantidad resultante de esta venta, reservando sólo\nuna pequeña parte para su hermana.\n\nHabiendo vuelto a entrar en la iglesia, oyó aquellas palabras del Señor en el\nEvangelio:\n\n«No os agobiéis por el mañana.»\nSaliendo otra vez, dio a los necesitados incluso lo poco que se había\n\nreservado, ya que no soportaba que quedase en su poder ni la más mínima\ncantidad. Encomendó su hermana a unas vírgenes que él sabía eran de\nconfianza y cuidó de que recibiese una conveniente educación; en cuanto a él,\na partir de entonces, libre ya de cuidados ajenos, emprendió en frente de su\nmisma casa una vida de ascetismo y de intensa mortificación.\n\nTrabajaba con sus propias manos, ya que conocía aquella afirmación de la\nEscritura: El que no trabaja que no coma; lo que ganaba con su trabajo lo\ndestinaba parte a su propio sustento, parte a los pobres.\n\nOraba con mucha frecuencia, ya que había aprendido que es necesario\nretirarse para ser constantes en orar: en efecto, ponía tanta atención en la\nlectura, que retenía todo lo que había leído, hasta tal punto que llegó un\nmomento en que su memoria suplía los libros.\n\nTodos los habitantes del lugar, y todos los hombres honrados, cuya compañía\nfrecuentaba, al ver su conducta, lo llamaban amigo de Dios; y todos lo amaban\ncomo a un hijo o como a un hermano."
+    },
+    {
+     "tipo": "responsorio",
+     "texto": "R. Si quieres ser perfecto, ve a vender lo que tienes, dalo a los pobres, y\ntendrás un tesoro en el cielo; * luego ven y sígueme.\nV. El que no renuncia a todos sus bienes no puede ser mi discípulo.\nR. Luego ven y sígueme.",
+     "ref": "Mt 19, 21; Lc 14, 33"
+    }
+   ]
+  },
+  "oracion": "Señor y Dios nuestro, que llamaste al desierto a san Antonio, abad, para que\nte sirviera con una vida santa, concédenos, por su intercesión, que sepamos\nnegarnos a nosotros mismos para amarte a ti siempre sobre todas las cosas.\nPor nuestro Señor Jesucristo."
+ },
+ "21": {
+  "titulo": "Santa Inés, virgen y mártir",
+  "rango": "M",
+  "semblanza": "Murió mártir en Roma en la segunda mitad del siglo III o, más probablemente, a principios del IV. El papa Dámaso honró su sepulcro con un poema, y muchos Padres de la Iglesia, a partir de san Ambrosio, le dedicaron alabanzas.",
+  "comun": "Del Común de un mártir, o del Común de vírgenes.",
+  "horas": {
+   "oficio": [
+    {
+     "tipo": "lectura2",
+     "texto": "Del tratado de san Ambrosio, obispo, sobre las vírgenes\n(Libro 1, Caps. 2. 5. 7-9: PL 16 [edición 1845],189-191)\n\nNO TENÍA AÚN EDAD DE SER CONDENADA, PERO ESTABA YA MADURA PARA\nLA VICTORIA\n\nCelebramos hoy el nacimiento para el cielo de una virgen, imitemos su\nintegridad; se trata también de una mártir, ofrezcamos el sacrificio. Es el día\nnatalicio de santa Inés. Sabemos por tradición que murió mártir a los doce\naños de edad. Destaca en su martirio, por una parte, la crueldad que no se\ndetuvo ni ante una edad tan tierna; por otra, la fortaleza que infunde la fe,\ncapaz de dar testimonio en la persona de una jovencita.\n\n¿Es que en aquel cuerpo tan pequeño cabía herida alguna? Y, con todo,\naunque en ella no encontraba la espada donde descargar su golpe, fue ella\ncapaz de vencer a la espada. Y eso que a esta edad las niñas no pueden\nsoportar ni la severidad del rostro de sus padres, y, si distraídamente se\npinchan con una aguja, se ponen a llorar como si se tratara de una herida.\n\nPero ella, impávida entre las sangrientas manos del verdugo, inalterable al\nser arrastrada por pesadas y chirriantes cadenas, ofrece todo su cuerpo a la\nespada del enfurecido soldado, ignorante aún de lo que es la muerte, pero\ndispuesta a sufrirla; al ser arrastrada por la fuerza al altar idolátrico, entre las\nllamas tendía hacia Cristo sus manos, y así, en medio de la sacrílega hoguera,\nsignificaba con esta posición el estandarte triunfal de la victoria del Señor;\nintentaban aherrojar su cuello y sus manos con grilletes de hierro, pero sus\nmiembros resultaban demasiado pequeños para quedar encerrados en ellos.\n\n¿Una nueva clase de martirio? No tenía aún edad de ser condenada, pero\nestaba ya madura para la victoria; la lucha se presentaba difícil, la corona\nfácil; lo que parecía imposible por su poca edad lo hizo posible su virtud\nconsumada. Una recién casada no iría al tálamo nupcial con la alegría con que\niba esta doncella al lugar del suplicio, con prisa y contenta de su suerte,\nadornada su cabeza no con rizos, sino con el mismo Cristo, coronada no de\nflores, sino de virtudes.\n\nTodos lloraban, menos ella. Todos se admiraban de que, con tanta\ngenerosidad, entregara una vida de la que aún no había comenzado a gozar,\ncomo si ya la hubiese vivido plenamente. Todos se asombraban de que fuera\nya testigo de Cristo una niña que, por su edad, no podía aún dar testimonio de\nsí misma. Resultó así que fue capaz de dar fe de las cosas de Dios una niña\nque era incapaz legalmente de dar fe de las cosas humanas, porque el Autor\nde la naturaleza puede hacer que sean superadas las leyes naturales.\n\nEl verdugo hizo lo posible para aterrorizarla, para atraerla con halagos,\nmuchos desearon casarse con ella. Pero ella dijo:\n\n«Sería una injuria para mi Esposo esperar a ver si me gusta otro; él me ha\nelegido primero, él me tendrá. ¿A qué esperas, verdugo, para asestar el golpe?\nPerezca el cuerpo que puede ser amado con unos ojos a los que yo no quiero.»\n\nSe detuvo, oró, doblegó la cerviz. Hubieras visto cómo temblaba el verdugo,\ncomo si él fuese el condenado; cómo temblaba su diestra al ir a dar el golpe,\ncómo palidecían los rostros al ver lo que le iba a suceder a la niña, mientras\nella se mantenía serena. En una sola víctima tuvo lugar un doble martirio: el\nde la castidad y el de la fe. Permaneció virgen y obtuvo la gloria del martirio."
+    },
+    {
+     "tipo": "responsorio",
+     "texto": "R. Celebremos la festividad de santa Inés, recordemos su glorioso martirio: *\nen su juventud afrontó la muerte y encontró la vida.\nV. Pues amó únicamente al Autor de la vida.\nR. En su juventud afrontó la muerte y encontró la vida."
+    }
+   ],
+   "laudes": [
+    {
+     "tipo": "cantico_evangelico",
+     "texto": "Ant. Al que deseé ya lo contemplo, al que esperaba ya lo poseo; en el cielo\nestoy unida con aquel a quien tan ardientemente amé cuando estaba en la\ntierra."
+    }
+   ],
+   "visperas2": [
+    {
+     "tipo": "cantico_evangelico",
+     "texto": "Ant. Inés, con las manos extendidas, oraba, diciendo: «Ayúdame, Padre santo;\nestoy acercándome a ti, a quien tanto he amado, a quien siempre he deseado\ny buscado.»"
+    }
+   ]
+  },
+  "oracion": "Dios todopoderoso y eterno, que eliges a los débiles para confundir a los\nfuertes de este mundo, concédenos a cuantos celebramos el triunfo de tu\nmártir santa Inés imitar la firmeza de su fe. Por nuestro Señor Jesucristo."
+ },
+ "24": {
+  "titulo": "San Francisco de Sales, obispo y doctor de la Iglesia",
+  "rango": "M",
+  "semblanza": "Nació en Saboya el año 1567. Una vez ordenado sacerdote, trabajó intensamente por la restauración católica en su patria. Nombrado obispo de Ginebra, actuó como un verdadero pastor para con los clérigos y fieles, adoctrinándolos en la fe con sus escritos y con sus obras, convirtiéndose en un ejemplo para todos. Murió en Lyon el día 28 de diciembre del año 1622, pero fue el día 24 de enero del año siguiente cuando se realizó su sepultura definitiva en Annecy.",
+  "comun": "Del Común de pastores o del Común de doctores de la Iglesia.",
+  "horas": {
+   "oficio": [
+    {
+     "tipo": "lectura2",
+     "texto": "De la Introducción a la vida devota, de san Francisco de Sales, obispo\n(Parte 1, cap. 3)\n\nLA DEVOCIÓN SE HA DE EJERCITAR DE DIVERSAS MANERAS\n\nEn la misma creación, Dios creador mandó a las plantas que diera cada una\nfruto según su propia especie: así también mandó a los cristianos, que son\ncomo las plantas de su Iglesia viva, que cada uno diera un fruto de devoción\nconforme a su calidad, estado y vocación.\n\nLa devoción, insisto, se ha de ejercitar de diversas maneras, según que se\ntrate de una persona noble o de un obrero, de un criado o de un príncipe, de\nuna viuda o de una joven soltera, o bien de una mujer casada. Más aún: la\ndevoción se ha de practicar de un modo acomodado a las fuerzas, negocios y\nocupaciones particulares de cada uno.\n\nDime, te ruego, mi Filotea, si sería lógico que los obispos quisieran vivir\nentregados a la soledad, al modo de los cartujos; que los casados no se\npreocuparan de aumentar su peculio más que los religiosos capuchinos; que un\nobrero se pasara el día en la iglesia, como un religioso; o que un religioso, por\nel contrario, estuviera continuamente absorbido, a la manera de un obispo, por\ntodas las circunstancias que atañen a las necesidades del prójimo. Una tal\ndevoción ¿por ventura no sería algo ridículo, desordenado o inadmisible?\n\nY, con todo, esta equivocación absurda es de lo más frecuente. No ha de ser\nasí; la devoción, en efecto, mientras sea auténtica y sincera, nada destruye,\nsino que todo lo perfecciona y completa, y, si alguna vez resulta de verdad\ncontraria a la vocación o estado de alguien, sin duda es porque se trata de una\nfalsa devoción.\n\nLa abeja saca miel de las flores sin dañarlas ni destruirlas, dejándolas tan\níntegras, incontaminadas y frescas como las ha encontrado. Lo mismo, y mejor\naún, hace la verdadera devoción: ella no destruye ninguna clase de vocación o\nde ocupaciones, sino que las adorna y embellece.\n\nDel mismo modo que algunas piedras preciosas bañadas en miel se vuelven\nmás fúlgidas y brillantes, sin perder su propio color, así también el que a su\npropia vocación junta la devoción se hace más agradable a Dios y más\nperfecto. Esta devoción hace que sea mucho más apacible el cuidado de la\nfamilia, que el amor mutuo entre marido y mujer sea más sincero, que la\nsumisión debida a los gobernantes sea más leal, y que todas las ocupaciones,\nde cualquier clase que sean, resulten más llevaderas y hechas con más\nperfección.\n\nEs, por tanto, un error, por no decir una herejía, el pretender excluir la\ndevoción de los regimientos militares, del taller de los obreros, del palacio de\nlos príncipes, de los hogares y familias; hay que admitir, amadísima Filotea,\nque la devoción puramente contemplativa, monástica y religiosa no puede ser\nejercida en estos oficios y estados; pero, además de este triple género de\ndevoción, existen también otros muchos y muy acomodados a las diversas\nsituaciones de la vida seglar.\n\nAsí pues, en cualquier situación en que nos hallemos, debemos y podemos\naspirar a la vida de perfección."
+    },
+    {
+     "tipo": "responsorio",
+     "texto": "R. Sed bondadosos y compasivos unos con otros, y perdonaos mutuamente\ncomo también Dios os ha perdonado en Cristo; * sed imitadores de Dios, como\nhijos amados que sois.\nV. Tomad sobre vosotros mi yugo y aprended de mí que soy manso y humilde\nde corazón.\nR. Sed imitadores de Dios, como hijos amados que sois.",
+     "ref": "Ef 4, 32-5, 1; Mt 11, 29"
+    }
+   ]
+  },
+  "oracion": "Señor Dios nuestro, tú has querido que el santo obispo Francisco de Sales se\nentregara a todos generosamente para la salvación de los hombres;\nconcédenos, a ejemplo suyo, manifestar la dulzura de tu amor en el servicio de\nnuestros hermanos. Por nuestro Señor Jesucristo."
+ },
+ "25": {
+  "titulo": "La Conversión del apóstol san Pablo",
+  "rango": "F",
+  "semblanza": "",
+  "comun": "",
+  "horas": {
+   "invitatorio": [
+    {
+     "tipo": "inicio",
+     "texto": "Ant. Aclamemos al Señor, en esta fiesta de la conversión del Maestro de los\ngentiles.\nEl salmo del Invitatorio como en el Ordinario."
+    }
+   ],
+   "oficio": [
+    {
+     "tipo": "himno",
+     "texto": "Si derribado caíste,\nfue para elevarte más.\nDe hoy por siempre seguirás\nal Cristo que perseguiste.\n\nRuega por mí, ciego y triste,\nque Saulo de errores fui.\nSi en el pecado me hundí,\npueda seguirte en tu vuelo.\n\nDesde el fulgor de tu cielo,\nsan Pablo, ruega por mí.\nGloria al Padre, gloria al Hijo,\ngloria al Espíritu Santo,\npor los siglos de los siglos. Amén.\n\nO bien:\n\n¿Quién es este viajero\nal que el Señor acecha en el camino\ny con su luz derriba por el suelo?\n\n¿Quién es este violento\nal que el Señor elige de entre todos\npara mostrar la fuerza de su verbo?\n\nContra Jesús, se dirigía a Damasco,\ny después, por Jesús,\nrecorrerá la tierra, predicándolo.\nCumplir con la ley era su orgullo;\nla gracia del Espíritu después,\ntimbre de gloria, único.\n\nPara él sólo tendrá significado\nconocer a Jesús,\ny a este Señor Jesús, ¡crucificado!\nCompartirá las pruebas del Señor\ny así compartirá también la gloria\nde la resurrección. Amén."
+    },
+    {
+     "tipo": "salmodia",
+     "texto": "Ant. 1. «Señor, ¿quién eres?» «Yo soy Jesús a quien tú persigues; dura cosa\nserá para ti dar coces contra el aguijón.»\n\nSalmo 18 A\n\nEl cielo proclama la gloria de Dios,\nel firmamento pregona\nla obra de sus manos:\nel día al día le pasa el mensaje,\nla noche a la noche se lo susurra.\n\nSin que hablen, sin que pronuncien,\nsin que resuene su voz,\na toda la tierra alcanza su pregón\ny hasta los límites del orbe su lenguaje.\n\nAllí le ha puesto su tienda al sol:\nél sale como el esposo de su alcoba,\ncontento como un héroe,\na recorrer su camino.\n\nAsoma por un extremo del cielo,\ny su órbita llega al otro extremo:\nnada se libra de su calor.\n\nAnt. «Señor, ¿quién eres?» «Yo soy Jesús a quien tú persigues; dura cosa\nserá para ti dar coces contra el aguijón.»\nAnt. 2. Ananías, vete enseguida y pregunta por Saulo, el cual está orando;\néste es un instrumento que me he escogido yo para que lleve mi nombre a los\ngentiles, a los reyes y a los hijos de Israel.\n\nSalmo 63\n\nEscucha, oh Dios, la voz de mi lamento,\nprotege mi vida del terrible enemigo;\nescóndeme de la conjura de los perversos\ny del motín de los malhechores:\n\nafilan sus lenguas como espadas\ny disparan como flechas palabras venenosas,\npara herir a escondidas al inocente,\npara herirlo por sorpresa y sin riesgo.\n\nSe animan al delito,\ncalculan cómo esconder trampas,\ny dicen: \"¿quién lo descubrirá?\"\n\nInventan maldades y ocultan sus invenciones,\nporque su mente y su corazón no tienen fondo.\n\nPero Dios los acribilla a flechazos,\npor sorpresa los cubre de heridas;\nsu misma lengua los lleva a la ruina,\ny los que lo ven menean la cabeza.\n\nTodo el mundo se atemoriza,\nproclama la obra de Dios\ny medita sus acciones.\n\nEl justo se alegra con el Señor,\nse refugia en él,\ny se felicitan los rectos de corazón.\n\nAnt. Ananías, vete enseguida y pregunta por Saulo, el cual está orando;\néste es un instrumento que me he escogido yo para que lleve mi nombre a los\ngentiles, a los reyes y a los hijos de Israel.\nAnt. 3. Saulo comenzó a predicar en las sinagogas a los judíos, afirmando que\nJesús era el Cristo.\n\nSalmo 96\n\nEl Señor reina, la tierra goza,\nse alegran las islas innumerables.\nTiniebla y nube lo rodea,\njusticia y derecho sostienen su trono.\n\nDelante de él avanza el fuego,\nabrasando en torno a los enemigos;\nsus relámpagos deslumbran el orbe,\ny, viéndolos, la tierra se estremece.\n\nLos montes se derriten como cera\nante el dueño de toda la tierra;\nlos cielos pregonan su justicia,\ny todos los pueblos contemplan su gloria.\n\nLos que adoran estatuas se sonrojan,\nlos que ponen su orgullo en los ídolos;\nante él se postran todos los dioses.\n\nLo oye Sión, y se alegra,\nse regocijan las ciudades de Judá\npor tus sentencias, Señor;\n\nporque tú eres, Señor,\naltísimo sobre toda la tierra,\nencumbrado sobre todos los dioses.\n\nEl Señor ama al que aborrece el mal,\nprotege la vida de sus fieles\ny los libra de los malvados.\n\nAmanece la luz para el justo,\ny la alegría para los rectos de corazón.\nAlegraos, justos, con el Señor,\ncelebrad su santo nombre.\n\nAnt. Saulo comenzó a predicar en las sinagogas a los judíos, afirmando que\nJesús era el Cristo."
+    },
+    {
+     "tipo": "versiculo",
+     "texto": "V. El Señor es clemente y misericordioso.\nR. Lento a la cólera y rico en piedad."
+    },
+    {
+     "tipo": "lectura1",
+     "texto": "De la carta del apóstol san Pablo a los Gálatas 1, 11-24\n\nDIOS ME REVELÓ A SU HIJO PARA QUE LO ANUNCIARA\n\nOs hago saber, hermanos, que el Evangelio anunciado por mí no es cosa\nhumana; y no lo recibí de hombre alguno, sino por revelación de Jesucristo.\n\nHabéis oído hablar de cómo me portaba yo en otro tiempo en el judaísmo,\ncómo perseguía encarnizadamente a la iglesia de Dios y la devastaba; cómo,\nen el celo por el judaísmo, iba más allá que muchos compatriotas de mi edad y\nme mostraba celoso partidario de las tradiciones paternas.\n\nPero, cuando aquel que me eligió desde el seno de mi madre me llamó por\nsu gracia y tuvo a bien revelarme a su Hijo para que lo anunciara a los\ngentiles, enseguida, sin pedir consejo a hombre alguno y sin subir a Jerusalén\npara hablar con los que eran apóstoles antes que yo, partí hacia Arabia, de\ndonde luego volví a Damasco. Tres años más tarde, subí a Jerusalén a visitar a\nCefas, y estuve con él quince días. No vi a ninguno otro de los apóstoles, fuera\nde Santiago, el hermano del Señor.\n\nPor el Dios que me está viendo, que no miento en lo que os escribo.\nDespués vine a las regiones de Siria y de Cilicia, pero las Iglesias de Judea,\n\nque están en Cristo, no me conocían personalmente. Sólo oían decir: «El que\nantaño nos perseguía ahora va anunciando la Buena Nueva de la fe, que en\notro tiempo quería destruir.» Y glorificaban a Dios, reconociendo su obra en mí."
+    },
+    {
+     "tipo": "responsorio",
+     "texto": "R. El Evangelio anunciado por mí no es cosa humana; * y no lo recibí de\nhombre alguno, sino por revelación de Jesucristo.\nV. Por la verdad de Cristo que en mí reside: yo os he anunciado el Evangelio de\nDios.\nR. Y no lo recibí de hombre alguno, sino por revelación de Jesucristo.",
+     "ref": "Ga 1, 11-12; 2 Co 11, 10. cf. 7"
+    },
+    {
+     "tipo": "lectura2",
+     "texto": "De las homilías de san Juan Crisóstomo, obispo\n(Homilía 2 sobre las alabanzas de san Pablo: PG 50, 477-480)\n\nPABLO LO SUFRIÓ TODO POR AMOR A CRISTO\n\nQué es el hombre, cuán grande su nobleza y cuánta su capacidad de virtud\nlo podemos colegir sobre todo de la persona de Pablo. Cada día se levantaba\ncon una mayor elevación y fervor de espíritu y, frente a los peligros que lo\nacechaban, era cada vez mayor su empuje, como lo atestiguan sus propias\npalabras: Olvidándome de lo que queda atrás y lanzándome hacia lo que está\npor delante; y, al presentir la inminencia de su muerte, invitaba a los demás a\ncompartir su gozo, diciendo: Estad alegres y asociaos a mi alegría; y, al pensar\nen sus peligros y oprobios, se alegra también y dice, escribiendo a los\ncorintios: Vivo contento en medio de mis debilidades, de los insultos y de las\npersecuciones; incluso llama a estas cosas armas de justicia, significando con\nello que le sirven de gran provecho.\n\nY así, en medio de las asechanzas de sus enemigos, habla en tono triunfal\nde las victorias alcanzadas sobre los ataques de sus perseguidores y, habiendo\nsufrido en todas partes azotes, injurias y maldiciones, como quien vuelve\nvictorioso de la batalla, colmado de trofeos, da gracias a Dios, diciendo: Doy\ngracias a Dios, que siempre nos asocia a la victoria de Cristo. Imbuido de estos\nsentimientos, se lanzaba a las contradicciones e injurias, que le acarreaba su\npredicación, con un ardor superior al que nosotros empleamos en la\nconsecución de los honores, deseando la muerte más que nosotros deseamos\nla vida, la pobreza más que nosotros la riqueza, y el trabajo mucho más que\notros apetecen el descanso que lo sigue. La única cosa que él temía era\n\nofender a Dios; lo demás le tenía sin cuidado. Por esto mismo, lo único que\ndeseaba era agradar siempre a Dios.\n\nY, lo que era para él lo más importante de todo, gozaba del amor de Cristo;\ncon esto se consideraba el más dichoso de todos, sin esto le era indiferente\nasociarse a los poderosos y a los príncipes; prefería ser, con este amor, el\núltimo de todos, incluso del número de los condenados, que formar parte, sin\nél, de los más encumbrados y honorables.\n\nPara él, el tormento más grande y extraordinario era el verse privado de\neste amor: para él, su privación significaba el infierno, el único sufrimiento, el\nsuplicio infinito e intolerable.\n\nGozar del amor de Cristo representaba para él la vida, el mundo, la\ncompañía de los ángeles, los bienes presentes y futuros, el reino, las\npromesas, el conjunto de todo bien; sin este amor, nada catalogaba como\ntriste o alegre. Las cosas de este mundo no las consideraba, en sí mismas, ni\nduras ni suaves.\n\nLas realidades presentes las despreciaba como hierba ya podrida. A los\nmismos gobernantes y al pueblo enfurecido contra él les daba el mismo valor\nque a un insignificante mosquito.\n\nConsideraba como un juego de niños la muerte y la más variada clase de\ntormentos y suplicios, con tal de poder sufrir algo por Cristo."
+    },
+    {
+     "tipo": "responsorio",
+     "texto": "R. Fui acogido por Dios con toda misericordia, porque obré por ignorancia en el\ntiempo de mi incredulidad. * Y en verdad que sobreabundó en mí la gracia de\nnuestro Señor, juntamente con la fe y la caridad de Cristo Jesús.\nV. Soy indigno del nombre de apóstol, pues perseguí a la Iglesia de Dios.\nR. Y en verdad que sobreabundó en mí la gracia de nuestro Señor, juntamente\ncon la fe y la caridad de Cristo Jesús.\nSi se hace una celebración más extensa de la vigilia de la fiesta.",
+     "ref": "1 Tm 1, 13-14; 1 Co 15, 9"
+    },
+    {
+     "tipo": "te_deum"
+    },
+    {
+     "tipo": "oracion",
+     "texto": "Señor, Dios nuestro, tú que has instruido a todos los pueblos con la predicación\ndel apóstol san Pablo, concede a cuantos celebramos su Conversión, caminar\nhacia ti, siguiendo su ejemplo, y ser ante el mundo testigos de tu verdad. Por\nnuestro Señor Jesucristo."
+    }
+   ],
+   "laudes": [
+    {
+     "tipo": "himno",
+     "texto": "¿Cómo has logrado, Señor,\neste cambio nunca visto:\nde Saulo, el perseguidor,\nen Pablo, heraldo de Cristo?\n\nPablo muele en su molino\nel antiguo Testamento,\nCristo le sale al camino,\nle arrastra en su seguimiento.\n\nSiempre la Iglesia recibe,\n\ncomo un eco del Señor,\nlas cartas que Pablo escribe,\ndictadas por el amor.\n\nInfatigable viajero,\nrecorres la tierra entera,\napóstol y misionero\nhasta el fin de tu carrera.\n\nComo una flecha bruñida,\nvas a la meta, de suerte\nque sólo Cristo es tu vida,\ny una ganancia la muerte.\n\nDescúbrenos la victoria\nde Jesús crucificado,\npara compartir la gloria\ndel Señor resucitado. Amén.\nO bien:\n\nCon presunción de bélico soldado,\ngalán sale feroz, Pablo, atrevido,\nque, si ahora en la cuenta no ha caído,\ncaerá muy presto del primer estado.\n\n¿Adónde, Pablo, de soberbia armado,\npara quedar con una voz vencido?\nSeguid las letras, ¿dónde vais perdido?,\nque habéis de ser doctor del mayor grado.\n\nAunque valor vuestra persona encierra,\nno es bien que nadie contra Dios presuma:\nque dará con los ojos por la tierra.\n\nLa Iglesia espera vuestra docta suma:\nmirad que no sois vos para la guerra,\ndejad las armas y tomad la pluma. Amén."
+    },
+    {
+     "tipo": "salmodia",
+     "texto": "Ant. 1. Sé de quien me he fiado y estoy firmemente persuadido de que el justo\nJuez tiene poder para asegurar hasta el último día el encargo que me dio.\n\nSalmo 62, 2-9\n\nEL ALMA SEDIENTA DE DIOS\n\nMadruga por Dios todo el que rechaza las obras de las tinieblas.\n¡Oh Dios!, tú eres mi Dios, por ti madrugo,\n\nmi alma está sedienta de ti;\nmi carne tiene ansia de ti,\ncomo tierra reseca, agostada, sin agua.\n\n¡Cómo te contemplaba en el santuario\nviendo tu fuerza y tu gloria!\nTu gracia vale más que la vida,\nte alabarán mis labios.\n\nToda mi vida te bendeciré\ny alzaré las manos invocándote.\nMe saciaré de manjares exquisitos,\ny mis labios te alabarán jubilosos.\n\nEn el lecho me acuerdo de ti\ny velando medito en ti,\nporque fuiste mi auxilio,\ny a la sombra de tus alas canto con júbilo;\nmi alma está unida a ti,\ny tu diestra me sostiene.\n\nAnt. Sé de quien me he fiado y estoy firmemente persuadido de que el justo\nJuez tiene poder para asegurar hasta el último día el encargo que me dio.\nAnt. 2. Te basta mi gracia, Pablo; la fuerza se realiza en la debilidad.\n\nCántico Dn 3, 57-88. 56\n\nTODA LA CREACIÓN ALABE AL SEÑOR\n\nAlabad al Señor, sus siervos todos (Ap 19, 5).\n\nCriaturas todas del Señor, bendecid al Señor,\nensalzadlo con himnos por los siglos.\n\nÁngeles del Señor, bendecid al Señor;\ncielos, bendecid al Señor.\n\nAguas del espacio, bendecid al Señor;\nejércitos del Señor, bendecid al Señor.\n\nSol y luna, bendecid al Señor;\nastros del cielo, bendecid al Señor.\n\nLluvia y rocío, bendecid al Señor;\nvientos todos, bendecid al Señor.\n\nFuego y calor, bendecid al Señor;\nfríos y heladas, bendecid al Señor.\n\nRocíos y nevadas, bendecid al Señor;\ntémpanos y hielos, bendecid al Señor.\n\nEscarchas y nieves, bendecid al Señor;\nnoche y día, bendecid al Señor.\n\nLuz y tinieblas, bendecid al Señor;\nrayos y nubes, bendecid al Señor.\n\nBendiga la tierra al Señor,\nensálcelo con himnos por los siglos.\n\nMontes y cumbres, bendecid al Señor;\ncuanto germina en la tierra, bendiga al Señor.\n\nManantiales, bendecid al Señor;\nmares y ríos, bendecid al Señor.\n\nCetáceos y peces, bendecid al Señor;\naves del cielo, bendecid al Señor.\n\nFieras y ganados, bendecid al Señor,\nensalzadlo con himnos por los siglos.\n\nHijos de los hombres, bendecid al Señor;\nbendiga Israel al Señor.\n\nSacerdotes del Señor, bendecid al Señor;\nsiervos del Señor, bendecid al Señor.\n\nAlmas y espíritus justos, bendecid al Señor;\nsantos y humildes de corazón, bendecid al Señor.\n\nAnanías, Azarías y Misael, bendecid al Señor,\nensalzadlo con himnos por los siglos.\n\nBendigamos al Padre, al Hijo y al Espíritu Santo,\nensalcémoslo con himnos por los siglos.\n\nBendito el Señor en la bóveda del cielo,\nalabado y glorioso y ensalzado por los siglos.\n\nNo se dice Gloria al Padre.\nAnt. Te basta mi gracia, Pablo; la fuerza se realiza en la debilidad.\nAnt. 3. La gracia de Dios no se ha frustrado en mí, su gracia trabaja siempre\nconmigo.\n\nSalmo 149\n\nALEGRÍA DE LOS SANTOS\n\nLos hijos de la Iglesia, nuevo pueblo de Dios, se alegran en su Rey, Cristo, el Señor\n(Hesiquio).\n\nCantad al Señor un cántico nuevo,\nresuene su alabanza en la asamblea de los fieles;\nque se alegre Israel por su Creador,\nlos hijos de Sión por su Rey.\n\nAlabad su nombre con danzas,\ncantadle con tambores y cítaras;\nporque el Señor ama a su pueblo\ny adorna con la victoria a los humildes.\n\nQue los fieles festejen su gloria\ny canten jubilosos en filas:\ncon vítores a Dios en la boca\ny espadas de dos filos en las manos:\n\npara tomar venganza de los pueblos\ny aplicar el castigo a las naciones,\nsujetando a los reyes con argollas,\na los nobles con esposas de hierro.\n\nEjecutar la sentencia dictada\nes un honor para todos sus fieles.\n\nAnt. La gracia de Dios no se ha frustrado en mí, su gracia trabaja siempre\nconmigo."
+    },
+    {
+     "tipo": "lectura_breve",
+     "texto": "Me he aparecido a ti precisamente para elegirte como servidor, como testigo de\nque me has visto ahora y de lo que te revele en adelante. Te salvaré de tu\npueblo y de los gentiles, a quienes te envío para que les abras los ojos, y se\nvuelvan de las tinieblas a la luz y del dominio de Satanás a Dios; para que,\ncreyendo en mí, obtengan el perdón de los pecados y parte en la herencia de\nlos consagrados.",
+     "ref": "Hch 26, 16b-18"
+    },
+    {
+     "tipo": "responsorio_breve",
+     "texto": "V. Tú eres un instrumento escogido, apóstol san Pablo.\nR. Tú eres un instrumento escogido, apóstol san Pablo.\nV. Predicador de la verdad en todo el mundo.\nR. Apóstol san Pablo.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. Tú eres un instrumento escogido, apóstol san Pablo."
+    },
+    {
+     "tipo": "cantico_evangelico",
+     "texto": "Ant. Celebremos la conversión del apóstol san Pablo, que de perseguidor pasó\na ser un instrumento elegido."
+    },
+    {
+     "tipo": "preces",
+     "texto": "Queridos hermanos, habiendo recibido de los apóstoles la herencia de los\nelegidos, demos gracias a nuestro Padre por todos sus dones, diciendo:\nEl coro de los apóstoles te ensalza, Señor.\n\nPor la mesa de tu cuerpo y de tu sangre, que nos transmitieron los apóstoles,\n— con la cual nos alimentamos y vivimos.\nEl coro de los apóstoles te ensalza, Señor.\n\nPor la mesa de tu palabra, que nos transmitieron los apóstoles,\n— con la cual se nos comunica la luz y el gozo.\nEl coro de los apóstoles te ensalza, Señor.\n\nPor tu Iglesia santa, edificada sobre el fundamento de los apóstoles,\n— por la cual nos integramos en la unidad.\nEl coro de los apóstoles te ensalza, Señor.\n\nPor la purificación del bautismo y de la penitencia, confiada a los apóstoles,\n— con la cual quedamos limpios de todos los pecados.\nEl coro de los apóstoles te ensalza, Señor.\nSe pueden añadir algunas intenciones libres.\n\nConcluyamos nuestra oración con la plegaria que Jesús enseñó a los apóstoles:\nPadre nuestro."
+    },
+    {
+     "tipo": "oracion",
+     "texto": "Señor, Dios nuestro, tú que has instruido a todos los pueblos con la predicación\ndel apóstol san Pablo, concede a cuantos celebramos su Conversión, caminar\nhacia ti, siguiendo su ejemplo, y ser ante el mundo testigos de tu verdad. Por\nnuestro Señor Jesucristo."
+    }
+   ],
+   "intermedia": {
+    "comun": [],
+    "tercia": [
+     {
+      "tipo": "lectura_breve",
+      "texto": "Doy gracias a Cristo Jesús, nuestro Señor, que me hizo capaz, se fió de mí y\nme confió este ministerio. Yo primero fui blasfemo y perseguidor, e inferí\nultrajes; pero fui acogido con toda misericordia, porque obré por ignorancia en\nel tiempo de mi incredulidad.\nV. Estad alegres, dice el Señor.\nR. Porque vuestros nombres están inscritos en el cielo.",
+      "ref": "1 Tm 1, 12-13"
+     }
+    ],
+    "sexta": [
+     {
+      "tipo": "lectura_breve",
+      "texto": "¡En verdad que sobreabundó en mí la gracia de nuestro Señor, juntamente con\nla fe y la caridad de Cristo Jesús! Sentencia verdadera y digna de universal\nadhesión es ésta: Cristo Jesús vino al mundo para salvar a los pecadores. Y de\nentre ellos yo soy el primero.\nV. Señor, tú eres mi lámpara.\nR. Dios mío, tú alumbras mis tinieblas.",
+      "ref": "1 Tm 1, 14-15"
+     }
+    ],
+    "nona": [
+     {
+      "tipo": "lectura_breve",
+      "texto": "Dios me concedió su misericordia, para que Cristo Jesús manifestase\nprimeramente en mí toda su benignidad y sirviese de ejemplo a quienes habían\nde creer en él para conseguir la vida eterna.\nV. Daré gloria a tu nombre por siempre, Señor.\nR. Por tu gran piedad para conmigo.",
+      "ref": "1 Tm 1, 16"
+     },
+     {
+      "tipo": "oracion_laudes"
+     }
+    ]
+   },
+   "visperas2": [
+    {
+     "tipo": "himno",
+     "texto": "Con presunción de bélico soldado,\ngalán sale y feroz Pablo atrevido,\nque, si ahora en la cuenta no ha caído,\ncaerá muy presto del primer estado.\n\n¿A dónde Pablo, de soberbia armado,\npara quedar con una voz vencido?\nSeguid las letras, ¿dónde vais perdido?,\nque habéis de ser doctor del mayor grado.\n\nAunque valor vuestra persona encierra,\nno es bien que nadie contra Dios presuma,\nque dará con los ojos por la tierra.\n\nLa Iglesia espera vuestra docta suma:\nmirad que no sois vos para la guerra;\ndejad las armas, y tomad la pluma.\n\nGloria al Padre, y al Hijo, y al Espíritu,\npor los siglos de los siglos. Amén.\nO bien:\n\nTan cerca, Saulo, de nosotros,\nde nuestras mordeduras,\nde nuestros viejos odios\ny de nuestras ternuras.\n\nCerca de nuestras ansias,\nlejos de nuestros pasos,\nde nuestras veleidades\ny de nuestros fracasos.\n\nDinos que Cristo en cruz\nes todo: pena y gozo,\ntu enseñanza y tu gloria,\ntu lucha y tu reposo.\n\nQue al corazón que a toda\ndecisión está listo,\ntodo es estiércol, todo,\npara ganar a Cristo. Amén."
+    },
+    {
+     "tipo": "salmodia",
+     "texto": "Ant. 1. Muy a gusto presumo de mis debilidades, porque así residirá en mí la\nfuerza de Cristo.\n\nSalmo 115\n\nTenía fe, aún cuando dije:\n\"¡Qué desgraciado soy!\"\nYo decía en mi apuro:\n\"Los hombres son unos mentirosos\".\n\n¿Cómo pagaré al Señor\ntodo el bien que me ha hecho?\nAlzaré la copa de la salvación,\ninvocando su nombre.\nCumpliré al Señor mis votos\nen presencia de todo el pueblo.\n\nMucho le cuesta al Señor\nla muerte de sus fieles.\nSeñor, yo soy tu siervo,\nsiervo tuyo, hijo de tu esclava:\nrompiste mis cadenas.\n\nTe ofreceré un sacrificio de alabanza,\ninvocando tu nombre, Señor.\nCumpliré al Señor mis votos\nen presencia de todo el pueblo,\nen el atrio de la casa del Señor,\nen medio de ti, Jerusalén.\n\nAnt. Muy a gusto presumo de mis debilidades, porque así residirá en mí la\nfuerza de Cristo.\nAnt. 2. Yo planté, Apolo regó, pero fue Dios quien dio el crecimiento.\n\nSalmo 125\n\nCuando el Señor cambió la suerte de Sión,\nnos parecía soñar:\nla boca se nos llenaba de risas,\nla lengua de cantares.\n\nHasta los gentiles decían:\n\"El Señor ha estado grande con ellos\".\nEl Señor ha estado grande con nosotros,\ny estamos alegres.\n\nQue el Señor cambie nuestra suerte,\ncomo los torrentes del Negueb.\nLos que sembraban con lágrimas\ncosechan entre cantares.\n\nAl ir, iba llorando,\nllevando la semilla;\nal volver, vuelve cantando,\ntrayendo sus gavillas.\n\nAnt. Yo planté, Apolo regó, pero fue Dios quien dio el crecimiento.\nAnt. 3. Para mí la vida es Cristo, y la muerte una ganancia; líbreme Dios de\ngloriarme si no es en la cruz de nuestro Señor Jesucristo.\n\nCántico  Ef 1, 3-10\n\nBendito sea Dios,\nPadre de nuestro Señor Jesucristo,\nque nos ha bendecido en la persona de Cristo\ncon toda clase de bienes espirituales y celestiales.\n\nÉl nos eligió en la persona de Cristo,\nantes de crear el mundo,\npara que fuésemos santos\ne irreprochables ante Él por el amor.\n\nÉl nos ha destinado en la persona de Cristo,\npor pura iniciativa suya,\na ser sus hijos,\npara que la gloria de su gracia,\nque tan generosamente nos ha concedido\nen su querido Hijo,\nredunde en alabanza suya.\n\nPor este Hijo, por su sangre,\nhemos recibido la redención,\nel perdón de los pecados.\nEl tesoro de su gracia, sabiduría y prudencia\nha sido un derroche para con nosotros,\ndándonos a conocer el misterio de su voluntad.\n\nÉste es el plan\n\nque había proyectado realizar por Cristo\ncuando llegase el momento culminante:\nrecapitular en Cristo todas las cosas\ndel cielo y de la tierra.\n\nAnt. Para mí la vida es Cristo, y la muerte una ganancia; líbreme Dios de\ngloriarme si no es en la cruz de nuestro Señor Jesucristo."
+    },
+    {
+     "tipo": "lectura_breve",
+     "texto": "Yo soy el menor de los apóstoles y no soy digno de llamarme apóstol, porque\nhe perseguido a la Iglesia de Dios. Pero por la gracia de Dios soy lo que soy, y\nsu gracia no se ha frustrado en mí. Antes bien, he trabajado más que todos\nellos. Aunque no he sido yo, sino la gracia de Dios conmigo.",
+     "ref": "1 Co 15, 9-10"
+    },
+    {
+     "tipo": "responsorio_breve",
+     "texto": "V. Te doy gracias, Señor, de todo corazón.\nR. Te doy gracias, Señor, de todo corazón.\nV. Tañeré en honor de tu nombre entre las naciones.\nR. De todo corazón.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. Te doy gracias, Señor, de todo corazón."
+    },
+    {
+     "tipo": "cantico_evangelico",
+     "texto": "Ant. Apóstol san Pablo, predicador de la verdad y maestro de los gentiles,\nintercede por nosotros ante Dios que te eligió."
+    },
+    {
+     "tipo": "preces",
+     "texto": "Hermanos: Edificados sobre el cimiento de los apóstoles, oremos al Padre por\nsu pueblo santo, diciendo:\nAcuérdate, Señor, de tu Iglesia.\n\nPadre santo, que quisiste que tu Hijo resucitado de entre los muertos se\nmanifestara en primer lugar a los apóstoles,\n— haz que también nosotros seamos testigos de Cristo hasta los confines del\nmundo.\n\nPadre santo, tú que enviaste a tu Hijo al mundo para dar la Buena Noticia a los\npobres,\n— haz que sepamos proclamar el Evangelio a todas las criaturas.\n\nTú que enviaste a tu Hijo a sembrar la semilla de la palabra,\n— haz que, sembrando también tu palabra con nuestro esfuerzo, recojamos\nsus frutos con alegría.\n\nTú que enviaste a tu Hijo para que reconciliara el mundo contigo,\n— haz que también nosotros cooperemos a la reconciliación de los hombres.\nSe pueden añadir algunas intenciones libres.\n\nTú que quisiste que tu Hijo resucitara el primero de entre los muertos,\n\n— concede a todos los que son de Cristo resucitar con él, el día de su venida.\n\nOremos ahora al Padre, como Jesús enseñó a los apóstoles: Padre nuestro."
+    },
+    {
+     "tipo": "oracion",
+     "texto": "Señor, Dios nuestro, tú que has instruido a todos los pueblos con la predicación\ndel apóstol san Pablo, concede a cuantos celebramos su Conversión, caminar\nhacia ti, siguiendo su ejemplo, y ser ante el mundo testigos de tu verdad. Por\nnuestro Señor Jesucristo."
+    }
+   ]
+  }
+ },
+ "26": {
+  "titulo": "San Timoteo y san Tito, obispos",
+  "rango": "M",
+  "semblanza": "Timoteo y Tito, discípulos y colaboradores del apóstol Pablo, presidieron las Iglesias de Éfeso y de Creta, respectivamente. Ellos fueron los destinatarios de las cartas llamadas «pastorales», cartas llenas de excelentes recomendaciones para la formación de pastores y fieles.",
+  "comun": "Del Común de pastores.",
+  "horas": {
+   "oficio": [
+    {
+     "tipo": "lectura2",
+     "texto": "De las homilías de san Juan Crisóstomo, obispo\n(Homilía 2 sobre las alabanzas de san Pablo: PG 50, 480-484)\n\nHE COMBATIDO BIEN MI COMBATE\n\nPablo, encerrado en la cárcel, habitaba ya en el cielo, y recibía los azotes y\nheridas con un agrado superior al de los que conquistan el premio en los\njuegos; amaba los sufrimientos no menos que el premio, ya que éstos mismos\nsufrimientos, para él, equivalían al premio; por esto, los consideraba como una\ngracia. Sopesemos bien lo que esto significa. El premio consistía ciertamente\nen partir para estar con Cristo; en cambio, quedarse en esta vida significaba el\ncombate; sin embargo, el mismo anhelo de estar con Cristo lo movía a diferir\nel premio, llevado del deseo del combate, ya que lo juzgaba más necesario.\n\nComparando las dos cosas, el estar separado de Cristo representaba para él\nel combate y el sufrimiento, más aún, el máximo combate y el máximo\nsufrimiento. Por el contrario, estar con Cristo representaba el premio sin\ncomparación; con todo, Pablo, por amor a Cristo, prefiere el combate al\npremio.\n\nAlguien quizá dirá que todas estas dificultades él las tenía por suaves, por su\namor a Cristo. También yo lo admito, ya que todas aquellas cosas, que para\nnosotros son causa de tristeza, en él engendraban el máximo deleite. Y para\nqué recordar las dificultades y tribulaciones? Su gran aflicción le hacía\n\nexclamar: ¿Quién enferma sin que yo enferme? ¿quién cae sin que a mi me dé\nfiebre?\n\nOs ruego que no sólo admiréis, sino que también imitéis este magnífico\nejemplo de virtud: así podremos ser partícipes de su corona.\n\nY, si alguien se admira de esto que hemos dicho, a saber, que el que posea\nunos méritos similares a los de Pablo obtendrá una corona semejante a la\nsuya, que atienda a las palabras del mismo Apóstol: He combatido bien mi\ncombate, he corrido hasta la meta, he mantenido la fe. Ahora me aguarda la\ncorona merecida con la que el Señor, juez justo, me premiará en aquel día; y\nno sólo a mi, sino a todos los que tienen amor a su venida. ¿Te das cuenta de\ncómo nos invita a todos a tener parte en su misma gloria?\n\nAsí pues, ya que a todos nos aguarda una misma corona de gloria,\nprocuremos hacernos dignos de los bienes que tenemos prometidos.\n\nY no sólo debemos considerar en el Apóstol la magnitud y excelencia de sus\nvirtudes y su pronta y robusta disposición de ánimo, por las que mereció llegar\na un premio tan grande, sino que hemos de pensar también que su naturaleza\nera en todo igual a la nuestra; de este modo, las cosas más arduas nos\nparecerán fáciles y llevaderas y, esforzándonos en este breve tiempo de\nnuestra vida, alcanzaremos aquella corona incorruptible e inmortal, por la\ngracia y la misericordia de nuestro Señor Jesucristo, a quien pertenece la gloria\ny el imperio ahora y siempre y por los siglos de los siglos. Amén."
+    },
+    {
+     "tipo": "responsorio",
+     "texto": "R. Como hombre de Dios que eres, corre al alcance de la justicia, de la piedad,\nde la fe, de la caridad, de la paciencia en el sufrimiento, de la dulzura. *\nCombate el buen combate de la fe, conquista la vida eterna.\nV. Enseña lo que es conforme a la sana doctrina.\nR. Combate el buen combate de la fe, conquista la vida eterna.",
+     "ref": "1 Tm 6, 11-12; Tt 2, 1"
+    }
+   ],
+   "laudes": [
+    {
+     "tipo": "cantico_evangelico",
+     "texto": "Ant. Proclama la palabra, insiste con oportunidad o sin ella, persuade,\nreprende, exhorta, armado de toda paciencia y doctrina."
+    }
+   ],
+   "visperas2": [
+    {
+     "tipo": "cantico_evangelico",
+     "texto": "Ant. Vivamos con justicia y religiosidad, aguardando la feliz esperanza y la\nmanifestación del Señor."
+    }
+   ]
+  },
+  "oracion": "Oh Dios, que hiciste brillar con virtudes apostólicas a los santos Timoteo y\nTito; concédenos por su intercesión que, después de vivir en este mundo en\njusticia y santidad, merezcamos llegar al reino de los cielos. Por nuestro Señor\nJesucristo."
+ },
+ "28": {
+  "titulo": "Santo Tomás de Aquino, presbítero y doctor de la Iglesia",
+  "rango": "M",
+  "semblanza": "Nació alrededor del año 1225, de la familia de los condes de Aquino. Estudió primero en el monasterio de Montecasino, luego en Nápoles; más tarde ingresó en la Orden de Predicadores, y completó sus estudios en París y en Colonia, donde tuvo por maestro a san Alberto Magno. Escribió muchas obras llenas de erudición y ejerció también el profesorado, contribuyendo en gran manera al incremento de la filosofía y de la teología. Murió cerca de Terracina el día 7 de marzo de 1274. Su memoria se celebra el día 28 de enero, por razón de que en esta fecha tuvo lugar, el año 1369, el traslado de su cuerpo a Tolosa del Languedoc.",
+  "comun": "Del Común de doctores de la Iglesia.",
+  "horas": {
+   "oficio": [
+    {
+     "tipo": "lectura2",
+     "texto": "De las Conferencias de santo Tomás de Aquino, presbítero\n(Conferencia 6 sobre el Credo)\n\nEN LA CRUZ HALLAMOS EL EJEMPLO DE TODAS LAS VIRTUDES\n\n¿Era necesario que el Hijo de Dios padeciera por nosotros? Lo era,\nciertamente, y por dos razones fáciles de deducir: la una, para remediar\nnuestros pecados; la otra, para darnos ejemplo de cómo hemos de obrar.\n\nPara remediar nuestros pecados, en efecto, porque en la pasión de Cristo\nencontramos el remedio contra todos los males que nos sobrevienen a causa\ndel pecado.\n\nLa segunda razón tiene también su importancia, ya que la pasión de Cristo\nbasta para servir de guía y modelo a toda nuestra vida. Pues todo aquel que\nquiera llevar una vida perfecta no necesita hacer otra cosa que despreciar lo\nque Cristo despreció en la cruz y apetecer lo que Cristo apeteció. En la cruz\nhallamos el ejemplo de todas las virtudes.\n\nSi buscas un ejemplo de amor: Nadie tiene más amor que el que da la vida\npor sus amigos. Esto es lo que hizo Cristo en la cruz. Y, por esto, si él entregó\nsu vida por nosotros, no debemos considerar gravoso cualquier mal que\ntengamos que sufrir por él.\n\nSi buscas un ejemplo de paciencia, encontrarás el mejor de ellos en la cruz.\nDos cosas son las que nos dan la medida de la paciencia: sufrir pacientemente\ngrandes males, o sufrir, sin rehuirlos, unos males que podrían evitarse. Ahora\nbien, Cristo, en la cruz, sufrió grandes males y los soportó pacientemente, ya\nque en su pasión no profería amenazas; como cordero llevado al matadero,\nenmudecía y no abría la boca. Grande fue la paciencia de Cristo en la cruz:\nCorramos en la carrera que nos toca, sin retirarnos, fijos los ojos en el que\ninició y completa nuestra fe: Jesús, que, renunciando al gozo inmediato,\nsoportó la cruz, despreciando la ignominia.\n\nSi buscas un ejemplo de humildad, mira al crucificado: él, que era Dios,\nquiso ser juzgado bajo el poder de Poncio Pilato y morir.\n\nSi buscas un ejemplo de obediencia, imita a aquel que se hizo obediente al\nPadre hasta la muerte: Si por la desobediencia de uno —es decir, de Adán—\ntodos se convirtieron en pecadores, así por la obediencia de uno todos se\nconvertirán en justos.\n\nSi buscas un ejemplo de desprecio de las cosas terrenales, imita a aquel que\nes Rey de reyes y Señor de señores, en quien están encerrados todos los\ntesoros del saber y el conocer, desnudo en la cruz, burlado, escupido,\nflagelado, coronado de espinas, a quien finalmente, dieron a beber hiel y\nvinagre.\n\nNo te aficiones a los vestidos y riquezas, ya que se repartieron mis ropas; ni\na los honores, ya que él experimentó las burlas y azotes; ni a las dignidades,\nya que le pusieron una corona de espinas, que habían trenzado; ni a los\nplaceres, ya que para mi sed me dieron vinagre."
+    },
+    {
+     "tipo": "responsorio",
+     "texto": "R. Supliqué y se me concedió la prudencia, invoqué y vino a mí un espíritu de\nsabiduría. * La preferí a los cetros y a los tronos, y en su comparación tuve en\nnada la riqueza.\nV. Señor, ¿quién hubiera conocido tu voluntad, si tú no le hubieses dado la\nsabiduría y no le hubieses enviado de lo alto tu Espíritu Santo?\nR. La preferí a los cetros y a los tronos, y en su comparación tuve en nada la\nriqueza.",
+     "ref": "Sb 7, 7-8; 9, 17"
+    }
+   ],
+   "laudes": [
+    {
+     "tipo": "cantico_evangelico",
+     "texto": "Ant. Bendito sea el Señor, por cuyo amor santo Tomás estudió con esfuerzo,\noró asiduamente y trabajó sin desfallecer."
+    }
+   ],
+   "visperas2": [
+    {
+     "tipo": "cantico_evangelico",
+     "texto": "Ant. Dios le concedió una sabiduría e inteligencia extraordinarias, en las que\nprofundizó portentosamente y comunicó luego con generosidad."
+    }
+   ]
+  },
+  "oracion": "Oh Dios, que hiciste de santo Tomás de Aquino un varón preclaro por su anhelo\nde santidad y por su dedicación a las ciencias sagradas, concédenos entender\nlo que él enseñó e imitar el ejemplo que nos dejó en su vida. Por nuestro\nSeñor Jesucristo."
+ },
+ "31": {
+  "titulo": "San Juan Bosco, presbítero",
+  "rango": "M",
+  "semblanza": "Nació junto a Castelnuovo, en la diócesis de Turín, el año 1815. Su niñez fue dura. Una vez ordenado sacerdote, empleó todas sus energías en la educación de los jóvenes e instituyó Congregaciones destinadas a enseñarles diversos oficios y formarlos en la vida cristiana. Escribió también algunos opúsculos en defensa de la religión. Murió el año 1888.",
+  "comun": "Del Común de pastores o del Común de santos varones: para educadores.",
+  "horas": {
+   "oficio": [
+    {
+     "tipo": "lectura2",
+     "texto": "De las cartas de san Juan Bosco, presbítero\n(Epistolario, Turín 1959, 4 201-203)\n\nTRABAJÉ SIEMPRE POR AMOR\n\nSi de verdad buscamos la auténtica felicidad de nuestros alumnos y\nqueremos inducirlos al cumplimiento de sus obligaciones, conviene, ante todo,\n\nque nunca olvidéis que hacéis las veces de padres de nuestros amados\njóvenes, por quienes trabajé siempre con amor, por quienes estudié y ejercí el\nministerio sacerdotal, y no sólo yo; sino toda la Congregación salesiana.\n\n¡Cuántas veces, hijos míos, durante mi vida, ya bastante prolongada, he\ntenido ocasión de convencerme de esta gran verdad! Es más fácil enojarse que\naguantar, amenazar al niño que persuadirlo; añadiré incluso que, para nuestra\nimpaciencia y soberbia, resulta más cómodo castigar a los rebeldes que\ncorregirlos, soportándolos con firmeza y suavidad a la vez.\n\nOs recomiendo que imitéis la caridad que usaba Pablo con los neófitos,\ncaridad que con frecuencia lo llevaba a derramar lágrimas y a suplicar, cuando\nlos encontraba poco dóciles y rebeldes a su amor.\n\nGuardaos de que nadie pueda pensar que os dejáis llevar por los arranques\nde vuestro espíritu. Es difícil, al castigar, conservar la debida moderación, la\ncual es necesaria para que en nadie pueda surgir la duda de que obramos sólo\npara hacer prevalecer nuestra autoridad o para desahogar nuestro mal humor.\n\nMiremos como a hijos a aquellos sobre los cuales debemos ejercer alguna\nautoridad. Pongámonos a su servicio, a imitación de Jesús, el cual vino para\nobedecer y no para mandar, y avergoncémonos de todo lo que pueda tener\nincluso apariencia de dominio; si algún dominio ejercemos sobre ellos, ha de\nser para servirlos mejor.\n\nEste era el modo de obrar de Jesús con los apóstoles, ya que era paciente\ncon ellos, a pesar de que eran ignorantes y rudos, e incluso poco fieles;\ntambién con los pecadores se comportaba con benignidad y con una amigable\nfamiliaridad, de tal modo que era motivo de admiración para unos, de\nescándalo para otros, pero también ocasión de que muchos concibieran la\nesperanza de alcanzar el perdón de Dios. Por esto, nos mandó que fuésemos\nmansos y humildes de corazón.\n\nSon hijos nuestros, y, por esto, cuando corrijamos sus errores, hemos de\ndeponer toda ira o, por lo menos, dominarla de tal manera como si la\nhubiéramos extinguido totalmente.\n\nMantengamos sereno nuestro espíritu, evitemos el desprecio en la mirada,\nlas palabras hirientes; tengamos comprensión en el presente y esperanza en el\nfuturo, como conviene a unos padres de verdad, que se preocupan\nsinceramente de la corrección y enmienda de sus hijos.\n\nEn los casos más graves, es mejor rogar a Dios con humildad que arrojar un\ntorrente de palabras, ya que éstas ofenden a los que las escuchan, sin que\nsirvan de provecho alguno a los culpables."
+    },
+    {
+     "tipo": "responsorio",
+     "texto": "R. Le presentaban a Jesús unos niños para que les impusiera las manos; pero\nlos discípulos trataban de apartarlos. Jesús, al verlo, les dijo: * «Dejad que los\nniños vengan a mí y no se lo estorbéis, porque el reino de Dios es de los que\nson como ellos.»\nV. El que reciba a un niño como éstos en mi nombre a mí me recibe.\nR. Dejad que los niños vengan a mí y no se lo estorbéis, porque el reino de\nDios es de los que son como ellos.",
+     "ref": "Mc 10, 13-14; Mt 18, 5"
+    }
+   ]
+  },
+  "oracion": "Señor, tú que has suscitado en san Juan Bosco un padre y un maestro para la\njuventud, danos también a nosotros un celo infatigable y un amor ardiente,\nque nos impulse a entregarnos al bien de los hermanos y a servirte a ti en\nellos con fidelidad. Por nuestro Señor Jesucristo."
+ }
+}

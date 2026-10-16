@@ -1,0 +1,825 @@
+{
+ "dom": {
+  "visperas1": [
+   {
+    "tipo": "salmodia",
+    "texto": "Ant. 1. El Señor se eleva sobre los cielos y levanta del polvo al desvalido. Aleluya.\n\nSalmo 112\n\nALABADO SEA EL NOMBRE DE DIOS\n\nDerriba del trono a los poderosos\ny enaltece a los humildes (Lc 1, 52).\n\nAlabad, siervos del Señor,\nalabad el nombre del Señor.\nBendito sea el nombre del Señor,\nahora y por siempre:\nde la salida del sol hasta su ocaso,\nalabado sea el nombre del Señor.\n\nEl Señor se eleva sobre todos los pueblos,\nsu gloria sobre los cielos.\n¿Quién como el Señor, Dios nuestro,\nque se eleva en su trono\ny se abaja para mirar\nal cielo y a la tierra?\n\nLevanta del polvo al desvalido,\nalza de la basura al pobre,\npara sentarlo con los príncipes,\nlos príncipes de su pueblo;\na la estéril le da un puesto en la casa,\ncomo madre feliz de hijos.\n\nAnt. El Señor se eleva sobre los cielos y levanta del polvo al desvalido. Aleluya.\n\nAnt. 2. Rompiste mis cadenas, Señor, te ofreceré un sacrificio de alabanza. Aleluya.\n\nSalmo 115\n\nACCIÓN DE GRACIAS EN EL TEMPLO\n\nPor medio de Jesús ofrezcamos\ncontinuamente a Dios un sacrificio\n\nde alabanza (Hb 13, 15).\nTenía fe, aún cuando dije:\n\n\"¡Qué desgraciado soy!\"\nYo decía en mi apuro:\n\"Los hombres son unos mentirosos\".\n\n¿Cómo pagaré al Señor\ntodo el bien que me ha hecho?\nAlzaré la copa de la salvación,\ninvocando su nombre.\nCumpliré al Señor mis votos\nen presencia de todo el pueblo.\n\nMucho le cuesta al Señor\nla muerte de sus fieles.\nSeñor, yo soy tu siervo,\nsiervo tuyo, hijo de tu esclava:\nrompiste mis cadenas.\n\nTe ofreceré un sacrificio de alabanza,\ninvocando tu nombre, Señor.\nCumpliré al Señor mis votos\nen presencia de todo el pueblo,\nen el atrio de la casa del Señor,\nen medio de ti, Jerusalén.\n\nAnt. Rompiste mis cadenas, Señor, te ofreceré un sacrificio de alabanza. Aleluya.\n\nAnt. 3. El Hijo de Dios aprendió, sufriendo, a obedecer, y se ha convertido para todos los que le obedecen en autor de salvación eterna. Aleluya.\n\nCántico Flp 2, 6-11\n\nCRISTO, SIERVO DE DIOS, EN SU MISTERIO PASCUAL\n\nCristo, a pesar de su condición divina,\nno hizo alarde de su categoría de Dios;\nal contrario, se despojó de su rango\ny tomó la condición de esclavo,\npasando por uno de tantos.\n\nY así, actuando como un hombre cualquiera,\nse rebajó hasta someterse incluso a la muerte,\ny una muerte de cruz.\n\nPor eso Dios lo levantó sobre todo\ny le concedió el \"Nombre—sobre—todo—nombre\";\nde modo que al nombre de Jesús toda rodilla se doble\nen el cielo, en la tierra, en el abismo,\ny toda lengua proclame:\nJesucristo es Señor, para gloria de Dios Padre.\n\nAnt. El Hijo de Dios aprendió, sufriendo, a obedecer, y se ha convertido para todos los que le obedecen en autor de salvación eterna. Aleluya."
+   },
+   {
+    "tipo": "lectura_breve",
+    "texto": "Vosotros sois linaje escogido, sacerdocio regio, nación santa, pueblo adquirido por Dios\npara proclamar las hazañas del que os llamó a salir de la tiniebla y a entrar en su luz\nmaravillosa. Vosotros, que en otro tiempo no erais pueblo, sois ahora pueblo de Dios;\nvosotros, que estabais excluidos de la misericordia, sois ahora objeto de la misericordia de\nDios.",
+    "ref": "1 Pe 2, 9-10"
+   },
+   {
+    "tipo": "responsorio_breve",
+    "texto": "V. El Espíritu Santo. Aleluya, aleluya.\nR. El Espíritu Santo. Aleluya, aleluya.\nV. Os lo enseñará todo.\nR. Aleluya, aleluya.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. El Espíritu Santo. Aleluya, aleluya."
+   },
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "Ant. No os dejaré huérfanos; me voy pero volveré a vosotros, y se alegrará vuestro\ncorazón. Aleluya."
+   },
+   {
+    "tipo": "preces",
+    "texto": "Glorifiquemos a Cristo, sobre quien bajó el Espíritu Santo de manera visible y hagamos\nnuestras las súplicas de la Iglesia, diciendo:\n\nAmén.\n\nEnvía, Señor, al que ha de venir,\n para que renueve y rejuvenezca constantemente a tu Iglesia.\n\nQue todos los pueblos canten en tu honor,\n— y que Israel se convierta en posesión tuya.\n\nTú que expulsaste los demonios y venciste el mal,\n— aleja de nosotros todo escándalo y toda perversidad.\n\nTú que el día de Pentecostés, por el don de lenguas, destruiste la división de Babel,\n— haz que, por obra de tu Espíritu Santo, se alcance la unidad de todos los pueblos en\n\nla confesión de una sola fe.\nSe pueden añadir algunas intenciones libres.\n\nQue tu Espíritu habite en nosotros,\n— y vivifique los cuerpos de nuestros difuntos.\n\nSintiéndonos verdaderos hijos de Dios, digamos a nuestro Padre: Padre nuestro."
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Escucha, Señor, nuestras plegarias, y, ya que confesamos que Cristo, el Salvador de los"
+   }
+  ],
+  "oficio": [
+   {
+    "tipo": "salmodia",
+    "texto": "Ant. 1. Aleluya. Dios resucitó a Cristo de entre los muertos y lo glorificó. Aleluya.\n\nSalmo 144\n\nHIMNO A LA GRANDEZA DE DIOS\n\nTú, Señor, el que eras y eres,\nel Santo, eres justo (Ap 16, 5).\n\nI\n\nTe ensalzaré, Dios mío, mi rey;\nbendeciré tu nombre por siempre jamás.\n\nDía tras día, te bendeciré\ny alabaré tu nombre por siempre jamás.\n\nGrande es el Señor, merece toda alabanza,\nes incalculable su grandeza;\nuna generación pondera tus obras a la otra,\ny le cuenta tus hazañas.\n\nAlaban ellos la gloria de tu majestad,\ny yo repito tus maravillas;\nencarecen ellos tus temibles proezas,\ny yo narro tus grandes acciones;\ndifunden la memoria de tu inmensa bondad,\ny aclaman tus victorias.\n\nEl Señor es clemente y misericordioso,\nlento a la cólera y rico en piedad;\nel Señor es bueno con todos,\nes cariñoso con todas sus criaturas.\n\nAnt. Aleluya. Dios resucitó a Cristo de entre los muertos y lo glorificó. Aleluya.\n\nAnt. 2. Aleluya. Has sido encumbrado, Señor, por encima de los cielos. Aleluya.\n\nII\n\nQue todas tus criaturas te den gracias, Señor,\nque te bendigan tus fieles;\nque proclamen la gloria de tu reinado,\nque hablen de tus hazañas;\n\nexplicando tus hazañas a los hombres,\nla gloria y majestad de tu reinado.\nTu reinado es un reinado perpetuo,\ntu gobierno va de edad en edad.\n\nAnt. Aleluya. Has sido encumbrado, Señor, por encima de los cielos. Aleluya.\n\nAnt. 3. Aleluya. Se me ha dado pleno poder en el cielo y en la tierra. Aleluya.\n\nIII\n\nEl Señor es fiel a sus palabras,\nbondadoso en todas sus acciones.\n† El Señor sostiene a los que van a caer,\nendereza a los que ya se doblan.\n\nLos ojos de todos te están aguardando,\ntú les das la comida a su tiempo;\nabres tú la mano,\ny sacias de favores a todo viviente.\n\nEl Señor es justo en todos sus caminos,\nes bondadoso en todas sus acciones;\ncerca está el Señor de los que lo invocan,\nde los que lo invocan sinceramente.\n\nSatisface los deseos de sus fieles,\nescucha sus gritos, y los salva.\nEl Señor guarda a los que lo aman,\npero destruye a los malvados.\n\nPronuncie mi boca la alabanza del Señor,\ntodo viviente bendiga su santo nombre\npor siempre jamás.\n\nAnt. Aleluya. Se me ha dado pleno poder en el cielo y en la tierra. Aleluya.\nEl versículo, las lecturas y la oración como en el Propio del Tiempo.\nLa conclusión de la Hora como en el Ordinario."
+   },
+   {
+    "tipo": "oracion_laudes"
+   }
+  ],
+  "laudes": [
+   {
+    "tipo": "salmodia",
+    "texto": "Ant. 1. El Señor reina vestido de majestad. Aleluya. †\n\nSalmo 92\n\nGLORIA DEL DIOS CREADOR\n\nReina el Señor, nuestro Dios,\ndueño de todo; alegrémonos y gocemos y\n\ndémosle gracias (Ap 19, 6. 7).\nEl Señor reina, vestido de majestad,\n\nel Señor, vestido y ceñido de poder:\nasí está firme el orbe y no vacila.\n\nTu trono está firme desde siempre,\ny tú eres eterno.\n\nLevantan los ríos, Señor,\nlevantan los ríos su voz,\nlevantan los ríos su fragor;\n\npero más que la voz de aguas caudalosas,\nmás potente que el oleaje del mar,\nmás potente en el cielo es el Señor.\n\nTus mandatos son fieles y seguros;\n\nla santidad es el adorno de tu casa,\nSeñor, por días sin término.\n\nAnt. El Señor reina vestido de majestad. Aleluya.\n\nAnt. 2. La creación se verá liberada, para entrar en la libertad gloriosa de los hijos de Dios. Aleluya.\n\nCántico Dn 3, 57-88. 56\n\nTODA LA CREACIÓN ALABE AL SEÑOR\n\nAlabad al Señor, sus siervos todos\n(Ap 19, 5).\n\nCriaturas todas del Señor,\n  bendecid al Señor,\n  ensalzadlo con himnos por los siglos.\n\nÁngeles del Señor, bendecid al Señor;\n  cielos, bendecid al Señor.\n  Aguas del espacio, bendecid al Señor;\n  ejércitos del Señor, bendecid al Señor.\n\nSol y luna, bendecid al Señor;\n  astros del cielo, bendecid al Señor.\n  Lluvia y rocío, bendecid al Señor;\n  vientos todos, bendecid al Señor.\n\nFuego y calor, bendecid al Señor;\n  fríos y heladas, bendecid al Señor.\n  Rocíos y nevadas, bendecid al Señor;\n  témpanos y hielos, bendecid al Señor.\n\nEscarchas y nieves, bendecid al Señor;\n  noche y día, bendecid al Señor.\n  Luz y tinieblas, bendecid al Señor;\n  rayos y nubes, bendecid al Señor.\n\nBendiga la tierra al Señor,\n  ensálcelo con himnos por los siglos.\n  Montes y cumbres, bendecid al Señor;\n  cuanto germina en la tierra,\n  bendiga al Señor.\n\nManantiales, bendecid al Señor;\n  mares y ríos, bendecid al Señor.\n\n  Cetáceos y peces, bendecid al Señor;\n  aves del cielo, bendecid al Señor.\n\nFieras y ganados, bendecid al Señor,\n  ensalzadlo con himnos por los siglos.\n  Hijos de los hombres, bendecid al Señor\n  bendiga Israel al Señor.\n\nSacerdotes del Señor, bendecid al Señor;\n  siervos del Señor, bendecid al Señor.\n  Almas y espíritus justos,\n  bendecid al Señor;\n  santos y humildes de corazón,\n  bendecid al Señor.\n\nAnanías, Azarías y Misael,\n  bendecid al Señor;\n  ensalzadlo con himnos por los siglos.\n\nBendigamos al Padre y al Hijo\n  con el Espíritu Santo,\n  ensalcémoslo con himnos por los siglos.\n\nBendito el Señor en la bóveda del cielo,\n  alabado y glorioso\n  y ensalzado por los siglos.\nAl final de este cántico no se dice Gloria al Padre.\nAnt. La creación se verá liberada, para entrar en la libertad gloriosa de los hijos de Dios. Aleluya.\n\nAnt. 3. El nombre del Señor es sublime sobre el cielo y la tierra. Aleluya.\n\nSalmo 148\n\nALABANZA DEL DIOS CREADOR\n\nAl que se sienta en el trono y al\nCordero la alabanza, el honor, la\n\ngloria y el poder por los siglos de los\nsiglos (Ap 5, 13).\n\nAlabad al Señor en el cielo,\nalabad al Señor en lo alto.\nAlabadlo, todos sus ángeles;\nalabadlo todos sus ejércitos.\n\nAlabadlo, sol y luna;\nalabadlo, estrellas lucientes.\nAlabadlo, espacios celestes\ny aguas que cuelgan en el cielo.\n\nAlaben el nombre del Señor,\nporque él lo mandó, y existieron.\nLes dio consistencia perpetua\ny una ley que no pasará.\n\nAlabad al Señor en la tierra,\ncetáceos y abismos del mar,\nrayos, granizo, nieve y bruma,\nviento huracanado\nque cumple sus órdenes,\n\nmontes y todas las sierras,\nárboles frutales y cedros,\nfieras y animales domésticos,\nreptiles y pájaros que vuelan.\n\nReyes y pueblos del orbe,\npríncipes y jefes del mundo,\nlos jóvenes y también las doncellas,\nlos viejos junto con los niños,\n\nalaben el nombre del Señor,\nel único nombre sublime.\nSu majestad sobre el cielo y la tierra;\nél acrece el vigor de su pueblo.\nAlabanza de todos sus fieles,\nde Israel, su pueblo escogido.\n\nAnt. El nombre del Señor es sublime sobre el cielo y la tierra. Aleluya."
+   },
+   {
+    "tipo": "lectura_breve",
+    "texto": "Dios resucitó a Jesús al tercer día e hizo que se apareciese no a todo el pueblo, sino a\nnosotros, que somos los testigos elegidos de antemano por Dios. Nosotros hemos comido\ny bebido con él, después que Dios lo resucitó de entre los muertos, y él nos mandó\npredicar al pueblo y atestiguar que ha sido constituido por Dios juez de vivos y muertos.\nDe él hablan todos los profetas y aseguran que cuantos tengan fe en él recibirán por su\nnombre el perdón de sus pecados.",
+    "ref": "Hch 10, 40-43"
+   },
+   {
+    "tipo": "responsorio_breve",
+    "texto": "V. Cristo, Hijo de Dios vivo, ten piedad de nosotros. Aleluya, aleluya.\nR. Cristo, Hijo de Dios vivo, ten piedad de nosotros. Aleluya, aleluya.\nV. Tú que has resucitado de entre los muertos.\n\nR. Aleluya, aleluya.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. Cristo, Hijo de Dios vivo, ten piedad de nosotros. Aleluya, aleluya."
+   },
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "Ant. Padre, yo te he glorificado sobre la tierra, llevando a cabo la obra que me tienes\nencomendada. Aleluya."
+   },
+   {
+    "tipo": "preces",
+    "texto": "Unámonos en la alabanza y la oración a todos los que han sido justificados por el Espíritu\nde Dios, y digamos:\nQue tu Espíritu, Señor, venga en nuestra ayuda.\n\nSeñor Jesús, haz que nos dejemos guiar durante todo el día por el Espíritu Santo,\n— y que siempre nos comportemos como hijos de Dios.\n\nIntercede, Señor, por medio del Espíritu Santo, ante el Padre,\n— para que seamos dignos de alcanzar tus promesas.\n\nConvierte en generosidad nuestro egoísmo,\n— para que nuestro gozo esté más en dar que en recibir.\n\nDanos, Señor, el sentido de Dios,\n— para que, ayudados por tu Espíritu, crezcamos en el conocimiento de ti y del Padre.\nSe pueden añadir algunas intenciones libres.\nDirijámonos ahora al Padre con las palabras que el Espíritu del Señor resucitado pone en\nnuestra boca: Padre nuestro."
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Escucha, Señor, nuestras plegarias, y, ya que confesamos que Cristo, el Salvador de los"
+   }
+  ],
+  "intermedia": {
+   "comun": [],
+   "tercia": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "Cristo murió por nuestros pecados, según las Escrituras, y fue sepultado; resucitó al tercer\ndía y vive, según lo anunciaron también las Escrituras. Y  se apareció a Cefas y luego a los\nDoce.\nV. Verdaderamente ha resucitado el Señor. Aleluya.\nR. Y se ha aparecido a Simón. Aleluya.",
+     "ref": "Cf. 1 Co 15. 3b-5"
+    },
+    {
+     "tipo": "oracion_laudes"
+    }
+   ],
+   "sexta": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "Dios, que es rico en misericordia, por el gran amor con que nos amó, aun cuando\nestábamos muertos por nuestros pecados, nos vivificó con Cristo —por pura gracia habéis\nsido salvados— y nos resucitó con él, y nos hizo sentar en los cielos con Cristo Jesús.\nV. Los discípulos se llenaron de alegría. Aleluya.\nR. Al ver al Señor. Aleluya.",
+     "ref": "Ef 2, 4-6"
+    },
+    {
+     "tipo": "oracion_laudes"
+    }
+   ],
+   "nona": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "Por nuestro bautismo fuimos sepultados con Cristo, para participar de su muerte; para\nque, así como Cristo fue resucitado de entre los muertos por la gloria del Padre, así\ntambién nosotros vivamos una vida nueva.\nV. Quédate con nosotros, Señor. Aleluya.\nR. Porque ya es tarde. Aleluya.",
+     "ref": "Rm 6, 4"
+    },
+    {
+     "tipo": "oracion_laudes"
+    }
+   ]
+  },
+  "visperas2": [
+   {
+    "tipo": "salmodia",
+    "texto": "Ant. 1. Habiendo realizado la purificación de los pecados, está sentado a la derecha de su majestad en las alturas. Aleluya.\n\nSalmo 109, 1-5. 7\n\nEL MESÍAS, REY Y SACERDOTE\n\nCristo tiene que reinar hasta que\nDios haga de sus enemigos estrado\n\nde sus pies (1 Cor 15, 25).\nOráculo del Señor a mi Señor:\n\n\"siéntate a mi derecha,\ny haré de tus enemigos\nestrado de tus pies\".\nDesde Sión extenderá el Señor\nel poder de tu cetro:\nsomete en la batalla a tus enemigos.\n\n\"Eres príncipe desde el día de tu nacimiento,\nentre esplendores sagrados;\nyo mismo te engendré, como rocío,\nantes de la aurora\".\n\nEl Señor lo ha jurado y no se arrepiente:\n\"Tú eres sacerdote eterno,\nsegún el rito de Melquisedec\".\n\nEl Señor a tu derecha, el día de su ira,\nquebrantará a los reyes.\nEn su camino beberá del torrente,\npor eso, levantará la cabeza.\n\nAnt. Habiendo realizado la purificación de los pecados, está sentado a la derecha de su majestad en las alturas. Aleluya.\n\nAnt. 2. El Señor envió la redención a su pueblo. Aleluya.\n\nSalmo 110\n\nGRANDES SON LAS OBRAS DEL SEÑOR\n\nGrandes y maravillosas son tus obras,\nSeñor, Dios omnipotente (Ap 15, 3).\n\nDoy gracias al Señor de todo corazón,\nen compañía de los rectos, en la asamblea.\nGrandes son las obras del Señor,\ndignas de estudio para los que las aman.\n\nEsplendor y belleza son su obra,\nsu generosidad dura por siempre;\nha hecho maravillas memorables,\nel Señor es piadoso y clemente.\n\nÉl da alimento a sus fieles,\nrecordando siempre su alianza;\nmostró a su pueblo la fuerza de su obrar,\ndándoles la heredad de los gentiles.\n\nJusticia y verdad son las obras de sus manos,\ntodos sus preceptos merecen confianza:\nson estables para siempre jamás,\nse han de cumplir con verdad y rectitud.\n\nEnvió la redención a su pueblo,\nratificó para siempre su alianza,\nsu nombre es sagrado y temible.\n\nPrimicia de la sabiduría es el temor del Señor,\ntienen buen juicio los que lo practican;\nla alabanza del Señor dura por siempre.\n\nAnt. El Señor envió la redención a su pueblo. Aleluya.\n\nAnt. 3. Aleluya. Reina nuestro Dios: gocemos y démosle gracias. Aleluya.\n\nEl cántico siguiente se dice con Aleluya, tal como está aquí, solamente cuando el Oficio\nes cantado. Cuando el Oficio se dice sin canto es suficiente decir Aleluya sólo al principio y\nal final de cada estrofa.\n\nCántico Cf. Ap 19, 1‑7\n\nLAS BODAS DEL CORDERO\n\nAleluya.\nLa salvación y la gloria y el poder son de nuestro Dios.\n(R. Aleluya.)\nPorque sus juicios son verdaderos y justos.\nR. Aleluya, (aleluya).\n\nAleluya.\nAlabad al Señor, sus siervos todos.\n(R. Aleluya.)\nLos que le teméis, pequeños y grandes.\nR. Aleluya, (aleluya).\n\nAleluya.\nPorque reina el Señor, nuestro Dios, dueño de todo.\n(R. Aleluya.)\n\nAlegrémonos y gocemos y démosle gracias.\nR. Aleluya, (aleluya).\n\nAleluya.\nLlegó la boda del Cordero.\n(R. Aleluya.)\nSu esposa se ha embellecido.\nR. Aleluya, (aleluya).\nAnt. Aleluya. Reina nuestro Dios: gocemos y démosle gracias. Aleluya."
+   },
+   {
+    "tipo": "lectura_breve",
+    "texto": "Cristo, habiendo ofrecido un solo sacrificio en expiación de los pecados, está sentado\npara siempre a la diestra de Dios, y espera el tiempo que falta «hasta que sus enemigos\nsean puestos por escabel de sus pies». Así, con una sola oblación, ha llevado para siempre\na la perfección en la gloria a los que ha santificado.",
+    "ref": "Hb 10, 12-14"
+   },
+   {
+    "tipo": "responsorio_breve",
+    "texto": "V. El Espíritu Santo. Aleluya, aleluya.\nR. El Espíritu Santo. Aleluya, aleluya.\nV. Os lo enseñará todo.\nR. Aleluya, aleluya.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. El Espíritu Santo. Aleluya, aleluya."
+   },
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "Ant. Cuando venga el Abogado, que os enviaré yo de parte del Padre, el Espíritu de\nverdad, que procede del Padre, él mismo declarará en mi favor. Aleluya."
+   },
+   {
+    "tipo": "preces",
+    "texto": "Porque no sabemos pedir lo que nos conviene, el Espíritu mismo intercede por nosotros\ncon gemidos inefables; digamos, pues, confiadamente:\nQue el Espíritu Santo interceda, Señor, por nosotros.\n\nSeñor Jesús, pastor eterno, concede el don de la sabiduría y del consejo a los pastores de\nla Iglesia,\n— para que apacienten tu grey y la conduzcan a la salvación.\n\nTú que tienes tu trono en el cielo y eres rico en misericordia,\n— socorre a los que en la tierra son pobres y necesitados.\n\nTú que fuiste concebido por obra del Espíritu Santo en el seno de María Virgen,\n— concede a las vírgenes de la Iglesia vivir su consagración virginal en una entrega\ncompleta de amor a ti.\n\nTú que, como nuestro sacerdote, adoras al Padre por medio del Espíritu Santo,\n— haz que todos los hombres se unan a tu alabanza y glorifiquen a Dios.\nSe pueden añadir algunas intenciones libres.\nQue los difuntos, libres de la esclavitud de la corrupción, puedan entrar en la libertad\ngloriosa de los hijos de Dios,\n— y obtengan la plena redención de su cuerpo.\n\nTerminemos nuestra oración con las palabras del Señor: Padre nuestro."
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Escucha, Señor, nuestras plegarias, y, ya que confesamos que Cristo, el Salvador de los"
+   }
+  ]
+ },
+ "lun": {
+  "oficio": [
+   {
+    "tipo": "versiculo",
+    "texto": "V. Mi corazón y mi carne. Aleluya.\nR. Se alegran por el Dios vivo. Aleluya."
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "De la primera carta del apóstol san Juan 4, 1-10\n\nDIOS NOS AMÓ\n\nQueridos hermanos, no os fiéis de cualquier espíritu. Examinadlos si provienen de Dios,\nporque se han presentado muchos falsos profetas en el mundo. En esto podéis conocer el\nespíritu de Dios: todo espíritu que reconozca a Jesucristo, que ha venido en la carne, es\nde Dios. Pero el espíritu que no reconozca a Jesús no es de Dios, es del anticristo, de\nquien habéis oído que estaba por llegar. Pues bien, ya está ahora en el mundo.\n\nPero vosotros, hijos míos, sois de Dios, y lo habéis vencido; porque mayor es el que\nestá en vosotros que el que está en el mundo. Ellos son del mundo; por eso hablan del\nmundo y el mundo los escucha. Nosotros, en cambio, somos de Dios. Quien conoce a Dios\nnos escucha; quien no es de Dios no nos escucha. En eso distinguimos al espíritu de la\nverdad y al espíritu del error.\n\nQueridos hermanos, amémonos unos a otros, ya que el amor es de Dios, y todo el que\nama ha nacido de Dios y conoce a Dios. Quien no ama no ha conocido a Dios, porque Dios\nes amor. En esto se manifestó el amor que Dios nos tiene: en que Dios envió al mundo a\nsu Hijo único para que vivamos por medio de él. En esto consiste el amor: no en que\nnosotros hayamos amado a Dios, sino en que él nos amó y nos envió a su Hijo como\npropiciación por nuestros pecados.",
+    "anio": "I"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. En esto se manifestó el amor que Dios nos tiene: en que Dios envió al mundo a su Hijo\núnico, * para que todo el que crea en él tenga vida eterna. Aleluya.\nV. Tanto amó Dios al mundo que le entregó su Hijo único.\nR. Para que todo el que crea en él tenga vida eterna. Aleluya.",
+    "ref": "1 Jn 4, 9; Jn 3, 16",
+    "anio": "I"
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "De los Hechos de los apóstoles 25, 1-27\n\nPABLO ANTE EL REY AGRIPA\n\nA los tres días de haberse posesionado de su cargo de procurador, Festo subió de\nCesarea a Jerusalén. Allí se le presentaron los sacerdotes y los notables de entre los judíos\na exponer sus acusaciones contra Pablo, y, en su animosidad, le rogaron con instancia —\n\npidiéndoselo como un favor— que lo hiciese venir a Jerusalén. Tenían el propósito de\narmarle una emboscada en el camino para quitarle la vida. Festo les respondió que Pablo\nse encontraba preso en Cesarea, y que él mismo estaba para partir en breve. Y añadió:\n\n«Por lo tanto, los que son de más autoridad entre vosotros que bajen conmigo a\nacusarlo, si efectivamente es culpable de algún crimen.»\n\nDespués de haberse detenido allí sólo unos ocho o diez días, bajó a Cesarea y, al día\nsiguiente, sentándose en su tribunal, hizo comparecer a Pablo. Cuando se presentó éste,\nlos judíos venidos de Jerusalén se colocaron a su alrededor, alegando muchas y graves\nacusaciones que no podían probar de ninguna manera. Pablo se defendía, diciendo:\n\n«Yo no he cometido delito alguno ni contra la ley de los judíos, ni contra el templo, ni\ncontra el César.»\n\nPero Festo, queriendo congraciarse con los judíos, se dirigió a Pablo, preguntándole:\n«¿Quieres subir a Jerusalén y ser juzgado allí en mi presencia de todas estas\n\nacusaciones?»\nA lo que contestó Pablo:\n«Estoy en el tribunal del César; en él debe continuar mi juicio. Ninguna injuria he\n\ninferido a los judíos, como tú sabes muy bien. Si, como dicen ellos, he cometido algún\ndelito o algún crimen digno de muerte, no rehúso morir; pero si no hay nada de cuanto\néstos me acusan, nadie puede ponerme en sus manos. Apelo al César.»\n\nFesto, después de consultar con los de su consejo, respondió:\n«Has apelado al César; al César irás.»\nAlgunos días más tarde, el rey Agripa y Berenice vinieron a Cesarea para saludar a\n\nFesto. Prolongándose allí mucho tiempo la estancia del rey, Festo puso en su conocimiento\nel caso de Pablo. Le dijo:\n\n«Hay aquí un hombre que Félix dejó en la cárcel. Cuando estuve yo en Jerusalén, los\nsacerdotes y los notables de los judíos vinieron a presentar demanda contra él, pidiendo\nsu condena. Yo les contesté que no es costumbre de los romanos condenar a nadie,\ncualquiera que sea, sin que al acusado se le dé oportunidad para defenderse de la\nacusación en presencia de los acusadores. Así, pues, vinieron ellos aquí conmigo, y yo, sin\ndemora alguna, al día siguiente, sentándome en el tribunal, hice comparecer a ese\nhombre. Presentes a su alrededor, los acusadores no adujeron ninguna acusación sobre\ncrímenes que yo había sospechado. Sólo tenían contra él algunas cuestiones referentes a\nsu propia religión y a un tal Jesús, que ya había muerto y del que Pablo aseguraba que\nestaba vivo. Estando yo sin saber qué partido tomar en el examen de un caso así, le\npregunté si quería ir a Jerusalén para ser allí juzgado. Pero Pablo interpuso apelación para\nque su causa quedase reservada a la decisión del emperador; y yo ordené que continuase\ndetenido hasta que pueda remitirlo al César.»\n\nDijo Agripa a Festo:\n«Tendré sumo gusto en oír a ese hombre.»\nRespondióle Festo:\n«Mañana le oirás.»\nAsí, pues, al otro día se presentaron Agripa y Berenice con gran ostentación; entraron\n\nen la sala de la audiencia acompañados de los tribunos y de la nobleza de la ciudad, y, a\nuna orden de Festo, compareció Pablo. Festo dijo así:\n\n«Rey Agripa y todos los que estáis aquí presentes, mirad aquí a este hombre. La\ncomunidad judía en pleno, lo mismo en Jerusalén que aquí, ha venido a pedirme justicia\ncontra él, diciendo a grandes voces que no merece vivir más. Yo, por mi parte, he llegado\na la conclusión de que no ha hecho nada que merezca la muerte; pero como ha apelado al\nCésar, he resuelto remitirlo allá. Yo no tengo nada seguro que escribir al emperador contra\nél. Por eso lo he hecho comparecer ante vosotros, y especialmente ante ti, rey Agripa,\n\npara que, verificado este interrogatorio, tenga yo algo que escribir. Me parece en verdad\nabsurdo enviar un preso sin dar informes sobre las acusaciones que pesan sobre él.»",
+    "anio": "II"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Si no resucitó Cristo, vana es nuestra predicación. * ¡Pero no! Cristo resucitó de entre\nlos muertos: el primero de todos. Aleluya.\nV. Si nuestra esperanza en Cristo acaba con esta vida, somos los hombres más\ndesdichados.\nR. ¡Pero no! Cristo resucitó de entre los muertos; el primero de todos. Aleluya.",
+    "ref": "1 Co 15, 14.20. 19",
+    "anio": "II"
+   },
+   {
+    "tipo": "lectura2",
+    "texto": "De las catequesis de san Cirilo de Jerusalén, obispo\n(Catequesis 16, sobre el Espíritu Santo, I, 11-12. 16: PG 33, 931-935.939-942)\n\nEL AGUA VIVA DEL ESPÍRITU SANTO\n\nEl agua que yo le daré se convertirá dentro de él en un surtidor de agua que salta\nhasta la vida eterna. Una nueva clase de agua que corre y salta; pero que salta en los que\nson dignos de ella.\n\n¿Por qué motivo se sirvió del término agua, para denominar la gracia del Espíritu?\nPues, porque el agua lo sostiene todo; porque es imprescindible para la hierba y los\nanimales; porque el agua de la lluvia desciende del cielo, y, además, porque desciende\nsiempre de la misma forma y, sin embargo, produce efectos diferentes: Unos en las\npalmeras, otros en las vides, todo en todas las cosas. De por sí, el agua no tiene más que\nun único modo de ser; por eso, la lluvia no transforma su naturaleza propia para\ndescender en modos distintos, sino que se acomoda a las exigencias de los seres que la\nreciben y da a cada cosa lo que le corresponde.\n\nDe la misma manera, también el Espíritu Santo, aunque es único, y con un solo modo\nde ser, e indivisible, reparte a cada uno la gracia según quiere. Y así como un tronco seco\nque recibe agua germina, del mismo modo el alma pecadora que, por la penitencia, se\nhace digna del Espíritu Santo, produce frutos de santidad. Y aunque no tenga más que un\nsolo e idéntico modo de ser, el Espíritu, bajo el impulso de Dios y en nombre de Cristo,\nproduce múltiples efectos.\n\nSe sirve de la lengua de unos para el carisma de la sabiduría; ilustra la mente de otros\ncon el don de la profecía; a éste le concede poder para expulsar los demonios; a aquél le\notorga el don de interpretar las divinas Escrituras. Fortalece, en unos, la templanza; en\notros, la misericordia; a éste enseña a practicar el ayuno y la vida ascética; a aquél, a\ndominar las pasiones; al otro, le prepara para el martirio. El Espíritu se manifiesta, pues,\ndistinto en cada uno, pero nunca distinto de sí mismo, según está escrito: En cada uno se\nmanifiesta el Espíritu para el bien común.\n\nLlega mansa y suavemente, se le experimenta como finísima fragancia, su yugo no\npuede ser más ligero. Fulgurantes rayos de luz y de conocimiento anuncian su venida. Se\nacerca con los sentimientos entrañables de un auténtico protector: pues viene a salvar, a\nsanar, a enseñar, a aconsejar, a fortalecer, a consolar, a iluminar el alma, primero de quien\nlo recibe, luego, mediante éste, las de los demás.\n\nY, así como quien antes se movía en tinieblas, al contemplar y recibir la luz del sol en\nsus ojos corporales, es capaz de ver claramente lo que poco antes no podía ver, de este\nmodo el que se ha hecho digno del don del Espíritu Santo es iluminado en su alma y,\nelevado sobrenaturalmente, llega a percibir lo que antes ignoraba."
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Hay diversidad de funciones, pero un mismo Dios que obra todo en todos. * A cada uno\nse le otorga la manifestación del Espíritu para común utilidad. Aleluya.\nV. Vosotros sois cuerpo de Cristo, y sois miembros unos de otros.\nR. A cada uno se le otorga la manifestación del Espíritu para común utilidad. Aleluya.",
+    "ref": "1 Co 12, 6-7. 27"
+   },
+   {
+    "tipo": "oracion_laudes"
+   }
+  ],
+  "laudes": [
+   {
+    "tipo": "lectura_breve",
+    "texto": "«Cerca de ti está la palabra, en tu boca y en tu corazón», es decir, el mensaje de la fe\nque nosotros predicamos. Porque, si proclamas con tu boca a Jesús como Señor y crees\nen tu corazón que Dios lo resucitó de entre los muertos, serás salvo. Pues con el corazón\ncreemos para obtener la justificación y con la boca hacemos profesión de nuestra fe para\nalcanzar la salvación.",
+    "ref": "Rm 10, 8b-10"
+   },
+   {
+    "tipo": "responsorio_breve",
+    "texto": "V. El Señor ha resucitado del sepulcro. Aleluya, aleluya.\nR. El Señor ha resucitado del sepulcro. Aleluya, aleluya.\nV. El que por nosotros colgó del madero.\nR. Aleluya, aleluya.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. El Señor ha resucitado del sepulcro. Aleluya, aleluya."
+   },
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "Ant. En el mundo tendréis luchas, pero tened valor: Yo he vencido al mundo. Aleluya."
+   },
+   {
+    "tipo": "preces",
+    "texto": "Bendigamos a Cristo, que nos prometió enviar el Espíritu Santo que procede del Padre, y\nsupliquémosle, diciendo:\nSeñor, danos tu Espíritu.\n\nTe damos gracias, Señor Jesús, y por medio de ti bendecimos también al Padre en el\nEspíritu Santo,\n— y te pedimos que hoy todas nuestras palabras y obras sean según tu voluntad.\n\nConcédenos vivir de tu Espíritu,\n— para ser de verdad miembros vivos de tu cuerpo.\n\nHaz que no juzguemos ni menospreciemos a ninguno de nuestros hermanos,\n— pues todos tenemos que comparecer para ser juzgados ante tu tribunal.\n\nCólmanos de alegría y paz en nuestra fe,\n— hasta que rebosemos de esperanza por la fuerza del Espíritu Santo.\nSe pueden añadir algunas intenciones libres.\nTerminemos nuestra oración con la plegaria que Cristo nos enseñó: Padre nuestro."
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Derrama, Señor, sobre nosotros la fuerza del Espíritu Santo, para que podamos cumplir"
+   }
+  ],
+  "intermedia": {
+   "comun": [],
+   "tercia": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "Vi al Hijo del hombre y me dijo: «Yo soy el primero y el último, el que vive. Estaba muerto,\npero ahora vivo por los siglos de los siglos, y tengo las llaves de la muerte y del hades.»\nV. Verdaderamente ha resucitado el Señor. Aleluya.\nR. Y se ha aparecido a Simón. Aleluya.",
+     "ref": "Cf. Ap 1, 17c-18"
+    },
+    {
+     "tipo": "oracion_laudes"
+    }
+   ],
+   "sexta": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "En Cristo, en su cuerpo glorificado, habita toda la plenitud de la deidad; e, incorporados a\nél, alcanzáis también vosotros esa plenitud en él. Con Cristo fuisteis sepultados en el\nbautismo, y con él resucitasteis mediante la fe en el poder de Dios, que lo resucitó de\nentre los muertos.\nV. Los discípulos se llenaron de alegría. Aleluya.\nR. Al ver al Señor. Aleluya.",
+     "ref": "Col 2, 9-10a. 11"
+    },
+    {
+     "tipo": "oracion_laudes"
+    }
+   ],
+   "nona": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "Acuérdate de Cristo Jesús, del linaje de David, que vive resucitado de entre los muertos,\ncomo enseño en mi mensaje de salud. Verdadera es la sentencia que dice: Si hemos\nmuerto con él, viviremos también con él.\nV. Quédate con nosotros, Señor. Aleluya.\nR. Porque ya es tarde. Aleluya.",
+     "ref": "2 Tm 2, 8. 11"
+    },
+    {
+     "tipo": "oracion_laudes"
+    }
+   ]
+  },
+  "visperas": [
+   {
+    "tipo": "lectura_breve",
+    "texto": "Todos cuantos se dejan guiar por el Espíritu de Dios son hijos de Dios. Que no habéis\nrecibido espíritu de esclavitud, para recaer otra vez en el temor, sino que habéis recibido\nespíritu de adopción filial, por el que clamamos: «¡Padre!» Este mismo Espíritu se une a\nnosotros para testificar que somos hijos de Dios. Y si somos hijos, también somos\nherederos: herederos de Dios y coherederos de Cristo, si es que padecemos juntamente\ncon Cristo, para ser glorificados juntamente con él.",
+    "ref": "Rm 8, 14-17"
+   },
+   {
+    "tipo": "responsorio_breve",
+    "texto": "V. El Espíritu Santo. Aleluya, aleluya.\nR. El Espíritu Santo. Aleluya, aleluya.\nV. Os lo enseñará todo.\nR. Aleluya, aleluya.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. El Espíritu Santo. Aleluya, aleluya."
+   },
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "Ant. El Abogado, el Espíritu, permanece con vosotros y estará en vosotros. Aleluya."
+   },
+   {
+    "tipo": "preces",
+    "texto": "Demos gracias a Cristo, que por medio del Espíritu Santo levantó la esperanza de los\napóstoles y llena de dones a la Iglesia, y, unidos a todos los fieles, supliquémosle,\ndiciendo:\nLevanta, Señor, la esperanza de tu Iglesia.\n\nSeñor Jesús, mediador entre Dios y los hombres, tú que has elegido a los sacerdotes\ncomo colaboradores tuyos,\n— haz que por la acción de tus ministros todos los hombres lleguen al Padre.\n\nHaz que los pobres y los ricos se ayuden mutuamente, reconociéndote a ti corno único\nSeñor,\n— y que los ricos no pongan su gloria en sus bienes.\n\nRevela tu Evangelio a todos los pueblos,\n— para que todos alcancen el don de la fe.\n\nEnvía tu Espíritu consolador a los que viven desconsolados,\n— para que enjugue las lágrimas de los que lloran.\nSe pueden añadir algunas intenciones libres.\nPurifica a los difuntos de todas sus culpas,\n— y recíbelos en tu reino, junto con tus santos y elegidos.\n\nConcluyamos nuestras súplicas con la oración que el mismo Cristo nos enseñó: Padre\nnuestro."
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Derrama, Señor, sobre nosotros la fuerza del Espíritu Santo, para que podamos cumplir"
+   }
+  ]
+ },
+ "mar": {
+  "oficio": [
+   {
+    "tipo": "versiculo",
+    "texto": "V. Cristo, una vez resucitado de entre los muertos, ya no muere. Aleluya.\nR. La muerte no tiene ya poder sobre él. Aleluya."
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "De la primera carta del apóstol san Juan 4, 11-21\n\nDIOS ES AMOR\n\nQueridos, si Dios nos amó de esta manera, también nosotros debemos amarnos unos a\notros. A Dios nadie lo ha visto nunca. Si nos amamos unos a otros, Dios permanece en\nnosotros y su amor ha llegado en nosotros a su plenitud. En esto conocemos que\npermanecemos en él y él en nosotros: en que nos ha dado de su Espíritu. Y nosotros\nhemos visto y damos testimonio de que el Padre envió a su Hijo para ser Salvador del\nmundo.\n\nQuien confiese que Jesús es el Hijo de Dios, Dios permanece en él y él en Dios. Y\nnosotros hemos conocido el amor que Dios nos tiene y hemos creído en él. Dios es amor y\nquien permanece en el amor permanece en Dios, y Dios en él. En esto ha llegado el amor\na su plenitud con nosotros: en que tengamos confianza en el día del juicio, pues como él\nes, así somos nosotros en este mundo. No hay temor en el amor; sino que el amor\nperfecto expulsa el temor, porque el temor mira al castigo; quien teme no ha llegado a la\nplenitud en el amor. Nosotros amemos a Dios, porque él nos amó primero. Si alguno dice:\n«Amo a Dios», y aborrece a su hermano, es un mentiroso; pues quien no ama a su\nhermano, a quien ve, no puede amar a Dios, a quien no ve. Y hemos recibido de él este\nmandamiento: Quien ama a Dios, ame también a su hermano.",
+    "anio": "I"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Dios nos amó y nos envió a su Hijo como propiciación por nuestros pecados; * y\nnosotros hemos conocido el amor que Dios nos tiene y hemos creído en él. Aleluya.\nV. Dios fue nuestro salvador, con su amor nos rescató.\nR. Y nosotros hemos conocido el amor que Dios nos tiene y hemos creído en él. Aleluya.",
+    "ref": "1 Jn 4, 10. 16; cf. Is 63, 8. 9",
+    "anio": "I"
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "De los Hechos de los apóstoles 26, 1-32\n\nDISCURSO DE PABLO ANTE EL REY AGRIPA\n\nEn aquellos días, Agripa dijo a Pablo: «Puedes hablar en tu favor.»\nPablo, entonces, extendiendo la mano, empezó así su defensa: «Me considero feliz, rey\n\nAgripa, de poder defenderme hoy ante ti de todas las acusaciones de los judíos; sobre\ntodo por estar tú al tanto de sus costumbres y de todos sus problemas. Por eso te ruego\nque me escuches con paciencia.\n\nPues bien, todos los judíos saben cómo he vivido yo desde mi juventud entre los de mi\nnación y en Jerusalén, conociéndome, como me conocen, desde mucho tiempo atrás; y, si\nquieren, pueden atestiguar que he vivido como fariseo, es decir, dentro de la secta más\nestricta de nuestra religión. Si ahora me encuentro procesado es porque espero el\ncumplimiento de las promesas hechas por Dios a nuestros padres; cumplimiento a que\nesperan llegar también nuestras doce tribus, mientras día y noche, con todo celo, van\n\ndando culto a Dios. Por esta esperanza, oh rey, me acusan los judíos. ¿Os parece increíble\nque Dios resucite a los muertos?\n\nPor mi parte, yo me creí en el deber de luchar a toda costa contra la causa de Jesús\nNazareno. Y  lo hice efectivamente en Jerusalén, donde encerré a muchos fieles en la\ncárcel, por la autoridad que tenía de los jefes de los sacerdotes, y donde daba mi voto de\naprobación cuando les quitaban la vida. Yendo de sinagoga en sinagoga, a fuerza de\ncontinuos castigos los obligaba a blasfemar y, loco de furor contra ellos, los perseguía\nhasta en las ciudades extranjeras.\n\nEn este estado de ánimo, me dirigía yo a Damasco con potestad y comisión de los\njefes de los sacerdotes; y en mi camino, a mitad del día, vi, oh rey, una luz del cielo más\nbrillante que la del sol, que me envolvía a mí y a todos cuantos iban conmigo. Todos\ncaímos a tierra, y yo oí una voz que me decía en lengua aramea \"Saulo, Saulo, ¿por qué\nme persigues? Duro te es dar coces contra el aguijón.\" Yo dije: \"Señor, ¿quién eres?\" Y el\nSeñor me contestó: \"Yo soy Jesús, a quien tú persigues. Pero levántate y ponte en pie. Me\nhe dejado ver de ti para hacerte siervo mío y testigo de la visión en que me has visto y de\notras que te manifestaré. Yo te sacaré de todos los peligros que te vengan de tu nación y\nde los gentiles. A éstos te envío ahora para que les abras los ojos y se conviertan de las\ntinieblas a la luz, del poder de Satanás a Dios; para que por la fe en mí reciban el perdón\nde los pecados y su parte en la herencia de los justos.\"\n\nEn verdad, oh rey Agripa, no he sido desobediente a aquella visión del cielo; sino que,\nprimero a los de Damasco y luego a los de Jerusalén, a los de toda Judea y a los gentiles,\nvengo predicando que se arrepientan y se conviertan a Dios y hagan obras de verdadero\narrepentimiento. Por este motivo me prendieron los judíos en el templo con intención de\nquitarme la vida; pero, con la ayuda de Dios, que me ha sostenido hasta hoy, estoy\ntodavía firme llevando mi mensaje a pequeños y grandes, sin decir cosa alguna que no\nsea lo que los profetas y Moisés dijeron que había de suceder: esto es, que el Mesías\nhabía de padecer y que, después de ser el primero en resucitar de entre los muertos,\nhabía de anunciar la luz al pueblo de Israel y a los gentiles.»\n\nAsí continuaba él hablando en su defensa, cuando Festo exclamó en alta voz: «Tú\ndeliras, Pablo; tus muchas letras te han sorbido el seso.»\n\nPablo le respondió: «No deliro, nobilísimo Festo. Lo que digo son palabras de verdad y\nde sensatez. Y  bien sabe estas cosas el rey, en cuya presencia estoy hablando con tanta\nlibertad y confianza. Estoy convencido de que nada de esto se oculta al rey, pues no son\ncosas que se han llevado a cabo en el último rincón. ¿Crees, oh rey Agripa, en los\nprofetas? Yo sé que crees.»\n\nAgripa respondió a Pablo: «En poco tiempo quieres convencerte de que me has hecho\ncristiano.»\n\nA lo que replicó Pablo: « En poco o en mucho tiempo, quisiera Dios que no sólo tú,\nsino todos cuantos me escucháis ahora, vinieseis a ser como yo, aunque sin estas\ncadenas.»\n\nSe levantaron el rey y el procurador, Berenice y cuantos con ellos estaban sentados. Y,\nal retirarse, iban diciéndose unos a otros: «Este hombre no ha hecho nada que merezca la\nmuerte o la cárcel.»\n\nAgripa, por su parte, dijo a Festo: «Se le podría poner en libertad, si no hubiera\napelado al César.»",
+    "anio": "II"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Te he elegido como siervo mío y testigo, para que abras los ojos de los gentiles y se\nconviertan de las tinieblas a la luz; * para que por la fe en Cristo reciban el perdón de los\npecados y su parte en la herencia de los justos. Aleluya.\n\nV. Aquel que dio poder a Pedro para ejercer el apostolado entre los judíos me lo dio a mí\npara ejercerlo entre los gentiles.\nR. Para que por la fe en Cristo reciban el perdón de los pecados y su parte en la herencia\nde los justos. Aleluya.",
+    "ref": "Cf. Hch 26, 16. 18; Ga 2, 8",
+    "anio": "II"
+   },
+   {
+    "tipo": "lectura2",
+    "texto": "Del libro de san Basilio Magno, obispo, sobre el Espíritu Santo\n(Cap. 9, Núms. 22-23: PG 32,107-110)\n\nLA ACCIÓN DEL ESPÍRITU SANTO\n\n¿Quién, habiendo oído los nombres que se dan al Espíritu, no siente levantado su\nánimo y no eleva su pensamiento hacia la naturaleza divina? Ya que es llamado Espíritu de\nDios y Espíritu de verdad que procede del Padre; Espíritu firme, Espíritu generoso, Espíritu\nSanto son sus apelativos propios y peculiares.\n\nHacia él dirigen su mirada todos los que sienten necesidad de santificación; hacia él\ntiende el deseo de todos los que llevan una vida virtuosa, y su soplo es para ellos a\nmanera de riego que los ayuda en la consecución de su fin propio y natural.\n\nÉl es fuente de santidad, luz para la inteligencia; él da a todo ser racional como una luz\npara entender la verdad.\n\nAunque inaccesible por naturaleza, se deja comprender por su bondad; con su acción\nlo llena todo, pero se comunica solamente a los que encuentra dignos, no ciertamente de\nmanera idéntica ni con la misma plenitud, sino distribuyendo su energía según la\nproporción de la fe.\n\nSimple en su esencia y variado en sus dones, está íntegro en cada uno e íntegro en\ntodas partes. Se reparte sin sufrir división, deja que participen en él, pero él permanece\níntegro, a semejanza del rayo solar cuyos beneficios llegan a quien disfrute de él como si\nfuera único, pero, mezclado con el aire, ilumina la tierra entera y el mar.\n\nAsí el Espíritu Santo está presente en cada hombre capaz de recibirlo, como si sólo él\nexistiera y, no obstante, distribuye a todos gracia abundante y completa; todos disfrutan\nde él en la medida en que lo requiere la naturaleza de la criatura, pero no en la proporción\ncon que él podría darse.\n\nPor él los corazones se elevan a lo alto, por su mano son conducidos los débiles, por él\nlos que caminan tras la virtud llegan a la perfección. Es él quien ilumina a los que se han\npurificado de sus culpas y al comunicarse a ellos los vuelve espirituales.\n\nComo los cuerpos limpios y transparentes se vuelven brillantes cuando reciben un rayo\nde sol y despiden de ellos mismos como una nueva luz, del mismo modo las almas\nportadoras del Espíritu Santo se vuelven plenamente espirituales y transmiten la gracia a\nlos demás.\n\nDe esta comunión con el Espíritu procede la presciencia de lo futuro, la penetración de\nlos misterios, la comprensión de lo oculto, la distribución de los dones, la vida\nsobrenatural, el consorcio con los ángeles; de aquí proviene aquel gozo que nunca\nterminará, de aquí la permanencia en la vida divina, de aquí el ser semejantes a Dios, de\naquí, finalmente, lo más sublime que se puede desear: que el hombre llegue a ser como\nDios."
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. No se turbe vuestro corazón: voy al Padre, y, cuando me haya ido de vuestro lado, os\nenviaré * el Espíritu de verdad, y se alegrará vuestro corazón. Aleluya.\nV. Yo rogaré al Padre y él os dará otro Abogado.\nR. El Espíritu de verdad, y se alegrará vuestro corazón. Aleluya.",
+    "ref": "Cf. Jn 14, 27; 16, 22; 14, 16"
+   },
+   {
+    "tipo": "oracion_laudes"
+   }
+  ],
+  "laudes": [
+   {
+    "tipo": "lectura_breve",
+    "texto": "Dios resucitó a Jesús de entre los muertos. Y  durante muchos días se apareció a los\nque con él habían subido de Galilea a Jerusalén: éstos, efectivamente, dan ahora\ntestimonio de él ante el pueblo. Y nosotros os damos la buena nueva: la promesa que\nDios hizo a nuestros padres la ha cumplido él ahora con nosotros, sus hijos, resucitando a\nJesús, según está escrito en el salmo segundo: «Tú eres mi Hijo: yo te he engendrado\nhoy.»",
+    "ref": "Hch 13, 30-33"
+   },
+   {
+    "tipo": "responsorio_breve",
+    "texto": "V. El Señor ha resucitado del sepulcro. Aleluya, aleluya.\nR. El Señor ha resucitado del sepulcro. Aleluya, aleluya.\nV. El que por nosotros colgó del madero.\nR. Aleluya, aleluya.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. El Señor ha resucitado del sepulcro. Aleluya, aleluya."
+   },
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "Ant. El Señor resucitó de entre los muertos, como había dicho; alegrémonos y\nregocijémonos todos, porque él reina para siempre. Aleluya."
+   },
+   {
+    "tipo": "preces",
+    "texto": "Glorifiquemos a Cristo, el Señor, que nos prometió enviar el Espíritu Santo que procede del\nPadre, y supliquémosle, diciendo:\nSeñor Jesucristo, danos tu Espíritu.\n\nQue tu palabra, oh Cristo, habite con toda riqueza en nosotros,\n— para que te demos gracias con salmos, himnos y cánticos inspirados por el Espíritu.\n\nTú que por medio del Espíritu nos hiciste hijos de Dios,\n— haz que, unidos a ti, invoquemos siempre al Padre por medio del Espíritu.\n\nHaz que obremos guiados siempre por tu sabiduría,\n— y que realicemos nuestras acciones para gloria de Dios.\n\nTú que eres compasivo y misericordioso,\n— concédenos estar en paz con todo el mundo.\nSe pueden añadir algunas intenciones libres.\nPorque deseamos que la luz de Cristo alumbre a todos los hombres, pidamos al Padre que\nsu reino llegue a nosotros: Padre nuestro."
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Te pedimos, Dios de poder y misericordia, que envíes tu Espíritu Santo, para que,\nhaciendo morada en nosotros, nos convierta en templos de su gloria. Por nuestro Señor\nJesucristo."
+   }
+  ],
+  "intermedia": {
+   "comun": [],
+   "tercia": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "Jesús es la piedra que desecharon los arquitectos y que se ha convertido en piedra\nangular; en ningún otro se encuentra la salud, y no hay bajo el cielo otro nombre dado a\nlos hombres por el que nosotros debamos salvamos.\nV. Verdaderamente ha resucitado el Señor. Aleluya.\nR. Y se ha aparecido a Simón. Aleluya.",
+     "ref": "Cf. Hch 4, 11-12"
+    },
+    {
+     "tipo": "oracion_laudes"
+    }
+   ],
+   "sexta": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "A vosotros os salva el bautismo, el cual no es remoción de las manchas del cuerpo, sino la\npetición que hace a Dios una buena conciencia, en virtud de la resurrección de Jesucristo,\nque está a la diestra de Dios.\nV. Los discípulos se llenaron de alegría. Aleluya.\nR. Al ver al Señor. Aleluya.",
+     "ref": "Cf. 1 Pe 3, 21-22a"
+    },
+    {
+     "tipo": "oracion_laudes"
+    }
+   ],
+   "nona": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "Si habéis sido resucitados con Cristo, buscad las cosas de arriba, donde Cristo está\nsentado a la diestra de Dios. Poned vuestro corazón en las cosas del cielo, no en las de la\ntierra.\nV. Quédate con nosotros, Señor. Aleluya.\nR. Porque ya es tarde. Aleluya.",
+     "ref": "Col 3, 1-2"
+    },
+    {
+     "tipo": "oracion_laudes"
+    }
+   ]
+  },
+  "visperas": [
+   {
+    "tipo": "lectura_breve",
+    "texto": "El Espíritu acude en ayuda de nuestra debilidad, pues no sabemos pedir como\nconviene; y el Espíritu mismo aboga por nosotros con gemidos que no pueden ser\nexpresados en palabras. Y  aquel que escudriña los corazones sabe cuáles son los deseos\ndel Espíritu y que su intercesión en favor de los fieles es según el querer de Dios.",
+    "ref": "Rm 8, 26-27"
+   },
+   {
+    "tipo": "responsorio_breve",
+    "texto": "V. El Espíritu Santo. Aleluya, aleluya.\nR. El Espíritu Santo. Aleluya, aleluya.\n\nV. Os lo enseñará todo.\nR. Aleluya, aleluya.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. El Espíritu Santo. Aleluya, aleluya."
+   },
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "Ant. Recibiréis la fortaleza del Espíritu Santo, que descenderá sobre vosotros; y seréis\nmis testigos hasta los últimos confines de la tierra. Aleluya."
+   },
+   {
+    "tipo": "preces",
+    "texto": "Glorifiquemos a Cristo, que nos ha hecho partícipes del Espíritu, y supliquémosle,\ndiciendo:\nEscúchanos, Señor Jesús.\n\nDerrama, Señor, sobre la Iglesia el Espíritu Santo que procede del Padre,\n— para que la purifique, la fortalezca y la acreciente a través del mundo.\n\nLlena de tu Espíritu a los que dirigen los destinos de los pueblos,\n— para que sean servidores del bien común.\n\nEnvía tu Espíritu, que es el padre de los pobres,\n— para que su fuerza ayude a los necesitados.\n\nTe rogamos, Señor, por todos los ministros de tu Iglesia,\n— que vivan con fidelidad la vocación a que fueron llamados.\nSe pueden añadir algunas intenciones libres.\nConcede la plenitud de la redención a las almas y a los cuerpos de nuestros difuntos,\n— tú que por tu pasión, resurrección y ascensión has realizado la salvación de la carne y\ndel espíritu.\n\nSintiéndonos verdaderos hijos de Dios, digamos a nuestro Padre: Padre nuestro."
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Te pedimos, Dios de poder y misericordia, que envíes tu Espíritu Santo, para que,"
+   }
+  ]
+ },
+ "mie": {
+  "oficio": [
+   {
+    "tipo": "versiculo",
+    "texto": "V. Dios resucitó a Cristo de entre los muertos. Aleluya.\nR. Para que nuestra fe y esperanza se centren en Dios. Aleluya."
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "De la primera carta del apóstol san Juan 5, 1-12\n\nÉSTA ES LA VICTORIA: NUESTRA FE\n\nQueridos hermanos: Todo el que cree que Jesús es el Cristo ha nacido de Dios; y todo\nel que ama a aquel que engendra ama también al que ha sido engendrado por él. En esto\nconocemos que amamos a los hijos de Dios: si amamos a Dios y cumplimos sus\nmandamientos, porque en esto consiste el amor a Dios: en que guardemos sus\nmandamientos. Y  sus mandamientos no son pesados, pues todo el que ha nacido de Dios\nvence al mundo. Y  ésta es la victoria que vence al mundo: nuestra fe; porque, ¿quién es\nel que vence al mundo, sino el que cree que Jesús es el Hijo de Dios?\n\nÉl, Jesucristo, vino por el agua y por la sangre; no con el agua solamente, sino con el\nagua y con la sangre. Y el Espíritu da testimonio, porque el Espíritu es la verdad. Porque\ntres son los que testifican: el Espíritu, el agua y la sangre; y los tres concuerdan en lo\nmismo.\n\nSi aceptamos el testimonio de los hombres, aceptemos el testimonio de Dios, que es\nmayor. Pues éste es el testimonio de Dios, con el que ha testificado en favor de su Hijo.\nQuien cree en el Hijo de Dios tiene en sí mismo el testimonio de Dios. Quien no cree en\nDios lo considera como un mentiroso, porque no cree en el testimonio que Dios ha dado\nacerca de su Hijo. Y éste es su testimonio: que Dios nos ha dado la vida eterna y que esta\nvida está en su Hijo. Quien tiene al Hijo tiene la vida, quien no tiene al Hijo no tiene la\nvida.",
+    "anio": "I"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Jesucristo vino por el agua y por la sangre; no con el agua solamente, sino con el agua\ny con la sangre. * Y el Espíritu da testimonio, porque el Espíritu es la verdad. Aleluya.\nV. Aquel día habrá una fuente abierta para la casa de David y para los habitantes de\nJerusalén, para lavar los pecados.\nR. Y el Espíritu da testimonio, porque el Espíritu es la verdad. Aleluya.",
+    "ref": "1 Jn 5, 6; Za 13, 1",
+    "anio": "I"
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "De los Hechos de los apóstoles 27, 1-20\n\nVIAJE DE PABLO POR MAR HACIA ROMA\n\nEn aquellos días, cuando se determinó que embarcásemos para Italia, pusieron a Pablo\ny a algunos otros presos bajo la custodia de un centurión, llamado Julio, de la cohorte\nAugusta. Subimos a bordo de una nave de Adramitio que estaba a punto de zarpar para\nlos puertos de la costa de Asia, y nos hicimos a la mar llevando en nuestra compañía a\nAristarco, macedonio, natural de Tesalónica. Al otro día llegamos a Sidón; y Julio, usando\nde consideración con Pablo, le permitió ir a casa de sus amigos, para que le prestaran sus\ncuidados. De allí levamos anclas y, al abrigo de la isla, bordeamos Chipre, por ser los\nvientos contrarios; navegando a través de los mares de Cilicia y Panfilia, arribamos a Mira\nde Licia. Allí el centurión encontró una nave alejandrina que se dirigía a Italia, y nos hizo\ntransbordar a ella. Navegando después lentamente durante muchos días, y después de\nhaber llegado con dificultad a la altura de Gnido, por no permitirnos el viento entrar en\npuerto, hubimos de navegar al abrigo de Creta por la parte de Salmona. Costeamos\npenosamente la isla y llegamos a un lugar llamado Puerto Hermoso, cerca de la ciudad de\nLasea.\n\nTranscurrido mucho tiempo, y siendo peligrosa la navegación por haber pasado ya el\ndía del gran ayuno, vino Pablo a advertirles: «Amigos, veo que el navegar ahora va a ser\ncon peligro y con mucho daño, no sólo para la carga y para la nave, sino también para\nnuestras mismas personas.»\n\nPero el centurión se fió más del piloto y del patrón del barco que de las advertencias\nde Pablo. Como el puerto no era a propósito para invernar, la mayoría tomó el acuerdo de\nsalir de allí, para ver si podían alcanzar Fenice, puerto de Creta, que mira al sudoeste y al\nnoroeste, y allí pasar el invierno. Comenzó a soplar un ligero viento sur y, creyendo que\nlograrían su propósito, levaron anclas, costeando lo más cerca posible la isla de Creta.\nPero de pronto se desencadenó, proveniente de la isla, un viento huracanado, llamado\neuroaquilón, que arrastraba consigo la nave, sin que ésta pudiese resistir; y así nos\ndejamos ir a merced del viento. Cuando pasábamos al abrigo de un islote llamado Cauda,\na duras penas logramos hacernos con el esquife. Después de haberlo izado a bordo,\ncomenzaron a realizar las maniobras de seguridad y refuerzo; sujetaron la nave con cables\ny, por miedo a ir a encallar en la Sirte, echaron el áncora flotante, dejándose llevar a la\nderiva. Como la tempestad continuaba azotándonos furiosamente, al día siguiente echaron\nparte del cargamento al mar y, al tercer día, arrojaron con sus propias manos el aparejo\nde la nave. Ni el sol ni las estrellas habían aparecido hacía ya muchos días; y, como\ncontinuábamos con la fuerte tempestad encima, íbamos perdiendo ya toda esperanza de\nsalvación.",
+    "anio": "II"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Se levantó una marejada tan fuerte que las olas llegaban a cubrir la barca. * Jesús se\nlevantó, increpó al viento y al mar, y sobrevino una gran bonanza. Aleluya.\nV. Los discípulos gritaron: «¡Señor, sálvanos, que perecemos!»\nR. Jesús se levantó, increpó al viento y al mar, y sobrevino una gran bonanza. Aleluya.",
+    "ref": "Mt 8, 24. 26. 25",
+    "anio": "II"
+   },
+   {
+    "tipo": "lectura2",
+    "texto": "De la Constitución dogmática Lumen gentium, sobre la Iglesia, del Concilio Vaticano\nsegundo\n(Núms. 4 y 12)\n\nEL ESPÍRITU SANTO ENVIADO A LA IGLESIA\n\nConsumada la obra que el Padre confió al Hijo en la tierra, fue enviado el Espíritu\nSanto en el día de Pentecostés, para que santificara a la Iglesia, y de esta forma los que\ncreen en Cristo pudieran acercarse al Padre en un mismo Espíritu. Él es el Espíritu de la\nvida, o la fuente del agua que salta hasta la vida eterna, por quien vivifica el Padre a\ntodos los muertos por el pecado hasta que resucite en Cristo sus cuerpos mortales.\n\nEl Espíritu habita en la Iglesia y en los corazones de los fieles como en un templo, y en\nellos ora y da testimonio de la adopción de hijos. Con diversos dones jerárquicos y\ncarismáticos dirige y enriquece con todos sus frutos a la Iglesia, a la que guía hacia toda\nverdad, y unifica en comunión y ministerio, enriqueciéndola con todos sus frutos.\n\nHace rejuvenecer a la Iglesia por la virtud del Evangelio, la renueva constantemente y\nla conduce a la unión consumada con su Esposo. Pues el Espíritu y la Esposa dicen al\nSeñor Jesús: «Ven».\n\nAsí se manifiesta toda la Iglesia como una muchedumbre reunida por la unidad del\nPadre y del Hijo y del Espíritu Santo.\n\nLa universalidad de los fieles, que tiene la unción del Espíritu Santo, no puede fallar en\nsu creencia, y ejerce ésta su peculiar propiedad mediante el sentimiento sobrenatural de\n\nla fe de todo el pueblo, cuando desde el obispo hasta los últimos fieles seglares manifiesta\nel asentimiento universal en las cosas de fe y de costumbres.\n\nCon ese sentido de la fe que el Espíritu Santo mueve y sostiene, el pueblo de Dios,\nbajo la dirección del magisterio, al que sigue fidelísimamente, recibe no ya la palabra de\nlos hombres, sino la verdadera palabra de Dios, se adhiere indefectiblemente a la fe que\nse transmitió a los santos de una vez para siempre, la penetra profundamente con rectitud\nde juicio y la aplica más íntegramente en la vida.\n\nAdemás, el mismo Espíritu Santo no solamente santifica y dirige al pueblo de Dios por\nlos sacramentos y los ministerios y lo enriquece con las virtudes, sino que, repartiendo a\ncada uno en particular como a él le parece, reparte entre los fieles gracias de todo género,\nincluso especiales, con que los dispone y prepara para realizar variedad de obras y de\noficios provechosos para la renovación y una más amplia edificación de la Iglesia, según\naquellas palabras: En cada uno se manifiesta el Espíritu para el bien común.\n\nEstos carismas, tanto los extraordinarios como los más sencillos y comunes, por el\nhecho de que son muy conformes y útiles a las necesidades de la Iglesia, hay que\nrecibirlos con agradecimiento y consuelo."
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. El último día de la fiesta, Jesús clamaba en alta voz: «Del que crea en mí brotarán\ntorrentes de agua viva.» * Esto lo dijo del Espíritu, que habían de recibir los que a él se\nunieran por la fe. Aleluya.\nV. El que tenga sed que venga a mí y que beba; brotarán de él torrentes de agua viva.\nR. Esto lo dijo del Espíritu, que habían de recibir los que a él se unieran por la fe. Aleluya.",
+    "ref": "Jn 7, 37. 38. 39"
+   },
+   {
+    "tipo": "oracion_laudes"
+   }
+  ],
+  "laudes": [
+   {
+    "tipo": "lectura_breve",
+    "texto": "Si verdaderamente hemos muerto con Cristo, tenemos fe de que también viviremos\ncon él, pues sabemos que Cristo, una vez resucitado de entre los muertos, ya no muere;\nla muerte no tiene ya poder sobre él. Su muerte fue un morir al pecado de una vez para\nsiempre, mas su vida es un vivir para Dios. Así también, considerad vosotros que estáis\nmuertos al pecado, pero que vivís para Dios en unión con Cristo Jesús.",
+    "ref": "Rm 6, 8-11"
+   },
+   {
+    "tipo": "responsorio_breve",
+    "texto": "V. El Señor ha resucitado del sepulcro. Aleluya, aleluya.\nR. El Señor ha resucitado del sepulcro. Aleluya, aleluya.\nV. El que por nosotros colgó del madero.\nR. Aleluya, aleluya.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. El Señor ha resucitado del sepulcro. Aleluya, aleluya."
+   },
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "Ant. Demos gracias a Dios, que nos da la victoria por nuestro Señor Jesucristo. Aleluya."
+   },
+   {
+    "tipo": "preces",
+    "texto": "Dando gracias al Padre, porque el Espíritu Santo da testimonio a nuestro espíritu de que\nsomos hijos de Dios, digamos confiados:\nPadre nuestro, escucha la voz de tus hijos.\n\nSeñor, fuente de toda paciencia y consuelo, concédenos estar de acuerdo entre nosotros,\ncomo es propio de cristianos,\n— para que, unánimes, a una voz, te alabemos a ti, Padre de nuestro Señor Jesucristo.\n\nHaz que nos esforcemos por complacer y servir a nuestro prójimo,\n— para que realicemos el bien en favor de nuestros hermanos y los edifiquemos con\nnuestro ejemplo.\n\nNo permitas que nos seduzca el espíritu del mundo, que está bajo el influjo del maligno,\n— y haz que seamos siempre dóciles al Espíritu que procede de ti.\n\nTú que penetras el corazón del hombre,\n— guíanos por las sendas de la sinceridad y de la verdad.\nSe pueden añadir algunas intenciones libres.\nConcluyamos nuestra oración, diciendo juntos las palabras de Jesús, nuestro maestro:\nPadre nuestro."
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Padre, lleno de amor, concede a tu Iglesia congregada por el Espíritu Santo, dedicarse"
+   }
+  ],
+  "intermedia": {
+   "comun": [],
+   "tercia": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "Creemos en aquel que resucitó de entre los muertos a Jesús, nuestro Señor, que fue\nentregado a la muerte por nuestros pecados, y resucitado para nuestra justificación.\nV. Verdaderamente ha resucitado el Señor. Aleluya.\nR. Y se ha aparecido a Simón. Aleluya.",
+     "ref": "Cf. Rm 4, 24-25"
+    },
+    {
+     "tipo": "oracion_laudes"
+    }
+   ],
+   "sexta": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "¿Quién es el que vence al mundo, sino el que cree que Jesús es el Hijo de Dios? Él,\nJesucristo, vino por el agua y por la sangre; no con el agua solamente, sino con el agua y\ncon la sangre.\nV. Los discípulos se llenaron de alegría. Aleluya.\nR. Al ver al Señor. Aleluya.",
+     "ref": "1 Jn 5, 3-6a"
+    },
+    {
+     "tipo": "oracion_laudes"
+    }
+   ],
+   "nona": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "Renovaos en la mente y en el espíritu y vestíos de la nueva condición humana, creada a\nimagen de Dios: justicia y santidad verdaderas,\nV. Quédate con nosotros, Señor. Aleluya.\nR. Porque ya es tarde. Aleluya.",
+     "ref": "Cf. Ef 4, 23-24"
+    },
+    {
+     "tipo": "oracion_laudes"
+    }
+   ]
+  },
+  "visperas": [
+   {
+    "tipo": "lectura_breve",
+    "texto": "Ni el ojo vio, ni el oído oyó, ni vino a la mente del hombre lo que Dios ha preparado\npara los que le aman. Pero a nosotros nos lo ha revelado por su Espíritu: y el Espíritu todo\nlo penetra, hasta la profundidad de Dios.",
+    "ref": "1 Co 2, 9-10"
+   },
+   {
+    "tipo": "responsorio_breve",
+    "texto": "V. El Espíritu Santo. Aleluya, aleluya.\nR. El Espíritu Santo. Aleluya, aleluya.\nV. Os lo enseñará todo.\nR. Aleluya, aleluya.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. El Espíritu Santo. Aleluya, aleluya."
+   },
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "Ant. Cristo os bautizará con Espíritu Santo y con fuego. Aleluya."
+   },
+   {
+    "tipo": "preces",
+    "texto": "Unidos a los apóstoles y a todos los que poseen las primicias del Espíritu Santo,\nglorifiquemos a Dios y supliquémosle, diciendo:\nEscúchanos, Señor.\n\nPadre todopoderoso, que has glorificado a Cristo en el cielo,\n— haz que todos reconozcan que está presente en tu Iglesia.\n\nPadre santo, que dijiste de Cristo: «Éste es mi Hijo amado, escuchadlo»,\n— haz que todos atendamos su voz y nos salvemos.\n\nEnvía tu Espíritu al corazón de tus fieles,\n— para que purifique lo manchado y fecunde lo que es árido.\n\nQue venga, Señor, tu Espíritu, para regir el curso de la historia,\n— y renovar la faz de la tierra.\nSe pueden añadir algunas intenciones libres.\nTe pedimos, Señor, por los difuntos: admítelos en tu reino,\n— y acrecienta nuestra esperanza en la resurrección futura.\n\nDigamos ahora todos juntos la oración que el mismo Cristo nos enseñó: Padre nuestro."
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Padre, lleno de amor, concede a tu Iglesia congregada por el Espíritu Santo, dedicarse"
+   }
+  ]
+ },
+ "jue": {
+  "oficio": [
+   {
+    "tipo": "versiculo",
+    "texto": "V. Dios resucitó al Señor. Aleluya.\nR. Y nos resucitará también a nosotros por su poder. Aleluya."
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "De la primera carta del apóstol san Juan 5, 13-21\n\nLA ORACIÓN POR LOS PECADORES\n\nQueridos hermanos: Os he escrito estas cosas, a los que creéis en el nombre del Hijo\nde Dios, para que os deis cuenta de que tenéis vida eterna.\n\nY ésta es la seguridad y confianza que tenemos en él: que, si le pedimos algo\nconforme con su voluntad, él nos escucha. Y, si sabemos que nos escucha en todas\nnuestras peticiones, sabemos que tenemos conseguido todo lo que hayamos pedido. El\nque vea a su hermano cometiendo pecado que no lleva a la muerte, que ore y le dará\nvida. (Me refiero a pecados que no llevan a la muerte, pues hay un pecado que conduce a\nla muerte. No me refiero a este caso.) Toda injusticia es pecado. Pero hay pecado que no\nva a la muerte.\n\nSabemos que el que ha nacido de Dios no peca: el Nacido de Dios lo guarda y el\nMaligno no lo toca. Sabemos que somos de Dios, mientras el mundo entero está bajo el\ninflujo del Maligno. Y sabemos que el Hijo de Dios ha venido y nos ha dado inteligencia,\npara que conozcamos al Dios verdadero y para que estemos en él, su verdadero Hijo, el\ncual es Dios verdadero y es vida eterna. Hijos míos, guardaos de los ídolos. Amén.",
+    "anio": "I"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Sabemos que el Hijo de Dios ha venido * y nos ha dado inteligencia, para que\nconozcamos al Dios verdadero. Aleluya.\nV. Nadie ha visto jamás a Dios; el Hijo unigénito, que está en el seno del Padre, es quien\nnos lo ha dado a conocer.\nR. Y nos ha dado inteligencia, para que conozcamos al Dios verdadero. Aleluya.",
+    "ref": "1 Jn 5, 20; Jn 1, 18",
+    "anio": "I"
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "De los Hechos de los apóstoles 27, 21-44\n\nNAUFRAGIO DE PABLO\n\nEn aquellos días, llevábamos mucho tiempo sin comer, cuando Pablo, dirigiéndose a los\ntripulantes, les dijo: «Amigos, mejor os hubiera sido seguir mis consejos, y no haber\nzarpado de Creta. Así nos habríamos ahorrado este percance y estos males. En la\nsituación en que nos encontramos, yo os aconsejo que cobréis mucho valor. No perecerá\nninguno de vosotros; sólo la nave se perderá. Esta noche se me ha aparecido un ángel del\nDios a quien pertenezco y a quien también adoro, y me ha dicho: \"No tengas miedo,\nPablo, que comparecerás ante el César; y mira, en consideración a tu persona, Dios\nguarda con vida a todos los que navegan contigo.\" Así, pues, cobrad ánimo, amigos; que\nyo confío en Dios que ha de suceder tal como me ha dicho; sin duda, encallaremos en\nalguna isla.»\n\nAsí llegó la decimocuarta noche en que íbamos a la deriva por el Adriático. A eso de\nmedia noche, sospecharon los marineros que se aproximaban a tierra. Echaron la sonda y\nencontraron veinte brazas de profundidad; al poco rato, la echaron de nuevo y\nencontraron quince. Ante el temor de dar en algún escollo, arrojaron cuatro anclas a popa\ny aguardaron con impaciencia a que se hiciese de día. A todo esto los marineros\nintentaban escapar de la nave y, con el pretexto de ir a echar lejos las anclas de proa,\narriaron el esquife. Dijo entonces Pablo al centurión y a los soldados: «Si no se quedan\néstos en la nave, no os vais a poder salvar.»\n\nEn seguida, los soldados cortaron las amarras del esquife y lo dejaron a merced de las\nolas. Mientras llegaba el día, Pablo animaba a todos a comer, diciéndoles: «Hoy hace\ncatorce días que estáis en esta espera ansiosa, ayunando y sin haber tomado nada. Por\neso os invito a tomar alimento, pues es necesario para vuestra salud. Ni un solo cabello\nperecerá de vuestra cabeza.»\n\nDicho esto, tomó pan y, dando gracias a Dios en presencia de todos, lo partió y\ncomenzó a comer. Con ello, cobraron todos ánimo y comieron también. Éramos en total\ndoscientos setenta y seis los que nos encontrábamos en la nave. Una vez satisfechos,\naligeraron la nave, arrojando el trigo al mar. Cuando se hizo de día, comprobaron que no\nconocían aquella tierra, y, como divisaban una ensenada que tenía una playa, en ella\nacordaron encallar la nave, si podían. Soltaron las anclas y las abandonaron al mar;\ndesataron al mismo tiempo las amarras de los timones e, izando al viento la vela del\nartimón, hicieron rumbo a la playa. Pero vinieron a dar en un bajo entre dos corrientes, y\nallí embarrancaron la nave; la proa, sujeta en el fondo, quedó inmóvil, mientras que la\npopa se deshacía por la violencia de las olas. Los soldados decidieron dar muerte a los\npresos para que ninguno escapase a nado; pero el centurión, que quería salvar a Pablo, se\nopuso a tal propósito. Dio orden de que los que sabían nadar se arrojasen los primeros al\nagua, y saliesen a tierra; y que los demás saliesen, bien sobre tablas, bien sobre otros\nobjetos de la nave. Y así llegaron todos sanos y salvos a tierra.",
+    "anio": "II"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Habló el Señor y levantó un viento tormentoso, que alzaba las olas a lo alto. * Gritaron\nal Señor en su angustia, y los arrancó de la tribulación. Aleluya,\nV. Dad gracias al Señor por su misericordia, por las maravillas que hace con los hombres.\nR. Gritaron al Señor en su angustia, y los arrancó de la tribulación. Aleluya.",
+    "ref": "Sal 106, 25. 28. 31",
+    "anio": "II"
+   },
+   {
+    "tipo": "lectura2",
+    "texto": "Del comentario de san Cirilo de Alejandría, obispo, sobre el evangelio de san Juan\n(Libro 10: PG 74, 434)\n\nSI NO ME VOY, NO VENDRÁ A VOSOTROS EL DEFENSOR\n\nYa se había llevado a cabo el plan salvífico de Dios en la tierra; pero convenía que\nnosotros llegáramos a ser partícipes de la naturaleza divina del Verbo, esto es, que\nabandonásemos nuestra vida anterior para transformarla y conformarla a un nuevo estilo\nde vida y de santidad. Esto sólo podía llevarse a efecto con la comunicación del Espíritu\nSanto.\n\nAhora bien, el tiempo más oportuno para la misión del Espíritu y su irrupción en\nnosotros fue aquel que siguió a la marcha de nuestro Salvador Jesucristo.\n\nPues mientras Cristo vivía corporalmente entre sus fieles, se les mostraba como el\ndispensador de todos sus bienes; pero cuando llegó la hora de regresar al Padre celestial,\ncontinuó presente entre sus fieles mediante su Espíritu, y habitando por la fe en nuestros\ncorazones. De este modo, poseyéndole en nosotros, podríamos llamarle con confianza:\n«Abba, Padre», y cultivar con ahínco todas las virtudes, y juntamente hacer frente con\nvalentía invencible a las asechanzas del diablo y las persecuciones de los hombres, como\nquienes cuentan con la fuerza poderosa del Espíritu.\n\nEste mismo Espíritu transforma y traslada a una nueva condición de vida a los fieles en\nque habita y tiene su morada. Esto puede ponerse fácilmente de manifiesto con\ntestimonios tanto del antiguo como del nuevo Testamento.\n\nAsí el piadoso Samuel a Saúl: Te invadirá el Espíritu del Señor, y te convertirás en otro\nhombre. Y san Pablo: Nosotros todos, que llevamos la cara descubierta, reflejamos la\ngloria del Señor y nos vamos transformando en su imagen con resplandor creciente; así es\ncomo actúa el Señor, que es Espíritu.\n\nNo es difícil percibir como transforma el Espíritu la imagen de aquéllos en los que\nhabita: del amor a las cosas terrenas, el Espíritu nos conduce a la esperanza de las cosas\ndel cielo; y de la cobardía y la timidez, a la valentía y generosa intrepidez de espíritu. Sin\nduda es así como encontramos a los discípulos, animados y fortalecidos por el Espíritu, de\ntal modo que no se dejaron vencer en absoluto por los ataques de los perseguidores, sino\nque se adhirieron con todas sus fuerzas al amor de Cristo.\n\nSe trata exactamente de lo que había dicho el Salvador: Os conviene que yo me vaya\nal cielo. En ese tiempo, en efecto, descendería el Espíritu Santo."
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Si no me voy, el Abogado no vendrá a vosotros; pero, si me voy, os lo enviaré. * Y,\ncuando él venga, os conducirá a la verdad completa. Aleluya.\nV. Porque no hablará por cuenta propia, sino que os dirá cuanto se le comunique y os\nanunciará las cosas futuras.\nR. Y, cuando él venga, os conducirá a la verdad completa. Aleluya.",
+    "ref": "Jn 16, 7. 13"
+   },
+   {
+    "tipo": "oracion_laudes"
+   }
+  ],
+  "laudes": [
+   {
+    "tipo": "lectura_breve",
+    "texto": "Si Cristo está en vosotros, aunque vuestro cuerpo haya muerto por causa del pecado,\nel espíritu tiene vida por la justificación. Y si el Espíritu de aquel que resucitó a Jesús de\nentre los muertos habita en vosotros, el mismo que resucitó a Cristo Jesús de entre los\nmuertos vivificará también vuestros cuerpos mortales por obra de su Espíritu que habita\nen vosotros.",
+    "ref": "Rm 8, 10-11"
+   },
+   {
+    "tipo": "responsorio_breve",
+    "texto": "V. El Señor ha resucitado del sepulcro. Aleluya, aleluya.\n\nR. El Señor ha resucitado del sepulcro. Aleluya, aleluya.\nV. El que por nosotros colgó del madero.\nR. Aleluya, aleluya.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. El Señor ha resucitado del sepulcro. Aleluya, aleluya."
+   },
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "Ant. Id y sed los maestros de todas las naciones; bautizadlas en el nombre del Padre y del\nHijo y del Espíritu Santo. Aleluya."
+   },
+   {
+    "tipo": "preces",
+    "texto": "Bendigamos a Cristo, el Señor, por quien tenemos acceso al Padre en el Espíritu Santo, y\nsupliquémosle, diciendo:\nEscúchanos, Señor Jesús.\n\nEnvíanos tu Espíritu, el huésped deseado de las almas,\n— y haz que nunca lo contristemos.\n\nTú que resucitaste de entre los muertos y estás sentado a la derecha de Dios,\n— intercede siempre por nosotros ante el Padre.\n\nHaz que el Espíritu nos mantenga unidos a ti,\n— para que ni la tribulación ni la persecución ni los peligros nos separen nunca de tu\namor.\n\nEnséñanos a amarnos mutuamente,\n— como tú nos amaste para gloria de Dios.\nSe pueden añadir algunas intenciones libres.\nLlenos de fe, invoquemos juntos al Padre, repitiendo la oración que Cristo nos enseñó:\nPadre nuestro."
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Que tu Espíritu, Señor, nos penetre con su fuerza, para que nuestro pensar te sea"
+   }
+  ],
+  "intermedia": {
+   "comun": [],
+   "tercia": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "Todos nosotros, judíos y griegos, esclavos y libres, hemos sido bautizados en un mismo\nEspíritu, para formar un solo cuerpo. Y todos hemos bebido de un solo Espíritu.\nV. Verdaderamente ha resucitado el Señor. Aleluya.\nR. Y se ha aparecido a Simón. Aleluya.",
+     "ref": "1 Co 12 13"
+    },
+    {
+     "tipo": "oracion_laudes"
+    }
+   ],
+   "sexta": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "Dios nos trajo la salud mediante el baño bautismal de regeneración y renovación que obra\nel Espíritu Santo. Él derramó con toda profusión sobre nosotros este Espíritu por Cristo\nJesús, nuestro salvador. Así, justificados por la gracia de Cristo, hemos obtenido la\nesperanza de poseer en herencia la vida eterna.\nV. Los discípulos se llenaron de alegría. Aleluya.\nR. Al ver al Señor. Aleluya.",
+     "ref": "Tt 3, 5b-7"
+    },
+    {
+     "tipo": "oracion_laudes"
+    }
+   ],
+   "nona": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "Damos gracias a Dios Padre, que nos ha hecho capaces de compartir la herencia del\npueblo santo en la luz. Él nos ha sacado del dominio de las tinieblas, y nos ha trasladado\nal reino de su Hijo querido, por cuya sangre hemos recibido la redención, el perdón de los\npecados.\nV. Quédate con nosotros, Señor. Aleluya.\nR. Porque ya es tarde. Aleluya.",
+     "ref": "Cf. Col 1, 12-14"
+    },
+    {
+     "tipo": "oracion_laudes"
+    }
+   ]
+  },
+  "visperas": [
+   {
+    "tipo": "lectura_breve",
+    "texto": "¿No sabéis que vuestro cuerpo es templo del Espíritu Santo? Él habita en vosotros. Lo\nhabéis recibido de Dios, y por lo tanto no os pertenecéis a vosotros mismos. Habéis sido\ncomprados a precio. En verdad glorificad a Dios con vuestro cuerpo.",
+    "ref": "1 Co 6, 19-20"
+   },
+   {
+    "tipo": "responsorio_breve",
+    "texto": "V. El Espíritu Santo. Aleluya, aleluya.\nR. El Espíritu Santo. Aleluya, aleluya.\nV. Os lo enseñará todo.\nR. Aleluya, aleluya.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. El Espíritu Santo. Aleluya, aleluya."
+   },
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "Ant. Cuando venga el Espíritu de verdad, os conducirá a la verdad completa y os\nanunciará las cosas futuras. Aleluya."
+   },
+   {
+    "tipo": "preces",
+    "texto": "Glorifiquemos a Cristo, bendito por los siglos, y pidámosle que envíe el Espíritu Santo a los\nque ha redimido con su muerte y resurrección, digamos:\nSalva, Señor, a los que has redimido.\n\nEnvía a la Iglesia el Espíritu de la unidad,\n\n— para que desaparezcan todas las disensiones, odios y divisiones.\n\nTú que libraste a los hombres del dominio de Satanás,\n— libra también al mundo de los males que lo afligen.\n\nTú que, dócil al Espíritu Santo, diste cumplimiento a tu misión,\n— haz que los sacerdotes encuentren en la oración la fuerza y la luz del Espíritu, para ser\nfieles a su ministerio.\n\nQue tu Espíritu guíe a los gobernantes,\n— para que busquen y realicen el bien común.\nSe pueden añadir algunas intenciones libres.\nTú que vives en la gloria del Padre,\n— acoge a los difuntos en tu reino.\n\nLlenos de fe, invoquemos juntos al Padre, repitiendo la oración que Cristo nos enseñó:\nPadre nuestro."
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Que tu Espíritu, Señor, nos penetre con su fuerza, para que nuestro pensar te sea"
+   }
+  ]
+ },
+ "vie": {
+  "oficio": [
+   {
+    "tipo": "versiculo",
+    "texto": "V. En tu resurrección, oh Cristo. Aleluya.\nR. El cielo y la tierra se alegran. Aleluya."
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "Segunda carta del apóstol san Juan\n\nEL QUE PERMANECE EN LA DOCTRINA DE CRISTO POSEE AL PADRE Y AL HIJO\n\nYo, el presbítero, a la señora elegida y a sus hijos, a quienes amo en la verdad (y no\nsolamente yo, sino también todos los que han conocido la verdad). Yo os amo por esa\nmisma verdad que mora en nosotros y, que en nosotros permanecerá eternamente. La\ngracia, la misericordia y la paz de parte de Dios Padre y de Jesucristo, Hijo del Padre,\nestarán con nosotros en la verdad y en el amor.\n\nMucho me he alegrado de encontrar a tus hijos caminando en la verdad, conforme al\nmandato que hemos recibido del Padre. Ahora, señora, te ruego no como quien te envía\nun mandamiento nuevo, sino el mandato que teníamos desde un principio, que nos\namemos unos a otros. Y en esto consiste el amor: en que vivamos conforme a sus\nmandatos. Y éste es el mandamiento, según habéis oído desde un principio, que consiste\nen vivir en el amor.\n\nSe han levantado en el mundo muchos seductores que niegan que Jesucristo ha venido\nen carne. Ése es el seductor y el anticristo. Mirad por vosotros mismos, para que no\nperdáis el fruto de vuestros trabajos y para que recibáis una abundante recompensa.\nQuien sale de los justos límites y no permanece en la doctrina de Cristo no posee a Dios.\nQuien persevera en su doctrina posee al Padre y al Hijo. Si alguno viene a vosotros y no\ntrae esta doctrina, no lo recibáis en casa ni lo saludéis, pues el que lo saluda se hace\nsolidario de sus malas obras.\n\nTengo muchas cosas que escribiros, pero prefiero no confiarlas al papel y a la tinta.\nEspero ir a veros y hablar con vosotros de viva voz, a fin de que nuestro gozo sea\ncompleto. Te saludan los hijos de tu hermana Electa.",
+    "anio": "I"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Éste es el mandamiento que hemos recibido del Padre, el cual no es ya un\nmandamiento nuevo, sino que lo tenemos desde un principio: * Vivid en la verdad y en el\namor. Aleluya.\nV. Seguid el camino que os marcó el Señor, vuestro Dios, y viviréis.\nR. Vivid en la verdad y en el amor. Aleluya.",
+    "ref": "Cf. 2 Jn 4. 5. 3; Dt 5, 33",
+    "anio": "I"
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "De los Hechos de los apóstoles 28, 1-14\n\nVIAJE DE PABLO DESDE MALTA A ROMA\n\nEn aquellos días, una vez a salvo, nos enteramos de que la isla se llamaba Malta. Los\nindígenas nos mostraron una bondad poco común; encendieron una gran hoguera y nos\nrecibieron benignamente a todos, protegiéndonos contra la lluvia que caía y el frío. Pablo\nrecogió un montón de leña y, al echarla al fuego, una víbora, a la que el calor hizo salir\nfuera, hizo presa en su mano. Cuando los indígenas vieron el reptil colgado de su mano,\nse dijeron unos a otros: «Seguro que este hombre es un asesino. Ha escapado del mar,\npero la justicia divina no le deja vivir.»\n\nPero Pablo sacudió el reptil sobre el fuego sin recibir daño alguno, cuando ellos\nesperaban que se iba a hinchar en seguida o que caería muerto de repente. Después que\nestuvieron bastante tiempo a la expectativa, viendo que nada anormal le sucedía,\ncambiaron de parecer y empezaron a decir que era un dios.\n\nEn aquellos alrededores había una finca que pertenecía al principal de la isla, llamado\nPublio; éste nos acogió en su casa y nos hospedó amigablemente durante tres días. El\npadre de Publio estaba enfermo en cama atacado por la fiebre y por la disentería. Entró\nPablo a visitarlo y, después de hacer oración, le impuso las manos y lo curó. Ante este\nacontecimiento, los demás enfermos de la isla venían y recobraban la salud. Ellos, por su\nparte, nos colmaron de honores y, cuando partimos, nos proveyeron de todo lo necesario.\n\nDespués de pasados tres meses, zarpamos en una nave alejandrina que había\ninvernado en la isla y que llevaba por insignia a Cástor y Pólux. Hicimos escala en\nSiracusa, donde permanecimos tres días. De allí, bordeando la costa, dimos vista a Regio;\nal día siguiente comenzó a soplar el viento sur, y, al cabo de dos días, llegamos a Pozzuoli.\nAllí encontramos algunos hermanos, que nos invitaron a quedarnos con ellos siete días. Y\nasí llegamos a Roma.",
+    "anio": "II"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Id al mundo entero y proclamad el Evangelio. * El que crea y se bautice se salvará.\nAleluya.\n\nV. Invocando mi nombre, arrojarán los demonios, hablarán distintas lenguas y capturarán\nserpientes con sus manos.\nR. El que crea y se bautice se salvará. Aleluya.",
+    "ref": "Mc 16, 15. 16. 17. 18",
+    "anio": "II"
+   },
+   {
+    "tipo": "lectura2",
+    "texto": "Del tratado de san Hilario, obispo, sobre la Trinidad\n(Libro 2,1, 33. 35: PL 10, 50-51. 73-75)\n\nEL DON DEL PADRE EN CRISTO\n\nEl Señor mandó bautizar en el nombre del Padre y del Hijo y del Espíritu Santo, esto\nes, en la profesión de fe en el Creador, en el Hijo único y en el que es llamado Don.\n\nUno solo es el Creador de todo, ya que uno solo es Dios Padre, de quien procede todo;\ny uno solo el Hijo único, nuestro Señor Jesucristo, por quien ha sido hecho todo; y uno\nsolo el Espíritu, que a todos nos ha sido dado.\n\nTodo, pues, se halla ordenado según la propia virtud y operación: un Poder del cual\nprocede todo, un Hijo por quien existe todo, un Don que es garantía de nuestra esperanza\nconsumada. Ninguna falta se halla en semejante perfección; dentro de ella, en el Padre y\nel Hijo y el Espíritu Santo, se halla lo infinito en lo eterno, la figura en la imagen, la\nfruición en el don.\n\nEscuchemos las palabras del Señor en persona, que nos describe cuál es la acción\nespecífica del Espíritu en nosotros; dice, en efecto: Muchas cosas me quedan por deciros,\npero no podéis cargar con ellas por ahora. Os conviene, por tanto, que yo me vaya,\nporque, si me voy, os enviaré al Defensor.\n\nY también: Yo le pediré al Padre que os dé otro Defensor, que esté siempre con\nvosotros, el Espíritu de la verdad. Él os guiará hasta la verdad plena. Pues lo que hable no\nserá suyo: hablará de lo que oye y os comunicará lo que está por venir. Él me glorificará,\nporque recibirá de mí.\n\nEsta pluralidad de afirmaciones tiene por objeto darnos una mayor comprensión, ya\nque en ellas se nos explica cuál sea la voluntad del que nos otorga su Don, y cuál la\nnaturaleza de este mismo Don: pues, ya que la debilidad de nuestra razón nos hace\nincapaces de conocer al Padre y al Hijo y nos dificulta el creer en la encarnación de Dios,\nel Don que es el Espíritu Santo, con su luz, nos ayuda a penetrar en estas verdades.\n\nAl recibirlo, pues, se nos da un conocimiento más profundo. Porque, del mismo modo\nque nuestro cuerpo natural, cuando se ve privado de los estímulos adecuados, permanece\ninactivo (por ejemplo, los ojos, privados de luz, los oídos, cuando falta el sonido, y el\nolfato, cuando no hay ningún olor, no ejercen su función propia, no por que dejen de\nexistir por la falta de estímulo, sino porque necesitan este estímulo para actuar), así\ntambién nuestra alma, si no recibe por la fe el Don que es el Espíritu, tendrá ciertamente\nuna naturaleza capaz de entender a Dios, pero le faltará la luz para llegar a ese\nconocimiento. El Don de Cristo está todo entero a nuestra disposición y se halla en todas\npartes, pero se da a proporción del deseo y de los méritos de cada uno. Este Don está con\nnosotros hasta el fin del mundo; él es nuestro solaz en este tiempo de expectación."
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Ya es tiempo de que yo vuelva al que me envió —dice el Señor—; no os entristezcáis ni\ndejéis que se aflija vuestro corazón; * ruego al Padre por vosotros para que él os cuide.\nAleluya.\nV. Si no me voy, el Abogado no vendrá a vosotros; pero, si me voy, os lo enviaré.\nR. Ruego al Padre por vosotros para que él os cuide. Aleluya.",
+    "ref": "Cf. Jn 14, 1; 17, 9; 16, 7"
+   },
+   {
+    "tipo": "oracion_laudes"
+   }
+  ],
+  "laudes": [
+   {
+    "tipo": "lectura_breve",
+    "texto": "El Dios de nuestros padres resucitó a Jesús, a quien vosotros matasteis colgándole de\nun madero. La diestra de Dios lo exaltó haciéndolo jefe y salvador, para otorgar a Israel la\nconversión, el perdón de los pecados. Testigos de esto somos nosotros y el Espíritu Santo,\nque Dios da a los que le obedecen.",
+    "ref": "Hch 5, 30-32"
+   },
+   {
+    "tipo": "responsorio_breve",
+    "texto": "V. El Señor ha resucitado del sepulcro. Aleluya, aleluya.\nR. El Señor ha resucitado del sepulcro. Aleluya, aleluya.\nV. El que por nosotros colgó del madero.\nR. Aleluya, aleluya.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. El Señor ha resucitado del sepulcro. Aleluya, aleluya."
+   },
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "Ant. Cristo Jesús murió y resucitó, y está ahora a la diestra de Dios; él vive para siempre\npara interceder por nosotros, Aleluya."
+   },
+   {
+    "tipo": "preces",
+    "texto": "Oremos a Dios Padre, a quien pertenece el honor y la gloria por los siglos de los siglos, y\npidámosle nos conceda ir creciendo en la esperanza por la acción del Espíritu Santo;\ndigámosle:\nVen, Señor, en nuestra ayuda y sálvanos.\n\nPadre todopoderoso, envía tu Espíritu para que interceda por nosotros,\n— porque no sabemos pedir lo que nos conviene.\n\nEnvíanos tu Espíritu, luz esplendorosa,\n— y haz que penetre hasta lo más íntimo de nuestro ser.\n\nNo nos abandones, Señor, en el abismo en que nos sumergen nuestros pecados,\n— porque somos obra de tus manos.\n\nConcédenos comprensión para asistir a los débiles y frágiles en la fe,\n— no con impaciencia y resentimiento, sino con auténtica caridad.\nSe pueden añadir algunas intenciones libres.\nDirijamos ahora al Padre nuestra oración con las mismas palabras que Cristo nos enseñó:\nPadre nuestro."
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Oh Dios, que por la glorificación de tu Hijo Jesucristo y la venida del Espíritu Santo nos"
+   }
+  ],
+  "intermedia": {
+   "comun": [],
+   "tercia": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "Dios ha resucitado a Jesús; testigos somos todos nosotros. Así, pues, que todo el pueblo\nde Israel lo sepa con absoluta certeza: Dios ha constituido Señor y Mesías a este mismo\nJesús, a quien vosotros habéis crucificado.\nV. Verdaderamente ha resucitado el Señor. Aleluya.\nR. Y se ha aparecido a Simón. Aleluya.",
+     "ref": "Hch 2, 32. 36"
+    },
+    {
+     "tipo": "oracion_laudes"
+    }
+   ],
+   "sexta": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "Todos los que habéis sido bautizados en Cristo os habéis revestido de Cristo. Ya no hay\ndistinción entre judío y gentil, ni entre libre y esclavo, ni entre hombre y mujer: todos sois\nuno en Cristo Jesús.\nV. Los discípulos se llenaron de alegría. Aleluya.\nR. Al ver al Señor. Aleluya.",
+     "ref": "Ga 3, 27-28"
+    },
+    {
+     "tipo": "oracion_laudes"
+    }
+   ],
+   "nona": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "Tirad fuera la levadura vieja para que seáis una masa nueva, ya que ahora sois panes\názimos, pues Cristo, nuestro cordero pascual, ha sido inmolado. Así, pues, celebremos\nnuestra fiesta no con la vieja levadura ni con levadura de malicia y perversidad, sino con\nlos panes ázimos de pureza y verdad.\nV. Quédate con nosotros, Señor. Aleluya.\nR. Porque ya es tarde. Aleluya.",
+     "ref": "1 Co 5, 7-8"
+    },
+    {
+     "tipo": "oracion_laudes"
+    }
+   ]
+  },
+  "visperas": [
+   {
+    "tipo": "lectura_breve",
+    "texto": "Si vivís según el Espíritu, no daréis satisfacción a las apetencias de la carne. El fruto del\nEspíritu es: amor, alegría, paz, comprensión, servicialidad, bondad, lealtad, amabilidad,\ndominio de sí. Si vivimos por el Espíritu marchemos tras el Espíritu.",
+    "ref": "Ga 5, 16. 22-23a. 25"
+   },
+   {
+    "tipo": "responsorio_breve",
+    "texto": "V. El Espíritu Santo. Aleluya, aleluya.\nR. El Espíritu Santo. Aleluya, aleluya.\nV. Os lo enseñará todo.\n\nR. Aleluya, aleluya.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. El Espíritu Santo. Aleluya, aleluya."
+   },
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "Ant. Todos perseveraban en la oración, con un mismo espíritu, en compañía de María,\nla madre de Jesús. Aleluya."
+   },
+   {
+    "tipo": "preces",
+    "texto": "Bendigamos a Dios Padre, que con tanta generosidad ha derramado los dones del Espíritu\nSanto sobre todos los pueblos, y pidámosle que no cese nunca de derramar su gracia\nsobre el mundo; digamos:\nQue la gracia del Espíritu Santo abunde, Señor, en el mundo.\n\nSeñor, tú que nos has dado a tu Elegido como luz de los pueblos,\n— abre los ojos de los ciegos y libra de toda esclavitud a los que viven en tinieblas.\n\nTú que ungiste a Cristo con la fuerza del Espíritu Santo, para que realizara la salvación de\nlos hombres,\n— haz que sintamos cómo pasa de nuevo por el mundo, haciendo el bien y curando a\ntodos.\n\nEnvía a tu Espíritu, que es la luz de los corazones,\n— para que confirme en la fe a los que viven en medio de incertidumbres y dudas.\n\nEnvía a tu Espíritu, que es descanso en el trabajo,\n— para que reconforte a los que se sienten fatigados y desanimados.\nSe pueden añadir algunas intenciones libres.\nRealiza la esperanza de los que ya han muerto,\n—  y haz que cuando venga el Señor obtengan una resurrección gloriosa.\n\nDirijamos ahora al Padre nuestra oración con las mismas palabras que Cristo nos enseñó:\nPadre nuestro."
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Oh Dios, que por la glorificación de tu Hijo Jesucristo y la venida del Espíritu Santo nos"
+   }
+  ]
+ },
+ "sab": {
+  "oficio": [
+   {
+    "tipo": "versiculo",
+    "texto": "V. Dios nos ha hecho nacer de nuevo para una esperanza viva. Aleluya.\n\nR. Por la resurrección de Jesucristo de entre los muertos. Aleluya."
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "Tercera carta del apóstol san Juan\n\nCAMINEMOS EN LA VERDAD\n\nYo, el presbítero, al muy querido Gayo, a quien amo en la verdad.\nCarísimo, pido a Dios que en todo prosperes y que goces de buena salud, así como\n\nprospera tu alma. Mucho me he alegrado con la venida de los hermanos y con las noticias\nde tu permanencia en la verdad, de cómo caminas en ella. No hay para mí mayor alegría\nque oír de mis hijos que caminan en la verdad.\n\nCarísimo, te portas fielmente en todas las obras que haces en favor de los hermanos,\naun de los que son forasteros. Ellos hicieron el elogio de tu caridad ante la Iglesia. Harás\nuna buena acción en proveerlos de lo necesario para su viaje, de una manera digna de\nDios. Ellos se han puesto en camino por el nombre del Señor, sin recibir nada de los\npaganos. Por eso nosotros debemos acogerlos para ser cooperadores de sus trabajos por\nla verdad.\n\nHe escrito algunas palabras a la Iglesia; pero Diotrefes, que ambiciona el primer\npuesto entre todos, no acata nuestra autoridad. Por esto, cuando vaya, lo amonestaré,\nrecordándole las malas obras que hace: habla desvergonzadamente contra nosotros; no\ncontento con ello, rehúsa recibir a los hermanos; y a los que quieren recibirlos se lo\nprohíbe, arrojándolos de la Iglesia.\n\nCarísimo, no imites lo malo, sino lo bueno. Quien obra el bien es de Dios. Quien obra el\nmal no ha visto a Dios. Por lo que se refiere a Demetrio, todos hablan con elogio de él,\nincluso la misma verdad. También nosotros lo recomendamos, y nuestra recomendación,\ncomo ya lo sabes, es verdadera.\n\nTengo muchas cosas que escribirte; pero prefiero no confiarlas a la pluma y a la tinta.\nEspero verte pronto y hablaremos personalmente. La paz sea contigo. Te saludan los\namigos. Saluda a los amigos, a cada uno en particular.",
+    "anio": "I"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. No imites lo malo, sino lo bueno. * Quien obra el bien es de Dios. Aleluya.\nV. A Dios le somos gratos cuando, por causa suya, soportamos penas injustamente\ninferidas.\nR. Quien obra el bien es de Dios. Aleluya.",
+    "ref": "3 Jn 11; 1 Pe 2, 19",
+    "anio": "I"
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "De los Hechos de los apóstoles 28, 15-31\n\nPABLO EN ROMA\n\nEn aquellos días, los hermanos de Roma, que tenían referencias de nuestro viaje, nos\nsalieron al encuentro en el Foro de Apio y Tres Tabernas. A su vista, Pablo dio gracias a\nDios y cobró ánimo. Cuando entramos en Roma, dieron permiso a Pablo para alojarse en\nuna casa particular, con un soldado para su custodia. Al cabo de tres días convocó Pablo a\nlos notables de los judíos y, cuando estuvieron reunidos, les habló así: «Aunque yo,\nhermanos, no he hecho nada malo contra nuestro pueblo ni contra las costumbres patrias,\nfui detenido en Jerusalén y puesto en manos de las autoridades romanas. Éstas, después\n\nde haberme tomado declaración, quisieron ponerme en libertad, porque no había en mí\ncausa alguna que mereciese la muerte. Pero, como los judíos se oponían a ello, me vi\nobligado a apelar al César, pero sin intención alguna de acusar a mi pueblo. Por este\nmotivo os he llamado para veros y hablar con vosotros. Sabed que por defender la\nesperanza de Israel llevo estas cadenas.»\n\nEllos le contestaron: «Nosotros, por nuestra parte, no hemos recibido de Judea\nninguna carta referente a tu persona; ni nos ha llegado ningún hermano, contándonos o\nhablando algo malo contra ti. Tendremos sumo gusto en escucharte y saber lo que\npiensas; pues, por lo que a esta secta se refiere, sabemos que en todas partes encuentra\noposición.»\n\nLe señalaron día, y acudieron en gran número a la casa donde se hospedaba. Pablo les\nexpuso el reino de Dios, asegurando firmemente su advenimiento; e intentó convencerlos\nde todo lo referente a Jesús, a base de la ley de Moisés y de los profetas. Esto duró desde\nla mañana hasta la tarde. Unos se convencían de sus palabras; otros, en cambio,\ncontinuaban incrédulos. Y  así se retiraban sin ponerse de acuerdo, cuando Pablo les dirigió\núltimamente estas palabras: «Bien habló el Espíritu Santo a nuestros padres por el profeta\nIsaías: \"Dirígete a este pueblo y diles: Oiréis con vuestros oídos, pero no lo entenderéis;\nmiraréis con vuestros ojos, pero no lo veréis. Porque se ha embotado la inteligencia de\neste pueblo; sus oídos se han vuelto torpes para oír, y sus ojos se han cerrado. No sea\nque lo vean con sus ojos, y lo oigan con sus oídos, y lo entiendan con su inteligencia y se\nconviertan; y yo los tenga que salvar.\" Sabed, pues, que esta salvación de Dios ha sido\nenviada a los gentiles, y ciertamente que lo escucharán.»\n\nPablo permaneció dos años enteros en una casa que había alquilado; y recibía a\ncuantos acudían a él. Predicaba el reino de Dios, y con toda franqueza y libertad y sin\nobstáculo ninguno enseñaba lo referente a Jesucristo, el Señor.",
+    "anio": "II"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. La promesa vale para vosotros y para vuestros hijos y * para todos los que llame el\nSeñor, aunque estén lejos. Aleluya.\nV. Esta salvación de Dios ha sido enviada a los gentiles.\nR. Para todos los que llame el Señor, aunque estén lejos. Aleluya.",
+    "ref": "Hch 2, 39; 28, 28",
+    "anio": "II"
+   },
+   {
+    "tipo": "lectura2",
+    "texto": "De los sermones de un autor africano del siglo sexto\n(Sermón 8,1-3: PL 65, 143-744)\n\nLA UNIDAD DE LA IGLESIA HABLA EN TODOS LOS IDIOMAS\n\nHablaron en todas las lenguas. Así quiso Dios dar a entender la presencia del Espíritu\nSanto: haciendo que hablara en todas las lenguas quien le hubiese recibido. Debemos\npensar, queridos hermanos, que éste es el Espíritu Santo por cuyo medio se difunde la\ncaridad en nuestros corazones.\n\nLa caridad había de reunir a la Iglesia de Dios en todo el orbe de la tierra. Por eso, así\ncomo entonces un solo hombre, habiendo recibido el Espíritu Santo, podía hablar en todas\nlas lenguas, así también ahora es la unidad misma de la Iglesia, congregada por el Espíritu\nSanto, la que habla en todos los idiomas.\n\nPor tanto, si alguien dijera a uno de vosotros: «Si has recibido el Espíritu Santo, ¿por\nqué no hablas en todos los idiomas?» , deberás responderle: «Es cierto que hablo todos\nlos idiomas, porque estoy en el cuerpo de Cristo, es decir, en la Iglesia, que los habla\ntodos. ¿Pues qué otra cosa quiso dar a entender Dios por medio de la presencia del\nEspíritu Santo, si no que su Iglesia hablaría en todas las lenguas?»\n\nSe ha cumplido así lo prometido por el Señor: Nadie echa vino nuevo en odres viejos.\nA vino nuevo, odres nuevos, y así se conservan ambos.\n\nCon razón, pues, empezaron algunos a decir cuando oían hablar en todas las lenguas:\nEstán bebidos. Se habían convertido ya en odres nuevos, renovados por la gracia de la\nsantidad. De este modo, ebrios del nuevo vino del Espíritu Santo, podrían hablar\nfervientemente en todos los idiomas, y anunciar de antemano, con aquel maravilloso\nmilagro, la propagación de la Iglesia católica por todos los pueblos y lenguas.\n\nCelebrad, pues, este día como miembros que sois de la unidad del cuerpo de Cristo. No\nlo celebraréis en vano si sois efectivamente lo que estáis celebrando: miembros de aquella\nIglesia que el Señor, al llenarla del Espíritu Santo, reconoce como suya a medida que se va\nesparciendo por el mundo, y por la que es a su vez reconocido. Como esposo no perdió a\nsu propia esposa, ni nadie pudo substituírsela por otra.\n\nY a vosotros, que procedéis de todos los pueblos y que sois la Iglesia de Cristo, los\nmiembros de Cristo, el cuerpo de Cristo, os dice el Apóstol: Sobrellevaos mutuamente con\namor, esforzaos en mantener la unidad del Espíritu con el vínculo de la paz.\n\nNotad cómo en el mismo momento nos mandó que nos soportáramos unos a otros y\nnos amásemos, y puso de manifiesto el vínculo de la paz al referirse a la esperanza de la\nunidad. Ésta es la casa de Dios levantada con piedras vivas, en la que se complace en\nhabitar un padre de familia como éste, y cuyos ojos no debe jamás ofender la ruina de la\ndivisión."
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Dios, que conoce los corazones, ha dado su Espíritu a todos los pueblos, igual que a\nnosotros; * y no ha establecido diferencia alguna entre ellos y nosotros, pues ha\npurificado sus corazones por la fe. Aleluya.\nV. Así, pues, Dios ha concedido también a los demás pueblos la conversión que conduce a\nla vida.\nR. Y  no ha establecido diferencia alguna entre ellos y nosotros, pues ha purificado sus\ncorazones por la fe. Aleluya.",
+    "ref": "Hch 15, 8-9; 11, 18"
+   },
+   {
+    "tipo": "oracion_laudes"
+   }
+  ],
+  "laudes": [
+   {
+    "tipo": "lectura_breve",
+    "texto": "Ninguno de nosotros vive para sí y ninguno muere para sí. Que si vivimos, vivimos para el\nSeñor; y si morimos, para el Señor morimos. En fin, que tanto en vida como en muerte\nsomos del Señor. Para esto murió Cristo y retornó a la vida, para ser Señor de vivos y\nmuertos.",
+    "ref": "Rm 14, 7-9"
+   },
+   {
+    "tipo": "responsorio_breve",
+    "texto": "V. El Señor ha resucitado del sepulcro. Aleluya, aleluya.\nR. El Señor ha resucitado del sepulcro. Aleluya, aleluya.\nV. El que por nosotros colgó del madero.\nR. Aleluya, aleluya.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. El Señor ha resucitado del sepulcro. Aleluya, aleluya."
+   },
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "Ant. Yo estaré siempre con vosotros hasta el fin del mundo. Aleluya."
+   },
+   {
+    "tipo": "preces",
+    "texto": "Nosotros, que hemos sido bautizados en el Espíritu Santo, glorifiquemos al Señor, junto\ncon todos los bautizados, y roguémosle:\nSeñor Jesús, santifícanos en el Espíritu.\n\nEnvíanos, Señor, tu Espíritu Santo,\n— para que te confesemos ante los hombres como Señor y rey nuestro.\n\nDanos una caridad sincera,\n— para que nos amemos mutuamente, como buenos hermanos.\n\nDispón con tu gracia el corazón de los fieles,\n— para que acojan con amor y alegría los dones del Espíritu.\n\nDanos la fortaleza del Espíritu Santo,\n— y haz que sane y vigorice lo que en nosotros está enfermo y débil.\nSe pueden añadir algunas intenciones libres.\nBajo el impulso del Espíritu Santo, que ora en nuestro interior con gemidos inenarrables,\ndirijamos al Padre la oración que Cristo nos enseñó: Padre nuestro."
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Dios todopoderoso, concédenos conservar siempre en nuestra vida y en nuestras"
+   }
+  ],
+  "intermedia": {
+   "comun": [],
+   "tercia": [
+    {
+     "tipo": "oracion_laudes"
+    }
+   ],
+   "sexta": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "Cristo resucitó de entre los muertos: el primero de todos. Lo mismo que por un hombre\nhubo muerte, por otro hombre hay resurrección de los muertos. Y lo mismo que en Adán\ntodos mueren, en Cristo todos serán llamados de nuevo a la vida.\nV. Los discípulos se llenaron de alegría. Aleluya.\nR. Al ver al Señor. Aleluya.",
+     "ref": "1 Co 15, 20-22"
+    },
+    {
+     "tipo": "oracion_laudes"
+    }
+   ],
+   "nona": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "El amor de Cristo nos apremia, al pensar que, si uno murió por todos, consiguientemente\ntodos murieron en él; y murió por todos, para que los que viven no vivan ya para sí, sino\npara aquel que murió y resucitó por ellos.\nV. Quédate con nosotros, Señor. Aleluya\nR. Porque ya es tarde. Aleluya.",
+     "ref": "2 Co 5, 14-15"
+    },
+    {
+     "tipo": "oracion_laudes"
+    }
+   ]
+  }
+ }
+}

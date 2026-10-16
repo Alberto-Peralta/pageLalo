@@ -1,0 +1,529 @@
+{
+ "trinidad": {
+  "titulo": "La Santísima Trinidad",
+  "rango": "S",
+  "semblanza": "",
+  "comun": "",
+  "horas": {
+   "visperas1": [
+    {
+     "tipo": "himno",
+     "texto": "¡Dios mío, Trinidad a quien adoro!,\nla Iglesia nos sumerge en tu misterio;\nte confesamos y te bendecimos,\nSeñor, Dios nuestro.\n\nComo un río en el mar de tu grandeza,\nel tiempo desemboca en hoy eterno,\nlo pequeño se anega en lo infinito,\nSeñor, Dios nuestro.\n\nOh Palabra del Padre, te escuchamos:\nOh Padre, mira el rostro de tu Verbo;\nOh Espíritu de Amor, ven a nosotros;\nSeñor Dios nuestro.\n\n¡Dios mío, Trinidad a quien adoro!\nHaced de nuestras almas vuestro cielo,\nllevadnos al hogar donde tú habitas,\nSeñor, Dios nuestro.\n\nGloria al Padre, y al Hijo, y al Espíritu:\nfuente de gozo pleno y verdadero,\nal Creador del cielo y de la tierra,\nSeñor, Dios nuestro. Amén\n\nO bien:\n\nCantad y alabad al Señor,\nél nos ha dicho su nombre:\nPadre y Señor para el hombre.\nVida, esperanza y amor.\n\nCantad y alabad al Señor,\nHijo del Padre, hecho hombre:\nCristo Señor es su nombre.\nVida, esperanza y amor.\n\nCantad y alabad al Señor,\ndivino don para el hombre:\nSanto Espíritu es su nombre.\nVida, esperanza y amor.\n\nCantad y alabad al Señor,\nél es fiel y nos llama,\nél nos espera y nos ama.\n\nVida, esperanza y amor. Amén."
+    },
+    {
+     "tipo": "salmodia",
+     "texto": "Ant. 1. Gloria a ti, oh Dios único en tres personas iguales, antes de los siglos,\nahora y por toda la eternidad.\n\nSalmo 112\nAlabad, siervos del Señor,\n\nalabad el nombre del Señor.\nBendito sea el nombre del Señor,\nahora y por siempre:\nde la salida del sol hasta su ocaso,\nalabado sea el nombre del Señor.\n\nEl Señor se eleva sobre todos los pueblos,\nsu gloria sobre los cielos.\n¿Quién como el Señor, Dios nuestro,\nque se eleva en su trono\ny se abaja para mirar\nal cielo y a la tierra?\n\nLevanta del polvo al desvalido,\nalza de la basura al pobre,\npara sentarlo con los príncipes,\nlos príncipes de su pueblo;\na la estéril le da un puesto en la casa,\ncomo madre feliz de hijos.\n\nAnt. Gloria a ti, oh Dios único en tres personas iguales, antes de los siglos,\nahora y por toda la eternidad.\nAnt. 2. Bendita sea la Trinidad santa y la Unidad indivisa; démosle gracias\nporque ha tenido misericordia de nosotros.\n\nSalmo 147\n\nGlorifica al Señor, Jerusalén;\nalaba a tu Dios, Sión:\nque ha reforzado los cerrojos de tus puertas,\ny ha bendecido a tus hijos dentro de ti;\nha puesto paz en tus fronteras,\nte sacia con flor de harina.\n\nÉl envía su mensaje a la tierra,\ny su palabra corre veloz;\nmanda la nieve como lana,\nesparce la escarcha como ceniza;\n\nhace caer el hielo como migajas\ny con el frío congela las aguas;\nenvía una orden, y se derriten;\nsopla su aliento, y corren.\n\nAnuncia su palabra a Jacob,\nsus decretos y mandatos a Israel;\ncon ninguna nación obró así,\nni les dio a conocer sus mandatos.\n\nAnt. Bendita sea la Trinidad santa y la Unidad indivisa; démosle gracias porque\nha tenido misericordia de nosotros.\nAnt. 3. Gloria y honor por los siglos al Dios uno en tres personas, Padre, Hijo y\nEspíritu Santo.\n\nCántico Ef 1 3-10\nBendito sea Dios,\n\nPadre de nuestro Señor Jesucristo,\nque nos ha bendecido en la persona de Cristo\ncon toda clase de bienes espirituales y celestiales.\n\nÉl nos eligió en la persona de Cristo,\nantes de crear el mundo,\npara que fuésemos santos\ne irreprochables ante Él por el amor.\n\nÉl nos ha destinado en la persona de Cristo,\npor pura iniciativa suya,\na ser sus hijos,\npara que la gloria de su gracia,\nque tan generosamente nos ha concedido\nen su querido Hijo,\nredunde en alabanza suya.\n\nPor este Hijo, por su sangre,\nhemos recibido la redención,\n\nel perdón de los pecados.\nEl tesoro de su gracia, sabiduría y prudencia\nha sido un derroche para con nosotros,\ndándonos a conocer el misterio de su voluntad.\n\nÉste es el plan\nque había proyectado realizar por Cristo\ncuando llegase el momento culminante:\nrecapitular en Cristo todas las cosas\ndel cielo y de la tierra.\n\nAnt. Gloria y honor por los siglos al Dios uno en tres personas, Padre, Hijo y\nEspíritu Santo."
+    },
+    {
+     "tipo": "lectura_breve",
+     "texto": "¡Qué abismo de riqueza es la sabiduría y ciencia de Dios! ¡Qué insondables son\nsus juicios y qué irrastreables sus caminos! ¿Quién ha conocido jamás la\nmente del Señor? ¿Quién ha sido su consejero? ¿Quién le ha dado primero,\npara que él le devuelva? Él es origen, camino y término de todo. A él la gloria\npor los siglos. Amén.",
+     "ref": "Rm 11, 33-36"
+    },
+    {
+     "tipo": "responsorio_breve",
+     "texto": "V. Bendigamos al Padre, al Hijo y al Espíritu Santo, ensalcémoslo con himnos\npor los siglos.\nR. Bendigamos al Padre, al Hijo y al Espíritu Santo, ensalcémoslo con himnos\npor los siglos.\nV. Honor y gloria al único Dios.\nR. Ensalcémoslo con himnos por los siglos.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. Bendigamos al Padre, al Hijo y al Espíritu Santo, ensalcémoslo con himnos\npor los siglos."
+    },
+    {
+     "tipo": "cantico_evangelico",
+     "texto": "Ant. Gracias a ti, Señor Dios; gracias a ti, Trinidad única y verdadera, Dios\núnico y supremo, Unidad única y santa."
+    },
+    {
+     "tipo": "preces",
+     "texto": "Glorifiquemos a Dios Padre que, por el Espíritu Santo, vivificó el cuerpo de su\nHijo, para que su carne resucitada fuera fuente de vida para los hombres, y\naclamemos al Dios uno y trino, diciendo:\n¡Gloria al Padre, y al Hijo, y al Espíritu Santo!\n\nPadre todopoderoso y eterno, envía tu Espíritu consolador en nombre de tu\nHijo sobre la Iglesia,\n— para que la conserve en la unidad de la caridad y de la verdad perfectas.\n\nManda, Señor, trabajadores a tu mies, para que hagan discípulos de entre\ntodos los pueblos,\n— y, bautizándolos en el nombre del Padre, y del Hijo, y del Espíritu Santo, los\nconfirmen en la fe verdadera.\n\nAyuda, Señor, a los perseguidos por causa de tu Hijo,\n— que el Espíritu Santo hable por ellos, como Jesucristo nos prometió.\n\nQue todos los hombres, Señor, te confiesen como único Dios en tres personas,\n— y que vivan en la fe, en la esperanza y en el amor.\nSe pueden añadir algunas intenciones libres.\n\nPadre de todos los vivientes, tú que vives y reinas con el Hijo y el Espíritu\nSanto,\n— recibe a nuestros hermanos difuntos en tu reino.\n\nDigamos ahora al Padre, movidos por el Espíritu Santo que ora en nosotros, la\nplegaria que Cristo nos enseñó: Padre nuestro."
+    },
+    {
+     "tipo": "oracion",
+     "texto": "Dios, Padre todopoderoso, que has enviado al mundo la Palabra de verdad y el\nEspíritu de santificación para revelar a los hombres tu admirable misterio,\nconcédenos profesar la fe verdadera, reconocer la gloria de la eterna Trinidad y\nadorar su Unidad todopoderosa. Por nuestro Señor Jesucristo."
+    }
+   ],
+   "invitatorio": [
+    {
+     "tipo": "inicio",
+     "texto": "Ant. Venid, adoremos al Dios verdadero, uno en la Trinidad y trino en la\nUnidad.\nEl salmo invitatorio."
+    }
+   ],
+   "oficio": [
+    {
+     "tipo": "himno",
+     "texto": "Qué bien sé yo la fonte que mana y corre,\naunque es de noche.\n\nAquella eterna fonte está escondida,\nqué bien sé yo do tiene su manida,\naunque es de noche.\n\nSu origen no lo sé, pues no lo tiene,\nmas sé que todo origen de ella viene,\naunque es de noche.\n\nSé que no puede ser cosa tan bella\ny que cielos y tierra beben de ella\n\naunque es de noche.\n\nBien sé que suelo en ella no se halla,\ny que ninguno puede vadealla,\naunque es de noche.\n\nSu claridad nunca es oscurecida,\ny sé que toda luz de ella es venida,\naunque es de noche.\n\nSé ser tan caudalosos sus corrientes,\nqué infiernos, cielos riegan, y las gentes,\naunque es de noche.\n\nEl corriente que nace de esta fuente,\nbien sé que es tan capaz y omnipotente,\naunque es de noche.\n\nEl corriente que de estas dos procede\nsé que ninguna de ellas le precede,\naunque es de noche.\n\nBien sé que tres en sola una agua viva\nresiden, y una de otra se deriva,\naunque es de noche.\n\nAquella eterna fonte está escondida\nen este vivo pan por darnos vida,\naunque es de noche.\n\nAquí se está llamando a las criaturas,\ny de esta agua se hartan, aunque a oscuras,\nporque es de noche.\n\nAquesta viva fuente que deseo,\nen este pan de vida yo la veo,\naunque es de noche.\n\nO bien:\n\nUno es Amor, y tres son los amados,\nbajo el techo del alma trasladados,\nque le son huertos, montes y collados;\ny es sueño lo demás.\n\nUna es la Luz, y tres los resplandores,\nuna la Llama viva en tres ardores,\nque consumen el alma en sus fulgores;\ny es sueño lo demás.\n\nTres los hermosos son, y una Hermosura\nsola, en que el alma abreva más dulzura\ncuanto más se remonta en la espesura;\ny es sueño lo demás. Amén."
+    },
+    {
+     "tipo": "salmodia",
+     "texto": "Ant. 1. Sé nuestra ayuda, Dios único y todopoderoso, Padre, Hijo y Espíritu\nSanto.\n\nSalmo 8\nSeñor, dueño nuestro,\n\n¡qué admirable es tu nombre en toda la tierra!\n\nEnsalzaste tu majestad sobre los cielos.\nDe la boca de los niños de pecho\nhas sacado una alabanza contra tus enemigos,\npara reprimir al adversario y al rebelde.\n\nCuando contemplo el cielo,\nobra de tus dedos,\nla luna y las estrellas que has creado,\n¿qué es el hombre para que te acuerdes de él,\nel ser humano, para darle poder?\n\nLo hiciste poco inferior a los ángeles,\nlo coronaste de gloria y dignidad,\nle diste el mando sobre las obras de tus manos,\ntodo lo sometiste bajo sus pies:\n\nrebaños de ovejas y toros,\ny hasta las bestias del campo,\nlas aves del cielo, los peces del mar,\nque trazan sendas por el mar.\n\nSeñor, dueño nuestro,\n¡qué admirable es tu nombre\nen toda la tierra!\n\nAnt. Sé nuestra ayuda, Dios único y todopoderoso, Padre, Hijo y Espíritu\nSanto.\nAnt. 2. Tú, oh Trinidad, eres santa: el Padre es amor, el Hijo es gracia, el\nEspíritu Santo es comunión.\n\nSalmo 32\n\nI\n\nAclamad, justos, al Señor,\n\nque merece la alabanza de los buenos.\n\nDad gracias al Señor con la cítara,\ntocad en su honor el arpa de diez cuerdas;\ncantadle un cántico nuevo,\nacompañando los vítores con bordones:\n\nQue la palabra del Señor es sincera,\ny todas sus acciones son leales;\nél ama la justicia y el derecho,\ny su misericordia llena la tierra.\n\nLa palabra del Señor hizo el cielo;\nel aliento de su boca, sus ejércitos;\nencierra en un odre las aguas marinas,\nmete en un depósito el océano.\n\nTema al Señor la tierra entera,\ntiemblen ante él los habitantes del orbe:\nporque él lo dijo, y existió,\nél lo mandó y surgió.\n\nEl Señor deshace los planes de las naciones,\nfrustra los proyectos de los pueblos;\npero el plan del Señor subsiste por siempre,\nlos proyectos de su corazón, de edad en edad.\n\nAnt. Tú, oh Trinidad, eres santa: el Padre es amor, el Hijo es gracia, el Espíritu\nSanto es comunión.\nAnt. 3. Tú, oh Trinidad, eres santa: el Padre es fuente de verdad, el Hijo es la\nVerdad, el Espíritu Santo es también la Verdad.\n\nII\n\nDichosa la nación cuyo Dios es el Señor,\nel pueblo que él se escogió como heredad.\n\nEl Señor mira desde el cielo,\nse fija en todos los hombres;\nDesde su morada observa\na todos los habitantes de la tierra:\nÉl modeló cada corazón,\ny comprende todas sus acciones.\n\nNo vence el rey por su gran ejército,\nno escapa el soldado por su mucha fuerza,\nnada valen sus caballos para la victoria,\nni por su gran ejército se salvan.\n\nLos ojos del Señor están puestos en sus fieles,\nen los que esperan su misericordia,\npara librar sus vidas de la muerte\ny reanimarlos en tiempo de hambre.\n\nNosotros aguardamos al Señor:\nÉl es nuestro auxilio y escudo;\ncon él se alegra nuestro corazón,\nen su santo nombre confiamos.\n\nQue tu misericordia, Señor, venga sobre nosotros,\ncomo lo esperamos de ti.\n\nAnt. Tú, oh Trinidad, eres santa: el Padre es fuente de verdad, el Hijo es la\nVerdad, el Espíritu Santo es también la Verdad."
+    },
+    {
+     "tipo": "versiculo",
+     "texto": "V. La Palabra del Señor hizo el cielo.\nR. Y el Aliento de su boca, sus ejércitos."
+    },
+    {
+     "tipo": "lectura1",
+     "texto": "De la primera carta del apóstol san Pablo a los Corintios 2, 1-16\n\nEL GRAN MISTERIO DEL DESIGNIO DE DIOS\n\nCuando vine a vosotros, hermanos, a anunciaros el testimonio de Dios, no\nlo hice con sublime elocuencia ni sabiduría, pues nunca entre vosotros me\nprecié de saber cosa alguna, sino a Jesucristo, y éste crucificado. Me presenté\na vosotros débil y temeroso; mi palabra y mi predicación no fue con persuasiva\nsabiduría humana, sino en la manifestación y el poder del Espíritu, para que\nvuestra fe no se apoye en la sabiduría de los hombres, sino en el poder de\nDios.\n\nSin embargo, hablamos, entre los perfectos, una sabiduría que no es de\neste mundo, ni de los príncipes de este siglo, que quedan desvanecidos, sino\nque enseñamos una sabiduría divina, misteriosa, escondida, predestinada por\nDios antes de los siglos para nuestra gloria, que no conoció ninguno de los\npríncipes de este siglo; pues si la hubieran conocido, nunca hubieran\ncrucificado al Señor de la gloria. Pero, según está escrito: «Ni el ojo vio, ni el\noído oyó, ni vino a la mente del hombre lo que Dios ha preparado para los que\nle aman.»\n\nPero a nosotros nos lo ha revelado por su Espíritu: y el Espíritu todo lo\npenetra, hasta la profundidad de Dios. En efecto, ¿qué hombre conoce lo\níntimo del hombre, sino el espíritu del hombre que está en él? Del mismo\nmodo, nadie conoce lo íntimo de Dios, sino el Espíritu de Dios. Y nosotros no\nhemos recibido el espíritu del mundo, sino el Espíritu que viene de Dios, para\nconocer las gracias que Dios nos ha otorgado, de las cuales también hablamos,\nno con palabras aprendidas de la sabiduría humana, sino aprendidas del\nEspíritu, expresando realidades espirituales en términos espirituales.\n\nEl hombre naturalmente no capta las cosas del Espíritu de Dios; son\nnecedad para él. Y no las puede entender, pues sólo el Espíritu puede\n\njuzgarlas. En cambio, el hombre espiritual lo juzga todo; y a él nadie puede\njuzgarlo. Porque ¿quién conoció el pensamiento del Señor para instruirle? Pero\nnosotros poseemos el pensamiento de Cristo."
+    },
+    {
+     "tipo": "responsorio",
+     "texto": "R. El Dios de nuestro Señor Jesucristo, el Padre de la gloria, quiera\nconcedernos el don de sabiduría y de revelación, para que lleguemos al pleno\nconocimiento de él e, iluminados así los ojos de nuestra mente, * conozcamos\ncuál es la esperanza a que nos ha llamado y cuáles las riquezas de gloria\notorgadas por él como herencia a su pueblo santo.\nV. Y nosotros no hemos recibido el espíritu del mundo, sino el Espíritu que\nviene de Dios.\nR. Para que conozcamos cuál es la esperanza a que nos ha llamado y cuáles\nlas riquezas de gloria otorgadas por él como herencia a su pueblo santo.",
+     "ref": "Cf. Ef 1, 17. 18; 1 Co 2, 12"
+    },
+    {
+     "tipo": "lectura2",
+     "texto": "De las Cartas de san Atanasio, obispo\n(Carta 1 a Serapión, 28-30: PG 26, 594-595. 599)\n\nLUZ, RESPLANDOR Y GRACIA EN LA TRINIDAD Y POR LA TRINIDAD\n\nSiempre resultará provechoso esforzarse en profundizar el contenido de la\nantigua tradición, de la doctrina y la fe de la Iglesia católica, tal como el Señor\nnos la entregó, tal como la predicaron los apóstoles y la conservaron los santos\nPadres. En ella, efectivamente, está fundamentada la Iglesia, de manera que\ntodo aquel que se aparta de esta fe deja de ser cristiano y ya no merece el\nnombre.\n\nExiste, pues, una Trinidad, santa y perfecta, de la cual se afirma que es\nDios en el Padre, el Hijo y el Espíritu Santo, que no tiene mezclado ningún\nelemento extraño o externo, que no se compone de uno que crea y de otro que\nes creado, sino que toda ella es creadora, es consistente por naturaleza y su\nactividad es única. El Padre hace todas las cosas a través del que es su\nPalabra, en el Espíritu Santo. De esta manera queda a salvo la unidad de la\nsanta Trinidad. Así, en la Iglesia se predica un solo Dios, que lo trasciende\ntodo, y lo penetra todo, y lo invade todo. Lo trasciende todo, en cuanto Padre,\nprincipio y fuente; lo penetra todo, por su Palabra; lo invade todo, en el\nEspíritu Santo.\n\nSan Pablo, hablando a los corintios acerca de los dones del Espíritu, lo\nreduce todo al único Dios Padre, como al origen de todo, con estas palabras:\nHay diversidad de dones, pero un mismo Espíritu; hay diversidad de servicios,\npero un mismo Señor; y hay diversidad de funciones, pero un mismo Dios que\nobra todo en todos.\n\nEl Padre es quien da, por mediación de aquel que es su Palabra, lo que el\nEspíritu distribuye a cada uno. Porque todo lo que es del Padre es también del\nHijo; por esto, todo lo que da el Hijo en el Espíritu es realmente don del Padre.\nDe manera semejante, cuando el Espíritu está en nosotros, lo está también la\nPalabra, de quien recibimos el Espíritu, y en la Palabra está también el Padre,\nrealizándose así aquellas palabras: El Padre y yo vendremos a fijar en él\n\nnuestra morada. Porque donde está la luz, allí está también el resplandor; y\ndonde está el resplandor, allí está también su eficiencia y su gracia\nesplendorosa.\n\nEs lo que nos enseña el mismo Pablo en su segunda carta a los Corintios,\ncuando dice: La gracia de Jesucristo el Señor, el amor de Dios y la participación\ndel Espíritu Santo estén con todos vosotros. Porque toda gracia o don que se\nnos da en la Trinidad se nos da por el Padre, a través del Hijo, en el Espíritu\nSanto. Pues así como la gracia se nos da por el Padre, a través del Hijo, así\ntambién no podemos recibir ningún don si no es en el Espíritu Santo, ya que\nhechos partícipes del mismo poseemos el amor del Padre, la gracia del Hijo y\nla participación de este Espíritu."
+    },
+    {
+     "tipo": "responsorio",
+     "texto": "R. Bendigamos al Padre, al Hijo y al Espíritu Santo. * Ensalcémoslo con himnos\npor los siglos.\nV. Bendito sea el Señor en la bóveda del cielo, alabado y glorioso por los siglos.\nR. Ensalcémoslo con himnos por los siglos.\nSi se hace una celebración más extensa de la vigilia de esta solemnidad."
+    },
+    {
+     "tipo": "te_deum"
+    },
+    {
+     "tipo": "oracion",
+     "texto": "Dios, Padre todopoderoso, que has enviado al mundo la Palabra de verdad y el\nEspíritu de santificación para revelar a los hombres tu admirable misterio,\nconcédenos profesar la fe verdadera, reconocer la gloria de la eterna Trinidad y\nadorar su Unidad todopoderosa. Por Jesucristo nuestro Señor."
+    }
+   ],
+   "laudes": [
+    {
+     "tipo": "himno",
+     "texto": "El Dios uno y trino,\nmisterio de amor,\nhabita en los cielos\ny en mi corazón.\n\nDios escondido en el misterio,\ncomo la luz que apaga estrellas;\nDios que te ocultas a los sabios,\ny a los pequeños te revelas.\n\nNo es soledad, es compañía.\nes un hogar tu vida eterna,\nes el amor que se desborda\nde un mar inmenso sin riberas.\n\nPadre de todos, siempre joven,\nal Hijo amado eterno que engendras,\n\ny el Santo Espíritu procede\ncomo el Amor que a los dos sella.\n\nPadre, en tu gracia y tu ternura,\nla paz, el gozo y la belleza,\ndanos ser hijos en el Hijo\ny hermanos todos en tu Iglesia.\n\nAl Padre, al Hijo y al Espíritu,\nacorde melodía eterna,\nhonor y gloria por los siglos\ncanten los cielos y la tierra.\n\nO bien:\n\nOh tú, santa Unidad en Trinidad,\nque riges con poder el universo,\nrecibe las canciones de alabanza\nque, en vela matinal, cantan tus siervos.\n\nEl lucero del alba ya refulge,\ncaminando ante el sol cual mensajero;\nal caer las tinieblas de la noche,\nnos alumbra tu santa luz de nuevo.\n\nDemos gloria a Dios Padre, autor de todo,\ny al Señor Jesucristo, su unigénito,\ny al Santo Defensor de nuestras almas,\nahora y por los siglos sempiternos. Amén."
+    },
+    {
+     "tipo": "salmodia",
+     "texto": "Ant. 1. A ti el honor y el imperio, a ti la gloria y el poder, a ti la alabanza y las\naclamaciones por todos los siglos, oh excelsa Trinidad.\n\nSalmo 62, 2-9\n\nEL ALMA SEDIENTA DE DIOS\n\nMadruga por Dios todo el que rechaza las obras de las tinieblas.\n¡Oh Dios!, tú eres mi Dios, por ti madrugo,\n\nmi alma está sedienta de ti;\nmi carne tiene ansia de ti,\ncomo tierra reseca, agostada, sin agua.\n\n¡Cómo te contemplaba en el santuario\nviendo tu fuerza y tu gloria!\nTu gracia vale más que la vida,\nte alabarán mis labios.\n\nToda mi vida te bendeciré\ny alzaré las manos invocándote.\nMe saciaré de manjares exquisitos,\ny mis labios te alabarán jubilosos.\n\nEn el lecho me acuerdo de ti\ny velando medito en ti,\nporque fuiste mi auxilio,\ny a la sombra de tus alas canto con júbilo;\nmi alma está unida a ti,\ny tu diestra me sostiene.\n\nAnt. A ti el honor y el imperio, a ti la gloria y el poder, a ti la alabanza y las\naclamaciones por todos los siglos, oh excelsa Trinidad.\nAnt. 2. A ti con justicia te alaban, te adoran y glorifican todas las criaturas, oh\nbienaventurada Trinidad.\n\nCántico Dn 3, 57-88. 56\n\nTODA LA CREACIÓN ALABE AL SEÑOR\n\nAlabad al Señor, sus siervos todos (Ap 19, 5).\n\nCriaturas todas del Señor, bendecid al Señor,\nensalzadlo con himnos por los siglos.\n\nÁngeles del Señor, bendecid al Señor;\ncielos, bendecid al Señor.\n\nAguas del espacio, bendecid al Señor;\nejércitos del Señor, bendecid al Señor.\n\nSol y luna, bendecid al Señor;\nastros del cielo, bendecid al Señor.\n\nLluvia y rocío, bendecid al Señor;\nvientos todos, bendecid al Señor.\n\nFuego y calor, bendecid al Señor;\nfríos y heladas, bendecid al Señor.\n\nRocíos y nevadas, bendecid al Señor;\ntémpanos y hielos, bendecid al Señor.\n\nEscarchas y nieves, bendecid al Señor;\nnoche y día, bendecid al Señor.\n\nLuz y tinieblas, bendecid al Señor;\nrayos y nubes, bendecid al Señor.\n\nBendiga la tierra al Señor,\nensálcelo con himnos por los siglos.\n\nMontes y cumbres, bendecid al Señor;\ncuanto germina en la tierra, bendiga al Señor.\n\nManantiales, bendecid al Señor;\nmares y ríos, bendecid al Señor.\n\nCetáceos y peces, bendecid al Señor;\naves del cielo, bendecid al Señor.\n\nFieras y ganados, bendecid al Señor,\nensalzadlo con himnos por los siglos.\n\nHijos de los hombres, bendecid al Señor;\nbendiga Israel al Señor.\n\nSacerdotes del Señor, bendecid al Señor;\nsiervos del Señor, bendecid al Señor.\n\nAlmas y espíritus justos, bendecid al Señor;\nsantos y humildes de corazón, bendecid al Señor.\n\nAnanías, Azarías y Misael, bendecid al Señor,\nensalzadlo con himnos por los siglos.\n\nBendigamos al Padre, al Hijo y al Espíritu Santo,\nensalcémoslo con himnos por los siglos.\n\nBendito el Señor en la bóveda del cielo,\nalabado y glorioso y ensalzado por los siglos.\n\nNo se dice Gloria al Padre.\nAnt. A ti con justicia te alaban, te adoran y glorifican todas las criaturas, oh\nbienaventurada Trinidad.\nAnt. 3. De él, por él y para él son todas las cosas. ¡Gloria a él por todos los\nsiglos!\n\nSalmo 149\n\nALEGRÍA DE LOS SANTOS\n\nLos hijos de la Iglesia, nuevo pueblo de Dios, se alegran en su Rey, Cristo, el Señor\n(Hesiquio).\n\nCantad al Señor un cántico nuevo,\nresuene su alabanza en la asamblea de los fieles;\nque se alegre Israel por su Creador,\nlos hijos de Sión por su Rey.\n\nAlabad su nombre con danzas,\ncantadle con tambores y cítaras;\nporque el Señor ama a su pueblo\ny adorna con la victoria a los humildes.\n\nQue los fieles festejen su gloria\ny canten jubilosos en filas:\ncon vítores a Dios en la boca\ny espadas de dos filos en las manos:\n\npara tomar venganza de los pueblos\ny aplicar el castigo a las naciones,\nsujetando a los reyes con argollas,\na los nobles con esposas de hierro.\n\nEjecutar la sentencia dictada\nes un honor para todos sus fieles.\n\nAnt. De él, por él y para él son todas las cosas. ¡Gloria a él por todos los\nsiglos!"
+    },
+    {
+     "tipo": "lectura_breve",
+     "texto": "Hay diversidad de dones, pero un mismo Espíritu; hay diversidad de servicios,\npero un mismo Señor; y hay diversidad de funciones, pero un mismo Dios que\nobra todo en todos.",
+     "ref": "1 Co 12, 4-6"
+    },
+    {
+     "tipo": "responsorio_breve",
+     "texto": "V. Para ti la alabanza y la gloria, oh excelsa Trinidad.\nR. Para ti la alabanza y la gloria, oh excelsa Trinidad.\nV. Para ti continua acción de gracias por todos los siglos.\nR. Oh excelsa Trinidad.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\n\nR. Para ti la alabanza y la gloria, oh excelsa Trinidad."
+    },
+    {
+     "tipo": "cantico_evangelico",
+     "texto": "Ant. Bendita sea la santísima e indivisible Trinidad, que ha creado el universo y\nlo gobierna, bendita sea ahora y siempre y por todos los siglos."
+    },
+    {
+     "tipo": "preces",
+     "texto": "Alabemos con júbilo al Dios todopoderoso, Padre, Hijo y Espíritu Santo, y\nglorifiquémoslo, diciendo:\n\n¡Gloria al Padre, y al Hijo, y al Espíritu Santo!\n\nPadre santo, ya que nosotros no sabemos pedir lo que nos conviene, danos tu\nEspíritu para que venga en ayuda de nuestra debilidad,\n— y que él mismo interceda por nosotros.\n\nHijo único de Dios, que pediste al Padre para tu Iglesia el Espíritu de la verdad,\n— haz que este Defensor esté siempre con nosotros.\n\nVen, Espíritu Santo, que procedes del Padre y del Hijo, y derrama en nosotros\ntus frutos: caridad, gozo espiritual, paz, paciencia, benignidad, bondad,\n— longanimidad, mansedumbre, fe, modestia, continencia y castidad.\n\nPadre todopoderoso, tú que enviaste a nuestros corazones el Espíritu de tu Hijo\nque clama: «¡Padre!»,\n— haz que nos dejemos llevar por ese Espíritu y lleguemos a ser herederos\ntuyos y coherederos de Cristo.\n\nSeñor Jesús, que nos enviaste desde el Padre al Paráclito para que diera\ntestimonio de ti,\n— haz que también nosotros demos testimonio de ti ante los hombres.\nSe pueden añadir algunas intenciones libres.\n\nDigamos ahora al Padre, movidos por el Espíritu Santo que ora en nosotros, la\nplegaria que Cristo nos enseñó: Padre nuestro."
+    },
+    {
+     "tipo": "oracion",
+     "texto": "Dios, Padre todopoderoso, que has enviado al mundo la Palabra de verdad y el\nEspíritu de santificación para revelar a los hombres tu admirable misterio,\nconcédenos profesar la fe verdadera, reconocer la gloria de la eterna Trinidad y\nadorar su Unidad todopoderosa. Por nuestro Señor Jesucristo."
+    }
+   ],
+   "intermedia": {
+    "comun": [
+     {
+      "tipo": "salmodia_ref",
+      "texto": "Los salmos, del domingo de la semana I del salterio."
+     }
+    ],
+    "tercia": [
+     {
+      "tipo": "lectura_breve",
+      "texto": "Dios es quien nos confirma en Cristo a nosotros junto con vosotros. Él nos ha\nungido, él nos ha sellado, y ha puesto en nuestros corazones, como prenda\nsuya, el Espíritu.\nV. Entrad por sus puertas con acción de gracias.\nR. Dad gloria a Dios: al Padre, al Hijo y al Espíritu Santo.",
+      "ref": "2 Co 1, 21-22"
+     }
+    ],
+    "sexta": [
+     {
+      "tipo": "lectura_breve",
+      "texto": "Envió Dios a su Hijo para que recibiéramos el ser hijos por adopción. Y la\nprueba de que sois hijos es que Dios ha enviado a vuestros corazones el\nEspíritu de su Hijo, que clama: «¡Padre!»\nV. ¡Santísima, bendita y gloriosa Trinidad!\nR. Padre, Hijo y Espíritu Santo.",
+      "ref": "Ga 4, 4. 5-6"
+     }
+    ],
+    "nona": [
+     {
+      "tipo": "lectura_breve",
+      "texto": "La bendición y la gloria, y la sabiduría, y la acción de gracias, y el honor, y el\npoder, y la fuerza son de nuestro Dios por los siglos de los siglos. Amén.\nV. Bendito eres, Señor, en la bóveda del cielo.\nR. Alabado y glorioso por los siglos.",
+      "ref": "Ap 7, 12"
+     },
+     {
+      "tipo": "oracion_laudes"
+     }
+    ]
+   },
+   "visperas2": [
+    {
+     "tipo": "himno",
+     "texto": "¡Dios mío, Trinidad a quien adoro!,\nla Iglesia nos sumerge en tu misterio;\nte confesamos y te bendecimos,\nSeñor, Dios nuestro.\n\nComo un río en el mar de tu grandeza,\nel tiempo desemboca en hoy eterno,\nlo pequeño se anega en lo infinito,\nSeñor, Dios nuestro.\n\nOh Palabra del Padre, te escuchamos:\nOh Padre, mira el rostro de tu Verbo;\nOh Espíritu de Amor, ven a nosotros;\nSeñor Dios nuestro.\n\n¡Dios mío, Trinidad a quien adoro!\nHaced de nuestras almas vuestro cielo,\nllevadnos al hogar donde tú habitas,\nSeñor, Dios nuestro.\n\nGloria al Padre, y al Hijo, y al Espíritu:\nfuente de gozo pleno y verdadero,\nal Creador del cielo y de la tierra,\nSeñor, Dios nuestro. Amén\n\nO bien:\n\nCantad y alabad al Señor,\nél nos ha dicho su nombre:\nPadre y Señor para el hombre.\nVida, esperanza y amor.\n\nCantad y alabad al Señor,\nHijo del Padre, hecho hombre:\nCristo Señor es su nombre.\nVida, esperanza y amor.\n\nCantad y alabad al Señor,\ndivino don para el hombre:\nSanto Espíritu es su nombre.\nVida, esperanza y amor.\n\nCantad y alabad al Señor,\nél es fiel y nos llama,\nél nos espera y nos ama.\n\nVida, esperanza y amor. Amén."
+    },
+    {
+     "tipo": "salmodia",
+     "texto": "Ant. 1. ¡Oh verdadera, excelsa y eterna Trinidad, Padre, Hijo y Espíritu Santo!\n\nSalmo 109, 1-5. 7\nOráculo del Señor a mi Señor:\n\n«Siéntate a mi derecha,\ny haré de tus enemigos\nestrado de tus pies.»\nDesde Sión extenderá el Señor\nel poder de tu cetro:\nsomete en la batalla a tus enemigos.\n\n«Eres príncipe desde el día de tu nacimiento,\nentre esplendores sagrados;\nyo mismo te engendré, como rocío,\nantes de la aurora.»\n\nEl Señor lo ha jurado y no se arrepiente:\n«Tú eres sacerdote eterno,\nsegún el rito de Melquisedec.»\n\nEl Señor a tu derecha, el día de su ira,\nquebrantará a los reyes.\nEn su camino beberá del torrente,\npor eso, levantará la cabeza.\n\nAnt. ¡Oh verdadera, excelsa y eterna Trinidad, Padre, Hijo y Espíritu Santo!\nAnt. 2. Líbranos, sálvanos, danos vida eterna, oh Trinidad santísima.\n\nSalmo 113 A\nCuando Israel salió de Egipto,\n\nlos hijos de Jacob de un pueblo balbuciente,\nJudá fue su santuario,\nIsrael fue su dominio.\n\nEl mar, al verlos, huyó,\nel Jordán se echó atrás;\nlos montes saltaron como carneros;\n\nlas colinas, como corderos.\n\n¿Qué te pasa, mar, que huyes,\ny a ti, Jordán, que te echas atrás?\n¿Y a vosotros, montes, que saltáis como carneros;\ncolinas, que saltáis como corderos.\n\nEn presencia del Señor se estremece la tierra,\nen presencia del Dios de Jacob;\nque transforma las peñas en estanques,\nel pedernal en manantiales de agua.\n\nAnt. Líbranos, sálvanos, danos vida eterna, oh Trinidad santísima.\nAnt. 3. Santo, santo, santo es el Señor Dios todopoderoso, el que era, el que\nes, el que será.\nEl cántico siguiente se dice con Aleluya, tal como está aquí, solamente cuando el Oficio es\ncantado. Cuando el Oficio se dice sin canto es suficiente decir Aleluya sólo al principio y al final\nde cada estrofa.\n\nCántico Cf. Ap 19, 1-7\nAleluya.\nLa salvación y la gloria y el poder son de nuestro Dios.\n(R. Aleluya.)\nPorque sus juicios son verdaderos y justos.\nR. Aleluya, (aleluya).\n\nAleluya.\nAlabad al Señor, sus siervos todos.\n(R. Aleluya.)\nLos que le teméis, pequeños y grandes.\nR. Aleluya, (aleluya).\n\nAleluya.\nPorque reina el Señor, nuestro Dios, dueño de todo.\n(R. Aleluya.)\nAlegrémonos y gocemos y démosle gracias.\nR. Aleluya, (aleluya).\n\nAleluya.\nLlegó la boda del Cordero.\n(R. Aleluya.)\nSu esposa se ha embellecido.\nR. Aleluya, (aleluya).\nAnt. Santo, santo, santo es el Señor Dios todopoderoso, el que era, el que es,\nel que será."
+    },
+    {
+     "tipo": "lectura_breve",
+     "texto": "Esforzaos por mantener la unidad del Espíritu, con el vínculo de la paz. Un solo\n\ncuerpo y un solo Espíritu, como una sola es la meta de la esperanza en la\nvocación a la que habéis sido convocados. Un Señor, una fe, un bautismo. Un\nDios, Padre de todo, que lo trasciende todo, y lo penetra todo, y lo invade\ntodo.",
+     "ref": "Ef 4, 3-6"
+    },
+    {
+     "tipo": "responsorio_breve",
+     "texto": "V. Bendigamos al Padre, al Hijo y al Espíritu Santo, ensalcémoslo con himnos\npor los siglos.\nR. Bendigamos al Padre, al Hijo y al Espíritu Santo, ensalcémoslo con himnos\npor los siglos.\nV. Honor y gloria al único Dios.\nR. Ensalcémoslo con himnos por los siglos.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. Bendigamos al Padre, al Hijo y al Espíritu Santo, ensalcémoslo con himnos\npor los siglos."
+    },
+    {
+     "tipo": "cantico_evangelico",
+     "texto": "Ant. A ti, Dios Padre no engendrado, a ti, Hijo único del Padre, a ti, Espíritu\nSanto paráclito, santa e indivisa Trinidad, te confesamos con todo el corazón y\ncon los labios, te alabamos y te bendecimos. ¡Para ti la gloria por los siglos!"
+    },
+    {
+     "tipo": "preces",
+     "texto": "Glorifiquemos a Dios Padre que, por el Espíritu Santo, vivificó el cuerpo de su\nHijo, para que su carne resucitada fuera fuente de vida para los hombres, y\naclamemos al Dios uno y trino, diciendo:\n¡Gloria al Padre, y al Hijo, y al Espíritu Santo!\n\nPadre todopoderoso y eterno, envía tu Espíritu consolador en nombre de tu\nHijo sobre la Iglesia,\n— para que la conserve en la unidad de la caridad y de la verdad perfectas.\n\nManda, Señor, trabajadores a tu mies, para que hagan discípulos de entre\ntodos los pueblos,\n— y, bautizándolos en el nombre del Padre, y del Hijo, y del Espíritu Santo, los\nconfirmen en la fe verdadera.\n\nAyuda, Señor, a los perseguidos por causa de tu Hijo,\n— que el Espíritu Santo hable por ellos, como Jesucristo nos prometió.\n\nQue todos los hombres, Señor, te confiesen como único Dios en tres personas,\n— y que vivan en la fe, en la esperanza y en el amor.\nSe pueden añadir algunas intenciones libres.\n\nPadre de todos los vivientes, tú que vives y reinas con el Hijo y el Espíritu\nSanto,\n— recibe a nuestros hermanos difuntos en tu reino.\n\nDigamos ahora al Padre, movidos por el Espíritu Santo que ora en nosotros, la\nplegaria que Cristo nos enseñó: Padre nuestro."
+    },
+    {
+     "tipo": "oracion",
+     "texto": "Dios Padre, que has enviado al mundo la Palabra de verdad y el Espíritu de\nsantificación para revelar a los hombres tu misterio admirable, concédenos\nque, al profesar la fe verdadera, reconozcamos la gloria de la eterna Trinidad y\nadoremos la Unidad de tu majestad omnipotente. Por nuestro Señor Jesucristo."
+    }
+   ]
+  }
+ },
+ "corpus": {
+  "titulo": "El Santísimo Cuerpo y Sangre de Cristo",
+  "rango": "S",
+  "semblanza": "",
+  "comun": "",
+  "horas": {
+   "visperas1": [
+    {
+     "tipo": "himno",
+     "texto": "I\nCantemos al Amor de los amores,\ncantemos al Señor.\n¡Dios está aquí! Venid, adoradores;\nadoremos a Cristo Redentor.\n\n¡Gloria a Cristo Jesús! Cielos y tierra,\nbendecid al Señor.\n¡Honor y gloria a ti, Rey de la gloria;\namor por siempre a ti, Dios del amor!\n\n¡Oh Luz de nuestras almas! ¡Oh Rey de las victorias!\n¡Oh Vida de la vida y Amor de todo amor!\n¡A ti, Señor cantamos, oh Dios de nuestras glorias;\ntu nombre bendecimos, oh Cristo Redentor!\n¿Quién como tú, Dios nuestro? Tú reinas y tu imperas;\naquí te siente el alma; la fe te adora aquí.\n¡Señor de los ejércitos, bendice tus banderas!\n¡Amor de los que triunfan, condúcelos a ti! Amén.\n\nII\n\nQue la lengua humana\ncante este misterio:\nla preciosa sangre\ny el precioso cuerpo.\nQuien nació de Virgen\nRey del universo,\n\npor salvar al mundo,\ndio su sangre en precio.\n\nSe entregó a nosotros,\nse nos dio naciendo\nde una casta Virgen;\ny, acabado el tiempo,\ntras haber sembrado\nla palabra al pueblo,\ncoronó su obra\ncon prodigio su obra\ncon prodigio excelso.\n\nFue en la última cena\n- ágape fraterno -,\ntras comer la Pascua\nsegún mandamiento,\ncon sus propias manos\nrepartió su cuerpo,\nlo entregó a los Doce\npara su alimento.\n\nLa Palabra es carne\ny hace carne y cuerpo\ncon palabra suya\nlo que fue pan nuestro.\nHace sangre el vino,\ny, aunque no entendemos,\nbasta fe, si existe\ncorazón sincero.\n\nAdorad postrados\neste Sacramento.\nCesa el viejo rito;\nse establece el nuevo.\nDudan los sentidos\ny el entendimiento:\nque la fe lo supla\ncon asentimiento.\n\nHimnos de alabanza,\nbendición y obsequio;\npor igual la gloria\ny el poder y el reino\nal eterno Padre\ncon el Hijo eterno\ny el divino Espíritu\nque procede de ellos. Amén.\n\nO bien:\n\nPublica, lengua, y canta\nel misterio del cuerpo glorioso\ny de la sangre santa\nque dio por mi reposo\nel fruto de aquel vientre generoso.\n\nA todos nos fue dado,\nde la Virgen purísima María\npor todos engendrado;\ny mientras acá vivía\nsu celestial doctrina esparcía.\n\nDe allí en nueva manera\ndio fin maravilloso a su jornada\nla noche ya postrera,\nla noche deseada,\nestando ya la cena aparejada.\n\nConvida a sus hermanos,\ny, cumplida la sombra y ley primero,\ncon sus sagradas manos\npor el legal cordero\nles da a comer su cuerpo verdadero.\n\nAquella criadora\nPalabra, con palabra, sin mudarse,\nlo que era pan agora\nen carne hace tornarse\ny el vino en propia sangre trastornarse.\n\nY puesto que el grosero\nsentido se acobarda y desfallece,\nel corazón insano\npor eso no enflaquece,\nporque la fe le anima y favorece.\n\nHonremos pues, echados\npor tierra, tan divino sacramento,\ny queden desechados,\npues vino el cumplimiento,\nlos ritos del antiguo Testamento.\n\nY si el sentido queda\npasmado de tan alta y nueva cosa,\nlo que él no puede pueda,\nose lo que él no osa,\nla fe determinada y animosa.\n\n¡Gloria al Omnipotente,\ny al gran Engendrador y al Engendrado,\ny al inefablemente\nde entrambos inspirado\nigual loor, igual honor sea dado! Amén."
+    },
+    {
+     "tipo": "salmodia",
+     "texto": "Ant. 1. El Señor es clemente, él da alimento a sus fieles en memoria de sus\nmaravillas.\n\nSalmo 110\n\nGRANDES SON LAS OBRAS DEL SEÑOR\n\nDoy gracias al Señor de todo corazón,\nen compañía de los rectos, en la asamblea.\nGrandes son las obras del Señor,\ndignas de estudio para los que las aman.\n\nEsplendor y belleza son su obra,\nsu generosidad dura por siempre;\nha hecho maravillas memorables,\nel Señor es piadoso y clemente.\n\nÉl da alimento a sus fieles,\nrecordando siempre su alianza;\nmostró a su pueblo la fuerza de su poder,\ndándoles la heredad de los gentiles.\n\nJusticia y verdad son las obras de sus manos,\ntodos sus preceptos merecen confianza:\nson estables para siempre jamás,\nse han de cumplir con verdad y rectitud.\n\nEnvió la redención a su pueblo,\nratificó para siempre su alianza,\nsu nombre es sagrado y temible.\n\nPrimicia de la sabiduría es el temor del Señor,\ntienen buen juicio los que lo practican;\nla alabanza del Señor dura por siempre.\n\nAnt. El Señor es clemente, él da alimento a sus fieles en memoria de sus\nmaravillas.\nAnt. 2. El Señor da la paz a su Iglesia, la sacia con flor de harina.\n\nSalmo 147\n\nRESTAURACIÓN DE JERUSALÉN\n\nGlorifica al Señor, Jerusalén;\nalaba a tu Dios, Sión:\nque ha reforzado los cerrojos de tus puertas,\ny ha bendecido a tus hijos dentro de ti;\nha puesto paz en tus fronteras,\nte sacia con flor de harina.\n\nÉl envía su mensaje a la tierra,\ny su palabra corre veloz;\nmanda la nieve como lana,\nesparce la escarcha como ceniza;\n\nhace caer el hielo como migajas\ny con el frío congela las aguas;\nenvía una orden, y se derriten;\nsopla su aliento, y corren.\n\nAnuncia su palabra a Jacob,\nsus decretos y mandatos a Israel;\ncon ninguna nación obró así,\nni les dio a conocer sus mandatos.\n\nAnt. El Señor da la paz a su Iglesia, la sacia con flor de harina.\nAnt. 3. Yo os digo con toda verdad: Moisés no os dio el pan del cielo; es mi\nPadre el que os da el verdadero pan del cielo. Aleluya.\n\nCántico Ap 11, 17-18; 12, 10b-12a\nGracias te damos, Señor Dios omnipotente,\n\nel que eres y el que eras,\nporque has asumido el gran poder\ny comenzaste a reinar.\n\nSe encolerizaron las naciones,\nllegó tu cólera,\ny el tiempo de que sean juzgados los muertos,\ny de dar el galardón a tus siervos los profetas,\ny a los santos y a los que temen tu nombre,\ny a los pequeños y a los grandes,\ny de arruinar a los que arruinaron la tierra.\n\nAhora se estableció la salud y el poderío,\ny el reinado de nuestro Dios,\ny la potestad de su Cristo;\nporque fue precipitado\nel acusador de nuestros hermanos,\nel que los acusaba ante nuestro Dios día y noche.\n\nEllos le vencieron en virtud de la sangre del Cordero\n\ny por la palabra del testimonio que dieron,\ny no amaron tanto su vida que temieran la muerte.\nPor esto, estad alegres, cielos,\ny los que moráis en sus tiendas.\n\nAnt. Yo os digo con toda verdad: Moisés no os dio el pan del cielo; es mi Padre\nel que os da el verdadero pan del cielo. Aleluya."
+    },
+    {
+     "tipo": "lectura_breve",
+     "texto": "El cáliz bendito que consagramos es la comunión de la sangre de Cristo; y el\n\npan que partimos es la comunión del cuerpo del Señor. Y, puesto que es un\nsolo pan, somos todos un solo cuerpo; ya que todos participamos de ese único\npan.",
+     "ref": "1 Co 10, 16-17"
+    },
+    {
+     "tipo": "responsorio_breve",
+     "texto": "V. Les ha dado pan del cielo. Aleluya, aleluya.\nR. Les ha dado pan del cielo. Aleluya, aleluya.\nV. El hombre ha comido pan de ángeles.\nR. Aleluya, aleluya.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. Les ha dado pan del cielo. Aleluya, aleluya."
+    },
+    {
+     "tipo": "cantico_evangelico",
+     "texto": "Ant. Señor, cuán suave es tu Espíritu; para hacer sentir tu dulzura a tus hijos,\nlos llenas de bienes con un pan delicioso que les mandas del cielo; dejas, en\ncambio, sin nada a los ricos insolentes."
+    },
+    {
+     "tipo": "preces",
+     "texto": "Acudamos a Cristo, que invita a todos a su Cena y en ella entrega su cuerpo y\nsu sangre para la vida del mundo; digámosle:\nCristo, pan bajado del cielo, danos la vida eterna.\n\nCristo, Hijo de Dios vivo, que nos mandaste celebrar la eucaristía como\nmemorial tuyo,\n— enriquece a tu Iglesia con la celebración de tus misterios.\n\nCristo, Señor nuestro, sacerdote único del Dios altísimo, que has querido que\ntus ministros te representaran en la cena eucarística,\n— haz que los que presiden nuestras asambleas imiten en su manera de vivir\nlo que celebran en el sacramento.\n\nCristo, maná bajado del cielo, que haces un solo cuerpo de cuantos participan\nde un mismo pan,\n— aumenta la unidad y la concordia entre los que creen en ti.\n\nCristo Jesús, médico enviado por el Padre, que por el pan de la eucaristía nos\n\ndas el remedio de la inmortalidad y el germen de la resurrección,\n— da salud a los enfermos y esperanza a los pecadores.\nSe pueden añadir algunas intenciones libres.\n\nCristo Señor, rey al que esperamos, tú que nos mandaste celebrar la eucaristía\npara anunciar tu muerte y pedir tu retorno,\n— haz participar en tu resurrección a los que han muerto estando en tu amor.\n\nPidamos al Padre, como Cristo nos enseñó, nuestro pan de cada día: Padre\nnuestro."
+    },
+    {
+     "tipo": "oracion",
+     "texto": "Oh Dios, que en este sacramento admirable nos dejaste el memorial de tu\npasión, te pedimos nos concedas venerar de tal modo los sagrados misterios\nde tu Cuerpo y de tu Sangre, que experimentemos constantemente en\nnosotros el fruto de tu redención. Tú que vives y reinas."
+    }
+   ],
+   "invitatorio": [
+    {
+     "tipo": "inicio",
+     "texto": "Ant. Venid, adoremos al Dios verdadero, uno en la Trinidad y trino en la\nUnidad.\nEl salmo invitatorio."
+    }
+   ],
+   "oficio": [
+    {
+     "tipo": "himno",
+     "texto": "De rodillas, Señor ante el sagrario,\nque guarda cuanto queda de amor y de unidad.\nVenimos con las flores de un deseo,\npara que nos las cambies en frutos de verdad.\nCristo en todas las almas, y en el mundo la paz.\nCristo en todas las almas, y en el mundo la paz.\n\nComo ciervos sedientos que van hacia la fuente,\nvamos hacia tu encuentro, sabiendo que vendrás;\nporque el que la busca es porque ya en la frente\nlleva un beso de paz, lleva un beso de paz.\n\nComo estás, mi Señor, en la custodia\nigual que la palmera que alegra el arenal,\nqueremos que en el centro de la vida\nreine sobre las cosas tu ardiente caridad.\nCristo en todas las almas, y en el mundo la paz.\nCristo en todas las almas, y en el mundo la paz. Amén.\nO bien:\n\nAquella noche santa,\n\nte nos quedaste nuestro,\ncon angustia tu vida,\nsin heridas tu cuerpo.\n\nTe nos quedaste vivo,\nporque ibas a ser muerto;\nporque iban a romperte,\nte nos quedaste entero.\nGota a gota tu sangre,\ngrano a grano tu cuerpo:\nun lagar y un molino\nen dos trozos de leño.\n\nAquella noche santa,\nte nos quedaste nuestro.\n\nTe nos quedaste todo:\namor y sacramento,\nternura prodigiosa,\ntodo en ti, tierra y cielo.\nTe quedaste conciso,\nte escondiste concreto,\nnada para el sentido,\ntodo para el misterio.\n\nAquella noche santa,\nte nos quedaste nuestro.\n\nVino de sed herida,\ntrigo de pan hambriento,\ntoda tu hambre cercana,\ntú, blancura de fuego.\nEn este frío del hombre\ny en su labio reseco,\naquella noche santa,\nte nos quedaste nuestro.\n\nTe adoro, Cristo oculto,\nte adoro, trigo tierno. Amén."
+    },
+    {
+     "tipo": "salmodia",
+     "texto": "Ant. 1. Decid a los invitados: «Tengo ya preparado el banquete, venid a las\nbodas.» Aleluya.\n\nSalmo 22\nEl Señor es mi Pastor, nada me falta:\n\nen verdes praderas me hace recostar;\n\nme conduce hacia fuentes tranquilas\ny repara mis fuerzas;\nme guía por el sendero justo,\npor el honor de su nombre.\n\nAunque camine por cañadas oscuras,\nnada temo, porque tú vas conmigo:\ntu vara y tu cayado me sosiegan.\n\nPreparas una mesa ante mí,\nenfrente de mis enemigos;\nme unges la cabeza con perfume,\ny mi copa rebosa.\n\nTu bondad y tu misericordia me acompañan\ntodos los días de mi vida,\ny habitaré en la casa del Señor\npor años sin término.\n\nAnt. Decid a los invitados: «Tengo ya preparado el banquete, venid a las\nbodas.» Aleluya.\nAnt. 2. El que tenga sed que venga a mí y que beba en la fuente eterna.\n\nSalmo 41\nComo busca la cierva\n\ncorrientes de agua,\nasí mi alma te busca\na ti, Dios mío;\n\ntiene sed de Dios,\ndel Dios vivo:\n¿cuándo entraré a ver\nel rostro de Dios?\n\nLas lágrimas son mi pan\nnoche y día.\nmientras todo el día me repiten:\n\"¿Dónde está tu Dios?\"\n\nRecuerdo otros tiempos,\ny desahogo mi alma conmigo:\ncómo marchaba a la cabeza del grupo,\nhacia la casa de Dios,\nentre cantos de júbilo y alabanza,\nen el bullicio de la fiesta.\n\n¿Por qué te acongojas, alma mía,\npor qué te me turbas?\n\nEspera en Dios que volverás a alabarlo:\n\"Salud de mi rostro, Dios mío\".\n\nCuando mi alma se acongoja,\nte recuerdo\ndesde el Jordán y el Hermón\ny el Monte Menor.\n\nUna sima grita a otra sima\ncon voz de cascadas:\ntus torrentes y tus olas\nme han arrollado.\n\nDe día el Señor\nme hará misericordia,\nde noche cantaré la alabanza\ndel Dios de mi vida.\n\nDiré a Dios: \"Roca mía,\n¿por qué me olvidas?\n¿Por qué voy andando, sombrío,\nhostigado por mi enemigo?\"\n\nSe me rompen los huesos\npor las burlas del adversario;\ntodo el día me preguntan:\n\"¿Dónde está tu Dios?\"\n\n¿Por qué te acongojas, alma mía,\npor qué te me turbas?\nEspera en Dios que volverás a alabarlo:\n\"Salud de mi rostro, Dios mío\".\n\nAnt. El que tenga sed que venga a mí y que beba en la fuente eterna.\nAnt. 3. El Señor nos alimentó con flor de harina, nos sació con miel silvestre.\n\nSalmo 80\nAclamad a Dios, nuestra fuerza;\n\ndad vítores al Dios de Jacob:\n\nacompañad, tocad los panderos,\nlas cítaras templadas y las arpas;\ntocad la trompeta por la luna nueva,\npor la luna llena, que es nuestra fiesta.\n\nPorque es una ley de Israel,\nun precepto del Dios de Jacob,\nuna norma establecida por José\n\nal salir de Egipto.\n\nOigo un lenguaje desconocido:\n\"retiré sus hombros de la carga,\ny sus manos dejaron la espuerta.\n\nClamaste en la aflicción, y te libré,\nte respondí oculto entre los truenos,\nte puse a prueba junto a la fuente de Meribá.\n\nEscucha, pueblo mío, doy testimonio contra ti;\n¡ojalá me escuchases Israel!\n\nNo tendrás un dios extraño,\nno adorarás un dios extranjero;\nyo soy el Señor, Dios tuyo,\nque te saqué del país de Egipto;\nabre la boca que te la llene\".\n\nPero mi pueblo no escuchó mi voz,\nIsrael no quiso obedecer:\nlos entregué a su corazón obstinado,\npara que anduviesen según sus antojos.\n\n¡Ojalá me escuchase mi pueblo\ny caminase Israel por mi camino!:\nen un momento humillaría a sus enemigos\ny volvería mi mano contra sus adversarios;\n\nlos que aborrecen al Señor te adularían,\ny su suerte quedaría fijada;\nte alimentaría con flor de harina,\nte saciaría con miel silvestre.\n\nAnt. El Señor nos alimentó con flor de harina, nos sació con miel silvestre."
+    },
+    {
+     "tipo": "versiculo",
+     "texto": "V. La Sabiduría se ha construido su casa. Aleluya.\nR. Ha mezclado el vino y puesto la mesa. Aleluya."
+    },
+    {
+     "tipo": "lectura1",
+     "texto": "Del libro del Éxodo 24, 1-11\n\nVIERON AL SEÑOR Y COMIERON Y BEBIERON EN SU PRESENCIA\n\nEn aquellos días, dijo Dios a Moisés:\n«Sube hacia mí con Aarón, Nadab, Abihú y los setenta ancianos de Israel, y\n\nprosternaos a distancia. Después se acercará Moisés solo, ellos no se\nacercarán; tampoco el pueblo subirá con ellos.»\n\nMoisés bajó y contó al pueblo todo lo que le había dicho el Señor, todos sus\n\nmandatos, y el pueblo contestó a una:\n«Haremos todo lo que dice el Señor.»\nEntonces Moisés puso por escrito todas las palabras del Señor. Se levantó\n\ntemprano y edificó un altar en la falda del monte, y doce estelas por las doce\ntribus de Israel. Mandó luego a algunos jóvenes israelitas que ofreciesen\nholocaustos e inmolasen vacas como sacrificio de comunión para el Señor.\nDespués tomó la mitad de la sangre y la echó en recipientes, y con la otra\nroció el altar. Tomó en seguida el documento del pacto y se lo leyó en voz alta\nal pueblo, el cual respondió:\n\n«Haremos todo lo que manda el Señor y obedeceremos.»\nMoisés tomó el resto de la sangre y roció con ella al pueblo, diciendo:\n«Ésta es la sangre de la alianza que el Señor hace con vosotros, de acuerdo\n\ncon todas estas palabras.»\nSubieron Moisés, Aarón, Nadab, Abihú y los setenta ancianos de Israel, y\n\nvieron al Dios de Israel. Bajo sus pies había como un pavimento de zafiro, tan\npuro como el mismo cielo cuando está sereno. Dios no extendió la mano contra\nlos notables de Israel, los cuales pudieron contemplar a Dios y después\ncomieron y bebieron."
+    },
+    {
+     "tipo": "responsorio",
+     "texto": "R. Yo soy el pan de vida; vuestros padres comieron el maná en el desierto y\nmurieron; * éste es el pan que baja del cielo para que quien lo coma no\nmuera.\nV. Yo soy el pan vivo bajado del cielo; todo el que coma de este pan vivirá\neternamente.\nR. Éste es el pan que baja del cielo para que quien lo coma no muera.",
+     "ref": "Jn 6, 48. 49. 50. 51. 52"
+    },
+    {
+     "tipo": "lectura2",
+     "texto": "De las Obras de santo Tomás de Aquino, presbítero\n(Opúsculo 57, En la fiesta del Cuerpo de Cristo, lect. 1-4)\n\n¡OH BANQUETE PRECIOSO Y ADMIRABLE!\n\nEl Hijo único de Dios, queriendo hacernos partícipes de su divinidad, tomó\nnuestra naturaleza, a fin de que, hecho hombre, divinizase a los hombres.\n\nAdemás, entregó por nuestra salvación todo cuanto tomó de nosotros.\nPorque, por nuestra reconciliación, ofreció, sobre el altar de la cruz, su cuerpo\ncomo víctima a Dios, su Padre, y derramó su sangre como precio de nuestra\nlibertad y como baño sagrado que nos lava, para que fuésemos liberados de\nuna miserable esclavitud y purificados de todos nuestros pecados.\n\nPero, a fin de que guardásemos por siempre jamás en nosotros la memoria\nde tan gran beneficio, dejó a los fieles, bajo la apariencia de pan y de vino, su\ncuerpo, para que fuese nuestro alimento, y su sangre, para que fuese nuestra\nbebida.\n\n¡Oh banquete precioso y admirable, banquete saludable y lleno de toda\nsuavidad! ¿Qué puede haber, en efecto, de más precioso que este banquete en\nel cual no se nos ofrece, para comer, la carne de becerros o de machos\ncabríos, como se hacía antiguamente, bajo la ley, sino al mismo Cristo,\n\nverdadero Dios?\nNo hay ningún sacramento más saludable que éste, pues por él se borran\n\nlos pecados, se aumentan las virtudes y se nutre el alma con la abundancia de\ntodos los dones espirituales.\n\nSe ofrece, en la Iglesia, por los vivos y por los difuntos, para que a todos\naproveche, ya que ha sido establecido para la salvación de todos.\n\nFinalmente, nadie es capaz de expresar la suavidad de este sacramento, en\nel cual gustamos la suavidad espiritual en su misma fuente y celebramos la\nmemoria del inmenso y sublime amor que Cristo mostró en su pasión.\n\nPor eso, para que la inmensidad de este amor se imprimiese más\nprofundamente en el corazón de los fieles, en la última cena, cuando después\nde celebrar la Pascua con sus discípulos iba a pasar de este mundo al Padre,\nCristo instituyó este sacramento como el memorial perenne de su pasión,\ncomo el cumplimiento de las antiguas figuras y la más maravillosa de sus\nobras; y lo dejó a los suyos como singular consuelo en las tristezas de su\nausencia."
+    },
+    {
+     "tipo": "responsorio",
+     "texto": "R. Reconoced en el pan al mismo que pendió en la cruz; reconoced en el cáliz\nla sangre que brotó de su Costado. Tomad, pues, y comed el cuerpo de Cristo;\ntomad y bebed su sangre. * Sois ya miembros de Cristo.\nV. Comed el vínculo que os mantiene unidos, no sea que os disgreguéis; bebed\nel precio de vuestra redención, no sea que os depreciéis.\nR. Sois ya miembros de Cristo.\nSi se hace una celebración más extensa de la vigilia de esta solemnidad."
+    },
+    {
+     "tipo": "te_deum"
+    },
+    {
+     "tipo": "oracion",
+     "texto": "Oh Dios, que en este sacramento admirable nos dejaste el memorial de tu\npasión, te pedimos nos concedas venerar de tal modo los sagrados misterios\nde tu Cuerpo y de tu Sangre, que experimentemos constantemente en\nnosotros el fruto de tu redención. Tú que vives y reinas."
+    }
+   ],
+   "laudes": [
+    {
+     "tipo": "himno",
+     "texto": "I\n\nAltar de Dios: el centro de la vida\ncon el Señor en medio de su pueblo,\nmesa del pan que a todos nos convida\na reunirnos en un mundo nuevo.\n\nAltar de Dios: la fuente de aguas vivas\npara saciar la sed del universo:\n\"Que todos sean uno\" en Jesucristo,\n\nla oración del Señor, su testamento.\n\nPueblo de Dios, escucha su palabra,\nque está el Señor presente entre los hombres;\npueblo de Dios, camino de la patria,\nconvoca a la unidad a las naciones.\n\nVenid a la asamblea, de Dios es la llamada,\nque nadie quede fuera, de todos es la casa.\nMiembros de Cristo fieles, y de su amor testigos,\npueblo de Dios, de paz sediento y peregrino.\n\nPueblo de Dios, escucha su palabra,\nque está el Señor presente entre los hombres;\npueblo de Dios, camino de la patria,\nconvoca a la unidad a las naciones.\n\nGloria al Padre, y al Hijo, y al Espíritu Santo. Amén.\n\nII\n\nOveja perdida, ven\nsobre mis hombros, que hoy\nno sólo tu pastor soy,\nsino tu pasto también.\n\nPor descubrirte mejor\ncuando balabas perdida,\ndejé en un árbol la vida\ndonde me subió el amor;\nsi prenda quieres mayor,\nmis obras hoy te la den.\n\nPasto, al fin, hoy tuyo hecho,\n¿cuál dará mayor asombro,\no al traerte yo en el hombro\no al traerme tú en el pecho?\nPrenda son de amor estrecho\nque aún los más ciegos las ven.\n\nO bien:\n\nSin dejar la derecha de su Padre,\ny para consumar su obra divina,\nel sumo Verbo, que ha venido al mundo,\nllega al fin la tarde de su vida.\n\nAntes de ser, por uno de los suyos,\ndado a quienes la muerte le darían,\nen el vital banquete de cenáculo\n\nse dio a los suyos como vianda viva.\n\nSe dio a los suyos bajo dos especies,\nen su carne y su sangre sacratísimas,\na fin de alimentar en cuerpo y alma\na cuantos hombres en este mundo habitan.\n\nSe dio, naciendo, como compañero;\ncomiendo, se entregó como comida;\nmuriendo, se empeñó como rescate;\nreinando, como premio se nos brinda.\n\nHostia de salvación, que abres las puertas\ncelestes de la gloria prometida:\nfortalece y socorre nuestras almas,\nasediadas por fuerzas enemigas.\n\nGlorificada eternamente sea\nla perpetua Deidad, que es una y trina,\ny que ella finalmente nos conceda,\nen la patria sin fin, vida infinita. Amén."
+    },
+    {
+     "tipo": "salmodia",
+     "texto": "Ant. 1. Alimentaste a tu pueblo con manjar de ángeles y les enviaste pan\ndesde el cielo. Aleluya.\n\nSalmo 62, 2-9\n\nEL ALMA SEDIENTA DE DIOS\n\nMadruga por Dios todo el que rechaza las obras de las tinieblas.\n¡Oh Dios!, tú eres mi Dios, por ti madrugo,\n\nmi alma está sedienta de ti;\nmi carne tiene ansia de ti,\ncomo tierra reseca, agostada, sin agua.\n\n¡Cómo te contemplaba en el santuario\nviendo tu fuerza y tu gloria!\nTu gracia vale más que la vida,\nte alabarán mis labios.\n\nToda mi vida te bendeciré\ny alzaré las manos invocándote.\nMe saciaré de manjares exquisitos,\ny mis labios te alabarán jubilosos.\n\nEn el lecho me acuerdo de ti\ny velando medito en ti,\nporque fuiste mi auxilio,\ny a la sombra de tus alas canto con júbilo;\nmi alma está unida a ti,\ny tu diestra me sostiene.\n\nAnt. Alimentaste a tu pueblo con manjar de ángeles y les enviaste pan\ndesde el cielo. Aleluya.\nAnt. 2. Los sacerdotes consagrados ofrecen a Dios incienso y panes. Aleluya.\n\nCántico Dn 3, 57-88. 56\n\nTODA LA CREACIÓN ALABE AL SEÑOR\n\nAlabad al Señor, sus siervos todos (Ap 19, 5).\n\nCriaturas todas del Señor, bendecid al Señor,\nensalzadlo con himnos por los siglos.\n\nÁngeles del Señor, bendecid al Señor;\ncielos, bendecid al Señor.\n\nAguas del espacio, bendecid al Señor;\nejércitos del Señor, bendecid al Señor.\n\nSol y luna, bendecid al Señor;\nastros del cielo, bendecid al Señor.\n\nLluvia y rocío, bendecid al Señor;\nvientos todos, bendecid al Señor.\n\nFuego y calor, bendecid al Señor;\nfríos y heladas, bendecid al Señor.\n\nRocíos y nevadas, bendecid al Señor;\ntémpanos y hielos, bendecid al Señor.\n\nEscarchas y nieves, bendecid al Señor;\nnoche y día, bendecid al Señor.\n\nLuz y tinieblas, bendecid al Señor;\nrayos y nubes, bendecid al Señor.\n\nBendiga la tierra al Señor,\nensálcelo con himnos por los siglos.\n\nMontes y cumbres, bendecid al Señor;\ncuanto germina en la tierra, bendiga al Señor.\n\nManantiales, bendecid al Señor;\nmares y ríos, bendecid al Señor.\n\nCetáceos y peces, bendecid al Señor;\naves del cielo, bendecid al Señor.\n\nFieras y ganados, bendecid al Señor,\nensalzadlo con himnos por los siglos.\n\nHijos de los hombres, bendecid al Señor;\nbendiga Israel al Señor.\n\nSacerdotes del Señor, bendecid al Señor;\nsiervos del Señor, bendecid al Señor.\n\nAlmas y espíritus justos, bendecid al Señor;\nsantos y humildes de corazón, bendecid al Señor.\n\nAnanías, Azarías y Misael, bendecid al Señor,\nensalzadlo con himnos por los siglos.\n\nBendigamos al Padre, al Hijo y al Espíritu Santo,\nensalcémoslo con himnos por los siglos.\n\nBendito el Señor en la bóveda del cielo,\nalabado y glorioso y ensalzado por los siglos.\n\nNo se dice Gloria al Padre.\nAnt. Los sacerdotes consagrados ofrecen a Dios incienso y panes. Aleluya.\nAnt. 3. Al vencedor le daré del maná escondido y un nombre nuevo. Aleluya.\n\nSalmo 149\n\nALEGRÍA DE LOS SANTOS\n\nLos hijos de la Iglesia, nuevo pueblo de Dios, se alegran en su Rey, Cristo, el Señor\n(Hesiquio).\n\nCantad al Señor un cántico nuevo,\nresuene su alabanza en la asamblea de los fieles;\nque se alegre Israel por su Creador,\nlos hijos de Sión por su Rey.\n\nAlabad su nombre con danzas,\ncantadle con tambores y cítaras;\nporque el Señor ama a su pueblo\ny adorna con la victoria a los humildes.\n\nQue los fieles festejen su gloria\ny canten jubilosos en filas:\ncon vítores a Dios en la boca\ny espadas de dos filos en las manos:\n\npara tomar venganza de los pueblos\ny aplicar el castigo a las naciones,\nsujetando a los reyes con argollas,\na los nobles con esposas de hierro.\n\nEjecutar la sentencia dictada\nes un honor para todos sus fieles.\n\nAnt. Al vencedor le daré del maná escondido y un nombre nuevo. Aleluya."
+    },
+    {
+     "tipo": "lectura_breve",
+     "texto": "Desde el oriente hasta el poniente es grande mi nombre entre las naciones, y\nen todo lugar se ofrecerá incienso a mi nombre y una oblación pura, porque mi\nnombre es grande entre las naciones -dice el Señor de los ejércitos-.",
+     "ref": "Ml 1, 11"
+    },
+    {
+     "tipo": "responsorio_breve",
+     "texto": "V. Sacas pan de los campos. Aleluya, aleluya.\nR. Sacas pan de los campos. Aleluya, aleluya.\nV. Y el vino que alegra el corazón del hombre.\nR. Aleluya, aleluya.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. Sacas pan de los campos. Aleluya, aleluya."
+    },
+    {
+     "tipo": "cantico_evangelico",
+     "texto": "Ant. Yo soy el pan vivo bajado del cielo; todo el que coma de este pan vivirá\neternamente. Aleluya."
+    },
+    {
+     "tipo": "preces",
+     "texto": "Oremos, hermanos, al Señor Jesús, pan de vida, y digamos llenos de gozo:\nDichosos los invitados a comer el pan en tu reino.\n\nCristo Jesús, sacerdote de la alianza nueva y eterna, que sobre el altar de la\ncruz presentaste al Padre el sacrificio perfecto,\n— enséñanos a ofrecerlo contigo en el sacrificio eucarístico.\n\nCristo, Señor nuestro, rey supremo de justicia y de paz, que consagraste el\npan y el vino como símbolo de tu propia oblación,\n— enséñanos a ofrecernos contigo al Padre en el sacrificio eucarístico.\n\nCristo Jesús, verdadero adorador del Padre, cuyo sacrificio ofrece tu Iglesia\ndesde la salida del sol hasta el ocaso,\n— reúne en tu cuerpo a los que alimentas de un mismo pan.\n\nCristo, Señor nuestro, maná bajado del cielo, que alimentas a tu Iglesia con tu\ncuerpo y con tu sanare,\n— fortalécenos con este alimento en nuestro camino hacia el Padre.\n\nCristo Jesús, huésped invisible de nuestro banquete, que estás junto a la\npuerta y llamas,\n— entra en nuestra casa y cena con nosotros.\nSe pueden añadir algunas intenciones libres.\n\nPidamos al padre, como Cristo nos enseñó, nuestro pan de cada día: Padre\nnuestro."
+    },
+    {
+     "tipo": "oracion",
+     "texto": "Oh Dios, que en este sacramento admirable nos dejaste el memorial de tu\npasión, te pedimos nos concedas venerar de tal modo los sagrados misterios\nde tu Cuerpo y de tu Sangre, que experimentemos constantemente en\nnosotros el fruto de tu redención. Tú que vives y reinas."
+    }
+   ],
+   "intermedia": {
+    "comun": [
+     {
+      "tipo": "salmodia_ref",
+      "texto": "Los salmos, del domingo de la semana I"
+     }
+    ],
+    "tercia": [
+     {
+      "tipo": "lectura_breve",
+      "texto": "Alimentaste a tu pueblo con manjar de ángeles, les enviaste desde el cielo un\npan ya preparado, que podía brindar todas las delicias y satisfacer todos los\ngustos.\nV. Me acercaré al altar de Dios. Aleluya.\nR. Recibiré a Cristo, que es mi alegría. Aleluya.",
+      "ref": "Sb 16, 20"
+     }
+    ],
+    "sexta": [
+     {
+      "tipo": "lectura_breve",
+      "texto": "La Sabiduría se ha construido su casa, plantando siete columnas; ha preparado\nel banquete, ha mezclado el vino y puesto la mesa.\nV. Les enviaste pan desde el cielo. Aleluya.\nR. Que puede brindar todas las delicias. Aleluya.",
+      "ref": "Pr 9, 1-2"
+     }
+    ],
+    "nona": [
+     {
+      "tipo": "lectura_breve",
+      "texto": "Los hermanos eran constantes en escuchar la enseñanza de los apóstoles, en\nla vida común, en la fracción del pan y en las oraciones. Alababan a Dios y\ngozaban de la simpatía general del pueblo.\n\nV. Quédate con nosotros, Señor. Aleluya.\nR. Porque atardece y el día va ya declinando. Aleluya.",
+      "ref": "Hch 21 42. 47"
+     },
+     {
+      "tipo": "oracion_laudes"
+     }
+    ]
+   },
+   "visperas2": [
+    {
+     "tipo": "himno",
+     "texto": "I\nCantemos al Amor de los amores,\ncantemos al Señor.\n¡Dios está aquí! Venid, adoradores;\nadoremos a Cristo Redentor.\n\n¡Gloria a Cristo Jesús! Cielos y tierra,\nbendecid al Señor.\n¡Honor y gloria a ti, Rey de la gloria;\namor por siempre a ti, Dios del amor!\n\n¡Oh Luz de nuestras almas! ¡Oh Rey de las victorias!\n¡Oh Vida de la vida y Amor de todo amor!\n¡A ti, Señor cantamos, oh Dios de nuestras glorias;\ntu nombre bendecimos, oh Cristo Redentor!\n¿Quién como tú, Dios nuestro? Tú reinas y tu imperas;\naquí te siente el alma; la fe te adora aquí.\n¡Señor de los ejércitos, bendice tus banderas!\n¡Amor de los que triunfan, condúcelos a ti! Amén.\n\nII\n\nQue la lengua humana\ncante este misterio:\nla preciosa sangre\ny el precioso cuerpo.\nQuien nació de Virgen\nRey del universo,\n\npor salvar al mundo,\ndio su sangre en precio.\n\nSe entregó a nosotros,\nse nos dio naciendo\nde una casta Virgen;\ny, acabado el tiempo,\ntras haber sembrado\nla palabra al pueblo,\ncoronó su obra\ncon prodigio su obra\ncon prodigio excelso.\n\nFue en la última cena\n- ágape fraterno -,\ntras comer la Pascua\nsegún mandamiento,\ncon sus propias manos\nrepartió su cuerpo,\nlo entregó a los Doce\npara su alimento.\n\nLa Palabra es carne\ny hace carne y cuerpo\ncon palabra suya\nlo que fue pan nuestro.\nHace sangre el vino,\ny, aunque no entendemos,\nbasta fe, si existe\ncorazón sincero.\n\nAdorad postrados\neste Sacramento.\nCesa el viejo rito;\nse establece el nuevo.\nDudan los sentidos\ny el entendimiento:\nque la fe lo supla\ncon asentimiento.\n\nHimnos de alabanza,\nbendición y obsequio;\npor igual la gloria\ny el poder y el reino\nal eterno Padre\ncon el Hijo eterno\ny el divino Espíritu\nque procede de ellos. Amén.\n\nO bien:\n\nPublica, lengua, y canta\nel misterio del cuerpo glorioso\ny de la sangre santa\nque dio por mi reposo\nel fruto de aquel vientre generoso.\n\nA todos nos fue dado,\nde la Virgen purísima María\npor todos engendrado;\ny mientras acá vivía\nsu celestial doctrina esparcía.\n\nDe allí en nueva manera\ndio fin maravilloso a su jornada\nla noche ya postrera,\nla noche deseada,\nestando ya la cena aparejada.\n\nConvida a sus hermanos,\ny, cumplida la sombra y ley primero,\ncon sus sagradas manos\npor el legal cordero\nles da a comer su cuerpo verdadero.\n\nAquella criadora\nPalabra, con palabra, sin mudarse,\nlo que era pan agora\nen carne hace tornarse\ny el vino en propia sangre trastornarse.\n\nY puesto que el grosero\nsentido se acobarda y desfallece,\nel corazón insano\npor eso no enflaquece,\nporque la fe le anima y favorece.\n\nHonremos pues, echados\npor tierra, tan divino sacramento,\ny queden desechados,\npues vino el cumplimiento,\nlos ritos del antiguo Testamento.\n\nY si el sentido queda\npasmado de tan alta y nueva cosa,\nlo que él no puede pueda,\nose lo que él no osa,\nla fe determinada y animosa.\n\n¡Gloria al Omnipotente,\ny al gran Engendrador y al Engendrado,\ny al inefablemente\nde entrambos inspirado\nigual loor, igual honor sea dado! Amén."
+    },
+    {
+     "tipo": "salmodia",
+     "texto": "Ant. 1. Cristo, el Señor, sacerdote eterno según el rito de Melquisedec, ofreció\npan y vino.\n\nSalmo 109, 1-5. 7\nOráculo del Señor a mi Señor:\n\n«Siéntate a mi derecha,\ny haré de tus enemigos\nestrado de tus pies.»\nDesde Sión extenderá el Señor\nel poder de tu cetro:\nsomete en la batalla a tus enemigos.\n\n«Eres príncipe desde el día de tu nacimiento,\nentre esplendores sagrados;\nyo mismo te engendré, como rocío,\nantes de la aurora.»\n\nEl Señor lo ha jurado y no se arrepiente:\n«Tú eres sacerdote eterno,\nsegún el rito de Melquisedec.»\n\nEl Señor a tu derecha, el día de su ira,\n\nquebrantará a los reyes.\nEn su camino beberá del torrente,\npor eso, levantará la cabeza.\n\nAnt. Cristo, el Señor, sacerdote eterno según el rito de Melquisedec, ofreció\npan y vino.\nAnt. 2. Alzaré la copa de la salvación y te ofreceré un sacrificio de alabanza.\n\nSalmo 115\nTenía fe, aún cuando dije:\n\n\"¡Qué desgraciado soy!\"\nYo decía en mi apuro:\n\"Los hombres son unos mentirosos\".\n\n¿Cómo pagaré al Señor\ntodo el bien que me ha hecho?\nAlzaré la copa de la salvación,\ninvocando su nombre.\nCumpliré al Señor mis votos\nen presencia de todo el pueblo.\n\nMucho le cuesta al Señor\nla muerte de sus fieles.\nSeñor, yo soy tu siervo,\nsiervo tuyo, hijo de tu esclava:\nrompiste mis cadenas.\n\nTe ofreceré un sacrificio de alabanza,\ninvocando tu nombre, Señor.\nCumpliré al Señor mis votos\nen presencia de todo el pueblo,\nen el atrio de la casa del Señor,\nen medio de ti, Jerusalén.\n\nAnt. Alzaré la copa de la salvación y te ofreceré un sacrificio de alabanza.\nAnt. 3. Señor, tú eres el camino, tú eres la verdad, tú eres la vida del mundo.\nEl cántico siguiente se dice con Aleluya, tal como está aquí, solamente cuando el Oficio es\ncantado. Cuando el Oficio se dice sin canto es suficiente decir Aleluya sólo al principio y al final\nde cada estrofa.\n\nCántico Cf. Ap 19, 1-7\nAleluya.\nLa salvación y la gloria y el poder son de nuestro Dios.\n(R. Aleluya.)\nPorque sus juicios son verdaderos y justos.\nR. Aleluya, (aleluya).\n\nAleluya.\nAlabad al Señor, sus siervos todos.\n(R. Aleluya.)\nLos que le teméis, pequeños y grandes.\nR. Aleluya, (aleluya).\n\nAleluya.\nPorque reina el Señor, nuestro Dios, dueño de todo.\n(R. Aleluya.)\nAlegrémonos y gocemos y démosle gracias.\nR. Aleluya, (aleluya).\n\nAleluya.\nLlegó la boda del Cordero.\n(R. Aleluya.)\nSu esposa se ha embellecido.\nR. Aleluya, (aleluya).\nAnt. Señor, tú eres el camino, tú eres la verdad, tú eres la vida del mundo."
+    },
+    {
+     "tipo": "lectura_breve",
+     "texto": "Yo recibí del Señor lo que, a mi vez, os he trasmitido: que Jesús, el Señor, en\nla noche en que iba a ser entregado, tomó pan y, después de pronunciar la\nAcción de Gracias, lo partió y dijo: «Éste es mi cuerpo, que se da por vosotros.\nHaced esto en memoria mía.» Lo mismo hizo con la copa después de la cena,\ndiciendo: «Esta copa es la nueva alianza que se sella con mi sangre. Cada vez\nque la bebáis hacedlo en memoria mía.»",
+     "ref": "1 Co 11, 23-25"
+    },
+    {
+     "tipo": "responsorio_breve",
+     "texto": "V. Les ha dado pan del cielo. Aleluya, aleluya.\nR. Les ha dado pan del cielo. Aleluya, aleluya.\nV. El hombre ha comido pan de ángeles.\nR. Aleluya, aleluya.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. Les ha dado pan del cielo. Aleluya, aleluya."
+    },
+    {
+     "tipo": "cantico_evangelico",
+     "texto": "Ant. ¡Oh sagrado banquete en que Cristo se da como alimento! En él se\nrenueva la memoria de su pasión, el alma se llena de gracia y se nos da una\nprenda de la futura gloria. Aleluya."
+    },
+    {
+     "tipo": "preces",
+     "texto": "Acudamos a Cristo, que invita a todos a su Cena y en ella entrega su cuerpo y\nsu sangre para la vida del mundo; digámosle:\nCristo, pan bajado del cielo, danos la vida eterna.\n\nCristo, Hijo de Dios vivo, que nos mandaste celebrar la eucaristía como\nmemorial tuyo,\n— enriquece a tu Iglesia con la celebración de tus misterios.\n\nCristo, Señor nuestro, sacerdote único del Dios altísimo, que has querido que\ntus ministros te representaran en la cena eucarística,\n— haz que los que presiden nuestras asambleas imiten en su manera de vivir\nlo que celebran en el sacramento.\n\nCristo, maná bajado del cielo, que haces un solo cuerpo de cuantos participan\nde un mismo pan,\n— aumenta la unidad y la concordia entre los que creen en ti.\n\nCristo Jesús, médico enviado por el Padre, que por el pan de la eucaristía nos\ndas el remedio de la inmortalidad y el germen de la resurrección,\n— da salud a los enfermos y esperanza a los pecadores.\nSe pueden añadir algunas intenciones libres.\n\nCristo Señor, rey al que esperamos, tú que nos mandaste celebrar la eucaristía\npara anunciar tu muerte y pedir tu retorno,\n— haz participar en tu resurrección a los que han muerto estando en tu amor.\n\nPidamos al Padre, como Cristo nos enseñó, nuestro pan de cada día: Padre\nnuestro."
+    },
+    {
+     "tipo": "oracion",
+     "texto": "Oh Dios, que en este sacramento admirable nos dejaste el memorial de tu\npasión, te pedimos nos concedas venerar de tal modo los sagrados misterios\nde tu Cuerpo y de tu Sangre, que experimentemos constantemente en\nnosotros el fruto de tu redención. Tú que vives y reinas."
+    }
+   ]
+  }
+ },
+ "corazon": {
+  "titulo": "El Sagrado Corazón de Jesús",
+  "rango": "S",
+  "semblanza": "",
+  "comun": "",
+  "horas": {
+   "visperas1": [
+    {
+     "tipo": "himno",
+     "texto": "Mi Cristo, tú no tienes\nla lóbrega mirada de la muerte.\nTus ojos no se cierran:\nson agua limpia donde puedo verme.\n\nMi Cristo, tú no puedes\ncicatrizar la llaga del costado:\nun corazón tras ella\nnoches y días me estará esperando.\n\nMi Cristo, tú conoces\nla intimidad oculta de mi vida.\nTú sabes mis secretos:\nte los voy confesando día a día.\n\nMi Cristo, tú aleteas\ncon los brazos unidos al madero.\n¡Oh valor que convida\na levantarse puro sobre el suelo!\n\nMi Cristo, tú sonríes\ncuando te hieren, sordas, las espinas.\nSi mi cabeza hierve,\nhaz, Señor, que te mire y te sonría.\n\nMi Cristo, tú que esperas\nmi último beso darte ante la tumba.\nTambién mi joven beso\ndescansa en ti de la incesante lucha. Amén.\n\nO bien:\n\nMármol con sangre, tu frente;\nlirios con sangre, tus manos;\ntus ojos, soles con muerte;\nluna con muerte, tus labios.\n\nAsí quiero verte, Cristo,\nsangriento jardín de nardos;\nasí, con tus cinco llagas,\ncielo roto y estrellado.\n\nRojo y blanco, blanco y rojo,\nte vio la niña del cántico:\nbien merecido lo tienes,\npor santo y enamorado.\n\nAbismo reclama abismo:\n¿o no lo sabías acaso?;\nel amor llama a la muerte:\nmuerte y amor son hermanos.\n\nAmor quema, amor hiende\ncarne y alma, pecho y labio.\nAmor, espada de fuego;\namor, cauterio y taladro.\n\nAsí quiero verte, Cristo,\ncon sangre, lirios y mármol;\nsoles y lunas con muerte\nen tus ojos y en tus labios. Amén."
+    },
+    {
+     "tipo": "salmodia",
+     "texto": "Ant. 1. Con amor eterno nos amó Dios; por eso levantado sobre la tierra nos\natrajo a su corazón, compadeciéndose de nosotros.\n\nSalmo 112\nAlabad, siervos del Señor,\n\nalabad el nombre del Señor.\nBendito sea el nombre del Señor,\nahora y por siempre:\nde la salida del sol hasta su ocaso,\nalabado sea el nombre del Señor.\n\nEl Señor se eleva sobre todos los pueblos,\nsu gloria sobre los cielos.\n¿Quién como el Señor, Dios nuestro,\nque se eleva en su trono\ny se abaja para mirar\n\nal cielo y a la tierra?\n\nLevanta del polvo al desvalido,\nalza de la basura al pobre,\npara sentarlo con los príncipes,\nlos príncipes de su pueblo;\na la estéril le da un puesto en la casa,\ncomo madre feliz de hijos.\n\nAnt. Con amor eterno nos amó Dios; por eso levantado sobre la tierra nos\natrajo a su corazón, compadeciéndose de nosotros.\nAnt. 2. Aprended de mí que soy manso y humilde de corazón y hallaréis\ndescanso para vuestras almas.\n\nSalmo 145\nAlaba, alma mía, al Señor:\n\nalabaré al Señor mientras viva,\ntañeré para mi Dios mientras exista.\n\nNo confiéis en los príncipes,\nseres de polvo que no pueden salvar;\nexhalan el espíritu y vuelven al polvo,\nese día perecen sus planes.\n\nDichoso a quien auxilia el Dios de Jacob,\nel que espera en el Señor, su Dios,\nque hizo el cielo y la tierra,\nel mar y cuanto hay en él;\n\nque mantiene su fidelidad perpetuamente,\nque hace justicia a los oprimidos,\nque da pan a los hambrientos.\n\nEl Señor liberta a los cautivos,\nel Señor abre los ojos al ciego,\nel Señor endereza a los que ya se doblan,\nel Señor ama a los justos.\n\nEl Señor guarda a los peregrinos,\nsustenta al huérfano y a la viuda\ny trastorna el camino de los malvados.\n\nEl Señor reina eternamente,\ntu Dios, Sión, de edad en edad.\n\nAnt. Aprended de mí que soy manso y humilde de corazón y hallaréis descanso\npara vuestras almas.\nAnt. 3. Yo soy el buen pastor que apaciento mis ovejas, y doy mi vida por las\novejas.\n\nCántico Ap 4, 11; 5, 9-10. 12\nEres digno, Señor Dios nuestro, de recibir la gloria,\n\nel honor y el poder,\nporque tú has creado el universo;\nporque por tu voluntad lo que no existía fue creado.\n\nEres digno de tomar el libro y abrir sus sellos,\nporque fuiste degollado\ny por tu sangre compraste para Dios\nhombres de toda raza, lengua, pueblo y nación;\ny has hecho de ellos para nuestro Dios\nun reino de sacerdotes\ny reinan sobre la tierra.\n\nDigno es el Cordero degollado\nde recibir el poder, la riqueza y la sabiduría,\nla fuerza y el honor, la gloria y la alabanza.\n\nAnt. Yo soy el buen pastor que apaciento mis ovejas, y doy mi vida por las\novejas."
+    },
+    {
+     "tipo": "lectura_breve",
+     "texto": "Cristo amó a su Iglesia y se entregó a la muerte por ella para santificarla,\npurificándola en el baño del agua, que va acompañado de la palabra, y para\nhacerla comparecer ante su presencia toda resplandeciente, sin mancha ni\ndefecto ni cosa parecida, sino santa e inmaculada.",
+     "ref": "Ef 5, 25b-27"
+    },
+    {
+     "tipo": "responsorio_breve",
+     "texto": "V. Cristo nos ama y nos ha absuelto por la virtud de su sangre.\nR. Cristo nos ama y nos ha absuelto por la virtud de su sangre.\nV. Y ha hecho de nosotros reino y sacerdotes para el Dios y Padre suyo.\nR. Por la virtud de su sangre.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. Cristo nos ama y nos ha absuelto por la virtud de su sangre."
+    },
+    {
+     "tipo": "cantico_evangelico",
+     "texto": "Ant. He venido a traer fuego al mundo, y ¡cuánto deseo que esté ya ardiendo!"
+    },
+    {
+     "tipo": "preces",
+     "texto": "Acudamos, hermanos, a Jesús, descanso de nuestras almas fatigadas, y\ndigámosle suplicantes:\nRey amantísimo, ten piedad de nosotros.\n\nOh Jesús, que quisiste ser traspasado por la lanza para que de tu corazón\nabierto, al brotar el agua y la sangre, naciera tu esposa la Iglesia,\n— haz que esta Iglesia sea siempre santa e inmaculada.\n\nJesús, templo santo de Dios, destruido por los hombres y levantado\nnuevamente por el Padre,\n— dígnate hacer de la Iglesia morada del Altísimo.\n\nJesús, rey y centro de todos los corazones, que con amor eterno nos amas y\nnos atraes con misericordia,\n— renueva tu alianza con todos los hombres.\n\nJesús, paz y reconciliación nuestra, que has hecho las paces en un solo hombre\nnuevo, dando muerte al odio mediante la cruz,\n— danos acceso al Padre.\n\nJesús, vida y resurrección nuestra, alivio de los que están cansados y descanso\nde los que se sienten agobiados,\n— atrae hacia ti a los pecadores.\nSe pueden añadir algunas intenciones libres.\n\nJesús, que por tu amor desbordante te rebajaste hasta someterte incluso a la\nmuerte y una muerte de cruz,\n— llama a los fieles difuntos a la resurrección.\n\nUnidos a Jesucristo, que nos ama como hermano, acudamos al Padre,\ndiciendo: Padre nuestro."
+    },
+    {
+     "tipo": "oracion",
+     "texto": "Te pedimos, Dios todopoderoso y eterno, que, al celebrar la grandeza del amor\nque resplandece en el corazón de tu Hijo, recibamos de esta fuente divina\ngracias cada vez más abundantes. Por nuestro Señor Jesucristo."
+    }
+   ],
+   "invitatorio": [
+    {
+     "tipo": "inicio",
+     "texto": "Ant. Venid, adoremos al Dios verdadero, uno en la Trinidad y trino en la\nUnidad.\nEl salmo invitatorio."
+    }
+   ],
+   "oficio": [
+    {
+     "tipo": "himno",
+     "texto": "Por la lanza en su costado\nbrotó el río de pureza,\npara lavar la bajeza\na que nos bajó el pecado.\n\nCristo, herida y manantial,\ntu muerte nos da la vida,\nque es gracia de sangre nacida\n\nen tu fuente bautismal.\n\nSangre y agua del abismo\nde un corazón en tormento:\nun Jordán de sacramento\nnos baña con el bautismo.\n\nY mientras dura la cruz\ny en ella el Crucificado,\nbajará de su costado\nun río de gracia y de luz.\n\nEl Padre nos da la vida,\nel Espíritu el amor,\ny Jesucristo, el Señor,\nnos da la gracia perdida. Amén."
+    },
+    {
+     "tipo": "salmodia",
+     "texto": "Ant. 1. En ti está la fuente viva; tú nos das a beber del torrente de tus delicias.\n\nSalmo 35\nEl malvado escucha en su interior\n\nun oráculo del pecado:\n\"No tengo miedo a Dios,\nni en su presencia\".\nPorque se hace la ilusión de que su culpa\nno será descubierta ni aborrecida.\n\nLas palabras de su boca son maldad y traición,\nrenuncia a ser sensato y a obrar bien;\nacostado medita el crimen,\nse obstina en el mal camino,\nno rechaza la maldad.\n\nSeñor, tu misericordia llega al cielo,\ntu fidelidad hasta las nubes;\ntu justicia hasta las altas cordilleras,\ntus sentencias son como el océano inmenso.\n\nTú socorres a hombres y animales;\n¡qué inapreciable es tu misericordia, oh Dios!,\nlos humanos se acogen a la sombra de tus alas;\n\nse nutren de lo sabroso de tu casa,\nles das a beber del torrente de tus delicias,\nporque en ti está la fuente viva,\ny tu luz nos hace ver la luz.\n\nProlonga tu misericordia con los que te reconocen,\ntu justicia con los rectos de corazón;\nque no me pisotee el pie del soberbio,\nque no me eche fuera la mano del malvado.\n\nHan fracasado los malhechores;\nderribados, no se pueden levantar.\n\nAnt. En ti está la fuente viva; tú nos das a beber del torrente de tus delicias.\nAnt. 2. Cuando esté con el corazón abatido, llévame a una roca inaccesible.\n\nSalmo 60\nDios mío, escucha mi clamor,\n\natiende a mi súplica;\nte invoco desde el confín de la tierra\ncon el corazón abatido:\n\nllévame a una roca inaccesible,\nporque tú eres mi refugio\ny mi bastión contra el enemigo.\n\nHabitaré siempre en tu morada,\nrefugiado al amparo de tus alas;\nporque tú, oh Dios, escucharás mis votos\ny me darás la heredad de los que veneran tu nombre.\n\nAñade días a los días del rey,\nque sus años alcancen varias generaciones;\nque reine siempre en presencia de Dios,\nque tu gracia y tu lealtad le hagan guardia.\n\nYo tañeré siempre en tu honor,\ne iré cumpliendo mis votos día tras día.\n\nAnt. Cuando esté con el corazón abatido, llévame a una roca inaccesible.\nAnt. 3. Los confines de la tierra han contemplado la victoria de nuestro Dios.\n\nSalmo 97\nCantad al Señor un cántico nuevo,\n\nporque ha hecho maravillas:\nsu diestra le ha dado la victoria,\nsu santo brazo.\n\nEl Señor da a conocer su victoria,\nrevela a las naciones su justicia:\nse acordó de su misericordia y su fidelidad\nen favor de la casa de Israel.\n\nLos confines de la tierra han contemplado\n\nla victoria de nuestro Dios.\nAclama al Señor, tierra entera;\ngritad, vitoread, tocad:\n\ntañed la cítara para el Señor,\nsuenen los instrumentos:\ncon clarines y al son de trompetas,\naclamad al Rey y Señor.\n\nRetumbe el mar y cuanto contiene,\nla tierra y cuantos la habitan;\naplaudan los ríos, aclamen los montes\nal Señor, que llega para regir la tierra.\n\nRegirá el orbe con justicia\ny los pueblos con rectitud.\n\nAnt. Los confines de la tierra han contemplado la victoria de nuestro Dios."
+    },
+    {
+     "tipo": "versiculo",
+     "texto": "V. Recuerdo las proezas del Señor.\nR. Traigo a la memoria sus antiguos portentos."
+    },
+    {
+     "tipo": "lectura1",
+     "texto": "De la carta del apóstol san Pablo a los Romanos 8, 28-39\n\nEL AMOR DE DIOS SE MANIFIESTA EN CRISTO\n\nHermanos: Sabemos que a los que aman a Dios todo les sirve para el bien:\na los que ha llamado conforme a su designio. A los que había escogido, Dios\nlos predestinó a ser imagen de su Hijo, para que él fuera el primogénito de\nmuchos hermanos. A los que predestinó, los llamó; a los que llamó, los\njustificó; a los que justificó, los glorificó.\n\n¿Qué decir a todo esto? Si Dios está con nosotros, ¿quién estará contra\nnosotros? El que no perdonó a su propio Hijo, sino que lo entregó a la muerte\npor todos nosotros, ¿cómo no nos dará con él todo lo demás? ¿Quién se\natreverá a acusar a los elegidos de Dios? Siendo Dios quien justifica, ¿quién\npodrá condenar? ¿Acaso Cristo Jesús, el que murió por nosotros? Más aún, ¿el\nque fue resucitado y está a la diestra de Dios intercediendo por nosotros?\n¿Quién podrá apartarnos del amor de Cristo? ¿La aflicción? ¿La angustia? ¿La\npersecución? ¿El hambre? ¿La desnudez? ¿El peligro? ¿La espada? (Como dice\nla Escritura: «Por tu causa nos llevan a la muerte uno y otro día; nos tratan\ncomo a ovejas que van al matadero.») Pero en todo esto vencemos fácilmente\npor aquel que nos ha amado.\n\nPues estoy convencido de que ni muerte, ni vida, ni ángeles, ni principados,\nni presente, ni futuro, ni potencias, ni altura, ni profundidad, ni criatura alguna\npodrá apartarnos del amor de Dios manifestado en Cristo Jesús, Señor\nnuestro."
+    },
+    {
+     "tipo": "responsorio",
+     "texto": "R. Cuando estábamos muertos por nuestros pecados, Dios nos vivificó con\nCristo, * por el gran amor con que nos amó.\nV. Quiso mostrar en los siglos venideros la sublime riqueza de su gracia.\nR. Por el gran amor con que nos amó.",
+     "ref": "Ef 2, 5. 4. 7"
+    },
+    {
+     "tipo": "lectura2",
+     "texto": "De las Obras de san Buenaventura, obispo\n(Opúsculo 3, El árbol de la vida, 29-30. 47: Opera omnia 8, 79)\n\nEN TI ESTÁ LA FUENTE DE LA VIDA\n\nY tú, hombre redimido, considera quién, cuál y cuán grande es éste que\nestá pendiente de la cruz por ti. Su muerte resucita a los muertos, su tránsito\nlo lloran los cielos y la tierra, y las mismas piedras, como movidas de\ncompasión natural, se quebrantan. ¡Oh corazón humano, más duro eres que\nellas, si con el recuerdo de tal víctima ni el temor te espanta, ni la compasión\nte mueve, ni la compunción te aflige, ni la piedad te ablanda!\n\nPara que del costado de Cristo dormido en la cruz se formase la Iglesia y se\ncumpliese la Escritura que dice: Mirarán a quien traspasaron, uno de los\nsoldados lo hirió con una lanza y le abrió el costado. Y fue permisión de la\ndivina providencia, a fin de que, brotando de la herida sangre y agua, se\nderramase el precio de nuestra salud, el cual, manando de la fuente arcana del\ncorazón, diese a los sacramentos de la Iglesia la virtud de conferir la vida de la\ngracia, y fuese para los que viven en Cristo como una copa llenada en la fuente\nviva, que brota para comunicar vida eterna.\n\nLevántate, pues, alma amiga de Cristo, Y sé la paloma que labra su nido en\nlos agujeros de la peña; sé el pájaro que encuentra su casa y no deja de\nguardarla; sé la tórtola que esconde los polluelos de su casto amor en aquella\nabertura sacratísima. Aplica a ella tus labios para que bebas el agua de las\nfuentes del Salvador. Porque ésta es la fuente que mana en medio del paraíso\ny, dividida en cuatro ríos que se derraman en los corazones amantes, riega y\nfecunda toda la tierra.\n\nCorre con vivo deseo a esta fuente de vida y de luz quienquiera que seas,\n¡oh alma amante de Dios!, y con toda la fuerza del corazón exclama:\n\n«¡Oh hermosura inefable del Dios altísimo, resplandor purísimo de la eterna\nluz! ¡Vida que vivificas toda vida, luz que iluminas toda luz y conservas en\nperpetuo resplandor millares de luces, que desde la primera aurora fulguran\nante el trono de tu divinidad!\n\n¡Oh eterno e inaccesible, claro y dulce manantial de la fuente oculta a los\nojos mortales, cuya profundidad es sin fondo, cuya altura es sin término, su\nanchura ilimitada y su pureza imperturbable!\n\nDe ti procede el río que alegra a la ciudad de Dios. Recrea con el agua de\neste deseable torrente los resecos labios de los sedientos de amor, para que\ncon voz de regocijo y gratitud te cantemos himnos de alabanza, probando por\nexperiencia que en ti está la fuente de la vida y tu luz nos hace ver la luz.»"
+    },
+    {
+     "tipo": "responsorio",
+     "texto": "R. Bendice, alma mía, al Señor, y no olvides sus beneficios. * Él rescata tu vida\nde la fosa y te colma de gracia y de ternura.\nV. Gustad y ved qué bueno es el Señor.\nR. Él rescata tu vida de la fosa y te colma de gracia y de ternura.\nSi se hace una celebración más extensa de la vigilia de esta solemnidad.",
+     "ref": "Sal 102, 2. 4; 33, 9"
+    },
+    {
+     "tipo": "te_deum"
+    },
+    {
+     "tipo": "oracion",
+     "texto": "Te pedimos, Dios todopoderoso y eterno, que, al celebrar la grandeza del amor\nque resplandece en el corazón de tu Hijo, recibamos de esta fuente divina\ngracias cada vez más abundantes. Por Jesucristo, nuestro Señor."
+    }
+   ],
+   "laudes": [
+    {
+     "tipo": "himno",
+     "texto": "Hoy, para rondar la puerta\nde vuestro santo costado,\nSeñor, un alma ha llegado\nde amores de un muerto muerta.\n\nAsomad el corazón,\nCristo, a esa dulce ventana,\noiréis de mi voz humana\nuna divina canción.\n\nMuerto estáis, por eso os pido\nel corazón descubierto\npara perdonar despierto,\npara castigar dormido.\n\nSi decís que está velando\ncuando vos estáis durmiendo,\n¿quién duda que estáis oyendo\na quien os canta llorando?\n\nY, aunque él se duerma, Señor,\nel amor vive despierto;\nque no es el amor al muerto,\n¡vois sois el muerto de amor!\n\nQue, si la lanza, mi Dios,\nel corazón pudo herir,\nno pudo el amor morir,\nque es tan vida como vos.\n\nAnduve de puerta en puerta\n\ncuando a vos no me atreví;\npero en ninguna pedí\nque la hallase tan abierta.\n\nPues, como abierto os he visto,\na Dios quise entrar por vos:\nque nadie se atreve a Dios\nsin poner delante a Cristo.\n\nY aún éste, lleno de heridas,\nporque sienta el Padre eterno\nque os cuestan, Cordero tierno,\ntanta sangre nuestras vidas.\n\nGloria al Padre omnipotente,\ngloria al Hijo Redentor,\ngloria al Espíritu Santo:\ntres personas, sólo un Dios. Amén.\n\nO bien:\n\nDesde la cruz redentora,\nel Señor nos dio el perdón,\ny, para darnos su amor,\ntodo a la vez, sin medida,\nabrió en su pecho una herida\ny nos dio su corazón.\n\nSanta cruz de Jesucristo,\nabierta como dos brazos:\nrumbo de Dios y regazo\nen la senda del dolor,\nbrazos tendidos de amor\nsosteniendo nuestros pasos.\n\nSólo al chocar en las piedras\nel río canta al Creador;\ndel mismo modo el dolor,\ncomo piedra de mi río,\nsaca del corazón mío\n\nel mejor canto de amor. Amén."
+    },
+    {
+     "tipo": "salmodia",
+     "texto": "Ant. 1. Jesús, puesto en pie, exclamó en alta voz: «El que tenga sed que\nvenga a mí y que beba.»\n\nSalmo 62, 2-9\n\nEL ALMA SEDIENTA DE DIOS\n\nMadruga por Dios todo el que rechaza las obras de las tinieblas.\n¡Oh Dios!, tú eres mi Dios, por ti madrugo,\n\nmi alma está sedienta de ti;\nmi carne tiene ansia de ti,\ncomo tierra reseca, agostada, sin agua.\n\n¡Cómo te contemplaba en el santuario\nviendo tu fuerza y tu gloria!\nTu gracia vale más que la vida,\nte alabarán mis labios.\n\nToda mi vida te bendeciré\ny alzaré las manos invocándote.\nMe saciaré de manjares exquisitos,\ny mis labios te alabarán jubilosos.\n\nEn el lecho me acuerdo de ti\ny velando medito en ti,\nporque fuiste mi auxilio,\ny a la sombra de tus alas canto con júbilo;\nmi alma está unida a ti,\ny tu diestra me sostiene.\n\nAnt. Jesús, puesto en pie, exclamó en alta voz: «El que tenga sed que\nvenga a mí y que beba.»\nAnt. 2. Venid a mí todos los que andáis rendidos y agobiados, que yo os daré\ndescanso.\n\nCántico Dn 3, 57-88. 56\n\nTODA LA CREACIÓN ALABE AL SEÑOR\n\nAlabad al Señor, sus siervos todos (Ap 19, 5).\n\nCriaturas todas del Señor, bendecid al Señor,\nensalzadlo con himnos por los siglos.\n\nÁngeles del Señor, bendecid al Señor;\ncielos, bendecid al Señor.\n\nAguas del espacio, bendecid al Señor;\nejércitos del Señor, bendecid al Señor.\n\nSol y luna, bendecid al Señor;\nastros del cielo, bendecid al Señor.\n\nLluvia y rocío, bendecid al Señor;\nvientos todos, bendecid al Señor.\n\nFuego y calor, bendecid al Señor;\nfríos y heladas, bendecid al Señor.\n\nRocíos y nevadas, bendecid al Señor;\ntémpanos y hielos, bendecid al Señor.\n\nEscarchas y nieves, bendecid al Señor;\nnoche y día, bendecid al Señor.\n\nLuz y tinieblas, bendecid al Señor;\nrayos y nubes, bendecid al Señor.\n\nBendiga la tierra al Señor,\nensálcelo con himnos por los siglos.\n\nMontes y cumbres, bendecid al Señor;\ncuanto germina en la tierra, bendiga al Señor.\n\nManantiales, bendecid al Señor;\nmares y ríos, bendecid al Señor.\n\nCetáceos y peces, bendecid al Señor;\naves del cielo, bendecid al Señor.\n\nFieras y ganados, bendecid al Señor,\nensalzadlo con himnos por los siglos.\n\nHijos de los hombres, bendecid al Señor;\nbendiga Israel al Señor.\n\nSacerdotes del Señor, bendecid al Señor;\nsiervos del Señor, bendecid al Señor.\n\nAlmas y espíritus justos, bendecid al Señor;\nsantos y humildes de corazón, bendecid al Señor.\n\nAnanías, Azarías y Misael, bendecid al Señor,\nensalzadlo con himnos por los siglos.\n\nBendigamos al Padre, al Hijo y al Espíritu Santo,\nensalcémoslo con himnos por los siglos.\n\nBendito el Señor en la bóveda del cielo,\nalabado y glorioso y ensalzado por los siglos.\n\nNo se dice Gloria al Padre.\nAnt. Venid a mí todos los que andáis rendidos y agobiados, que yo os daré\ndescanso.\nAnt. 3. Hijo mío, entrégame el corazón y acepta de buena gana mi camino.\n\nSalmo 149\n\nALEGRÍA DE LOS SANTOS\n\nLos hijos de la Iglesia, nuevo pueblo de Dios, se alegran en su Rey, Cristo, el Señor\n(Hesiquio).\n\nCantad al Señor un cántico nuevo,\nresuene su alabanza en la asamblea de los fieles;\nque se alegre Israel por su Creador,\nlos hijos de Sión por su Rey.\n\nAlabad su nombre con danzas,\ncantadle con tambores y cítaras;\nporque el Señor ama a su pueblo\ny adorna con la victoria a los humildes.\n\nQue los fieles festejen su gloria\ny canten jubilosos en filas:\ncon vítores a Dios en la boca\ny espadas de dos filos en las manos:\n\npara tomar venganza de los pueblos\ny aplicar el castigo a las naciones,\nsujetando a los reyes con argollas,\na los nobles con esposas de hierro.\n\nEjecutar la sentencia dictada\nes un honor para todos sus fieles.\n\nAnt. Hijo mío, entrégame el corazón y acepta de buena gana mi camino."
+    },
+    {
+     "tipo": "lectura_breve",
+     "texto": "Así será la alianza que haré con la casa de Israel, después de aquellos días -\noráculo del Señor-: Pondré mi ley en su pecho, la escribiré en sus corazones;\nyo seré su Dios, y ellos serán mi pueblo.",
+     "ref": "Jr 31, 33"
+    },
+    {
+     "tipo": "responsorio_breve",
+     "texto": "V. Tomad sobre vosotros mi yugo y aprended de mí.\nR. Tomad sobre vosotros mi yugo y aprended de mí.\nV. Que soy manso y humilde de corazón.\nR. Y aprended de mí.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. Tomad sobre vosotros mi yugo y aprended de mí."
+    },
+    {
+     "tipo": "cantico_evangelico",
+     "texto": "Ant. Por su entrañable misericordia Dios nos ha visitado y ha redimido a su\npueblo. Aleluya."
+    },
+    {
+     "tipo": "preces",
+     "texto": "Acudamos, hermanos, a Jesús, que es manso y humilde de corazón, y\ndigámosle:\nRey amantísimo, ten piedad de nosotros.\n\nJesús, Señor nuestro, en quien habita corporalmente toda la plenitud de la\ndivinidad,\n— haz que participemos de tu naturaleza divina.\n\nJesús único maestro, en quien están escondidos todos los tesoros de la\nsabiduría y del conocimiento,\n— danos, mediante la Iglesia, el conocimiento de la multiforme sabiduría de\nDios.\n\nJesús, Hijo de Dios, en quien el Padre se complace,\n— enséñanos a escuchar con perseverancia tu palabra.\n\nJesús, hermano nuestro, de cuya plenitud todos hemos recibido,\n— concédenos la abundancia de tu gracia y de tu verdad.\n\nJesús, salvador nuestro, fuente de vida y de santidad,\n— haz que seamos santos e irreprochables por el amor.\nSe pueden añadir algunas intenciones libres.\n\nUnidos al Corazón de Jesucristo, que latió de amor por el Padre y por cada uno\nde nosotros, digamos confiadamente: Padre nuestro."
+    },
+    {
+     "tipo": "oracion",
+     "texto": "Te pedimos, Dios todopoderoso y eterno, que, al celebrar la grandeza del amor\nque resplandece en el corazón de tu Hijo, recibamos de esta fuente divina\ngracias cada vez más abundantes. Por nuestro Señor Jesucristo."
+    }
+   ],
+   "intermedia": {
+    "comun": [],
+    "tercia": [
+     {
+      "tipo": "lectura_breve",
+      "texto": "Así dice el Señor: «Halló gracia en el desierto el pueblo escapado de la espada;\ncamina a su descanso, el Señor se le apareció de lejos. Con amor eterno te\namé, por eso prolongué mi misericordia. Volveré a construirte y serás\nreconstruido.»\nV. Sacaréis agua con gozo.\nR. De las fuentes del Salvador.",
+      "ref": "Jr 31, 2-4a"
+     }
+    ],
+    "sexta": [
+     {
+      "tipo": "lectura_breve",
+      "texto": "Haré con ellos alianza eterna y no cesaré de hacerles bien. Pondré en sus\ncorazones mi temor para que no se aparten de mí.\nV. Esperé compasión y no la hubo.\nR. Consoladores y no los encontré.",
+      "ref": "Jr 32, 40"
+     }
+    ],
+    "nona": [
+     {
+      "tipo": "lectura_breve",
+      "texto": "Dios nos demuestra el amor que nos tiene en el hecho de que, siendo todavía\npecadores, murió Cristo por nosotros. Así que con mayor razón, ahora que\nhemos sido justificados por su sangre, seremos salvados por él de la cólera\ndivina.\nV. Fue traspasado por nuestras rebeliones.\nR. Sus cicatrices nos curaron.",
+      "ref": "Rm 5, 8-9"
+     },
+     {
+      "tipo": "oracion_laudes"
+     }
+    ]
+   },
+   "visperas2": [
+    {
+     "tipo": "himno",
+     "texto": "Mi Cristo, tú no tienes\nla lóbrega mirada de la muerte.\nTus ojos no se cierran:\nson agua limpia donde puedo verme.\n\nMi Cristo, tú no puedes\ncicatrizar la llaga del costado:\nun corazón tras ella\nnoches y días me estará esperando.\n\nMi Cristo, tú conoces\nla intimidad oculta de mi vida.\nTú sabes mis secretos:\nte los voy confesando día a día.\n\nMi Cristo, tú aleteas\ncon los brazos unidos al madero.\n¡Oh valor que convida\na levantarse puro sobre el suelo!\n\nMi Cristo, tú sonríes\ncuando te hieren, sordas, las espinas.\nSi mi cabeza hierve,\nhaz, Señor, que te mire y te sonría.\n\nMi Cristo, tú que esperas\nmi último beso darte ante la tumba.\nTambién mi joven beso\ndescansa en ti de la incesante lucha. Amén.\n\nO bien:\n\nMármol con sangre, tu frente;\nlirios con sangre, tus manos;\ntus ojos, soles con muerte;\nluna con muerte, tus labios.\n\nAsí quiero verte, Cristo,\nsangriento jardín de nardos;\nasí, con tus cinco llagas,\ncielo roto y estrellado.\n\nRojo y blanco, blanco y rojo,\nte vio la niña del cántico:\nbien merecido lo tienes,\npor santo y enamorado.\n\nAbismo reclama abismo:\n¿o no lo sabías acaso?;\nel amor llama a la muerte:\nmuerte y amor son hermanos.\n\nAmor quema, amor hiende\ncarne y alma, pecho y labio.\nAmor, espada de fuego;\namor, cauterio y taladro.\n\nAsí quiero verte, Cristo,\ncon sangre, lirios y mármol;\nsoles y lunas con muerte\nen tus ojos y en tus labios. Amén."
+    },
+    {
+     "tipo": "salmodia",
+     "texto": "Ant. 1. Con tu yugo suave, Señor, somete el corazón de tus enemigos.\n\nSalmo 109, 1-5. 7\nOráculo del Señor a mi Señor:\n\n«Siéntate a mi derecha,\ny haré de tus enemigos\nestrado de tus pies.»\nDesde Sión extenderá el Señor\nel poder de tu cetro:\nsomete en la batalla a tus enemigos.\n\n«Eres príncipe desde el día de tu nacimiento,\nentre esplendores sagrados;\nyo mismo te engendré, como rocío,\nantes de la aurora.»\n\nEl Señor lo ha jurado y no se arrepiente:\n«Tú eres sacerdote eterno,\nsegún el rito de Melquisedec.»\n\nEl Señor a tu derecha, el día de su ira,\nquebrantará a los reyes.\nEn su camino beberá del torrente,\npor eso, levantará la cabeza.\n\nAnt. Con tu yugo suave, Señor, somete el corazón de tus enemigos.\nAnt. 2. El Señor es piadoso y clemente; él da alimento a sus fieles.\n\nSalmo 110\nDoy gracias al Señor de todo corazón,\n\nen compañía de los rectos, en la asamblea.\nGrandes son las obras del Señor,\ndignas de estudio para los que las aman.\n\nEsplendor y belleza son su obra,\nsu generosidad dura por siempre;\nha hecho maravillas memorables,\nel Señor es piadoso y clemente.\n\nÉl da alimento a sus fieles,\nrecordando siempre su alianza;\nmostró a su pueblo la fuerza de su obrar,\ndándoles la heredad de los gentiles.\n\nJusticia y verdad son las obras de sus manos,\ntodos sus preceptos merecen confianza:\nson estables para siempre jamás,\n\nse han de cumplir con verdad y rectitud.\n\nEnvió la redención a su pueblo,\nratificó para siempre su alianza,\nsu nombre es sagrado y temible.\n\nPrimicia de la sabiduría es el temor del Señor,\ntienen buen juicio los que lo practican;\nla alabanza del Señor dura por siempre.\n\nAnt. El Señor es piadoso y clemente; él da alimento a sus fieles.\nAnt. 3. Éste es el Cordero de Dios, que quita el pecado del mundo.\n\nCántico Flp 2, 6-11\nCristo, a pesar de su condición divina,\n\nno hizo alarde de su categoría de Dios,\nal contrario, se anonadó a sí mismo,\ny tomó la condición de esclavo,\npasando por uno de tantos.\n\nY así, actuando como un hombre cualquiera,\nse rebajó hasta someterse incluso a la muerte\ny una muerte de cruz.\n\nPor eso Dios lo levantó sobre todo\ny le concedió el «Nombre-sobre-todo-nombre»;\nde modo que al nombre de Jesús toda rodilla se doble\nen el cielo, en la tierra, en el abismo\ny toda lengua proclame:\nJesucristo es Señor, para gloria de Dios Padre.\n\nAnt. Éste es el Cordero de Dios, que quita el pecado del mundo."
+    },
+    {
+     "tipo": "lectura_breve",
+     "texto": "Dios, que es rico en misericordia, por el gran amor con que nos amó, aun\ncuando estábamos muertos por nuestros pecados, nos vivificó con Cristo y nos\nresucitó con él, y nos hizo sentar en los cielos con Cristo Jesús. Así Dios, en su\nbondad para con nosotros en Cristo Jesús, quiso mostrar en los siglos\nvenideros la sublime riqueza de su gracia.",
+     "ref": "Ef 2, 4-5a. 6-7"
+    },
+    {
+     "tipo": "responsorio_breve",
+     "texto": "V. Cristo nos ama y nos ha absuelto por la virtud de su sangre.\nR. Cristo nos ama y nos ha absuelto por la virtud de su sangre.\nV. Y ha hecho de nosotros reino y sacerdotes para el Dios y Padre suyo.\nR. Por la virtud de su sangre.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. Cristo nos ama y nos ha absuelto por la virtud de su sangre."
+    },
+    {
+     "tipo": "cantico_evangelico",
+     "texto": "Ant. El Señor nos ha acogido en su corazón, acordándose de su misericordia.\nAleluya."
+    },
+    {
+     "tipo": "preces",
+     "texto": "Acudamos, hermanos, a Jesús, descanso de nuestras almas fatigadas, y\ndigámosle suplicantes:\nRey amantísimo, ten piedad de nosotros.\n\nOh Jesús, que quisiste ser traspasado por la lanza para que de tu corazón\nabierto, al brotar el agua y la sangre, naciera tu esposa la Iglesia,\n— haz que esta Iglesia sea siempre santa e inmaculada.\n\nJesús, templo santo de Dios, destruido por los hombres y levantado\nnuevamente por el Padre,\n— dígnate hacer de la Iglesia morada del Altísimo.\n\nJesús, rey y centro de todos los corazones, que con amor eterno nos amas y\nnos atraes con misericordia,\n— renueva tu alianza con todos los hombres.\n\nJesús, paz y reconciliación nuestra, que has hecho las paces en un solo hombre\nnuevo, dando muerte al odio mediante la cruz,\n— danos acceso al Padre.\n\nJesús, vida y resurrección nuestra, alivio de los que están cansados y descanso\nde los que se sienten agobiados,\n— atrae hacia ti a los pecadores.\nSe pueden añadir algunas intenciones libres.\n\nJesús, que por tu amor desbordante te rebajaste hasta someterte incluso a la\nmuerte y una muerte de cruz,\n— llama a los fieles difuntos a la resurrección.\n\nUnidos a Jesucristo, que nos ama como hermano, acudamos al Padre,\ndiciendo: Padre nuestro."
+    },
+    {
+     "tipo": "oracion",
+     "texto": "Te pedimos, Dios todopoderoso y eterno, que, al celebrar la grandeza del amor\nque resplandece en el corazón de tu Hijo, recibamos de esta fuente divina\ngracias cada vez más abundantes. Por nuestro Señor Jesucristo."
+    }
+   ]
+  }
+ }
+}

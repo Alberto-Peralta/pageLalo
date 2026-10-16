@@ -1,0 +1,849 @@
+{
+ "dom": {
+  "visperas1": [
+   {
+    "tipo": "salmodia",
+    "texto": "Ant. 1. María Magdalena y la otra María fueron a ver el sepulcro. Aleluya.\nSalmo 109, 1-5. 7\n\nOráculo del Señor a mi Señor:\n\"siéntate a mi derecha,\ny haré de tus enemigos\nestrado de tus pies\".\nDesde Sión extenderá el Señor\nel poder de tu cetro:\nsomete en la batalla a tus enemigos.\n\n\"Eres príncipe desde el día de tu nacimiento,\nentre esplendores sagrados;\nyo mismo te engendré, como rocío,\nantes de la aurora\".\n\nEl Señor lo ha jurado y no se arrepiente:\n\"Tú eres sacerdote eterno,\nsegún el rito de Melquisedec\".\n\nEl Señor a tu derecha, el día de su ira,\nquebrantará a los reyes.\nEn su camino beberá del torrente,\npor eso, levantará la cabeza.\n\nAnt. 1. María Magdalena y la otra María fueron a ver el sepulcro. Aleluya.\nAnt. 2. Venid y ved el lugar donde habían puesto al Señor. Aleluya.\n\nSalmo 113 A\nCuando Israel salió de Egipto,\n\nlos hijos de Jacob de un pueblo balbuciente,\nJudá fue su santuario,\nIsrael fue su dominio.\n\nEl mar, al verlos, huyó,\n\nel Jordán se echó atrás;\nlos montes saltaron como carneros;\nlas colinas, como corderos.\n\n¿Qué te pasa, mar, que huyes,\ny a ti, Jordán, que te echas atrás?\n¿Y a vosotros, montes, que saltáis como carneros;\ncolinas, que saltáis como corderos?\n\nEn presencia del Señor se estremece la tierra,\nen presencia del Dios de Jacob;\nque transforma las peñas en estanques,\nel pedernal en manantiales de agua.\n\nAnt. Venid y ved el lugar donde habían puesto al Señor. Aleluya.\nAnt. 3. Dijo Jesús: “No temáis. Id a decir a mis hermanos que vayan a Galilea, que allí me\nverán.” Aleluya.\n\nEl cántico siguiente se dice con Aleluya, tal como está aquí, solamente cuando el Oficio\nes cantado. Cuando el Oficio se dice sin canto es suficiente decir Aleluya sólo al principio y\nal final de cada estrofa.\n\nCántico Cf. Ap 19, 1-7\nAleluya.\nLa salvación y la gloria y el poder son de nuestro Dios.\n(R. Aleluya.)\nPorque sus juicios son verdaderos y justos.\nR. Aleluya, (aleluya).\n\nAleluya.\nAlabad al Señor, sus siervos todos.\n(R. Aleluya.)\nLos que le teméis, pequeños y grandes.\nR. Aleluya, (aleluya).\n\nAleluya.\nPorque reina el Señor, nuestro Dios, dueño de todo.\n(R. Aleluya.)\nAlegrémonos y gocemos y démosle gracias.\nR. Aleluya, (aleluya).\n\nAleluya.\nLlegó la boda del Cordero.\n(R. Aleluya.)\nSu esposa se ha embellecido.\nR. Aleluya, (aleluya).\nAnt. Dijo Jesús: “No temáis. Id a decir a mis hermanos que vayan a Galilea, que allí me\nverán.” Aleluya."
+   },
+   {
+    "tipo": "lectura_breve",
+    "texto": "Vosotros sois linaje escogido, sacerdocio regio, nación santa, pueblo adquirido por Dios\npara proclamar las hazañas del que os llamó a salir de la tiniebla y a entrar en su luz\nmaravillosa. Vosotros, que en otro tiempo no erais pueblo, sois ahora pueblo de Dios;\nvosotros, que estabais excluidos de la misericordia, sois ahora objeto de la misericordia de\nDios.\nEn lugar del responsorio breve se dice la siguiente antífona:\nAnt. Este es el día en que actuó el Señor: sea él nuestra alegría y nuestro gozo. Aleluya.",
+    "ref": "1 Pe 2, 9-10"
+   },
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "Ant. Ocho días después, estando cerradas las puertas, se presentó Jesús y, en presencia\nde todos, exclamó: «La paz sea con vosotros.» Aleluya."
+   },
+   {
+    "tipo": "preces",
+    "texto": "Oremos a Cristo, que resucitando de entre los muertos destruyó la muerte y nos dio nueva\nvida, y digámosle:\nTú que vives eternamente, escúchanos, Señor.\n\nTú que eres la piedra rechazada por los arquitectos, pero convertida en piedra angular,\n— conviértenos a nosotros en piedras vivas de tu Iglesia.\n\nTú que eres el testigo fiel y el primogénito de entre los muertos,\n— haz que tu Iglesia sea también siempre testimonio ante el mundo.\n\nTú que eres el único esposo de la Iglesia, nacida de tu costado,\n— haz que todos nosotros seamos signos de tus bodas con la Iglesia.\n\nTú que eres el primero y el último, el que estabas muerto y ahora vives por los siglos de\nlos siglos,\n— concede a todos los bautizados perseverar fieles hasta la muerte, a fin de recibir la\ncorona de la victoria.\nSe pueden añadir algunas intenciones libres.\nTú que eres la lámpara que ilumina la ciudad santa de Dios,\n— alumbra con tu claridad a nuestros hermanos difuntos.\n\nSintiéndonos verdaderos hijos de Dios, digamos a nuestro Padre: Padre nuestro."
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Dios de misericordia infinita, que reanimas la fe de tu pueblo con el retorno anual de las\nfiestas pascuales, acrecienta en nosotros los dones de tu gracia, para que comprendamos\nmejor la inestimable riqueza del bautismo que nos ha purificado, del Espíritu que nos ha\nhecho renacer y de la sangre que nos ha redimido. Por nuestro Señor Jesucristo.\nEn la despedida se dice:\nPodéis ir en paz, aleluya, aleluya.\nR/. Demos gracias a Dios, aleluya, aleluya."
+   }
+  ],
+  "invitatorio": [
+   {
+    "tipo": "inicio",
+    "texto": "Ant. Verdaderamente ha resucitado el Señor. Aleluya.\nEl salmo del invitatorio como en el Ordinario: salmo 94; salmo 99; salmo 66; salmo 23."
+   }
+  ],
+  "oficio": [
+   {
+    "tipo": "salmodia",
+    "texto": "Ant. 1. Yo soy el que soy, y no sigo el consejo de los impíos, sino que mi gozo es la ley del\nSeñor. Aleluya.\n\nSalmo 1\nDichoso el hombre\n\nque no sigue el consejo de los impíos,\nni entra por la senda de los pecadores,\nni se sienta en la reunión de los cínicos;\nsino que su gozo es la ley del Señor,\ny medita su ley día y noche.\n\nSerá como un árbol\nplantado al borde de la acequia:\nda fruto en su sazón\ny no se marchitan sus hojas;\ny cuanto emprende tiene buen fin.\n\nNo así los impíos, no así;\nserán paja que arrebata el viento.\nEn el juicio los impíos no se levantarán,\nni los pecadores en la asamblea de los justos;\nporque el Señor protege el camino de los justos,\npero el camino de los impíos acaba mal.\n\nAnt. Yo soy el que soy, y no sigo el consejo de los impíos, sino que mi gozo es la ley del\nSeñor. Aleluya.\nAnt. 2. Lo he pedido a mi Padre, y me ha dado en herencia las naciones. Aleluya.\n\nSalmo 2\n\n¿Por qué se amotinan las naciones,\ny los pueblos planean un fracaso?\n\nSe alían los reyes de la tierra,\nlos príncipes conspiran\ncontra el Señor y contra su Mesías:\n\"Rompamos sus coyundas,\nsacudamos su yugo\".\n\nEl que habita en el cielo sonríe,\nel Señor se burla de ellos.\nLuego les habla con ira,\nlos espanta con su cólera:\n\"yo mismo he establecido a mi Rey\nen Sión, mi monte santo\".\n\nVoy a proclamar el decreto del Señor;\nél me ha dicho:\n\"Tú eres mi hijo: yo te he engendrado hoy.\nPídemelo: te daré en herencia las naciones,\nen posesión, los confines de la tierra:\nlos gobernarás con cetro de hierro,\nlos quebrarás como jarro de loza\".\n\nY ahora, reyes, sed sensatos;\nescarmentad, los que regís la tierra:\nservid al Señor con temor,\nrendidle homenaje temblando;\nno sea que se irrite, y vayáis a la ruina,\nporque se inflama de pronto su ira.\n¡Dichosos los que se refugian en él!\n\nAnt. Lo he pedido a mi Padre, y me ha dado en herencia las naciones. Aleluya.\nAnt. 3. Yo me acosté, dormí y desperté, porque el Señor me sostuvo. Aleluya.\n\nSalmo 3\nSeñor, cuántos son mis enemigos,\n\ncuántos se levantan contra mí;\ncuántos dicen de mí:\n\"ya no lo protege Dios\".\n\nPero tú, Señor, eres mi escudo y mi gloria,\ntú mantienes alta mi cabeza.\nSi grito invocando al Señor,\nél me escucha desde su monte santo.\n\nPuedo acostarme y dormir y despertar:\nel Señor me sostiene.\nNo temeré al pueblo innumerable\nque acampa a mi alrededor.\n\nLevántate, Señor;\n\nsálvame, Dios mío:\ntú golpeaste a mis enemigos en la mejilla,\nrompiste los dientes de los malvados.\n\nDe ti, Señor, viene la salvación\ny la bendición sobre tu pueblo.\n\nAnt. Yo me acosté, dormí y desperté, porque el Señor me sostuvo. Aleluya.\nV. Los discípulos se llenaron de alegría. Aleluya.\nR. Al ver al Señor. Aleluya."
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "De la carta del apóstol san Pablo a los Colosenses 3, 1-17\n\nLA VIDA NUEVA EN CRISTO\n\nHermanos: Si habéis resucitado con Cristo, buscad las cosas de arriba, donde está\nCristo sentado a la diestra de Dios. Poned vuestro corazón en las cosas del cielo, no en las\nde la tierra. Porque habéis muerto, y vuestra vida está oculta con Cristo en Dios. Cuando\naparezca Cristo, vida vuestra, entonces también vosotros apareceréis gloriosos con él.\n\nPor tanto, mortificad vuestros miembros terrenos: fornicación, impureza, pasiones,\nmalos deseos y la codicia, que es una idolatría, todo lo cual atrae la cólera de Dios sobre\nlos rebeldes, y que también vosotros practicasteis en otro tiempo, cuando vivíais entre\nellas. Mas ahora, desechad también vosotros todo esto: cólera, ira, maldad, maledicencia\ny palabras groseras, lejos de vuestra boca. No os mintáis unos a otros.\n\nDespojaos del hombre viejo con sus obras, y revestíos del hombre nuevo, que se va\nrenovando hasta alcanzar un conocimiento perfecto, según la imagen de su Creador,\ndonde no hay griego y judío; circuncisión e incircuncisión; bárbaro, escita, esclavo, libre,\nsino que Cristo es todo y en todos.\n\nRevestíos, pues, como elegidos de Dios, santos y amados, de entrañas de misericordia,\nde bondad, humildad, mansedumbre, paciencia, soportándoos unos a otros y\nperdonándoos mutuamente, si alguno tiene queja contra otro. Como el Señor os perdonó,\nperdonaos también vosotros.\n\nY por encima de todo esto, revestíos del amor, que es el vínculo de la perfección. Y que\nla paz de Cristo presida vuestros corazones, pues a ella habéis sido llamados formando un\nsolo Cuerpo. Y sed agradecidos. La palabra de Cristo habite en vosotros con toda su\nriqueza; instruíos y amonestaos con toda sabiduría, cantad agradecidos, himnos y cánticos\ninspirados.\n\nTodo cuanto hagáis, de palabra y de boca, hacedlo todo en el nombre del Señor Jesús,\ndando gracias por su medio a Dios Padre."
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Si habéis resucitado con Cristo, buscad las cosas de arriba, donde está Cristo sentado a\nla diestra de Dios. * Poned vuestro corazón en las cosas del cielo, no en las de la tierra.\nV. Porque habéis muerto, y vuestra vida está oculta con Cristo en Dios.\nR. Poned vuestro corazón en las cosas del cielo, no en las de la tierra.",
+    "ref": "Col 3, 1.2.3"
+   },
+   {
+    "tipo": "lectura2",
+    "texto": "De los sermones de san Agustín, obispo\n(Sermón 8, en la Octava de Pascua, 1, 4: PL 46, 838. 841)\n\nLA NUEVA CREACIÓN EN CRISTO\n\nMe dirijo a vosotros, niños recién nacidos, párvulos en Cristo, nueva prole de la Iglesia,\ngracia del Padre, fecundidad de la Madre, retoño santo, muchedumbre renovada, de\nnuestro honor y fruto de nuestro trabajo, mi gozo y corona, todos los que perseveráis\nfirmes en el Señor.\n\nMe dirijo a vosotros con las palabras del Apóstol: Vestíos del Señor Jesucristo, y que el\ncuidado de vuestro cuerpo no fomente los malos deseos, para que os revistáis de la vida\nque se os ha comunicado en el sacramento. Los que os habéis incorporado a Cristo por el\nbautismo os habéis revestido de Cristo. Ya no hay distinción entre judíos y gentiles,\nesclavos y libres, hombres y mujeres, porque todos sois uno en Cristo Jesús.\n\nEn esto consiste la fuerza del sacramento: en que es sacramento de la vida nueva; que\nempieza ahora con la remisión de todos los pecados pasados y que llegará a su plenitud\ncon la resurrección de los muertos. Por el bautismo fuisteis sepultados con él en la\nmuerte, para que, así como Cristo fue resucitado de entre los muertos, así también andéis\nvosotros en una vida nueva. Pues ahora, mientras vivís en vuestro cuerpo mortal,\ndesterrados lejos del Señor, camináis por la fe; pero tenéis un camino seguro que es Cristo\nJesús en cuanto hombre, el cual es al mismo tiempo el término al que tendéis, quien por\nnosotros ha querido hacerse hombre. Él ha reservado una inmensa dulzura para los que le\ntemen y la manifestará y dará con toda plenitud a los que esperan en él, una vez que\nhayamos recibido la realidad de lo que ahora poseemos sólo en esperanza.\n\nHoy se cumplen los ocho días de vuestro renacimiento: y hoy se completa en vosotros\nel sello de la fe, que entre los antiguos padres se llevaba a cabo en la circuncisión de la\ncarne a los ocho días del nacimiento carnal.\n\nPor eso mismo, el Señor al despojarse con su resurrección de la carne mortal y hacer\nsurgir un cuerpo, no ciertamente distinto, pero sí inmortal, consagró con su resurrección el\nDomingo, que es el tercer día después de su pasión y el octavo contando a partir del\nSábado; y, al mismo tiempo, el primero.\n\nPor esto también vosotros, ya que habéis resucitado con Cristo —aunque todavía no de\nhecho, pero sí ya con esperanza cierta, porque habéis recibido el sacramento de ello y las\narras del Espíritu—, buscad los bienes de arriba, donde está Cristo, sentado a la derecha\nde Dios; aspirad a los bienes de arriba, no a los de la tierra. Porque habéis muerto, y\nvuestra vida está con Cristo escondida en Dios. Cuando aparezca Cristo, vida nuestra,\nentonces también vosotros apareceréis, juntamente con él, en gloria."
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Habéis muerto y vuestra vida está oculta con Cristo en Dios; * cuando se manifieste\nCristo, que es vuestra vida, os manifestaréis también vosotros con él, revestidos de gloria.\nAleluya.\nV. Considerad que estáis muertos al pecado, pero que vivís para Dios en unión con Cristo\nJesús.\nR. Cuando se manifieste Cristo, que es vuestra vida, os manifestaréis también vosotros\ncon él, revestidos de gloria. Aleluya.",
+    "ref": "Col 3, 3-4; Rm 6, 11"
+   },
+   {
+    "tipo": "te_deum"
+   },
+   {
+    "tipo": "oracion_laudes"
+   }
+  ],
+  "laudes": [
+   {
+    "tipo": "salmodia",
+    "texto": "Ant. 1. Cristo ha resucitado y con su claridad ilumina al pueblo rescatado con su sangre.\nAleluya.\n\nSalmo 62, 2-9\n¡Oh Dios!, tú eres mi Dios, por ti madrugo,\nmi alma está sedienta de ti;\nmi carne tiene ansia de ti,\ncomo tierra reseca, agostada, sin agua.\n\n¡Cómo te contemplaba en el santuario\nviendo tu fuerza y tu gloria!\nTu gracia vale más que la vida,\nte alabarán mis labios.\n\nToda mi vida te bendeciré\ny alzaré las manos invocándote.\nMe saciaré de manjares exquisitos,\ny mis labios te alabarán jubilosos.\n\nEn el lecho me acuerdo de ti\ny velando medito en ti,\nporque fuiste mi auxilio,\ny a la sombra de tus alas canto con júbilo;\nmi alma está unida a ti,\ny tu diestra me sostiene.\n\nAnt. Cristo ha resucitado y con su claridad ilumina al pueblo rescatado con su sangre.\nAleluya.\n\nAnt. 2. Ha resucitado del sepulcro nuestro Redentor; cantemos un himno al Señor, nuestro\nDios. Aleluya.\n\nCántico Dn 3, 57‑88. 56\n\nCriaturas todas del Señor, bendecid al Señor,\nensalzadlo con himnos por los siglos.\n\nÁngeles del Señor, bendecid al Señor;\ncielos, bendecid al Señor.\n\nAguas del espacio, bendecid al Señor;\nejércitos del Señor, bendecid al Señor.\n\nSol y luna, bendecid al Señor;\nastros del cielo, bendecid al Señor.\n\nLluvia y rocío, bendecid al Señor;\nvientos todos, bendecid al Señor.\n\nFuego y calor, bendecid al Señor;\nfríos y heladas, bendecid al Señor.\n\nRocíos y nevadas, bendecid al Señor;\ntémpanos y hielos, bendecid al Señor.\n\nEscarchas y nieves, bendecid al Señor;\nnoche y día, bendecid al Señor.\n\nLuz y tinieblas, bendecid al Señor;\nrayos y nubes, bendecid al Señor.\n\nBendiga la tierra al Señor,\nensálcelo con himnos por los siglos.\n\nMontes y cumbres, bendecid al Señor;\ncuanto germina en la tierra, bendiga al Señor.\n\nManantiales, bendecid al Señor;\nmares y ríos, bendecid al Señor.\n\nCetáceos y peces, bendecid al Señor;\naves del cielo, bendecid al Señor.\n\nFieras y ganados, bendecid al Señor,\nensalzadlo con himnos por los siglos.\n\nHijos de los hombres, bendecid al Señor;\nbendiga Israel al Señor.\n\nSacerdotes del Señor, bendecid al Señor;\nsiervos del Señor, bendecid al Señor.\n\nAlmas y espíritus justos, bendecid al Señor;\nsantos y humildes de corazón, bendecid al Señor.\n\nAnanías, Azarías y Misael, bendecid al Señor,\nensalzadlo con himnos por los siglos.\n\nBendigamos al Padre, al Hijo y al Espíritu Santo,\nensalcémoslo con himnos por los siglos.\n\nBendito el Señor en la bóveda del cielo,\nalabado y glorioso y ensalzado por los siglos.\n\nAl final de este cántico no se dice Gloria al Padre\nAnt. Ha resucitado del sepulcro nuestro Redentor; cantemos un himno al Señor, nuestro\nDios. Aleluya.\nAnt. 3. Aleluya. Ha resucitado el Señor, tal como os lo había anunciado. Aleluya.\n\nSalmo 149\nALEGRÍA DE LOS SANTOS\n\nLos hijos de la Iglesia, nuevo pueblo de Dios, se alegran en su Rey, Cristo, el Señor\n(Hesiquio).\n\nCantad al Señor un cántico nuevo,\nresuene su alabanza en la asamblea de los fieles;\nque se alegre Israel por su Creador,\nlos hijos de Sión por su Rey.\n\nAlabad su nombre con danzas,\ncantadle con tambores y cítaras;\nporque el Señor ama a su pueblo\ny adorna con la victoria a los humildes.\n\nQue los fieles festejen su gloria\ny canten jubilosos en filas:\ncon vítores a Dios en la boca\ny espadas de dos filos en las manos:\n\npara tomar venganza de los pueblos\ny aplicar el castigo a las naciones,\nsujetando a los reyes con argollas,\na los nobles con esposas de hierro.\n\nEjecutar la sentencia dictada\nes un honor para todos sus fieles.\n\nAnt. Aleluya. Ha resucitado el Señor, tal como os lo había anunciado. Aleluya."
+   },
+   {
+    "tipo": "lectura_breve",
+    "texto": "Dios resucitó a Jesús al tercer día e hizo que se apareciese no a todo el pueblo, sino a\nnosotros, que somos los testigos elegidos de antemano por Dios. Nosotros hemos comido\ny bebido con él, después que Dios lo resucitó de entre los muertos. Y él nos mandó\npredicar al pueblo y atestiguar que ha sido constituido por Dios juez de vivos y muertos.\nDe él hablan todos los profetas y aseguran que cuantos tengan fe en él recibirán por su\nnombre el perdón de sus pecados.\nEn lugar del responsorio breve se dice la siguiente antífona:\nAnt. Este es el día en que actuó el Señor: sea él nuestra alegría y nuestro gozo. Aleluya.",
+    "ref": "Hch 10, 40-43"
+   },
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "Ant. Trae tu mano y métela en mi costado; y no seas incrédulo, sino fiel. Aleluya."
+   },
+   {
+    "tipo": "preces",
+    "texto": "Invoquemos a Dios, Padre todopoderoso, que resucitó a Jesús, nuestro jefe y salvador, y\naclamémoslo, diciendo:\nIlumínanos, Señor, con la luz de Cristo.\n\nPadre santo, que hiciste pasar a tu Hijo amado de las tinieblas de la muerte a la luz de tu\ngloria,\n— haz que podamos llegar también nosotros a tu luz admirable.\n\nTú que nos has salvado por la fe,\n— haz que vivamos hoy según la fe que profesarnos en nuestro bautismo.\n\nTú que quieres que busquemos las cosas de arriba, donde está Cristo sentado a tu\nderecha,\n— líbranos de la seducción del pecado.\n\nHaz que nuestra vida, oculta en ti con Cristo, brille en el mundo,\n— para que aparezcan los cielos nuevos y la tierra nueva.\nSe pueden añadir algunas intenciones libres.\nDirijámonos ahora al Padre con las palabras que el Espíritu del Señor resucitado pone en\nnuestra boca: Padre nuestro."
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Dios de misericordia infinita, que reanimas la fe de tu pueblo con el retorno anual de las\nfiestas pascuales, acrecienta en nosotros los dones de tu gracia, para que comprendamos\nmejor la inestimable riqueza del bautismo que nos ha purificado, del Espíritu que nos ha\nhecho renacer y de la sangre que nos ha redimido. Por nuestro Señor Jesucristo."
+   }
+  ],
+  "intermedia": {
+   "comun": [
+    {
+     "tipo": "salmodia",
+     "texto": "Antífona\n\nTERCIA: Cristo, una vez resucitado de entre los muertos, ya no muere. Aleluya.\nSEXTA: Fue entregado a la muerte por nuestros pecados, y resucitado para nuestra\njustificación. Aleluya.\nNONA: Si habéis sido resucitados con Cristo, buscad las cosas de arriba. Aleluya.\n\nSalmo 117\nI\n\nDad gracias al Señor porque es bueno,\nporque es eterna su misericordia.\n\nDiga la casa de Israel:\neterna es su misericordia.\n\nDiga la casa de Aarón:\neterna es su misericordia.\n\nDigan los fieles del Señor:\neterna es su misericordia.\n\nEn el peligro grité al Señor,\ny me escuchó, poniéndome a salvo.\n\nEl Señor está conmigo: no temo;\n¿qué podrá hacerme el hombre?\nEl Señor está conmigo y me auxilia,\nveré la derrota de mis adversarios.\n\nMejor es refugiarse en el Señor\nque fiarse de los hombres,\nmejor es refugiarse en el Señor\nque fiarse de los jefes.\n\nII\n\nTodos los pueblos me rodeaban,\nen el nombre del Señor los rechacé;\nme rodeaban cerrando el cerco,\nen el nombre del Señor los rechacé;\nme rodeaban como avispas,\nardiendo como fuego en las zarzas,\nen el nombre del Señor los rechacé.\n\nEmpujaban y empujaban para derribarme,\npero el Señor me ayudó;\nel Señor es mi fuerza y mi energía,\nél es mi salvación.\n\nEscuchad: hay cantos de victoria\nen las tiendas de los justos:\n\"la diestra del Señor es poderosa,\n\nla diestra del Señor es excelsa,\nla diestra del Señor es poderosa\".\n\nNo he de morir, viviré\npara contar las hazañas del Señor.\nMe castigó, me castigó el Señor,\npero no me entregó a la muerte.\n\nIII\n\nAbridme las puertas del triunfo,\ny entraré para dar gracias al Señor.\n\nÉsta es la puerta del Señor:\nlos vencedores entrarán por ella.\n\nTe doy gracias porque me escuchaste\ny fuiste mi salvación.\n\nLa piedra que desecharon los arquitectos\nes ahora la piedra angular.\n\nEs el Señor quien lo ha hecho,\nha sido un milagro patente.\n\nÉste es el día en que actuó el Señor:\nsea nuestra alegría y nuestro gozo.\nSeñor, danos la salvación;\nSeñor, danos prosperidad.\n\nBendito el que viene en nombre del Señor,\nos bendecimos desde la casa del Señor;\nel Señor es Dios, él nos ilumina.\n\nOrdenad una procesión con ramos\nhasta los ángulos del altar.\n\nTú eres mi Dios, te doy gracias;\nDios mío, yo te ensalzo.\n\nDad gracias al Señor porque es bueno,\nporque es eterna su misericordia.\n\npara las otras Horas, la salmodia complementaria."
+    }
+   ],
+   "tercia": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "Cristo murió por nuestros pecados, según las Escrituras, y fue sepultado; resucitó al tercer\ndía y vive, según lo anunciaron también las Escrituras. Y  se apareció a Cefas y luego a los\nDoce.\nV. Éste es el día en que actuó el Señor. Aleluya.\nR. Sea él nuestra alegría y nuestro gozo. Aleluya.",
+     "ref": "Cf. 1 Co 15, 3b-5"
+    },
+    {
+     "tipo": "oracion_laudes"
+    }
+   ],
+   "sexta": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "Dios, que es rico en misericordia, por el gran amor con que nos amó, aun cuando\nestábamos muertos por nuestros pecados, nos vivificó con Cristo —por pura gracia habéis\nsido salvados— y nos resucitó con él, y nos hizo sentar en los cielos con Cristo Jesús.\nV. Éste es el día en que actuó el Señor. Aleluya.\nR. Sea él nuestra alegría y nuestro gozo. Aleluya.",
+     "ref": "Ef 2, 4-6"
+    },
+    {
+     "tipo": "oracion_laudes"
+    }
+   ],
+   "nona": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "Por nuestro bautismo fuimos sepultados con Cristo, para participar de su muerte; para\nque, así como Cristo fue resucitado de entre los muertos por la gloria del Padre, así\ntambién nosotros vivamos una vida nueva.\nV. Éste es el día en que actuó el Señor. Aleluya.\nR. Sea él nuestra alegría y nuestro gozo. Aleluya.",
+     "ref": "Rm 6, 4"
+    },
+    {
+     "tipo": "oracion_laudes"
+    }
+   ]
+  },
+  "visperas2": [
+   {
+    "tipo": "salmodia",
+    "texto": "Ant. 1. María Magdalena y la otra María fueron a ver el sepulcro. Aleluya.\nSalmo 109, 1-5. 7\n\nOráculo del Señor a mi Señor:\n\"siéntate a mi derecha,\ny haré de tus enemigos\nestrado de tus pies\".\nDesde Sión extenderá el Señor\nel poder de tu cetro:\nsomete en la batalla a tus enemigos.\n\n\"Eres príncipe desde el día de tu nacimiento,\nentre esplendores sagrados;\nyo mismo te engendré, como rocío,\nantes de la aurora\".\n\nEl Señor lo ha jurado y no se arrepiente:\n\"Tú eres sacerdote eterno,\nsegún el rito de Melquisedec\".\n\nEl Señor a tu derecha, el día de su ira,\nquebrantará a los reyes.\nEn su camino beberá del torrente,\npor eso, levantará la cabeza.\n\nAnt. 1. María Magdalena y la otra María fueron a ver el sepulcro. Aleluya.\nAnt. 2. Venid y ved el lugar donde habían puesto al Señor. Aleluya.\n\nSalmo 113 A\nCuando Israel salió de Egipto,\n\nlos hijos de Jacob de un pueblo balbuciente,\nJudá fue su santuario,\nIsrael fue su dominio.\n\nEl mar, al verlos, huyó,\n\nel Jordán se echó atrás;\nlos montes saltaron como carneros;\nlas colinas, como corderos.\n\n¿Qué te pasa, mar, que huyes,\ny a ti, Jordán, que te echas atrás?\n¿Y a vosotros, montes, que saltáis como carneros;\ncolinas, que saltáis como corderos?\n\nEn presencia del Señor se estremece la tierra,\nen presencia del Dios de Jacob;\nque transforma las peñas en estanques,\nel pedernal en manantiales de agua.\n\nAnt. Venid y ved el lugar donde habían puesto al Señor. Aleluya.\nAnt. 3. Dijo Jesús: “No temáis. Id a decir a mis hermanos que vayan a Galilea, que allí me\nverán.” Aleluya.\n\nEl cántico siguiente se dice con Aleluya, tal como está aquí, solamente cuando el Oficio\nes cantado. Cuando el Oficio se dice sin canto es suficiente decir Aleluya sólo al principio y\nal final de cada estrofa.\n\nCántico Cf. Ap 19, 1-7\nAleluya.\nLa salvación y la gloria y el poder son de nuestro Dios.\n(R. Aleluya.)\nPorque sus juicios son verdaderos y justos.\nR. Aleluya, (aleluya).\n\nAleluya.\nAlabad al Señor, sus siervos todos.\n(R. Aleluya.)\nLos que le teméis, pequeños y grandes.\nR. Aleluya, (aleluya).\n\nAleluya.\nPorque reina el Señor, nuestro Dios, dueño de todo.\n(R. Aleluya.)\nAlegrémonos y gocemos y démosle gracias.\nR. Aleluya, (aleluya).\n\nAleluya.\nLlegó la boda del Cordero.\n(R. Aleluya.)\nSu esposa se ha embellecido.\nR. Aleluya, (aleluya).\nAnt. Dijo Jesús: “No temáis. Id a decir a mis hermanos que vayan a Galilea, que allí me\nverán.” Aleluya."
+   },
+   {
+    "tipo": "lectura_breve",
+    "texto": "Cristo, habiendo ofrecido un solo sacrificio en expiación de los pecados, está sentado para\nsiempre a la diestra de Dios, y espera el tiempo que falta «hasta que sus enemigos sean\npuestos por escabel de sus pies». Así, con una sola oblación, ha llevado para siempre a la\nperfección en la gloria a los que ha santificado.\nEn lugar del responsorio breve se dice la siguiente antífona:\nAnt. Este es el día en que actuó el Señor: sea él nuestra alegría y nuestro gozo. Aleluya.",
+    "ref": "Hb 10, 12-14"
+   },
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "Ant. ¿No has creído, Tomás, sino después de haberme visto? Dichosos los que sin ver han\ncreído. Aleluya."
+   },
+   {
+    "tipo": "preces",
+    "texto": "Oremos a Dios Padre, que resucitó a su Hijo Jesucristo y lo exaltó a su derecha, y\ndigámosle:\nHaz que participemos, Señor, de la gloria de Cristo.\n\nPadre justo, que por la victoria de la cruz elevaste a Cristo sobre la tierra,\n— atrae hacia él a todos los hombres.\n\nPor tu Hijo glorificado, envía, Señor, sobre tu Iglesia al Espíritu Santo,\n— a fin de que tu pueblo sea en medio del mundo signo de la unidad de los hombres.\n\nConserva en la fe de su bautismo a la nueva prole renacida del agua y del Espíritu Santo,\n— para que alcance la vida eterna.\n\nPor tu Hijo glorificado, ayuda, Señor, a los que sufren, da la libertad a los presos, la salud\na los enfermos,\n— y la abundancia de tus bienes a todos los hombres.\nSe pueden añadir algunas intenciones libres.\nA nuestros hermanos difuntos, a quienes mientras vivían en este mundo diste el cuerpo y\nla sangre de tu Hijo glorioso,\n— concédeles la gloria de la resurrección en el último día.\n\nTerminemos nuestra oración con las palabras del Señor: Padre nuestro."
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Dios de misericordia infinita, que reanimas la fe de tu pueblo con el retorno anual de las\nfiestas pascuales, acrecienta en nosotros los dones de tu gracia, para que comprendamos\nmejor la inestimable riqueza del bautismo que nos ha purificado, del Espíritu que nos ha\nhecho renacer y de la sangre que nos ha redimido. Por nuestro Señor Jesucristo.\nEn la despedida se dice:\nPodéis ir en paz, aleluya, aleluya.\nR/. Demos gracias a Dios, aleluya, aleluya.\nTermina la Octava de Pascua."
+   }
+  ]
+ },
+ "lun": {
+  "oficio": [
+   {
+    "tipo": "versiculo",
+    "texto": "V. Mi corazón y mi carne. Aleluya.\nR. Se alegran por el Dios vivo. Aleluya."
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "Comienza el libro del Apocalipsis 1, 1-20\n\nVISIÓN DEL HIJO DEL HOMBRE\n\nApocalipsis o revelación manifestada por Jesucristo. Dios se la ha confiado para que\nmuestre a sus siervos lo que ha de sobrevenir en breve; y Jesús lo ha dado a conocer\nmediante signos a su siervo Juan, enviándole a su ángel. Y Juan atestigua, como palabra\nde Dios y testimonio de Jesucristo, todo lo que ha visto. Feliz el que lee y el que escucha\nlas palabras de esta profecía y guarda lo escrito en ella. Que el tiempo de su cumplimiento\nestá cerca.\n\nJuan, a las siete Iglesias del Asia proconsular:\nGracia y paz a vosotros de parte de aquel que es, que era y que será; de parte de los\n\nsiete espíritus que están ante su trono; y de parte de Jesucristo, el testigo veraz, el\nprimogénito de entre los muertos, el príncipe de los reyes de la tierra.\n\nY a aquel que nos ama, que nos ha lavado de nuestros pecados con su sangre, que ha\nhecho de nosotros un reino y sacerdotes para Dios, su Padre: A él la gloria y el poder por\nlos siglos de los siglos: Amén.\n\nVed que viene entre las nubes. Todo el mundo lo verá, aun aquellos que lo\ntraspasaron. Y por su causa golpearán de dolor su pecho todos los pueblos de la tierra. Así\nserá. Amén.\n\n«Yo soy el alfa y la omega —dice el Señor Dios—, el que es, el que era y el que será, el\nTodopoderoso.»\n\nYo, Juan, vuestro hermano y compañero en la tribulación, en el reino y en la constante\nespera de Jesús, me hallaba en la isla llamada Patmos, por causa de la palabra de Dios y\ndel testimonio de Jesús. Un domingo fui arrebatado en espíritu y oí tras de mí una gran\nvoz como de trompeta, que decía:\n\n«Lo que vayas viendo, escríbelo en un volumen, y envíalo a las siete Iglesias: a Éfeso,\na Esmirna, a Pérgamo, a Tiatira, a Sardes, a Filadelfia y a Laodicea.»\n\nMe volví para ver qué voz era la que me hablaba y, al volverme, vi siete candelabros de\noro y, en medio de ellos, una figura como de Hijo de hombre, vestido de una túnica talar y\nceñido el pecho con un ceñidor de oro. Sus cabellos y su barba eran blancos como la\nblanca lana o como la nieve, sus ojos eran como llamas de fuego, sus pies parecían de\nmetal precioso acrisolado en el horno y su voz era como el estruendo de muchas aguas.\nTenía en su diestra siete estrellas y de su boca salía una aguda espada de dos filos; su\nsemblante era como el sol cuando brilla con toda su fuerza. Así que lo vi, caí como muerto\na sus pies. Él puso su diestra sobre mí y me dijo:\n\n«No temas. Yo soy el primero y el último, el que vive. Estaba muerto, pero ahora vivo\npor los siglos de los siglos, y tengo las llaves de la muerte y del hades. Escribe, pues, lo\nque has visto: lo que ya sucede ahora y lo que ha de suceder después. Cuanto al misterio\nde las siete estrellas que has visto en mi mano, y de los siete candelabros de oro: sabe\nque las siete estrellas son los ángeles de las siete Iglesias, y los siete candelabros son las\nsiete Iglesias.»",
+    "anio": "I"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Cristo nos ama y nos ha lavado de nuestros pecados con su sangre: * A él la gloria y el\npoder por los siglos de los siglos. Aleluya.\nV. Él es el principio, el primogénito de entre los muertos, y así es el primero en todo.\nR. A él la gloria y el poder por los siglos de los siglos. Aleluya.",
+    "ref": "Ap 1, 5b. 6b; Col 1, 18b",
+    "anio": "I"
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "De los Hechos de los apóstoles 4, 32-5, 16\n\nLA PRIMERA COMUNIDAD CRISTIANA. ANANÍAS Y SAFIRA\n\nEn aquellos días, la multitud de los creyentes no era sino un solo corazón y una sola\nalma. Nadie tenía como propio lo que poseía, sino que todo lo tenían en común. Los\napóstoles daban testimonio de la resurrección de Jesús el Señor, con mucho valor, y todos\neran muy bien vistos por el pueblo. No había entre ellos menesterosos, pues todos los que\nposeían campos o casas los vendían, y traían el producto de la venta para depositarlo en\nmanos de los apóstoles. Luego, se repartía a cada uno según su necesidad.\n\nTal fue el caso de José, llamado por los apóstoles Bernabé (que quiere decir: «hijo de\nla consolación»). Era éste un levita, natural de Chipre, que vendió un campo que poseía\npara poner el dinero a disposición de los apóstoles. Pero otro, llamado Ananías, de\nacuerdo con su mujer Safira, vendió una posesión y, reservándose para sí una parte del\nprecio con la complicidad de su mujer, puso lo restante a disposición de los apóstoles.\nDíjole Pedro:\n\n«Ananías, ¿cómo has dejado que Satanás se apodere de tu corazón, engañando al\nEspíritu Santo, y quedándote con una parte del precio del campo? ¿No era tuyo antes de\nvenderlo? Y, una vez vendido, ¿no quedaba su precio en tu poder? ¿Cómo se te ha\nocurrido hacer esto? No has mentido a los hombres, sino a Dios.»\n\nAl oír Ananías estas palabras, cayó muerto. Con esto se apoderó un gran temor de\ntodos cuantos lo oyeron contar. Luego, los más jóvenes, envolviéndolo en un lienzo, lo\nsacaron para darle sepultura. Unas tres horas más tarde entró la mujer, que no sabía lo\nque había ocurrido. Y Pedro le preguntó:\n\n«Dime, ¿es verdad que habéis vendido el campo a tal precio?»\nElla respondió:\n«Sí, a ese precio.»\nY exclamó Pedro:\n\n«¿Cómo os habéis puesto de acuerdo para tentar al Espíritu del Señor? Mira: los pies\nde los que han sepultado a tu marido están a la puerta y te llevarán a ti también.»\n\nEn el mismo instante, se desplomó a sus pies y expiró. Entraron los jóvenes y,\nencontrándola ya cadáver, la sacaron y la enterraron junto a su marido. Con esto se\napoderó un gran temor de toda la comunidad y de todos cuantos lo oían contar.\n\nLos apóstoles hacían muchos signos y prodigios en medio del pueblo. Los fieles se\nreunían de común acuerdo en el pórtico de Salomón; los demás no se atrevían a\njuntárseles, aunque la gente se hacía lenguas de ellos; más aún, crecía el número de los\ncreyentes, hombres y mujeres, que se adherían al Señor. La gente sacaba los enfermos a\nla calle y los ponía en catres y camillas, para que, al pasar Pedro, su sombra por lo menos\ncayera sobre alguno. Mucha gente de los alrededores acudía a Jerusalén llevando\nenfermos y poseídos de espíritu inmundo; y todos se curaban.",
+    "anio": "II"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Los apóstoles daban testimonio de la resurrección del Señor con mucho valor. * Todos\neran muy bien vistos. Aleluya.\nV. Los llenó a todos el Espíritu Santo y anunciaban con valentía la palabra de Dios.\nR. Todos eran muy bien vistos. Aleluya.",
+    "ref": "Cf. Hch 4, 33— 31b",
+    "anio": "II"
+   },
+   {
+    "tipo": "lectura2",
+    "texto": "De una homilía pascual de un autor antiguo\n(PG 59, 723-724)\n\nLA PASCUA ESPIRITUAL\n\nLa Pascua que celebramos es el origen de la salvación de todos los hombres,\nempezando por el primero de ellos, Adán, que pervive aún en todos los hombres y en\nnosotros recobra ahora la vida.\n\nAquellas instituciones temporales que existían al principio para prefigurar la realidad\npresente eran sólo imagen y prefiguración parcial e imperfecta de lo que ahora aparece;\npero una vez presente la realidad, conviene que su imagen se eclipse; del mismo modo\nque, cuando llega el rey, a nadie se le ocurre venerar su imagen, sin hacer caso de su\npersona.\n\nEn nuestro caso es evidente hasta qué punto la imagen supera la realidad, puesto que\naquélla conmemoraba la momentánea preservación de la vida de los primogénitos judíos,\nmientras que ésta, la realidad, celebra la vida eterna de todos los hombres.\n\nNo es gran cosa, en efecto, escapar de la muerte por un cierto tiempo, si poco después\nhay que morir; sí lo es, en cambio, poderse librar definitivamente de la muerte; y éste es\nnuestro caso una vez que Cristo, nuestra Pascua, se inmoló por nosotros.\n\nEl nombre mismo de esta fiesta indica ya algo muy grande si lo explicamos de acuerdo\ncon su verdadero sentido. Pues Pascua significa paso, ya que el exterminador aquel que\nhería a los primogénitos de los egipcios pasaba de largo ante las casas de los hebreos. Y\nentre nosotros vuelve a pasar de largo el exterminador, porque pasa sin tocarnos, una vez\nque Cristo nos ha resucitado a la vida eterna.\n\nY, ¿qué significa, en orden a la realidad, el hecho de que la Pascua y la salvación de los\nprimogénitos tuvieron lugar en el comienzo del año? Es sin duda porque también para\nnosotros el sacrificio de la verdadera Pascua es el comienzo de la vida eterna.\n\nPues el año viene a ser como un símbolo de la eternidad, por cuanto con sus\nestaciones que se repiten sin cesar, va describiendo un círculo que nunca finaliza. Y Cristo,\nel padre del siglo futuro, la víctima inmolada por nosotros, es quien abolió toda nuestra\n\nvida pasada y por el bautismo nos dio una vida nueva, realizando en nosotros como una\nimagen de su muerte y de su resurrección.\n\nAsí, pues, todo aquel que sabe que la Pascua ha sido inmolada por él, sepa también\nque para él la vida empezó en el momento en que Cristo se inmoló para salvarle. Y Cristo\nse inmoló por nosotros si confesamos la gracia recibida y reconocemos que la vida nos ha\nsido devuelta por este sacrificio.\n\nY quien llegue al conocimiento de esto debe esforzarse en vivir de esta vida nueva y no\npensar ya en volver otra vez a la antigua, puesto que la vida antigua ha llegado a su fin.\nPor ello dice la Escritura: Nosotros, que hemos muerto al pecado, ¿cómo vamos a vivir\nmás en pecado?"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Tirad fuera la levadura vieja para que seáis una masa nueva, pues Cristo, nuestro\ncordero pascual, ha sido inmolado. * Así, pues, celebremos nuestra fiesta con el cuerpo\ndel Señor. Aleluya.\nV. Fue entregado a la muerte por nuestros pecados, y resucitado para nuestra\njustificación.\nR. Así, pues, celebremos nuestra fiesta con el cuerpo del Señor. Aleluya.",
+    "ref": "1 Co 5, 7-8; Rm 4, 25"
+   },
+   {
+    "tipo": "oracion_laudes"
+   }
+  ],
+  "laudes": [
+   {
+    "tipo": "lectura_breve",
+    "texto": "«Cerca de ti está la palabra, en tu boca y en tu corazón», es decir, el mensaje de la fe que\nnosotros predicamos. Porque, si proclamas con tu boca a Jesús como Señor y crees en tu\ncorazón que Dios lo resucitó de entre los muertos, serás salvo. Pues con el corazón\ncreemos para obtener la justificación y con la boca hacemos profesión de nuestra fe para\nalcanzar la salvación.",
+    "ref": "Rm 10, Sb-10"
+   },
+   {
+    "tipo": "responsorio_breve",
+    "texto": "V. El Señor ha resucitado del sepulcro. Aleluya, aleluya.\nR. El Señor ha resucitado del sepulcro. Aleluya, aleluya.\nV. El que por nosotros colgó del madero.\nR. Aleluya, aleluya.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. El Señor ha resucitado del sepulcro. Aleluya, aleluya."
+   },
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "Ant. Os digo con toda verdad: el que no nace de arriba no podrá entrar en el reino de\nDios. Aleluya."
+   },
+   {
+    "tipo": "preces",
+    "texto": "Oremos a Dios Padre todopoderoso, glorificado por la muerte y resurrección de Cristo, y\ndigámosle confiados:\nIlumina, Señor, nuestras mentes.\n\nPadre, fuente de toda luz, que has querido iluminar el mundo con la gloria de Cristo\nresucitado,\n— ilumina, desde el principio de este día, nuestras almas con la luz de la fe.\n\nTú que por medio de tu Hijo, resucitado de entre los muertos, has abierto a los hombres\nlas puertas de la salvación,\n— haz que, a través de los trabajos de este día, se acreciente nuestra esperanza.\n\nTú que por medio de tu Hijo resucitado has derramado sobre el mundo tu Espíritu Santo,\n— enciende nuestros corazones con el fuego de este mismo Espíritu.\n\nQue Cristo, el Señor, clavado en la cruz para librarnos,\n— sea hoy nuestra redención y nuestra salvación.\nSe pueden añadir algunas intenciones libres.\nTerminemos nuestra oración con la plegaria que Cristo nos enseñó: Padre nuestro."
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Dios todopoderoso y eterno, a quien podemos llamar Padre, aumenta en nuestros\ncorazones el espíritu filial, para que merezcamos alcanzar la herencia prometida. Por\nnuestro Señor Jesucristo."
+   }
+  ],
+  "intermedia": {
+   "comun": [],
+   "tercia": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "Vi al Hijo del hombre y me dijo: «Yo soy el primero y el último, el que vive. Estaba muerto,\npero ahora vivo por los siglos de los siglos, y tengo las llaves de la muerte y del hades.»\nV. Verdaderamente ha resucitado el Señor. Aleluya.\nR. Y se ha aparecido a Simón. Aleluya.",
+     "ref": "Cf. Ap 1, l7c-18"
+    },
+    {
+     "tipo": "oracion_laudes"
+    }
+   ],
+   "sexta": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "En Cristo, en su cuerpo glorificado, habita toda la plenitud de la deidad; e, incorporados a\nél, alcanzáis también vosotros esa plenitud en él. Con Cristo fuisteis sepultados en el\nbautismo, y con él resucitasteis mediante la fe en el poder de Dios, que lo resucitó de\nentre los muertos.\nV. Los discípulos se llenaron de alegría. Aleluya.\nR. Al ver al Señor. Aleluya.",
+     "ref": "Col 2, 9-10a. 12"
+    },
+    {
+     "tipo": "oracion_laudes"
+    }
+   ],
+   "nona": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "Acuérdate de Cristo Jesús, del linaje de David, que vive resucitado de entre los muertos,\ncomo enseño en mi mensaje de salud. Verdadera es la sentencia que dice: Si hemos\nmuerto con él, viviremos también con él.\nV. Quédate con nosotros, Señor. Aleluya.\nR. Porque ya es tarde. Aleluya.",
+     "ref": "2 Tm 2, 8. 11"
+    },
+    {
+     "tipo": "oracion_laudes"
+    }
+   ]
+  },
+  "visperas": [
+   {
+    "tipo": "lectura_breve",
+    "texto": "Tenemos un sumo sacerdote que está sentado a la diestra del trono de la Majestad en los\ncielos. Él es ministro del santuario, y de la verdadera Tienda de Reunión, que fue fabricada\npor el Señor y no por hombre alguno. Todo sumo sacerdote es instituido para ofrecer\noblaciones y sacrificios.",
+    "ref": "Hb 8, 1b-3a"
+   },
+   {
+    "tipo": "responsorio_breve",
+    "texto": "V. Los discípulos se llenaron de alegría. Aleluya, aleluya.\nR. Los discípulos se llenaron de alegría, Aleluya, aleluya.\nV. Al ver al Señor.\nR. Aleluya, aleluya.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. Los discípulos se llenaron de alegría. Aleluya, aleluya."
+   },
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "Ant. Lo que de la carne nace carne es, y lo que nace del Espíritu espíritu es. Aleluya."
+   },
+   {
+    "tipo": "preces",
+    "texto": "Llenos de gozo, oremos a Cristo, el Señor, que con su resurrección ha iluminado al mundo\nentero, y digámosle:\nCristo, vida nuestra, escúchanos.\n\nSeñor Jesús, que te hiciste compañero de camino de los discípulos que dudaban de ti,\n— acompaña también a tu Iglesia peregrina entre las dificultades e incertidumbres de esta\nvida.\n\nNo permitas que tus fieles sean tardos y necios para creer,\n— y aumenta su fe para que te proclamen vencedor de la muerte.\n\nMira, Señor, con bondad a cuantos no te reconocieron en su camino,\n— y manifiéstate a ellos para que te confiesen como salvador suyo.\n\nTú que por la cruz reconciliaste a todos los hombres, uniéndolos en tu cuerpo,\n— concede la paz y la unidad a las naciones.\nSe pueden añadir algunas intenciones libres.\n\nTú que eres el juez de vivos y muertos,\n— otorga a los difuntos que creyeron en ti la remisión de todas sus culpas.\n\nTerminemos nuestra oración con las palabras del Señor: Padre nuestro."
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Dios todopoderoso y eterno, a quien podemos llamar Padre, aumenta en nuestros\ncorazones el espíritu filial, para que merezcamos alcanzar la herencia prometida. Por\nnuestro Señor Jesucristo."
+   }
+  ]
+ },
+ "mar": {
+  "oficio": [
+   {
+    "tipo": "versiculo",
+    "texto": "V. Cristo, una vez resucitado de entre los muertos, ya no muere. Aleluya.\nR. La muerte no tiene ya poder sobre él. Aleluya."
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "Del libro del Apocalipsis 2, 1-11\n\nEXHORTACIÓN A LAS IGLESIAS DE ÉFESO Y ESMIRNA\n\nYo, Juan, oí que el Señor me decía:\n«Escribe al ángel de la Iglesia de Éfeso:\n\"Esto dice el que tiene en su diestra las siete estrellas y el que anda en medio de los\n\nsiete candelabros de oro: Conozco tus obras, tus trabajos, tu constancia en esperarme; sé\nque no puedes tolerar a los malos; que pusiste a prueba y hallaste mentirosos a los que se\ndicen apóstoles y no lo son; que eres constante en esperar y que, por mi nombre, has\npadecido sin desfallecer. Pero tengo algo contra ti: Que has perdido tu amor primero.\nRecuerda, pues, de qué altura has caído; y arrepiéntete y vuelve a tu conducta anterior. Si\nno, yo iré a ti, y removeré tu candelabro de su sitio, si no te arrepientes. Tienes a tu favor\nque aborreces las obras de los nicolaítas que aborrezco yo también.\n\nEl que tenga oídos oiga lo que el Espíritu dice a las Iglesias: Al vencedor le daré a\ncomer del árbol de la vida, que está en el paraíso de Dios.\"\n\nY al ángel de la Iglesia de Esmirna escribe:\n\"Esto dice el primero y el último, el que estaba muerto y revivió: Conozco tu tribulación\n\ny tu pobreza; aunque eres rico, conozco las injurias que contra ti profieren quienes a sí\nmismos se llaman judíos y no lo son, sino que son una sinagoga de Satanás. No temas por\nlo que vas a sufrir: el Diablo va a meter a algunos de vosotros en la cárcel para que seáis\ntentados, y sufriréis una tribulación de diez días. Mantente fiel hasta la muerte y te daré la\ncorona de la vida.\n\nEl que tenga oídos oiga lo que el Espíritu dice a las Iglesias: El vencedor no sufrirá\ndaño de la muerte segunda.\" »",
+    "anio": "I"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Mantente fiel hasta la muerte y te daré la corona de la vida. * El vencedor no sufrirá\ndaño de la muerte segunda. Aleluya.\nV. Hasta la muerte lucha por la justicia, y el Señor peleará a tu favor.\nR. El vencedor no sufrirá daño de la muerte segunda. Aleluya.",
+    "ref": "Ap 2, 10b. 1 lb; Sir 4, 33",
+    "anio": "I"
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "De los Hechos de los apóstoles 5, 17-42\n\nLOS APÓSTOLES ANTE EL CONSEJO DE ANCIANOS\n\nEn aquellos días, el sumo sacerdote y los de su partido —la secta de los saduceos—,\nllenos de coraje, mandaron prender a los apóstoles y meterlos en la cárcel común. Pero\npor la noche el ángel del Señor les abrió las puertas y los sacó fuera, diciéndoles: «Id al\ntemplo y explicadle allí al pueblo este modo de vida.»\n\nEntonces ellos entraron en el templo al amanecer y se pusieron a enseñar. Llegó entre\ntanto el sumo sacerdote con los de su partido, convocaron el Consejo y el pleno del\nsenado israelita y mandaron por los presos a la cárcel. Fueron los guardias, pero no los\nencontraron en la celda, y volvieron a informar: «Hemos encontrado la cárcel cerrada, con\nlas barras echadas, y a los centinelas guardando las puertas; pero al abrir no encontramos\na nadie dentro.»\n\nEl comisario del templo y los sumos sacerdotes no atinaban a explicarse qué había\npasado con los presos. Uno se presentó avisando: «Los hombres que metisteis en la cárcel\nestán ahí en el templo y siguen enseñando al pueblo.»\n\nEl comisario salió con los guardias y se los trajo, sin emplear la fuerza, por miedo a\nque el pueblo los apedrease. Los guardias condujeron a los apóstoles a presencia del\nConsejo, y el sumo sacerdote les interrogó: «¿No os habíamos prohibido expresamente\nenseñar en nombre de ése? En cambio, habéis llenado Jerusalén con vuestra enseñanza y\nqueréis hacernos responsables de la sangre de ese hombre.»\n\nPedro y los apóstoles replicaron: «Hay que obedecer a Dios antes que a los hombres.\nEl Dios de nuestros padres resucitó a Jesús, a quien vosotros matasteis colgándole de un\nmadero. La diestra de Dios lo exaltó haciéndole jefe y salvador, para otorgar a Israel la\nconversión, el perdón de los pecados. Testigos de esto somos nosotros y el Espíritu Santo,\nque Dios da a los que le obedecen.»\n\nAnte esta respuesta, se consumían de rabia y querían acabar con ellos. Pero se levantó\nen medio de la asamblea un fariseo, llamado Gamaliel, doctor de la ley, que era muy\nestimado en todo el pueblo. Mandó que hiciesen salir un momento a los apóstoles, y dijo:\n«Hombres de Israel, mirad bien lo que vais a hacer con estos hombres. Hace algún tiempo\nse presentó Teudas, diciendo que era un gran personaje, y se le juntaron como unos\ncuatrocientos hombres; pero murió de muerte violenta, y todos cuantos obedecían sus\nórdenes se dispersaron y quedaron reducidos a nada. Después de él, en los días del\nempadronamiento, apareció Judas el Galileo, que arrastró al pueblo en pos de sí; pereció\ntambién él, y los que lo seguían se dispersaron. Respecto del caso que nos ocupa ahora,\nyo os aconsejo lo siguiente: no os metáis con estos hombres y dejadlos en paz. Porque si\nesta idea o empresa es de hombres, se desvanecerá por sí misma. Pero, si realmente es\ncosa de Dios, no podréis destruirla. ¡No vaya a resultar que habéis hecho la guerra contra\nDios!»\n\nY se dejaron convencer por sus palabras. Llamaron luego a los apóstoles y, después de\nhaberlos hecho azotar, les prohibieron severamente hablar en el nombre de Jesús; y los\ndejaron ir. Ellos, por su parte, salieron del Consejo contentos de haber merecido aquel\nultraje por el nombre de Jesús. Ningún día dejaban de enseñar, en el templo y por las\ncasas, anunciando el Evangelio de Jesucristo.",
+    "anio": "II"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Los jefes de Jerusalén, una vez que cumplieron todo lo que estaba escrito de Jesús, lo\nbajaron de la cruz y lo depositaron en un sepulcro. * Pero Dios lo resucitó de entre los\nmuertos. Aleluya.\nV. Sin defensa, sin justicia, se lo llevaron; lo arrancaron de la tierra de los vivos.\nR. Pero Dios lo resucitó de entre los muertos. Aleluya.",
+    "ref": "Cf. Hch 13, 29-30a; Is 53, 8",
+    "anio": "II"
+   },
+   {
+    "tipo": "lectura2",
+    "texto": "De los libros de san Fulgencio de Ruspe, obispo, a Mónimo\n(Libro 2,11-12: CCL 91, 46-48)\n\nSACRAMENTO DE UNIDAD Y DE CARIDAD\n\nLa edificación espiritual del cuerpo de Cristo, que se realiza en la caridad (según la\nexpresión del bienaventurado Pedro, las piedras vivas entran en la construcción del templo\ndel Espíritu, formando un sacerdocio sagrado; para ofrecer sacrificios espirituales que Dios\nacepta por Jesucristo), esta edificación espiritual, repito, nunca se pide más\noportunamente que cuando el cuerpo de Cristo, que es la Iglesia; ofrece el mismo cuerpo\ny la misma sangre de Cristo en el sacramento del pan y del cáliz: El cáliz que bebemos es\ncomunión con la sangre de Cristo, y el pan que partimos es comunión con el cuerpo de\nCristo; el pan es uno, y así nosotros, aunque somos muchos, formamos un solo cuerpo,\nporque comemos todos del mismo pan.\n\nY lo que en consecuencia pedimos es que con la misma gracia con la que la Iglesia se\nconstruyó en cuerpo de Cristo, todos los miembros, unidos en la caridad, perseveren en la\nunidad del mismo cuerpo, sin que su unión se rompa.\n\nEsto es lo que pedimos que se realice en nosotros por gracia del Espíritu, que es el\nmismo Espíritu del Padre y del Hijo; porque la Santa Trinidad, en la unidad de naturaleza,\nigualdad y caridad, es el único, solo y verdadero Dios, que santifica en la unidad a los que\nadopta.\n\nPor lo cual dice la Escritura: El amor de Dios ha sido derramado en nuestros corazones\ncon el Espíritu Santo que se nos ha dado.\n\nPues el Espíritu Santo, que es el mismo Espíritu del Padre y del Hijo, en aquellos a\nquienes concede la gracia de la adopción divina, realiza lo mismo que llevó a cabo en\naquellos de quienes se dice, en el libro de los Hechos de los apóstoles, que habían\nrecibido este mismo Espíritu. De ellos se dice, en efecto: En el grupo de los creyentes\ntodos pensaban y sentían lo mismo; pues el Espíritu único del Padre y del Hijo, que, con el\nPadre y el Hijo es el único Dios, había creado un solo corazón y una sola alma en la\nmuchedumbre de los creyentes.\n\nPor lo que el Apóstol dice que esta unidad del Espíritu con el vínculo de la paz ha de\nser guardada con toda solicitud, y aconseja así a los Efesios: Yo, el prisionero por el Señor,\nos ruego que andéis, como pide la vocación a la que habéis sido convocados. Sed siempre\nhumildes y amables; sed comprensivos, sobrellevaos mutuamente con amor; esforzaos en\nmantener la unidad del Espíritu, con el vínculo de la paz.\n\nDios acepta y recibe con agrado a la Iglesia como sacrificio cuando la Iglesia conserva\nla caridad que derramó en ella el Espíritu Santo: así, si la Iglesia conserva la caridad del\nEspíritu, puede presentarse ante el Señor como una hostia viva, santa y agradable a Dios."
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Yo te ruego por todos los que han de creer en mí, para que todos sean uno, así como\ntú, Padre, estás en mí y yo en ti. Yo les he dado la gloria que tú me diste; * para que sean\nuno, como nosotros somos uno. Aleluya.\nV. Como tú me enviaste al mundo, así también yo los he enviado al mundo.\nR. Para que sean uno, como nosotros somos uno. Aleluya.",
+    "ref": "Jn 17, 20. 21. 22. 18"
+   },
+   {
+    "tipo": "oracion_laudes"
+   }
+  ],
+  "laudes": [
+   {
+    "tipo": "lectura_breve",
+    "texto": "Dios resucitó a Jesús de entre los muertos. Y durante muchos días se apareció a los que\ncon él habían subido de Galilea a Jerusalén: éstos, efectivamente, dan ahora testimonio de\nél ante el pueblo. Y  nosotros os damos la buena nueva: la promesa que Dios hizo a\nnuestros padres la ha cumplido él ahora con nosotros, sus hijos, resucitando a Jesús,\nsegún está escrito en el salmo segundo: «Tú eres mi Hijo; yo te he engendrado hoy.»",
+    "ref": "Hch 13, 30-33"
+   },
+   {
+    "tipo": "responsorio_breve",
+    "texto": "V. El Señor ha resucitado del sepulcro. Aleluya, aleluya,\nR. El Señor ha resucitado del sepulcro. Aleluya, aleluya.\nV. El que por nosotros colgó del madero.\nR. Aleluya, aleluya.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. El Señor ha resucitado del sepulcro. Aleluya, aleluya."
+   },
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "Ant. Yo soy el alfa y la omega, el primero y el último; yo soy el vástago y la descendencia\nde David, el lucero radiante de la mañana. Aleluya."
+   },
+   {
+    "tipo": "preces",
+    "texto": "Oremos agradecidos a Dios, Padre de nuestro Señor Jesucristo, el Cordero inmaculado que\nquitó el pecado del mundo y nos comunica su vida nueva, y digámosle:\nAutor de la vida, vivifícanos.\n\nDios, autor de la vida, acuérdate de la muerte y resurrección del Cordero inmolado en la\ncruz,\n— y atiende su continua intercesión por nosotros.\n\nHaz, Señor, que, tirada fuera la vieja levadura de la malicia y de la perversidad,\n— vivamos la Pascua de Cristo con panes ázimos de pureza y de verdad.\n\nQue sepamos rechazar hoy el pecado de discordia y de envidia,\n— y seamos más sensibles a las necesidades de nuestros hermanos.\n\nConcédenos vivir auténticamente el espíritu evangélico,\n— para que hoy y siempre sigamos el camino de tus mandatos.\nSe pueden añadir algunas intenciones libres.\n\nPorque deseamos que la luz de Cristo alumbre a todos los hombres, pidamos al Padre que\nsu reino llegue a nosotros: Padre nuestro."
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Te pedimos, Señor, que nos hagas capaces de anunciar la victoria de Cristo resucitado, y\npues en ella nos has dado la prenda de los dones futuros, haz que un día los poseamos en\nplenitud. Por nuestro Señor Jesucristo."
+   }
+  ],
+  "intermedia": {
+   "comun": [],
+   "tercia": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "Jesús es la piedra que desecharon los arquitectos y que se ha convertido en piedra\nangular; en ningún otro se encuentra la salud, y no hay bajo el cielo otro nombre dado a\nlos hombres por el que nosotros debamos salvarnos.\nV. Verdaderamente ha resucitado el Señor. Aleluya.\nR. Y se ha aparecido a Simón. Aleluya.",
+     "ref": "Cf. Hch 4, 11-12"
+    },
+    {
+     "tipo": "oracion_laudes"
+    }
+   ],
+   "sexta": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "A vosotros os salva el bautismo, el cual no es remoción de las manchas del cuerpo, sino la\npetición que hace a Dios una buena conciencia, en virtud de la resurrección de Jesucristo,\nque está a la diestra de Dios.\nV. Los discípulos se llenaron de alegría. Aleluya.\nR. Al ver al Señor. Aleluya.",
+     "ref": "Cf. 1 Pe 3, 21-22a"
+    },
+    {
+     "tipo": "oracion_laudes"
+    }
+   ],
+   "nona": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "Si habéis sido resucitados con Cristo, buscad las cosas de arriba, donde Cristo está\nsentado a la diestra de Dios. Poned vuestro corazón en las cosas del cielo, no en las de la\ntierra.\nV. Quédate con nosotros, Señor. Aleluya.\nR. Porque ya es tarde. Aleluya.",
+     "ref": "Col 3, 1-2"
+    },
+    {
+     "tipo": "oracion_laudes"
+    }
+   ]
+  },
+  "visperas": [
+   {
+    "tipo": "lectura_breve",
+    "texto": "Acercándoos al Señor, la piedra viva, rechazada por los hombres, pero escogida y\napreciada por Dios, también vosotros, como piedras vivas, entráis en la construcción del\ntemplo del Espíritu, formando un sacerdocio sagrado, para ofrecer sacrificios espirituales\nque Dios acepta por Jesucristo.",
+    "ref": "1 Pe 2, 4-5"
+   },
+   {
+    "tipo": "responsorio_breve",
+    "texto": "V. Los discípulos se llenaron de alegría. Aleluya, aleluya.\nR. Los discípulos se llenaron de alegría. Aleluya, aleluya.\nV. Al ver al Señor.\nR. Aleluya, aleluya.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. Los discípulos se llenaron de alegría. Aleluya, aleluya."
+   },
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "Ant. ¿Verdad que nuestros corazones ardían dentro de nosotros, mientras nos hablaba\nJesús en el camino? Aleluya."
+   },
+   {
+    "tipo": "preces",
+    "texto": "Invoquemos a Cristo, que con su resurrección ha reanimado la esperanza de su pueblo, y\ndigámosle:\nSeñor Jesús, tú que siempre vives para interceder por nosotros, escúchanos.\n\nSeñor Jesús, de cuyo costado abierto salió sangre y agua,\n— haz de la Iglesia tu esposa inmaculada.\n\nPastor supremo de la Iglesia, que después de tu resurrección encomendaste a Pedro, al\nconfesarte su amor, el cuidado de tus ovejas,\n— concede al papa N. un amor ardiente y un celo apostólico.\n\nTú que concediste una pesca abundante a los discípulos que pescaban en el mar,\n— envía operarios que continúen su trabajo apostólico.\n\nTú que preparaste a la orilla del mar el pan y los peces para los discípulos,\n— no permitas que nuestros hermanos mueran de hambre por culpa nuestra.\nSe pueden añadir algunas intenciones libres.\nSeñor Jesús, nuevo Adán, que nos das la vida, transforma a nuestros difuntos a imagen\ntuya.\n— para que compartan contigo la alegría de tu reino,\n\nSintiéndonos verdaderos hijos de Dios, digamos a nuestro Padre: Padre nuestro."
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Te pedimos, Señor, que nos hagas capaces de anunciar la victoria de Cristo resucitado, y\npues en ella nos has dado la prenda de los dones futuros, haz que un día los poseamos en\nplenitud. Por nuestro Señor Jesucristo."
+   }
+  ]
+ },
+ "mie": {
+  "oficio": [
+   {
+    "tipo": "versiculo",
+    "texto": "V. Dios resucitó a Cristo de entre los muertos. Aleluya.\nR. Para que nuestra fe y esperanza se centren en Dios. Aleluya."
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "Del libro del Apocalipsis 2, 12-29\n\nEXHORTACIÓN A LAS IGLESIAS DE PÉRGAMO Y TIATIRA\n\nYo, Juan, oí que el Señor me decía: «Escribe al ángel de la Iglesia de Pérgamo: \"Esto\ndice el que tiene la espada aguda, la de dos filos: Sé dónde habitas, como que vives\ndonde está el trono de Satanás. Sé que te mantienes firme en mi nombre y que no\nrenegaste de mi fe ni siquiera en los días en que Antipas, mi fiel testigo, fue muerto entre\nvosotros, ahí donde habita Satanás. Pero tengo algo contra ti: Toleras ahí a seguidores de\nla doctrina de Balaam, el que inducía a Balac a poner tropiezos ante los hijos de Israel, a\nque comiesen lo inmolado a los ídolos y a que fornicasen. Así también toleras tú a quienes\nsiguen la doctrina de los nicolaítas. Arrepiéntete, pues. Si no, mira que iré en seguida\nhacia ti y lucharé contra ellos con la espada de mi boca.\n\nEl que tenga oídos oiga lo que el Espíritu dice a las Iglesias: Al vencedor le daré del\nmaná escondido y una piedrecita blanca con un nombre nuevo escrito en ella, que nadie\nconoce sino aquel que lo recibe.\"\n\nY al ángel de la Iglesia de Tiatira escribe: \"Esto dice el Hijo de Dios, el que tiene sus\nojos como llamas de fuego y sus pies semejantes al bronce: Conozco tus obras, tu caridad\ny fidelidad, tus servicios y tu constancia en esperarme y tus últimas obras que superan a\nlas primeras. Pero tengo algo contra ti: Que toleras a Jezabel, esa mujer que se dice a sí\nmisma profetisa, que extravía con su doctrina a mis siervos para que forniquen y coman\nde lo ofrecido a los ídolos. Yo le he dado tiempo para arrepentirse; pero no quiere\narrepentirse de su prostitución. Voy a postrarla en el lecho del dolor, y a los que adulteran\ncon ella los sumergiré en una gran tribulación, si no se arrepienten de sus obras. Y a sus\nhijos los haré morir sin piedad. Así conocerán todas las Iglesias que yo soy quien\nescudriña las entrañas y los corazones, y el que os dará a cada uno según sus obras.\n\nPero a los demás que quedáis en Tiatira, a los que no seguís semejante doctrina, a los\nque no conocisteis las profundidades de Satanás, como dicen ellos, yo os digo: No arrojaré\nsobre vosotros otra carga. Mantened sólo la que tenéis, hasta que yo vaya.\n\nY al que salga vencedor y me sea fiel hasta el fin le daré potestad sobre las naciones, y\nlas gobernará con cetro de hierro, como se quiebran los jarros de loza, así como he\nrecibido yo de mi Padre esta potestad; y le daré, además, el lucero del alba. El que tenga\noídos oiga lo que el Espíritu dice a las Iglesias.\"»",
+    "anio": "I"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Esto dice el Hijo de Dios, el que tiene sus ojos como llamas de fuego: «Yo soy quien\nescudriña las entrañas y los corazones, * y daré a cada uno según sus obras.» Aleluya.\nV. Mira, llego en seguida y traigo conmigo mi salario.\nR. Y daré a cada uno según sus obras. Aleluya.",
+    "ref": "Ap 2, 18. 23; 22, 12a",
+    "anio": "I"
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "De los Hechos de los apóstoles 6, 1-15\n\nELECCIÓN DE LOS PRIMEROS DIÁCONOS: SIETE HOMBRES LLENOS DEL  ESPÍRITU\nSANTO\n\nPor aquellos días, habiendo aumentado el número de los discípulos, se levantaron\nquejas de los helenistas contra los hebreos, porque se atendía mal a sus viudas en la\nasistencia diaria. Los Doce convocaron entonces a la asamblea de los discípulos y dijeron:\n\n«No está bien que nosotros descuidemos la palabra de Dios por atender al servicio de\nlas mesas. Elegid, pues, hermanos, de entre vosotros, a siete hombres llenos del Espíritu\nSanto y de sabiduría, a quienes podamos encomendar este servicio. Nosotros, por nuestra\nparte, nos dedicaremos a la oración en común y al ministerio de la palabra.»\n\nY pareció bien esta proposición a toda la comunidad. Y eligieron a Esteban, hombre\nlleno de fe y del Espíritu Santo, y a Felipe, Prócoro, Nicanor, Timón, Pármenas y Nicolás,\nprosélito de Antioquía. Los presentaron a los apóstoles, quienes, después de orar, les\nimpusieron las manos. El Evangelio se extendía cada vez más, y se multiplicaba\nextraordinariamente el número de los discípulos en Jerusalén. Era también numeroso el\ngrupo de los sacerdotes que abrazaban la fe.\n\nEsteban, lleno de gracia y de poder sobrenatural, obraba señales y prodigios entre el\npueblo. Algunos de la facción llamada de los libertos y algunos cirenenses y alejandrinos y\notros de Cilicia y del Asia proconsular se levantaron a disputar con Esteban; pero no\npodían resistir a la sabiduría y al espíritu con que hablaba.\n\nPor eso sobornaron a algunos para que presentasen esta acusación: «Nosotros le\nhemos oído proferir blasfemias contra Moisés y contra Dios.»\n\nAsí excitaron los ánimos del pueblo, de los ancianos y de los escribas. Luego, cayendo\nde improviso sobre él, lo arrebataron y lo condujeron ante el Consejo. Allí hicieron\ncomparecer testigos falsos con esta acusación: «Este hombre no cesa de hablar contra el\nlugar santo y contra la ley. Nosotros le hemos oído decir que ese Jesús Nazareno destruirá\neste templo y cambiará las costumbres que nos ha transmitido Moisés.»\n\nTodos los que estaban sentados en el Consejo pusieron en él los ojos, y vieron su\nrostro como el de un ángel.",
+    "anio": "II"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Eligieron a siete hombres llenos del Espíritu Santo y de sabiduría. * Y, después de orar,\nles impusieron las manos. Aleluya.\nV. El Señor dijo a Moisés: «Escoge entre los israelitas a los levitas, y los demás israelitas\nles impondrán las manos.»\nR. Y, después de orar, les impusieron las manos. Aleluya.",
+    "ref": "Cf. Hch 6, 3. 6; cf. Nm 8, 5, 6. 10",
+    "anio": "II"
+   },
+   {
+    "tipo": "lectura2",
+    "texto": "De los sermones de san León Magno, papa\n(Sermón 12 sobre la pasión del Señor, 3, 6-7: PL 54, 355-357)\n\nCRISTO VIVE EN SU IGLESIA\n\nEs indudable, queridos hermanos, que la naturaleza humana fue asumida tan\níntimamente por el Hijo de Dios que no sólo en él, que es el primogénito de toda criatura\nsino también en todos sus santos, no hay más que un solo Cristo; pues, del mismo modo\nque la cabeza no puede separarse de los miembros, tampoco los miembros de la cabeza.\n\nAunque no es propio de esta vida, sino de la eterna, el que Dios lo sea todo en todos,\nno por ello deja de ser ahora el Señor huésped, inseparable de su templo que es la\nIglesia, de acuerdo con lo que él mismo prometió al decir: Sabed que yo estoy con\nvosotros todos los días, hasta el fin del mundo.\n\nPor ello, todo cuanto el Hijo de Dios hizo y enseñó para la reconciliación del mundo, no\nsólo podemos conocerlo por la historia de los acontecimientos pasados, sino también\nsentirlo en la eficacia de las obras presentes.\n\nPor obra del Espíritu Santo nació él de una Virgen; y por obra del mismo Espíritu Santo\nfecunda también su Iglesia pura, a fin de que, a través del bautismo, dé a luz a una\nmultitud innumerable de hijos de Dios, de quienes está escrito: Éstos no han nacido de\nsangre, ni de amor carnal, ni de amor humano, sino de Dios.\n\nÉl es aquel vástago en quien fue bendecida la descendencia de Abrahán y por quien la\nadopción filial se extendió a todos los pueblos, llegando por ello Abrahán a ser el padre de\ntodos los hijos nacidos, no de la carne, sino de la fe en la promesa.\n\nÉl es también quien, sin excluir a ningún pueblo, ha reunido en una sola grey las\nsantas ovejas de todas las naciones que hay bajo el cielo, realizando cada día lo que\nprometió cuando dijo: Tengo, además, otras ovejas que no son de este redil; también a\nesas las tengo que traer, y escucharán mi voz y habrá un solo rebaño, un solo pastor.\n\nPorque, si bien fue a Pedro a quien dijo principalmente: Apacienta mis ovejas, sólo el\nSeñor es quien controla el cuidado de todos los pastores, y alimenta a los que acuden a la\nroca de su Iglesia con tan abundantes y regados pastos, que son innumerables las ovejas\nque, fortalecidas con suculencia de su amor, no dudan en morir por el nombre del pastor,\ncomo el buen Pastor se dignó ofrecer su vida por sus ovejas.\n\nEs él también aquel en cuya pasión participa no sólo la gloriosa fortaleza de los\nmártires, sino también la fe de todos los que renacen en el bautismo.\n\nPor este motivo la Pascua del Señor se celebra legítimamente con ázimo de sinceridad\ny de verdad si, desechado el fermento de la antigua malicia, la nueva criatura se embriaga\ny nutre del mismo Señor. Porque la participación del cuerpo y de la sangre de Cristo no\nhace otra cosa sino convertirnos en lo que recibimos: y seamos portadores, en nuestro\nespíritu y en nuestra carne, de aquel en quien y con quien hemos sido muertos,\nsepultados y resucitados."
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Yo soy el buen Pastor, * y conozco a mis ovejas y ellas me conocen a mí. Aleluya.\nV. Yo mismo buscaré mis ovejas y seguiré sus huellas, y las sacaré de entre los pueblos y\nlas apacentaré.\nR. Yo conozco a mis ovejas y ellas me conocen a mí. Aleluya.",
+    "ref": "Jn 10, 14; Ez 34, 11. 13"
+   },
+   {
+    "tipo": "oracion_laudes"
+   }
+  ],
+  "laudes": [
+   {
+    "tipo": "lectura_breve",
+    "texto": "Si verdaderamente hemos muerto con Cristo, tenemos fe de que también viviremos con\nél, pues sabemos que Cristo, una vez resucitado de entre los muertos, ya no muere; la\nmuerte no tiene ya poder sobre él. Su muerte fue un morir al pecado de una vez para\nsiempre, mas su vida es un vivir para Dios. Así también, considerad vosotros que estáis\nmuertos al pecado, pero que vivís para Dios en unión con Cristo Jesús.",
+    "ref": "Rm 6, 8-11"
+   },
+   {
+    "tipo": "responsorio_breve",
+    "texto": "V. El Señor ha resucitado del sepulcro. Aleluya, aleluya.\nR. El Señor ha resucitado del sepulcro. Aleluya, aleluya.\nV. El que por nosotros colgó del madero.\nR. Aleluya, aleluya.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. El Señor ha resucitado del sepulcro. Aleluya, aleluya."
+   },
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "Ant. Tanto amó Dios al mundo que le entregó su Hijo único, para que todo el que crea en\nél no perezca, sino que tenga vida eterna. Aleluya."
+   },
+   {
+    "tipo": "preces",
+    "texto": "Dirijámonos a Dios, que quiso manifestar a Jesús resucitado a los apóstoles, y digámosle\nsuplicantes:\nIlumínanos, Señor, con la claridad de tu Cristo.\n\nSeñor, fuente de toda luz, te aclamamos con acción de gracias en esta mañana, porque\nnos has llamado a participar de tu luz admirable,\n— y nos has querido dar la salvación.\n\nHaz, Señor, que la fuerza del Espíritu Santo nos purifique y nos fortalezca,\n— para que con nuestro trabajo hagamos más humana la vida de los hombres.\n\nHaz que nos entreguemos de tal modo al servicio de nuestros hermanos,\n— que logremos hacer de la familia humana una ofrenda agradable a tus ojos.\n\nLlénanos, desde el principio de este nuevo día, de tu misericordia,\n— para que en toda nuestra jornada nos gocemos en tu alabanza.\nSe pueden añadir algunas intenciones libres.\nConcluyamos nuestra oración, diciendo juntos las palabras de Jesús, nuestro maestro:\nPadre nuestro."
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Al revivir nuevamente este año el misterio pascual, en el que la humanidad recobra la\ndignidad perdida y adquiere la esperanza de la resurrección futura, te pedimos,  Señor de\nclemencia, que el misterio celebrado en la fe se actualice siempre en el amor. Por nuestro\nSeñor Jesucristo."
+   }
+  ],
+  "intermedia": {
+   "comun": [],
+   "tercia": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "Creemos en aquel que resucitó de entre los muertos a Jesús, nuestro Señor, que fue\nentregado a la muerte por nuestros pecados, y resucitado para nuestra justificación.\nV. Verdaderamente ha resucitado el Señor. Aleluya.\nR. Y se ha aparecido a Simón. Aleluya.",
+     "ref": "Cf. Rm 4, 24-25"
+    },
+    {
+     "tipo": "oracion_laudes"
+    }
+   ],
+   "sexta": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "¿Quién es el que vence al mundo, sino el que cree que Jesús es el Hijo de Dios? Él,\nJesucristo, vino por el agua y por la sangre; no con el agua solamente, sino con el agua y\ncon la sangre.\nV. Los discípulos se llenaron de alegría. Aleluya.\nR. Al ver al Señor. Aleluya.",
+     "ref": "1 Jn 5, 5-6a"
+    },
+    {
+     "tipo": "oracion_laudes"
+    }
+   ],
+   "nona": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "Renovaos en la mente y en el espíritu y vestíos de la nueva condición humana, creada a\nimagen de Dios: justicia y santidad verdaderas.\nV. Quédate con nosotros, Señor. Aleluya.\nR. Porque ya es tarde. Aleluya.",
+     "ref": "Cf. Ef 4, 23-24"
+    },
+    {
+     "tipo": "oracion_laudes"
+    }
+   ]
+  },
+  "visperas": [
+   {
+    "tipo": "lectura_breve",
+    "texto": "Jesús, como permanece para siempre, tiene un sacerdocio eterno. De aquí que tiene\npoder para llevar a la salvación definitiva a cuantos por él se vayan acercando a Dios,\nporque vive para siempre para interceder por ellos. Y tal era precisamente el sumo\nsacerdote que nos convenía: santo, sin maldad, sin mancha, excluido del número de los\npecadores y exaltado más alto que los cielos. No tiene necesidad, como los sumos\nsacerdotes, de ofrecer víctimas cada día, primero por sus propios pecados y luego por los\ndel pueblo. Esto lo hizo una vez por todas, ofreciéndose a sí mismo.",
+    "ref": "Hb 7, 24-27"
+   },
+   {
+    "tipo": "responsorio_breve",
+    "texto": "V. Los discípulos se llenaron de alegría. Aleluya, aleluya,\nR. Los discípulos se llenaron de alegría. Aleluya, aleluya.\nV. Al ver al Señor.\nR. Aleluya, aleluya.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. Los discípulos se llenaron de alegría. Aleluya, aleluya,"
+   },
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "Ant. El que obra la verdad viene a la luz y manifiesta que sus obras han sido hechas según\nDios. Aleluya."
+   },
+   {
+    "tipo": "preces",
+    "texto": "Imploremos a Dios Padre, que por la resurrección de su Hijo de entre los muertos nos ha\nabierto el camino de la vida eterna, y digámosle:\nPor la victoria de Cristo, salva, Señor, a tus redimidos.\n\nDios de nuestros padres, que has glorificado a tu Hijo Jesús, resucitándolo de entre los\nmuertos,\n\n— convierte nuestros corazones, para que vivamos la nueva vida de tu Hijo resucitado.\n\nTú que nos has devuelto al Pastor y guardián de nuestras vidas, cuando éramos ovejas\ndescarriadas,\n— consérvanos en fidelidad a tu Evangelio, bajo la guía de los obispos de tu Iglesia.\n\nTú que elegiste a los primeros discípulos de tu Hijo de entre el pueblo de Israel,\n— revela a los hijos de este pueblo el cumplimiento de las promesas que hiciste a sus\npadres.\n\nAcuérdate, Señor, de los huérfanos, de las viudas, de los esposos que viven separados y\nde todos nuestros hermanos abandonados,\n— y no permitas que vivan en la soledad los que fueron reconciliados por la muerte de tu\nHijo.\nSe pueden añadir algunas intenciones libres.\nTú que llamaste a ti a Esteban, el cual confesó que Jesús estaba a tu derecha,\n— recibe a nuestros hermanos difuntos que esperaron tu venida en la fe y en el amor.\n\nDigamos ahora todos juntos la oración que nos enseñó el mismo Jesús: Padre nuestro."
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Al revivir nuevamente este año el misterio pascual, en el que la humanidad recobra la\ndignidad perdida y adquiere la esperanza de la resurrección futura, te pedimos,  Señor de\nclemencia, que el misterio celebrado en la fe se actualice siempre en el amor. Por nuestro\nSeñor Jesucristo."
+   }
+  ]
+ },
+ "jue": {
+  "oficio": [
+   {
+    "tipo": "versiculo",
+    "texto": "V. Dios resucitó al Señor. Aleluya.\nR. Y nos resucitará también a nosotros por su poder. Aleluya."
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "Del libro del Apocalipsis 3, 1-22\n\nEXHORTACIÓN A LAS IGLESIAS DE SARDES, FILADELFIA Y LAODICEA\n\nYo, Juan, oí que el Señor me decía: «Escribe al ángel de la Iglesia de Sardes: \"Esto\ndice el que tiene los siete espíritus de Dios y las siete estrellas: Conozco tus obras. Tienes\nnombre como alguien que vive, pero estás muerto. Ponte alerta y reanima lo que queda y\nque está a punto de morir, pues no he hallado perfectas tus obras en la presencia de mi\nDios. Así que, recuerda cómo has recibido y escuchado mi palabra, y guárdala y\nconviértete. Porque, si no estás alerta, vendré como el ladrón, sin que sepas la hora en\nque voy a llegar. Tienes, sin embargo, en Sardes algunas pocas personas que no han\n\nmanchado sus vestidos; ellos andarán conmigo vestidos de blanco, porque son dignos de\nello.\n\nEl vencedor será así revestido con vestiduras blancas. No borraré jamás su nombre del\nlibro de la vida, sino que lo proclamaré en presencia de mi Padre y de sus ángeles. El que\ntenga oídos oiga lo que el Espíritu dice a las Iglesias.\"\n\nAl ángel de la Iglesia de Filadelfia escribe: \"Esto dice el Santo, el Veraz, el que tiene la\nllave de David, el que abre sin que nadie pueda cerrar, el que cierra sin que nadie pueda\nabrir: Conozco tus obras. He abierto ante ti una puerta que nadie puede cerrar. Porque, no\nobstante tus pocas fuerzas, has guardado mi palabra y no has renegado de mi nombre,\nvoy a entregarte algunos adeptos de la sinagoga de Satanás, de los que, mintiendo, se\nproclaman a sí mismos judíos, sin serlo en realidad. Yo los haré venir y se postrarán a tus\npies y sabrán que yo te he amado. Y, porque has guardado la palabra de mi constancia, yo\ntambién te guardaré en la hora de la prueba que va a venir sobre el mundo entero, para\nprobar a los habitantes de la tierra. Llegaré pronto: sostén lo que tengas, para que nadie\nte quite tu corona.\n\nAl que venza lo haré columna en el templo de mi Dios, y ya nunca saldrá fuera, y sobre\nél escribiré el nombre de mi Dios y el nombre de la ciudad de mi Dios, los, de la nueva\nJerusalén, que baja del cielo desde mi Dios y mi nombre nuevo. El que tenga oídos oiga lo\nque el Espíritu dice a las Iglesias.\"\n\nAl ángel de la Iglesia de Laodicea escribe: \"Esto dice 'el Amén', el testigo fiel y veraz, el\nprincipio de la creación de Dios: Conozco tus obras, no eres ni frío ni caliente. ¡Ojalá\nfueras frío o caliente! Pero, porque eres tibio y no eres frío ni caliente, estoy por vomitarte\nde mi boca. Dices: 'Soy rico, he acumulado riquezas y de nada tengo necesidad'; y no\nsabes que eres tú el desventurado, el miserable, el indigente, el ciego y el desnudo. Por\neso yo te aconsejo que compres de mi oro acrisolado por el fuego para enriquecerte,\nvestiduras blancas para vestirte y, así, no descubrir la vergüenza de tu desnudez, y colirio\npara untar tus ojos y poder ver.\n\nYo reprendo y corrijo a cuantos amo. ¡Ánimo, pues, y arrepiéntete! Mira que estoy a la\npuerta y llamo; si alguno escucha mi voz y me abre la puerta entraré en su casa, cenaré\ncon él y él conmigo.\n\nAl vencedor lo sentaré en mi trono, junto a mí; lo mismo que yo, cuando vencí, me\nsenté en el trono de mi Padre, junto a él. El que tenga oídos oiga lo que el Espíritu dice a\nlas Iglesias.",
+    "anio": "I"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Si alguno escucha mi voz y me abre la puerta * entraré en su casa, cenaré con él y él\nconmigo. Aleluya.\nV. Al vencedor le daré a comer del árbol de la vida, que está en el paraíso de Dios.\nR. Entraré en su casa, cenaré con él y él conmigo. Aleluya.",
+    "ref": "Ap 3, 20; 2, 7",
+    "anio": "I"
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "De los Hechos de los apóstoles 7, 1-16\n\nCOMIENZO DEL DISCURSO DE ESTEBAN SOBRE LA HISTORIA DE LOS PATRIARCAS\n\nEn aquellos días, el sumo sacerdote preguntó a Esteban:  «¿Es verdad lo que éstos\ndicen?»\n\nÉl contestó: «Hermanos y padres, escuchad: El Dios de la gloria se apareció a nuestro\npadre Abraham, cuando vivía en Mesopotamia, antes de establecerse en Harán, y le dijo:\n\"Sal de tu tierra y de tu parentela; y vete a la tierra que yo te indicaré.\" Salió entonces del\npaís de los caldeos y se estableció en Harán. Y de allí, después de la muerte de su padre,\n\nDios lo trasladó a esta tierra que vosotros habitáis ahora. Y no le dio propiedad en ella, ni\nsiquiera de un palmo de terreno. Eso sí, le hizo promesa de darla en posesión a él y a su\ndescendencia, cuando no tenía hijos todavía.\n\nY Dios le habló así: \"Tus descendientes vivirán en tierra extranjera, y serán reducidos a\nesclavitud y maltratados por espacio de cuatrocientos años; pero yo juzgaré al pueblo que\nlos va a esclavizar —palabra de Dios—. Después de esto, saldrán en libertad y me darán\nculto en este lugar.\" Luego hizo un pacto con él, pacto que selló con la circuncisión. De\nesta manera llegó a ser Abraham padre de Isaac, a quien circuncidó al octavo día; e Isaac\nlo fue de Jacob, y Jacob de los doce patriarcas.\n\nLos patriarcas, por pura envidia, vendieron a José como esclavo con destino a Egipto;\npero Dios, que estaba con él, lo libró de todas las tribulaciones, y le dio gracia y sabiduría\nante el Faraón, rey de Egipto, quien lo constituyó gobernador de Egipto y de toda su casa.\nSobrevino entonces en todo Egipto y en Canaán un hambre y una miseria tan grande que\nnuestros padres no encontraban provisión alguna. Habiéndose enterado Jacob de que\nhabía trigo en Egipto, envió allá a nuestros padres en un primer viaje. En el segundo viaje,\nJosé se dio a conocer a sus hermanos, y así el Faraón llegó a tener conocimiento del linaje\nde José.\n\nJosé hizo venir a su padre Jacob con toda su familia; eran setenta y cinco personas en\ntotal. Y Jacob bajó a Egipto, donde murieron él y también nuestros padres. Y los\ntrasladaron a Siquem, y los depositaron en el sepulcro que Abraham había comprado a\nprecio de plata a los hijos de Emor, en Siquem.»",
+    "anio": "II"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Muy versado en las Escrituras e instruido en la doctrina del Señor, hablaba con fervor\nde espíritu *  y enseñaba rectamente todo lo referente a Jesús. Aleluya.\nV. Esteban, lleno de gracia y de poder sobrenatural, obraba señales y prodigios entre el\npueblo.\nR. Y enseñaba rectamente todo lo referente a Jesús. Aleluya.",
+    "ref": "Cf. Hch 18, 24. 25; 6, 8",
+    "anio": "II"
+   },
+   {
+    "tipo": "lectura2",
+    "texto": "De los tratados de san Gaudencio de Brescia, obispo\n(Tratado 2: CSEL 68, 30-32)\n\nLA RICA HERENCIA DEL NUEVO TESTAMENTO\n\nEl sacrificio celeste instituido por Cristo constituye efectivamente la rica herencia del\nnuevo Testamento que el Señor nos dejó, como prenda de su presencia, la noche en que\niba a ser entregado para morir en la cruz.\n\nÉste es el viático de nuestro viaje, con el que nos alimentamos y nutrimos durante el\ncamino de esta vida, hasta que saliendo de este mundo lleguemos a él; por eso decía el\nmismo Señor: Si no coméis mi carne y no bebéis mi sangre, no tenéis vida en vosotros.\n\nQuiso, en efecto, que sus beneficios quedaran entre nosotros, quiso que las almas,\nredimidas por su preciosa sangre; fueran santificadas por este sacramento, imagen de su\npasión; y encomendó por ello a sus fieles discípulos, a los que constituyó primeros\nsacerdotes de su Iglesia, que siguieran celebrando ininterrumpidamente estos misterios de\nvida eterna; misterios que han de celebrar todos los sacerdotes de cada una de las iglesias\nde todo el orbe, hasta el glorioso retorno de Cristo. De este modo los sacerdotes, junto\ncon toda la comunidad de creyentes, contemplando todos los días el sacramento de la\npasión de Cristo, llevándolo en sus manos, tomándolo en la boca y recibiéndolo en el\npecho, mantendrán imborrable el recuerdo de la redención.\n\nEl pan, formado de muchos granos de trigo convertidos en flor de harina, se hace con\nagua y llega a su entero ser por medio del fuego; por ello resulta fácil ver en él una\nimagen del cuerpo de Cristo, el cual, como sabemos, es un solo cuerpo formado por una\nmultitud de hombres de toda raza, y llega a su total perfección por el fuego del Espíritu\nSanto.\n\nCristo, en efecto, nació del Espíritu Santo y, como convenía que cumpliera todo lo que\nDios quiere, entró en el Jordán para consagrar las aguas del bautismo, y después salió del\nagua lleno del Espíritu Santo, que había descendido sobre él en forma de paloma, como lo\natestigua el evangelista: Jesús, lleno del Espíritu Santo, volvió del Jordán.\n\nDe modo semejante, el vino de su sangre, cosechado de los múltiples racimos de la\nviña por él plantada, se exprimió en el lagar de la cruz y bulle por su propia fuerza en los\nvasos generosos de quienes lo beben con fe.\n\nLos que acabáis de libraros del poder de Egipto y del Faraón, que es el diablo,\ncompartid en nuestra compañía, con toda la avidez de vuestro corazón creyente, este\nsacrificio de la Pascua salvadora; para que el mismo Señor nuestro, Jesucristo, al que\nreconocemos presente en sus sacramentos, nos santifique en lo más íntimo de nuestro\nser: cuyo poder inestimable permanece por los siglos."
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Jesús tomó pan, dio gracias, lo partió y lo dio a sus discípulos, diciendo: * «Esto es mi\ncuerpo que va a ser entregado por vosotros; haced esto en memoria mía.» Aleluya.\nV. Éste es el pan que ha bajado del cielo; el que coma de este pan vivirá para siempre.\nR. Esto es mi cuerpo que va a ser entregado por vosotros; haced esto en memoria mía.\nAleluya.",
+    "ref": "Lc 22, 19; Jn 6, 59"
+   },
+   {
+    "tipo": "oracion_laudes"
+   }
+  ],
+  "laudes": [
+   {
+    "tipo": "lectura_breve",
+    "texto": "Si Cristo está en vosotros, aunque vuestro cuerpo haya muerto por causa del pecado, el\nespíritu tiene vida por la justificación. Y si el Espíritu de aquel que resucitó a Jesús de\nentre los muertos habita en vosotros el mismo que resucitó a Cristo Jesús de entre los\nmuertos vivificará también vuestros cuerpos mortales por obra de su Espíritu que habita\nen vosotros.",
+    "ref": "Rm 8, 10-11"
+   },
+   {
+    "tipo": "responsorio_breve",
+    "texto": "V. El Señor ha resucitado del sepulcro. Aleluya, aleluya.\nR. El Señor ha resucitado del sepulcro. Aleluya, aleluya.\nV. El que por nosotros colgó del madero.\nR. Aleluya, aleluya.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. El Señor ha resucitado del sepulcro. Aleluya, aleluya."
+   },
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "Ant. El Padre ama al Hijo y ha puesto en sus manos todas las cosas. Aleluya."
+   },
+   {
+    "tipo": "preces",
+    "texto": "Oremos confiados a Dios Padre, que quiso que Cristo fuera la primicia de la resurrección\nde los hombres, y aclamémoslo, diciendo:\nQue el Señor Jesús sea nuestra vida.\n\nTú que por la columna de fuego iluminaste a tu pueblo en el desierto,\n— ilumina hoy con la resurrección de Cristo el día que empezamos.\n\nTú que por la voz de Moisés adoctrinaste a tu pueblo en el Sinaí,\n— haz que Cristo, por su resurrección, sea hoy palabra de vida para nosotros.\n\nTú que con el maná alimentaste a tu pueblo peregrino en el desierto,\n— haz que Cristo, por su resurrección, sea durante este día nuestro pan de vida.\n\nTú que por el agua de la roca diste de beber a tu pueblo en el desierto,\n— por la resurrección de tu Hijo danos hoy parte en tu Espíritu de vida.\nSe pueden añadir algunas intenciones libres.\nPor Jesús hemos sido hechos hijos de Dios; por eso nos atrevemos a decir: Padre nuestro."
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Te pedimos, Señor, que los dones recibidos en esta Pascua den fruto abundante en toda\nnuestra vida. Por nuestro Señor Jesucristo."
+   }
+  ],
+  "intermedia": {
+   "comun": [],
+   "tercia": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "Todos nosotros, judíos y griegos, esclavos y libres, hemos sido bautizados en un mismo\nEspíritu, para formar un solo cuerpo. Y todos hemos bebido de un solo Espíritu.\nV. Verdaderamente ha resucitado el Señor. Aleluya.\nR. Y se ha aparecido a Simón. Aleluya.",
+     "ref": "1 Co 12, 1"
+    },
+    {
+     "tipo": "oracion_laudes"
+    }
+   ],
+   "sexta": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "Dios nos trajo la salud mediante el baño bautismal de regeneración y renovación que obra\nel Espíritu Santo. Él derramó con toda profusión sobre nosotros este Espíritu por Cristo\nJesús, nuestro salvador. Así, justificados por la gracia de Cristo, hemos obtenido la\nesperanza de poseer en herencia la vida eterna.\nV. Los discípulos se llenaron de alegría. Aleluya.\nR. Al ver al Señor. Aleluya.",
+     "ref": "Tt 3, 5b-7"
+    },
+    {
+     "tipo": "oracion_laudes"
+    }
+   ],
+   "nona": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "Damos gracias a Dios Padre, que nos ha hecho capaces de compartir la herencia del\npueblo santo en la luz. Él nos ha sacado del dominio de las tinieblas, y nos ha trasladado\nal reino de su Hijo querido, por cuya sangre hemos recibido la redención, el perdón de los\npecados.\nV. Quédate con nosotros, Señor. Aleluya.\nR. Porque ya es tarde. Aleluya.",
+     "ref": "Cf. Col 1, 12-14"
+    },
+    {
+     "tipo": "oracion_laudes"
+    }
+   ]
+  },
+  "visperas": [
+   {
+    "tipo": "lectura_breve",
+    "texto": "Cristo murió una sola vez por nuestros pecados, siendo justo murió por nosotros los\ninjustos, para llevarnos a Dios. Fue entregado a la muerte según la carne, pero fue\nresucitado según el espíritu. Él, después de subir al cielo, está a la diestra de Dios y le\nestán sometidos  los ángeles, las dominaciones y las potestades.",
+    "ref": "1 Pe 3, 18. 22"
+   },
+   {
+    "tipo": "responsorio_breve",
+    "texto": "V. Los discípulos se llenaron de alegría. Aleluya, aleluya.\nR. Los discípulos se llenaron de alegría. Aleluya, aleluya.\nV. Al ver al Señor.\nR. Aleluya, aleluya.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. Los discípulos se llenaron de alegría. Aleluya, aleluya."
+   },
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "Ant. El que tiene fe en el Hijo tiene la vida eterna. Aleluya."
+   },
+   {
+    "tipo": "preces",
+    "texto": "Alabemos y glorifiquemos a Cristo, a quien Dios Padre constituyó fundamento de nuestra\nesperanza y primicia de la humanidad resucitada, y aclamémoslo suplicantes:\nRey de la gloria, escúchanos.\n\nSeñor Jesús, tú que, por tu propia sangre y por tu resurrección, penetraste en el santuario\nde Dios,\n— llévanos contigo al reino del Padre.\n\nTú que, por tu resurrección, robusteciste la fe de tus discípulos y los enviaste a anunciar el\nEvangelio al mundo,\n— haz que los obispos y presbíteros sean fieles heraldos de tu Evangelio.\n\nTú que, por tu resurrección, eres nuestra reconciliación y nuestra paz,\n— haz que todos los bautizados vivan en la unidad de una sola fe y de un solo amor.\n\nTú que, por tu resurrección, diste la salud al tullido del templo,\n— mira con bondad a los enfermos y manifiesta en ellos tu gloria.\nSe pueden añadir algunas intenciones libres.\n\nTú que, por tu resurrección, fuiste constituido primogénito de los muertos que resucitan,\n— haz que los difuntos que en ti creyeron y esperaron participen de tu gloria.\n\nTerminemos nuestra oración con las palabras del Señor: Padre nuestro."
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Te pedimos, Señor, que los dones recibidos en esta Pascua den fruto abundante en toda\nnuestra vida. Por nuestro Señor Jesucristo."
+   }
+  ]
+ },
+ "vie": {
+  "oficio": [
+   {
+    "tipo": "versiculo",
+    "texto": "V. En tu resurrección, oh Cristo. Aleluya.\nR. El cielo y la tierra se alegran. Aleluya."
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "Del libro del Apocalipsis 4, 1-11\n\nVISIÓN DE DIOS\n\nYo, Juan, tuve una visión:\nVi una puerta abierta en el cielo, y la voz que había oído antes, semejante al sonido de\n\nuna trompeta, me hablaba y decía: «Sube acá, y te mostraré lo que ha de suceder\ndespués de esto.»\n\nAl punto fui arrebatado en espíritu, y vi un trono levantado en el cielo y Alguien estaba\nsentado en el trono. El que estaba en el trono tenía el aspecto semejante al de una piedra\nde jaspe y cornalina; y un arco iris, como de esmeralda, formaba un nimbo sobre el trono.\nAlrededor de este trono vi otros veinticuatro tronos; y sobre los tronos estaban sentados\nveinticuatro ancianos, vestidos con túnicas blancas y con coronas de oro sobre sus\ncabezas. Del trono salían relámpagos, y voces y truenos. Y siete lámparas de fuego, que\nson los siete espíritus de Dios, ardían delante del trono. Delante del trono había como un\nmar transparente, semejante al cristal. En medio, en torno al trono, había cuatro seres,\nllenos de ojos por todas partes. El primer ser era como un león, el segundo ser como un\ntoro, el tercer ser tenía semblante como de hombre, y el cuarto ser era como un águila en\nvuelo. Y los cuatro seres tenían cada uno seis alas alrededor, y por dentro estaban llenos\nde ojos. Y no se daban reposo día y noche, diciendo: «Santo, santo, santo es el Señor\nDios todopoderoso, el que era, el que es y el que va a venir.»\n\nY, cada vez que los seres dan gloria, honor y acción de gracias al que está sentado en\nel trono, al que vive   por los siglos de los siglos, otras tantas veces se postran los\nveinticuatro ancianos delante del que está sentado en el trono, adoran al que vive por los\nsiglos de los siglos y arrojan sus coronas delante del trono, diciendo: «Eres digno, Señor\nDios nuestro, de recibir la gloria, el honor y el poder, porque tú has creado el universo;\nporque por tu voluntad lo que no existía fue creado.»",
+    "anio": "I"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Santo, santo, santo es el Señor Dios todopoderoso, el que era, el que es y el que va a\nvenir. *  Llena está la tierra de su gloria. Aleluya.\nV. Y los serafines gritaban el uno hacia el otro: «Santo, santo, santo es el Señor de los\nejércitos.»\nR. Llena está la tierra de su gloria. Aleluya.",
+    "ref": "Ap 4, 8; Is 6, 3",
+    "anio": "I"
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "De los Hechos de los apóstoles 7, 17-43\n\nLA HISTORIA DE MOISÉS EN EL DISCURSO DE ESTEBAN\n\nEn aquellos días, Esteban prosiguió su discurso, diciendo: «Según se acercaba el\ntiempo de la promesa hecha por Dios a Abraham, el pueblo iba creciendo y\nmultiplicándose en Egipto; hasta que sobrevino allí un rey que no había conocido a José.\nEste rey, usando de malas artes contra nuestro pueblo, tiranizó a nuestros padres, hasta el\npunto de obligarles a exponer sus hijos para que no sobreviviese ninguno. En estas\ncircunstancias, nació Moisés. Era un hermosísimo niño, que fue criado durante tres meses\nen la casa paterna. Habiendo sido también expuesto, fue recogido por la hija del Faraón,\nla cual lo hizo criar como si fuese hijo suyo. Así Moisés fue instruido en todas las ciencias\nde los egipcios, y adquirió mucha influencia por sus palabras y por su actuación.\n\nCuando hubo cumplido los cuarenta años, sintió deseos de visitar a sus hermanos, los\nisraelitas. Y, viendo a uno maltratado, acudió en su defensa; y lo vengó, matando al\negipcio. Creía él que sus hermanos caerían en la cuenta de que, por su mano, Dios les\nbrindaba la salvación; pero ellos no lo entendieron. Al día siguiente, sorprendió a dos\nriñendo, y quiso ponerlos en paz, diciéndoles: \"Amigos míos, sois hermanos. ¿Por qué os\nhacéis daño el uno al otro?\" Pero el que maltrataba a su prójimo apartó de sí con violencia\na Moisés, diciéndole: \"¿Quién te ha nombrado jefe y juez sobre nosotros? ¿Quieres acaso\nmatarme como mataste ayer al egipcio?\" Ante estas palabras Moisés huyó, y vivió como\nextranjero en la tierra de Madián, donde tuvo dos hijos.\n\nTranscurridos cuarenta años, se le apareció un ángel en el desierto del monte Sinaí, en\nmedio de una zarza que estaba ardiendo. Moisés se maravilló al ver la visión, y, como se\nacercase para verla mejor, oyó la voz del Señor: \"Yo soy el Dios de tus padres, el Dios de\nAbraham, de Isaac y de Jacob.\" Sobrecogido de espanto, Moisés no se atrevía a mirar. Y el\nSeñor le dijo: \"Quítate las sandalias de los pies, pues el sitio que pisas es terreno sagrado.\nHe visto la opresión de mi pueblo, que está en Egipto, he oído sus lamentos y he bajado a\nlibrarlos. Ven, pues, que voy a enviarte a Egipto.\"\n\nEste mismo Moisés, que había sido rechazado con estas palabras: \"¿Quién te ha\nnombrado jefe y juez, éste mismo fue enviado por Dios como jefe y libertador, ayudado\npor el ángel que se le apareció en la zarza. Él los sacó de la esclavitud, obrando señales y\nprodigios en la tierra de Egipto, en el mar Rojo y en el desierto por espacio de cuarenta\naños. Éste es Moisés, el mismo que dijo a los israelitas: \"Dios suscitará para vuestra salud\nde entre vuestros hermanos a un profeta, como me ha suscitado a mí.\" Éste es Moisés, el\nque en la asamblea, reunida en el desierto, estuvo con el ángel, que le hablaba en el\nmonte Sinaí, y con nuestros padres; el que recibió palabras de vida para comunicárnoslas.\n\nPero nuestros padres no sólo se negaron a obedecerlo, sino que lo rechazaron,\nvolviendo sus pensamientos a Egipto y diciendo a Aarón: \"Haznos dioses que guíen\nnuestra marcha, porque no sabemos qué se ha hecho de ese Moisés que nos sacó de la\ntierra de Egipto.\" Fabricaron luego un becerro, y ofrecieron sacrificios al ídolo, festejando\nla obra de sus manos. Entonces Dios se apartó de ellos y los abandonó al culto de los\nastros. Así está escrito en el libro de los profetas: \"¿Acaso me ofrecisteis en el desierto\nsacrificios y ofrendas durante cuarenta años, casa de Israel? No. Sino que os llevasteis con\n\nvosotros el tabernáculo de Moloc y la estrella del dios Refán, ídolos fabricados por\nvosotros mismos para darles culto. Por eso, yo os voy a llevar más allá de Babilonia.",
+    "anio": "II"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Moisés oyó la voz del Señor: * «Yo soy el Dios de tus padres, el Dios de Abraham, de\nIsaac y de Jacob.» Aleluya.\nV. He visto la opresión de mi pueblo y he bajado a librarlos.\nR. Yo soy el Dios de tus padres, el Dios de Abraham, de Isaac y de Jacob.",
+    "ref": "Hch 7, 31. 32. 34",
+    "anio": "II"
+   },
+   {
+    "tipo": "lectura2",
+    "texto": "De los sermones de san Teodoro Estudita\n(Sermón sobre la adoración de la cruz: PG 99, 691-694. 695. 698-699)\n\nPRECIOSA Y VIVIFICANTE ES LA CRUZ DE CRISTO\n\n¡Oh don preciosísimo de la cruz! ¡Qué aspecto tiene más esplendoroso! No contiene,\ncomo el árbol del paraíso, el bien y el mal entremezclados, sino que en él todo es hermoso\ny atractivo, tanto para la vista como para el paladar.\n\nEs un árbol que engendra la vida, sin ocasionar la muerte; que ilumina sin producir\nsombras; que introduce en el paraíso, sin expulsar a nadie de él; es el madero al que\nCristo subió, como rey que monta en su cuadriga, para derrotar al diablo que detentaba el\npoder de la muerte, y librar al género humano de la esclavitud a que la tenía sometido el\ndiablo.\n\nEste madero, en el que el Señor, cual valiente luchador en el combate, fue herido en\nsus divinas manos, pies y costado, curó las huellas del pecado y las heridas que el\npernicioso dragón había infligido a nuestra naturaleza.\n\nSi al principio un madero nos trajo la muerte, ahora otro madero nos da la vida:\nentonces fuimos seducidos por el árbol: ahora por el árbol ahuyentamos la antigua\nserpiente. Nuevos e inesperados cambios: en lugar de la muerte alcanzamos la vida; en\nlugar de la corrupción, la incorrupción; en lugar del deshonor, la gloria.\n\nNo le faltaba, pues, razón al Apóstol para exclamar: Dios me libre de gloriarme si no es\nen la cruz de nuestro Señor Jesucristo, en la cual el mundo está crucificado para mi, y yo\npara el mundo. Pues aquella suprema sabiduría, que, por así decir, floreció en la cruz,\npuso de manifiesto la jactancia y la arrogante estupidez de la sabiduría mundana. El\nconjunto maravilloso de bienes que provienen de la cruz acabaron con los gérmenes de la\nmalicia y del pecado.\n\nLas figuras y profecías de este leño revelaron, ya desde el principio del mundo, las\nmayores maravillas. Mira, si no, si tienes deseos de saberlo. ¿Acaso no se salvó Noé, de la\nmuerte del diluvio, junto con sus hijos y mujeres y con los animales de toda especie, en\nun frágil madero?\n\n¿Y qué, significó la vara de Moisés? Acaso no fue figura de la cruz? Una vez convirtió el\nagua en sangre; otra, devoró las serpientes ficticias de los magos; o bien dividió el mar\ncon sus golpes y detuvo las olas, haciendo después que volvieran a su curso, sumergiendo\nasí a los enemigos mientras hacía que se salvara el pueblo de Dios.\n\nDe la misma manera fue también figura de la cruz la vara de Aarón, florecida en un\nsolo día para atestiguar quién debía ser el sacerdote legítimo.\n\nY a ella aludió también Abrahán cuando puso sobre el montón de maderos a su hijo\nmaniatado. Con la cruz sucumbió la muerte, y Adán se vio restituido a la vida. En la cruz\nse gloriaron todos los apóstoles, en ella se coronaron los mártires y se santificaron los\nsantos. Con la cruz nos revestimos de Cristo y nos despojamos del hombre viejo; fue la\n\ncruz la que nos reunió en un solo rebaño, como ovejas de Cristo, y es la cruz la que nos\nlleva al aprisco celestial."
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Éste es el árbol nobilísimo, plantado en medio del paraíso, *  en ti, el Autor de nuestra\nsalvación venció con su propia muerte a la muerte de todos los mortales. Aleluya.\nV. Tú sobresales por encima de los cedros más elevados.\nR. En ti, el Autor de nuestra salvación venció con su propia muerte a la muerte de todos\nlos mortales. Aleluya."
+   },
+   {
+    "tipo": "oracion_laudes"
+   }
+  ],
+  "laudes": [
+   {
+    "tipo": "lectura_breve",
+    "texto": "El Dios de nuestros padres resucitó a Jesús, a quien vosotros matasteis colgándole de un\nmadero. La diestra de Dios lo exaltó haciéndolo jefe y salvador, para otorgar a Israel la\nconversión, el perdón de los pecados. Testigos de esto somos nosotros y el Espíritu Santo,\nque Dios da a los que le obedecen.",
+    "ref": "Hch 5, 30-32"
+   },
+   {
+    "tipo": "responsorio_breve",
+    "texto": "V. El Señor ha resucitado del sepulcro. Aleluya, aleluya.\nR. El Señor ha resucitado del sepulcro. Aleluya, aleluya.\nV. El que por nosotros colgó del madero.\nR. Aleluya, aleluya.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. El Señor ha resucitado del sepulcro. Aleluya, aleluya."
+   },
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "Ant. Tomó Jesús los panes, y, después de haber dado gracias, los repartió entre los que\nestaban recostados en el suelo. Aleluya,"
+   },
+   {
+    "tipo": "preces",
+    "texto": "Dirijamos nuestra oración a Dios Padre, que por el Espíritu resucitó a Jesús de entre los\nmuertos y vivificará también nuestros cuerpos mortales; digámosle:\nVivifícanos, Señor, con tu Espíritu Santo.\n\nPadre santo, tú que al resucitar a tu Hijo de entre los muertos manifestaste que habías\naceptado su sacrificio,\n— acepta también la ofrenda de nuestro día y condúcenos a la plenitud de la vida.\n\nBendice, Señor, las acciones de nuestro día,\n— y ayúdanos a buscar en ellas tu gloria y el bien de nuestros hermanos.\n\nQue el trabajo de hoy sirva para la edificación de un mundo nuevo,\n— y nos conduzca también a tu reino eterno.\n\nTe pedimos, Señor, que nos hagas ser siempre solícitos del bien de los hombres,\n— y que nos ayudes a amarnos mutuamente.\nSe pueden añadir algunas intenciones libres.\nDirijamos ahora al Padre nuestra oración con las mismas palabras que Cristo nos enseñó:\nPadre nuestro."
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Oh Dios, que,  para librarnos del poder del enemigo, quisiste que tu Hijo muriera en la\ncruz, concédenos alcanzar la gracia de la resurrección. Por nuestro Señor Jesucristo."
+   }
+  ],
+  "intermedia": {
+   "comun": [],
+   "tercia": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "Dios ha resucitado a Jesús; testigos somos todos nosotros. Así, pues, que todo el pueblo\nde Israel lo sepa con absoluta certeza: Dios ha constituido Señor y Mesías a este mismo\nJesús, a quien vosotros habéis crucificado.\nV. Verdaderamente ha resucitado el Señor. Aleluya.\nR. Y se ha aparecido a Simón. Aleluya.",
+     "ref": "Hch 2, 32. 36"
+    },
+    {
+     "tipo": "oracion_laudes"
+    }
+   ],
+   "sexta": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "Todos los que habéis sido bautizados en Cristo os habéis revestido de Cristo. Ya no hay\ndistinción entre judío y gentil, ni entre libre y esclavo, ni entre hombre y mujer: todos sois\nuno en Cristo Jesús.\nV. Los discípulos se llenaron de alegría. Aleluya.\nR. Al ver al Señor. Aleluya.",
+     "ref": "Ga 3, 27-28"
+    },
+    {
+     "tipo": "oracion_laudes"
+    }
+   ],
+   "nona": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "Tirad fuera la levadura vieja para que seáis una masa nueva, ya que ahora sois panes\názimos, pues Cristo, nuestro cordero pascual, ha sido inmolado. Así, pues, celebremos\nnuestra fiesta no con la vieja levadura ni con levadura de malicia y perversidad, sino con\nlos panes ázimos de pureza y verdad.\nV. Quédate con nosotros, Señor. Aleluya.\nR. Porque ya es tarde. Aleluya.",
+     "ref": "1 Co 5, 7-8"
+    },
+    {
+     "tipo": "oracion_laudes"
+    }
+   ]
+  },
+  "visperas": [
+   {
+    "tipo": "lectura_breve",
+    "texto": "Cristo, aunque era Hijo, aprendió por experiencia, en sus padecimientos, la obediencia, y,\nhabiendo así llegado hasta la plena consumación, se convirtió en causa de salvación para\ntodos los que lo obedecen, proclamado por Dios sumo sacerdote «según el rito de\nMelquisedec».",
+    "ref": "Hb 5, 8-10"
+   },
+   {
+    "tipo": "responsorio_breve",
+    "texto": "V. Los discípulos se llenaron de alegría. Aleluya, aleluya.\nR. Los discípulos se llenaron de alegría. Aleluya, aleluya.\nV. Al ver al Señor.\nR. Aleluya, aleluya.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. Los discípulos se llenaron de alegría. Aleluya, aleluya."
+   },
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "Ant. Subió al árbol santo de la cruz, destruyó el poderío de la muerte, se revistió de poder,\nresucitó al tercer día. Aleluya."
+   },
+   {
+    "tipo": "preces",
+    "texto": "Oremos a Cristo, fuente de toda vida y principio de todo bien, y digámosle confiadamente:\nInstaura, Señor, tu reino en el mundo.\n\nJesús salvador, tú que, muerto en la carne, fuiste devuelto a la vida por el Espíritu,\n— haz que nosotros, muertos al pecado, vivamos también de tu Espíritu.\n\nTú que enviaste a tus discípulos al mundo entero para que proclamaran tu Evangelio a\ntodos los pueblos,\n— haz que cuantos anuncian el Evangelio a los hombres vivan de tu Espíritu.\n\nTú que recibiste todo poder en el cielo y en la tierra para dar testimonio de la verdad,\n— guarda en tu verdad a quienes nos gobiernan.\n\nTú que todo lo renuevas y nos mandas esperar anhelantes la llegada de tu reino,\n— haz que, cuanto más esperemos el cielo nuevo y la tierra nueva que nos prometes, con\ntanto mayor empeño trabajemos por la edificación del mundo presente.\nSe pueden añadir algunas intenciones libres.\nTú que descendiste a la mansión de la muerte para anunciar el gozo del Evangelio a los\ndifuntos,\n— sé tú mismo la eterna alegría de todos los que mueren.\n\nTerminemos nuestra oración con las palabras del Señor: Padre nuestro."
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Oh Dios, que,  para librarnos del poder del enemigo, quisiste que tu Hijo muriera en la\ncruz, concédenos alcanzar la gracia de la resurrección. Por nuestro Señor Jesucristo."
+   }
+  ]
+ },
+ "sab": {
+  "oficio": [
+   {
+    "tipo": "versiculo",
+    "texto": "V. Dios nos ha hecho nacer de nuevo para una esperanza viva. Aleluya.\nR. Por la resurrección de Jesucristo de entre los muertos. Aleluya."
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "Del libro del Apocalipsis 5, 1-14\n\nVISIÓN DEL CORDERO\n\nYo, Juan, vi, a la derecha del que estaba sentado en el trono, un libro escrito por\ndentro y por fuera, y sellado con siete sellos. Y  vi a un ángel poderoso que gritaba a\ngrandes voces: «¿Quién es digno de abrir el libro y romper sus sellos?»\n\nY nadie, ni en el cielo ni en la tierra ni debajo de la tierra, podía abrir el libro ni ver su\ncontenido. Yo lloraba mucho, porque no se encontró a nadie digno de abrir el libro y, de\nver su contenido. Pero uno de los ancianos me dijo: «No llores más. Mira que ha vencido\nel león de la tribu de Judá, el vástago de David, y él puede abrir el libro y sus siete\nsellos.»\n\nY vi en medio, donde estaban el trono y los cuatro seres y en medio de los ancianos,\nun Cordero en pie y como degollado. Tenía siete cuernos y siete ojos, es decir: los siete\nespíritus de Dios, enviados por toda la tierra. Vino y tomó el libro de la diestra del que\nestaba sentado en el trono. Y, cuando lo hubo tomado, los cuatro seres y los veinticuatro\nancianos se postraron ante el Cordero, teniendo cada uno su cítara y sus copas de oro\nllenas de incienso, que significaban las oraciones de los santos. Y cantaban un cántico\nnuevo, diciendo: «Eres digno de tomar el libro y abrir sus sellos, porque fuiste degollado y\npor tu sangre compraste para Dios hombres de toda raza, lengua, pueblo y nación; y has\nhecho de ellos para nuestro Dios un reino de sacerdotes y reinan sobre la tierra.»\n\nY tuve otra visión. Y oí un coro de muchos ángeles alrededor del trono y de los seres\ny de los ancianos. Y  era su número miríadas de miríadas y millares de millares. Y aquel\ncoro inmenso de voces decía: «Digno es el Cordero degollado de recibir el poder, la\nriqueza y la sabiduría, la fuerza y el honor, la gloria y la alabanza.»\n\nY todas las criaturas que existen en el cielo y sobre la tierra y debajo de la tierra y en\nel mar, y todo cuanto en ellos se contiene, oí que decían:\n\n«Al que se sienta en el trono y al Cordero la alabanza, el honor, la gloria y el poder\npor los siglos de los siglos.»\n\nY los cuatro seres respondían: «Amén.»\nY los ancianos cayeron de hinojos y rindieron adoración al que vive por todos los\n\nsiglos.",
+    "anio": "I"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Eres digno, Señor, de tomar el libro y abrir sus sellos, porque fuiste degollado * y por tu\nsangre nos compraste para Dios. Aleluya.\nV. Has hecho de nosotros para nuestro Dios un reino de sacerdotes.\nR. Y por tu sangre nos compraste para Dios. Aleluya.",
+    "ref": "Ap 5, 9. 10",
+    "anio": "I"
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "De los Hechos de los apóstoles 7, 44 – 8, 4\n\nCONCLUSIÓN DEL DISCURSO DE ESTEBAN. SU MARTIRIO\n\nEn aquellos días, Esteban prosiguió su discurso, diciendo: «Nuestros padres tuvieron\nconsigo, en el desierto, el tabernáculo del testimonio. Así lo había dispuesto el que mandó\na Moisés fabricarlo según el modelo que le había mostrado. Nuestros padres lo recibieron\nen herencia y lo introdujeron, bajo la dirección de Josué, en la tierra que ocupaban los\ngentiles, a quienes arrojó Dios para dar lugar a nuestros padres. Y así hasta los días de\nDavid. David halló gracia a los ojos de Dios. Pidió el privilegio de construir morada para el\nDios de Jacob; pero fue Salomón quien se la edificó, aunque ciertamente el Altísimo no\nhabita en casas construidas por los hombres, como dice el profeta: \"El cielo es mi trono y\nla tierra es escabel de mis pies. ¿Qué casa me vais a construir —dice el Señor—, o cuál va\na ser el lugar de mi descanso? ¿No soy yo quien ha hecho todas estas cosas?\"\n\n¡Hombres de dura cerviz, que cerráis obstinadamente vuestro entendimiento y\nvuestro corazón a la verdad, vosotros habéis ido siempre en contra del Espíritu Santo! Lo\nmismo que hicieron vuestros padres hacéis también vosotros. ¿A qué profeta dejaron de\nperseguir vuestros padres? Ellos quitaron la vida a los que anunciaban la venida del Justo,\nal cual vosotros habéis ahora traicionado y asesinado; vosotros, que recibisteis la ley por\nministerio de los ángeles y no la guardasteis.»\n\nAl escuchar esta diatriba, ardían de rabia sus corazones y rechinaban sus dientes de\ncoraje. Esteban, por su parte, lleno del Espíritu Santo, con la mirada fija en el cielo, vio la\ngloria de Dios y a Jesús a su diestra; y exclamó: «Veo los cielos abiertos y al Hijo del\nhombre a la diestra de Dios.»\n\nAnte estas palabras, con gran griterío, se taparon los oídos. Embistieron todos a una\ncontra él y, sacándolo a empellones fuera de la ciudad, lo apedrearon. Los testigos dejaron\nsus mantos a los pies de un joven, llamado Saulo. Mientras lo apedreaban, Esteban oraba\ncon estas palabras: «Señor Jesús, recibe mi espíritu.»\n\nY, puesto de rodillas, dijo con fuerte voz: «Señor, no les tomes en cuenta este\npecado.»\n\nY, dicho esto, murió. Saulo, por su parte, aprobaba su muerte.\nSucedió que, aquel mismo día, una violenta persecución se desencadenó contra la\n\nIglesia de Jerusalén, y todos, a excepción de los apóstoles, se dispersaron por las regiones\nde Judea y Samaria. Unos hombres piadosos sepultaron a Esteban, haciendo gran duelo\npor su muerte. Mientras tanto, Saulo hacía estragos en la Iglesia, entraba por las casas y,\nllevándose violentamente a hombres y mujeres, los arrojaba a la cárcel.\n\nLos que se habían dispersado fueron anunciando por todas partes la Buena Nueva de\nla palabra de Dios.",
+    "anio": "II"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Mientras lo apedreaban, Esteban oraba con estas palabras: «Señor Jesús, recibe mi\nespíritu; *  no les tomes en cuenta este pecado.»\nV. Jesús decía: «Padre, perdónalos, porque no saben lo que hacen.»\nR. No les tomes en cuenta este pecado.",
+    "ref": "Hch 7, 58. 59; Lc 23, 34",
+    "anio": "II"
+   },
+   {
+    "tipo": "lectura2",
+    "texto": "De la Constitución Sacrosanctum Concilium, sobre la sagrada liturgia del Concilio Vaticano\nsegundo\n(Núms. 5-6)\n\nLA ECONOMÍA DE LA SALVACIÓN\n\nDios, que quiere que todos los hombres se salven y lleguen al conocimiento de la\nverdad, en distintas ocasiones y de muchas maneras habló antiguamente a nuestros\npadres por los profetas, y, cuando llegó la plenitud de los tiempos, envió a su Hijo, el\nVerbo hecho carne, ungido por el Espíritu Santo, para evangelizar a los pobres, y curar a\nlos contritos de corazón, como médico corporal y espiritual, como Mediador entre Dios y\nlos hombres. En efecto, su misma humanidad, unida a la persona del Verbo, fue\ninstrumento de nuestra salvación. Por esto, en Cristo se realizó plenamente nuestra\nreconciliación, y se nos otorgó la plenitud del culto divino.\n\nEsta obra de la redención humana y de la perfecta glorificación de Dios, cuyo preludio\nhabían sido las maravillas divinas llevadas a cabo en el pueblo del antiguo Testamento,\nCristo la realizó principalmente por el misterio pascual de su bienaventurada pasión,\nresurrección de entre los muertos y gloriosa ascensión. Por este misterio, muriendo\ndestruyó nuestra muerte, y resucitando restauró la vida. Pues el admirable sacramento de\nla Iglesia entera brotó del costado de Cristo dormido en la cruz.\n\nPor esta razón, así como Cristo fue enviado por el Padre, él mismo, a su vez, envió a\nlos apóstoles, llenos del Espíritu Santo. No sólo los envió para que, al predicar el Evangelio\na toda criatura, anunciaran que el Hijo de Dios, con su muerte y resurrección, nos libró del\npoder de Satanás y de la muerte y nos condujo al reino del Padre, sino también a que\nrealizaran la obra de salvación que proclamaban, mediante el sacrificio y los sacramentos,\nen torno a los cuales gira toda la vida litúrgica. Así, por el bautismo, los hombres son\ninjertados en el misterio pascual de Jesucristo: mueren con él, son sepultados con él y\nresucitan con él, reciben el espíritu de hijos adoptivos que nos hace gritar:\n\"«¡Abba»!\" (Padre), y se convierten así en los verdaderos adoradores que busca el Padre.\nDel mismo modo, cuantas veces comen la cena del Señor proclaman su muerte hasta que\nvuelva. Por eso precisamente el mismo día de Pentecostés, en que la Iglesia se manifestó\nal mundo, los que aceptaron las palabras de Pedro se bautizaron. Y eran constantes en\nescuchar la enseñanza de los apóstoles, en la vida común, en la fracción del pan y en las\noraciones, alabando a Dios, y eran bien vistos de todo el pueblo. Desde entonces, la\nIglesia nunca ha dejado de reunirse para celebrar el misterio pascual: leyendo lo que se\nrefiere a Él en toda la Escritura, celebrando la eucaristía, en la cual se hace de nuevo\npresente la victoria y el triunfo de su muerte, y dando gracias, al mismo tiempo, a Dios,\npor su don inexpresable en Cristo Jesús, para alabanza de su gloria."
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Yo soy la vid verdadera y vosotros sois los sarmientos; * el que permanece en mí, como\nyo en él, da mucho fruto. Aleluya.\nV. Como el Padre me amó, así también yo os he amado a vosotros; permaneced en mi\namor.\nR. El que permanece en mí, como yo en él, da mucho fruto. Aleluya.",
+    "ref": "Jn 15, 1. 5. 9"
+   },
+   {
+    "tipo": "oracion_laudes"
+   }
+  ],
+  "laudes": [
+   {
+    "tipo": "lectura_breve",
+    "texto": "Ninguno de nosotros vive para sí y ninguno muere para sí. Que si vivimos, vivimos para el\nSeñor; y si morimos, para el Señor morimos. En fin, que tanto en vida como en muerte\nsomos del Señor. Para esto murió Cristo y retornó a la vida, para ser Señor de vivos y\nmuertos.",
+    "ref": "Rm 14, 7-9"
+   },
+   {
+    "tipo": "responsorio_breve",
+    "texto": "V. El Señor ha resucitado del sepulcro. Aleluya, aleluya.\nR. El Señor ha resucitado del sepulcro. Aleluya, aleluya.\nV. El que por nosotros colgó del madero.\nR. Aleluya, aleluya.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. El Señor ha resucitado del sepulcro. Aleluya, aleluya."
+   },
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "Ant. La paz sea con vosotros, soy yo; aleluya; no tengáis miedo. Aleluya."
+   },
+   {
+    "tipo": "preces",
+    "texto": "Oremos a Cristo, que nos ha manifestado la vida eterna, y digámosle confiados:\nQue tu resurrección, Señor, nos haga crecer en gracia.\n\nPastor eterno, contempla con amor a tu pueblo, que se levanta ahora del descanso,\n— y aliméntalo durante este día con tu palabra y tu eucaristía.\n\nNo permitas que seamos arrebatados por el lobo que devora o entregados por el\nmercenario que huye,\n— sino haz que escuchemos, siempre tu voz de buen pastor.\n\nTú que actúas siempre juntamente con los ministros de tu Evangelio y confirmas su\npalabra con tu gracia,\n— haz que durante este día proclamemos tu resurrección con nuestras palabras y con\nnuestra vida.\n\nSé, Señor, tú mismo nuestro gozo, el gozo que nadie puede arrebatarnos,\n— y haz que, alejados de toda tristeza, fruto del pecado, tengamos hambre de poseer tu\nvida eterna.\nSe pueden añadir algunas intenciones libres.\nConcluyamos nuestra oración, diciendo juntos las palabras de Jesús, nuestro maestro:\nPadre nuestro."
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Señor, tú que te has dignado redimirnos y has querido hacernos hijos tuyos, míranos\nsiempre con amor de padre y haz que cuantos creemos en Cristo, tu Hijo, alcancemos la\nlibertad verdadera y la herencia eterna. Por nuestro Señor Jesucristo."
+   }
+  ],
+  "intermedia": {
+   "comun": [],
+   "tercia": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "Si, siendo aún enemigos, fuimos reconciliados con Dios por la muerte de su Hijo, con\nmayor razón, estando ya reconciliados, seremos salvos por su vida. Y no sólo eso. Hasta\nponemos nuestra gloria y confianza en Dios gracias a nuestro Señor Jesucristo, por cuyo\nmedio hemos obtenido ahora la reconciliación.\n\nV. Verdaderamente ha resucitado el Señor. Aleluya.\nR. Y se ha aparecido a Simón. Aleluya.",
+     "ref": "Rm 5, 10-11"
+    },
+    {
+     "tipo": "oracion_laudes"
+    }
+   ],
+   "sexta": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "Cristo resucitó de entre los muertos: el primero de todos. Lo mismo que por un hombre\nhubo muerte, por otro hombre hay resurrección de los muertos. Y lo mismo que en Adán\ntodos mueren, en Cristo todos serán llamados de nuevo a la vida.\nV. Los discípulos se llenaron de alegría. Aleluya.\nR. Al ver al Señor. Aleluya.",
+     "ref": "1 Co 15, 20-22"
+    },
+    {
+     "tipo": "oracion_laudes"
+    }
+   ],
+   "nona": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "El amor de Cristo nos apremia, al pensar que, si uno murió por todos, consiguientemente\ntodos murieron en él; y murió por todos, para que los que viven no vivan ya para sí, sino\npara aquel que murió y resucitó por ellos.\nV. Quédate con nosotros, Señor. Aleluya.\nR. Porque ya es tarde. Aleluya.",
+     "ref": "2 Co 5, 14-15"
+    },
+    {
+     "tipo": "oracion_laudes"
+    }
+   ]
+  }
+ }
+}

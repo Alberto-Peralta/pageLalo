@@ -1,0 +1,132 @@
+{
+ "visperas1": [
+  {
+   "tipo": "salmodia_ref",
+   "texto": "Las antífonas propias, en el Salterio; los salmos y el cántico se toman del domingo de la II\nsemana del Salterio."
+  },
+  {
+   "tipo": "lectura_breve",
+   "texto": "Sabemos que el Hijo de Dios ha venido y nos ha dado inteligencia, para que conozcamos\nal Dios verdadero y para que estemos en él, su verdadero Hijo, el cual es Dios verdadero y\nes vida eterna.",
+   "ref": "1 Jn 5, 20"
+  },
+  {
+   "tipo": "responsorio_breve",
+   "texto": "V. La Palabra se hizo carne. Aleluya, aleluya.\nR. La Palabra se hizo carne. Aleluya, aleluya.\nV. Y puso su morada entre nosotros.\nR. Aleluya, aleluya.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. La Palabra se hizo carne. Aleluya, aleluya."
+  },
+  {
+   "tipo": "cantico_evangelico",
+   "texto": "Ant. El Don del cielo ha penetrado en las entrañas de la Virgen pura; y ella lleva en su\nseno un misterio que no había sospechado."
+  },
+  {
+   "tipo": "preces",
+   "texto": "Adoremos a Cristo, que se anonadó a sí mismo tomó la condición de esclavo, probado en\ntodo exactamente como nosotros, menos en el pecado, y supliquémosle con fe ardiente,\ndiciendo:\n\nPor tu nacimiento, socorre, Señor, a quienes has redimido.\n\nTú que al entrar en el mundo has inaugurado el tiempo nuevo anunciado por los profetas,\n— haz que tu Iglesia se rejuvenezca siempre.\n\nTú que asumiste las debilidades de los hombres,\n— dígnate ser luz para los que no ven, fuerza para los débiles, consuelo para los tristes.\n\nTú que naciste pobre y humilde,\n\n— mira con amor a los pobres y dígnate consolarlos.\n\nTú que anuncias a todos la alegría de una vida sin fin por tu nacimiento terreno,\n— alegra a los agonizantes con la esperanza de un nacimiento a una vida eterna.\nSe pueden añadir algunas intenciones libres.\nTú que descendiste al mundo para que los hombres pudiesen ascender al cielo,\n— admite en tu gloria a todos los difuntos.\n\nPorque Dios ha infundido en nuestros corazones un espíritu filial, nos atrevemos a decir:\nPadre nuestro."
+  },
+  {
+   "tipo": "oracion",
+   "texto": "Dios todopoderoso y eterno, luz de los que en ti creen, que la tierra se llene de tu gloria y\nque te reconozcan los pueblos por el esplendor de tu luz. Por nuestro Señor Jesucristo."
+  }
+ ],
+ "invitatorio": [
+  {
+   "tipo": "inicio",
+   "texto": "Ant. A Cristo, que por nosotros ha nacido, venid, adorémosle.\nA continuación se dice el salmo del Invitatorio: Salmo 94; Salmo 99; Salmo 66; Salmo 23."
+  }
+ ],
+ "oficio": [
+  {
+   "tipo": "himno",
+   "texto": "Naciste del Padre, sin principio,\nantes que la luz resplandeciera;\ndel seno sin mancha de María\nsurges como luz en las tinieblas.\n\nLos pobres acuden a adorarte,\nsolos, ellos velan en la noche,\nsintiendo admirados en tu llanto\nla voz del Pastor de los pastores.\n\nEl mundo se alegra en este día,\ngozan los patriarcas, los profetas;\nla flor ha nacido de la rama,\nflor que ha perfumado nuestra Iglesia.\n\nLos ángeles cantan hoy tu gloria,\nPadre, que enviaste a Jesucristo;\nunimos con ellos nuestras voces,\noye, bondadoso, nuestros himnos. Amén."
+  },
+  {
+   "tipo": "salmodia",
+   "texto": "Las antífonas y los salmos se toman del domingo de la II semana del Salterio.\nEl versículo, las lecturas y los responsorios se toman del formulario asignado al día del\nmes con el cual coincida este domingo."
+  },
+  {
+   "tipo": "te_deum"
+  },
+  {
+   "tipo": "oracion_laudes"
+  }
+ ],
+ "laudes": [
+  {
+   "tipo": "salmodia_ref",
+   "texto": "Las antífonas propias, en el Salterio; los salmos y el cántico del domingo de la II semana\ndel Salterio."
+  },
+  {
+   "tipo": "lectura_breve",
+   "texto": "A través de muchas etapas y de muchas maneras habló Dios en otro tiempo a nuestros\nantepasados por ministerio de los profetas; en estos tiempos, que son los últimos, nos ha\nhablado por medio de su Hijo, a quien ha constituido heredero de todas las cosas y por\nquien creó los mundos.",
+   "ref": "Hb 1, 1-2"
+  },
+  {
+   "tipo": "responsorio_breve",
+   "texto": "V. Cristo, Hijo de Dios vivo, ten piedad de nosotros.\nR. Cristo, Hijo de Dios vivo, ten piedad de nosotros.\nV. Tú que naciste de María Virgen.\nR. Ten piedad de nosotros.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. Cristo, Hijo de Dios vivo, ten piedad de nosotros."
+  },
+  {
+   "tipo": "cantico_evangelico",
+   "texto": "Ant. La Virgen siempre fiel dio a luz al Verbo de Dios hecho carne, pero permaneció virgen\naun después del parto; alabémosla, pues, diciendo todos: Bendita tú entre las mujeres."
+  },
+  {
+   "tipo": "preces",
+   "texto": "Glorifiquemos a Cristo, Palabra eterna del Padre, engendrado antes de los siglos y nacido\npor nosotros en el tiempo, y aclamémoslo, diciendo:\n\nQue se goce la tierra, Señor, ante tu venida.\n\nCristo, Palabra eterna, que al venir al mundo anunciaste la alegría a la tierra,\n— alegra nuestros corazones con la gracia de tu visita.\n\nSalvador del mundo, que con tu nacimiento nos has revelado la fidelidad de Dios,\n— haz que nosotros seamos también fieles a las promesas de nuestro bautismo.\n\nRey del cielo y de la tierra, que por tus ángeles anunciaste la paz a los hombres,\n— conserva nuestras vidas en tu paz.\n\nSeñor, tú que viniste para ser la vid verdadera que nos diera el fruto de vida,\n— haz que permanezcamos siempre en ti y demos fruto abundante.\nSe pueden añadir algunas intenciones libres.\nGracias a Jesucristo somos hijos de Dios; por eso nos atrevemos a decir: Padre nuestro."
+  },
+  {
+   "tipo": "oracion",
+   "texto": "Dios todopoderoso y eterno, luz de los que en ti creen, que la tierra se llene de tu gloria y\nque te reconozcan los pueblos por el esplendor de tu luz. Por nuestro Señor Jesucristo."
+  }
+ ],
+ "intermedia": {
+  "comun": [],
+  "tercia": [
+   {
+    "tipo": "lectura_breve",
+    "texto": "Dios ha hecho aparecer a la vista de todos los hombres la gracia que nos trae la salud; y\nnos enseña a vivir con sensatez, justicia y religiosidad en esta vida, desechando la\nimpiedad y las ambiciones del mundo.\nV. Se acordó el Señor de su misericordia. Aleluya.\nR. Y de su fidelidad en favor de la casa de Israel. Aleluya.",
+    "ref": "Tt 2, 11-12"
+   }
+  ],
+  "sexta": [
+   {
+    "tipo": "lectura_breve",
+    "texto": "En esto se manifestó el amor que Dios nos tiene: en que Dios envió al mundo a su Hijo\núnico para que vivamos por medio de él.\nV. Los confines de la tierra han contemplado. Aleluya.\nR. La salvación de nuestro Dios. Aleluya.",
+    "ref": "Jn 4, 9"
+   }
+  ],
+  "nona": [
+   {
+    "tipo": "lectura_breve",
+    "texto": "Dios envió su palabra a los israelitas, anunciando la paz que traería Jesucristo: Jesús es el\nSeñor de todos.\nV. La misericordia y la fidelidad se encuentran. Aleluya.\nR. La justicia y la paz se besan. Aleluya.",
+    "ref": "Hch 10, 36"
+   },
+   {
+    "tipo": "oracion_laudes"
+   }
+  ]
+ },
+ "visperas2": [
+  {
+   "tipo": "salmodia_ref",
+   "texto": "Las antífonas propias, en el Salterio; los salmos y el cántico del domingo de la II semana\ndel Salterio."
+  },
+  {
+   "tipo": "lectura_breve",
+   "texto": "Lo que existía desde un principio, lo que hemos oído, lo que hemos visto con nuestros\nojos, lo que contemplamos y lo que tocaron nuestras manos acerca de la Palabra de vida\n(porque la vida se ha manifestado, y nosotros hemos visto y testificamos y os anunciamos\nesta vida eterna, la que estaba con el Padre y se nos ha manifestado): lo que hemos visto\n\ny oído os lo anunciamos, a fin de que viváis en comunión con nosotros. Y esta nuestra\ncomunión de vida es con el Padre y con su Hijo Jesucristo.",
+   "ref": "Jn 1, 1-3"
+  },
+  {
+   "tipo": "responsorio_breve",
+   "texto": "V. La Palabra se hizo carne. Aleluya, aleluya.\nR. La Palabra se hizo carne. Aleluya, aleluya.\nV. Y puso su morada entre nosotros.\nR. Aleluya, aleluya.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. La Palabra se hizo carne. Aleluya, aleluya."
+  },
+  {
+   "tipo": "cantico_evangelico",
+   "texto": "Ant. Dichoso el seno que llevó al Hijo del eterno Padre y el pecho que alimentó a Cristo, el\nSeñor."
+  },
+  {
+   "tipo": "preces",
+   "texto": "Aclamemos alegres a Cristo, ante cuyo nacimiento los ángeles anunciaron la paz a la\ntierra, y supliquémosle, diciendo:\n\nQue tu nacimiento, Señor, traiga la paz a todos los hombres.\n\nTú que con el misterio de tu nacimiento consuelas a la Iglesia,\n— cólmala también de todos tus bienes.\n\nTú que has venido como pastor supremo y obispo de nuestras vidas,\n— haz que el Papa y todos los obispos sean buenos administradores de la múltiple gracia\nde Dios.\n\nRey de la eternidad, tú que al nacer quisiste experimentar las limitaciones humanas,\nsometiéndote a la brevedad de una vida como la nuestra,\n— haz que nosotros, caducos y mortales, seamos partícipes de tu vida eterna.\n\nTú que, esperado durante largos siglos, viniste en el tiempo de la historia señalado por tu\nPadre,\n— manifiesta tu presencia a los que todavía te están esperando.\nSe pueden añadir algunas intenciones libres.\nTú que, hecho carne, restauraste la naturaleza humana deteriorada por la muerte,\n— concede la plena salvación a los difuntos.\n\nYa que somos de la familia de Dios, digamos con gran confianza a nuestro Padre del cielo:\nPadre nuestro."
+  },
+  {
+   "tipo": "oracion",
+   "texto": "Dios todopoderoso y eterno, luz de los que en ti creen, que la tierra se llene de tu gloria y\nque te reconozcan los pueblos por el esplendor de tu luz. Por nuestro Señor Jesucristo."
+  }
+ ]
+}
