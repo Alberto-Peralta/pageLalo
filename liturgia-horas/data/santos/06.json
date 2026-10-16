@@ -1,0 +1,531 @@
+{
+ "01": {
+  "titulo": "San Justino, mártir",
+  "rango": "M",
+  "semblanza": "Justino, filósofo y mártir, nació en Flavia Neápolis (Nablus), en Samaria, a comienzos del siglo II, de familia pagana. Convertido a la fe, escribió diversas obras en defensa del cristianismo; de entre ellas se conservan únicamente dos «Apologías» y el «Diálogo con Trifón». Abrió en Roma una escuela donde sostenía discusiones públicas. Fue martirizado con varios compañeros en tiempos de Marco Aurelio, hacia el año 165.",
+  "comun": "Del Común de un mártir.",
+  "horas": {
+   "oficio": [
+    {
+     "tipo": "lectura2",
+     "texto": "De las Actas del martirio de san Justino y compañeros\n(Caps. 1-5: cf. PG 6,1366-1371)\n\nSIGO LAS VERDADERAS DOCTRINAS DE LOS CRISTIANOS\n\nApresados los santos, fueron conducidos ante el prefecto de Roma, de\nnombre Rústico. Llegados ante el tribunal, el prefecto Rústico dijo a Justino:\n«Ante todo cree en los dioses y obedece a los emperadores.»\n\nJustino contestó:\n«El hecho de que obedezcamos los preceptos de nuestro Salvador Jesucristo\n\nno puede ser objeto ni de acusación ni de detención.»\nRústico replicó:\n«¿Qué doctrinas profesas?»\nJustino dijo:\n«Me he esforzado por conocer todas las doctrinas, y sigo las verdaderas\n\ndoctrinas de los cristianos aunque desagrade a aquellos que son presa de sus\nerrores.»\n\nRústico replicó:\n«¿Estas doctrinas te agradan a ti, desgraciado?»\nJustino contestó:\n«Sí, porque profeso la verdadera doctrina siguiendo a los cristianos.»\nRústico preguntó:\n«¿Qué doctrinas son ésas?»\nJustino contestó:\n\n«Adoramos al Dios de los cristianos, que es uno, y creador y artífice de todo\nel universo, de las cosas visibles e invisibles; creemos en nuestro Señor\nJesucristo como Hijo de Dios, anunciado por los profetas como el que había de\nvenir al género humano, mensajero de salvación y maestro de insignes\ndiscípulos. Yo soy un hombre indigno para poder hablar adecuadamente de su\ninfinita divinidad; reconozco que para hablar de él es necesaria la virtud\nprofética, pues fue profetizado, como te dije, que éste, de quien he hablado, es\nel Hijo de Dios. Yo sé que los profetas que vaticinaron su venida a los hombres\nrecibían su inspiración del cielo.»\n\nRústico preguntó:\n«¿Luego tú eres cristiano?»\nJustino respondió:\n«Sí, soy cristiano.»\nEl prefecto dijo a Justino:\n«Escucha, tú que te las das de saber y conocer las verdaderas doctrinas; si\n\ndespués de azotado mando que te corten la cabeza, ¿crees que subirás al\ncielo?»\n\nJustino contestó:\n«Espero que entraré en la casa del Señor si soporto todo lo que tú dices;\n\npues sé que a todos los que vivan rectamente les está reservada la\nrecompensa divina hasta el fin de los siglos.»\n\nEl prefecto Rústico preguntó:\n«Así, pues, ¿te imaginas que cuando subas al cielo recibirás la justa\n\nrecompensa?»\nJustino contestó:\n«No me lo imagino, sino que lo sé y estoy cierto.»\nEl prefecto Rústico dijo:\n«Vamos al asunto que nos interesa y nos apremia. Poneos de acuerdo y\n\nsacrificad a los dioses.»\nJustino respondió:\n«Nadie, a no ser por un extravío de su razón, pasa de la piedad a la\n\nimpiedad.»\nRústico replicó:\n«Si no hacéis lo que os mandamos, seréis torturados sin misericordia.»\nJustino contestó:\n«Es nuestro deseo más ardiente el sufrir por amor de nuestro Señor\n\nJesucristo, para ser salvados. Este sufrimiento nos dará la salvación y la\nconfianza ante el tribunal de nuestro Señor y Salvador, que será universal y\nmás terrible que éste.»\n\nIgualmente, los otros mártires dijeron:\n«Haz lo que quieras; somos cristianos y no sacrificaremos a los ídolos.»\nEl prefecto Rústico pronunció la sentencia, diciendo:\n«Por no haber querido sacrificar a los dioses ni obedecer la orden del\n\nemperador, que sean azotados y conducidos al suplicio, para sufrir la pena\ncapital de acuerdo con las leyes.»\n\nLos santos mártires, glorificando a Dios, fueron conducidos al lugar\nacostumbrado; allí fueron decapitados y consumaron su martirio en la\nconfesión de nuestro Señor Jesucristo."
+    },
+    {
+     "tipo": "responsorio",
+     "texto": "R. No he ahorrado medio alguno al insistiros a creer en nuestro Señor Jesús; *\na mí no me importa la vida; lo que me importa es completar mí carrera, y\ncumplir el encargo que me dio el Señor Jesús: ser testigo del Evangelio, que es\nla gracia de Dios. Aleluya.\nV. No me avergüenzo del Evangelio; es, en verdad, poder de Dios para\nsalvación de todo el que crea, primero de los judíos y luego de los gentiles.\nR. A mí no me importa la vida; lo que me importa es completar mi carrera, y\ncumplir el encargo que me dio el Señor Jesús: ser testigo del Evangelio, que es\nla gracia de Dios. Aleluya.",
+     "ref": "Cf. Hch 20, 20. 21. 24; Rm 1, 16"
+    }
+   ],
+   "laudes": [
+    {
+     "tipo": "cantico_evangelico",
+     "texto": "Ant. Al ofrecer nuestro sacrificio, alabamos al Creador de todo, por medio de\nsu Hijo Jesucristo y del Espíritu Santo. Aleluya."
+    }
+   ],
+   "visperas2": [
+    {
+     "tipo": "cantico_evangelico",
+     "texto": "Ant. Un fuego ardiente se apoderó de mi espíritu y el intenso amor de los\nprofetas y de aquellos hombres que son amigos de Cristo invadió mi alma.\nAleluya."
+    }
+   ]
+  },
+  "oracion": "Señor, tú que has enseñado a san Justino a encontrar en la locura de la cruz la\nincomparable sabiduría de Cristo, concédenos, por intercesión de tu mártir, la\ngracia de alejar los errores que nos cercan y de mantenernos firmes en la fe.\nPor nuestro Señor Jesucristo."
+ },
+ "03": {
+  "titulo": "San Carlos Luanga y compañeros, mártires",
+  "rango": "M",
+  "semblanza": "Entre los años 1885 y 1887 muchos cristianos de Uganda fueron condenados a muerte por el rey Muanga; algunos eran funcionarios de la corte o muy allegados a la persona del rey. Entre éstos sobresalen Carlos Luanga y sus veintiún compañeros que, firmes en la fe católica, fueron degollados o quemados por negarse a satisfacer los impuros deseos del monarca.",
+  "comun": "Del Común de mártires.",
+  "horas": {
+   "oficio": [
+    {
+     "tipo": "lectura2",
+     "texto": "De la homilía pronunciada por el papa Pablo sexto en la canonización de los\nmártires de Uganda\n(AAS 56 (1964), 905-906)\n\nLA GLORIA DE LOS MÁRTIRES, SIGNO DE REGENERACIÓN\n\nEstos mártires africanos vienen a añadir a este catálogo de vencedores, que\nes el martirologio, una página trágica y magnífica, verdaderamente digna de\n\nsumarse a aquellas maravillosas de la antigua África, que nosotros, modernos\nhombres de poca fe, creíamos que no podrían tener jamás adecuada\ncontinuación.\n\n¿Quién podría suponer, por ejemplo, que a las emocionantísimas historias\nde los mártires escilitanos, de los cartagineses, de los mártires de la «blanca\nmultitud» de Útica, de quienes san Agustín y Prudencio nos han dejado el\nrecuerdo, de los mártires de Egipto, cuyo elogio trazó san Juan Crisóstomo, de\nlos mártires de la persecución de los vándalos, hubieran venido a añadirse\nnuevos episodios no menos heroicos, no menos espléndidos, en nuestros días?\n\n¿Quién podía prever que, a las grandes figuras históricas de los santos\nmártires y confesores africanos, como Cipriano, Felicidad y Perpetua, y al gran\nAgustín, habríamos de asociar un día los nombres queridos de Carlos Luanga y\nde Matías Mulumba Kalemba, con sus veinte compañeros? Y no queremos\nolvidar tampoco a aquellos otros que, perteneciendo a la confesión anglicana,\nafrontaron la muerte por el nombre de Cristo.\n\nEstos mártires africanos abren una nueva época, quiera Dios que no sea de\npersecuciones y de luchas religiosas, sino de regeneración cristiana y civil.\n\nEl África, bañada por la sangre de estos mártires, los primeros de la nueva\nera —y Dios quiera que sean los últimos, pues tan precioso y tan grande fue su\nholocausto—, resurge libre y dueña de sí misma.\n\nLa tragedia que los devoró fue tan inaudita y expresiva que ofrece\nelementos representativos suficientes para la formación moral de un pueblo\nnuevo, para la fundación de una nueva tradición espiritual, para simbolizar y\npromover el paso desde una civilización primitiva —no desprovista de\nmagníficos valores humanos, pero contaminada y enferma, como esclava de sí\nmisma— hacia una civilización abierta a las expresiones superiores del espíritu\ny a las formas superiores de la vida social."
+    },
+    {
+     "tipo": "responsorio",
+     "texto": "R. Dios nos contempla, Cristo y sus ángeles nos miran, mientras luchamos por\nla fe. * Qué dignidad tan grande, qué felicidad tan plena es luchar bajo la\nmirada de Dios y ser coronados por Cristo. Aleluya.\nV. Revistámonos de fuerza y preparémonos para la lucha con un espíritu\nindoblegable, con una fe sincera, con una total entrega.\nR. Qué dignidad tan grande, qué felicidad tan plena es luchar bajo la mirada de\nDios y ser coronados por Cristo. Aleluya.",
+     "ref": "S. Cipriano, Carta 58"
+    }
+   ]
+  },
+  "oracion": "Señor, Dios nuestro, tú haces que la sangre de los mártires se convierta en\nsemilla de nuevos cristianos; concédenos que el campo de tu Iglesia, fecundo\npor la sangre de san Carlos Luanga y de sus compañeros, produzca\ncontinuamente, para gloria tuya, abundante cosecha de cristianos. Por nuestro\nSeñor Jesucristo."
+ },
+ "05": {
+  "titulo": "San Bonifacio, obispo y mártir",
+  "rango": "M",
+  "semblanza": "Nació en Inglaterra hacia el 673; hizo su profesión religiosa en el monasterio de Exeter. El año 719 marchó a Alemania a predicar la fe cristiana, lo que hizo con notable éxito. Consagrado obispo de Maguncia, fundó o instauró, con ayuda de varios compañeros, numerosas Iglesias en Baviera, Turingia y Franconia, congregó diversos concilios y promulgó leyes. Fue asesinado por unos paganos durante la evangelización de los frisones, el año 754, y su cuerpo fue sepultado en la abadía de Falda.",
+  "comun": "Del Común de un mártir o del Común de pastores.",
+  "horas": {
+   "oficio": [
+    {
+     "tipo": "lectura2",
+     "texto": "De las cartas de san Bonifacio, obispo y mártir\n(Carta 78: MGH, Epistolae, 3, 352. 354)\n\nPASTOR SOLÍCITO QUE VELA SOBRE LA GREY DE CRISTO\n\nLa Iglesia, que es como una barca que navega por el mar de este mundo y\nque se ve sacudida por las diversas olas de las tentaciones, no ha de dejarse a\nla deriva, sino que debe ser gobernada.\n\nEn la primitiva Iglesia tenemos el ejemplo de Clemente y Cornelio y muchos\notros en la ciudad de Roma, Cipriano en Cartago, Atanasio en Alejandría, los\ncuales, bajo el reinado de los emperadores paganos, gobernaban la nave de\nCristo, su amada esposa, que es la Iglesia, con sus enseñanzas, con su\nprotección, con sus trabajos y sufrimientos hasta derramar su sangre.\n\nAl pensar en éstos y otros semejantes, me estremezco y me asalta el temor\ny el terror, me cubre el espanto por mis pecados, y de buena gana\nabandonaría el gobierno de la Iglesia que me ha sido confiado, si para ello\nencontrara apoyo en el ejemplo de los Padres o en la sagrada Escritura.\n\nMas, puesto que las cosas son así y la verdad puede ser impugnada, pero no\nvencida ni engañada, nuestra mente fatigada se refugia en aquellas palabras\nde Salomón: Confía en el Señor con toda el alma, no te fíes de tu propia\ninteligencia; en todos tus caminos piensa en él y él allanará tus sendas. Y en\notro lugar: El nombre del Señor es un torreón de fortaleza: a él se acoge el\nhonrado; y es inaccesible. Mantengámonos en la justicia y preparemos\nnuestras almas para la prueba; sepamos aguantar hasta el tiempo que Dios\nquiera y digámosle: Señor, tú has sido nuestro refugio de generación en\ngeneración.\n\nTengamos confianza en él, que es quien nos ha impuesto esta carga. Lo que\nno podamos llevar por nosotros mismos, llevémoslo con la fuerza de aquel que\nes todopoderoso y que ha dicho: Mi yugo es llevadero y mi carga ligera.\nMantengámonos firmes en la lucha en el día del Señor, ya que han venido\nsobre nosotros días de angustia y aflicción. Muramos, si así lo quiere Dios, por\nlas santas leyes de nuestros padres, para que merezcamos como ellos\nconseguir la herencia eterna.\n\nNo seamos perros mudos, no seamos centinelas silenciosos, no seamos\nmercenarios que huyen del lobo, sino pastores solícitos que vigilan sobre el\nrebaño de Cristo, anunciando el designio de Dios a los grandes y a los\npequeños, a los ricos y a los pobres, a los hombres de toda condición y de toda\nedad, en la medida en que Dios nos dé fuerzas, a tiempo y a destiempo, tal\ncomo lo escribió san Gregorio en su libro de los pastores de la Iglesia."
+    },
+    {
+     "tipo": "responsorio",
+     "texto": "R. Queríamos daros no sólo el Evangelio de Dios, sino incluso nuestro propio\nser, * porque habíais llegado a sernos muy queridos. Aleluya.\nV. ¡Hijos míos!, por quienes sufro de nuevo dolores de parto, hasta ver a Cristo\nformado en vosotros.\nR. Porque habíais llegado a sernos muy queridos. Aleluya.",
+     "ref": "1 Ts 2, 8; Ga 4, 19"
+    }
+   ]
+  },
+  "oracion": "Concédenos, Señor, la intercesión de tu mártir san Bonifacio, para que\npodamos defender con valentía y confirmar con nuestras obras la fe que él\nenseñó con su palabra y rubricó en el martirio con su sangre. Por nuestro\nSeñor Jesucristo."
+ },
+ "11": {
+  "titulo": "San Bernabé, apóstol",
+  "rango": "M",
+  "semblanza": "Nacido en la isla de Chipre, fue uno de los primeros fieles de Jerusalén, predicó en Antioquía y acompañó a Pablo en su primer viaje. Intervino en el Concilio de Jerusalén. Volvió a su patria, predicó el Evangelio y allí murió. Los himnos se pueden tomar del Común de apóstoles.",
+  "comun": "Del Común de apóstoles, excepto lo siguiente:",
+  "horas": {
+   "oficio": [
+    {
+     "tipo": "lectura2",
+     "texto": "De los tratados de san Cromacio, obispo, sobre el evangelio de san Mateo\n(Tratado 5,1. 3-4: CCL 9, 405-407)\n\nVOSOTROS SOIS LA LUZ DEL MUNDO\n\nVosotros sois la luz del mundo. No se puede ocultar una ciudad puesta en lo\nalto de un monte. Tampoco se enciende una lámpara para meterla debajo del\ncelemín, sino para ponerla en el candelero y que alumbre a todos los de casa.\nEl Señor llamó a sus discípulos sal de la tierra, porque habían de condimentar\ncon la sabiduría del cielo los corazones de los hombres, insípidos por obra del\ndiablo. Ahora les llama también luz del mundo, porque, después de haber sido\niluminados por él, que es la luz verdadera y eterna, se han convertido ellos\nmismos en luz que disipa las tinieblas.\n\nSiendo él el sol de justicia, llama con razón a sus discípulos luz del mundo; a\ntravés de ellos, como brillantes rayos, difunde por el mundo entero la luz de su\nconocimiento. En efecto, los apóstoles, manifestando la luz de la verdad,\nalejaron del corazón de los hombres las tinieblas del error.\n\nIluminados por éstos, también nosotros nos hemos convertido en luz, según\ndice el Apóstol: En otro tiempo erais tinieblas, ahora sois luz en el Señor;\ncaminad como hijos de la luz e hijos del día; no lo sois de la noche ni de las\ntinieblas.\n\nCon razón dice san Juan en su carta: Dios es luz, y quien permanece en Dios\nestá en la luz, como él está en la luz. Nuestra alegría de vernos libres de las\n\ntinieblas del error debe llevarnos a caminar como hijos de la luz: Por eso dice\nel Apóstol: Brilláis como lumbrera del mundo, mostrando una razón para vivir.\nSi no obramos así, es como si, con nuestra infidelidad, pusiéramos un velo que\ntapa y oscurece esta luz tan útil y necesaria, en perjuicio nuestro y de los\ndemás. Ya sabemos que aquel que recibió un talento y prefirió esconderlo\nantes que negociar con él para conseguir la vida del cielo, sufrió el castigo\njusto.\n\nPor eso la esplendorosa luz que se encendió para nuestra salvación debe\nlucir constantemente en nosotros. Tenemos la lámpara del mandato celeste y\nde la gracia espiritual, de la que dice David: Lámpara es tu palabra para mis\npasos, luz en mi sendero. De ella dice también Salomón: El precepto de la ley\nes una lámpara.\n\nEsta lámpara de la ley y de la fe no debe nunca ocultarse, sino que debe\nsiempre colocarse sobre el candelero de la Iglesia para la salvación de muchos;\nasí podremos alegrarnos con la luz de su verdad y todos los creyentes serán\niluminados."
+    },
+    {
+     "tipo": "responsorio",
+     "texto": "R. Cuando Bernabé llegó a Antioquía y vio la gracia de Dios, se llenó de júbilo;\n* pues era un hombre de gran virtud, lleno del Espíritu Santo y de una gran fe.\nAleluya.\nV. Y exhortaba a todos a que con entera voluntad permaneciesen fieles al\nSeñor.\nR. Pues era un hombre de gran virtud, lleno del Espíritu Santo y de una gran\nfe. Aleluya.",
+     "ref": "Hch 11, 23-24"
+    }
+   ],
+   "laudes": [
+    {
+     "tipo": "cantico_evangelico",
+     "texto": "Ant. Bernabé partió para Tarso en busca de Saulo; y luego lo llevó a Antioquía,\nallí vivieron dentro de la comunidad e instruyeron a muchísima gente. Aleluya."
+    }
+   ],
+   "visperas2": [
+    {
+     "tipo": "cantico_evangelico",
+     "texto": "Ant. Toda la asamblea guardó silencio y escucharon a Pablo y a Bernabé que\ncontaban todas las señales y prodigios que, por su medio, había obrado Dios\nentre los gentiles."
+    }
+   ]
+  },
+  "oracion": "Señor, tú mandaste que san Bernabé, varón lleno de fe y de Espíritu Santo,\nfuera designado para llevar a las naciones tu mensaje de salvación;\nconcédenos, te rogamos, que el Evangelio de Cristo, que él anunció con tanta\nfirmeza, sea siempre proclamado en la Iglesia con fidelidad, de palabra y de\nobra. Por nuestro Señor Jesucristo."
+ },
+ "13": {
+  "titulo": "San Antonio de Padua, presbítero y doctor de la Iglesia",
+  "rango": "M",
+  "semblanza": "Nació en Lisboa a finales del siglo XII. Primero formó parte de los canónigos regulares de san Agustín, y, poco después de su ordenación sacerdotal, ingresó en la Orden de los frailes Menores, con la intención de dedicarse a propagar la fe cristiana en África. Sin embargo, fue en Francia y en Italia donde ejerció con gran provecho sus dotes de predicador, convirtiendo a muchos herejes. Fue el primero que enseñó teología en su Orden. Escribió varios sermones llenos de doctrina y de unción. Murió en Padua el año 1231. varones: para los santos religiosos.",
+  "comun": "Del Común de  pastores, o del Común de doctores de la Iglesia, o del Común de  santos",
+  "horas": {
+   "oficio": [
+    {
+     "tipo": "lectura2",
+     "texto": "De los sermones de san Antonio de Padua, presbítero (I, 226)\n\nLA PALABRA TIENE FUERZA CUANDO VA ACOMPAÑADA DE LAS OBRAS\n\nEl que está lleno del Espíritu Santo habla diversas lenguas. Estas diversas\nlenguas son los diversos testimonios que da de Cristo, como por ejemplo la\nhumildad, la pobreza, la paciencia y la obediencia, que son las palabras con\nque hablamos cuando los demás pueden verlas reflejadas en nuestra conducta.\nLa palabra tiene fuerza cuando va acompañada de las obras. Cesen, por favor,\nlas palabras y sean las obras quienes hablen. Estamos repletos de palabras,\npero vacíos de obras, y, por esto, el Señor maldice como maldijo aquella\nhiguera en la que no halló fruto sino hojas tan sólo. \"La norma del predicador\n—dice san Gregorio— es poner por obra lo que predica.\" En vano se esfuerza\nen propagar la doctrina cristiana el que la contradice con sus obras.\n\nPero los apóstoles hablaban según el Espíritu les sugería. ¡Dichoso el que\nhabla según le sugiere el Espíritu Santo y no según su propio sentir! Porque\nhay algunos que hablan movidos por su propio espíritu, roban las palabras de\nlos demás y las proponen como suyas, atribuyéndoselas a sí mismos. De estos\ntales y de otros semejantes dice el Señor por boca de Jeremías: Aquí estoy yo\ncontra los profetas que se roban mis palabras uno a otro. Aquí estoy yo contra\nlos profetas —oráculo del Señor— que manejan la lengua para echar oráculos.\nAquí estoy yo contra los profetas de sueños falsos —oráculo del Señor—, que\nlos cuentan para extraviar a mi pueblo, con sus embustes y jactancias. Yo no\nlos mandé ni los envié, por eso, son inútiles a mi pueblo —oráculo del Señor—.\n\nHablemos, pues, según nos sugiera el Espíritu Santo, pidiéndole con\nhumildad y devoción que infunda en nosotros su gracia, para que completemos\nel significado quincuagenario del día de Pentecostés, mediante el\nperfeccionamiento de nuestros cinco sentidos y la observancia de los diez\nmandamientos, y para que nos llenemos de la ráfaga de viento de la\ncontrición, de manera que, encendidos e iluminados por los sagrados\nesplendores, podamos llegar a la contemplación del Dios uno y trino."
+    },
+    {
+     "tipo": "responsorio",
+     "texto": "R. El justo florecerá como un lirio * y se alegrará eternamente ante el Señor.\nV. En medio de su pueblo se gloría.\nR. Y se alegrará eternamente ante el Señor.",
+     "ref": "Cf. Os 14, 6; cf. Sal 91, 13; Sir 24, 4"
+    }
+   ]
+  },
+  "oracion": "Dios todopoderoso y eterno, tú que has dado a tu pueblo en la persona de san\nAntonio de Padua un predicador insigne y un intercesor poderoso, concédenos\nseguir fielmente los principios de la vida cristiana, para que merezcamos\ntenerte como protector en todas las adversidades. Por nuestro Señor\nJesucristo."
+ },
+ "21": {
+  "titulo": "San Luis Gonzaga, religioso",
+  "rango": "M",
+  "semblanza": "Nació el año 1568 cerca de Mantua, en Lombardía, hijo de los príncipes de Castiglione. Su madre lo educó cristianamente, y muy pronto dio indicios de su inclinación a la vida religiosa. Renunció en favor de su hermano al título de príncipe, que le correspondía por derecho de primogenitura, e ingresó en la Compañía de Jesús, en Roma. Cuidando enfermos en los hospitales, contrajo él mismo una enfermedad que lo llevó al sepulcro el año 1591.",
+  "comun": "Del Común de santos varones: para los santos religiosos.",
+  "horas": {
+   "oficio": [
+    {
+     "tipo": "lectura2",
+     "texto": "De una carta de san Luis Gonzaga, dirigida a su madre\n(Acta Sanctorum Iunii 5, 878)\n\nCANTARÉ ETERNAMENTE LAS MISERICORDIAS DEL SEÑOR\n\nPido para ti, ilustre señora, que goces siempre de la gracia y del consuelo\ndel Espíritu Santo. Al llegar tu carta, me encuentro todavía en esta región de\nlos muertos. Pero un día u otro ha de llegar el momento de volar al cielo, para\nalabar al Dios eterno en la tierra de los que viven. Yo esperaba poco ha que\nhabría realizado ya este viaje antes de ahora. Si la caridad consiste, como dice\nsan Pablo, en estar alegres con los que ríen y llorar con los que lloran, ha de\nser inmensa tu alegría, madre ilustre, al pensar que Dios me llama a la\nverdadera alegría, que pronto poseeré con la seguridad de no perderla jamás.\n\nTe he de confesar, ilustre señora, que, al sumergir mi pensamiento en la\nconsideración de la divina bondad, que es como un mar sin fondo ni litoral, no\nme siento digno de su inmensidad, ya que él, a cambio de un trabajo tan breve\ny exiguo, me invita al descanso eterno y me llama desde el cielo a la suprema\nfelicidad, que con tanta negligencia he buscado, y me promete el premio de\nunas lágrimas, que tan parcamente he derramado.\n\nConsidéralo una y otra vez, ilustre señora, y guárdate de menospreciar esa\ninfinita benignidad de Dios, que es lo que harías si lloraras como muerto al que\nvive en la presencia de Dios y que, con su intercesión, puede ayudarte en tus\nasuntos mucho más que cuando vivía en este mundo. Esta separación no será\nmuy larga; volveremos a vernos en el cielo, y todos juntos, unidos a nuestro\n\nSalvador, lo alabaremos con toda la fuerza de nuestro espíritu y cantaremos\neternamente sus misericordias, gozando de una felicidad sin fin. Al morir, nos\nquita lo que nos había prestado, con el solo fin de guardarlo en un lugar más\ninmune y seguro, para enriquecernos con unos bienes que superan nuestros\ndeseos. Todo esto lo digo solamente para expresar mi deseo de que tú, ilustre\nseñora, así como los demás miembros de mi familia, consideréis mi partida de\neste mundo como un motivo de gozo, y para que no me falte su bendición\nmaterna en el momento de atravesar este mar hasta llegar a la orilla en donde\ntengo puestas todas mis esperanzas. Así te escribo porque estoy convencido\nde que esta es la mejor manera de demostrarte el amor y respeto que te debo\ncomo hijo."
+    },
+    {
+     "tipo": "responsorio",
+     "texto": "R. Has conservado mi inocencia, Señor, * tú me mantienes siempre en tu\npresencia.\nV. Prefiero el umbral de la casa de Dios a vivir con los malvados.\nR. Tú me mantienes siempre en tu presencia.",
+     "ref": "Sal 40, 13; 83, 11"
+    }
+   ]
+  },
+  "oracion": "Señor Dios, dispensador de los dones celestiales, que has querido juntar en\nsan Luis Gonzaga una admirable inocencia de vida y un austero espíritu de\npenitencia, concédenos, por su intercesión, que, si no hemos sabido imitarle en\nsu vida inocente, sigamos fielmente sus ejemplos en la penitencia. Por nuestro\nSeñor Jesucristo."
+ },
+ "24": {
+  "titulo": "La Natividad de san Juan Bautista",
+  "rango": "S",
+  "semblanza": "",
+  "comun": "",
+  "horas": {
+   "visperas1": [
+    {
+     "tipo": "himno",
+     "texto": "Profeta de soledades,\nlabio hiciste de tus iras\npara fustigar mentiras\ny para gritar verdades.\n\nDesde el vientre escogido\nfuiste tú el pregonero,\npara anunciar al mundo\nla presencia del Verbo.\n\nEl desierto encendido\nfue tu ardiente maestro,\npara allanar montañas\ny encender los senderos.\n\nCuerpo de duro roble,\nalma azul de silencio;\nmiel silvestre de rocas\ny un jubón de camello.\n\nNo fuiste, Juan, la caña\ntronchada por el viento;\nsí la palabra ardiente\ntu palabra de acero.\n\nEn el Jordán lavaste\nal más puro Cordero,\nque apacienta entre lirios\ny duerme en los almendros.\n\nEn tu figura hirsuta\nse esperanzó tu pueblo:\npara una raza nueva\nabriste cielos nuevos.\n\nSacudiste el azote\nante el poder soberbio;\ny ante el Sol que nacía\n\nse apagó tu lucero.\n\nPor fin, en un banquete\ny en el placer de un ebrio,\nel vino de tu sangre\nsantificó el desierto.\n\nProfeta de soledades,\nlabio hiciste de tus iras\npara fustigar mentiras\ny para gritar verdades. Amén."
+    },
+    {
+     "tipo": "salmodia",
+     "texto": "Ant. 1. Isabel, esposa de Zacarías, dio a luz a un gran hombre: Juan Bautista,\nel precursor del Señor.\n\nSalmo 112\n\nAlabad, siervos del Señor,\nalabad el nombre del Señor.\nBendito sea el nombre del Señor,\nahora y por siempre:\nde la salida del sol hasta su ocaso,\nalabado sea el nombre del Señor.\n\nEl Señor se eleva sobre todos los pueblos,\nsu gloria sobre los cielos.\n¿Quién como el Señor, Dios nuestro,\nque se eleva en su trono\ny se abaja para mirar\nal cielo y a la tierra?\n\nLevanta del polvo al desvalido,\nalza de la basura al pobre,\npara sentarlo con los príncipes,\nlos príncipes de su pueblo;\na la estéril le da un puesto en la casa,\ncomo madre feliz de hijos.\n\nAnt. Isabel, esposa de Zacarías, dio a luz a un gran hombre: Juan Bautista,\nel precursor del Señor.\nAnt. 2. El precursor del Señor, Juan Bautista, nació del vientre de una anciana\nestéril.\n\nSalmo 145\n\nAlaba, alma mía, al Señor:\nalabaré al Señor mientras viva,\ntañeré para mi Dios mientras exista.\n\nNo confiéis en los príncipes,\nseres de polvo que no pueden salvar;\nexhalan el espíritu y vuelven al polvo,\nese día perecen sus planes.\n\nDichoso a quien auxilia el Dios de Jacob,\nel que espera en el Señor, su Dios,\n\nque hizo el cielo y la tierra,\nel mar y cuanto hay en él;\n\nque mantiene su fidelidad perpetuamente,\nque hace justicia a los oprimidos,\nque da pan a los hambrientos.\n\nEl Señor liberta a los cautivos,\nel Señor abre los ojos al ciego,\nel Señor endereza a los que ya se doblan,\nel Señor ama a los justos.\n\nEl Señor guarda a los peregrinos,\nsustenta al huérfano y a la viuda\ny trastorna el camino de los malvados.\n\nEl Señor reina eternamente,\ntu Dios, Sión, de edad en edad.\n\nAnt. El precursor del Señor, Juan Bautista, nació del vientre de una anciana\nestéril.\nAnt. 3. Entre los nacidos de mujer no ha surgido nadie mayor que Juan\nBautista.\n\nCántico Ef 1, 3-10\n\nBendito sea Dios,\nPadre de nuestro Señor Jesucristo,\nque nos ha bendecido en la persona de Cristo\ncon toda clase de bienes espirituales y celestiales.\n\nÉl nos eligió en la persona de Cristo,\nantes de crear el mundo,\npara que fuésemos santos\ne irreprochables ante Él por el amor.\n\nÉl nos ha destinado en la persona de Cristo,\npor pura iniciativa suya,\na ser sus hijos,\npara que la gloria de su gracia,\nque tan generosamente nos ha concedido\nen su querido Hijo,\nredunde en alabanza suya.\n\nPor este Hijo, por su sangre,\nhemos recibido la redención,\nel perdón de los pecados.\nEl tesoro de su gracia, sabiduría y prudencia\nha sido un derroche para con nosotros,\ndándonos a conocer el misterio de su voluntad.\n\nÉste es el plan\nque había proyectado realizar por Cristo\ncuando llegase el momento culminante:\n\nrecapitular en Cristo todas las cosas\ndel cielo y de la tierra.\n\nAnt. Entre los nacidos de mujer no ha surgido nadie mayor que Juan\nBautista."
+    },
+    {
+     "tipo": "lectura_breve",
+     "texto": "Según lo prometido, Dios sacó para Israel de la descendencia de David un\nSalvador, Jesús. Y su precursor fue Juan. Ya éste, antes de presentarse Jesús,\nhabía predicado a todo el pueblo de Israel un bautismo como señal de\narrepentimiento. Y, cuando estaba para terminar su misión, solía decir: «No\nsoy yo el que vosotros os imagináis. Pero, mirad, viene otro después de mí; y\nyo no soy digno de desatar su calzado.»",
+     "ref": "Hch 13, 23.25"
+    },
+    {
+     "tipo": "responsorio_breve",
+     "texto": "V. Preparad el camino del Señor, enderezad sus sendas.\nR. Preparad el camino del Señor, enderezad sus sendas.\nV. El que viene después de mí ya existía antes que yo.\nR. Enderezad sus sendas.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. Preparad el camino del Señor, enderezad sus sendas."
+    },
+    {
+     "tipo": "cantico_evangelico",
+     "texto": "Ant. Cuando entró Zacarías en el santuario del Señor, se le apareció el ángel\nGabriel, de pie a la derecha del altar del incienso."
+    },
+    {
+     "tipo": "preces",
+     "texto": "Oremos confiados al Señor, que eligió a Juan Bautista para anunciar a los\nhombres el reino de Cristo, y digámosle:\nGuía, Señor, nuestros pasos por el camino de la paz.\n\nTú, Señor, que llamaste a Juan cuando estaba aún en las entrañas maternas y\nlo elegiste para que preparara los caminos de tu Hijo,\n\n— danos ánimos para seguir siempre a Cristo con la misma fidelidad con que\nJuan lo precedió.\n\nTú que concediste al Bautista reconocer al Cordero de Dios,\n— concede a la Iglesia anunciar a Cristo de tal manera que los hombres de\n\nnuestro tiempo puedan reconocerlo.\n\nTú que dispusiste que Juan menguase y que Cristo creciera,\n— enséñanos a saber humillarnos, para que brille Cristo a los ojos de los\n\nhombres.\n\nTú que, por el martirio de Juan, quisiste manifestar la justicia,\n— concédenos testificar tu verdad con valentía, sin temor a la tribulación.\n\nSe pueden añadir algunas intenciones libres.\n\nAcuérdate, Señor, de los que han salido ya de este mundo,\n— y colócalos en el reino de la luz y de la paz.\n\nDirijamos nuestra oración al Padre que está en los cielos, diciendo: Padre\nnuestro."
+    },
+    {
+     "tipo": "oracion",
+     "texto": "Dios todopoderoso, concede a tu familia caminar por la senda de la salvación\npara que, siguiendo la voz de san Juan, el precursor, pueda llegar con alegría\nal Salvador que él anunciaba. Por nuestro Señor Jesucristo."
+    }
+   ],
+   "invitatorio": [
+    {
+     "tipo": "inicio",
+     "texto": "Ant. Venid, adoremos al Cordero de Dios, a quien Juan anunció lleno de\nalegría.\nEl salmo del Invitatorio como en el Ordinario."
+    }
+   ],
+   "oficio": [
+    {
+     "tipo": "himno",
+     "texto": "Pastor que, sin ser pastor,\nal buen Cordero nos muestras,\nprecursor que, sin ser luz,\nnos dices por dónde llega,\nenséñanos a enseñar\nla fe desde la pobreza.\n\nTú que traes un bautismo\nque es poco más que apariencia\ny al que el Cordero más puro\n\nbaja buscando pureza,\nenséñame a difundir\namor desde mi tibieza.\n\nTu que sientes como yo\nque la ignorancia no llega\nni a conocer al Señor\nni a desatar sus correas,\nenséñame a propagar\nla fe desde mi torpeza.\n\nTú que sabes que no fuiste\nla Palabra verdadera\ny que sólo eras la voz\nque en el desierto vocea,\nenséñame, Juan, a ser\nprofeta sin ser profeta.\nO bien:\n\nVoz más rica que un concierto\ny que sube hasta el Jordán\nes la voz, a campo abierto,\ndel que clama en el desierto,\ny que lo llamaron Juan.\n\nVio cómo el cielo se abría\nsobre el Cordero de Dios,\ny su voz le anunciaría.\n¡Oh radiante profecía\nque por siempre unió a los dos!\n\nMás aún, en su presencia,\ncon humilde sumisión,\npide el que es Dios por esencia\nbautismo de penitencia\npara empezar su misión.\n\nJuan bautiza al Deseado,\n¡doble abismo de humildad!:\nante el Hijo muy amado,\npor el Padre proclamado,\nse rindió su caridad.\n\n¡Oh sin par doxología!:\nvoz del Padre en el Jordán,\nel Hijo que la acogía\ny la Paloma que ardía\nsobre Jesús y san Juan. Amén."
+    },
+    {
+     "tipo": "salmodia",
+     "texto": "Ant. 1. El Señor me llamó desde el vientre de mi madre, cuando aún estaba yo\nen el seno materno pronunció mi nombre.\n\nSalmo 20, 2-8. 14\n\nSeñor, el rey se alegra por tu fuerza,\n¡y cuánto goza con tu victoria!\nLe has concedido el deseo de su corazón,\nno le has negado lo que pedían sus labios.\n\nTe adelantaste a bendecirlo con el éxito,\ny has puesto en su cabeza una corona de oro fino.\nTe pidió vida, y se la has concedido,\naños que se prolongan sin término.\n\nTu victoria ha engrandecido su fama,\nlo has vestido de honor y majestad.\nLe concedes bendiciones incesantes,\nlo colmas de gozo en tu presencia;\nporque el rey confía en el Señor,\ny con la gracia del Altísimo no fracasará.\n\nLevántate, Señor, con tu fuerza,\ny al son de instrumentos cantaremos tu poder.\n\nAnt. El Señor me llamó desde el vientre de mi madre, cuando aún estaba yo\nen el seno materno pronunció mi nombre.\nAnt. 2. El Señor hizo de mi boca una espada afilada, me escondió en la sombra\nde su mano.\n\nSalmo 91\n\nI\nEs bueno dar gracias al Señor\n\ny tocar para tu nombre, oh Altísimo,\nproclamar por la mañana tu misericordia\ny de noche tu fidelidad,\ncon arpas de diez cuerdas y laúdes,\nsobre arpegios de cítaras.\n\nTus acciones, Señor, son mi alegría,\ny mi júbilo, las obras de tus manos.\n¡Qué magníficas son tus obras, Señor,\nqué profundos tus designios!\nEl ignorante no los entiende\nni el necio se da cuenta.\n\nAunque germinen como hierba los malvados\ny florezcan los malhechores,\nserán destruidos para siempre.\nTú, en cambio, Señor,\neres excelso por los siglos.\n\nAnt. El Señor hizo de mi boca una espada afilada, me escondió en la sombra\nde su mano.\nAnt. 3. Juan declaró como testigo: «El que ha de venir después de mí existía\nantes que yo.»\n\nII\nPorque tus enemigos, Señor, perecerán,\n\nlos malhechores serán dispersados;\n\npero a mí me das la fuerza de un búfalo\ny me unges con aceite nuevo.\nMis ojos despreciarán a mis enemigos,\nmis oídos escucharán su derrota.\n\nEl justo crecerá como una palmera,\nse alzará como un cedro del Líbano:\nplantado en la casa del Señor,\ncrecerá en los atrios de nuestro Dios;\n\nen la vejez seguirá dando fruto\ny estará lozano y frondoso,\npara proclamar que el Señor es justo,\nque en mi Roca no existe la maldad.\n\nAnt. Juan declaró como testigo: «El que ha de venir después de mí existía\nantes que yo.»"
+    },
+    {
+     "tipo": "versiculo",
+     "texto": "V. Éste vino para dar testimonio de la luz.\nR. Para que por él todos vinieran a la fe."
+    },
+    {
+     "tipo": "lectura1",
+     "texto": "Del libro del profeta Jeremías 1, 4-10. 17-19\n\nLA VOCACIÓN DEL PROFETA\n\nRecibí esta palabra del Señor: «Antes de formarte en el vientre, te escogí;\nantes de que salieras del seno materno, te consagré: te nombré profeta de los\ngentiles.»\n\nYo repuse: «¡Ay, Señor mío! Mira que no sé hablar, que soy un muchacho.»\nEl Señor me contestó: «No digas: \"Soy un muchacho\", que adonde yo te\n\nenvíe irás, y lo que yo te mande lo dirás. No les tengas miedo, yo estoy\ncontigo para librarte -oráculo del Señor-.»\n\nEl Señor extendió la mano y me tocó la boca; y me dijo: «Mira: yo pongo\nmis palabras en tu boca, hoy te establezco sobre pueblos y reyes, para\narrancar y arrasar, para destruir y demoler, para edificar y plantar. Pero tú\ncíñete los lomos, ponte en pie y diles lo que yo te mando. No les tengas miedo,\nque yo no te haré desmayar delante de ellos. Mira: Yo te convierto hoy en\nplaza fuerte, en columna de hierro, en muralla de bronce, frente a todo el país:\nfrente a los reyes y príncipes de Judá, frente a los sacerdotes y la gente del\npueblo; lucharán contra ti, pero no podrán contigo, porque yo estoy contigo\npara librarte -oráculo del Señor-.»"
+    },
+    {
+     "tipo": "responsorio",
+     "texto": "R. Antes de formarte en el vientre, te escogí; antes de que salieras del seno\nmaterno, te consagré: * te nombré profeta de los gentiles.\nV. Yo pongo mis palabras en tu boca, yo te establezco sobre pueblos y reyes.\nR. Te nombré profeta de los gentiles.",
+     "ref": "Jr 1, 5. 9. 10"
+    },
+    {
+     "tipo": "lectura2",
+     "texto": "De los sermones de san Agustín, obispo\n(Sermón 293,1-3: PL 38,1327-1328)\n\nLA VOZ QUE CLAMA EN EL DESIERTO\n\nLa Iglesia celebra el nacimiento de Juan como algo sagrado, y él es el único\nde los santos cuyo nacimiento se festeja; celebramos el nacimiento de Juan y\nel de Cristo. Ello no deja de tener su significado, y, si nuestras explicaciones no\n\nalcanzaran a estar a la altura de misterio tan elevado, no hemos de perdonar\nesfuerzo para profundizarlo y sacar provecho de él.\n\nJuan nace de una anciana estéril; Cristo, de una jovencita virgen. El futuro\npadre de Juan no cree el anuncio de su nacimiento y se queda mudo; la Virgen\ncree el del nacimiento de Cristo y lo concibe por la fe. Esto es, en resumen, lo\nque intentaremos penetrar y analizar; y, si el poco tiempo y las pocas\nfacultades de que disponemos no nos permiten llegar hasta las profundidades\nde este misterio tan grande, mejor os adoctrinará aquel que habla en vuestro\ninterior, aun en ausencia nuestra, aquel que es el objeto de vuestros piadosos\npensamientos, aquel que habéis recibido en vuestro corazón y del cual habéis\nsido hechos templo.\n\nJuan viene a ser como la línea divisoria entre los dos Testamentos, el\nantiguo y el nuevo. Así lo atestigua el mismo Señor, cuando dice: La ley y los\nprofetas llegaron hasta Juan. Por tanto, él es como la personificación de lo\nantiguo y el anuncio de lo nuevo. Porque personifica lo antiguo, nace de padres\nancianos; porque personifica lo nuevo, es declarado profeta en el seno de su\nmadre. Aún no ha nacido y, al venir la Virgen María, salta de gozo en las\nentrañas de su madre. Con ello queda ya señalada su misión, aun antes de\nnacer; queda demostrado de quién es precursor, antes de que él lo vea. Estas\ncosas pertenecen al orden de lo divino y sobrepasan la capacidad de la\nhumana pequeñez. Finalmente, nace, se le impone el nombre, queda expedita\nla lengua de su padre. Estos acontecimientos hay que entenderlos con toda la\nfuerza de su significado.\n\nZacarías calla y pierde el habla hasta que nace Juan, el precursor del Señor,\ny abre su boca. Este silencio de Zacarías significaba que, antes de la\npredicación de Cristo, el sentido de las profecías estaba en cierto modo latente,\noculto, encerrado. Con el advenimiento de aquel a quien se referían estas\nprofecías, todo se hace claro. El hecho de que en el nacimiento de Juan se abre\nla boca de Zacarías tiene el mismo significado que el rasgarse el velo al morir\nCristo en la cruz. Si Juan se hubiera anunciado a sí mismo, la boca de Zacarías\nhabría continuado muda. Si se desata su lengua es porque ha nacido aquel que\nes la voz; en efecto, cuando Juan cumplía ya su misión de anunciar al Señor, le\ndijeron: ¿Tú quién eres? Y él respondió: Yo soy la voz que grita en el desierto.\nJuan era la voz; pero el Señor era la Palabra que en el principio ya existía.\nJuan era una voz pasajera, Cristo la Palabra eterna desde el principio."
+    },
+    {
+     "tipo": "responsorio",
+     "texto": "R. A ti, niño, te llamarán profeta del Altísimo, * porque irás delante del Señor a\npreparar sus caminos.\nV. Anunciando a su pueblo la salvación, el perdón de sus pecados.\nR. Porque irás delante del Señor a preparar sus caminos.\nSi se hace una celebración más extensa de esta solemnidad.",
+     "ref": "Lc 1, 76-77"
+    },
+    {
+     "tipo": "te_deum"
+    },
+    {
+     "tipo": "oracion",
+     "texto": "Oh Dios todopoderoso, que suscitaste a san Juan Bautista para que preparase\na Cristo un pueblo bien dispuesto, concede a tu familia el don de la alegría\nespiritual y dirige la voluntad de tus hijos por el camino de la salvación y de la\npaz. Por nuestro Señor Jesucristo."
+    }
+   ],
+   "laudes": [
+    {
+     "tipo": "himno",
+     "texto": "Niño que, antes de nacer,\nreconoce a su Señor\ny da saltos de placer\nbien puede llegar a ser\nsu profeta y precursor.\n\nSu nombre será san Juan,\nsu morada los desiertos;\nlangostas serán su pan;\nsobre el agua del Jordán,\nverá los cielos abiertos.\n\nOtros le vieron lejano\ny le anunciaron primero;\nJuan le ve ya cercano\nque va extendiendo su mano\ny señalando al Cordero.\n\nEstá llegando la hora,\nocaso de un Testamento,\npero del nuevo la aurora,\ncon la gracia triunfadora\nde Juan en el nacimiento.\n\nLa ley vieja en él fenece,\nla de gracia en él apunta;\nde donde claro parece\nque en este niño amanece\nlibertad y gracia junta.\n\nClaro espejo es el Jordán,\ndespués que los dos se han visto\ny abrazos de paz se dan:\nresplandece Cristo en Juan,\ny Juan reverbera en Cristo.\n\nJuan a Jesús bautizaba,\nel cielo entero se abría,\nla voz del Padre sonaba,\nla Paloma se posaba\nen gloriosa teofanía.\n\nNunca se podrá acallar\nla voz que habló en el desierto,\naunque le hayan de cortar\nla cabeza; estará muerto,\nmas no dejará de hablar.\n\nGloria al Padre muy amado,\ngloria al Hijo Salvador,\nque nos libra del pecado,\ny gloria al que él ha enviado,\nal Espíritu de Amor. Amén.\nO bien:\n\n«¿Qué será este niño?», decía la gente\nal ver a su padre mudo de estupor.\n«¿Si será un profeta?, ¿si será un vidente?»\n¡De una madre estéril nace el Precursor!\n\nAntes de nacer, sintió su llegada,\nal fuego del niño lo cantó Isabel,\ny llamó a la Virgen: «Bienaventurada»,\nporque ella era el arca donde estaba él,\n\nEl ya tan antiguo y nuevo Testamento\nen él se soldaron como en piedra imán;\nmuchos se alegraron de su nacimiento:\nfue ese mensajero que se llamó Juan.\n\nLo envió el Altísimo para abrir las vías\ndel que trae al mundo toda redención:\ncomo el gran profeta, como el mismo Elías,\na la faz del Hijo de su corazón.\n\nÉl no era la luz: vino a ser testigo\nde la que ya habita claridad sin fin;\nél no era el Señor: vino a ser su amigo,\nsu siervo, su apóstol y su paladín.\n\nCántanle los siglos, como Zacarías:\n«Y tú serás, niño, quien marche ante él;\neres el heraldo que anuncia al Mesías,\neres la esperanza del nuevo Israel.»\n\nEl mundo se llena de gran regocijo,\nJuan es el preludio de la salvación;\nalabanza al Padre que nos dio tal Hijo,\nla gloria al Espíritu que fraguó la acción. Amén."
+    },
+    {
+     "tipo": "salmodia",
+     "texto": "Ant. 1. Le pondrás el nombre de Juan y su nacimiento será motivo de alegría\npara muchos.\n\nSalmo 62, 2-9\n\nEL ALMA SEDIENTA DE DIOS\n\nMadruga por Dios todo el que rechaza las obras de las tinieblas.\n¡Oh Dios!, tú eres mi Dios, por ti madrugo,\n\nmi alma está sedienta de ti;\nmi carne tiene ansia de ti,\ncomo tierra reseca, agostada, sin agua.\n\n¡Cómo te contemplaba en el santuario\nviendo tu fuerza y tu gloria!\nTu gracia vale más que la vida,\nte alabarán mis labios.\n\nToda mi vida te bendeciré\ny alzaré las manos invocándote.\nMe saciaré de manjares exquisitos,\ny mis labios te alabarán jubilosos.\n\nEn el lecho me acuerdo de ti\ny velando medito en ti,\nporque fuiste mi auxilio,\ny a la sombra de tus alas canto con júbilo;\nmi alma está unida a ti,\ny tu diestra me sostiene.\n\nAnt. Le pondrás el nombre de Juan y su nacimiento será motivo de alegría\npara muchos.\nAnt. 2. Precederá al Señor en su venida con el espíritu y el poder de Elías,\npreparando al Señor un pueblo bien dispuesto.\n\nCántico Dn 3, 57-88. 56\n\nTODA LA CREACIÓN ALABE AL SEÑOR\n\nAlabad al Señor, sus siervos todos (Ap 19, 5).\n\nCriaturas todas del Señor, bendecid al Señor,\nensalzadlo con himnos por los siglos.\n\nÁngeles del Señor, bendecid al Señor;\ncielos, bendecid al Señor.\n\nAguas del espacio, bendecid al Señor;\nejércitos del Señor, bendecid al Señor.\n\nSol y luna, bendecid al Señor;\nastros del cielo, bendecid al Señor.\n\nLluvia y rocío, bendecid al Señor;\nvientos todos, bendecid al Señor.\n\nFuego y calor, bendecid al Señor;\nfríos y heladas, bendecid al Señor.\n\nRocíos y nevadas, bendecid al Señor;\ntémpanos y hielos, bendecid al Señor.\n\nEscarchas y nieves, bendecid al Señor;\nnoche y día, bendecid al Señor.\n\nLuz y tinieblas, bendecid al Señor;\nrayos y nubes, bendecid al Señor.\n\nBendiga la tierra al Señor,\nensálcelo con himnos por los siglos.\n\nMontes y cumbres, bendecid al Señor;\ncuanto germina en la tierra, bendiga al Señor.\n\nManantiales, bendecid al Señor;\nmares y ríos, bendecid al Señor.\n\nCetáceos y peces, bendecid al Señor;\naves del cielo, bendecid al Señor.\n\nFieras y ganados, bendecid al Señor,\nensalzadlo con himnos por los siglos.\n\nHijos de los hombres, bendecid al Señor;\nbendiga Israel al Señor.\n\nSacerdotes del Señor, bendecid al Señor;\nsiervos del Señor, bendecid al Señor.\n\nAlmas y espíritus justos, bendecid al Señor;\nsantos y humildes de corazón, bendecid al Señor.\n\nAnanías, Azarías y Misael, bendecid al Señor,\nensalzadlo con himnos por los siglos.\n\nBendigamos al Padre, al Hijo y al Espíritu Santo,\nensalcémoslo con himnos por los siglos.\n\nBendito el Señor en la bóveda del cielo,\nalabado y glorioso y ensalzado por los siglos.\n\nNo se dice Gloria al Padre.\nAnt. Precederá al Señor en su venida con el espíritu y el poder de Elías,\npreparando al Señor un pueblo bien dispuesto.\nAnt. 3. A ti, niño, te llamarán profeta del Altísimo, porque irás delante del\nSeñor a preparar sus caminos.\n\nSalmo 149\n\nALEGRÍA DE LOS SANTOS\n\nLos hijos de la Iglesia, nuevo pueblo de Dios, se alegran en su Rey, Cristo, el Señor\n(Hesiquio).\n\nCantad al Señor un cántico nuevo,\nresuene su alabanza en la asamblea de los fieles;\nque se alegre Israel por su Creador,\nlos hijos de Sión por su Rey.\n\nAlabad su nombre con danzas,\ncantadle con tambores y cítaras;\nporque el Señor ama a su pueblo\ny adorna con la victoria a los humildes.\n\nQue los fieles festejen su gloria\ny canten jubilosos en filas:\ncon vítores a Dios en la boca\ny espadas de dos filos en las manos:\n\npara tomar venganza de los pueblos\ny aplicar el castigo a las naciones,\nsujetando a los reyes con argollas,\na los nobles con esposas de hierro.\n\nEjecutar la sentencia dictada\nes un honor para todos sus fieles.\n\nAnt. A ti, niño, te llamarán profeta del Altísimo, porque irás delante del\nSeñor a preparar sus caminos."
+    },
+    {
+     "tipo": "lectura_breve",
+     "texto": "Mirad, os enviaré al profeta Elías antes de que llegue el día del Señor, grande y\nterrible. Convertirá el corazón de los padres hacia los hijos, y el corazón de los\nhijos hacia los padres, para que no tenga que venir yo a destruir la tierra.",
+     "ref": "Ml 4, 5-6"
+    },
+    {
+     "tipo": "responsorio_breve",
+     "texto": "V. Será grande a los ojos del Señor y estará lleno del Espíritu Santo.\nR. Será grande a los ojos del Señor y estará lleno del Espíritu Santo.\nV. Precederá al Señor en su venida, preparándole un pueblo bien dispuesto.\nR. Y estará lleno del Espíritu Santo.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. Será grande a los ojos del Señor y estará lleno del Espíritu Santo."
+    },
+    {
+     "tipo": "cantico_evangelico",
+     "texto": "Ant. Zacarías recuperó el uso de la lengua e, inspirado, dijo: «Bendito sea el\nSeñor, Dios de Israel.»"
+    },
+    {
+     "tipo": "preces",
+     "texto": "Oremos a Cristo, el Señor, que envió a Juan a preparar sus caminos delante de\nél, y digámosle:\nVisítanos, Sol que naces de lo alto.\n\nTú que hiciste saltar de gozo a Juan cuando estaba en el vientre de su madre,\n— haz que siempre nos alegremos de que hayas venido al mundo.\n\nTú que nos mostraste el camino de la conversión por la palabra y por el\nejemplo del Bautista,\n\n— ilumina nuestros corazones, para que se conviertan a las enseñanzas de\ntu reino.\n\nTú que quieres mostrarte a los hombres por la predicación de los hombres,\n— envía a todo el mundo profetas que anuncien tu Evangelio.\n\nTú que quisiste ser bautizado por Juan en el Jordán para llevar a término toda\njusticia,\n\n— haz que trabajemos por la justicia de tu reino.\nSe pueden añadir algunas intenciones libres.\n\nDirijamos nuestra oración al Padre que está en los cielos, diciendo: Padre\nnuestro."
+    },
+    {
+     "tipo": "oracion",
+     "texto": "Oh Dios todopoderoso, que suscitaste a san Juan Bautista para que preparase\na Cristo un pueblo bien dispuesto, concede a tu familia el don de la alegría\nespiritual y dirige la voluntad de tus hijos por el camino de la salvación y de la\npaz. Por nuestro Señor Jesucristo."
+    }
+   ],
+   "intermedia": {
+    "comun": [
+     {
+      "tipo": "salmodia_ref",
+      "texto": "Salmodia complementaria. Si esta solemnidad coincide con un domingo, salmos del domingo\nde la I semana del salterio."
+     }
+    ],
+    "tercia": [
+     {
+      "tipo": "lectura_breve",
+      "texto": "Escuchadme, islas; atended, pueblos lejanos: el Señor me llamó desde el\nvientre de mi madre, cuando aún estaba yo en el seno materno pronunció mi\nnombre.\nV. Vi al Espíritu Santo descender y posarse sobre él.\nR. Él es quien bautiza con Espíritu Santo.",
+      "ref": "Is 49, 1"
+     }
+    ],
+    "sexta": [
+     {
+      "tipo": "lectura_breve",
+      "texto": "Habla el Señor, que desde el seno materno me hizo su siervo: «Te hago luz de\nlas naciones, para que mi salvación alcance hasta el confín de la tierra.»\nV. El Señor me llamó desde el vientre de mi madre.\nR. Cuando aún estaba yo en el seno materno pronunció mi nombre.",
+      "ref": "Is 49, 5. 6"
+     }
+    ],
+    "nona": [
+     {
+      "tipo": "lectura_breve",
+      "texto": "Te verán los reyes y se pondrán de pie, te verán los príncipes y se postrarán;\nporque el Señor es fiel, porque el Santo de Israel te ha elegido.\nV. Mira: Yo pongo mis palabras en tu boca.\nR. Hoy te establezco sobre pueblos y reyes.",
+      "ref": "Is 49, 7b"
+     },
+     {
+      "tipo": "oracion_laudes"
+     }
+    ]
+   },
+   "visperas2": [
+    {
+     "tipo": "himno",
+     "texto": "Profeta de soledades,\nlabio hiciste de tus iras\npara fustigar mentiras\ny para gritar verdades.\n\nDesde el vientre escogido\nfuiste tú el pregonero,\npara anunciar al mundo\nla presencia del Verbo.\n\nEl desierto encendido\nfue tu ardiente maestro,\npara allanar montañas\ny encender los senderos.\n\nCuerpo de duro roble,\nalma azul de silencio;\nmiel silvestre de rocas\ny un jubón de camello.\n\nNo fuiste, Juan, la caña\ntronchada por el viento;\nsí la palabra ardiente\ntu palabra de acero.\n\nEn el Jordán lavaste\nal más puro Cordero,\nque apacienta entre lirios\ny duerme en los almendros.\n\nEn tu figura hirsuta\nse esperanzó tu pueblo:\npara una raza nueva\nabriste cielos nuevos.\n\nSacudiste el azote\nante el poder soberbio;\ny ante el Sol que nacía\n\nse apagó tu lucero.\n\nPor fin, en un banquete\ny en el placer de un ebrio,\nel vino de tu sangre\nsantificó el desierto.\n\nProfeta de soledades,\nlabio hiciste de tus iras\npara fustigar mentiras\ny para gritar verdades. Amén."
+    },
+    {
+     "tipo": "salmodia",
+     "texto": "Ant. 1. Apareció un hombre, enviado por Dios, que se llamaba Juan.\n\nSalmo 14\n\nSeñor, ¿quién puede hospedarse en tu tienda\ny habitar en tu monte santo?\n\nEl que procede honradamente\ny práctica la justicia,\n\nel que tiene intenciones leales\ny no calumnia con su lengua,\n\nel que no hace mal a su prójimo\nni difama al vecino,\nel que considera despreciable al impío\ny honra a los que temen al Señor,\n\nel que no retracta lo que juró\naún en daño propio,\nel que no presta dinero a usura\nni acepta soborno contra el inocente.\n\nEl que así obra nunca fallará.\nAnt. Apareció un hombre, enviado por Dios, que se llamaba Juan.\nAnt. 2. Juan vino como testigo para declarar en favor de la verdad.\n\nSalmo 111\n\nDichoso quien teme al Señor\ny ama de corazón sus mandatos.\nSu linaje será poderoso en la tierra,\nla descendencia del justo será bendita.\n\nEn su casa habrá riquezas y abundancia,\nsu caridad es constante, sin falta.\nEn las tinieblas brilla como una luz\nel que es justo, clemente y compasivo.\n\nDichoso el que se apiada y presta,\ny administra rectamente sus asuntos.\nEl justo jamás vacilará,\nsu recuerdo será perpetuo.\n\nNo temerá las malas noticias,\nsu corazón está firme en el Señor.\nSu corazón está seguro, sin temor,\nhasta que vea derrotados a sus enemigos.\n\nReparte limosna a los pobres;\nsu caridad es constante, sin falta,\ny alzará la frente con dignidad.\n\nEl malvado, al verlo, se irritará,\nrechinará los dientes hasta consumirse.\nLa ambición del malvado fracasará.\n\nAnt. Juan vino como testigo para declarar en favor de la verdad.\nAnt. 3. Juan era la lámpara que arde y que ilumina.\n\nCántico Ap 15, 3-4\n\nGrandes y maravillosas son tus obras,\nSeñor, Dios omnipotente,\njustos y verdaderos tus caminos,\n¡oh Rey de los siglos!\n\n¿Quién no temerá, Señor,\ny glorificará tu nombre?\nPorque tú solo eres santo,\nporque vendrán todas las naciones\ny se postrarán en tu acatamiento,\nporque tus juicios se hicieron manifiestos.\n\nAnt. Juan era la lámpara que arde y que ilumina."
+    },
+    {
+     "tipo": "lectura_breve",
+     "texto": "Según lo prometido, Dios sacó para Israel de la descendencia de David un\nSalvador, Jesús. Y su precursor fue Juan. Ya éste, antes de presentarse Jesús,\nhabía predicado a todo el pueblo de Israel un bautismo como señal de\narrepentimiento. Y, cuando estaba para terminar su misión, solía decir: «No\nsoy yo el que vosotros os imagináis. Pero, mirad, viene otro después de mí; y\nyo no soy digno de desatar su calzado.»",
+     "ref": "Hch 13, 23-25"
+    },
+    {
+     "tipo": "responsorio_breve",
+     "texto": "V. Preparad el camino del Señor, enderezad sus sendas.\nR. Preparad el camino del Señor, enderezad sus sendas.\nV. El que viene después de mí ya existía antes que yo.\nR. Enderezad sus sendas.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. Preparad el camino del Señor, enderezad sus sendas."
+    },
+    {
+     "tipo": "cantico_evangelico",
+     "texto": "Ant. El niño que nos ha nacido es más que un profeta; es aquel de quien dice\nel Salvador: «Entre los nacidos de mujer no ha surgido nadie mayor que Juan\nBautista.»"
+    },
+    {
+     "tipo": "preces",
+     "texto": "Oremos confiados al Señor, que eligió a Juan Bautista para anunciar a los\nhombres el reino de Cristo, y digámosle:\nGuía, Señor, nuestros pasos por el camino de la paz.\n\nTú, Señor, que llamaste a Juan cuando estaba aún en las entrañas maternas y\nlo elegiste para que preparara los caminos de tu Hijo,\n\n— danos ánimos para seguir siempre a Cristo con la misma fidelidad con que\nJuan lo precedió.\n\nTú que concediste al Bautista reconocer al Cordero de Dios,\n— concede a la Iglesia anunciar a Cristo de tal manera que los hombres de\n\nnuestro tiempo puedan reconocerlo.\n\nTú que dispusiste que Juan menguase y que Cristo creciera,\n— enséñanos a saber humillarnos, para que brille Cristo a los ojos de los\n\nhombres.\n\nTú que, por el martirio de Juan, quisiste manifestar la justicia,\n— concédenos testificar tu verdad con valentía, sin temor a la tribulación.\n\nSe pueden añadir algunas intenciones libres.\n\nAcuérdate, Señor, de los que han salido ya de este mundo,\n— y colócalos en el reino de la luz y de la paz.\n\nDirijamos nuestra oración al Padre que está en los cielos, diciendo: Padre\nnuestro."
+    },
+    {
+     "tipo": "oracion",
+     "texto": "Oh Dios todopoderoso, que suscitaste a san Juan Bautista para que preparase\na Cristo un pueblo bien dispuesto, concede a tu familia el don de la alegría\nespiritual y dirige la voluntad de tus hijos por el camino de la salvación y de la\npaz. Por nuestro Señor Jesucristo."
+    }
+   ]
+  }
+ },
+ "28": {
+  "titulo": "San Ireneo, obispo y mártir",
+  "rango": "M",
+  "semblanza": "Nació hacia el año 130 y fue educado en Esmirna; fue discípulo de san Policarpo, obispo de aquella ciudad. El año 177 era presbítero en Lyon (Francia), y poco después ocupó la sede episcopal de dicha ciudad. Escribió en defensa de la fe católica contra los errores de los gnósticos. Recibió la palma del martirio, según se cuenta, alrededor del año 200.",
+  "comun": "Del Común de un mártir o del Común de pastores.",
+  "horas": {
+   "oficio": [
+    {
+     "tipo": "lectura2",
+     "texto": "Del Tratado de san Ireneo, obispo, contra las herejías\n(Libro 4, 20, 5-7: SC 100, 640-642. 644-648)\n\nLA GLORIA DE DIOS CONSISTE EN QUE EL HOMBRE VIVA, Y LA VIDA DEL\nHOMBRE CONSISTE EN LA VISIÓN DE DIOS\n\nLa claridad de Dios vivifica y, por tanto, los que ven a Dios reciben la vida.\nPor esto, aquel que supera nuestra capacidad, que es incomprensible, invisible,\nse hace visible y comprensible para los hombres, se adapta a su capacidad,\npara dar vida a los que lo perciben y lo ven. Vivir sin vida es algo imposible, y\nla subsistencia de esta vida proviene de la participación de Dios, que consiste\nen ver a Dios y gozar de su bondad.\n\nLos hombres, pues, verán a Dios y vivirán, ya que esta visión los hará\ninmortales, al hacer que lleguen hasta la posesión de Dios. Esto, como dije\nantes, lo anunciaban ya los profetas de un modo velado, a saber, que verán a\nDios los que son portadores de su Espíritu y esperan continuamente su venida.\nComo dice Moisés en el Deuteronomio: Aquel día veremos que puede Dios\nhablar a un hombre, y seguir éste con vida.\n\nAquel que obra todo en todos es invisible e inefable en su ser y en su\ngrandeza, con respecto a todos los seres creados por él, mas no por esto deja\nde ser conocido, porque todos sabemos, por medio de su Verbo, que es un solo\nDios Padre, que lo abarca todo y que da el ser a todo; este conocimiento viene\natestiguado por el evangelio, cuando dice: A Dios nadie lo ha visto jamás: el\nHijo único, que está en el seno del Padre, es quien lo ha dado a conocer\n\nAsí pues, el Hijo nos ha dado a conocer al Padre desde el principio; ya que\ndesde el principio está con el Padre; él, en efecto, ha manifestado al género\nhumano el sentido de las visiones proféticas, de la distribución de los diversos\ncarismas, con sus ministerios; y en qué consiste la glorificación del Padre, y lo\nha hecho de un modo consecuente y ordenado, a su debido tiempo y con\nprovecho; porque donde hay orden allí hay armonía, y donde hay armonía allí\ntodo sucede a su debido tiempo, y donde todo sucede a su debido tiempo allí\nhay provecho.\n\nPor esto, el Verbo se ha constituido en distribuidor de la gracia del Padre en\nprovecho de los hombres, en cuyo favor ha puesto por obra los inescrutables\n\ndesignios de Dios, mostrando a Dios a los hombres, presentando al hombre a\nDios; salvaguardando la invisibilidad del Padre, para que el hombre tuviera\nsiempre un concepto muy elevado de Dios y un objetivo hacia el cual tender,\npero haciendo también visible a Dios para los hombres, realizando así los\ndesignios eternos del Padre, no fuera que el hombre, privado totalmente de\nDios, dejara de existir; porque la gloria de Dios consiste en que el hombre\nviva, y la vida del hombre consiste en la visión de Dios. En efecto, si la\nrevelación de Dios a través de la creación es causa de vida para todos los seres\nque viven en la tierra, mucho más lo será la manifestación del Padre por medio\ndel Verbo para los que ven a Dios."
+    },
+    {
+     "tipo": "responsorio",
+     "texto": "R. «Una doctrina auténtica llevaba en su boca, y en sus labios no se hallaba\nmaldad; * en paz y rectitud andaba conmigo», dice el Señor.\nV. Mi mano estuvo siempre con él y mi brazo lo hizo valeroso.\nR. «En paz y rectitud andaba conmigo», dice el Señor.\nLa La oración como en Laudes.",
+     "ref": "Ml 2, 6; Sal 88, 22"
+    }
+   ],
+   "laudes": [
+    {
+     "tipo": "cantico_evangelico",
+     "texto": "Ant. Ireneo, haciendo honor a su nombre, con su vida y con su esfuerzo,\ntrabajó en favor de la paz de las Iglesias."
+    }
+   ]
+  },
+  "oracion": "Señor, Dios nuestro, que otorgaste a tu obispo san Ireneo la gracia de\nmantener incólume la doctrina y la paz de la Iglesia, concédenos, por su\nintercesión, renovarnos en fe y en caridad y trabajar sin descanso por la\nconcordia y la unidad entre los hombres. Por nuestro Señor Jesucristo."
+ },
+ "29": {
+  "titulo": "San Pedro y san Pablo, apóstoles",
+  "rango": "S",
+  "semblanza": "",
+  "comun": "",
+  "horas": {
+   "visperas1": [
+    {
+     "tipo": "himno",
+     "texto": "La eterna luz que alumbra el santo triunfo\nde estos dos Príncipes de los apóstoles\nes la misma que muestra en este día\nel rumbo de los astros a los hombres.\n\nHoy llegan a la gloria estos benditos\nPadres de Roma y jueces de los pueblos;\nel Maestro del mundo, por la espada,\ny, por la cruz, el celestial Portero.\n\nDichosa tú, que fuiste consagrada,\noh Roma, con la sangre de estos Príncipes,\ny que, vestida con la regia púrpura,\nexcedes en nobleza a cuanto existe.\n\nHonra, poder y sempiterna gloria\nsean al Padre, al Hijo y al Espíritu,\nque en unidad gobiernan toda cosa,\npor infinitos e infinitos siglos. Amén.\nO bien:\n\nLa hermosa luz de eternidad inunda\ncon fulgores divinos este día,\nque presenció la muerte de estos Príncipes\ny al pecador abrió el camino de la vida.\n\nHoy lleváis la corona de la gloria,\npadres de Roma y jueces de los pueblos:\nel maestro del mundo, por la espada;\ny, por la cruz, el celestial portero.\n\nDichosa tú que fuiste ennoblecida,\noh Roma, con la sangre de estos Príncipes,\ny que, vestida con tan regia púrpura,\nexcedes en nobleza a cuanto existe.\n\nHonra, poder y sempiterna gloria\nsean al Padre, al Hijo y al Espíritu,\n\nque en unidad gobiernan toda cosa\npor infinitos e infinitos siglos. Amén."
+    },
+    {
+     "tipo": "salmodia",
+     "texto": "Ant. 1. «Tú eres el Mesías, el Hijo de Dios vivo.» «Dichoso tú, Simón, hijo de\nJonás.»\n\nSalmo 116\n\nAlabad al Señor, todas las naciones,\naclamadlo, todos los pueblos.\n\nFirme es su misericordia con nosotros,\n\nsu fidelidad dura por siempre.\nAnt. «Tú eres el Mesías, el Hijo de Dios vivo.» «Dichoso tú, Simón, hijo de\nJonás.»\nAnt. 2. Tú eres Pedro, y sobre esta piedra edificaré mi Iglesia.\n\nSalmo 147\n\nGlorifica al Señor, Jerusalén;\nalaba a tu Dios, Sión:\nque ha reforzado los cerrojos de tus puertas,\ny ha bendecido a tus hijos dentro de ti;\nha puesto paz en tus fronteras,\nte sacia con flor de harina.\n\nÉl envía su mensaje a la tierra,\ny su palabra corre veloz;\nmanda la nieve como lana,\nesparce la escarcha como ceniza;\n\nhace caer el hielo como migajas\ny con el frío congela las aguas;\nenvía una orden, y se derriten;\nsopla su aliento, y corren.\n\nAnuncia su palabra a Jacob,\nsus decretos y mandatos a Israel;\ncon ninguna nación obró así,\nni les dio a conocer sus mandatos.\n\nAnt. Tú eres Pedro, y sobre esta piedra edificaré mi Iglesia.\nAnt. 3. Tú eres un instrumento escogido, apóstol san Pablo, anunciador de la\nverdad en todo el mundo.\n\nCántico Ef 1, 3-10\n\nBendito sea Dios,\nPadre de nuestro Señor Jesucristo,\nque nos ha bendecido en la persona de Cristo\ncon toda clase de bienes espirituales y celestiales.\n\nÉl nos eligió en la persona de Cristo,\nantes de crear el mundo,\npara que fuésemos santos\ne irreprochables ante Él por el amor.\n\nÉl nos ha destinado en la persona de Cristo,\npor pura iniciativa suya,\na ser sus hijos,\npara que la gloria de su gracia,\nque tan generosamente nos ha concedido\nen su querido Hijo,\nredunde en alabanza suya.\n\nPor este Hijo, por su sangre,\nhemos recibido la redención,\nel perdón de los pecados.\nEl tesoro de su gracia, sabiduría y prudencia\nha sido un derroche para con nosotros,\ndándonos a conocer el misterio de su voluntad.\n\nÉste es el plan\nque había proyectado realizar por Cristo\ncuando llegase el momento culminante:\nrecapitular en Cristo todas las cosas\ndel cielo y de la tierra.\n\nAnt. Tú eres un instrumento escogido, apóstol san Pablo, anunciador de la\nverdad en todo el mundo."
+    },
+    {
+     "tipo": "lectura_breve",
+     "texto": "Pablo, siervo de Cristo Jesús, llamado a ser apóstol, escogido para anunciar el\nEvangelio de Dios. Este Evangelio, prometido ya por sus profetas en las\nEscrituras santas, se refiere a su Hijo. A todos los de Roma, a quienes Dios\nama y ha llamado a formar parte de los santos, os deseo la gracia y la paz de\nDios, nuestro Padre, y del Señor Jesucristo.",
+     "ref": "Rm 1, 1-3a. 7"
+    },
+    {
+     "tipo": "responsorio_breve",
+     "texto": "V. Los apóstoles anunciaban la palabra de Dios con valentía.\nR. Los apóstoles anunciaban la palabra de Dios con valentía.\nV. Y daban testimonio de la resurrección del Señor.\nR. Con valentía.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. Los apóstoles anunciaban la palabra de Dios con valentía."
+    },
+    {
+     "tipo": "cantico_evangelico",
+     "texto": "Ant. Estos gloriosos apóstoles, que se amaron tanto en la vida, tampoco se\nsepararon en la muerte."
+    },
+    {
+     "tipo": "preces",
+     "texto": "Oremos, hermanos, a Cristo, el, Señor, que quiso edificar su Iglesia sobre el\ncimiento de los apóstoles y profetas, y digámosle confiados:\nSeñor, ven en ayuda de tu pueblo.\n\nTú que llamaste a Pedro para hacerlo pescador de hombres,\n— no dejes de llamar obreros a tu mies para que el mundo se salve.\n\nTú que increpaste a los vientos y al mar para que la barca de los discípulos no\nse hundiera,\n\n— protege a tu Iglesia de toda perturbación y fortalece al sucesor de Pedro.\n\nTú que, después de la resurrección, congregaste en torno a Pedro tu grey\ndispersa,\n\n— reúne a tu Iglesia en un solo aprisco.\n\nTú que enviaste a Pablo a evangelizar a los paganos,\n— haz que el anuncio de la salvación llegue a todos los pueblos.\n\nSe pueden añadir algunas intenciones libres.\n\nTú que diste a la Iglesia las llaves del reino de los cielos,\n— abre las puertas de la felicidad a los que durante su vida confiaron en tu\n\nmisericordia.\n\nOremos ahora al Padre, como Jesús enseñó a los apóstoles: Padre nuestro."
+    },
+    {
+     "tipo": "oracion",
+     "texto": "Señor, Dios nuestro, tú que entregaste a la Iglesia las primicias de tu obra de\nsalvación, mediante el ministerio apostólico de san Pedro y san Pablo,\nconcédenos por su intercesión y sus méritos, los auxilios necesarios para\nnuestra salvación. Por nuestro Señor Jesucristo."
+    }
+   ],
+   "invitatorio": [
+    {
+     "tipo": "inicio",
+     "texto": "Ant. Venid, adoremos al Señor, rey de los apóstoles.\nEl salmo del Invitatorio como en el Ordinario."
+    }
+   ],
+   "oficio": [
+    {
+     "tipo": "himno",
+     "texto": "Pedro, roca; Pablo, espada.\nPedro, la red en las manos;\nPablo, tajante palabra.\n\nPedro, llaves; Pablo, andanzas.\nY un trotar por los caminos\ncon cansancio en las pisadas.\n\nCristo tras los dos andaba:\na uno lo tumbó en Damasco,\ny al otro lo hirió con lágrimas.\n\nRoma se vistió de gracia:\ncrucificada la roca,\ny la espada muerta a espada. Amén."
+    },
+    {
+     "tipo": "salmodia",
+     "texto": "Ant. 1. Si me amas, Simón Pedro, pastorea mis ovejas.\n\nSalmo 18 A\n\nEl cielo proclama la gloria de Dios,\nel firmamento pregona\nla obra de sus manos:\nel día al día le pasa el mensaje,\nla noche a la noche se lo susurra.\n\nSin que hablen, sin que pronuncien,\nsin que resuene su voz,\na toda la tierra alcanza su pregón\ny hasta los límites del orbe su lenguaje.\n\nAllí le ha puesto su tienda al sol:\nél sale como el esposo de su alcoba,\ncontento como un héroe,\na recorrer su camino.\n\nAsoma por un extremo del cielo,\ny su órbita llega al otro extremo:\nnada se libra de su calor.\n\nAnt. Si me amas, Simón Pedro, pastorea mis ovejas.\nAnt. 2. Para mí la vida es Cristo, y una ganancia el morir; yo he de gloriarme\nen la cruz de nuestro Señor Jesucristo.\n\nSalmo 63\n\nEscucha, oh Dios, la voz de mi lamento,\nprotege mi vida del terrible enemigo;\nescóndeme de la conjura de los perversos\ny del motín de los malhechores:\n\nafilan sus lenguas como espadas\ny disparan como flechas palabras venenosas,\npara herir a escondidas al inocente,\npara herirlo por sorpresa y sin riesgo.\n\nSe animan al delito,\ncalculan cómo esconder trampas,\ny dicen: \"¿quién lo descubrirá?\"\n\nInventan maldades y ocultan sus invenciones,\nporque su mente y su corazón no tienen fondo.\n\nPero Dios los acribilla a flechazos,\npor sorpresa los cubre de heridas;\nsu misma lengua los lleva a la ruina,\ny los que lo ven menean la cabeza.\n\nTodo el mundo se atemoriza,\nproclama la obra de Dios\ny medita sus acciones.\n\nEl justo se alegra con el Señor,\nse refugia en él,\ny se felicitan los rectos de corazón.\n\nAnt. Para mí la vida es Cristo, y una ganancia el morir; yo he de gloriarme\nen la cruz de nuestro Señor Jesucristo.\nAnt. 3. Señor, si eres tú, mándame ir hacia ti andando sobre agua.\n\nSalmo 96\n\nEl Señor reina, la tierra goza,\nse alegran las islas innumerables.\nTiniebla y nube lo rodea,\njusticia y derecho sostienen su trono.\n\nDelante de él avanza el fuego,\nabrasando en torno a los enemigos;\nsus relámpagos deslumbran el orbe,\ny, viéndolos, la tierra se estremece.\n\nLos montes se derriten como cera\nante el dueño de toda la tierra;\nlos cielos pregonan su justicia,\ny todos los pueblos contemplan su gloria.\n\nLos que adoran estatuas se sonrojan,\nlos que ponen su orgullo en los ídolos;\nante él se postran todos los dioses.\n\nLo oye Sión, y se alegra,\nse regocijan las ciudades de Judá\npor tus sentencias, Señor;\n\nporque tú eres, Señor,\naltísimo sobre toda la tierra,\nencumbrado sobre todos los dioses.\n\nEl Señor ama al que aborrece el mal,\nprotege la vida de sus fieles\ny los libra de los malvados.\n\nAmanece la luz para el justo,\ny la alegría para los rectos de corazón.\nAlegraos, justos, con el Señor,\ncelebrad su santo nombre.\n\nAnt. Señor, si eres tú, mándame ir hacia ti andando sobre agua."
+    },
+    {
+     "tipo": "versiculo",
+     "texto": "V. La palabra del Señor permanece eternamente.\nR. Y ésta es la Buena Noticia anunciada a vosotros."
+    },
+    {
+     "tipo": "lectura1",
+     "texto": "De la carta del apóstol san Pablo a los Gálatas 1, 15-2, 10\n\nETAPA DE CONVIVENCIA ENTRE PEDRO Y PABLO\n\nHermanos: Cuando aquel que me eligió desde el seno de mi madre me llamó\npor su gracia y tuvo a bien revelarme a su Hijo para que lo anunciara a los\ngentiles, en seguida, sin pedir consejo a hombre alguno y sin subir a Jerusalén\npara hablar con los que eran apóstoles antes que yo, partí hacia Arabia, de\ndonde luego volví a Damasco. Tres años más tarde, subí a Jerusalén a visitar a\nCefas, y estuve con él quince días. No vi a ninguno otro de los apóstoles, fuera\nde Santiago, el hermano del Señor. Por el Dios que me está viendo, que no\nmiento en lo que os escribo.\n\nDespués vine a las regiones de Siria y de Cilicia, pero las Iglesias de Judea,\nque están en Cristo, no me conocían personalmente. Sólo oían decir: «El que\nantaño nos perseguía ahora va anunciando la Buena Nueva de la fe, que en\notro tiempo quería destruir.» Y glorificaban a Dios, reconociendo su obra en mí.\n\nLuego, al cabo de catorce años, subí otra vez a Jerusalén con Bernabé,\nllevando también a Tito. Y subí por motivo de una revelación. Les expuse el\nEvangelio que predico entre los gentiles y traté en particular con los más\ncalificados, no fuera a ser que hubiese corrido en vano.\n\nPues bien, ni siquiera a Tito, mi compañero, con todo y que era griego, lo\nobligaron a circuncidarse. Y esto a pesar de los intrusos, de los falsos\nhermanos, que solapadamente se habían infiltrado, para espiar arteramente la\nlibertad de que gozamos en Cristo Jesús, y que querían esclavizarnos. Pero\nnosotros ni por un momento cedimos terreno para someternos a ellos, a fin de\nsalvaguardar firmemente para vosotros la verdad del Evangelio.\n\nLas personas de más consideración -nada me interesa lo que hubieran sido\nantes, pues en Dios no hay acepción de personas- no me impusieron ninguna\nnueva obligación.\n\nAl contrario, reconocieron que yo había recibido la misión de predicar el\nEvangelio a los gentiles, como Pedro la de predicarlo a los judíos; porque aquel\nque dio poder a Pedro para ejercer el apostolado entre los judíos me lo dio a\nmí para ejercerlo entre los gentiles. De este modo reconocieron que Dios me\nhabía dado esa gracia. Y Santiago, Cefas y Juan, los considerados como\ncolumnas, nos dieron la mano a Bernabé y a mí en señal de comunión y\nconformidad: nosotros nos dirigiríamos a los gentiles, ellos a los judíos. Sólo\nnos pidieron que nos acordásemos de los pobres, cosa que he procurado yo\ncumplir con toda solicitud."
+    },
+    {
+     "tipo": "responsorio",
+     "texto": "R. Tú eres Pedro, y sobre esta piedra edificaré mi Iglesia, y los poderes del\ninfierno no la derrotarán; * yo te daré las llaves del reino de los cielos.\n\nV. Todo lo que atares sobre la tierra será atado en el cielo, y todo lo que\ndesatares sobre la tierra será desatado en el cielo.\nR. Yo te daré las llaves del reino de los cielos.",
+     "ref": "Mt 16, 18-19"
+    },
+    {
+     "tipo": "lectura2",
+     "texto": "De los sermones de san Agustín, obispo\n(Sermón 295,1-2. 4. 7-8: PL 38,1348-1352)\n\nESTOS MÁRTIRES, EN SU PREDICACIÓN, DABAN TESTIMONIO DE LO QUE\nHABÍAN VISTO\n\nEl día de hoy es para nosotros sagrado, porque en él celebramos el martirio\nde los santos apóstoles Pedro y Pablo. No nos referimos, ciertamente, a unos\nmártires desconocidos. A toda la tierra alcanza su pregón y hasta los límites\ndel orbe su lenguaje. Estos mártires, en su predicación, daban testimonio de lo\nque habían visto y, con un desinterés absoluto, dieron a conocer la verdad\nhasta morir por ella.\n\nSan Pedro, el primero de los apóstoles, que amaba ardientemente a Cristo, y\nque llegó a oír de él estas palabras: Ahora te digo yo \"Tú eres Pedro\". Él había\ndicho antes: Tú eres el Mesías, el Hijo de Dios vivo. Y Cristo le replicó: \"Ahora\nte digo yo: Tú eres Pedro, y sobre esta piedra edificaré mi Iglesia. Sobre esta\npiedra edificaré esta misma fe que profesas. Sobre esta afirmación que tú has\nhecho: Tú eres el Mesías, el Hijo de Dios vivo, edificaré mi Iglesia. Porque tú\neres Pedro. \"Pedro\", una palabra que se deriva de piedra, y no al revés.\n\"Pedro\" viene de \"piedra\", del mismo modo que \"cristiano\" viene de \"Cristo,\".\n\nEl Señor Jesús, antes de su pasión, como sabéis, eligió a sus discípulos, a\nlos que dio el nombre de apóstoles. Entre ellos, Pedro fue el único que\nrepresentó la totalidad de la Iglesia casi en todas partes. Por ello, en cuanto\nque él solo representaba en su persona a la totalidad de la Iglesia, pudo\nescuchar estas palabras: Te daré las llaves del reino de los cielos. Porque estas\nllaves las recibió no un hombre único, sino la Iglesia única. De ahí la excelencia\nde la persona de Pedro en cuanto que él representaba la universalidad y la\nunidad de la Iglesia, cuando se le dijo: Yo te entrego, tratándose de algo que\nha sido entregado a todos. Pues sepáis que la Iglesia ha recibido las llaves del\nreino de los cielos, escuchad lo que el Señor dice en otro lugar a todos sus\napóstoles: Recibid el Espíritu Santo. Y a continuación: A quienes les perdonéis\nlos pecados les serán perdonados y a quienes se los retengáis les quedan\nretenidos.\n\nEn este mismo sentido, el Señor, después de su resurrección, encomendó\ntambién a Pedro sus ovejas para que las apacentara. No es que él fuera el\núnico de los discípulos que tuviera el encargo de apacentar las ovejas del\nSeñor; es que Cristo, por el hecho de referirse a uno solo, quiso significar con\nello la unidad de la Iglesia; y, si se dirige a Pedro con preferencia a los demás,\nes porque Pedro es el primero entre los apóstoles. No te entristezcas, apóstol;\nresponde una vez, responde dos, responde tres. Venza por tres veces tu\nprofesión de amor, ya que por tres veces el temor venció tu presunción. Tres\nveces ha de ser desatado lo que por tres veces habías ligado. Desata por el\n\namor lo que habías ligado por el temor. A pesar de su debilidad, por primera,\npor segunda y por tercera vez encomendó el Señor sus ovejas a Pedro.\n\nEn un solo día celebramos el martirio de los dos apóstoles. Es que ambos\neran en realidad una sola cosa, aunque fueran martirizados en días diversos.\nPrimero lo fue Pedro, luego Pablo. Celebramos la fiesta del día de hoy, sagrado\npara nosotros por la sangre de los apóstoles. Procuremos imitar su fe, su vida,\nsus trabajos, sus sufrimientos, su testimonio y su doctrina."
+    },
+    {
+     "tipo": "responsorio",
+     "texto": "R. Apóstol san Pablo, predicador de la verdad y maestro de los gentiles, *\nverdaderamente que eres digno de ser glorificado.\nV. Por ti conocieron la gracia de Dios todas las naciones.\nR. Verdaderamente que eres digno de ser glorificado.\nSi se hace una celebración más extensa de esta solemnidad."
+    },
+    {
+     "tipo": "te_deum"
+    },
+    {
+     "tipo": "oracion",
+     "texto": "Señor, Dios nuestro, tú que entregaste a la Iglesia las primicias de tu obra de\nsalvación, mediante el ministerio apostólico de san Pedro y san Pablo,\nconcédenos por su intercesión y sus méritos, los auxilios necesarios para\nnuestra salvación. Por nuestro Señor Jesucristo.\nSi se reza el oficio durante el día:"
+    },
+    {
+     "tipo": "oracion",
+     "texto": "Señor, tú que nos llenas de alegría en la celebración de la fiesta de san Pedro y\nsan Pablo, haz que tu Iglesia se mantenga siempre fiel a las enseñanzas de\naquellos que fueron fundamento de nuestra fe cristiana. Por nuestro Señor\nJesucristo."
+    }
+   ],
+   "laudes": [
+    {
+     "tipo": "himno",
+     "texto": "I\n\nCuando el gallo, tres veces\nnegaste a tu Maestro;\ny él tres veces te dijo:\n«¿Me amas más que éstos?»\n\nSe te puso muy triste\ntu llanto y tu silencio:\npero la Voz te habló\nde apacentar corderos.\n\nTu pecado quemante\n\nse convirtió en incendio,\ny abriste tus dos brazos\nal madero sangriento.\n\nLa cabeza hacia abajo\ny el corazón al cielo:\nporque, cuando aquel gallo,\nnegaste a tu Maestro. Amén.\n\nII\n\nPedro, roca; Pablo, espada.\nPedro, la red en las manos;\nPablo, tajante palabra.\nPedro, llaves; Pablo, andanzas.\n\nY un trotar por los caminos\ncon cansancio en las pisadas.\nCristo tras los dos andaba:\na uno lo tumbó en Damasco,\n\ny al otro lo hirió con lágrimas.\nRoma se vistió de gracia:\ncrucificada la roca,\ny la espada muerta a espada. Amén."
+    },
+    {
+     "tipo": "salmodia",
+     "texto": "Ant. 1. Sé de quién me he fiado, y estoy firmemente persuadido de que el\njusto Juez tiene poder para asegurar hasta el último día el encargo que me dio.\n\nSalmo 62, 2-9\n\nEL ALMA SEDIENTA DE DIOS\n\nMadruga por Dios todo el que rechaza las obras de las tinieblas.\n¡Oh Dios!, tú eres mi Dios, por ti madrugo,\n\nmi alma está sedienta de ti;\nmi carne tiene ansia de ti,\ncomo tierra reseca, agostada, sin agua.\n\n¡Cómo te contemplaba en el santuario\nviendo tu fuerza y tu gloria!\nTu gracia vale más que la vida,\nte alabarán mis labios.\n\nToda mi vida te bendeciré\ny alzaré las manos invocándote.\nMe saciaré de manjares exquisitos,\ny mis labios te alabarán jubilosos.\n\nEn el lecho me acuerdo de ti\ny velando medito en ti,\nporque fuiste mi auxilio,\ny a la sombra de tus alas canto con júbilo;\nmi alma está unida a ti,\ny tu diestra me sostiene.\n\nAnt. Sé de quién me he fiado, y estoy firmemente persuadido de que el\njusto Juez tiene poder para asegurar hasta el último día el encargo que me dio.\nAnt. 2. La gracia de Dios no se ha frustrado en mí, su gracia trabaja siempre\nconmigo.\n\nCántico Dn 3, 57-88. 56\n\nTODA LA CREACIÓN ALABE AL SEÑOR\n\nAlabad al Señor, sus siervos todos (Ap 19, 5).\n\nCriaturas todas del Señor, bendecid al Señor,\nensalzadlo con himnos por los siglos.\n\nÁngeles del Señor, bendecid al Señor;\ncielos, bendecid al Señor.\n\nAguas del espacio, bendecid al Señor;\nejércitos del Señor, bendecid al Señor.\n\nSol y luna, bendecid al Señor;\nastros del cielo, bendecid al Señor.\n\nLluvia y rocío, bendecid al Señor;\nvientos todos, bendecid al Señor.\n\nFuego y calor, bendecid al Señor;\nfríos y heladas, bendecid al Señor.\n\nRocíos y nevadas, bendecid al Señor;\ntémpanos y hielos, bendecid al Señor.\n\nEscarchas y nieves, bendecid al Señor;\nnoche y día, bendecid al Señor.\n\nLuz y tinieblas, bendecid al Señor;\nrayos y nubes, bendecid al Señor.\n\nBendiga la tierra al Señor,\nensálcelo con himnos por los siglos.\n\nMontes y cumbres, bendecid al Señor;\ncuanto germina en la tierra, bendiga al Señor.\n\nManantiales, bendecid al Señor;\nmares y ríos, bendecid al Señor.\n\nCetáceos y peces, bendecid al Señor;\naves del cielo, bendecid al Señor.\n\nFieras y ganados, bendecid al Señor,\nensalzadlo con himnos por los siglos.\n\nHijos de los hombres, bendecid al Señor;\nbendiga Israel al Señor.\n\nSacerdotes del Señor, bendecid al Señor;\nsiervos del Señor, bendecid al Señor.\n\nAlmas y espíritus justos, bendecid al Señor;\nsantos y humildes de corazón, bendecid al Señor.\n\nAnanías, Azarías y Misael, bendecid al Señor,\nensalzadlo con himnos por los siglos.\n\nBendigamos al Padre, al Hijo y al Espíritu Santo,\nensalcémoslo con himnos por los siglos.\n\nBendito el Señor en la bóveda del cielo,\nalabado y glorioso y ensalzado por los siglos.\n\nNo se dice Gloria al Padre.\nAnt. La gracia de Dios no se ha frustrado en mí, su gracia trabaja siempre\nconmigo.\nAnt. 3. He combatido bien mi combate, he corrido hasta la meta, he mantenido\nla fe.\n\nSalmo 149\n\nALEGRÍA DE LOS SANTOS\n\nLos hijos de la Iglesia, nuevo pueblo de Dios, se alegran en su Rey, Cristo, el Señor\n(Hesiquio).\n\nCantad al Señor un cántico nuevo,\nresuene su alabanza en la asamblea de los fieles;\nque se alegre Israel por su Creador,\nlos hijos de Sión por su Rey.\n\nAlabad su nombre con danzas,\ncantadle con tambores y cítaras;\nporque el Señor ama a su pueblo\ny adorna con la victoria a los humildes.\n\nQue los fieles festejen su gloria\ny canten jubilosos en filas:\ncon vítores a Dios en la boca\ny espadas de dos filos en las manos:\n\npara tomar venganza de los pueblos\ny aplicar el castigo a las naciones,\nsujetando a los reyes con argollas,\na los nobles con esposas de hierro.\n\nEjecutar la sentencia dictada\nes un honor para todos sus fieles.\n\nAnt. He combatido bien mi combate, he corrido hasta la meta, he mantenido\nla fe."
+    },
+    {
+     "tipo": "lectura_breve",
+     "texto": "Queridos hermanos: estad alegres cuando compartís los padecimientos de\nCristo, para que, cuando se manifieste su gloria, reboséis de gozo. Si os\nultrajan por el nombre de Cristo, dichosos vosotros: porque el Espíritu de la\ngloria, el Espíritu de Dios, reposa sobre vosotros.",
+     "ref": "1 Pe 4, 13-14"
+    },
+    {
+     "tipo": "responsorio_breve",
+     "texto": "V. Consagraron sus vidas al servicio de nuestro Señor Jesucristo.\nR. Consagraron sus vidas al servicio de nuestro Señor Jesucristo.\nV. Salieron contentos de haber merecido aquel ultraje.\nR. Al servicio de nuestro Señor Jesucristo.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\n\nR. Consagraron sus vidas al servicio de nuestro Señor Jesucristo."
+    },
+    {
+     "tipo": "cantico_evangelico",
+     "texto": "Ant. Dijo Simón Pedro: «Señor, ¿a quién vamos a acudir? Tú tienes palabras de\nvida eterna; nosotros creemos y sabemos que tú eres el Santo consagrado por\nDios.» Aleluya."
+    },
+    {
+     "tipo": "preces",
+     "texto": "Oremos, hermanos, a Cristo, el Señor, que quiso edificar su Iglesia sobre el\ncimiento de los apóstoles y profetas, y digámosle confiados:\nSeñor, colma de bienes a tu Iglesia.\n\nTú que rogaste por Pedro para que no se apagara su fe,\n— da firmeza a la fe de tu Iglesia.\n\nTú que, después de la resurrección, te apareciste a Simón Pedro y te revelaste\na Saulo,\n\n— ilumina nuestras mentes para que confesemos tu resurrección.\n\nTú que elegiste al apóstol Pablo para que anunciara tu nombre a los paganos,\n— haz de nosotros verdaderos apóstoles de tu Evangelio.\n\nTú que misericordiosamente perdonaste las negaciones de Pedro,\n— perdónanos también nuestras culpas y pecados.\n\nSe pueden añadir algunas intenciones libres.\n\nOremos ahora al Padre, como Jesús enseñó a los apóstoles: Padre nuestro."
+    },
+    {
+     "tipo": "oracion",
+     "texto": "Señor, tú que nos llenas de alegría en la celebración de la fiesta de san Pedro y\nsan Pablo, haz que tu Iglesia se mantenga siempre fiel a las enseñanzas de\naquellos que fueron fundamento de nuestra fe cristiana. Por nuestro Señor\nJesucristo."
+    }
+   ],
+   "intermedia": {
+    "comun": [
+     {
+      "tipo": "salmodia_ref",
+      "texto": "Salmodia complementaria. Si esta solemnidad coincide con un domingo, se toman los salmos\ndel domingo de la I semana del salterio."
+     }
+    ],
+    "tercia": [
+     {
+      "tipo": "lectura_breve",
+      "texto": "Dios determinó que por mi boca escuchasen los gentiles la doctrina del\nEvangelio y llegasen a la fe. Dios, que conoce los corazones, se ha declarado\nen favor de ellos, al darles el Espíritu Santo, igual que a nosotros; y no ha\nestablecido diferencia alguna entre ellos y nosotros, pues ha purificado sus\ncorazones por la fe.\nV. A toda la tierra alcanza su pregón.\nR. Y hasta los límites del orbe su lenguaje.",
+      "ref": "Hch 15, 7b-9"
+     }
+    ],
+    "sexta": [
+     {
+      "tipo": "lectura_breve",
+      "texto": "Cuando aquel que me eligió desde el seno de mi madre me llamó por su gracia\ny tuvo a bien revelarme a su Hijo para que lo anunciara a los gentiles partí\nhacia Arabia, de donde luego volví a Damasco. Tres años más tarde, subí a\nJerusalén a visitar a Cefas.\nV. Guardaron los preceptos del Señor.\nR. Las normas y mandatos que les ordenó.",
+      "ref": "Ga 1, 15-16a. 17b-18a"
+     }
+    ],
+    "nona": [
+     {
+      "tipo": "lectura_breve",
+      "texto": "Como somos impulsados por el mismo poder de la fe -del que dice la Escritura:\n«Creí, por eso hablé»-, también nosotros creemos, y por eso hablamos. Y\nsabemos que aquel que resucitó a Jesús nos resucitará también a nosotros con\nJesús, y nos hará aparecer en su presencia juntamente con vosotros.\nV. Estad alegres, dice el Señor.\nR. Porque vuestros nombres están inscritos en el cielo.",
+      "ref": "2 Co 4, 13-14"
+     },
+     {
+      "tipo": "oracion_laudes"
+     }
+    ]
+   },
+   "visperas2": [
+    {
+     "tipo": "himno",
+     "texto": "San Pedro y san Pablo, unidos\npor un martirio de amor,\nen la fe comprometidos,\nllevadnos hasta el Señor.\n\nEl Señor te dijo: «Simón, tú eres Piedra,\nsobre este cimiento fundaré mi Iglesia:\nla roca perenne, la nave ligera.\nNo podrá el infierno jamás contra ella.\nTe daré las llaves para abrir la puerta.»\n\nVicario de Cristo, timón de la Iglesia.\nPablo, tu palabra, como una saeta,\nllevó el Evangelio por toda la tierra.\nDoctor de las gentes, vas sembrando Iglesias;\nleemos tus cartas en las asambleas,\ny siempre de Cristo nos hablas en ellas;\nla cruz es tu gloria, tu vida y tu ciencia.\n\nSan Pedro y san Pablo: en la Roma eterna\nquedasteis sembrados cual trigo en la tierra;\nsobre los sepulcros, espigas, cosechas,\ncon riego de sangre plantasteis la Iglesia.\nSan Pedro y san Pablo, columnas señeras,\ntestigos de Cristo y de sus promesas.\nO bien:\n\nLa hermosa luz de eternidad inunda\ncon fulgores divinos este día,\nque presenció la muerte de estos Príncipes\ny al pecador abrió el camino de la vida.\n\nHoy lleváis la corona de la gloria,\npadres de Roma y jueces de los pueblos:\nel maestro del mundo, por la espada;\ny, por la cruz, el celestial portero.\n\nDichosa tú que fuiste ennoblecida,\noh Roma, con la sangre de estos Príncipes,\ny que, vestida con tan regia púrpura,\nexcedes en nobleza a cuanto existe.\n\nHonra, poder y sempiterna gloria\nsean al Padre, al Hijo y al Espíritu,\nque en unidad gobiernan toda cosa\npor infinitos e infinitos siglos. Amén."
+    },
+    {
+     "tipo": "salmodia",
+     "texto": "Ant. 1. Yo he rogado por ti, Pedro, para que tu fe no desfallezca; y tú, una vez\nconvertido, confirma a tus hermanos.\n\nSalmo 115\n\nTenía fe, aún cuando dije:\n\"¡Qué desgraciado soy!\"\nYo decía en mi apuro:\n\"Los hombres son unos mentirosos\".\n\n¿Cómo pagaré al Señor\ntodo el bien que me ha hecho?\nAlzaré la copa de la salvación,\ninvocando su nombre.\nCumpliré al Señor mis votos\nen presencia de todo el pueblo.\n\nMucho le cuesta al Señor\nla muerte de sus fieles.\nSeñor, yo soy tu siervo,\nsiervo tuyo, hijo de tu esclava:\nrompiste mis cadenas.\n\nTe ofreceré un sacrificio de alabanza,\ninvocando tu nombre, Señor.\nCumpliré al Señor mis votos\nen presencia de todo el pueblo,\nen el atrio de la casa del Señor,\nen medio de ti, Jerusalén.\n\nAnt. Yo he rogado por ti, Pedro, para que tu fe no desfallezca; y tú, una vez\nconvertido, confirma a tus hermanos.\nAnt. 2. Muy a gusto presumo de mis debilidades, porque así residirá en mí la\nfuerza de Cristo.\n\nSalmo 125\n\nCuando el Señor cambió la suerte de Sión,\nnos parecía soñar:\nla boca se nos llenaba de risas,\nla lengua de cantares.\n\nHasta los gentiles decían:\n\"El Señor ha estado grande con ellos\".\nEl Señor ha estado grande con nosotros,\ny estamos alegres.\n\nQue el Señor cambie nuestra suerte,\ncomo los torrentes del Negueb.\nLos que sembraban con lágrimas\ncosechan entre cantares.\n\nAl ir, iba llorando,\nllevando la semilla;\nal volver, vuelve cantando,\ntrayendo sus gavillas.\n\nAnt. Muy a gusto presumo de mis debilidades, porque así residirá en mí la\nfuerza de Cristo.\nAnt. 3. Tú eres pastor de las ovejas, Príncipe de los apóstoles; a ti te han sido\nentregadas las llaves del reino de los cielos.\n\nCántico  Ef 1, 3-10\n\nBendito sea Dios,\nPadre de nuestro Señor Jesucristo,\nque nos ha bendecido en la persona de Cristo\ncon toda clase de bienes espirituales y celestiales.\n\nÉl nos eligió en la persona de Cristo,\nantes de crear el mundo,\npara que fuésemos santos\ne irreprochables ante Él por el amor.\n\nÉl nos ha destinado en la persona de Cristo,\npor pura iniciativa suya,\na ser sus hijos,\npara que la gloria de su gracia,\nque tan generosamente nos ha concedido\nen su querido Hijo,\nredunde en alabanza suya.\n\nPor este Hijo, por su sangre,\nhemos recibido la redención,\nel perdón de los pecados.\nEl tesoro de su gracia, sabiduría y prudencia\nha sido un derroche para con nosotros,\ndándonos a conocer el misterio de su voluntad.\n\nÉste es el plan\n\nque había proyectado realizar por Cristo\ncuando llegase el momento culminante:\nrecapitular en Cristo todas las cosas\ndel cielo y de la tierra.\n\nAnt. Tú eres pastor de las ovejas, Príncipe de los apóstoles; a ti te han sido\nentregadas las llaves del reino de los cielos."
+    },
+    {
+     "tipo": "lectura_breve",
+     "texto": "En primer lugar os comuniqué el mensaje que yo mismo recibí: Que Cristo\nmurió por nuestros pecados, según las Escrituras, y fue sepultado; resucitó al\ntercer día y vive, según lo anunciaron también las Escrituras. Que se apareció\na Cefas y luego a los Doce. Por último, se apareció también a mí.",
+     "ref": "1 Co 15, 3-5. 8"
+    },
+    {
+     "tipo": "responsorio_breve",
+     "texto": "V. Los apóstoles anunciaban la palabra de Dios con valentía.\nR. Los apóstoles anunciaban la palabra de Dios con valentía.\nV. Y daban testimonio de la resurrección del Señor.\nR. Con valentía.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. Los apóstoles anunciaban la palabra de Dios con valentía."
+    },
+    {
+     "tipo": "cantico_evangelico",
+     "texto": "Ant. Pedro, apóstol, y Pablo, maestro de los gentiles, nos han anunciado tu\npalabra, Señor."
+    },
+    {
+     "tipo": "preces",
+     "texto": "Oremos, hermanos, a Cristo, el, Señor, que quiso edificar su Iglesia sobre el\ncimiento de los apóstoles y profetas, y digámosle confiados:\nSocorre, Señor, a tu pueblo.\n\nTú que llamaste a Pedro para hacerlo pescador de hombres,\n— no dejes de llamar obreros a tu mies para que el mundo se salve.\n\nTú que increpaste a los vientos y al mar para que la barca de los discípulos no\nse hundiera,\n\n— protege a tu Iglesia de toda perturbación y fortalece al sucesor de Pedro.\n\nTú que, después de la resurrección, congregaste en torno a Pedro tu grey\ndispersa,\n\n— reúne a tu Iglesia en un solo aprisco.\n\nTú que enviaste a Pablo a evangelizar a los paganos,\n— haz que el anuncio de la salvación llegue a todos los pueblos.\n\nSe pueden añadir algunas intenciones libres.\n\nTú que diste a la Iglesia las llaves del reino de los cielos,\n— abre las puertas de la felicidad a los que durante su vida confiaron en tu\n\nmisericordia.\n\nOremos ahora al Padre, como Jesús enseñó a los apóstoles: Padre nuestro."
+    },
+    {
+     "tipo": "oracion",
+     "texto": "Dios nuestro, que nos llenas de santa alegría con la solemnidad de los santos\napóstoles Pedro y Pablo, haz que tu Iglesia se mantenga siempre fiel a las"
+    }
+   ]
+  }
+ }
+}

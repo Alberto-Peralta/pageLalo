@@ -2,3 +2,11 @@ Scripts que generan liturgia-horas/data/ a partir de los txt de los tomos. Viven
   python3 parse_salterio.py   <tomo3.txt> <ruta>/liturgia-horas/data
   python3 build_ordinario.py  <tomo3.txt> <ruta>/liturgia-horas/data
   python3 parse_propio_to.py  <tomo3.txt> <tomo4.txt> <ruta>/liturgia-horas/data
+  python3 parse_tiempos.py adviento <tomo1.txt> <ruta>/liturgia-horas/data
+  python3 parse_tiempos.py navidad <tomo1.txt> <ruta>/liturgia-horas/data <tomo4.txt>   (el tomo4 aporta los salmos del Común de Santa María Virgen)
+  python3 parse_tiempos.py cuaresma <tomo2.txt> <ruta>/liturgia-horas/data
+  python3 parse_tiempos.py pascua   <tomo2.txt> <ruta>/liturgia-horas/data
+  python3 parse_tiempos.py domingos <tomo2.txt> <ruta>/liturgia-horas/data   (ejecutar DESPUES de cuaresma y pascua)
+  python3 parse_tiempos.py domingos_adv <tomo1.txt> <ruta>/liturgia-horas/data   (antífonas propias de los domingos de Adviento)
+  python3 -I parse_santos.py <ruta>/liturgia-horas   (Propio de los Santos, solemnidades del Señor en T.O. y Oficio de difuntos; las rutas de los 4 tomos se ajustan en santos_lib.py)
+  python3 audit_santos.py <ruta>/liturgia-horas/data/santos   (auditoría de completitud)

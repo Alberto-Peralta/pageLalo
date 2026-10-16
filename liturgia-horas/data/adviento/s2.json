@@ -1,0 +1,871 @@
+{
+ "dom": {
+  "visperas1": [
+   {
+    "tipo": "salmodia",
+    "texto": "Ant. 1. Alégrate y goza, nueva Sión, porque tu Rey llega con mansedumbre a salvar nuestras almas.\n\nSalmo 118, 105-112\n\nXIV (NUN)\n\nHIMNO A LA LEY DIVINA\n\nEste es mi mandamiento, que os\naméis unos a otros (Jn 15, 12).\n\nLámpara es tu palabra para mis pasos,\nluz en mi sendero;\nlo juro y lo cumpliré:\nguardaré tus justos mandamientos;\n¡estoy tan afligido!\nSeñor, dame vida según tu promesa.\n\nAcepta, Señor, los votos que pronuncio,\nenséñame tus mandatos;\nmi vida está siempre en peligro,\npero no olvido tu voluntad;\nlos malvados me tendieron un lazo,\npero no me desvié de tus decretos.\n\nTus preceptos son mi herencia perpetua,\nla alegría de mi corazón;\ninclino mi corazón a cumplir tus leyes,\nsiempre y cabalmente.\nAnt. Alégrate y goza, nueva Sión, porque tu Rey llega con mansedumbre a salvar nuestras almas.\n\nAnt. 2. Fortaleced las manos débiles, sed fuertes y decid: «Mirad a nuestro Dios que viene y nos salvará.» Aleluya.\n\nSalmo 15\n\nEL SEÑOR ES EL LOTE DE MI HEREDAD\n\nDios resucitó a Jesús, rompiendo\nlas ataduras de la muerte (Hech 2, 24).\n\nProtégeme, Dios mío, que me refugio en ti;\nyo digo al Señor: \"Tú eres mi bien\".\nLos dioses y señores de la tierra\nno me satisfacen.\n\nMultiplican las estatuas\nde dioses extraños;\nno derramaré sus libaciones con mis manos,\nni tomaré sus nombres en mis labios.\n\nEl Señor es el lote de mi heredad y mi copa;\nmi suerte está en tu mano:\nme ha tocado un lote hermoso,\nme encanta mi heredad.\n\nBendeciré al Señor, que me aconseja,\nhasta de noche me instruye internamente.\nTengo siempre presente al Señor,\ncon él a mi derecha no vacilaré.\n\nPor eso se me alegra el corazón,\nse gozan mis entrañas,\ny mi carne descansa serena.\nPorque no me entregarás a la muerte,\nni dejarás a tu fiel conocer la corrupción.\n\nMe enseñarás el sendero de la vida,\nme saciarás de gozo en tu presencia,\nde alegría perpetua a tu derecha.\n\nAnt. Fortaleced las manos débiles, sed fuertes y decid: «Mirad a nuestro Dios que viene y nos salvará.» Aleluya.\n\nAnt. 3. La ley se nos dio por mediación de Moisés; pero la gracia y la verdad nos han venido por Jesucristo.\n\nCántico Flp 2, 5-11\n\nCRISTO, SIERVO DE DIOS, EN SU MISTERIO PASCUAL\n\nCristo, a pesar de su condición divina,\nno hizo alarde de su categoría de Dios;\nal contrario, se despojó de su rango\ny tomó la condición de esclavo,\npasando por uno de tantos.\n\nY así, actuando como un hombre cualquiera,\nse rebajó hasta someterse incluso a la muerte,\ny una muerte de cruz.\n\nPor eso Dios lo levantó sobre todo\ny le concedió el \"Nombre—sobre—todo—nombre\";\nde modo que al nombre de Jesús toda rodilla se doble\nen el cielo, en la tierra, en el abismo,\ny toda lengua proclame:\nJesucristo es Señor, para gloria de Dios Padre.\n\nAnt. La ley se nos dio por mediación de Moisés; pero la gracia y la verdad nos han venido por Jesucristo."
+   },
+   {
+    "tipo": "lectura_breve",
+    "texto": "Que el mismo Dios de la paz os consagre totalmente y que todo vuestro ser —espíritu,\nalma y cuerpo— sea custodiado sin reproche hasta la Parusía de nuestro Señor Jesucristo.\nFiel es a sus promesas el que os ha convocado; y él las cumplirá.",
+    "ref": "1 Ts 5, 23-24"
+   },
+   {
+    "tipo": "responsorio_breve",
+    "texto": "V. Muéstranos, Señor, tu misericordia.\nR. Muéstranos, Señor, tu misericordia.\nV. Y danos tu salvación.\nR. Muéstranos, Señor, tu misericordia.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. Muéstranos, Señor, tu misericordia."
+   },
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "Ant. Ven, Señor, y danos tu paz; tu visita nos retornará a la rectitud y podremos\nalegrarnos en tu presencia."
+   },
+   {
+    "tipo": "preces",
+    "texto": "Oremos, hermanos, a Cristo, el Señor, que nació de la Virgen María, y digámosle:\nVen, Señor Jesús.\n\nHijo unigénito de Dios, que has de venir al mundo como mensajero de la alianza,\n— haz que el mundo te reciba y te reconozca.\n\nTú que, engendrado en el seno del Padre, quisiste hacerte hombre en el seno de María,\n— líbranos de la corrupción de la carne.\n\nTú que, siendo la vida, quisiste experimentar la muerte,\n\n— concédenos superar la sentencia de la muerte.\n\nTú que, al venir al juicio, traerás contigo la recompensa,\n— haz que tu amor sea entonces nuestro premio.\n\nSe pueden añadir algunas intenciones libres.\nSeñor Jesucristo, tú que por tu muerte socorriste a los muertos,\n\n— escucha las súplicas que te dirigimos por nuestros difuntos.\n\nPidamos ahora a nuestro Padre que sea la ayuda de nuestra debilidad: Padre nuestro."
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Señor todopoderoso, rico en misericordia, cuando salimos animosos al encuentro de tu\nHijo, no permitas que lo impidan los afanes de este mundo; guíanos hasta él con sabiduría\ndivina para que podamos participar plenamente de su vida. Por nuestro Señor Jesucristo."
+   }
+  ],
+  "invitatorio": [
+   {
+    "tipo": "inicio",
+    "texto": "Ant. Al Rey que viene, al Señor que se acerca, venid, adorémosle.\nA continuación se dice el salmo del Invitatorio: Salmo 94; Salmo 99; Salmo 66; Salmo 23."
+   }
+  ],
+  "oficio": [
+   {
+    "tipo": "salmodia",
+    "texto": "Ant. 1. Mirad, ya viene el Rey excelso con gran poder, para salvar a todos los pueblos. Aleluya.\n\nSalmo 103\n\nHIMNO AL DIOS CREADOR\n\nEl que es de Cristo es una criatura\nnueva: lo antiguo ha pasado, lo\n\nnuevo ha comenzado (2 Cor 5, 17).\n\nI\n\nBendice, alma mía, al Señor:\n¡Dios mío, qué grande eres!\nTe vistes de belleza y majestad,\nla luz te envuelve como un manto.\n\nExtiendes los cielos como una tienda,\nconstruyes tu morada sobre las aguas;\nlas nubes te sirven de carroza,\navanzas en las olas del viento;\nlos vientos te sirven de mensajeros;\nel fuego llameante, de ministro.\n\nAsentaste la tierra sobre sus cimientos,\ny no vacilará jamás;\nla cubriste con el manto del océano,\ny las aguas se posaron sobre las montañas;\n\npero a tu bramido huyeron,\nal fragor de tu trueno se precipitaron,\nmientras subían los montes y bajaban los valles:\ncada cual al puesto asignado.\nTrazaste una frontera que no traspasarán,\ny no volverán a cubrir la tierra.\n\nDe los manantiales sacas los ríos,\npara que fluyan entre los montes;\nen ellos beben las fieras de los campos,\nel asno salvaje apaga su sed;\njunto a ellos habitan las aves del cielo,\ny entre las frondas se oye su canto.\n\nAnt. Mirad, ya viene el Rey excelso con gran poder, para salvar a todos los pueblos. Aleluya.\n\nAnt. 2. Alégrate y goza, hija de Jerusalén: mira a tu Rey que viene. No temas, Sión, tu salvación está cerca.\n\nII\n\nDesde tu morada riegas los montes,\ny la tierra se sacia de tu acción fecunda;\nhaces brotar hierba para los ganados,\ny forraje para los que sirven al hombre.\n\nÉl saca pan de los campos,\ny vino que le alegra el corazón;\ny aceite que da brillo a su rostro,\ny alimento que le da fuerzas.\n\nSe llenan de savia los árboles del Señor,\nlos cedros del Líbano que él plantó:\nallí anidan los pájaros,\nen su cima pone casa la cigüeña.\nLos riscos son para las cabras,\nlas peñas son madriguera de erizos.\n\nHiciste la luna con sus fases,\nel sol conoce su ocaso.\nPones las tinieblas y viene la noche,\ny rondan las fieras de la selva;\nlos cachorros rugen por la presa,\nreclamando a Dios su comida.\n\nCuando brilla el sol, se retiran,\ny se tumban en sus guaridas;\nel hombre sale a sus faenas,\na su labranza hasta el atardecer.\n\nAnt. Alégrate y goza, hija de Jerusalén: mira a tu Rey que viene. No temas, Sión, tu salvación está cerca.\n\nAnt. 3. Salgamos con corazón limpio a recibir al Rey supremo, porque está para venir y no tardará.\n\nIII\n\nCuántas son tus obras, Señor,\ny todas las hiciste con sabiduría;\n\nla tierra está llena de tus criaturas.\n\nAhí está el mar: ancho y dilatado,\nen él bullen, sin número,\nanimales pequeños y grandes;\nlo surcan las naves, y el Leviatán\nque modelaste para que retoce.\n\nTodos ellos aguardan\na que les eches comida a su tiempo:\nse la echas, y la atrapan;\nabres tu mano, y se sacian de bienes;\n\nescondes tu rostro, y se espantan;\nles retiras el aliento, y expiran\ny vuelven a ser polvo;\nenvías tu aliento, y los creas,\ny repueblas la faz de la tierra.\n\nGloria a Dios para siempre,\ngoce el Señor con sus obras,\ncuando él mira la tierra, ella tiembla;\ncuando toca los montes, humean.\n\nCantaré al Señor,\ntocaré para mi Dios mientras exista:\nque le sea agradable mi poema,\ny yo me alegraré con el Señor.\n\nQue se acaben los pecadores en la tierra,\nque los malvados no existan más.\n¡Bendice, alma mía, al Señor!\n\nAnt. Salgamos con corazón limpio a recibir al Rey supremo, porque está para venir y no tardará.\nEl versículo, las lecturas y la oración como en el Propio del Tiempo.\nLa conclusión de la Hora como en el Ordinario."
+   },
+   {
+    "tipo": "versiculo",
+    "texto": "V. Levantaos, alzad la cabeza.\nR. Se acerca vuestra liberación."
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "Del libro del profeta Isaías 14, 1-21\n\nMUERTE DEL TIRANO Y LIBERACIÓN DEL PUEBLO\n\nEl Señor se apiadará de Jacob y preferirá todavía a Israel, los afincará en el solar de\nellos, y se les juntarán forasteros, que serán incorporados a la casa de Jacob. Tomarán a\notros pueblos y, llevándoselos a su lugar, se los apropiará la casa de Israel sobre el solar\ndel Señor como esclavos y esclavas. Harán cautivos a sus cautivadores, y dominarán sobre\nsus tiranos. Entonces, cuando te haya calmado el Señor de tu disgusto y tu desazón y de\nla dura servidumbre a que fuiste sometido, dirigirás esta sátira al rey de Babilonia. Dirás:\n\n¡Cómo ha acabado el tirano, cómo ha cesado su arrogancia! Ha quebrado el Señor la\nvara de los malvados, el bastón de los déspotas, que golpeaba a los pueblos con saña\ngolpes sin parar, que dominaba con ira a las naciones acosándolas sin tregua. Está\ntranquila y quieta la tierra toda, prorrumpe en aclamaciones. Hasta los cipreses se alegran\npor ti, los cedros del Líbano:\n\n«Desde que tú has caído en paz, no sube el talador a nosotros.»\nEl seol, allá abajo, se estremeció por ti saliéndote al encuentro; por ti despierta a las\n\nsombras, a todos los jerifaltes de la tierra; hace levantarse de sus tronos a los reyes de\ntodas las naciones. Todos ellos responden y te dicen:\n\n«¡También tú te has vuelto débil como nosotros, y a nosotros eres semejante! Ha sido\nprecipitada al seol tu arrogancia al son de tus cítaras. Tienes bajo ti una cama de gusanos,\ntus mantas son gusanera.\n\n¡Cómo has caído de los cielos, Lucero, hijo de la Aurora! ¡Has sido abatido a tierra,\ndominador de naciones! Tú que habías dicho en tu corazón:\n\n«Al cielo voy a subir, por encima de las estrellas de Dios alzaré mi trono, y me sentaré\nen el Monte de la Reunión, en el extremo norte. Subiré a las alturas del nublado, me\nasemejaré al Altísimo.\n\n¡Ay!: al seol has sido precipitado, a lo más hondo del pozo.» Los que te ven, en ti se\nfijan; te miran con atención:\n\n«¿Ese es aquél, el que hacía estremecer la tierra, el que hacía temblar los reinos, el que\npuso el orbe como un desierto, y asoló sus ciudades, el que a sus prisioneros no abría la\ncárcel?»\n\nTodos los reyes de las naciones, todos ellos yacen con honor, cada uno en su morada.\nPero tú has sido arrojado fuera de tu sepulcro, como un brote abominable, recubierto de\nmuertos acuchillados, arrojados sobre las piedras de la fosa, como cadáver pisoteado. No\ntendrás con ellos sepultura, porque tu tierra has destruido, a tu pueblo has asesinado. No\nse nombrará jamás la descendencia de los malhechores. Preparad a sus hijos degollina por\nla culpa de sus padres: no sea que se levanten y se apoderen de la tierra, y llenen de\nciudades la haz del orbe.",
+    "anio": "I"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Ya está a punto de llegar su hora, sus días no tardarán. El Señor se apiadará de Jacob\n* y volverá a escoger a Israel.\nV. El que ha de venir vendrá y no tardará, y ya no habrá temor en nuestra tierra, porque él\nes nuestro salvador.\nR. Y volverá a escoger a Israel.",
+    "ref": "Cf. Is 13, 22; cf. 14, 1; cf. Hb 10, 37",
+    "anio": "I"
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "Del libro del profeta Isaías 22, 8b-23\n\nCONTRA LA SOBERBIA DE JERUSALÉN Y DE JOBNA, MAYORDOMO DE PALACIO\n\nContemplasteis aquel día el arsenal de la Casa del Bosque. Y  las brechas de la ciudad\nde David visteis que eran muchas, y reunisteis las aguas de la alberca inferior. Las casas\nde Jerusalén contasteis, y demolisteis casas para fortificar la muralla. Un estanque hicisteis\nentre ambos muros para las aguas de la alberca vieja; pero no os fijasteis en su Hacedor,\nal que desde antiguo lo ideó de lejos no le visteis.\n\nLlamaba el Señor de los ejércitos aquel día a lloro y a lamento y a raparse y ceñirse de\nsayal, mas lo que hubo fue jolgorio y alegría, matanza de bueyes y degüello de ovejas,\ncomer carne y beber vino: «¡Comamos y bebamos, que mañana moriremos!» Entonces\nme reveló al oído el Señor de los ejércitos:\n\n«No será expiada esa culpa hasta que muráis» —ha dicho el Señor de los ejércitos—.\nAsí dice el Señor de los ejércitos:\n«Preséntate al mayordomo, a Sebná, encargado del palacio, el que labra en alto su\n\ntumba, el que se talla en la peña una morada: “¿Qué es tuyo aquí y a quién tienes aquí,\nque te has labrado aquí una tumba? He aquí que el Señor te hace rebotar, hombre, y te\nvuelve a agarrar. Te enrolla en ovillo, como una pelota en tierra de amplios espacios. Allí\nmorirás, y allí irán tus carrozas gloriosas, vergüenza del palacio de tu señor.\nTe empujaré de tu peana y de tu pedestal te apearé. Aquel día llamaré a mi siervo\nElyaquim, hijo de Jilquías. Le revestiré de tu túnica, con tu fajín le sujetaré, tu autoridad\npondré en su mano, y será él un padre para los habitantes de Jerusalén y para la casa de\n\nJudá. Pondré la llave de la casa de David sobre su hombro; abrirá, y nadie cerrará,\ncerrará, y nadie abrirá. Le hincaré como clavija en lugar seguro, y será trono de gloria\npara la casa de su padre.”»",
+    "anio": "II"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Esto dice el Santo, el Veraz, el que tiene la llave de David: * «He abierto ante ti una\npuerta que nadie puede cerrar.»\nV. Has guardado mi palabra y no has renegado de mi nombre.\nR. He abierto ante ti una puerta que nadie puede cerrar.",
+    "ref": "Ap 3, 7. 8",
+    "anio": "II"
+   },
+   {
+    "tipo": "lectura2",
+    "texto": "De los comentarios de Eusebio de Cesarea, obispo, sobre el libro de Isaías\n(Cap. 40: PG 24, 366-367)\n\nUNA VOZ GRITA EN EL DESIERTO\n\nUna voz grita en el desierto: «Preparad un camino al Señor, allanad una calzada para\nnuestro Dios.» EL profeta declara abiertamente que su vaticinio no ha de realizarse en\nJerusalén, sino en el desierto; a saber, que se manifestará la gloria del Señor, y la\nsalvación de Dios llegará a conocimiento de todos los hombres.\n\nY todo esto, de acuerdo con la historia y a la letra, se cumplió precisamente cuando\nJuan Bautista predicó el advenimiento salvador de Dios en el desierto del Jordán, donde la\nsalvación de Dios se dejó ver. Pues Cristo y su gloria se pusieron de manifiesto para todos\ncuando, una vez bautizado, se abrieron los cielos y el Espíritu Santo descendió en forma\nde paloma y se posó sobre él, mientras se oía la voz del Padre que daba testimonio de su\nHijo: Éste es mi Hijo, el amado; escuchadlo.\n\nTodo esto se decía porque Dios había de presentarse en el desierto, impracticable e\ninaccesible desde siempre. Se trataba, en efecto, de todas las gentes privadas del\nconocimiento de Dios, con las que no pudieron entrar en contacto los justos de Dios y los\nprofetas.\n\nPor este motivo, aquella voz manda preparar un camino para la Palabra de Dios, así\ncomo allanar sus obstáculos y asperezas, para que cuando venga nuestro Dios pueda\ncaminar sin dificultad. Preparad un camino al Señor: se trata de la predicación evangélica\ny de la nueva consolación, con el deseo de que la salvación de Dios llegue a conocimiento\nde todos los hombres.\n\nSúbete a un monte elevado, heraldo de Sión; alza fuerte la voz, heraldo de Jerusalén.\nEstas expresiones de los antiguos profetas encajan muy bien y se refieren con\noportunidad a los evangelistas: ellas anuncian el advenimiento de Dios a los hombres,\ndespués de haberse hablado de la voz que grita en el desierto. Pues a la profecía de Juan\nBautista sigue coherentemente la mención de los evangelistas.\n\n¿Cuál es esta Sión sino aquella misma que antes se llamaba Jerusalén? Y ella misma\nera aquel monte al que la Escritura se refiere cuando dice: El monte Sión donde pusiste tu\nmorada; y el Apóstol: Os habéis acercado al monte Sión. ¿Acaso de esta forma se estará\naludiendo al coro apostólico, escogido de entre el primitivo pueblo de la circuncisión?\n\nY esta Sión y Jerusalén es la que recibió la salvación de Dios, la misma que a su vez se\nyergue sublime sobre el monte de Dios, es decir, sobre su Verbo unigénito: a la cual Dios\nmanda que, una vez ascendida la sublime cumbre, anuncie la palabra de salvación. ¿Y\nquién es el que evangeliza sino el coro apostólico? ¿Y qué es evangelizar? Predicar a todos\nlos hombres, y en primer lugar a las ciudades de Judá, que Cristo ha venido a la tierra."
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Ha venido el Precursor del Señor, acerca del cual el mismo Señor da este testimonio: *\n«Entre los nacidos de mujer no ha surgido nadie mayor que Juan Bautista.»\nV. Es éste un profeta, y más que un profeta, es aquel de quien dice el Salvador:\nR. Entre los nacidos de mujer no ha surgido nadie mayor que Juan Bautista.\nDespués del segundo responsorio se dice el himno Te Deum.",
+    "ref": "Cf. Mt 11, 11. 9"
+   },
+   {
+    "tipo": "oracion_laudes"
+   }
+  ],
+  "laudes": [
+   {
+    "tipo": "salmodia",
+    "texto": "Ant. 1. Tenemos en Sión una ciudad fuerte: el Salvador ha puesto en ellas sus murallas y baluartes; abrid las puertas que con nosotros está Dios. Aleluya.\n\nSalmo 117\n\nHIMNO DE ACCIÓN DE GRACIAS DESPUÉS DE LA VICTORIA\n\nJesús es la piedra que desechasteis\nvosotros, los arquitectos, y que se ha\n\nconvertido en piedra angular\n(Hech 4, 11).\n\nDad gracias al Señor porque es bueno,\nporque es eterna su misericordia.\n\nDiga la casa de Israel:\neterna es su misericordia.\n\nDiga la casa de Aarón:\neterna es su misericordia.\n\nDigan los fieles del Señor:\neterna es su misericordia.\n\nEn el peligro grité al Señor,\ny me escuchó, poniéndome a salvo.\n\nEl Señor está conmigo: no temo;\n¿qué podrá hacerme el hombre?\nEl Señor está conmigo y me auxilia,\nveré la derrota de mis adversarios.\n\nMejor es refugiarse en el Señor\nque fiarse de los hombres,\nmejor es refugiarse en el Señor\nque fiarse de los jefes.\n\nTodos los pueblos me rodeaban,\nen el nombre del Señor los rechacé;\nme rodeaban cerrando el cerco,\nen el nombre del Señor los rechacé;\nme rodeaban como avispas,\nardiendo como fuego en las zarzas,\nen el nombre del Señor los rechacé.\n\nEmpujaban y empujaban para derribarme,\npero el Señor me ayudó;\nel Señor es mi fuerza y mi energía,\n\nél es mi salvación.\n\nEscuchad: hay cantos de victoria\nen las tiendas de los justos:\n\"la diestra del Señor es poderosa,\nla diestra del Señor es excelsa,\nla diestra del Señor es poderosa\".\n\nNo he de morir, viviré\npara contar las hazañas del Señor.\nMe castigó, me castigó el Señor,\npero no me entregó a la muerte.\n\nAbridme las puertas del triunfo,\ny entraré para dar gracias al Señor.\n\nÉsta es la puerta del Señor:\nlos vencedores entrarán por ella.\n\nTe doy gracias porque me escuchaste\ny fuiste mi salvación.\n\nLa piedra que desecharon los arquitectos\nes ahora la piedra angular.\n\nEs el Señor quien lo ha hecho,\nha sido un milagro patente.\n\nÉste es el día en que actuó el Señor:\nsea nuestra alegría y nuestro gozo.\nSeñor, danos la salvación;\nSeñor, danos prosperidad.\n\nBendito el que viene en nombre del Señor,\nos bendecimos desde la casa del Señor;\nel Señor es Dios, él nos ilumina.\n\nOrdenad una procesión con ramos\nhasta los ángulos del altar.\n\nTú eres mi Dios, te doy gracias;\nDios mío, yo te ensalzo.\n\nDad gracias al Señor porque es bueno,\nporque es eterna su misericordia.\n\nAnt. Tenemos en Sión una ciudad fuerte: el Salvador ha puesto en ellas sus murallas y baluartes; abrid las puertas que con nosotros está Dios. Aleluya.\n\nAnt. 2. Sedientos todos, acudid por agua; buscad al Señor mientras se le encuentra. Aleluya.\n\nCántico Dn 3, 52-57\n\nQUE LA CREACIÓN ENTERA ALABE AL SEÑOR\n\nEl Creador... es bendito por los siglos\n(Rom 1, 25).\n\nBendito eres, Señor, Dios de nuestros padres:\na ti gloria y alabanza por los siglos.\n\nBendito tu nombre, santo y glorioso:\na él gloria y alabanza por los siglos.\n\nBendito eres en el templo de tu santa gloria:\na ti gloria y alabanza por los siglos.\n\nBendito eres sobre el trono de tu reino:\na ti gloria y alabanza por los siglos.\n\nBendito eres tú, que sentado sobre querubines\nsondeas los abismos:\na ti gloria y alabanza por los siglos.\n\nBendito eres en la bóveda del cielo:\na ti honor y alabanza por los siglos.\n\nCriaturas todas del Señor, bendecid al Señor,\nensalzadlo con himnos por los siglos.\n\nAnt. Sedientos todos, acudid por agua; buscad al Señor mientras se le encuentra. Aleluya.\n\nAnt. 3. Mirad: el Señor vendrá con poder para iluminar los ojos de sus siervos. Aleluya.\n\nSalmo 150\n\nALABAD AL SEÑOR\n\nSalmodiad con el espíritu, salmodiad\ncon toda vuestra mente, es decir,\n\nglorificad a Dios con el cuerpo\ny con el alma (Hesiquio).\n\nAlabad al Señor en su templo,\nalabadlo en su fuerte firmamento.\n\nAlabadlo por sus obras magníficas,\nalabadlo por su inmensa grandeza.\n\nAlabadlo tocando trompetas,\nalabadlo con arpas y cítaras,\n\nalabadlo con tambores y danzas,\nalabadlo con trompas y flautas,\n\nalabadlo con platillos sonoros,\nalabadlo con platillos vibrantes.\n\nTodo ser que alienta alabe al Señor.\nAnt. Mirad: el Señor vendrá con poder para iluminar los ojos de sus siervos. Aleluya."
+   },
+   {
+    "tipo": "lectura_breve",
+    "texto": "Ya es hora que despertéis del sueño, pues la salud está ahora más cerca que cuando\nabrazamos la fe. La noche va pasando, el día está encima; desnudémonos, pues, de las\nobras de las tinieblas y vistámonos de las armas de la luz.",
+    "ref": "Rm 13, 11b-12"
+   },
+   {
+    "tipo": "responsorio_breve",
+    "texto": "V. Cristo, Hijo de Dios vivo, ten piedad de nosotros.\nR. Cristo, Hijo de Dios vivo, ten piedad de nosotros.\nV. Tú que has de venir al mundo.\nR. Ten piedad de nosotros.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. Cristo, Hijo de Dios vivo, ten piedad de nosotros."
+   },
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "Ant. Mira, yo envío a mi Mensajero para que prepare mi camino delante de ti."
+   },
+   {
+    "tipo": "preces",
+    "texto": "Roguemos, hermanos, al Señor Jesús, juez de vivos y muertos, y digámosle:\nVen, Señor Jesús.\n\nSeñor Jesucristo, tú que viniste a salvar a los pecadores,\n— líbranos de caer en la tentación.\n\nTú que vendrás con gloria para juzgar a tu pueblo,\n— muestra en nosotros tu poder salvador.\n\nAyúdanos a cumplir con fortaleza de espíritu los preceptos de tu ley,\n— para que podamos esperar tu venida sin temor.\n\nTú que eres bendito por los siglos,\n— concédenos, por tu misericordia, que llevando ya desde ahora una vida sobria y\n\nreligiosa esperemos con gozo tu gloriosa aparición.\n\nSe pueden añadir algunas intenciones libres.\nPorque Jesucristo mismo nos lo enseñó, nos atrevemos a decir: Padre nuestro."
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Señor todopoderoso, rico en misericordia, cuando salimos animosos al encuentro de tu\nHijo, no permitas que lo impidan los afanes de este mundo; guíanos hasta él con sabiduría\ndivina para que podamos participar plenamente de su vida. Por nuestro Señor Jesucristo."
+   }
+  ],
+  "intermedia": {
+   "comun": [],
+   "tercia": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "Andemos como en pleno día, con dignidad. No andemos en comilonas y borracheras, ni en\ndeshonestidad ni lujuria, ni en riñas ni envidias; sino revestíos de Jesucristo, el Señor.\nV. Los gentiles temerán tu nombre, Señor.\nR. Los reyes del mundo tu gloria.",
+     "ref": "Rm 13, 13-14a"
+    },
+    {
+     "tipo": "oracion_laudes"
+    }
+   ],
+   "sexta": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "Que el Señor os haga aumentar y rebosar en amor de unos con otros y con todos, así\ncomo os amamos nosotros, para que conservéis vuestros corazones intachables en\nsantidad ante Dios, Padre nuestro, cuando venga nuestro Señor Jesucristo con todos sus\nsantos.\nV. Acuérdate de nosotros, Señor, por amor a tu pueblo.\nR. Visítanos con tu salvación.",
+     "ref": "1 Ts 3, 12-13"
+    },
+    {
+     "tipo": "oracion_laudes"
+    }
+   ],
+   "nona": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "Es justo a los ojos de Dios que a vosotros, los atribulados, os pague con descanso eterno,\ndescanso que será en nuestra compañía. Esto sucederá el día de la revelación de Jesús, el\nSeñor, cuando venga del cielo con los ángeles ejecutores de su poder, cuando venga aquel\ndía para ser glorificado en sus santos y para ser la admiración de los que han tenido fe.\nV. Ven, Señor, y no tardes.\nR. Perdona los pecados de tu pueblo.",
+     "ref": "Cf. 2 Ts 1, 6. 7. 10"
+    },
+    {
+     "tipo": "oracion_laudes"
+    }
+   ]
+  },
+  "visperas2": [
+   {
+    "tipo": "salmodia",
+    "texto": "Ant. 1. Mirad: viene el Señor con gran poder sobre las nubes del cielo. Aleluya.\n\nSalmo 109, 1-5. 7\n\nEL MESÍAS, REY Y SACERDOTE\n\nCristo tiene que reinar hasta que\nDios haga de sus enemigos estrado de\n\nsus pies (1 Co 15, 25).\nOráculo del Señor a mi Señor:\n\n\"siéntate a mi derecha,\ny haré de tus enemigos\nestrado de tus pies\".\nDesde Sión extenderá el Señor\nel poder de tu cetro:\nsomete en la batalla a tus enemigos.\n\n\"Eres príncipe desde el día de tu nacimiento,\nentre esplendores sagrados;\nyo mismo te engendré, como rocío,\nantes de la aurora\".\n\nEl Señor lo ha jurado y no se arrepiente:\n\"Tú eres sacerdote eterno,\nsegún el rito de Melquisedec\".\n\nEl Señor a tu derecha, el día de su ira,\nquebrantará a los reyes.\nEn su camino beberá del torrente,\npor eso, levantará la cabeza.\n\nAnt. Mirad: viene el Señor con gran poder sobre las nubes del cielo. Aleluya.\n\nAnt. 2. Aparecerá el Señor y no faltará: si tarda, no dejéis de esperarlo, pues llegará y no tardará. Aleluya.\n\nSalmo 113\n\nHIMNO AL DIOS VERDADERO\n\nAbandonando los ídolos, os volvisteis\na Dios para servir al Dios vivo y\n\nverdadero (1 Ts 1, 9).\nNo a nosotros, Señor, no a nosotros,\n\nsino a tu nombre da la gloria,\npor tu bondad, por tu lealtad.\n¿Por qué han de decir las naciones:\n\"Dónde está su Dios?\"\n\nNuestro Dios está en el cielo,\nlo que quiere lo hace.\nSus ídolos, en cambio, son plata y oro,\nhechura de manos humanas:\n\nTienen boca, y no hablan;\ntienen ojos, y no ven;\ntienen orejas, y no oyen;\ntienen nariz, y no huelen;\n\nTienen manos, y no tocan;\ntienen pies, y no andan;\nno tiene voz su garganta:\nque sean igual los que los hacen,\ncuantos confían en ellos.\n\nIsrael confía en el Señor:\nÉl es su auxilio y su escudo.\nLa casa de Aarón confía en el Señor:\nÉl es su auxilio y su escudo.\nLos fieles del Señor confían en el Señor:\nÉl es su auxilio y su escudo.\n\nQue el Señor se acuerde de nosotros y nos bendiga,\nbendiga a la casa de Israel,\nbendiga a la casa de Aarón;\nbendiga a los fieles del Señor,\npequeños y grandes.\n\nQue el Señor os acreciente,\n\na vosotros y a vuestros hijos;\nbendito seáis del Señor,\nque hizo el cielo y la tierra.\nEl cielo pertenece al Señor,\nla tierra se la ha dado a los hombres.\n\nLos muertos ya no alaban al Señor,\nni los que bajan al silencio.\nNosotros, sí, bendeciremos al Señor\nahora y por siempre.\n\nAnt. Aparecerá el Señor y no faltará: si tarda, no dejéis de esperarlo, pues llegará y no tardará. Aleluya.\n\nAnt. 3. El Señor es nuestro legislador, el Señor es nuestro Rey: él vendrá y nos salvará.\n\nEl cántico siguiente se dice con Aleluya, tal como está aquí, solamente cuando el Oficio\nes cantado. Cuando el Oficio se dice sin canto es suficiente decir Aleluya sólo al principio y\nal final de cada estrofa.\n\nCántico Cf. Ap 19, 1-7\n\nLAS BODAS DEL CORDERO\n\nAleluya.\nLa salvación y la gloria y el poder son de nuestro Dios.\n(R. Aleluya.)\nPorque sus juicios son verdaderos y justos.\nR. Aleluya, (aleluya).\n\nAleluya.\nAlabad al Señor, sus siervos todos.\n(R. Aleluya.)\nLos que le teméis, pequeños y grandes.\nR. Aleluya, (aleluya).\n\nAleluya.\nPorque reina el Señor, nuestro Dios, dueño de todo.\n(R. Aleluya.)\nAlegrémonos y gocemos y démosle gracias.\nR. Aleluya, (aleluya).\n\nAleluya.\nLlegó la boda del Cordero.\n(R. Aleluya.)\nSu esposa se ha embellecido.\nR. Aleluya, (aleluya).\n\nAnt. El Señor es nuestro legislador, el Señor es nuestro Rey: él vendrá y nos salvará."
+   },
+   {
+    "tipo": "lectura_breve",
+    "texto": "Estad siempre alegres en el Señor. Otra vez os lo digo: Estad alegres. Que vuestra bondad\nsea conocida de todos. El Señor está cerca.",
+    "ref": "Flp 4, 4-5"
+   },
+   {
+    "tipo": "responsorio_breve",
+    "texto": "V. Muéstranos, Señor, tu misericordia.\nR. Muéstranos, Señor, tu misericordia.\nV. Y danos tu salvación.\nR. Muéstranos, Señor, tu misericordia.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. Muéstranos, Señor, tu misericordia."
+   },
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "Ant. Dichosa tú, María, que has creído; porque lo que te ha dicho el Señor se cumplirá.\nAleluya."
+   },
+   {
+    "tipo": "preces",
+    "texto": "Hermanos, oremos a Cristo, el Señor que viene a salvar a todos los hombres, y digámosle\nconfiadamente:\n\nVen, Señor Jesús.\n\nSeñor Jesucristo, que por el misterio de la encarnación manifestaste al mundo la gloria de\ntu divinidad,\n\n— vivifica al mundo con tu venida.\n\nTú que participaste de nuestra debilidad,\n— concédenos tu misericordia.\n\nTú que en tu primera venida viniste humildemente para salvar al mundo de sus pecados,\n— absuélvenos de todas las culpas, cuando vuelvas de nuevo con gloria y majestad.\n\nTú que lo gobiernas todo con tu poder,\n— ayúdanos, por tu bondad, a alcanzar la herencia eterna.\n\nSe pueden añadir algunas intenciones libres.\nTú que estás sentado a la derecha del Padre,\n\n— alegra con la visión de tu rostro a nuestros hermanos difuntos.\n\nCon el deseo de que la luz de Cristo ilumine a todos los hombres, digamos al Padre: Padre\nnuestro."
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Señor todopoderoso, rico en misericordia, cuando salimos animosos al encuentro de tu\nHijo, no permitas que lo impidan los afanes de este mundo; guíanos hasta él con sabiduría\ndivina para que podamos participar plenamente de su vida. Por nuestro Señor Jesucristo."
+   }
+  ]
+ },
+ "lun": {
+  "oficio": [
+   {
+    "tipo": "versiculo",
+    "texto": "V. Muéstranos, Señor tu misericordia.\nR. Y danos tu salvación"
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "Del libro del profeta Isaías 34, 1-17\n\nJUICIO DEL SEÑOR SOBRE EDOM\n\nAcercaos, naciones, a oír, atended, pueblos; oiga la tierra y cuanto hay en ella, el orbe\ny cuanto en él brota, que ira tiene el Señor contra todas las naciones, y cólera contra\ntodas sus mesnadas. Las ha anatematizado, las ha entregado a la matanza. Sus heridos\nyacen tirados, de sus cadáveres sube el hedor, y sus montes chorrean sangre; se esfuma\ntodo el ejército de los cielos. Se enrollan como un libro los cielos, y todo su ejército\npalidece como palidece el sarmiento de la cepa, como una hoja mustia de higuera. Porque\nse ha emborrachado en los cielos mi espada; ya desciende sobre Edom y sobre el pueblo\nde mi anatema para hacer justicia.\n\nLa espada del Señor está llena de sangre, engrasada de sebo, de sangre de carneros\ny machos cabríos, de sebo de riñones de carneros, porque tiene el Señor un sacrificio en\nBosrá, y gran matanza en Edom. En vez de búfalos caerán pueblos, y en vez de toros un\npueblo de valientes. Se emborrachará su tierra con sangre, y su polvo será engrasado de\nsebo. Porque es día de venganza para el Señor, año de desquite del defensor de Sión.\n\nSe convertirán sus torrentes en pez, su polvo en azufre, y se hará su tierra pez\nardiente. Ni de noche ni de día se apagará, por siempre subirá el humo de ella. De\ngeneración en generación quedará arruinada, y nunca jamás habrá quien pase por ella.\n\nLa heredarán el pelícano y el erizo, el ibis y el cuervo residirán en ella. Tenderá el\nSeñor sobre ella la plomada del caos y el nivel del vacío. Los sátiros habitarán en ella, ya\nno habrá en ella nobles que proclamen la realeza, y todos sus príncipes serán aniquilados.\nEn sus alcázares crecerán espinos, ortigas y cardos en sus fortalezas; será morada de\nchacales y dominio de avestruces. Los gatos salvajes se juntarán con hienas y un sátiro\nllamará al otro; también allí reposará Lilit  y en él encontrará descanso. Allí anidará la\nvíbora, pondrá, incubará y hará salir del huevo. También allí se juntarán los buitres.\n\nBuscad el libro del Señor y leed; no faltará ninguno de ellos, ninguno de ellos echará\nen falta a otro. Pues su misma boca lo ha ordenado y su mismo espíritu los junta. Es él\nmismo el que los echa a suertes, con su mano les reparte el país a cordel; lo poseerán por\nsiempre y morarán en él de generación en generación.",
+    "anio": "I"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Ha llegado el tiempo en que comienza el juicio por la casa de Dios; y, si empieza así por\nnosotros, ¿qué fin tendrán los que rechazan el mensaje de Dios? * Y, si el justo a duras\npenas se salva, ¿qué será del impío y del pecador?\nV. Dios no encuentra fieles ni a sus criados.\nR. Y, si el justo a duras penas se salva, ¿qué será del impío y del pecador?",
+    "ref": "1 Pe 4, 17-18; Jb 4, 18",
+    "anio": "I"
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "Del libro del profeta Isaías 24, 1-18\n\nMANIFESTACIÓN DEL SEÑOR EN SU GRAN DÍA\n\nHe aquí que el Señor estraga la tierra, la despuebla, trastorna su superficie y dispersa\na los habitantes de ella: al pueblo como al sacerdote; al siervo como al señor; a la criada\ncomo a su señora; al que compra como al que vende; al que presta como al prestatario; al\nacreedor como a su deudor. Devastada será la tierra y del todo saqueada, porque así ha\nhablado el Señor.\n\nEn duelo se marchitó la tierra, se amustia, se marchita el orbe, el cielo con la tierra se\nmarchita. La tierra ha sido profanada bajo sus habitantes, pues traspasaron las leyes,\nviolaron el precepto, rompieron la alianza eterna. Por eso una maldición ha devorado la\ntierra, y tienen la culpa los que habitan en ella. Por eso han sido consumidos los\nhabitantes de la tierra, y quedan pocos del linaje humano.\n\nEl mosto estaba triste, la viña mustia: se trocaron en suspiros todas las alegrías del\ncorazón. Cesó el alborozo de los tímpanos, se suspendió el estrépito de los alegres, cesó el\nalborozo del arpa. No beben vino cantando: amarga el licor a sus bebedores.\n\nHa quedado la villa vacía, ha sido cerrada toda casa, y no se puede entrar. Se\nlamentan en las calles por el vino. Desapareció toda alegría, emigró el alborozo de la\ntierra. Ha quedado en la ciudad soledad, y de desolación está herida la puerta. Porque en\nmedio de la tierra, en mitad de los pueblos, pasa como en el vareo del olivo, como en los\nrebuscos cuando acaba la vendimia.\n\nEllos levantan su voz y lanzan hurras; la majestad del Señor aclaman desde el mar.\nPor eso, en Oriente glorificad al Señor, en las islas del mar el nombre del Señor, Dios de\nIsrael. Desde el confín de la tierra cánticos hemos oído: «¡Gloria al Justo!». Y digo:\n\n«¡Basta ya, basta ya! ¡Ay de mí, y de estos malvados que hacen maldad, los malvados\nque han consumado la maldad!» ¡Pánico, hoya y trampa contra ti, morador de la tierra!\nSucederá que el que escape del pánico, caerá en la hoya, y el que suba de la hoya, será\npreso en la trampa.",
+    "anio": "II"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Levantarán la voz vitoreando: * «Glorificad el nombre del Señor.»\nV. Cantad al Señor un cántico nuevo, cantad al Señor toda la tierra.\nR. Glorificad el nombre del Señor.",
+    "ref": "Is 24, 14. 15; Sal 95, 1",
+    "anio": "II"
+   },
+   {
+    "tipo": "lectura2",
+    "texto": "Del tratado de san Juan de la Cruz, presbítero, Subida al monte Carmelo\n(Libro 2, cap. 22, Núms. 3-4)\n\nDIOS NOS HA HABLADO EN CRISTO\n\nLa principal causa por la cual en la ley antigua eran lícitas las preguntas que se hacían\na Dios, y convenía que los profetas y sacerdotes quisiesen visiones y revelaciones de Dios,\nera porque entonces no estaba aún fundada la fe ni establecida la ley evangélica; y así,\n\nera menester que preguntasen a Dios y que él hablase, ahora por palabras, ahora por\nvisiones y revelaciones, ahora en figuras y semejanzas, ahora en otras muchas maneras\nde significaciones. Porque todo lo que respondía y hablaba y obraba y revelaba eran\nmisterios de nuestra fe y cosas tocantes a ella o enderezadas a ella. Pero ya que está\nfundada la fe en Cristo y manifiesta la ley evangélica en esta era de gracia, no hay para\nqué preguntarle de aquella manera, ni para qué él hable ya ni responda como entonces.\n\nPorque en darnos, como nos dio, a su Hijo —que es una Palabra suya, que no tiene\notra—, todo nos lo habló junto y de una vez en esta sola Palabra, y no tiene más que\nhablar.\n\nY éste es el sentido de aquella autoridad, con que san Pablo quiere inducir a los\nhebreos a que se aparten de aquellos modos primeros y tratos con Dios de la ley de\nMoisés, y pongan los ojos en Cristo solamente, diciendo: Lo que antiguamente habló Dios\nen los profetas a nuestros padres de muchos modos y maneras, ahora a la postre, en\nestos días, nos lo ha hablado en el Hijo todo de una vez.\n\nEn lo cual da a entender el Apóstol, que Dios ha quedado ya como mudo, y no tiene\nmás que hablar, porque lo que hablaba antes en partes a los profetas ya lo ha hablado en\nél todo, dándonos el todo, que es su Hijo.\n\nPor lo cual, el que ahora quisiese preguntar a Dios o querer alguna visión o\nrevelación, no sólo haría una necedad, sino haría agravio a Dios, no poniendo los ojos\ntotalmente en Cristo, sin querer otra cosa o novedad. Porque le podría responder Dios de\nesta manera: «Si te tengo ya hablado todas las cosas en mi Palabra, que es mi Hijo, y no\ntengo otra cosa que te pueda revelar o responder que sea más que eso, pon los ojos sólo\nen él; porque en él te lo tengo puesto todo y dicho y revelado, y hallarás en él aún más de\nlo que pides y deseas.\n\nPorque desde el día que bajé con mi espíritu sobre él en el monte Tabor, diciendo:\nÉste es mi amado Hijo en que me he complacido; a él oíd, ya alcé yo la mano de todas\nesas maneras de enseñanzas y respuestas, y se la di a él; oídle a él, porque yo no tengo\nmás fe que revelar, más cosas que manifestar. Que si antes hablaba, era prometiéndoos a\nCristo; y si me preguntaban, eran las preguntas encaminadas a la petición y esperanza de\nCristo, en que habían de hallar todo bien, como ahora lo da a entender toda la doctrina de\nlos evangelistas y apóstoles.»"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Irán pueblos numerosos diciendo: «Vamos a subir al monte del Señor. * Él nos\nenseñará sus caminos y caminaremos por sus sendas.»\nV. Viene el Mesías, el Cristo, cuando venga, nos hará saber todas las cosas.\nR. Él nos enseñará sus caminos y caminaremos por sus sendas.",
+    "ref": "Mi 4, 2; Jn 4, 25"
+   },
+   {
+    "tipo": "oracion_laudes"
+   }
+  ],
+  "laudes": [
+   {
+    "tipo": "lectura_breve",
+    "texto": "Venid, subamos al monte del Señor, a la casa del Dios de Jacob: él nos instruirá en sus\ncaminos, y marcharemos por sus sendas; porque de Sión saldrá la ley, de Jerusalén la\npalabra del Señor.",
+    "ref": "Is 2, 3"
+   },
+   {
+    "tipo": "responsorio_breve",
+    "texto": "V. Sobre ti, Jerusalén, amanecerá el Señor.\nR. Sobre ti, Jerusalén, amanecerá el Señor.\n\nV. Su gloria aparecerá sobre ti.\nR. Amanecerá el Señor.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. Sobre ti, Jerusalén, amanecerá el Señor."
+   },
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "Ant. Dice el Señor: «Arrepentíos, porque está cerca el reino de los cielos.» Aleluya."
+   },
+   {
+    "tipo": "preces",
+    "texto": "Hermanos, oremos a Cristo, el redentor, que viene a librar del poder de la muerte a los\nque se convierten a él, y digámosle:\n\nVen, Señor Jesús.\n\nQue al anunciar tu venida, Señor,\n— nuestro corazón se sienta libre de toda vanidad.\n\nQue la Iglesia que tú fundaste, Señor,\n— glorifique tu nombre por todo el mundo.\n\nQue tu ley, Señor, sea luz para nuestros ojos,\n— y sirva de protección a los pueblos que confiesan tu nombre.\n\nTú que por la Iglesia nos anuncias el gozo de tu venida,\n— concédenos también el deseo de recibirte.\nSe pueden añadir algunas intenciones libres.\nCon el gozo que nos da el saber que Cristo viene para hacernos hijos de Dios, digamos al\nPadre: Padre nuestro."
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Señor, suban a tu presencia nuestras súplicas y colma en tus siervos los  deseos de llegar\na conocer en plenitud  el misterio de la Encarnación de tu Hijo. Él que vive y reina contigo."
+   }
+  ],
+  "intermedia": {
+   "comun": [],
+   "tercia": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "Aquel día, el resto de Israel, los supervivientes de Jacob, se apoyarán sinceramente en el\nSeñor, el Santo de Israel. Un resto volverá, un resto de Jacob, al Dios poderoso.\nV. Los gentiles temerán tu nombre, Señor.\nR. Los reyes del mundo tu gloria.",
+     "ref": "Cf. Is 10, 20-21"
+    },
+    {
+     "tipo": "oracion_laudes"
+    }
+   ],
+   "sexta": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "Esto dice el Señor de los ejércitos: «Pueblo mío, que habitas en Sión, no temas.» Aquel\ndía, la carga resbalará de tu hombro, arrancarán el yugo de tu cuello.\nV. Acuérdate de nosotros, Señor, por amor a tu pueblo.\nR. Visítanos con tu salvación.",
+     "ref": "Cf. Is 10, 24. 27"
+    },
+    {
+     "tipo": "oracion_laudes"
+    }
+   ],
+   "nona": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "Ya está a punto de llegar su hora, sus días no tardarán. El Señor se apiadará de Jacob y\nvolverá a escoger a Israel.\nV. Ven, Señor, y no tardes.\nR. Perdona los pecados de tu pueblo.",
+     "ref": "Cf. Is 13, 22; cf. 14, 1"
+    },
+    {
+     "tipo": "oracion_laudes"
+    }
+   ]
+  },
+  "visperas": [
+   {
+    "tipo": "lectura_breve",
+    "texto": "Esperamos que venga como salvador Cristo Jesús, el Señor. Él transfigurará nuestro\ncuerpo de humilde condición en un cuerpo glorioso, semejante al suyo, en virtud del poder\nque tiene para someter a su imperio todas las cosas.",
+    "ref": "Flp 3, 20b-21"
+   },
+   {
+    "tipo": "responsorio_breve",
+    "texto": "V. Ven a salvarnos, Señor Dios de los ejércitos.\nR. Ven a salvarnos, Señor Dios de los ejércitos.\nV. Que brille tu rostro y nos salve.\nR. Señor Dios de los ejércitos.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. Ven a salvarnos, Señor Dios de los ejércitos."
+   },
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "Ant. Mirad, viene nuestro Rey, el Señor de la tierra; él nos librará del yugo de nuestra\nesclavitud."
+   },
+   {
+    "tipo": "preces",
+    "texto": "Supliquemos, hermanos, a Cristo, juez de vivos y muertos, y digámosle confiados:\nVen, Señor Jesús.\n\nHaz, Señor, que tu justicia, que pregonan los cielos, la reconozca también el mundo,\n— para que tu gloria habite en nuestra tierra.\n\nTú que por nosotros quisiste ser débil en tu humanidad,\n\n— fortalece a los hombres con la fuerza de tu divinidad.\n\nVen, Señor, y con la luz de tu palabra,\n— ilumina a los que viven sumergidos en las tinieblas de la ignorancia.\n\nTú que con tu humillación borraste nuestros pecados,\n— por tu glorificación llévanos a la felicidad eterna.\nSe pueden añadir algunas intenciones libres.\nTú que vendrás a juzgar al mundo con gloria y majestad,\n— lleva a nuestros hermanos difuntos al reino de los cielos.\n\nMovidos por la fe, invoquemos a Dios Padre con la oración que Cristo nos enseñó: Padre\nnuestro."
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Señor, suban a tu presencia nuestras súplicas y colma en tus siervos los  deseos de llegar\na conocer en plenitud  el misterio de la Encarnación de tu Hijo. Él que vive y reina contigo."
+   }
+  ]
+ },
+ "mar": {
+  "oficio": [
+   {
+    "tipo": "versiculo",
+    "texto": "V. Una voz clama en el desierto: Preparad el camino del Señor.\nR. Enderezad las sendas para nuestro Dios."
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "Del libro del profeta Isaías 35, 1-10\n\nRETORNO DE LOS REDIMIDOS A TRAVÉS DEL DESIERTO\n\nEsto dice el Señor:\n«Que el desierto y el sequedal se alegren, regocíjese la estepa y la florezca como flor;\n\nestalle en flor y se regocije hasta lanzar gritos de júbilo. La gloria del Líbano le ha sido\ndada, el esplendor del Carmelo y del Sarón. Se verá la gloria del Señor, el esplendor de\nnuestro Dios.\n\nFortaleced las manos débiles, robusteced las rodillas vacilantes. Decid a los de\ncorazón intranquilo: ¡Animo, no temáis! Mirad que vuestro Dios viene vengador; es la\nrecompensa de Dios, él vendrá y os salvará.\n\nEntonces se despegarán los ojos de los ciegos, y las orejas de los sordos se abrirán.\nEntonces saltará el cojo como ciervo, y la lengua del mudo lanzará gritos de júbilo. Pues\nserán alumbradas en el desierto aguas, y torrentes en la estepa, se trocará la tierra\nabrasada en estanque, y el país árido en manantial de aguas.\n\nEn la guarida donde moran los chacales verdeará la caña y el papiro. Habrá allí una\nsenda y un camino, vía sacra se la llamará; no pasará el impuro por ella, ni los necios por\nella vagarán. No habrá león en ella, ni por ella subirá bestia salvaje, no se encontrará en\nella; los rescatados la recorrerán.\n\nLos redimidos del Señor volverán, entrarán en Sión entre aclamaciones, y habrá\nalegría eterna sobre sus cabezas. ¡Regocijo y alegría les acompañarán! ¡Adiós, penar y\nsuspiros!»",
+    "anio": "I"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Fortaleced las manos débiles, robusteced las rodillas vacilantes, vosotros, cobardes de\ncorazón, sed fuertes, no temáis, dice el Señor, porque vengo * a romper el yugo de\nvuestra esclavitud.\nV. Mirad a vuestro Dios que trae el desquite, viene en persona, a resarcir y a salvarnos.\nR. A romper el yugo de vuestra esclavitud.",
+    "ref": "Is 35, 3-4",
+    "anio": "I"
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "Del libro del profeta Isaías 24, 19-25, 5\n\nEL DÍA DEL SEÑOR. HIMNO DE ACCIÓN DE GRACIAS\n\nEn aquel día, se estremecerán los cimientos de la tierra, se tambaleará, se\nbamboleará la tierra, se hará pedazos la tierra, se moverá y removerá la tierra, vacilará,\nvacilará la tierra como un beodo, se balanceará como una cabaña; pesará sobre ella su\nrebeldía, caerá, y no volverá a levantarse.\n\nAquel día castigará el Señor al ejército de lo alto en lo alto y a los reyes de la tierra en\nla tierra; serán amontonados en montón los prisioneros en el pozo, serán encerrados en la\ncárcel y al cabo de muchos días serán visitados. Se afrentará la luna llena, se avergonzará\nel pleno sol, cuando reine el Señor de los ejércitos en el monte Sión y en Jerusalén, y esté\nla Gloria en presencia de sus ancianos.\n\nSeñor, tú eres mi Dios, yo te ensalzo, alabo tu nombre, porque has hecho maravillas y\nplanes muy de antemano que no fallan. Porque has puesto la ciudad como un majano, y la\nvilla fortificada, hecha como una ruina; el alcázar de orgullosos no es ya ciudad, y nunca\nserá reedificado.\n\nPor eso te glorificará un pueblo poderoso, villa de gentes despóticas te temerá.\nPorque fuiste fortaleza para el débil, fortaleza para el pobre en su aprieto, parapeto contra\nel temporal, sombra contra el calor. Porque el aliento de los déspotas es como lluvia de\ninvierno. Como calor en sequedal humillarás el estrépito de los poderosos; como el calor a\nla sombra de una nube, el himno de los déspotas se debilitará.",
+    "anio": "II"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Señor, tú eres mi Dios, te alabaré y te daré gracias, * porque has realizado maravillas.\nV. Has sido baluarte para el pobre, fortaleza para el desvalido en su angustia.\nR. Porque has realizado maravillas.",
+    "ref": "Is 25, 1. 4",
+    "anio": "II"
+   },
+   {
+    "tipo": "lectura2",
+    "texto": "De la Constitución dogmática Lumen gentium, sobre la Iglesia, del Concilio Vaticano\nsegundo\n(Núm. 48)\n\nÍNDOLE ESCATOLÓGICA DE LA IGLESIA PEREGRINANTE\n\nLa Iglesia, a la que todos hemos sido llamados en Cristo Jesús y en la cual, por la\ngracia de Dios, conseguimos la santidad, no será llevada a su plena perfección, sino\ncuando llegue el tiempo de la restauración de todas las cosas y cuando, con el género\n\nhumano, también el universo entero —que está íntimamente unido al hombre y por él\nalcanza su fin— será perfectamente renovado en Cristo.\n\nPorque Cristo, levantado en alto sobre la tierra, atrajo hacia sí a todos los hombres;\nhabiendo resucitado de entre los muertos, envió su Espíritu vivificador sobre sus\ndiscípulos, y por él constituyó a su cuerpo, que es la Iglesia, como sacramento universal\nde salvación. Ahora, sentado a la diestra del Padre, actúa sin cesar en el mundo para\nconducir a los hombres a su Iglesia, y por ella unirlos a sí más estrechamente y,\nalimentándolos con su propio cuerpo y sangre, hacerlos partícipes de su vida gloriosa.\n\nPor tanto, la restauración prometida que esperamos ya comenzó en Cristo, es\nimpulsada con la venida del Espíritu Santo y por él continúa en la Iglesia, en la cual, por la\nfe, somos instruidos también acerca del sentido de nuestra vida temporal, mientras que,\ncon la esperanza de los bienes futuros, llevamos a cabo la obra que el Padre nos ha\nconfiado en el mundo y trabajamos por nuestra salvación.\n\nLa plenitud de los tiempos ha llegado, pues, hasta nosotros, y la renovación del\nmundo está irrevocablemente decretada y empieza verdaderamente a realizarse, en cierto\nmodo, en el siglo presente, pues la Iglesia, ya en la tierra, se reviste de una verdadera, si\nbien imperfecta, santidad.\n\nY hasta que lleguen los nuevos cielos y la nueva tierra, en los que tendrá su morada\nla justicia, la Iglesia peregrinante —en sus sacramentos e instituciones, que pertenecen a\neste tiempo— lleva consigo la imagen de este mundo que pasa. Ella misma vive entre las\ncriaturas, que gimen entre dolores de parto hasta el presente, en espera de la\nmanifestación de los hijos de Dios."
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Esperamos que venga como salvador Cristo Jesús, el Señor. * Él transfigurará nuestro\ncuerpo de humilde condición en un cuerpo glorioso, semejante al suyo.\nV. Vivamos con sensatez, justicia y religiosidad en esta vida, aguardando la feliz esperanza\ny la manifestación de la gloria del gran Dios.\nR. Él transfigurará nuestro cuerpo de humilde condición en un cuerpo glorioso, semejante\nal suyo.",
+    "ref": "Flp 3, 20b-21; Tt 2, 12-13"
+   },
+   {
+    "tipo": "oracion_laudes"
+   }
+  ],
+  "laudes": [
+   {
+    "tipo": "lectura_breve",
+    "texto": "No se apartará de Judá el cetro, ni el bastón de mando de entre sus rodillas, hasta que\nvenga el que ha de venir, aquel a quien le está reservado, a quien rendirán homenaje las\nnaciones.",
+    "ref": "Gn 49, 10"
+   },
+   {
+    "tipo": "responsorio_breve",
+    "texto": "V. Sobre ti, Jerusalén, amanecerá el Señor.\nR. Sobre ti, Jerusalén, amanecerá el Señor.\nV. Su gloria aparecerá sobre ti.\nR. Amanecerá el Señor.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. Sobre ti, Jerusalén, amanecerá el Señor."
+   },
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "Ant. «Alégrate y goza, hija de Sión, porque voy a venir y habitaré en medio de ti», dice el\nSeñor."
+   },
+   {
+    "tipo": "preces",
+    "texto": "Oremos, hermanos, a Cristo el Señor, luz que alumbra a todo hombre, y digámosle con\ngozo:\n\nVen, Señor Jesús.\n\nQue la luz de tu presencia disipe, Señor, nuestras tinieblas,\n— y nos haga dignos de recibir tus dones.\n\nSálvanos, Señor Dios nuestro,\n— y durante todo el día daremos gracias a tu santo nombre.\n\nEnciende nuestros corazones en tu amor, para que deseemos ardientemente tu venida,\n— y anhelemos vivir íntimamente unidos a ti.\n\nTú que quisiste experimentar nuestras dolencias,\n— socorre a los enfermos y a los que morirán en el día de hoy.\nSe pueden añadir algunas intenciones libres.\nRecitemos las palabras de Jesús, pidiendo al Padre que venga su reino: Padre nuestro."
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Señor y Dios nuestro, que has manifestado tu salvación hasta los confines de la tierra,\nconcédenos esperar con alegría la gloria del nacimiento de tu Hijo. Él que vive y reina\ncontigo."
+   }
+  ],
+  "intermedia": {
+   "comun": [],
+   "tercia": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "Mirad que llegan días —oráculo del Señor— en que suscitaré a David un vástago legítimo:\nreinará como rey prudente, hará justicia y ejercerá el derecho en la tierra.\nV. Los gentiles temerán tu nombre, Señor.\nR. Los reyes del mundo tu gloria.",
+     "ref": "Jr 23, 5"
+    },
+    {
+     "tipo": "oracion_laudes"
+    }
+   ],
+   "sexta": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "En sus días se salvará Judá, Israel habitará seguro. Y lo llamarán con este nombre: «El—\nSeñor—nuestra—justicia».\nV. Acuérdate de nosotros, Señor, por amor a tu pueblo.\n\nR. Visítanos con tu salvación.",
+     "ref": "Jr 23, 6"
+    },
+    {
+     "tipo": "oracion_laudes"
+    }
+   ],
+   "nona": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "Yo mismo apacentaré a mis ovejas y las llevaré a reposar —oráculo del Señor—. Buscaré\nlas ovejas perdidas, recogeré las descarriadas; vendaré a las heridas, curaré a las\nenfermas; cuidaré de las fuertes y robustas, y las apacentaré, como es debido.\nV. Ven, Señor, y no tardes.\nR. Perdona los pecados de tu pueblo.",
+     "ref": "Ez 34, 15—16"
+    },
+    {
+     "tipo": "oracion_laudes"
+    }
+   ]
+  },
+  "visperas": [
+   {
+    "tipo": "lectura_breve",
+    "texto": "Esperamos vivamente la revelación de Jesucristo, Señor nuestro. Él nos fortalecerá hasta\nel fin, de modo que nos encontremos libres de culpa en el día de Jesucristo, nuestro\nSeñor. Fiel es Dios, por quien hemos sido convocados a la unión con su Hijo.",
+    "ref": "Cf. 1 Co 1, 7b-9"
+   },
+   {
+    "tipo": "responsorio_breve",
+    "texto": "V. Ven a salvarnos, Señor Dios de los ejércitos.\nR. Ven a salvarnos, Señor Dios de los ejércitos.\nV. Que brille tu rostro y nos salve.\nR. Señor Dios de los ejércitos.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. Ven a salvarnos, Señor Dios de los ejércitos."
+   },
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "Ant. Una voz clama en el desierto: «Preparad el camino del Señor, enderezad las sendas\npara nuestro Dios.»"
+   },
+   {
+    "tipo": "preces",
+    "texto": "Oremos, hermanos, a Cristo, nuestro Señor y Redentor, que vendrá con gloria al fin de los\ntiempos, y digámosle:\n\nVen, Señor Jesús.\n\nSeñor y Redentor nuestro, que al nacer en la carne nos libraste del yugo de la ley,\n— completa en nosotros los beneficios de tu amor.\n\nTú que tomaste de nuestra humanidad todo lo que no repugnaba a tu divinidad,\n— danos de tu naturaleza los dones de los que la nuestra está sedienta.\n\nCon tu presencia da cumplimiento a nuestros deseos,\n\n— y con la fuerza de tu amor inflama nuestros corazones.\n\nDanos la gracia de alegrarnos contigo en la gloria,\n— pues ya en este mundo nuestra fe sincera te confiesa.\nSe pueden añadir algunas intenciones libres.\nDerrama, Señor, el rocío de tu amor,\n— sobre las almas de todos los difuntos.\n\nLlenos del Espíritu de Jesucristo, nos atrevemos a decir: Padre nuestro."
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Señor y Dios nuestro, que has manifestado tu salvación hasta los confines de la tierra,\nconcédenos esperar con alegría la gloria del nacimiento de tu Hijo. Él que vive y reina\ncontigo."
+   }
+  ]
+ },
+ "mie": {
+  "oficio": [
+   {
+    "tipo": "versiculo",
+    "texto": "V. Señor, Dios nuestro, restáuranos.\nR. Haz brillar tu rostro sobre nosotros y sálvanos."
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "Comienza el libro de Rut 1, 1-22\n\nFIDELIDAD DE RUT\n\nCuando gobernaban los Jueces hubo hambre en el país; un hombre se fue de Belén\nde Judá para vivir en los campos de Moab, él, su mujer y sus dos hijos. El hombre se\nllamaba Elimélek, su mujer Noemí y sus dos hijos tenían por nombres Majlón y Kilyón;\neran efrateos de Belén de Judá, llegaron a los campos de Moab y allí se establecieron.\n\nMurió Elimélek, el esposo de Noemí, quedando ella con sus dos hijos. Ellos se casaron\ncon mujeres moabitas, una se llamaba Orfá, el nombre de la otra era Rut. Allí vivieron\nunos diez años. Murieron también ellos dos, Majlón y Kilyón, y la mujer se quedó sin sus\ndos hijos y sin su esposo.\n\nElla y sus nueras decidieron retornar de los campos de Moab porque había escuchado\nen el campo de Moab que el Señor había visitado a su pueblo para darles pan. Entonces\nsalió con sus dos nueras del lugar en que vivía y comenzaron a caminar por la ruta que\nsube al país de Judá. Entonces Noemí dijo a sus dos nueras:\n\n— Iros, regresad cada una a la casa de vuestra madre. El Señor tenga misericordia de\nvosotras como la tuvisteis vosotras con los difuntos y conmigo. El Señor os conceda\nencontrar descanso en la casa de vuestro esposo. Entonces ellas gritaron y se pusieron a\nllorar. Y le dijeron:\n\n— Nos iremos a tu pueblo contigo.\nNoemí les dijo:\n\n— Regresad, hijas mías, ¿por qué tenéis que venir conmigo?, ¿acaso tengo hijos en\nmi seno para dároslos por esposos? Regresad, hijas mías; iros, porque yo he envejecido\npara casarme de nuevo. Aunque yo dijera: “Tengo esperanzas, y fuera esta noche de un\nmarido, incluso diera a luz hijos, ¿por eso esperaríais hasta que crecieran?, ¿por eso os\ncontendríais sin casaros a causa de ellos? No, hijas mías, que estoy triste por vosotras,\npues la mano del Señor se ha descargado contra mí.\n\nEllas gritaron y se pusieron a llorar otra vez. Orfá besó a su suegra y volvió a su\npueblo, pero Rut permaneció con ella. Noemí le dijo:\n\n— Mira, tu cuñada se ha vuelto a su pueblo y a su dios, vete detrás de tu cuñada.\nReplicó Rut:\n— No me insistas para que te deje, para que me vuelva y no te siga, porque iré a\n\ndonde tú vayas y viviré donde vivas; tu pueblo es mi pueblo y tu Dios es mi Dios. En\ndonde quiera que mueras, moriré yo, y allí seré sepultada. Que el Señor haga de mí lo que\nquiera y me añada otro tanto, pero que sea la muerte lo único que nos separe a ti y a mí.\n\nAl ver que se empeñaba en irse con ella, dejó de insistirle. Se fueron las dos juntas\nhasta llegar a Belén. En cuanto llegaron a Belén, se conmocionó toda la ciudad a causa de\nellas, y  decían las mujeres:\n\n— ¡Es Noemí!\nPero ella les decía:\n— No me llaméis Noemí, llamadme Mara, porque de amargura me ha llenado el\n\nTodopoderoso. Llena de riqueza me fui y despojada de ellas me hace regresar el Señor,\npara qué vais a llamarme Noemí si el Señor pronunció testimonio contra mí y el\nTodopoderoso me hizo daño.\n\nRegresó, pues, Noemí desde los campos de Moab, y la moabita Rut, su nuera, vino\ncon ella. Llegaron ellas a Belén al comienzo de la siega de la cebada.",
+    "anio": "I"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. En el monte de Sión y en Jerusalén quedará un resto; como lo ha prometido el Señor a\nlos supervivientes * que él llamó.\nV. Levantaré la tienda caída de David, levantaré sus ruinas, para que posean las primicias\nde Edom y de todas las naciones.\nR. Que él llamó.",
+    "ref": "Jl 3, 5; Am 9, 11-12",
+    "anio": "I"
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "Del libro del profeta Isaías 25, 6-26, 6\n\nEL FESTÍN DE DIOS. CÁNTICO DE LOS REDIMIDOS\n\nHará el Señor de los ejércitos a todos los pueblos en este monte un convite de\nmanjares frescos, convite de buenos vinos: manjares de tuétanos, vinos depurados;\nconsumirá en este monte el velo que cubre a todos los pueblos y la cobertura que cubre a\ntodas las gentes; consumirá a la muerte definitivamente. Enjugará el Señor las lágrimas\nde todos los rostros, y quitará el oprobio de su pueblo de sobre toda la tierra, porque el\nSeñor ha hablado.\n\nSe dirá aquel día:\n«Ahí tenéis a nuestro Dios: esperamos que nos salve; éste es el Señor en quien\n\nesperábamos; nos regocijamos y nos alegramos por su salvación.»\nPorque la mano del Señor reposará en este monte, Moab será aplastado en su sitio\n\ncomo se aplasta la paja en el muladar. Extenderá en medio de él sus manos como las\nextiende el nadador al nadar, pero el Señor abajará su altivez y el esfuerzo de sus manos.\nLa fortificación inaccesible de tus murallas derrocará, abajará, la hará tocar la tierra, hasta\nel polvo.\n\nAquel día se cantará este cantar en tierra de Judá:\n«Ciudad fuerte tenemos; para protección se le han puesto murallas y antemuro. Abrid\n\nlas puertas, y entrará una gente justa que guarda fidelidad; de ánimo firme y que\nconserva la paz, porque en ti confió. Confiad en el Señor por siempre jamás, porque en el\nSeñor tenéis una Roca eterna. Porque él derroca a los habitantes de los altos, a la villa\ninaccesible; la hace caer, la abaja hasta la tierra, la hace tocar el polvo; la pisan pies, pies\nde pobres, pisadas de débiles.»",
+    "anio": "II"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Escuché la voz potente que decía desde el trono: «Ésta es la morada de Dios con los\nhombres, y acampará entre ellos. * Ellos serán su pueblo y Dios estará con ellos.»\nV. El Señor Dios aniquilará la muerte para siempre y enjugará las lágrimas de todos los\nrostros.\nR. Ellos serán su pueblo y Dios estará con ellos.",
+    "ref": "Ap 21, 3; Is 25, 8",
+    "anio": "II"
+   },
+   {
+    "tipo": "lectura2",
+    "texto": "De los Comentarios de san Agustín, obispo, sobre los salmos\n(Salmo 109,1-3: CCL 40,1601-1603)\n\nLAS PROMESAS DE DIOS SE NOS CONCEDEN POR SU HIJO\n\nDios estableció el tiempo de sus promesas y el momento de su cumplimiento.\nEl período de las promesas se extiende desde los profetas hasta Juan Bautista. El del\n\ncumplimiento, desde éste hasta el fin de los tiempos.\nFiel es Dios, que se ha constituido en deudor nuestro, no porque haya recibido nada\n\nde nosotros, sino por lo mucho que nos ha prometido. La promesa le pareció poco,\nincluso; por eso, quiso obligarse mediante escritura, haciéndonos, por decirlo así, un\ndocumento de sus promesas para que, cuando empezara a cumplir lo que prometió,\nviésemos en el escrito el orden sucesivo de su cumplimiento. El tiempo profético era,\ncomo he dicho muchas veces, el del anuncio de las promesas.\n\nPrometió la salud eterna, la vida bienaventurada en la compañía eterna de los\nángeles, la herencia inmarcesible, la gloria eterna, la dulzura de su rostro, la casa de su\nsantidad en los cielos y la liberación del miedo a la muerte, gracias a la resurrección de los\nmuertos. Esta última es como su promesa final, a la cual se enderezan todos nuestros\nesfuerzos y que, una vez alcanzada, hará que no deseemos ni busquemos ya cosa alguna.\nPero tampoco silenció en qué orden va a suceder todo lo relativo al final, sino que lo ha\nanunciado y prometido.\n\nPrometió a los hombres la divinidad, a los mortales la inmortalidad, a los pecadores la\njustificación, a los miserables la glorificación.\n\nSin embargo, hermanos, como a los hombres les parecía increíble lo prometido por\nDios —a saber, que los hombres habían de igualarse a los ángeles de Dios, saliendo de\nesta mortalidad, corrupción, bajeza, debilidad, polvo y ceniza—, no sólo entregó la\nescritura a los hombres para que creyesen, sino que también puso un mediador de su\nfidelidad. Y no a cualquier príncipe, o a un ángel o arcángel, sino a su Hijo único. Por\nmedio de éste había de mostrarnos y ofrecernos el camino por donde nos llevaría al fin\nprometido.\n\nPoco hubiera sido para Dios haber hecho a su Hijo manifestador del camino. Por eso,\nle hizo camino, para que, bajo su guía, pudieras caminar por él.\n\nDebía, pues, ser anunciado el unigénito Hijo de Dios en todos sus detalles: en que\nhabía de venir a los hombres y asumir lo humano, y, por lo asumido, ser hombre, morir y\nresucitar, subir al cielo, sentarse a la derecha del Padre y cumplir entre las gentes lo que\n\nprometió. Y, después del cumplimiento de sus promesas, también cumpliría su anuncio de\nuna segunda venida, para pedir cuentas de sus dones, discernir los vasos de ira de los de\nmisericordia, y dar a los impíos las penas con que amenazó, y a los justos los premios que\nofreció.\n\nTodo esto debió ser profetizado, anunciado, encomiado como venidero, para que no\nasustase si acontecía de repente, sino que fuera esperado porque primero fue creído."
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Nuestro Dios volverá a compadecerse, * extinguirá nuestras culpas y arrojará al fondo\ndel mar todos nuestros delitos.\nV. Todos los profetas aseguran que cuantos tengan fe en él recibirán por su nombre el\nperdón de sus pecados.\nR. Extinguirá nuestras culpas y arrojará al fondo del mar todos nuestros delitos.",
+    "ref": "Mi 7, 19; Hch 10, 43"
+   },
+   {
+    "tipo": "oracion_laudes"
+   }
+  ],
+  "laudes": [
+   {
+    "tipo": "lectura_breve",
+    "texto": "Mirad: la Virgen ha concebido y dará a luz un hijo, y le pondrá por nombre Emmanuel:\n«Dios—con—nosotros». Éste comerá requesón y miel, hasta que aprenda a rechazar el\nmal y a escoger el bien.",
+    "ref": "Is 7,14b-15"
+   },
+   {
+    "tipo": "responsorio_breve",
+    "texto": "V. Sobre ti, Jerusalén, amanecerá el Señor.\nR. Sobre ti, Jerusalén, amanecerá el Señor.\nV. Su gloria aparecerá sobre ti.\nR. Amanecerá el Señor.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. Sobre ti, Jerusalén, amanecerá el Señor."
+   },
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "Ant. Se sentará en el trono de David para siempre y su reino no tendrá fin. Aleluya."
+   },
+   {
+    "tipo": "preces",
+    "texto": "Oremos, hermanos, a nuestro Señor Jesucristo, que en su misericordia nos visita, y\ndigámosle con insistencia:\n\nVen, Señor Jesús.\n\nTú que viniste del seno del Padre para revestirte de nuestra carne mortal,\n— libra de toda corrupción a nuestra naturaleza caída.\n\nTú que cuando vengas al final de los tiempos aparecerás glorioso ante tus elegidos,\n— al venir ahora muéstrate clemente y compasivo con los pecadores.\n\nNuestra gloria, oh Cristo, es alabarte,\n— visítanos, pues, con tu salvación.\n\nTú que por la fe nos has llevado a la luz,\n— haz que te agrademos también con nuestras obras.\n\nSe pueden añadir algunas intenciones libres.\nPidamos que el reino de Dios llegue a todos los hombres: Padre nuestro."
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Señor Dios todopoderoso, que nos mandas abrir camino a Cristo el Señor, no permitas que\ndesfallezcamos en nuestra debilidad los que esperamos la llegada saludable del que viene\na sanarnos de todos nuestros males. Por nuestro Señor Jesucristo."
+   }
+  ],
+  "intermedia": {
+   "comun": [],
+   "tercia": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "Los ojos orgullosos serán humillados, será doblegada la arrogancia humana; sólo el Señor\nserá ensalzado aquel día.\nV. Los gentiles temerán tu nombre, Señor.\nR. Los reyes del mundo tu gloria.",
+     "ref": "Is 2, 11"
+    },
+    {
+     "tipo": "oracion_laudes"
+    }
+   ],
+   "sexta": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "Él es mi Dios y salvador: confiaré y no temeré, porque mi fuerza y mi poder es el Señor, él\nfue mi salvación.\nV. Acuérdate de nosotros, Señor, por amor a tu pueblo.\nR. Visítanos con tu salvación.",
+     "ref": "Is 12, 2"
+    },
+    {
+     "tipo": "oracion_laudes"
+    }
+   ],
+   "nona": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "¡Señor, escucha! ¡Señor, perdona! ¡Señor, atiende y obra! ¡No tardes más, por ti mismo, oh\nDios mío, pues tu nombre se invoca sobre tu pueblo!\nV. Ven, Señor, y no tardes.\nR. Perdona los pecados de tu pueblo.",
+     "ref": "Dn 9, 19"
+    },
+    {
+     "tipo": "oracion_laudes"
+    }
+   ]
+  },
+  "visperas": [
+   {
+    "tipo": "lectura_breve",
+    "texto": "No juzguéis antes de tiempo; dejad que venga el Señor. Él sacará a la luz lo que está\noculto en las tinieblas y pondrá al descubierto las intenciones del corazón. Entonces\nvendrá a cada uno su alabanza de parte de Dios.",
+    "ref": "1 Co 4, 5"
+   },
+   {
+    "tipo": "responsorio_breve",
+    "texto": "V. Ven a salvarnos, Señor Dios de los ejércitos.\nR. Ven a salvarnos, Señor Dios de los ejércitos.\nV. Que brille tu rostro y nos salve.\nR. Señor Dios de los ejércitos.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. Ven a salvarnos, Señor Dios de los ejércitos."
+   },
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "Ant. Sión, serás renovada y verás cómo amanece sobre ti el Justo que ha de venir."
+   },
+   {
+    "tipo": "preces",
+    "texto": "Roguemos, amados hermanos, a Jesucristo, que nos salvó de las tinieblas de nuestros\npecados, y con humildad invoquémoslo, diciendo:\n\nVen, Señor Jesús.\n\nCongrega, Señor, a todos los pueblos de la tierra,\n— y establece con todos tu alianza eterna.\n\nCordero de Dios, que viniste para quitar el pecado del mundo,\n— purifícanos de nuestras faltas y pecados.\n\nTú que viniste a salvar lo que se había perdido,\n— ven de nuevo para que no perezcan los que salvaste.\n\nCuando vengas, danos parte en tu gozo eterno,\n— pues ya desde ahora hemos puesto nuestra fe en ti.\n\nSe pueden añadir algunas intenciones libres.\nTú que has de venir a juzgar a los vivos y a los muertos,\n\n— recibe, entre tus elegidos, a nuestros hermanos difuntos.\n\nDigamos juntos con fe las palabras que Cristo nos enseñó: Padre nuestro."
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Señor Dios todopoderoso, que nos mandas abrir camino a Cristo el Señor, no permitas que\ndesfallezcamos en nuestra debilidad los que esperamos la llegada saludable del que viene\na sanarnos de todos nuestros males. Por nuestro Señor Jesucristo."
+   }
+  ]
+ },
+ "jue": {
+  "oficio": [
+   {
+    "tipo": "versiculo",
+    "texto": "V. Escuchad, naciones, la palabra del Señor.\nR. Y proclamadla en todos los confines de la tierra."
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "Del libro de Rut 2, 1-13\n\nENCUENTRO DE BOOZ CON RUT\n\nTenía Noemí un familiar por parte de su esposo, hombre potentado en riqueza, de la\nfamilia de Elimélek, llamado Booz. Dijo Rut la moabita a Noemí:\n\n— Déjame ir al campo a recoger espigas detrás del que encuentre que me mira con\nbuenos ojos.\n\nLe contestó:\n— Vete, hija mía.\nFue y entró a recoger espigas al campo detrás de los segadores; pero ocurrió que por\n\nfortuna fue a uno de los campos de Booz, el de la familia de Elimélek. Entonces Booz llegó\nde Belén y dijo a los segadores:\n\n— El Señor esté con vosotros.\nY le contestaron:\n— Que el Señor te bendiga.\nBooz preguntó al capataz de los segadores:\n— ¿A quién pertenece esa joven?\nEl capataz de los segadores le contestó diciendo:\n— Se trata de una joven moabita que regresó con Noemí del campo de Moab, y ha\n\nsuplicado: Dejadme espigar en medio de las gavillas detrás de los segadores. Vino, pues,\ny ahí permanece desde temprano a la noche, y todavía no ha vuelto a su casa.\n\nEntonces Booz le dijo a Rut:\n— ¡Hola! Escucha, hija mía; no se te ocurra ir a recoger espigas a otro campo ni pases\n\nde aquí; además, únete a mis empleadas. Mira el campo en el que van a segar, y vete tras\nellas. ¿De acuerdo? Ya he dispuesto que mis empleados no te molesten, y cuando tengas\nsed ve a las vasijas y bebe del agua que sacan los empleados.\n\nElla, cayendo sobre su rostro, se postró en tierra, y le dijo:\n— ¿Por qué he encontrado gracia ante tus ojos para ocuparte de mí, si soy una\n\nextranjera?\nBooz respondió de la siguiente manera:\n— Esto es lo que me han dicho; me han contado todo lo que has hecho por tu suegra\n\ntras la muerte de tu esposo, que has dejado la casa de tu padre y de tu madre, y tu\npueblo de origen, y que te has venido a un pueblo que no conocías hasta ahora. Que el\nSeñor te pague tu buena obra y el Señor, Dios de Israel, bajo cuyas alas has venido a\nrefugiarte, sea tu recompensa.\n\nElla dijo:\n— Encuentre yo gracia ante tu mirada, mi señor. En verdad que me has consolado y has\n\nhablado acertadamente al corazón de tu sierva; a mí que no soy ni como una de tus\nsirvientas.",
+    "anio": "I"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Me compadeceré de la «No—compadecida», * y diré a «No—es—mi—pueblo»: «Tú\neres mi pueblo», y él responderá: «Tú eres mi Dios.»\n\nV. Vendrán del oriente y del occidente, del norte y del sur.\nR. Y diré a «No—es—mi—pueblo»: «Tú eres mi pueblo», y él responderá: «Tú eres mi\nDios.»",
+    "ref": "Os 2, 24; Lc 13, 29",
+    "anio": "I"
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "Del libro del profeta Isaías 26, 7-21\n\nCÁNTICO DE LOS JUSTOS. PROMESA DE RESURRECCIÓN\n\nLa senda del justo es recta; tú allanas la senda recta del justo. Pues bien, en la senda\nde tus juicios te esperamos, el Señor; tu nombre y tu recuerdo son el anhelo del alma.\n\nCon toda mi alma te anhelo en la noche, y con todo mi espíritu por la mañana te busco.\nPorque cuando tú juzgas a la tierra, aprenden justicia los habitantes del orbe.\n\nAunque se haga gracia al malvado, no aprende justicia; en tierra recta se tuerce, y no\nteme la majestad del Señor. Señor, alzada está tu mano, pero no la ven; verán tu celo por\nel pueblo y se avergonzarán, tu ira ardiente devorará a tus adversarios.\n\nSeñor, tú nos pondrás a salvo, que también llevas a cabo todas nuestras obras.\nSeñor, Dios nuestro, nos han dominado otros señores fuera de ti, pero no recordaremos\n\notro Nombre sino el tuyo.\nLos muertos no vivirán, las sombras no se levantarán, pues los has castigado, los has\n\nexterminado y has borrado todo recuerdo de ellos.\nHas aumentado la nación, el Señor, has aumentado la nación y te has glorificado, has\n\nampliado todos los límites del país. Señor, en el aprieto de tu castigo te buscamos; la\nangustia de la opresión era tu castigo para nosotros. Como cuando la mujer encinta está\npróxima al parto sufre, y se queja en su trance, así éramos nosotros delante de ti, Señor.\nHemos concebido, tenemos dolores como si diésemos a luz viento; pero no hemos traído a\nla tierra salvación, y no le nacerán habitantes al orbe.\n\nRevivirán tus muertos, tus cadáveres resurgirán, despertarán y darán gritos de júbilo\nlos moradores del polvo; porque rocío luminoso es tu rocío, y la tierra echará de su seno\nlas sombras.\n\nVete, pueblo mío, entra en tus cámaras y cierra tu puerta tras de ti, escóndete un\ninstante hasta que pase la ira.\n\nPorque he ahí al Señor que sale de su lugar a castigar la culpa de todos los habitantes\nde la tierra contra él; descubre la tierra sus manchas de sangre y no tapa ya a sus\nasesinados.",
+    "anio": "II"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Despertarán jubilosos los que habitan en el polvo, * porque el rocío del Señor es rocío\nde luz.\nV. Muchos de los que duermen en el polvo de la tierra se despertarán.\nR. Porque el rocío del Señor es rocío de luz.",
+    "ref": "Is 26, 19; Dn 12, 2",
+    "anio": "II"
+   },
+   {
+    "tipo": "lectura2",
+    "texto": "De los sermones de san Pedro Crisólogo, obispo\n(Sermón 147: PL 52, 594-595)\n\nEL AMOR DESEA VER A DIOS\n\nAl ver Dios que el temor arruinaba el mundo, trató inmediatamente de volverlo a llamar\ncon amor, de invitarlo con su gracia, de sostenerlo con su caridad, de vinculárselo con su\nafecto.\n\nPor eso purificó la tierra, afincada en el mal, con un diluvio vengador, y llamó a Noé\npadre de la nueva generación, persuadiéndolo con suaves palabras, ofreciéndole una\nconfianza familiar, al mismo tiempo que lo instruía piadosamente sobre el presente y lo\nconsolaba con su gracia, respecto al futuro. Y  no le dio ya órdenes, sino que con el\nesfuerzo de su colaboración encerró en el arca las criaturas de todo el mundo, de manera\nque el amor que surgía de esta colaboración acabase con el temor de la servidumbre, y se\nconservara con el amor común lo que se había salvado con el común esfuerzo.\n\nPor eso también llamó a Abrahán de entre los gentiles, engrandeció su nombre, lo hizo\npadre de la fe, lo acompañó en el camino, lo protegió entre los extraños, le otorgó\nriquezas, lo honró con triunfos, se le obligó con promesas, lo libró de injurias, se hizo su\nhuésped bondadoso, lo glorificó con una descendencia de la que ya desesperaba; todo ello\npara que, rebosante de tantos bienes, seducido por tamaña dulzura de la caridad divina,\naprendiera a amar a Dios y no a temerlo, a venerarlo con amor y no con temor.\n\nPor eso también consoló en sueños a Jacob en su huida, y a su regreso lo incitó a\ncombatir y lo retuvo con el abrazo del luchador; para que amase al padre de aquel\ncombate, y no lo temiese.\n\nY así mismo interpeló a Moisés en su lengua vernácula, le habló con paterna caridad y\nle invitó a ser el liberador de su pueblo.\n\nPero así que la llama del amor divino prendió en los corazones humanos y toda la\nebriedad del amor de Dios se derramó sobre los humanos sentidos, satisfecho el espíritu\npor todo lo que hemos recordado, los hombres comenzaron a querer contemplar a Dios\ncon sus ojos carnales.\n\nPero la angosta mirada humana ¿cómo iba a poder abarcar a Dios, al que no abarca\ntodo el mundo creado? La exigencia del amor no atiende a lo que va a ser, o a lo que debe\no puede ser. El amor ignora el juicio, carece de razón, no conoce la medida. EL amor no se\naquieta ante lo imposible, no se remedia con la dificultad.\n\nEl amor es capaz de matar al amante si no puede alcanzar lo deseado; va a donde se\nsiente arrastrado, no a donde debe ir. El amor engendra el deseo, se crece con el ardor y,\npor el ardor, tiende a lo inalcanzable. ¿Y qué más diré?\n\nEl amor no puede quedarse sin ver lo que ama: por eso los santos tuvieron en poco\ntodos sus merecimientos, si no iban a poder ver a Dios.\n\nMoisés se atreve por ello a decir: Si he obtenido tu favor, enséñame tu gloria.\nY otro dice también: Déjame ver tu figura. Incluso los mismos gentiles modelaron sus\n\nídolos para poder contemplar con sus propios ojos lo que veneraban en medio de sus\nerrores."
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Como una madre consuela a su hijo, así yo os consolaré —dice el Señor—: y de\nJerusalén, la ciudad que yo he elegido, os llegará el auxilio: * Al verlo se alegrará vuestro\ncorazón.\nV. Daré la salvación en Sión y mi honor será para Israel.\nR. Al verlo se alegrará vuestro corazón.",
+    "ref": "Cf. Is 66, 13; cf. 1 Re 11, 36; Is 66, 14; 46, 13"
+   },
+   {
+    "tipo": "oracion_laudes"
+   }
+  ],
+  "laudes": [
+   {
+    "tipo": "lectura_breve",
+    "texto": "Cielos, destilad el rocío; nubes, derramad al Justo; ábrase la tierra y brote la salvación, y\ncon ella germine la justicia.",
+    "ref": "Is 45, 8"
+   },
+   {
+    "tipo": "responsorio_breve",
+    "texto": "V. Sobre ti, Jerusalén, amanecerá el Señor.\nR. Sobre ti, Jerusalén, amanecerá el Señor.\nV. Su gloria aparecerá sobre ti.\nR. Amanecerá el Señor.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. Sobre ti, Jerusalén, amanecerá el Señor."
+   },
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "Ant. «Yo mismo te auxilio —dice el Señor— y yo, el Santo de Israel, soy tu redentor.»"
+   },
+   {
+    "tipo": "preces",
+    "texto": "Imploremos, hermanos, a Dios Padre, que ha enviado a su Hijo para salvar al mundo, y\ndigámosle suplicantes:\n\nMuéstranos, Señor, tu misericordia.\n\nPadre lleno de amor, no permitas que nuestra vida y nuestras obras rechacen a Cristo, tu\nenviado,\n\n— pues nuestra lengua lo proclama con fe plena.\n\nTú que enviaste a tu Hijo para salvación de los hombres,\n— aleja de nuestra nación y del mundo entero toda desgracia y todo dolor.\n\nQue la tierra entera se alegre por la venida de tu Hijo,\n— experimentando cada día más la felicidad que en ti se encierra.\n\nConcédenos, por, tu misericordia, llevar ya desde ahora una vida sobria y religiosa,\n— mientras aguardamos la dichosa esperanza, la aparición gloriosa de Jesucristo.\n\nSe pueden añadir algunas intenciones libres.\nCon el gozo que nos da el saber que Cristo viene para hacernos hijos de Dios, digamos al\nPadre: Padre nuestro."
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Despierta, Señor, nuestros corazones y muévelos a preparar los caminos de tu Hijo, para\nque por el misterio de su venida podamos servirte con pureza de espíritu. Por nuestro\nSeñor Jesucristo."
+   }
+  ],
+  "intermedia": {
+   "comun": [],
+   "tercia": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "El jefe de Israel se alzará y pastoreará el rebaño con el poder del Señor, con la majestad\ndel nombre del Señor su Dios. Habitarán tranquilos, porque se mostrará él grande hasta\nlos confines de la tierra, y él será nuestra paz.\n\nV. Los gentiles temerán tu nombre, Señor.\nR. Los reyes del mundo tu gloria.",
+     "ref": "Mi 5, 4-5a"
+    },
+    {
+     "tipo": "oracion_laudes"
+    }
+   ],
+   "sexta": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "Todavía un poco más, y agitaré cielo y tierra, mar y continentes. La gloria de este segundo\ntemplo será mayor que la del primero y en este sitio daré la paz —oráculo del Señor de los\nejércitos—.\nV. Acuérdate de nosotros, Señor, por amor a tu pueblo.\nR. Visítanos con tu salvación.",
+     "ref": "Ag 2, 7. 10"
+    },
+    {
+     "tipo": "oracion_laudes"
+    }
+   ],
+   "nona": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "A los que honran mi nombre los iluminará un sol de justicia que lleva la salud en los rayos;\nvosotros saldréis brincando como terneros del establo —dice el Señor de los ejércitos—.\nV. Ven, Señor, y no tardes.\nR. Perdona los pecados de tu pueblo.",
+     "ref": "Ml 4, 2"
+    },
+    {
+     "tipo": "oracion_laudes"
+    }
+   ]
+  },
+  "visperas": [
+   {
+    "tipo": "lectura_breve",
+    "texto": "Aguardad con paciencia, hermanos, hasta la manifestación del Señor. Ved cómo el\nlabrador espera el precioso fruto de la tierra. Lo va aguardando pacientemente, hasta que\nla tierra reciba las lluvias tempranas y las tardías. Aguardad también vosotros con toda\npaciencia, fortaleced vuestros corazones, porque la manifestación del Señor está ya cerca.\nMirad que el juez está a las puertas.",
+    "ref": "St 5, 7-8. 9b"
+   },
+   {
+    "tipo": "responsorio_breve",
+    "texto": "V. Ven a salvarnos, Señor Dios de los ejércitos.\nR. Ven a salvarnos, Señor Dios de los ejércitos.\nV. Que brille tu rostro y nos salve.\nR. Señor Dios de los ejércitos.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. Ven a salvarnos, Señor Dios de los ejércitos."
+   },
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "Ant. El que viene después de mí ya existía antes que yo, y yo no soy digno ni de desatar\nla correa de sus sandalias."
+   },
+   {
+    "tipo": "preces",
+    "texto": "Oremos, hermanos, a Cristo el Señor, que por nosotros se anonadó a sí mismo, y\ndigámosle confiados:\n\nVen, Señor Jesús.\n\nSeñor Jesús, que con tu encarnación has salvado al mundo,\n— purifica nuestras almas y nuestros cuerpos de todo pecado.\n\nNo permitas que aquellos a quienes llamas hermanos por tu encarnación,\n— se alejen de ti por el pecado.\n\nNo permitas que aquellos a quienes has salvado con tu venida,\n— merezcan ser castigados en el día de tu juicio.\n\nCristo Jesús, que nunca alejas de nosotros tu bondad y tu amor,\n— haz que alcancemos la corona inmarcesible de gloria.\n\nSe pueden añadir algunas intenciones libres.\nTe encomendamos, Señor, a nuestros hermanos que han sido separados temporalmente\nde su cuerpo,\n\n— haz que, muertos para el mundo, vivan eternamente para ti.\n\nMovidos por la fe, invoquemos a Dios Padre con la oración que Cristo nos enseñó: Padre\nnuestro."
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Despierta, Señor, nuestros corazones y muévelos a preparar los caminos de tu Hijo, para\nque por el misterio de su venida podamos servirte con pureza de espíritu. Por nuestro\nSeñor Jesucristo."
+   }
+  ]
+ },
+ "vie": {
+  "oficio": [
+   {
+    "tipo": "versiculo",
+    "texto": "V. Derrama, Señor, tu misericordia sobre nosotros.\nR. Danos tu salvación, según tu promesa."
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "Del libro de Rut 2, 14-23\n\nREGRESO DE RUT JUNTO A NOEMÍ\n\nAl tiempo del refrigerio, le dijo Booz:\n— Acércate aquí y come de nuestro pan, remoja tu porción en el aguachirle.\nElla se sentó al lado de los segadores y él le alargó trigo tostado; ella lo comió hasta\n\nsaciarse y dejó de sobra.\nDespués se levantó para recoger espigas, y Booz ordenó a sus empleados diciendo:\nDajadla que recoja espigas también entre las gavillas y no la molestéis. También iréis\n\nsoltando para ella algunas espigas de los manojos y las abandonaréis para que las recoja;\ny no la molestéis.\n\nRecogió espigas en el campo hasta la tarde; amontonó después las espigas que había\nrecogido, y resultó como una carga de cebada. Se lo cargó y se fue a la ciudad;  y mostró\na su suegra las espigas que había recogido. A continuación sacó lo que le había sobrado\ndespués de saciarse y se lo dio. Le dijo su suegra:\n\n— ¿Dónde has recogido espigas hoy y dónde has trabajado? ¡Bendito el que se ha\npreocupado por ti!\n\nLuego relató a su suegra con quien había trabajado, diciendo:\n— El hombre con quien he trabajado hoy se llama Booz.\nNoemí dijo a su nuera:\n— ¡Bendito sea el Señor, que no ha dejado sin su misericordia ni a vivos ni a difuntos!\n\nEse hombre —siguió diciendo Noemí— es un familiar próximo a nosotras, es uno de\nnuestros padrinos.\n\nEntonces dijo Rut la moabita:\n— También me dijo: Únete a mis empleadas hasta finalizar toda la siega de mi\n\npropiedad.\nEntonces dijo Noemí a su nuera Rut:\n— Es bueno, hija mía, que salgas con sus empleadas, para que nadie te moleste en\n\notro campo.\nAsí que se unió a las empleadas de Booz para recoger espigas durante toda la siega\n\nde las cebadas y la siega de los trigos. Luego regresó a su casa.",
+    "anio": "I"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. El Señor ha redimido a su pueblo, * según lo había predicho desde antiguo por boca de\nsus santos profetas.\nV. El Padre envió a su Hijo para ser Salvador del mundo.\nR. Según lo había predicho desde antiguo por boca de sus santos profetas.",
+    "ref": "Lc 1, 68. 70; 1 Jn 8, 14",
+    "anio": "I"
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "Del libro del profeta Isaías 27, 1-13\n\nDE NUEVO ES CULTIVADA LA VIÑA DEL SEÑOR\n\nAquel día castigará el Señor con su espada dura, grande, fuerte, a Leviatán, serpiente\nhuidiza, a Leviatán, serpiente tortuosa, y matará al dragón que hay en el mar. Aquel día se\ndirá: Viña deliciosa, cantadla. Yo, el Señor, soy su guardián. A su tiempo la regaré. Para\nque no se la castigue, de noche y de día la guardaré. Ya no tengo muralla. ¿Quién me ha\nconvertido en espinos y abrojos? Yo les haré guerra y los pisotearé, los quemaré todos a\nuna, o que se acojan a mi amparo, que hagan la paz conmigo, que conmigo hagan la paz.\n\nEn los días que vienen arraigará Jacob, echará Israel flores y frutos, y se llenará la\nhaz de la tierra de sus productos. ¿Acaso le ha herido como hirió a quien le hería? ¿Ha\nsido muerto él como fueron muertos sus matadores? Te querellaste con ella y la echaste,\nla despediste; la echó con su aliento áspero como viento de Oriente.\n\nEn verdad, con esto sería expiada la culpa de Jacob, y éste sería todo el fruto capaz\nde apartar su pecado; dejar todas las piedras que le sirven de ara de altar como piedras\n\nde cal desmenuzadas. Cipos y estelas del sol no se erigirán, pues la ciudad fortificada ha\nquedado solitaria, mansión dejada y abandonada como un desierto donde el novillo pace,\nse tumba y ramonea. Cuando se seca su ramaje es quebrado en astillas: vienen mujeres y\nle prenden fuego. Por no ser éste un pueblo inteligente, por eso no le tiene piedad su\nHacedor, su Plasmador no le otorga gracia.\n\nAquel día vareará el Señor desde la corriente del Río hasta el torrente de Egipto, y\nvosotros seréis reunidos de uno en uno, hijos de Israel. Aquel día se tocará un cuerno\ngrande, y vendrán los perdidos por tierra de Asiria y los dispersos por tierra de Egipto, y\nadorarán al Señor en el monte santo de Jerusalén.",
+    "anio": "II"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Enviará el Señor a sus ángeles con sonoras trompetas * y reunirán a sus elegidos de los\ncuatro puntos cardinales, desde el uno al otro confín del mundo.\nV. Y vendrán para postrarse ante el Señor en el monte santo de Jerusalén.\nR. Y reunirán a sus elegidos de los cuatro puntos cardinales, desde el uno al otro confín\ndel mundo.",
+    "ref": "Cf. Mt 24, 31; Is 27, 13",
+    "anio": "II"
+   },
+   {
+    "tipo": "lectura2",
+    "texto": "Del tratado de san Ireneo, obispo, contra las herejías\n(Libro 5,19,1; 20, 2; 21,1: SC 153, 248-250. 260-264)\n\nEVA Y MARÍA\n\nEl Señor vino y se manifestó en una verdadera condición humana que lo sostenía,\nsiendo a su vez ésta su humanidad sostenida por él, y, mediante la obediencia en el árbol\nde la cruz, llevó a cabo la expiación de la desobediencia cometida en otro árbol, al mismo\ntiempo que liquidaba las consecuencias de aquella seducción con la que había sido\nvilmente engañada la virgen Eva, ya destinada a un hombre, gracias a la verdad que el\nángel evangelizó a la Virgen María, prometida también a un hombre.\n\nPues de la misma manera que Eva, seducida por las palabras del diablo, se apartó de\nDios, desobedeciendo su mandato, así María fue evangelizada por las palabras del ángel,\npara llevar a Dios en su seno, gracias a la obediencia a su palabra. Y si aquélla se dejó\nseducir para desobedecer a Dios, ésta se dejó persuadir a obedecerle, con lo que la Virgen\nMaría se convirtió en abogada de la virgen Eva.\n\nAsí, al recapitular todas las cosas, Cristo fue constituido cabeza, pues declaró la\nguerra a nuestro enemigo, derrotó al que en un principio, por medio de Adán, nos había\nhecho prisioneros, y quebrantó su cabeza, como encontramos dicho por Dios a la\nserpiente en el Génesis: Establezco hostilidades entre ti y la mujer, entre tu estirpe y la\nsuya; ella te herirá en la cabeza, cuando tú la hieras en el talón.\n\nCon estas palabras, se proclama de antemano que aquel que había de nacer de una\ndoncella y ser semejante a Adán habría de quebrantar la cabeza de la serpiente. Y  esta\ndescendencia es aquella misma de la que habla el Apóstol en su carta a los Gálatas: La ley\nse añadió hasta que llegara el descendiente beneficiario de la promesa.\n\nY lo expresa aún con más claridad en otro lugar de la misma carta, cuando dice: Pero\ncuando se cumplió el tiempo, envió Dios a su Hijo, nacido de una mujer. Pues el enemigo\nno hubiese sido derrotado con justicia si su vencedor no hubiese sido un hombre nacido\nde mujer. Ya que por una mujer el enemigo había dominado desde el principio al hombre,\nponiéndose en contra de él.\n\nPor esta razón el mismo Señor se confiesa Hijo del hombre, y recapitula en sí mismo\na aquel hombre primordial del que se hizo aquella forma de mujer: para que así como\n\nnuestra raza descendió a la muerte a causa de un hombre vencido, ascendamos del\nmismo modo a la vida gracias a un hombre vencedor."
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Fue enviado el ángel Gabriel a una virgen desposada con un hombre llamado José, para\nanunciarle el mensaje; y se turbó la virgen ante su resplandor. «No temas, María, porque\nhas hallado gracia a los ojos de Dios: * Concebirás y darás a luz un hijo, el cual será\nllamado Hijo del Altísimo.»\nV. El Señor Dios le dará el trono de David, su padre, y reinará en la casa de Jacob para\nsiempre.\nR. Concebirás y darás a luz un hijo, el cual será llamado Hijo del Altísimo.",
+    "ref": "Cf. Lc 1, 26. 27. 30. 31. 32"
+   },
+   {
+    "tipo": "oracion_laudes"
+   }
+  ],
+  "laudes": [
+   {
+    "tipo": "lectura_breve",
+    "texto": "Esto dice el Señor: «Saldrá de Jacob un príncipe, su señor saldrá de en medio de él; me lo\nacercaré y se llegará a mí. Vosotros seréis mi pueblo y yo seré vuestro Dios.»",
+    "ref": "Jr 30, 21. 22"
+   },
+   {
+    "tipo": "responsorio_breve",
+    "texto": "V. Sobre ti, Jerusalén, amanecerá el Señor.\nR. Sobre ti, Jerusalén, amanecerá el Señor.\nV. Su gloria aparecerá sobre ti.\nR. Amanecerá el Señor.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. Sobre ti, Jerusalén, amanecerá el Señor."
+   },
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "Ant. Decid a los cobardes de corazón: «Sed fuertes; mirad al Señor, nuestro Dios, que\nviene.»"
+   },
+   {
+    "tipo": "preces",
+    "texto": "Oremos, hermanos, a Cristo, nuestro redentor, que ha venido para darnos la justificación,\ny digámosle con júbilo:\n\nVen, Señor Jesús.\n\nSeñor, cuya venida en la carne anunciaron antiguamente los profetas,\n— haz germinar en nosotros la semilla de las virtudes.\n\nConcede a los que anunciamos al mundo tu salvación,\n— que encontremos también en ti nuestra salvación.\n\nTú que viniste a librar a los oprimidos,\n— cura las dolencias de los que sufren.\n\nTú que reconciliaste al mundo con Dios en tu primera venida,\n\n— absuélvenos de toda condenación cuando vengas como juez.\nSe pueden añadir algunas intenciones libres.\nRepitamos las palabras de Jesús, pidiendo al Padre que venga su reino: Padre nuestro."
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Señor, que tu pueblo permanezca en vela aguardando la venida de tu Hijo, para que,\nsiguiendo las enseñanzas de nuestro Salvador, salgamos a su encuentro, cuando él llegue,\ncon las lámparas encendidas. Por nuestro Señor Jesucristo."
+   }
+  ],
+  "intermedia": {
+   "comun": [],
+   "tercia": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "Sé muy bien lo que pienso hacer con vosotros: designios de paz y no de aflicción, daros\nun porvenir y una esperanza. Me buscaréis y me encontraréis si me buscáis de todo\ncorazón.\nV. Los gentiles temerán tu nombre, Señor.\nR. Los reyes del mundo tu gloria.",
+     "ref": "Jr 29, 11. 13"
+    },
+    {
+     "tipo": "oracion_laudes"
+    }
+   ],
+   "sexta": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "Esto dice el Señor: «Yo cambiaré la suerte de las tiendas de Jacob, me compadeceré de\nsus moradas.»\nV. Acuérdate de nosotros, Señor, por amor a tu pueblo.\nR. Visítanos con tu salvación.",
+     "ref": "Jr 30, 18"
+    },
+    {
+     "tipo": "oracion_laudes"
+    }
+   ],
+   "nona": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "No te acuerdes de las iniquidades de nuestros padres, sino acuérdate de tu mano y de tu\nnombre en esta hora. Pues eres el Señor, Dios nuestro.\nV. Ven, Señor, y no tardes.\nR. Perdona los pecados de tu pueblo.",
+     "ref": "Ba 3, 5-6a"
+    },
+    {
+     "tipo": "oracion_laudes"
+    }
+   ]
+  },
+  "visperas": [
+   {
+    "tipo": "lectura_breve",
+    "texto": "Para el Señor un día es como mil años, y mil años como un día. No es tardo el Señor en el\ncumplimiento de sus promesas, como algunos piensan. Lo que hace es aguardaros\npacientemente, porque no quiere que nadie perezca, sino que todos vengáis a\narrepentiros.",
+    "ref": "2 Pe 3, 8b-9"
+   },
+   {
+    "tipo": "responsorio_breve",
+    "texto": "V. Ven a salvarnos, Señor Dios de los ejércitos.\nR.  Ven a salvarnos, Señor Dios de los ejércitos.\nV. Que brille tu rostro y nos salve.\nR. Señor Dios de los ejércitos.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. Ven a salvarnos, Señor Dios de los ejércitos."
+   },
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "Ant. Sacaréis agua con gozo de las fuentes del Salvador."
+   },
+   {
+    "tipo": "preces",
+    "texto": "Roguemos a nuestro Redentor, que viene a dar la Buena Noticia a los pobres, y digámosle:\nManifiesta, Señor, tu gloria a los hombres.\n\nManifiéstate, Señor, a todos los que no te conocen,\n— para que también ellos vean tu salvación.\n\nQue tu nombre, Señor, se anuncie hasta los confines de la tierra,\n— y que todos los hombres descubran el camino que conduce a ti.\n\nTú que viniste la vez primera para salvar al mundo,\n— ven de nuevo para salvar a los que en ti creen.\n\nAquella libertad que tu venida dio a los redimidos,\n— consérvala y defiéndela siempre con tu poder.\n\nSe pueden añadir algunas intenciones libres.\nTú que ya viniste en la carne v vendrás de nuevo a juzgar al mundo,\n\n— da en tu venida el premio eterno a los difuntos.\n\nLlenos del Espíritu de Jesucristo, nos atrevemos a decir: Padre nuestro."
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Señor, que tu pueblo permanezca en vela aguardando la venida de tu Hijo, para que,\nsiguiendo las enseñanzas de nuestro Salvador, salgamos a su encuentro, cuando él llegue,\ncon las lámparas encendidas. Por nuestro Señor Jesucristo."
+   }
+  ]
+ },
+ "sab": {
+  "oficio": [
+   {
+    "tipo": "versiculo",
+    "texto": "V. El Señor anuncia su palabra a Jacob.\nR. Sus decretos y mandatos a Israel."
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "Del libro de Rut 3, 1-18\n\nPROMESA DE BOOZ\n\nUn día, su suegra Noemí le dijo a Rut:\n— Hija mía, ¿No tendré que buscarte una casa buena para ti?  ¿No resulta ahora que\n\nBooz, con cuyas empleadas has estado, es nuestro cercano familiar? Mira por donde que\nesta noche aventa la cebada en su era. Lávate, perfúmate y cúbrete con tu manto; baja a\nla era sin darte a conocer del hombre hasta que concluya de comer y beber. En cuanto se\nacueste, busca el lugar en el que se acuesta, entra, descubre sus pies y acuéstate. Él\nmismo te indicará lo que has de hacer.\n\nRut le contestó:\n— Haré todo lo que me dices.\nBajó a la era e hizo todo lo que le había ordenado su suegra. Booz comió, bebió y\n\npuso contento su corazón. Luego se fue a acostar al lado  del montón de grano. Ella llegó\nsigilosamente, descubrió los pies del hombre y se acostó. Cuando ya era la media noche,\nel hombre sintió frío, se dio la vuelta y descubrió una mujer acostada a sus pies. Y le\npreguntó:\n\n— ¿Quién eres tú?\nElla le contestó:\n— Yo soy tu sierva Rut. Coloca la punta de tu capa sobre tu sierva, porque tú eres\n\npadrino.\nÉl le replicó:\n— Bendita eres del Señor, hija mía. Mejor ha sido tu última piedad que la primera,\n\nporque no te has buscado a cualquiera de los jóvenes, ya sea pobre o rico. Por tanto, hija\nmía, no temas, que yo te haré todo cuanto me pidas, porque toda la asamblea de mi\npueblo sabe que eres una mujer virtuosa. No obstante, aunque yo soy padrino, tienes otro\npadrino más cercano que yo. Deja pasar la noche, y al amanecer, si él quiere hacerse\ncargo de ti, está bien que sea tu padrino; pero si no quiere ejercer como tu padrino, viva\nel Señor que yo ejerceré el derecho de padrino. Sigue acostada hasta el amanecer.\n\nElla siguió acostada a sus pies hasta el amanecer, y se levantó cuando todavía no era\nposible uno reconociera a otro, porque él se dijo: “No conviene que se sepa que ha venido\nesta mujer a la era”. Él le dijo:\n\n— Extiende el manto que llevas puesto y agárralo con energía.\nElla lo agarró y él le puso seis medidas de cebada, y lo cargó sobre ella para que se\n\nfuera a la ciudad. Cuando entró a casa de su suegra, ésta le preguntó:\n— ¿Cómo te fue, hija mía?\nRut le contó todo lo que aquel hombre había hecho en favor de ella. Y añadió:\n— Me ha dado seis medidas de cebada mientras me decía: “No te irás a casa de tu\n\nsuegra de vacío”.\nNoemí dijo:\n— Hija mía, quédate en paz hasta que sepas en qué queda todo esto, porque ese\n\nhombre no descansará hasta no resolver el problema hoy mismo.",
+    "anio": "I"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. El Señor da la pobreza y la riqueza, humilla y enaltece; él levanta del polvo al desvalido,\nalza de la basura al pobre, * para hacer que se siente entre príncipes y que herede un\ntrono de gloria.\nV. Ha mirado la humillación de su esclava.\nR. Para hacer que se siente entre príncipes y que herede un trono de gloria.",
+    "ref": "1 Sam 2, 7-8; Lc 1, 48",
+    "anio": "I"
+   },
+   {
+    "tipo": "lectura1",
+    "texto": "Del libro del profeta Isaías 29, 1-8\n\nJUICIO DE DIOS SOBRE JERUSALÉN\n\n¡Ay, Ariel, Ariel, villa donde acampó David! Añadid año sobre año, las fiestas completen\nsu ciclo, y pondré en angustias a Ariel, y habrá llanto y gemido.\n\nElla será para mí un Ariel; acamparé en círculo contra ti, estrecharé contra ti la\nestacada, y levantaré contra ti trinchera; serás abatida, desde la tierra hablarás, por el\npolvo será ahogada tu palabra, tu voz será como un espectro de la tierra, y desde el polvo\ntu palabra será como un susurro. Y será como polvareda fina la turba de tus soberbios, y\ncomo tamo que pasa la turba de tus potentados.\n\nSucederá que, de un momento a otro, de parte del Señor de los ejércitos serás visitada\ncon trueno, estrépito y estruendo, turbión, ventolera y llama de fuego devoradora. Será\ncomo un sueño, visión nocturna, la turba de todas las gentes que guerrean contra Ariel,\ntodas sus milicias y las máquinas de guerra que la oprimen.\n\nSerá como cuando el hambriento sueña que está comiendo, pero despierta y tiene el\nestómago vacío; como cuando el sediento sueña que está bebiendo, pero se despierta\ncansado y sediento. Así será la turba de todas las gentes, que guerrean contra el monte\nSión.",
+    "anio": "II"
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. No temas, Jerusalén, no tendrás que avergonzarte, * cuando venga en tu auxilio el\nSeñor de los ejércitos.\nV. Será como polvareda que pasa el tropel de los pueblos que combaten contra ti.\nR. Cuando venga en tu auxilio el Señor de los ejércitos.",
+    "ref": "Is 54, 4; 29, 5. 6. 7",
+    "anio": "II"
+   },
+   {
+    "tipo": "lectura2",
+    "texto": "De los sermones del beato Isaac, abad del monasterio de Stella\n(Sermón 51: PL 194,1862-1863.1865)\n\nMARÍA Y LA IGLESIA\n\nEl Hijo de Dios es el primogénito entre muchos hermanos, y, siendo por naturaleza\núnico, atrajo hacia sí muchos por la gracia, para que fuesen uno solo con él. Pues da\npoder para ser hijos de Dios a cuantos lo reciben.\n\nAsí pues, hecho hijo del hombre, hizo a muchos hijos de Dios. Atrajo a muchos hacia\nsí, único como es por su caridad y su poder: y todos aquellos que por la generación carnal\nson muchos, por la regeneración divina son uno solo con él.\n\nCristo es, pues, uno, formando un todo la cabeza y el cuerpo: uno nacido del único\nDios en los cielos y de una única madre en la tierra; muchos hijos, a la vez que un solo\nhijo.\n\nPues así como la cabeza y los miembros son un hijo a la vez que muchos hijos,\nasimismo María y la Iglesia son una madre y varias madres; una virgen y muchas\nvírgenes.\n\nAmbas son madres, y ambas vírgenes; ambas concibieron sin voluptuosidad por obra\ndel mismo Espíritu; ambas dieron a luz sin pecado la descendencia de Dios Padre. María,\nsin pecado alguno, dio a luz la cabeza del cuerpo; la Iglesia, por la remisión de los\npecados, dio a luz el cuerpo de la cabeza. Ambas son la madre de Cristo, pero ninguna de\nellas dio a luz al Cristo total sin la otra.\n\nPor todo ello, en las Escrituras divinamente inspiradas, se entiende con razón como\ndicho en singular de la virgen María lo que en términos universales se dice de la virgen\nmadre Iglesia, y se entiende como dicho de la virgen madre Iglesia en general lo que en\nespecial se dice de la virgen madre María; y lo mismo si se habla de una de ellas que de la\notra, lo dicho se entiende casi indiferente y comúnmente como dicho de las dos.\n\nTambién se considera con razón a cada alma fiel como esposa del Verbo de Dios,\nmadre de Cristo, hija y hermana, virgen y madre fecunda. Todo lo cual la misma sabiduría\nde Dios, que es el Verbo del Padre, lo dice universalmente de la Iglesia, especialmente de\nMaría y singularmente de cada alma fiel.\n\nPor eso dice la Escritura: Y habitaré en la heredad del Señor. Heredad del Señor que\nes universalmente la Iglesia, especialmente María y singularmente cada alma fiel. En el\ntabernáculo del vientre de María habitó Cristo durante nueve meses; hasta el fin del\nmundo, vivirá en el tabernáculo de la fe de la Iglesia; y, por los siglos de los siglos, morará\nen el conocimiento y en el amor del alma fiel."
+   },
+   {
+    "tipo": "responsorio",
+    "texto": "R. Pondré mi morada entre vosotros y no os rechazaré; * Caminaré entre vosotros y seré\nvuestro Dios, y vosotros seréis mi pueblo.\nV. Nosotros somos templo de Dios vivo, como dijo Dios.\nR. Caminaré entre vosotros y seré vuestro Dios, y vosotros seréis mi pueblo.",
+    "ref": "Lv 26, 11-12; 2 Co 6, 16"
+   },
+   {
+    "tipo": "oracion_laudes"
+   }
+  ],
+  "laudes": [
+   {
+    "tipo": "lectura_breve",
+    "texto": "Saldrá un renuevo del tronco de Jesé, y de su raíz brotará un vástago. Sobre él se posará\nel espíritu del Señor: espíritu de sabiduría y de inteligencia, espíritu de consejo y de\nfortaleza, espíritu de ciencia y de temor del Señor.",
+    "ref": "Is 11, 1-3a"
+   },
+   {
+    "tipo": "responsorio_breve",
+    "texto": "V. Sobre ti, Jerusalén, amanecerá, el Señor.\nR. Sobre ti, Jerusalén, amanecerá el Señor.\nV. Su gloria aparecerá sobre ti.\nR. Amanecerá el Señor.\nV. Gloria al Padre, y al Hijo, y al Espíritu Santo.\nR. Sobre ti, Jerusalén, amanecerá el Señor."
+   },
+   {
+    "tipo": "cantico_evangelico",
+    "texto": "Ant. Izará el Señor una enseña para las naciones, para reunir a los dispersos de Israel."
+   },
+   {
+    "tipo": "preces",
+    "texto": "Hermanos, oremos con todo nuestro espíritu a Cristo redentor, que vendrá con gran poder\ny gloria, y digámosle:\n\nVen, Señor Jesús.\n\nSeñor Jesucristo, que vendrás con poder desde el cielo,\n— mira nuestra pequeñez y haz que seamos dignos de tus dones.\n\nTú que viniste a anunciar la Buena Noticia a los hombres,\n— danos fuerza para que también nosotros anunciemos el Evangelio a nuestros\n\nhermanos.\n\nTú que desde el trono del Padre todo lo gobiernas,\n— haz que aguardemos con alegría la dicha que esperamos, tu aparición gloriosa.\n\nConsuélanos, Señor, con los dones de tu divinidad,\n— a los que anhelamos la gracia de tu venida.\n\nSe pueden añadir algunas intenciones libres.\nPidamos que el reino de Dios llegue a todos los hombres: Padre nuestro."
+   },
+   {
+    "tipo": "oracion",
+    "texto": "Dios todopoderoso, que amanezca en nuestros corazones el resplandor de tu gloria,\nCristo, tu Hijo, para que su venida ahuyente las tinieblas del pecado y nos manifieste\ncomo hijos de la luz. Por nuestro Señor Jesucristo."
+   }
+  ],
+  "intermedia": {
+   "comun": [],
+   "tercia": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "Aquel día, el vástago del Señor será joya, y gloria, fruto del país, honor y ornamento para\nlos supervivientes de Israel.\nV. Los gentiles temerán tu nombre, Señor.\nR. Los reyes del mundo tu gloria.",
+     "ref": "Is 4, 2"
+    },
+    {
+     "tipo": "oracion_laudes"
+    }
+   ],
+   "sexta": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "A los que queden en Sión, a los restantes en Jerusalén, los llamarán santos: serán\ninscritos para vivir en Jerusalén.\nV. Acuérdate de nosotros, Señor, por amor a tu pueblo.\nR. Visítanos con tu salvación.",
+     "ref": "Is 4, 3"
+    },
+    {
+     "tipo": "oracion_laudes"
+    }
+   ],
+   "nona": [
+    {
+     "tipo": "lectura_breve",
+     "texto": "Como el suelo echa sus brotes, como un jardín hace brotar sus semillas, así el Señor hará\nbrotar la justicia y los himnos ante todos los pueblos.\nV. Ven, Señor, y no tardes.\nR. Perdona los pecados de tu pueblo.",
+     "ref": "Is 61, 11"
+    },
+    {
+     "tipo": "oracion_laudes"
+    }
+   ]
+  }
+ }
+}
