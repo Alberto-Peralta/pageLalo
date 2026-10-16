@@ -1,0 +1,33 @@
+/* Noticias y panel: estilos sobre el diseño de Notica (body.pn, ver ../portada.css) */
+body.pn .nt-main { max-width: 760px; margin: 0 auto; padding: 8px 16px 40px; }
+body.pn .nt-main h1 { font-size: 1.6rem; margin: 8px 0 16px; }
+body.pn .nt-main h2 { font-size: 1.15rem; margin: 20px 0 8px; }
+body.pn .nt-volver { color: #7fb4ee; font-size: 14px; }
+
+/* Filtros y formularios */
+body.pn .filtros { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 16px; }
+body.pn select, body.pn input, body.pn textarea { width: 100%; box-sizing: border-box; padding: 10px; margin-top: 4px; font: inherit; color: #eef3f8; background: #0d1e35; border: 1px solid rgba(255,255,255,0.18); border-radius: 10px; }
+body.pn .filtros select { width: auto; flex: 1; min-width: 160px; margin-top: 0; }
+body.pn label { display: block; margin-top: 12px; font-size: 0.9rem; color: #c5d3e2; }
+body.pn button { margin-top: 12px; padding: 10px 18px; font: inherit; font-weight: 600; border: 0; border-radius: 999px; background: #f4b942; color: #1a1a1a; cursor: pointer; }
+body.pn button.sec { background: #3a516d; color: #eef3f8; }
+body.pn .error { color: #ff8a8a; margin-top: 8px; }
+body.pn .ok { color: #8ae0a0; margin-top: 8px; }
+body.pn ul { padding-left: 18px; }
+body.pn li { margin-bottom: 8px; }
+
+/* Tarjetas de noticias */
+body.pn article { background: #12263f; border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 16px; margin-bottom: 14px; }
+body.pn article h2 { margin: 8px 0 4px; font-size: 1.2rem; }
+body.pn article p { color: #dbe6f2; line-height: 1.5; }
+body.pn .etiqueta { display: inline-block; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #f4b942; }
+body.pn .meta { color: #9fb3c8; font-size: 0.85rem; margin: 4px 0 10px; }
+body.pn .evento { background: #0d1e35; padding: 8px 10px; border-radius: 10px; margin-bottom: 10px; font-size: 0.95rem; }
+body.pn .video { position: relative; padding-bottom: 56.25%; height: 0; margin: 10px 0; }
+body.pn .video iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 10px; }
+body.pn .fuentes { font-size: 0.85rem; color: #9fb3c8; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 10px; padding-top: 8px; }
+body.pn .fuentes ul { margin: 4px 0 0; }
+body.pn .nt-main a { color: #7fb4ee; }
+
+/* Panel: las cajas usan la misma tarjeta de la portada */
+body.pn section.caja { background: #12263f; border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 16px; margin-top: 16px; }

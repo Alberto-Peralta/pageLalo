@@ -184,6 +184,47 @@ async function prepararNoticias(user, rol) {
   }
 }
 
+var editando = null;
+
+function textoFuentes(fuentes) {
+  return (fuentes || []).map(function (f) {
+    return f.url ? f.titulo + ' | ' + f.url : f.titulo;
+  }).join(String.fromCharCode(10));
+}
+
+function salirEdicion() {
+  editando = null;
+  $('formNoticia').reset();
+  $('formNoticia').querySelector('button[type="submit"]').textContent = 'Enviar a revisión';
+  var c = $('cancelarEdicion');
+  if (c) { c.remove(); }
+}
+
+function editarNoticia(id, n) {
+  editando = { id: id, n: n };
+  $('noticiaTipo').value = n.tipo || 'noticia';
+  $('noticiaParroquia').value = n.parroquia || '';
+  $('noticiaTitulo').value = n.titulo || '';
+  $('noticiaCuerpo').value = n.cuerpo || '';
+  $('noticiaFecha').value = n.fechaEvento || '';
+  $('noticiaLugar').value = n.lugar || '';
+  $('noticiaVideo').value = n.video || '';
+  $('noticiaFuentes').value = textoFuentes(n.fuentes);
+  var btn = $('formNoticia').querySelector('button[type="submit"]');
+  btn.textContent = 'Guardar cambios';
+  if ($('cancelarEdicion') === null) {
+    var c = document.createElement('button');
+    c.type = 'button';
+    c.id = 'cancelarEdicion';
+    c.className = 'sec';
+    c.textContent = 'Cancelar edición';
+    c.addEventListener('click', salirEdicion);
+    btn.after(c);
+  }
+  $('resultadoNoticia').textContent = 'Editando: ' + (n.titulo || '');
+  $('formNoticia').scrollIntoView({ behavior: 'smooth' });
+}
+
 $('formNoticia').addEventListener('submit', async function (e) {
   e.preventDefault();
   if (usuarioNoticias === null) { return; }
@@ -201,9 +242,9 @@ $('formNoticia').addEventListener('submit', async function (e) {
     parroquia: $('noticiaParroquia').value,
     titulo: $('noticiaTitulo').value.trim(),
     cuerpo: $('noticiaCuerpo').value.trim(),
-    autorUid: usuarioNoticias.uid,
-    autorCorreo: usuarioNoticias.email || '',
-    creado: Date.now(),
+    autorUid: editando === null ? usuarioNoticias.uid : editando.n.autorUid,
+    autorCorreo: editando === null ? (usuarioNoticias.email || '') : (editando.n.autorCorreo || ''),
+    creado: editando === null ? Date.now() : editando.n.creado,
     estado: 'pendiente'
   };
   if ($('noticiaFecha').value === '') {
@@ -231,9 +272,15 @@ $('formNoticia').addEventListener('submit', async function (e) {
     registro.fuentes = fuentes;
   }
   try {
-    await push(ref(database, 'noticias_pendientes'), registro);
-    $('resultadoNoticia').textContent = 'Enviada a revision.';
-    $('formNoticia').reset();
+    if (editando === null) {
+      await push(ref(database, 'noticias_pendientes'), registro);
+      $('resultadoNoticia').textContent = 'Enviada a revision.';
+      $('formNoticia').reset();
+    } else {
+      await set(ref(database, 'noticias_pendientes/' + editando.id), registro);
+      $('resultadoNoticia').textContent = 'Cambios guardados.';
+      salirEdicion();
+    }
     await cargarPendientes();
   } catch (err) {
     console.error(err);
@@ -263,6 +310,12 @@ async function cargarPendientes() {
       bp.addEventListener('click', function () { publicarNoticia(id, n); });
       li.appendChild(bp);
     }
+    if (puedeAprobar || n.autorUid === usuarioNoticias.uid) {
+      var be = document.createElement('button');
+      be.textContent = 'Editar';
+      be.addEventListener('click', function () { editarNoticia(id, n); });
+      li.appendChild(be);
+    }
     var bd = document.createElement('button');
     bd.textContent = 'Descartar';
     bd.className = 'sec';
@@ -278,6 +331,7 @@ async function publicarNoticia(id, n) {
   copia.estado = 'publicado';
   copia.publicado = Date.now();
   copia.publicadoPor = usuarioNoticias.uid;
+  delete copia.autorCorreo;
   try {
     await set(ref(database, 'noticias_publicas/' + id), copia);
     await remove(ref(database, 'noticias_pendientes/' + id));

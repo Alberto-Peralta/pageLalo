@@ -5,23 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
 <title>Panel de noticias - Notica</title>
-<style>
-body { font-family: system-ui, sans-serif; margin: 0; background: #f4f1ea; color: #222; }
-main { max-width: 720px; margin: 0 auto; padding: 20px 16px 60px; }
-h1 { font-size: 1.5rem; }
-h2 { font-size: 1.15rem; margin-top: 28px; }
-section.caja { background: #fff; border-radius: 10px; padding: 16px; margin-top: 16px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
-label { display: block; margin-top: 10px; font-size: 0.9rem; }
-input, select, textarea { width: 100%; box-sizing: border-box; padding: 9px; margin-top: 4px; font: inherit; border: 1px solid #bbb; border-radius: 6px; }
-button { margin-top: 12px; padding: 9px 16px; font: inherit; border: 0; border-radius: 6px; background: #5b3a1e; color: #fff; cursor: pointer; }
-button.sec { background: #888; }
-.error { color: #b00020; margin-top: 8px; }
-.ok { color: #1b6e2d; margin-top: 8px; }
-ul { padding-left: 18px; }
-</style>
+<link rel="stylesheet" href="../portada.css">
+<link rel="stylesheet" href="noticias.css">
 </head>
-<body>
-<main>
+<body class="pn">
+<header class="pn-top">
+<a href="../" class="logo"><img src="../icons/logo-nav-oscuro.png" alt="Notica"></a>
+<a class="nt-volver" href="../">&larr; Inicio</a>
+</header>
+<main class="nt-main">
 <h1>Panel de noticias</h1>
 
 <section id="pantallaLogin" class="caja">
@@ -44,7 +36,7 @@ ul { padding-left: 18px; }
 <label>Texto<textarea id="noticiaCuerpo" rows="8" required></textarea></label>
 <label>Fecha y hora del evento (solo eventos)<input type="datetime-local" id="noticiaFecha"></label>
 <label>Lugar (solo eventos)<input type="text" id="noticiaLugar"></label>
-<label>Enlace de video (YouTube o Facebook)<input type="url" id="noticiaVideo"></label>
+<label>Enlace de video (YouTube se muestra incrustado; otros, como Facebook, quedan como enlace "Ver video")<input type="url" id="noticiaVideo"></label>
 <label>Fuentes (una por línea: Título | enlace)<textarea id="noticiaFuentes" rows="3"></textarea></label>
 <button type="submit">Enviar a revisión</button>
 </form>

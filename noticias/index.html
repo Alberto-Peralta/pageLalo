@@ -5,26 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Noticias de la Iglesia - Notica</title>
 <meta name="description" content="Noticias, eventos y avisos de las parroquias y de la Iglesia en el mundo.">
-<style>
-body { font-family: system-ui, sans-serif; margin: 0; background: #f4f1ea; color: #222; }
-main { max-width: 760px; margin: 0 auto; padding: 20px 16px 60px; }
-h1 { font-size: 1.6rem; }
-.filtros { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 16px; }
-.filtros select { padding: 8px; font: inherit; border: 1px solid #bbb; border-radius: 6px; }
-article { background: #fff; border-radius: 10px; padding: 16px; margin-bottom: 16px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
-article h2 { margin: 6px 0; font-size: 1.2rem; }
-.etiqueta { display: inline-block; font-size: 0.75rem; background: #5b3a1e; color: #fff; padding: 2px 8px; border-radius: 10px; text-transform: uppercase; }
-.meta { color: #666; font-size: 0.85rem; margin: 4px 0 10px; }
-.evento { background: #f4f1ea; padding: 8px 10px; border-radius: 6px; margin-bottom: 10px; font-size: 0.95rem; }
-.video { position: relative; padding-bottom: 56.25%; height: 0; margin: 10px 0; }
-.video iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
-.fuentes { font-size: 0.85rem; color: #555; border-top: 1px solid #eee; margin-top: 10px; padding-top: 8px; }
-.fuentes ul { margin: 4px 0 0; padding-left: 18px; }
-a { color: #5b3a1e; }
-</style>
+<link rel="icon" type="image/png" sizes="192x192" href="../icons/android-chrome-192x192.png">
+<link rel="stylesheet" href="../portada.css">
+<link rel="stylesheet" href="noticias.css">
 </head>
-<body>
-<main>
+<body class="pn">
+<header class="pn-top">
+<a href="../" class="logo"><img src="../icons/logo-nav-oscuro.png" alt="Notica"></a>
+<a class="nt-volver" href="../">&larr; Inicio</a>
+</header>
+<main class="nt-main">
 <h1>Noticias de la Iglesia</h1>
 <div class="filtros">
 <select id="filtroTipo">
@@ -36,7 +26,7 @@ a { color: #5b3a1e; }
 </select>
 <select id="filtroParroquia"><option value="">Todas las parroquias</option></select>
 </div>
-<p id="estado">Cargando...</p>
+<p id="estado" class="pn-estado">Cargando...</p>
 <div id="lista"></div>
 </main>
 <script type="module" src="noticias.js"></script>
