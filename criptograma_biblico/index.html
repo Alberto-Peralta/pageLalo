@@ -139,8 +139,38 @@
             border-bottom: 2px solid #DAA520; /* Goldenrod para la línea */
         }
     </style>
+<style>
+/* Tema Notica (se desactiva al exportar PDF con body.pdf-claro) */
+body:not(.pdf-claro) { background-color: #0a1626; color: #eef3f8; padding-top: 56px; }
+body:not(.pdf-claro) #main-content { background-color: #12263f; border-color: rgba(255,255,255,0.1); backdrop-filter: none; }
+body:not(.pdf-claro) #main-content h1 { color: #f4b942; }
+body:not(.pdf-claro) #main-content .text-center p { color: #9fb3c8; }
+body:not(.pdf-claro) #source-text { color: #ffd98a; }
+body:not(.pdf-claro) .encrypted-letter { color: #ffd98a; }
+body:not(.pdf-claro) .letter-input { color: #eef3f8; border-bottom-color: #9fb3c8; caret-color: #f4b942; }
+body:not(.pdf-claro) .letter-input:focus { border-bottom-color: #f4b942; }
+body:not(.pdf-claro) .letter-input:disabled { color: #8fd19e; border-bottom-color: transparent; }
+body:not(.pdf-claro) #new-game-btn, body:not(.pdf-claro) #open-export-modal-btn, body:not(.pdf-claro) #generate-pdf-btn { background-color: #c97a2b; color: #fff; }
+body:not(.pdf-claro) #new-game-btn:hover, body:not(.pdf-claro) #open-export-modal-btn:hover, body:not(.pdf-claro) #generate-pdf-btn:hover { background-color: #f4b942; color: #0a1626; }
+body:not(.pdf-claro) #reveal-letter-btn { background-color: #f4b942; color: #0a1626; }
+body:not(.pdf-claro) #reveal-letter-btn:hover:not(:disabled) { background-color: #ffd98a; }
+body:not(.pdf-claro) #undo-btn { background-color: #1a3556; color: #eef3f8; }
+body:not(.pdf-claro) #undo-btn:hover:not(:disabled) { background-color: #234a75; }
+body:not(.pdf-claro) #reveal-count { background-color: #0a1626; color: #f4b942; }
+body:not(.pdf-claro) #message-text.text-green-700 { color: #8fd19e; }
+body:not(.pdf-claro) #message-text.text-red-600 { color: #ff8a80; }
+body:not(.pdf-claro) #message-text.text-amber-700 { color: #ffd98a; }
+body:not(.pdf-claro) .modal { background-color: rgba(10,22,38,0.85); }
+body:not(.pdf-claro) .modal-content { background-color: #12263f; border: 1px solid rgba(255,255,255,0.1); color: #eef3f8; }
+body:not(.pdf-claro) .modal-content h2, body:not(.pdf-claro) .modal-content label.block { color: #f4b942; }
+body:not(.pdf-claro) .modal-content #export-pdf-title { background-color: #0a1626; color: #eef3f8; border-color: rgba(255,255,255,0.15); }
+body:not(.pdf-claro) .alphabet-item { color: #eef3f8; }
+body:not(.pdf-claro) .close-button { color: #9fb3c8; }
+body:not(.pdf-claro) .close-button:hover { color: #f4b942; }
+</style>
 <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "a7d50e2cf06445848a47c594610014ed"}'></script></head>
 <body class="flex items-center justify-center min-h-screen p-4">
+    <a id="btn-volver-inicio" href="../index.html" style="position:fixed;top:calc(10px + env(safe-area-inset-top));left:10px;z-index:99999;background:#12263f;color:#eef3f8;border:1px solid rgba(255,255,255,0.12);padding:8px 14px;border-radius:999px;text-decoration:none;font:14px system-ui,-apple-system,sans-serif;">← Inicio</a>
 
     <div id="main-content" class="w-full max-w-5xl mx-auto bg-white/50 backdrop-blur-sm rounded-xl shadow-2xl p-6 md:p-8 border border-amber-600/50">
         
@@ -630,7 +660,7 @@
 
 
                 try {
-                    const canvas = await html2canvas(contentToExport, {
+                    document.body.classList.add('pdf-claro'); const canvas = await html2canvas(contentToExport, {
                         scale: 2, 
                         backgroundColor: '#D4AF37' /* Usar el nuevo color de fondo para el PDF */
                     });
@@ -670,7 +700,7 @@
                         elements.gameSubtitle.classList.remove('hidden');
                     }
 
-                    document.getElementById('controls').style.display = '';
+                    document.body.classList.remove('pdf-claro'); document.getElementById('controls').style.display = '';
                     exportBtnInModal.disabled = false;
                     exportBtnInModal.innerHTML = `<i class="fa-solid fa-file-pdf mr-2"></i>Generar PDF`;
                 }
