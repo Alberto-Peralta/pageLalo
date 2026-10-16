@@ -5,6 +5,50 @@ import { ref, onValue } from "https://www.gstatic.com/firebasejs/10.7.1/firebase
 let templosData = [];
 
 // Cargar templos desde Firebase
+const TIPOS = {
+    misas: { titulo: 'Horarios de misa', icono: 'fa-church' },
+    confesiones: { titulo: 'Confesiones', icono: 'fa-hands-praying' },
+    hora_santa: { titulo: 'Hora santa', icono: 'fa-cross' },
+    bautizos: { titulo: 'Bautizos', icono: 'fa-water' },
+    platicas_matrimonio: { titulo: 'Pláticas prematrimoniales', icono: 'fa-ring' },
+    platicas_bautismo: { titulo: 'Pláticas prebautismales', icono: 'fa-baby' }
+};
+let tipoActual = 'misas';
+
+function horariosDe(templo, tipo) {
+    if (tipo === 'misas') { return templo.horarios || {}; }
+    return (templo.servicios && templo.servicios[tipo]) || {};
+}
+
+function tieneHorarios(h) {
+    return Object.keys(h).some(dia => h[dia] && h[dia].length > 0);
+}
+
+function lineasHorario(h) {
+    return Object.keys(h).filter(dia => h[dia] && h[dia].length > 0).map(dia => {
+        const horas = Array.isArray(h[dia]) ? h[dia].join(', ') : h[dia];
+        return `<div class="horario-item"><strong>${dia}:</strong> ${horas}</div>`;
+    }).join('');
+}
+
+function serviciosModalHTML(templo) {
+    let html = '';
+    Object.keys(TIPOS).forEach(tipo => {
+        if (tipo === 'misas') { return; }
+        const h = horariosDe(templo, tipo);
+        if (tieneHorarios(h)) {
+            html += `<div class="modal-horarios"><h3><i class="fas ${TIPOS[tipo].icono}"></i> ${TIPOS[tipo].titulo}</h3>${lineasHorario(h)}</div>`;
+        }
+    });
+    return html;
+}
+
+window.cambiarTipo = function(tipo) {
+    tipoActual = tipo;
+    document.querySelectorAll('.tipo-chip').forEach(b => b.classList.toggle('activo', b.dataset.tipo === tipo));
+    filtertemplos();
+};
+
 function cargartemplos() {
     const templosRef = ref(database, 'templos');
     
@@ -21,7 +65,7 @@ function cargartemplos() {
                 templosData.push(templo);
             });
             
-            rendertemplos(templosData);
+            filtertemplos();
         } else {
             container.innerHTML = `
                 <div class="loading">
@@ -51,7 +95,7 @@ function rendertemplos(templos) {
         container.innerHTML = `
             <div class="loading">
                 <i class="fas fa-search"></i>
-                <p>No se encontraron templos</p>
+                <p>${tipoActual === 'misas' ? 'No se encontraron templos' : 'Aún no hay horarios de ' + TIPOS[tipoActual].titulo.toLowerCase() + ' registrados'}</p>
             </div>
         `;
         return;
@@ -70,7 +114,7 @@ function crearCardtemplo(templo) {
         ? templo.imagenes[0] 
         : 'https://images.unsplash.com/photo-1438232992991-995b7058bbb3?w=400&h=300&fit=crop';
     
-    const horarios = templo.horarios || {};
+    const horarios = horariosDe(templo, tipoActual);
     
     // Mostrar primeros 2 días con horarios
     let horariosHTML = '';
@@ -98,7 +142,7 @@ function crearCardtemplo(templo) {
                 <p class="templo-descripcion">${templo.descripcion || 'Sin descripción'}</p>
                 ${horariosHTML ? `
                     <div class="templo-horarios">
-                        <h4><i class="fas fa-clock"></i> Horarios de Misa</h4>
+                        <h4><i class="fas fa-clock"></i> ${TIPOS[tipoActual].titulo}</h4>
                         ${horariosHTML}
                     </div>
                 ` : ''}
@@ -184,6 +228,7 @@ window.mostrarDetalle = function(id) {
             </div>
         ` : ''}
         
+        ${serviciosModalHTML(templo)}
         <div class="modal-avisos">
             <h3><i class="fas fa-bullhorn"></i> Avisos Parroquiales</h3>
             ${avisosHTML}
@@ -269,6 +314,7 @@ window.onclick = function(event) {
 window.filtertemplos = function() {
     const searchTerm = document.getElementById('searchInput').value.toLowerCase();
     const filtradas = templosData.filter(templo => {
+        if (tipoActual !== 'misas' && !tieneHorarios(horariosDe(templo, tipoActual))) { return false; }
         return templo.nombre.toLowerCase().includes(searchTerm) ||
                (templo.direccion && templo.direccion.toLowerCase().includes(searchTerm)) ||
                (templo.descripcion && templo.descripcion.toLowerCase().includes(searchTerm));

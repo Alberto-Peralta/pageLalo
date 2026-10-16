@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Templos - Notica</title>
+    <title>Horarios de misas y más - Notica</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="templos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -22,8 +22,17 @@
 
     <main class="templos-main">
         <section class="hero-templos">
-            <h1><i class="fas fa-church"></i> Templos de Delicias</h1>
-            <p>Encuentra información de los Templos de nuestra ciudad</p>
+            <h1><i class="fas fa-church"></i> Horarios de misas y más</h1>
+            <p>Misas, confesiones, hora santa, bautizos y pláticas en los templos de Delicias</p>
+        </section>
+
+        <section class="tipos">
+            <button type="button" class="tipo-chip activo" data-tipo="misas" onclick="cambiarTipo('misas')">Misas</button>
+            <button type="button" class="tipo-chip" data-tipo="confesiones" onclick="cambiarTipo('confesiones')">Confesiones</button>
+            <button type="button" class="tipo-chip" data-tipo="hora_santa" onclick="cambiarTipo('hora_santa')">Hora santa</button>
+            <button type="button" class="tipo-chip" data-tipo="bautizos" onclick="cambiarTipo('bautizos')">Bautizos</button>
+            <button type="button" class="tipo-chip" data-tipo="platicas_matrimonio" onclick="cambiarTipo('platicas_matrimonio')">Pláticas prematrimoniales</button>
+            <button type="button" class="tipo-chip" data-tipo="platicas_bautismo" onclick="cambiarTipo('platicas_bautismo')">Pláticas prebautismales</button>
         </section>
 
         <!-- Filtros y búsqueda -->

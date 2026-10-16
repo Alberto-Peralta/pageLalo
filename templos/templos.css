@@ -656,3 +656,9 @@ body {
 }
 /* Tema Notica */
 .btn-ver-mas:hover, .btn-ubicacion:hover { color: #0a1626; }
+
+/* Selector de tipo de horario */
+.tipos { display: flex; gap: 8px; overflow-x: auto; padding: 1rem 1.5rem 0; position: relative; z-index: 1; }
+.tipo-chip { flex: none; background: #12263f; color: #eef3f8; border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 999px; padding: 8px 14px; font-size: 14px; cursor: pointer; white-space: nowrap; }
+.tipo-chip:hover { border-color: #f4b942; }
+.tipo-chip.activo { background: #f4b942; color: #0a1626; border-color: #f4b942; font-weight: bold; }

@@ -19,7 +19,7 @@
     ['Intenciones de oración', './intenciones/index.html'],
     ['Trivia: ¿Quién quiere ser cristiano?', './triviaCristiana/index.html'],
     ['Criptograma bíblico', './criptograma_biblico/index.html'],
-    ['Templos de Delicias', './templos/index.html'],
+    ['Horarios de misas y más', './templos/index.html'],
     ['Noticias', './noticias/index.html'],
     ['Chat litúrgico', './fray-noti/chat.html'],
     ['Recursos descargables', '#recursos']
