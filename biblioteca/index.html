@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Biblioteca - Notica</title>
+<meta name="description" content="Misal, encíclicas, catecismo y más documentos para descargar.">
+<link rel="icon" type="image/png" sizes="192x192" href="../icons/android-chrome-192x192.png">
+<link rel="stylesheet" href="../portada.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+.bi-volver { color: #7fb4ee; text-decoration: none; font-size: 15px; }
+.bi-main { max-width: 720px; margin: 0 auto; padding: 20px 16px 40px; padding-bottom: max(40px, env(safe-area-inset-bottom)); }
+.bi-main h1 { color: #f4b942; font-size: 1.8rem; margin: 0 0 4px; }
+.bi-sub { color: #9fb3c8; margin: 0 0 16px; font-size: 15px; }
+.bi-filtros { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+.bi-chip { background: #1a3556; color: #eef3f8; border: 1px solid rgba(255,255,255,0.1); border-radius: 999px; padding: 6px 14px; font-size: 14px; cursor: pointer; }
+.bi-chip.activo { background: #f4b942; color: #0a1626; border-color: #f4b942; font-weight: 700; }
+.bi-lista { display: grid; gap: 10px; }
+.bi-item { display: flex; align-items: center; gap: 12px; padding: 12px 14px; }
+.bi-ico { color: #f4b942; font-size: 1.3rem; flex: none; }
+.bi-txt { flex: 1; min-width: 0; }
+.bi-txt strong { display: block; color: #eef3f8; font-size: 15px; line-height: 1.3; }
+.bi-txt span { display: block; color: #9fb3c8; font-size: 13px; margin-top: 2px; }
+.bi-dl { flex: none; width: 38px; height: 38px; border-radius: 50%; background: #1a3556; color: #f4b942; display: flex; align-items: center; justify-content: center; text-decoration: none; border: 1px solid rgba(244,185,66,0.35); }
+.bi-dl:hover { background: #f4b942; color: #0a1626; }
+.bi-msg { color: #9fb3c8; text-align: center; padding: 2rem 0; }
+</style>
+</head>
+<body class="pn">
+<header class="pn-top">
+<a href="../" class="logo"><img src="../icons/logo-nav-oscuro.png" alt="Notica"></a>
+<a class="bi-volver" href="../">&larr; Inicio</a>
+</header>
+<main class="bi-main">
+<h1>Biblioteca</h1>
+<p class="bi-sub">Misal, encíclicas, catecismo y más.</p>
+<div class="bi-filtros" id="bi-filtros"></div>
+<div class="bi-lista" id="bi-lista"><div class="bi-msg">Cargando…</div></div>
+</main>
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-app.js";
+import { getFirestore, collection, query, orderBy, onSnapshot } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-firestore.js";
+const app = initializeApp({
+  apiKey: "AIzaSyCO3FRhSwH1xLABwVGFSd_YYrbFp0lQEv8",
+  authDomain: "pagelalo-1b210.firebaseapp.com",
+  projectId: "pagelalo-1b210",
+  storageBucket: "pagelalo-1b210.firebasestorage.app",
+  messagingSenderId: "1096735980204",
+  appId: "1:1096735980204:web:8252ddb9fb484c398dfd09"
+});
+const db = getFirestore(app);
+const nombres = { misal: 'Misal', liturgia: 'Liturgia', oracion: 'Oración', formacion: 'Formación', catequesis: 'Catequesis', otro: 'Otros' };
+const lista = document.getElementById('bi-lista');
+const filtros = document.getElementById('bi-filtros');
+let todos = [];
+let actual = 'todos';
+function esc(t) { const d = document.createElement('div'); d.textContent = t == null ? '' : String(t); return d.innerHTML; }
+function pintar() {
+  const items = actual === 'todos' ? todos : todos.filter(r => r.categoria === actual);
+  if (!items.length) { lista.innerHTML = '<div class="bi-msg">No hay documentos en esta categoría.</div>'; return; }
+  lista.innerHTML = items.map(r => `
+    <div class="pn-card bi-item">
+      <i class="fas fa-file-pdf bi-ico"></i>
+      <div class="bi-txt"><strong>${esc(r.nombre)}</strong>${r.descripcion ? `<span>${esc(r.descripcion)}</span>` : ''}</div>
+      <a class="bi-dl" href="${esc(r.url)}" target="_blank" rel="noopener" aria-label="Descargar ${esc(r.nombre)}"><i class="fas fa-download"></i></a>
+    </div>`).join('');
+}
+function pintarFiltros() {
+  const cats = [...new Set(todos.map(r => r.categoria))];
+  const botones = [['todos', 'Todos']].concat(cats.map(c => [c, nombres[c] || c]));
+  filtros.innerHTML = botones.map(([k, n]) => `<button class="bi-chip${k === actual ? ' activo' : ''}" data-k="${esc(k)}">${esc(n)}</button>`).join('');
+  filtros.querySelectorAll('.bi-chip').forEach(b => b.onclick = () => { actual = b.dataset.k; pintarFiltros(); pintar(); });
+}
+onSnapshot(query(collection(db, "recursos"), orderBy("fecha", "desc")), snap => {
+  todos = snap.docs.map(d => ({ id: d.id, ...d.data() }));
+  if (!todos.length) { filtros.innerHTML = ''; lista.innerHTML = '<div class="bi-msg">Aún no hay documentos.</div>'; return; }
+  pintarFiltros();
+  pintar();
+}, () => { lista.innerHTML = '<div class="bi-msg">No se pudo cargar la biblioteca.</div>'; });
+</script>
+</body>
+</html>

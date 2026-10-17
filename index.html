@@ -63,6 +63,7 @@
 
     <div class="pn-atajos">
       <a class="pn-atajo" href="./biblia/index.html"><i class="fas fa-bible"></i><span>Biblia</span></a>
+      <a class="pn-atajo" href="./biblioteca/index.html"><i class="fas fa-book"></i><span>Biblioteca</span></a>
       <a class="pn-atajo" href="./rosarios/index.html"><i class="fas fa-pray"></i><span>Rosario</span></a>
       <a class="pn-atajo" href="./cinco-minutos-maria/index.html"><i class="fas fa-star"></i><span>5 min con María</span></a>
       <a class="pn-atajo" href="./liturgia/index.html"><i class="fas fa-church"></i><span>Liturgia</span></a>
@@ -90,17 +91,6 @@
 
     <div class="pn-legacy">
  
-    <!-- RECURSOS DESCARGABLES -->
-    <section class="recursos-section" id="recursos">
-      <h2 class="recursos-title">
-        <i class="fas fa-download"></i> Recursos Descargables
-      </h2>
-      <div id="recursos-publicos" class="recursos-grid">
-        <div class="loading-recursos">
-          <i class="fas fa-spinner fa-spin"></i> Cargando recursos…
-        </div>
-      </div>
-    </section>
  
  
     </div>
@@ -137,135 +127,6 @@
  
   <script src="script.js"></script>
  
-  <!-- Firebase: recursos descargables -->
-  <script type="module">
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-app.js";
-    import { getFirestore, collection, query, orderBy, onSnapshot } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-firestore.js";
-    import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-analytics.js";
- 
-    const firebaseConfig = {
-      apiKey: "AIzaSyCO3FRhSwH1xLABwVGFSd_YYrbFp0lQEv8",
-      authDomain: "pagelalo-1b210.firebaseapp.com",
-      databaseURL: "https://pagelalo-1b210-default-rtdb.firebaseio.com",
-      projectId: "pagelalo-1b210",
-      storageBucket: "pagelalo-1b210.firebasestorage.app",
-      messagingSenderId: "1096735980204",
-      appId: "1:1096735980204:web:8252ddb9fb484c398dfd09",
-      measurementId: "G-ZD5R3QBH85"
-    };
- 
-    const app = initializeApp(firebaseConfig);
-    getAnalytics(app);
-    const db = getFirestore(app);
- 
-    const recursosContainer = document.getElementById("recursos-publicos");
-    let todosLosRecursos = [];
-    let filtroActual = 'todos';
- 
-    const categoriaColors = {
-      misal:     '#185FA5',
-      liturgia:  '#764ba2',
-      oracion:   '#2d8a4e',
-      formacion: '#17a2b8',
-      catequesis:'#b07d1a',
-      otro:      '#6c757d'
-    };
- 
-    const categoriaNombres = {
-      misal:     'Misal',
-      liturgia:  'Liturgia',
-      oracion:   'Oración',
-      formacion: 'Formación',
-      catequesis:'Catequesis',
-      otro:      'Otro'
-    };
- 
-    function cargarRecursos() {
-      const q = query(collection(db, "recursos"), orderBy("fecha", "desc"));
-      onSnapshot(q, (snapshot) => {
-        if (snapshot.empty) {
-          mostrarVacio();
-        } else {
-          todosLosRecursos = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
-          crearFiltros();
-          mostrarRecursos(todosLosRecursos);
-        }
-      });
-    }
- 
-    function crearFiltros() {
-      const categorias = [...new Set(todosLosRecursos.map(r => r.categoria))];
-      if (categorias.length > 1 && !document.querySelector('.filter-tabs')) {
-        const filtrosDiv = document.createElement('div');
-        filtrosDiv.className = 'filter-tabs';
- 
-        const btnTodos = document.createElement('button');
-        btnTodos.className = 'filter-btn active';
-        btnTodos.textContent = 'Todos';
-        btnTodos.onclick = () => filtrarRecursos('todos', btnTodos);
-        filtrosDiv.appendChild(btnTodos);
- 
-        categorias.forEach(cat => {
-          const btn = document.createElement('button');
-          btn.className = 'filter-btn';
-          btn.textContent = categoriaNombres[cat] || cat;
-          btn.onclick = () => filtrarRecursos(cat, btn);
-          filtrosDiv.appendChild(btn);
-        });
- 
-        recursosContainer.parentElement.insertBefore(filtrosDiv, recursosContainer);
-      }
-    }
- 
-    function filtrarRecursos(categoria, buttonElement) {
-      filtroActual = categoria;
-      document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
-      buttonElement.classList.add('active');
-      const lista = categoria === 'todos'
-        ? todosLosRecursos
-        : todosLosRecursos.filter(r => r.categoria === categoria);
-      mostrarRecursos(lista);
-    }
- 
-    function mostrarRecursos(recursos) {
-      recursosContainer.innerHTML = "";
-      recursos.forEach(recurso => {
-        const fecha = new Date(recurso.fecha);
-        const fechaFormateada = fecha.toLocaleDateString('es-MX', {
-          year: 'numeric', month: 'long', day: 'numeric'
-        });
- 
-        const card = document.createElement('div');
-        card.className = 'recurso-card';
-        card.innerHTML = `
-          <div class="recurso-icon-large"><i class="fas fa-file-pdf"></i></div>
-          <div class="recurso-details">
-            <span class="recurso-categoria-badge" style="background:${categoriaColors[recurso.categoria] || '#6c757d'}">
-              ${categoriaNombres[recurso.categoria] || recurso.categoria}
-            </span>
-            <h3>${recurso.nombre}</h3>
-            ${recurso.descripcion ? `<p class="recurso-descripcion">${recurso.descripcion}</p>` : ''}
-            <div class="recurso-fecha"><i class="fas fa-calendar"></i> ${fechaFormateada}</div>
-          </div>
-          <a href="${recurso.url}" target="_blank" class="recurso-download-btn" download="${recurso.nombre}">
-            <i class="fas fa-download"></i> PDF
-          </a>
-        `;
-        recursosContainer.appendChild(card);
-      });
-    }
- 
-    function mostrarVacio() {
-      recursosContainer.innerHTML = `
-        <div class="empty-recursos">
-          <i class="fas fa-folder-open"></i>
-          <p>No hay recursos disponibles</p>
-        </div>
-      `;
-    }
- 
-    cargarRecursos();
-  </script>
  
   <!-- Acceso oculto al admin (5 clics en el logo) -->
   <script>
