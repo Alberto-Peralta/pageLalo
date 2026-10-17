@@ -9,9 +9,16 @@ let editandoId = null;
 let imagenesActuales = []; // Array para almacenar imágenes actuales
 
 // Verificar autenticación al cargar
+const UIDS_AUTORIZADOS = ['4E3dppwJOlPARubLeRAFAu9Hhps2', 'xqhClOg845dSU5XIu4vqTCy4XAj2'];
+
 onAuthStateChanged(auth, (user) => {
-    if (user) {
+    if (user && UIDS_AUTORIZADOS.includes(user.uid)) {
         mostrarPanelAdmin(user);
+    } else if (user) {
+        signOut(auth).then(() => {
+            mostrarPantallaLogin();
+            alert('Esta cuenta no tiene permiso para administrar templos.');
+        });
     } else {
         mostrarPantallaLogin();
     }
@@ -249,6 +256,35 @@ function rendertemplosAdmin(templos) {
 }
 
 // Mostrar formulario
+const SERVICIOS_ADMIN = [
+    { clave: 'confesiones', titulo: 'Confesiones' },
+    { clave: 'hora_santa', titulo: 'Hora santa' },
+    { clave: 'bautizos', titulo: 'Bautizos' },
+    { clave: 'platicas_matrimonio', titulo: 'Pláticas prematrimoniales' },
+    { clave: 'platicas_bautismo', titulo: 'Pláticas prebautismales' }
+];
+
+function parsearServicio(texto) {
+    const resultado = {};
+    String(texto || '').split('\n').forEach(linea => {
+        const i = linea.indexOf(':');
+        if (i < 1) { return; }
+        const dia = linea.slice(0, i).trim().replace(/[.$#\[\]\/]/g, '');
+        const horas = linea.slice(i + 1).split(',').map(h => h.trim()).filter(h => h !== '');
+        if (dia && horas.length > 0) {
+            resultado[dia.charAt(0).toUpperCase() + dia.slice(1)] = horas;
+        }
+    });
+    return resultado;
+}
+
+function servicioATexto(obj) {
+    return Object.keys(obj || {}).map(dia => {
+        const h = obj[dia];
+        return dia + ': ' + (Array.isArray(h) ? h.join(', ') : h);
+    }).join('\n');
+}
+
 function mostrarFormulario() {
     editandoId = null;
     imagenesActuales = [];
@@ -586,12 +622,20 @@ dias.forEach(dia => {
             .map(input => input.value.trim())
             .filter(aviso => aviso !== '');
         
+        const servicios = {};
+        SERVICIOS_ADMIN.forEach(s => {
+            const caja = document.getElementById('servicios_' + s.clave);
+            const parsed = caja ? parsearServicio(caja.value) : {};
+            if (Object.keys(parsed).length > 0) { servicios[s.clave] = parsed; }
+        });
+
         const temploData = {
             nombre,
             direccion,
             descripcion,
             imagenes: imagenesUrls,
             horarios,
+            servicios: Object.keys(servicios).length > 0 ? servicios : null,
             avisos,
             ubicacion: {
                 tieneUbicacion: !!latitud,
@@ -705,6 +749,12 @@ function editartemplo(id) {
         });
     });
     
+    // Cargar otros servicios
+    SERVICIOS_ADMIN.forEach(s => {
+        const caja = document.getElementById('servicios_' + s.clave);
+        if (caja) { caja.value = servicioATexto((templo.servicios && templo.servicios[s.clave]) || {}); }
+    });
+
     // Cargar avisos
     const avisosContainer = document.getElementById('avisosContainer');
     avisosContainer.innerHTML = '';
