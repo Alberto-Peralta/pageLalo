@@ -69,6 +69,36 @@
     if (el) { el.textContent = SALUDOS[TRAMO[hora()] || 0]; }
   }
 
+  function cargarSalmo() {
+    var elTexto = $('pn-salmo');
+    var elCita = $('pn-salmo-cita');
+    if (elTexto === null || elCita === null) { return; }
+    fetch(BASE + 'liturgia/' + hoy() + '.json')
+      .then(function (r) {
+        if (r.ok === false) { throw new Error('HTTP ' + r.status); }
+        return r.json();
+      })
+      .then(function (d) {
+        var salmo = null;
+        if (d && d.misas) {
+          lista(d.misas).forEach(function (misa) {
+            lista(misa.partes).forEach(function (p) {
+              if (salmo === null && p.tipo === 'Salmo responsorial') { salmo = p; }
+            });
+          });
+        }
+        if (salmo === null || !salmo.texto) { return; }
+        var primera = String(salmo.texto).split('\n')[0].trim();
+        if (/^R\.\s*/.test(primera) === false) { return; }
+        var respuesta = primera.replace(/^R\.\s*/, '');
+        if (respuesta === '') { return; }
+        elTexto.textContent = respuesta;
+        var cita = String(salmo.cita || 'Salmo responsorial').replace(/^del\s+/i, '');
+        elCita.textContent = cita.charAt(0).toUpperCase() + cita.slice(1);
+      })
+      .catch(function (e) { console.error(e); });
+  }
+
   function cargarEvangelio() {
     var fecha = hoy();
     var elFecha = $('pn-ev-fecha');
@@ -190,6 +220,7 @@
 
   pintarSaludo();
   cargarEvangelio();
+  cargarSalmo();
   cargarNoticias();
   iniciarExplorar();
   iniciarMenu();
