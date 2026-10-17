@@ -41,8 +41,14 @@ const cancelEditBtn = document.getElementById('cancel-edit-btn');
 const questionsTableBody = document.querySelector('#questions-table tbody');
 
 // Manejar autenticación
+const UIDS_AUTORIZADOS = ['4E3dppwJOlPARubLeRAFAu9Hhps2', 'xqhClOg845dSU5XIu4vqTCy4XAj2'];
+
 onAuthStateChanged(auth, (user) => {
-    if (user) {
+    if (user && !UIDS_AUTORIZADOS.includes(user.uid)) {
+        signOut(auth).then(() => {
+            alert('Esta cuenta no tiene permiso para administrar la trivia.');
+        });
+    } else if (user) {
         loginForm.style.display = 'none';
         adminPanel.style.display = 'block';
         loadQuestions();
