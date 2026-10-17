@@ -156,3 +156,6 @@ body.pn .footer-logo .footer-logo-img { background: none; border-radius: 0; padd
 @media (min-width: 900px) {
   .pn-atajo { width: 110px; }
 }
+
+/* Hero: imagen de fondo (la de producción) */
+.pn-hero { --pn-hero-img: url("./images/507c4aa7-b312-451d-9308-53c6a4ec5448.jpg"); }
