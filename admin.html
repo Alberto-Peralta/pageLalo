@@ -615,7 +615,13 @@
       await signOut(auth);
     });
 
-    onAuthStateChanged(auth, (user) => {
+    onAuthStateChanged(auth, async (user) => {
+      const UIDS_ADMIN = ['4E3dppwJOlPARubLeRAFAu9Hhps2', 'xqhClOg845dSU5XIu4vqTCy4XAj2'];
+      if (user && !UIDS_ADMIN.includes(user.uid)) {
+        alert('Esta cuenta no tiene permiso para administrar los recursos.');
+        await signOut(auth);
+        return;
+      }
       if (user) {
         loginBox.style.display = "none";
         panel.style.display = "block";
