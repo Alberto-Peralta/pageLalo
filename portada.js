@@ -15,6 +15,7 @@
     ['Coronilla de la Misericordia', './coronilla/index.html'],
     ['5 minutos con María', './cinco-minutos-maria/index.html'],
     ['Biblia', './biblia/index.html'],
+    ['Biblioteca', './biblioteca/index.html'],
     ['Liturgia del día', './liturgia/index.html'],
     ['Intenciones de oración', './intenciones/index.html'],
     ['Trivia: ¿Quién quiere ser cristiano?', './triviaCristiana/index.html'],
